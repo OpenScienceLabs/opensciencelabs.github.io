@@ -1,0 +1,5 @@
+baseURL = 'https://osl-hugo.github.io'
+languageCode = 'en-us'
+title = 'Open Science Labs'
+
+theme='hugo-clarity'
