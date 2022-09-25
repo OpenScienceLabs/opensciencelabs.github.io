@@ -6,6 +6,7 @@ usePageBundles: true
 thumbnail: '/header.png'
 
 featureImage: '/header.png' 
+tags: [nube de palabras, r, visualización de datos ]
 ---
 
 Una nube de palabras o wordcloud nos sirve para visualizar la frecuencia de palabras dentro de un texto.
@@ -17,15 +18,14 @@ En este tutorial, usaremos el artículo de [inteligencia artificial](https://es.
 Para un mejor manejo de los paquetes, aquí vamos a utilizar la biblioteca `pacman`, esta nos permitirá hacer una instalación y activación de las bibliotecas de manera rápida. Recuerde instalar **Rtools** y la versión más reciente de **R** si está usando **Windows**.
 
 
-```R
+```r
 # install.packages("pacman") # Si no tiene instalada la Biblioteca Pacman ejecutar esta línea de código
 library("pacman")
 ```
 
 Bibliotecas adicionales requeridas, instaladas y abiertas con `pacman`.
 
-
-```R
+```r
 p_load("tm") # Biblioteca para realizar el preprocesado del texto,
 p_load("tidyverse") # Biblioteca con funciones para manipular datos.
 p_load("wordcloud") # Biblioteca para graficar nuestra nube de palabras.
@@ -40,16 +40,14 @@ _Para saber la carpeta de trabajo puede ejecutar `getwd()`. puede cambiar la car
 
 Luego de importar el texto, vamos a convertirlo en un objeto tipo `Source`, esto facilitará la minería del texto y su posterior modificación.
 
-
-```R
+```r
 articulo_IA <- "https://gist.github.com/EverVino/7bdbbe7ebdff5987970036f52f0e384f/raw/3a1997b6f9e3471555a941f8812ada0cef84977d/gistfile1.txt"
 texto <- read_file(articulo_IA)
 ```
 
 * `read_file(dir)`: Función de la biblioteca `tidyverse` que nos permite importar archivos de texto. El resultado de la función es un vector de un sólo elemento. `dir` es la **direción local** o **url** con el nombre del archivo de formato **txt** a importar.
 
-
-```R
+```r
 texto <- VCorpus(VectorSource(texto), 
                  readerControl = list(reader = readPlain, language = "es"))
 ```
@@ -62,8 +60,7 @@ texto <- VCorpus(VectorSource(texto),
 
 Una vez importado el texto, tenemos que eliminar la palabras que actúan como conectores, separadores de palabras , de oraciones, y números que no aportarán al análisis del texto, para ello usamos la función `tm_map()` que nos permite aplicar funciones al texto del `Corpus`.
 
-
-```R
+```r
 texto <- tm_map(texto, tolower)
 texto <- texto %>% 
             tm_map(removePunctuation) %>% 
@@ -79,7 +76,7 @@ texto <- tm_map(texto, stripWhitespace)
 
 * `removeNumber`: Función para eliminar los números del texto.
 
-+ `removeWord`: Función para remover palabras, 
+* `removeWord`: Función para remover palabras, 
 
 * `stopword("lang")`: Lista de palabras conectoras en el lenguaje lang, es argumento de la función `removeWord`.
 
@@ -90,7 +87,6 @@ Nótese que usamos ambas notaciones para transformar el texto del `Corpus`, la n
 _Si quiere observar los cambios del texto puede ejecutar en la consola `writeLines(as.character(texto[[1]]))`, esto imprimirá el resultado en la consola._
 
 ## Construyendo la tabla de frecuencia
-
 
 ```R
 texto <- tm_map(texto, PlainTextDocument)
