@@ -1,31 +1,36 @@
 [[main]]
-  name = "Blog"
+  name = "Home"
   url = ""
   weight = -110
 
-[[main]]
-  name = "Archivos"
-  url = "post/archive/"
-  weight = -109
+#[[main]]
+#  name = "Archivos"
+#  url = "post/archive/"
+#  weight = -109
 
 # Submenus are done this way: parent -> identifier
-#[[main]]
-#  name = "Links"
-#  identifier = "Links"
-#  weight = -108
-#[[main]]
-#  parent = "Links"
-#  name = "LinkedIn"
-#  url = "https://www.linkedin.com/"
-#[[main]]
-#  parent = "Links"
-#  name = "Twitter"
-#  url = "https://twitter.com/"
-
 [[main]]
   name = "About"
-  url = "about/"
-  weight = -107
+  identifier = "about"
+  weight = 122
+[[main]]
+  parent = "about"
+  name = "Guidelines"
+  url = "guidelines/"
+[[main]]
+  parent = "about"
+  name = "Team"
+  url = "team/"
+[[main]]
+  parent = "about"
+  name = "Partners"
+  url = "partners/"
+
+
+#[[main]]
+#  name = "About"
+#  url = "about/"
+#  weight = 121
 
 # social menu links
 

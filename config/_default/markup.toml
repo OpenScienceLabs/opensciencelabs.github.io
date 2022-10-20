@@ -5,13 +5,32 @@
     xhtml = false
   [goldmark.extensions]
     typographer = false
-  [highlight]
-    codeFences = true
-    guessSyntax = true
-    hl_Lines = "--"
-    lineNoStart = 1
-    lineNos = true # always set to true # else line numbers won't show at all! even when you toggle them on in the UI
-    lineNumbersInTable = false # toggling this on (i.e to true) or deleting this line will break the code blocks functionality. Will
-    noClasses = false
-    # style = "monokai"
-    tabWidth = 2
+  
+
+[highlight]
+  anchorLineNos = false
+  codeFences = true 
+  guessSyntax = true #
+  hl_Lines = "--"
+  lineNoStart = 1
+  lineNos = true # always set to true # else line numbers won't show at all! even when you toggle them on in the UI
+  lineNumbersInTable = false # toggling this on (i.e to true) or deleting this line will break the code blocks functionality. Will
+  noClasses = false
+  style = "monokailight"
+  tabWidth = 4
+
+#  [highlight]
+#    anchorLineNos = false
+#    codeFences = true
+#    guessSyntax = false
+#    hl_Lines = ''
+#    hl_inline = false
+#    lineAnchors = ''
+#    lineNoStart = 1
+#    lineNos = false
+#    lineNumbersInTable = true
+#    noClasses = true
+#    noHl = false
+#    style = 'monokailight'
+#    tabWidth = 4
+

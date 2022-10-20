@@ -4,7 +4,7 @@ enableSearch = true
 # socials
 #twitter = "@janedoe"
 #largeTwitterCard = false # set to true if you want to show a large twitter card image. The default is a small twitter card image
-introDescription = "Open Science Labs enfocada en compartir conocimiento"
+# introDescription = "Open Science Labs enfocada en compartir conocimiento" # Descripción del autor en el navside right
 introURL = "about/" # set the url for the 'read more' button below the introDescription, or set to false to not show the button
 # description = "A theme based on VMware's Clarity Design System for publishing technical blogs with Hugo." # Set your site's meta tag (SEO) description here. Alternatively set this description in your home page content file e.g. content/_index.md. Whatever is set in the latter will take precedence.
 # keywords = ["design", "clarity", "hugo theme"] # Set your site's meta tag (SEO) keywords here. Alternatively set these in your home page content file e.g. content/_index.md. Whatever is set in the latter will take precedence.
@@ -40,7 +40,7 @@ usePageBundles = false
 # Images:
 imagesDir = "images/" # without a leading forward slash
 # Icons:
-iconsDir = "icons" # without a leading forward slash
+iconsDir = "icons/" # without a leading forward slash
 # Fonts:
 fontsDir = "fonts/" # without a leading forward slash
 
@@ -48,14 +48,14 @@ fontsDir = "fonts/" # without a leading forward slash
 # when a given page has no other image present.
 fallBackOgImage = "images/thumbnail.png"
 
-# Logo image
-logo = "logos/logo1.png"
+# Logo image this extract the image from static folder
+logo = "logos/osl-color-horizontal.png"
 
 # center logo on navbar
-centerLogo = true # Set to "true" for centering or "false" for left aligned.
+centerLogo = false # Set to "true" for centering or "false" for left aligned.
 
 # sets the maximum number of lines per codeblock. The codeblock will however be scrollable and expandable.
-codeMaxLines = 7
+codeMaxLines = 10
 
 # disable showing line numbers by default. Switch to `true` if you'd rather have them on.
 codeLineNumbers = false
@@ -64,7 +64,7 @@ codeLineNumbers = false
 enableMathNotation = false
 
 # directory(s) where your articles are located
-mainSections = ["post"] # see config details here https://gohugo.io/functions/where/#mainsections
+mainSections = ["blog", "guidelines"] # see config details here https://gohugo.io/functions/where/#mainsections
 
 # Label Non inline images on an article body
 figurePositionShow = false # toggle on or off globally
@@ -84,7 +84,7 @@ enforceLightMode = false
 # enforceDarkMode = false
 
 # customize footer icon. see issue https://github.com/chipzoller/hugo-clarity/issues/77
-# footerLogo = "icons/copy.svg"
+footerLogo = "icons/logo-osl.svg"
 
 # Customize Sidebar Disclaimer Text
 # sidebardisclaimer = true
@@ -130,9 +130,9 @@ languageMenuName = "🌐"
 # showRelatedInSidebar = false
 
 # website author
-[author]
+#[author]
 # name = "OSL"
-photo = "logos/justlogo.png" #include this if you would like to show the author photo on the sidebar
+#photo = "logos/justlogo.png" #include this if you would like to show the author photo on the sidebar
 
 [plausible_analytics]
 enable = false # to enable plausible analytics set to true.
