@@ -7,6 +7,7 @@ thumbnail: '/header.png'
 
 featureImage: '/header.png' 
 tags: [nube de palabras, r, visualización de datos ]
+toc: true
 ---
 
 Una nube de palabras o wordcloud nos sirve para visualizar la frecuencia de palabras dentro de un texto.
