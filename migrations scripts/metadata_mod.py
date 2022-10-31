@@ -33,24 +33,19 @@ featureImage: '/header.png'
 tags: [open science, r, filtrar datos, dplyr, recursos, data science ]
 ---
 
+Usage:
+
+`python migrations\ scripts/metadata_mod.py`
+
 """
 
 import re
-from pathlib import Path
 import logging
 
+from pathlib import Path
+from _config import _gen_all_files_with_extension
 
 def replace(ROOT_DIR):
-    """
-    This function will recursively replace metadata in all
-    markdown files (also in children directories).
-    Be careful.
-
-    Usage example:
-
-        replace('/home/user/opensciencelabs.github.io')
-    """
-
     for md_file in _gen_all_files_with_extension(ROOT_DIR):
         _replace_metadata(md_file)
 
@@ -86,8 +81,10 @@ def _replace_metadata(md_file):
         
         logging.warning(f'{md_file} updated.')
 
-def _gen_all_files_with_extension(ROOT_DIR, EXTENSIONS=['.md']):
-    for path in Path(ROOT_DIR).glob(r'**/*'):
-        if path.suffix in EXTENSIONS:
-            yield path
 
+def main():
+    from _config import BLOG_PATH
+    replace(BLOG_PATH)
+
+if __name__ == "__main__":
+    main()
