@@ -139,4 +139,4 @@ wordcloud(words = tabla_frecuencia$palabras,
           colors = brewer.pal(8,"Paired"))
 ```
 
-![nube de palabras](../../nube.png)
+![nube de palabras](nube.png)

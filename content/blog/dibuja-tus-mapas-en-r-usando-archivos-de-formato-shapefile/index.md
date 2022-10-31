@@ -4,8 +4,8 @@ date: 2019-04-08
 author: Ever Vino
 draft: false
 usePageBundles: true
-thumbnail: '/header.png'
-featureImage: '/header.png'
+thumbnail: 'header.png'
+featureImage: 'header.png'
 tags: [r, maps, visualización de datos ]
 ---
 

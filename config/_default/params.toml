@@ -49,7 +49,7 @@ fontsDir = "fonts/" # without a leading forward slash
 fallBackOgImage = "images/thumbnail.png"
 
 # Logo image this extract the image from static folder
-logo = "logos/osl-color-horizontal.png"
+logo = "logos/osl-white.png"
 
 # center logo on navbar
 centerLogo = false # Set to "true" for centering or "false" for left aligned.
@@ -84,7 +84,7 @@ enforceLightMode = false
 # enforceDarkMode = false
 
 # customize footer icon. see issue https://github.com/chipzoller/hugo-clarity/issues/77
-footerLogo = "icons/logo-osl.svg"
+footerLogo = "icons/osl-logo-black.svg"
 
 # Customize Sidebar Disclaimer Text
 # sidebardisclaimer = true
@@ -97,7 +97,7 @@ languageMenuName = "🌐"
 # titleSeparator = "|"
 
 # Enable or disable comments globally. Default to true.
-# comments = false
+# comments = true
 
 # Enable or disable Utterances (https://github.com/utterance/utterances) Github Issue-Based Commenting
 # utterances = true  #Run the utterances script in the single.html layout to load https://utteranc.es comments

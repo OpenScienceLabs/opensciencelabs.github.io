@@ -17,7 +17,7 @@
         {{ partial "nav" (dict "context" . "menu" .Site.Menus.main) }}
       {{- end }}
       {{ if .Site.IsMultiLingual }}
-      <div class="nav_parent">
+      <!-- <div class="nav_parent">
         <a href="#" class="nav_item">{{ $params.languageMenuName }}</a>
         <div class="nav_sub">
           <span class="nav_child"></span>
@@ -25,7 +25,7 @@
           <a href="{{ .Permalink }}" class="nav_child nav_item">{{ .Language.LanguageName }}</a>
           {{ end }}
         </div>
-      </div>
+      </div> -->
       {{- end }}
       {{- if $centerLogo }}
         {{- partial "logo" (dict "logo" $logo "class" "nav_center") }}

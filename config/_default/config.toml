@@ -1,8 +1,8 @@
 # set `baseurl` to your root domain
 # if you set it to "/" share icons won't work properly on production
 baseurl = "https://osl-hugo.github.io'"  # Include trailing slash
-# title = "Clarity"  # Edit directly from config/_default/languages.toml # alternatively, uncomment this and remove `title` entry from the aforemention file.
-#copyright = "Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved."
+#title = "OpenScienceLabs"  # Edit directly from config/_default/languages.toml # alternatively, uncomment this and remove `title` entry from the aforemention file.
+#copyright = "© Content"
 # canonifyurls = true
 # paginate = 10
 # theme = "hugo-clarity"

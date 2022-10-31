@@ -4,6 +4,7 @@ description = "Hugo, the world's fastest framework for building websites"
 date = "2019-02-28"
 aliases = ["sobre"]
 author = "Hugo Authors"
+draft = true
 +++
 
 Tradução em português. Apenas para demonstração, o resto do artigo não está traduzido.

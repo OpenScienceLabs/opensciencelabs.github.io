@@ -146,7 +146,7 @@ geom_line(aes(x = date, y = new_cases_smoothed, color = location), size = 0.5) +
 
 ```
 
-![Nuevos casos covid en Bolivia, Perú, Chile y Ecuador](../../covid_region.png)
+![Nuevos casos covid en Bolivia, Perú, Chile y Ecuador](covid_region.png)
 
 
 ## Cómo usar summarise() y group_by()
@@ -246,7 +246,7 @@ ggplot(covid_continentes) +
   )
 ```
 
-![Nuevos casos covid por Continente](../../covid_continentes.png)
+![Nuevos casos covid por Continente](covid_continentes.png)
 
 ## Para que sirve la función mutate()
 
@@ -295,7 +295,7 @@ ggplot(covid_continentes_indicador) +
     color = "Continente"
   )
 ```
-![Relación muertes diarias por 1000 contagiados por Continente](../../covid_continentes_indicador.png)
+![Relación muertes diarias por 1000 contagiados por Continente](covid_continentes_indicador.png)
 
 ## Conclusiones
 

@@ -217,7 +217,7 @@ ggplot(data = top_turistas_2016_2021) +
 
 ```
 
-![Viajero llegados por avión a Bolivia 2016-2021](../../Viajeros_2016_2021.jpeg)
+![Viajero llegados por avión a Bolivia 2016-2021](Viajeros_2016_2021.jpeg)
 
 ## Función unite()
 
@@ -367,7 +367,7 @@ ggplot(data = top_turistas_trimestre_1_2019) +
 
 ```
 
-![Viajero llegados por avión a Bolivia 2016-2021](../../Viajeros_trimestre_1_2019.jpeg)
+![Viajero llegados por avión a Bolivia 2016-2021](Viajeros_trimestre_1_2019.jpeg)
 
 ## Outro
 

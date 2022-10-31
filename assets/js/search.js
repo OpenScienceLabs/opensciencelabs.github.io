@@ -62,11 +62,11 @@ function initializeSearch(index) {
           itemTitle.textContent = result.title;
           item.appendChild(itemTitle);
 
-          let itemDescription = createEl('p');
-          // position of first search term instance
-          let queryInstance = result.body.indexOf(query);
-          itemDescription.textContent = `${result.body.substring(queryInstance, queryInstance + 200)}`;
-          item.appendChild(itemDescription);
+          // let itemDescription = createEl('p');
+          // // position of first search term instance
+          // let queryInstance = result.body.indexOf(query);
+          // itemDescription.textContent = `${result.body.substring(queryInstance, queryInstance + 200)}`;
+          // item.appendChild(itemDescription);
         } else {
           item.textContent = result.title;
         }
