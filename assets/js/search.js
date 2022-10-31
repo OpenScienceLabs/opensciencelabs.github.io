@@ -229,7 +229,7 @@ function highlightSearchTerms(search, context, wrapper = 'mark', cssClass = '') 
 
 window.addEventListener('load', function() {
   const pageLanguage = elem('body').dataset.lang;
-  const searchIndexLangSlug = pageLanguage === 'en' ? '': `${pageLanguage}/`;
+  const searchIndexLangSlug = pageLanguage === 'es' ? '': `${pageLanguage}/`;
   const searchIndex = `${searchIndexLangSlug}index.json`;
   fetch(new URL(baseURL + searchIndex).href)
   .then(response => response.json())

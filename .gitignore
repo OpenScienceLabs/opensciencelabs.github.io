@@ -4,4 +4,6 @@ themes/hugo-clarity/.github
 themes/hugo-clarity/.vscode
 .DS_Store
 public
+
 migration\ scripts/test_files
+
