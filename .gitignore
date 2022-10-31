@@ -5,4 +5,5 @@ themes/hugo-clarity/.vscode
 .DS_Store
 public
 
-somefile.txt
+migration\ scripts/test_files
+

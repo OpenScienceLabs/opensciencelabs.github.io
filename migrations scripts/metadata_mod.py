@@ -33,7 +33,58 @@ featureImage: '/header.png'
 tags: [open science, r, filtrar datos, dplyr, recursos, data science ]
 ---
 
+Usage:
+
+`python migrations\ scripts/metadata_mod.py`
+
 """
 
-def metadata_mod(file, new_dir):
-    pass
+import re
+import logging
+
+from pathlib import Path
+from _config import _gen_all_files_with_extension
+
+def replace(ROOT_DIR):
+    for md_file in _gen_all_files_with_extension(ROOT_DIR):
+        _replace_metadata(md_file)
+
+
+def _replace_metadata(md_file):
+
+    content = Path(md_file).read_text()
+    pattern = "<!--[^>]*-->"
+    extract_comment_tag = re.compile(pattern)
+    result = extract_comment_tag.findall(content)
+
+    if result:
+        new_content = result[0]
+
+        new_content = new_content.replace("<!--", "")
+        new_content = new_content.replace("-->", "")
+        new_content = new_content.replace(".. ", "")
+        new_content = re.sub("title: (.*)", r'title: "\1"', new_content)
+        new_content = re.sub("date: ([0-9]+-[0-9]+-[0-9]+) .*", r"date: \1", new_content)
+        new_content = re.sub("tags: (.*)", r"tags: [\1]", new_content)
+        new_content = re.sub("category: (.*)", r"category: [\1]", new_content)
+        new_content = re.sub("(link:.*|description:.*)", "", new_content)
+        new_content = re.sub("\n\s+\n", "\n", new_content, re.MULTILINE)
+        new_content += 'draft: false\n'
+        new_content += 'usePageBundles: true\n'
+        new_content += 'thumbnail: \n'
+        new_content += 'featureImage: \n'
+        new_content = f"---{new_content}---\n"
+
+        output = open(md_file,"w")
+        output.write(content.replace(result[0], new_content))
+        output.close()
+        
+        logging.warning(f'{md_file} updated.')
+
+
+def main():
+    from _config import BLOG_PATH
+    replace(BLOG_PATH)
+
+if __name__ == "__main__":
+    main()
