@@ -43,14 +43,14 @@ import re
 import logging
 
 from pathlib import Path
-from _config import _gen_all_files_with_extension
+from _config import gen_all_files_with_extension
 
 def replace(ROOT_DIR):
-    for md_file in _gen_all_files_with_extension(ROOT_DIR):
-        _replace_metadata(md_file)
+    for md_file in gen_all_files_with_extension(ROOT_DIR):
+        replace_metadata(md_file)
 
 
-def _replace_metadata(md_file):
+def replace_metadata(md_file):
 
     content = Path(md_file).read_text()
     pattern = "<!--[^>]*-->"
