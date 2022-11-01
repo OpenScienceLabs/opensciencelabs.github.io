@@ -1,0 +1,500 @@
+<!doctype html><html lang=es data-figures class=page>
+<head>
+<title>Dibuja tus mapas en R usando archivos de formato Shapefile | Open Science Labs</title>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<script async src="https://www.googletagmanager.com/gtag/js?id=XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','XXXXXXXXXX')</script>
+<meta property="og:locale" content="es">
+<meta property="og:type" content="article">
+<meta name=description content="Este breve tutorial te mostrará como graficar mapas en R, extaer datos de archivos de formato shapefile, resaltar puntos en tu mapa y modificar su apariencia …">
+<meta name=twitter:card content="summary">
+<meta name=twitter:creator content>
+<meta name=twitter:title content="Dibuja tus mapas en R usando archivos de formato Shapefile">
+<meta name=twitter:image content="https://osl-hugo.github.io'/blog/dibuja-tus-mapas-en-r-usando-archivos-de-formato-shapefile/header.png">
+<meta property="og:url" content="https://osl-hugo.github.io'/blog/dibuja-tus-mapas-en-r-usando-archivos-de-formato-shapefile/">
+<meta property="og:title" content="Dibuja tus mapas en R usando archivos de formato Shapefile">
+<meta property="og:description" content="Este breve tutorial te mostrará como graficar mapas en R, extaer datos de archivos de formato shapefile, resaltar puntos en tu mapa y modificar su apariencia …">
+<meta property="og:image" content="https://osl-hugo.github.io'/blog/dibuja-tus-mapas-en-r-usando-archivos-de-formato-shapefile/header.png">
+<link rel=apple-touch-icon sizes=180x180 href=https://osl-hugo.github.io%27/icons/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=https://osl-hugo.github.io%27/icons/favicon-32x32.png>
+<link rel=manifest href=https://osl-hugo.github.io%27/icons/site.webmanifest>
+<link rel=canonical href=https://osl-hugo.github.io%27/blog/dibuja-tus-mapas-en-r-usando-archivos-de-formato-shapefile/>
+<link rel=preload href=https://osl-hugo.github.io%27/css/styles.9220cf0381f57b1ce28f3b048512a19f8d34220083c18304318de8529fe8a9d11998b8f048024e6d5057f7d08558d1f413b38a88d4a076935145adb0bf4e6e4c.css integrity="sha512-kiDPA4H1exzijzsEhRKhn400IgCDwYMEMY3oUp/oqdEZmLjwSAJObVBX99CFWNH0E7OKiNSgdpNRRa2wv05uTA==" as=style crossorigin=anonymous>
+<link rel=preload href=https://osl-hugo.github.io%27/es/js/bundle.d96a8899b2b4b1d1d5e580e7c621594028467ef0c023ee355419b61111c8e920fa3f91925012bf35a00189039eba7c76c42ecdf019f6fff5df1de54778a109c5.js as=script integrity="sha512-2WqImbK0sdHV5YDnxiFZQChGfvDAI+41VBm2ERHI6SD6P5GSUBK/NaABiQOeunx2xC7N8Bn2//XfHeVHeKEJxQ==" crossorigin=anonymous>
+<link rel=stylesheet type=text/css href=https://osl-hugo.github.io%27/css/styles.9220cf0381f57b1ce28f3b048512a19f8d34220083c18304318de8529fe8a9d11998b8f048024e6d5057f7d08558d1f413b38a88d4a076935145adb0bf4e6e4c.css integrity="sha512-kiDPA4H1exzijzsEhRKhn400IgCDwYMEMY3oUp/oqdEZmLjwSAJObVBX99CFWNH0E7OKiNSgdpNRRa2wv05uTA==" crossorigin=anonymous>
+</head>
+<body data-code=100 data-lines=false id=documentTop data-lang=es>
+<header class=nav_header>
+<nav class=nav><a href=https://osl-hugo.github.io%27 class="nav_brand nav_item" title="Open Science Labs">
+<img src=https://osl-hugo.github.io%27/logos/osl-white.png class=logo alt="Open Science Labs">
+<div class=nav_close>
+<div><svg class="icon"><title>open-menu</title><use xlink:href="#open-menu"/></svg><svg class="icon"><title>closeme</title><use xlink:href="#closeme"/></svg>
+</div>
+</div>
+</a>
+<div class="nav_body nav_body_left">
+<div class=nav_parent>
+<a href=https://osl-hugo.github.io%27 class=nav_item title=Home>Home </a>
+</div>
+<div class=nav_parent>
+<a href=https://osl-hugo.github.io%27/blog/ class=nav_item title=Blog>Blog </a>
+</div>
+<div class=nav_parent>
+<a href=https://osl-hugo.github.io%27/archives/ class=nav_item title=Archivos>Archivos </a>
+</div>
+<div class=nav_parent>
+<a href=https://osl-hugo.github.io%27/faq/ class=nav_item title="Preguntas frecuentes">Preguntas frecuentes </a>
+</div>
+<div class=nav_parent>
+<a href=https://osl-hugo.github.io%27 class=nav_item title=About>About <img src=https://osl-hugo.github.io%27/icons/caret-icon.svg alt=icon class=nav_icon></a>
+<div class=nav_sub>
+<span class=nav_child></span>
+<a href=https://osl-hugo.github.io%27/guidelines/ class="nav_child nav_item" title=Guidelines>Guidelines</a>
+<a href=https://osl-hugo.github.io%27/partners/ class="nav_child nav_item" title=Partners>Partners</a>
+<a href=https://osl-hugo.github.io%27/team/ class="nav_child nav_item" title=Team>Team</a>
+</div>
+</div>
+<div class=follow>
+<a href=https://github.com/OpenScienceLabs><svg class="icon"><title>github</title><use xlink:href="#github"/></svg>
+</a>
+<a href=https://twitter.com/opensciencelabs><svg class="icon"><title>twitter</title><use xlink:href="#twitter"/></svg>
+</a>
+<a href=https://www.linkedin.com/company/open-science-labs/><svg class="icon"><title>linkedin</title><use xlink:href="#linkedin"/></svg>
+</a>
+<a href=https://www.facebook.com/opensciencelabscommunity><svg class="icon"><title>facebook</title><use xlink:href="#facebook"/></svg>
+</a>
+<a href=http://discord.opensciencelabs.org/><svg class="icon"><title>discord</title><use xlink:href="#discord"/></svg>
+</a>
+<a href=https://osl-hugo.github.io%27/index.xml><svg class="icon"><title>rss</title><use xlink:href="#rss"/></svg>
+</a>
+<div class=color_mode>
+<input type=checkbox class=color_choice id=mode>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<main>
+<div class="grid-inverse wrap content">
+<article class=post_content>
+<h1 class=post_title>Dibuja tus mapas en R usando archivos de formato Shapefile</h1>
+<div class=post_meta>
+<span><svg class="icon"><title>calendar</title><use xlink:href="#calendar"/></svg>
+</span>
+<span class=post_date>
+Apr 8, 2019</span>
+<span class=post_time> · 11 min read</span><span>&nbsp;· <a href=https://osl-hugo.github.io%27/tags/r/ title=r class="post_tag button button_translucent">r
+</a><a href=https://osl-hugo.github.io%27/tags/maps/ title=maps class="post_tag button button_translucent">maps
+</a><a href=https://osl-hugo.github.io%27/tags/visualizaci%C3%B3n-de-datos/ title="visualización de datos" class="post_tag button button_translucent">visualización de datos
+</a>
+</span>
+<span class=page_only>&nbsp;·
+<div class=post_share>
+Compartir en:
+<a href="https://twitter.com/intent/tweet?text=Dibuja%20tus%20mapas%20en%20R%20usando%20archivos%20de%20formato%20Shapefile&url=https%3a%2f%2fosl-hugo.github.io%27%2fblog%2fdibuja-tus-mapas-en-r-usando-archivos-de-formato-shapefile%2f&tw_p=tweetbutton" class=twitter title="Compartir en Twitter" target=_blank rel=nofollow><svg class="icon"><title>twitter</title><use xlink:href="#twitter"/></svg>
+</a>
+<a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fosl-hugo.github.io%27%2fblog%2fdibuja-tus-mapas-en-r-usando-archivos-de-formato-shapefile%2f&t=Dibuja%20tus%20mapas%20en%20R%20usando%20archivos%20de%20formato%20Shapefile" class=facebook title="Compartir en Facebook" target=_blank rel=nofollow><svg class="icon"><title>facebook</title><use xlink:href="#facebook"/></svg>
+</a>
+<a href=#linkedinshare id=linkedinshare class=linkedin title="Compartir en LinkedIn" rel=nofollow><svg class="icon"><title>linkedin</title><use xlink:href="#linkedin"/></svg>
+</a>
+<a href=https://osl-hugo.github.io%27/blog/dibuja-tus-mapas-en-r-usando-archivos-de-formato-shapefile/ title="Copy Link" class="link link_yank"><svg class="icon"><title>copy</title><use xlink:href="#copy"/></svg>
+</a>
+</div>
+</span>
+</div>
+<div class=post_featured>
+<figure>
+<picture>
+<img loading=lazy decoding=async alt class="image_figure image_featured image_internal image_unprocessed" src=/blog/dibuja-tus-mapas-en-r-usando-archivos-de-formato-shapefile/header.png>
+</picture>
+</figure>
+</div>
+<div class=post_body><p>Este breve tutorial te mostrará como graficar mapas en R, extaer datos de archivos de formato shapefile, resaltar puntos en tu mapa y modificar su apariencia utilizando las bibliotecas <code>rgdal</code> y <code>ggplot2</code>.</p>
+<h2 id=comenzando>Comenzando</h2>
+<p>Para que todas las bibliotecas funcionen correctamente, se recomienda instalar o actualizar a las últimas versiones de <a href=https://cran.r-project.org/>R</a> y de su IDE <a href=https://www.rstudio.com/>RStudio</a> con su correspondiente complemento <a href=https://cran.r-project.org/bin/windows/Rtools/rtools40.html>RTools</a>.</p>
+<p>En este artículo, vamos a utilizar archivos de formato Shapefile. Si todavía no sabes de qué se trata, te explicamos a continuación.</p>
+<p>Un archivo Shapefile contiene al menos:</p>
+<ul>
+<li><code>.shp</code> - un archivo tipo shape, es la geometría misma.</li>
+<li><code>.shx</code> - un archivo tipo index, tiene las posiciones indexadas del archivo .shp.</li>
+<li><code>.dbf</code> - un archivo tipo attribute, tiene los atributos de cada forma en una columna, es de tipo dBase IV.</li>
+</ul>
+<p>Adicionalmente, la carpeta donde se encuentran dichos archivos pueden contener otros archivos de formato <code>.prj</code> o <code>.sbn</code>, estos aportan más datos de la geometría o pueden ser usados en otros programas de sistemas de información geógrafica.</p>
+<p>Los datos importados con <code>rgdal</code> a partir de un archivo shapefile, son objetos que contienen polígonos vectoriales, con las coordenadas la latitud y la longitud en formato decimal. A partir de estos objetos, podemos extraer datos para graficarlos desde una tabla. La biblioteca <code>broom</code> nos ayuda en la extracción y agrupa los datos para su correspondientes graficación.</p>
+<p><strong>Obteniendo nuestros archivos shapefile</strong>
+Muchos de estos archivos Shapefile representan mapas de nuestros Estados, por lo que están disponibles de manera gratuita en la mayoria de los casos, en otros, son de paga o están más completos, actualizados y/o poseen datos específicos. Debajo mostramos algunos recursos web gratuitos que puedes usar.</p>
+<p><a href=https://data.humdata.org/>data.humdata.org</a> para shapefiles varios países del mundo. (Algunos están desactualizados)</p>
+<p><a href=https://geo.gob.bo/geonetwork/srv/spa/catalog.search#/home>geo.gob.bo</a> para shapefiles de Bolivia</p>
+<h3 id=instalación-de-pre-requisitos>Instalación de pre-requisitos</h3>
+<p>Las siguientes bibliotecas de R son necesarias, para realizar nuestro ejemplo.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-r data-lang=r><span class=ln>1</span><span class=nf>install.packages</span><span class=p>(</span><span class=s>&#34;ggplot2&#34;</span><span class=p>)</span>    <span class=c1># biblioteca para graficar.</span>
+<span class=ln>2</span><span class=nf>install.packages</span><span class=p>(</span><span class=s>&#34;rgdal&#34;</span><span class=p>)</span>      <span class=c1># biblioteca para abrir archivo de formato shapefiles (datos geográficos)</span>
+<span class=ln>3</span><span class=nf>install.packages</span><span class=p>(</span><span class=s>&#34;broom&#34;</span><span class=p>)</span>      <span class=c1># biblioteca usada para extraer datos del archivo importado de shapefiles</span>
+<span class=ln>4</span><span class=nf>install.packages</span><span class=p>(</span><span class=s>&#34;tidyverse&#34;</span><span class=p>)</span>  <span class=c1># biblioteca usada para unir tablas</span>
+<span class=ln>5</span><span class=nf>install.packages</span><span class=p>(</span><span class=s>&#34;rio&#34;</span><span class=p>)</span>        <span class=c1># biblioteca para importar datos de archivos csv</span>
+<span class=ln>6</span><span class=nf>install.packages</span><span class=p>(</span><span class=s>&#34;dplyr&#34;</span><span class=p>)</span>     <span class=c1># biblioteca usada para agrupar por valores de columnas</span>
+<span class=ln>7</span><span class=nf>install.packages</span><span class=p>(</span><span class=s>&#34;extrafont&#34;</span><span class=p>)</span> <span class=c1># biblioteca para importar los tipos de letra de windows.</span>
+</code></pre></div><p><em>(Recuerde que para ejecutar una linea de Comando en el Editor de RStudio se usa Ctrl+Enter)</em></p>
+<h2 id=preparación-de-los-datos-para-graficar>Preparación de los datos para graficar</h2>
+<p>Nuestra base de datos fué descargada de <a href=https://geo.gob.bo>GeoBolivia</a>, <a href=https://www.ine.gob.bo/>INE Bolivia</a> y <a href=https://www.geodatos.net/coordenadas/bolivia>geodatos.net</a>. Una vez descargado los datos estos fueron depurados para el ejemplo.</p>
+<p>Abrimos nuestras bibliotecas requeridas:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-r data-lang=r><span class=ln>1</span><span class=nf>library</span><span class=p>(</span><span class=n>ggplot2</span><span class=p>)</span>
+<span class=ln>2</span><span class=nf>library</span><span class=p>(</span><span class=n>rgdal</span><span class=p>)</span>
+<span class=ln>3</span><span class=nf>library</span><span class=p>(</span><span class=n>broom</span><span class=p>)</span>
+<span class=ln>4</span><span class=nf>library</span><span class=p>(</span><span class=n>tidyverse</span><span class=p>)</span>
+<span class=ln>5</span><span class=nf>library</span><span class=p>(</span><span class=n>rio</span><span class=p>)</span>
+<span class=ln>6</span><span class=nf>library</span><span class=p>(</span><span class=n>dplyr</span><span class=p>)</span>
+<span class=ln>7</span><span class=nf>library</span><span class=p>(</span><span class=n>extrafont</span><span class=p>)</span>
+</code></pre></div><p>Redireccionamos el directorio actual, a nuestro directorio de trabajo e importamos nuestros archivos shapefiles:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-r data-lang=r><span class=ln>1</span><span class=nf>setwd</span><span class=p>(</span><span class=s>&#34;../mypath/&#34;</span><span class=p>)</span> <span class=c1># redirecciona el directo actual a nuestro directorio de trabajo</span>
+<span class=ln>2</span><span class=c1># importamos los datos geofgráficos a nuestra varibales shapefile</span>
+<span class=ln>3</span><span class=n>shapefile</span> <span class=o>=</span> <span class=nf>readOGR</span><span class=p>(</span>
+<span class=ln>4</span>  <span class=n>dsn</span> <span class=o>=</span> <span class=s>&#34;.&#34;</span><span class=p>,</span>
+<span class=ln>5</span>  <span class=n>layer</span> <span class=o>=</span> <span class=s>&#34;departamentos_geo&#34;</span><span class=p>,</span>
+<span class=ln>6</span>  <span class=n>encoding</span> <span class=o>=</span> <span class=s>&#39;utf-8&#39;</span><span class=p>,</span>
+<span class=ln>7</span>  <span class=n>use_iconv</span> <span class=o>=</span> <span class=kc>TRUE</span>
+<span class=ln>8</span><span class=p>)</span> 
+</code></pre></div><ul>
+<li>
+<p><strong><code>dsn</code></strong>: carpeta dentro del directorio actual, donde se encuentran ficheros shapefiles, si se pone sólo un punto <strong>"."</strong> hace referencia a que los ficheros se encuentran en la carpeta actual.</p>
+</li>
+<li>
+<p><strong><code>encoding="utf-8", use_iconv=TRUE</code></strong>: indica a la función <code>readOGR</code> que debe importarse con la codificación <code>utf-8</code>. Siendo que nuestro archivo contiene caracteres del español como <strong>ñ</strong> y vocales con tildes, nos es conveniente usar este comando.</p>
+</li>
+</ul>
+<p>Para observar el contenido de <code>shapefile</code>, use <code>View(shapefile)</code>.</p>
+<p>Extraemos datos en <code>geotable</code> y a continuación mostramos su cabecera:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-r data-lang=r><span class=ln>1</span><span class=n>geotable</span> <span class=o>=</span> <span class=nf>tidy</span><span class=p>(</span><span class=n>shapefile</span><span class=p>)</span>
+<span class=ln>2</span><span class=nf>head</span><span class=p>(</span><span class=n>geotable</span><span class=p>)</span>
+</code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-r data-lang=r><span class=ln> 1</span><span class=o>&gt;</span> <span class=nf>head</span><span class=p>(</span><span class=n>geotable</span><span class=p>)</span>
+<span class=ln> 2</span><span class=c1># A tibble: 6 x 7</span>
+<span class=ln> 3</span>   <span class=n>long</span>   <span class=n>lat</span> <span class=n>order</span> <span class=n>hole</span>  <span class=n>piece</span> <span class=n>group</span> <span class=n>id</span>   
+<span class=ln> 4</span>  <span class=o>&lt;</span><span class=n>dbl</span><span class=o>&gt;</span> <span class=o>&lt;</span><span class=n>dbl</span><span class=o>&gt;</span> <span class=o>&lt;</span><span class=n>int</span><span class=o>&gt;</span> <span class=o>&lt;</span><span class=n>lgl</span><span class=o>&gt;</span> <span class=o>&lt;</span><span class=n>fct</span><span class=o>&gt;</span> <span class=o>&lt;</span><span class=n>fct</span><span class=o>&gt;</span> <span class=o>&lt;</span><span class=n>chr</span><span class=o>&gt;</span>
+<span class=ln> 5</span><span class=m>1</span> <span class=m>-65.8</span> <span class=m>-18.0</span>     <span class=m>1</span> <span class=kc>FALSE</span> <span class=m>1</span>     <span class=m>0.1</span>   <span class=m>0</span>    
+<span class=ln> 6</span><span class=m>2</span> <span class=m>-65.8</span> <span class=m>-18.0</span>     <span class=m>2</span> <span class=kc>FALSE</span> <span class=m>1</span>     <span class=m>0.1</span>   <span class=m>0</span>    
+<span class=ln> 7</span><span class=m>3</span> <span class=m>-65.8</span> <span class=m>-18.0</span>     <span class=m>3</span> <span class=kc>FALSE</span> <span class=m>1</span>     <span class=m>0.1</span>   <span class=m>0</span>    
+<span class=ln> 8</span><span class=m>4</span> <span class=m>-65.8</span> <span class=m>-18.0</span>     <span class=m>4</span> <span class=kc>FALSE</span> <span class=m>1</span>     <span class=m>0.1</span>   <span class=m>0</span>    
+<span class=ln> 9</span><span class=m>5</span> <span class=m>-65.8</span> <span class=m>-18.0</span>     <span class=m>5</span> <span class=kc>FALSE</span> <span class=m>1</span>     <span class=m>0.1</span>   <span class=m>0</span>    
+<span class=ln>10</span><span class=m>6</span> <span class=m>-65.8</span> <span class=m>-18.0</span>     <span class=m>6</span> <span class=kc>FALSE</span> <span class=m>1</span>     <span class=m>0.1</span>   <span class=m>0</span>    
+</code></pre></div><p>Nótese que geotable, no poseé las etiquetas de los nombres de las regiones a graficar, esto lo arreglamos con:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-r data-lang=r><span class=ln>1</span><span class=c1># añadiendo una columna id para poder juntar las columnas de nuestro geotable</span>
+<span class=ln>2</span><span class=n>shapefile</span><span class=o>$</span><span class=n>id</span> <span class=o>&lt;-</span> <span class=nf>row.names</span><span class=p>(</span><span class=n>shapefile</span><span class=p>)</span>
+<span class=ln>3</span>
+<span class=ln>4</span><span class=c1># añadiendo a geotable los datos que faltan desde shapefile y juntandolo por el id</span>
+<span class=ln>5</span><span class=n>geotable</span> <span class=o>&lt;-</span> <span class=nf>left_join</span><span class=p>(</span><span class=n>geotable</span><span class=p>,</span> <span class=n>shapefile</span><span class=o>@</span><span class=n>data</span><span class=p>,</span> <span class=n>by</span> <span class=o>=</span> <span class=s>&#34;id&#34;</span><span class=p>)</span>
+</code></pre></div><p>Para verificar que se han añadido los correspondientes nombres de regiones, use<code>head(geotable)</code></p>
+<p>Funciones auxiliares:</p>
+<ul>
+<li><strong><code>shapefile$id &lt;- </code></strong>: crea una nueva columna <code>id</code> en shapefile o la reemplaza.</li>
+<li><strong><code>row.names(shapefile) </code></strong>: extrae los nombres de las filas del shapefile que por defecto es una numeración que va desde 0 y coincide con el <code>id</code> de nuestro <code>geotable</code>.</li>
+<li><strong><code>shapefile@data </code></strong> accede a la tabla o dataframe <code>data</code> de nuestro shapefile.</li>
+<li><strong><code>left_join(tabla1, tabla2, by = clave) </code></strong>: junta dos tablas por izquierda, es decir añade valores que faltan de <code>tabla2</code> a la <code>tabla1</code> de acuerdo al código <code>clave</code> o columna común.</li>
+</ul>
+<p>Ahora importamos nuestra tabla con los datos de población por departamento: (haciendo <code>header = TRUE</code> nos aseguramos que la primera fila se conviertan en los nombres de las columnas)</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-r data-lang=r><span class=ln>1</span><span class=c1># importando la tabla de datos de población</span>
+<span class=ln>2</span><span class=n>poblacion</span> <span class=o>&lt;-</span> <span class=nf>import</span><span class=p>(</span><span class=s>&#34;departamentospoblacion.csv&#34;</span><span class=p>,</span> <span class=n>header</span> <span class=o>=</span> <span class=kc>TRUE</span><span class=p>)</span>
+</code></pre></div><p>Nótese que cambiamos el nombre nuestra columna de en población <code>DEPARTAMENTO</code> por <code>DEPARTAMEN</code>, para que coincidan nuestra columnas y luego juntarlas con <code>left_join()</code>.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-r data-lang=r><span class=ln>1</span><span class=c1># cambiando el nombre de la columna de DEPARTAMENTO POR DEPARTAMEN</span>
+<span class=ln>2</span><span class=nf>colnames</span><span class=p>(</span><span class=n>poblacion</span><span class=p>)</span><span class=nf>[colnames</span><span class=p>(</span><span class=n>poblacion</span><span class=p>)</span> <span class=o>==</span> <span class=s>&#34;DEPARTAMENTO&#34;</span><span class=n>]</span> <span class=o>&lt;-</span> <span class=s>&#34;DEPARTAMEN&#34;</span>
+<span class=ln>3</span><span class=c1># juntamos en datos ambas tablas</span>
+<span class=ln>4</span><span class=n>datos</span><span class=o>&lt;-</span><span class=nf>left_join</span><span class=p>(</span><span class=n>geotable</span><span class=p>,</span> <span class=n>poblacion</span><span class=p>,</span> <span class=n>by</span> <span class=o>=</span> <span class=s>&#34;DEPARTAMEN&#34;</span><span class=p>)</span>
+</code></pre></div><h2 id=graficando-el-mapa-con-ggplot2>Graficando el mapa con ggplot2</h2>
+<p>Ahora, graficamos con <code>ggplot2</code>:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-r data-lang=r><span class=ln>1</span><span class=nf>ggplot</span><span class=p>()</span> <span class=o>+</span>
+<span class=ln>2</span>  <span class=nf>geom_polygon</span><span class=p>(</span><span class=n>data</span> <span class=o>=</span> <span class=n>datos</span><span class=p>,</span> <span class=nf>aes</span><span class=p>(</span>
+<span class=ln>3</span>    <span class=n>x</span> <span class=o>=</span> <span class=n>long</span><span class=p>,</span>
+<span class=ln>4</span>    <span class=n>y</span> <span class=o>=</span> <span class=n>lat</span><span class=p>,</span>
+<span class=ln>5</span>    <span class=n>group</span> <span class=o>=</span> <span class=n>group</span><span class=p>,</span>
+<span class=ln>6</span>    <span class=n>fill</span> <span class=o>=</span> <span class=n>Poblacion2022</span>
+<span class=ln>7</span>  <span class=p>))</span> <span class=o>+</span>
+<span class=ln>8</span>  <span class=nf>coord_equal</span><span class=p>()</span> <span class=o>+</span> <span class=nf>labs</span><span class=p>(</span><span class=n>fill</span> <span class=o>=</span> <span class=s>&#34;POBLACION&#34;</span><span class=p>)</span>
+</code></pre></div><ul>
+<li><strong><code>geom_polygon(data, aes(x, y, group, fill))</code></strong>: dibuja polígonos con la tabla <code>data</code> y muestra la estética con <code>aes()</code>.
+<code>x</code>, <code>y</code> son los valores en ejes de las absisas y las ordenadas, estan agrupadas por el valor de la columna <code>group</code> y se colorea con base a los valores de la columna <code>fill</code>.</li>
+<li><strong><code>coord_equal()</code></strong>: obliga a la gráfica que la relación de aspecto entre coordenadas sea 1:1.</li>
+<li><strong><code>lab(fill)</code></strong>: pone el título a la leyenda con <code>fill</code>.</li>
+</ul>
+<p>
+<figure>
+<picture>
+<img loading=lazy decoding=async alt="Mapa de Bolivia: Población por departamento" class="image_figure image_internal image_unprocessed" src=/blog/dibuja-tus-mapas-en-r-usando-archivos-de-formato-shapefile/grafica1.png>
+</picture>
+</figure>
+</p>
+<h2 id=mejorando-la-presentación-de-nuestro-mapa>Mejorando la presentación de nuestro mapa</h2>
+<p>Entre las cosas que podemos hacer para mejorar la apariencia de nuestra gráfica, están poner un título, cambiar los colores, el fondo, el formato de nuestra leyenda. A continuación mostramos como hacerlos.</p>
+<p>Extraemos los valores de la población, para ponerlas como etiquetas dentro de nuestro mapa, para ello utilizamos las funciones <code>group_by()</code> y <code>summarise()</code> de la biblioteca <code>dplyr</code>.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-r data-lang=r><span class=ln>1</span><span class=n>etiquetas_poblacion</span> <span class=o>&lt;-</span> <span class=n>datos</span> <span class=o>%&gt;%</span> <span class=nf>group_by</span><span class=p>(</span><span class=n>DEPARTAMEN</span><span class=p>)</span> <span class=o>%&gt;%</span>
+<span class=ln>2</span>  <span class=nf>summarise</span><span class=p>(</span>
+<span class=ln>3</span>    <span class=n>label_long</span> <span class=o>=</span> <span class=nf>mean</span><span class=p>(</span><span class=nf>range</span><span class=p>(</span><span class=n>long</span><span class=p>)),</span>
+<span class=ln>4</span>    <span class=n>label_lat</span> <span class=o>=</span> <span class=nf>mean</span><span class=p>(</span><span class=nf>range</span><span class=p>(</span><span class=n>lat</span><span class=p>)),</span>
+<span class=ln>5</span>    <span class=n>pob</span> <span class=o>=</span> <span class=nf>mean</span><span class=p>(</span><span class=n>Poblacion2022</span><span class=p>)</span>
+<span class=ln>6</span>  <span class=p>)</span>
+</code></pre></div><ul>
+<li><strong><code>tabla0 %>% funcion0 %>% funcion1 ...</code></strong>: Esta notación indica que se debe tomar la <code>tabla0</code> como argumento de la <code>funcion0</code>, luego los resultados de la <code>funcion0</code> deben tomarse como argumentos de la <code>función1</code> y así sucesivamente. El símbolo <strong>%>%</strong> es conocido como <code>pipe operator</code> este nos ayuda para concatenar valores de entrada y salida de diferentes funciones.</li>
+<li><strong><code>group_by(col) %>% summarise(col1=accion1, col2=accion2 ...)</code></strong>: agrupa los datos en función del valor de columna <code>col</code> y con <code>summarise()</code> usa los datos agrupados para devolver nuevos valores: <code>col1</code>, <code>col2</code> ..., que pueden estar en función de los valores que están agrupados.</li>
+<li><strong><code>range(v)</code></strong>: extrae los valores máximo y mínimo de un rango de datos <code>v</code>.</li>
+<li><strong><code>mean(v)</code></strong>: devuelve el valor medio del vector <code>v</code>.</li>
+</ul>
+<p>Si, queremos incluir nuevas fuentes para el tipo de letra para nuestro mapa, empleamos los siguientes comandos:
+(Nota: nos pedirá confirmación para realizar la importación de fuentes y tardará unos minutos):</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-r data-lang=r><span class=ln>1</span><span class=n>extrafont</span><span class=o>::</span><span class=nf>font_import</span><span class=p>(</span><span class=s>&#34;C:/Windows/Fonts&#34;</span><span class=p>)</span>
+<span class=ln>2</span><span class=nf>loadfonts</span><span class=p>(</span><span class=n>device</span> <span class=o>=</span> <span class=s>&#34;win&#34;</span><span class=p>)</span>
+<span class=ln>3</span><span class=nf>fonts</span><span class=p>()</span> <span class=c1># Nos muestra las fuentes disponibles.</span>
+</code></pre></div><p>Incluimos los datos de <code>etiquetas_población</code> en nuestra gráfica.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-r data-lang=r><span class=ln> 1</span><span class=nf>ggplot</span><span class=p>()</span> <span class=o>+</span>
+<span class=ln> 2</span>  <span class=nf>geom_polygon</span><span class=p>(</span><span class=n>data</span> <span class=o>=</span> <span class=n>datos</span><span class=p>,</span> <span class=nf>aes</span><span class=p>(</span>
+<span class=ln> 3</span>    <span class=n>x</span> <span class=o>=</span> <span class=n>long</span><span class=p>,</span>
+<span class=ln> 4</span>    <span class=n>y</span> <span class=o>=</span> <span class=n>lat</span><span class=p>,</span>
+<span class=ln> 5</span>    <span class=n>group</span> <span class=o>=</span> <span class=n>group</span><span class=p>,</span>
+<span class=ln> 6</span>    <span class=n>fill</span> <span class=o>=</span> <span class=n>Poblacion2022</span>
+<span class=ln> 7</span>  <span class=p>))</span> <span class=o>+</span>
+<span class=ln> 8</span>  <span class=nf>coord_equal</span><span class=p>()</span> <span class=o>+</span> <span class=nf>theme_void</span><span class=p>()</span> <span class=o>+</span>
+<span class=ln> 9</span>  <span class=nf>geom_text</span><span class=p>(</span>
+<span class=ln>10</span>    <span class=n>size</span> <span class=o>=</span> <span class=m>4.5</span><span class=p>,</span>
+<span class=ln>11</span>    <span class=n>alpha</span> <span class=o>=</span> <span class=m>0.9</span><span class=p>,</span>
+<span class=ln>12</span>    <span class=n>fontface</span> <span class=o>=</span> <span class=s>&#34;bold&#34;</span><span class=p>,</span>
+<span class=ln>13</span>    <span class=n>data</span> <span class=o>=</span> <span class=n>etiquetas_poblacion</span><span class=p>,</span>
+<span class=ln>14</span>    <span class=n>mapping</span> <span class=o>=</span> <span class=nf>aes</span><span class=p>(</span>
+<span class=ln>15</span>      <span class=n>x</span> <span class=o>=</span> <span class=n>label_long</span><span class=p>,</span>
+<span class=ln>16</span>      <span class=n>y</span> <span class=o>=</span> <span class=n>label_lat</span><span class=p>,</span>
+<span class=ln>17</span>      <span class=n>label</span> <span class=o>=</span> <span class=nf>format</span><span class=p>(</span><span class=n>pob</span><span class=p>,</span> <span class=n>big.mark</span> <span class=o>=</span> <span class=s>&#34; &#34;</span><span class=p>),</span>
+<span class=ln>18</span>      <span class=n>color</span> <span class=o>=</span> <span class=n>pob</span>
+<span class=ln>19</span>    <span class=p>)</span>
+<span class=ln>20</span>  <span class=p>)</span> <span class=o>+</span>
+<span class=ln>21</span>  <span class=nf>labs</span><span class=p>(</span><span class=n>title</span> <span class=o>=</span> <span class=s>&#34;Población estimada de Bolivia por departamentos para el año 2022&#34;</span><span class=p>,</span>
+<span class=ln>22</span>       <span class=n>fill</span> <span class=o>=</span> <span class=s>&#34;Habitantes&#34;</span><span class=p>,</span>
+<span class=ln>23</span>       <span class=n>caption</span> <span class=o>=</span> <span class=s>&#34;Datos:INE Boliva; GeoDatos: GeoBolivia&#34;</span><span class=p>)</span> <span class=o>+</span>
+<span class=ln>24</span>  <span class=nf>scale_colour_gradientn</span><span class=p>(</span><span class=n>colours</span> <span class=o>=</span> <span class=nf>c</span><span class=p>(</span><span class=s>&#34;black&#34;</span><span class=p>,</span> <span class=s>&#34;black&#34;</span><span class=p>,</span> <span class=s>&#34;white&#34;</span><span class=p>,</span> <span class=s>&#34;white&#34;</span><span class=p>,</span> <span class=s>&#34;white&#34;</span><span class=p>),</span>
+<span class=ln>25</span>                         <span class=n>guide</span> <span class=o>=</span> <span class=s>&#34;none&#34;</span><span class=p>)</span> <span class=o>+</span>
+<span class=ln>26</span>  <span class=nf>scale_fill_continuous</span><span class=p>(</span>
+<span class=ln>27</span>    <span class=n>low</span> <span class=o>=</span> <span class=s>&#34;#C4FFD1&#34;</span><span class=p>,</span>
+<span class=ln>28</span>    <span class=n>high</span> <span class=o>=</span> <span class=s>&#34;#05693E&#34;</span><span class=p>,</span>
+<span class=ln>29</span>    <span class=n>guide</span> <span class=o>=</span> <span class=s>&#34;colorbar&#34;</span><span class=p>,</span>
+<span class=ln>30</span>    <span class=n>labels</span> <span class=o>=</span> <span class=n>scales</span><span class=o>::</span><span class=nf>label_number</span><span class=p>(</span><span class=n>big.mark</span> <span class=o>=</span> <span class=s>&#34; &#34;</span><span class=p>)</span>
+<span class=ln>31</span>  <span class=p>)</span> <span class=o>+</span>
+<span class=ln>32</span>  <span class=nf>theme</span><span class=p>(</span>
+<span class=ln>33</span>    <span class=n>plot.title</span> <span class=o>=</span> <span class=nf>element_text</span><span class=p>(</span>
+<span class=ln>34</span>      <span class=n>size</span> <span class=o>=</span> <span class=m>14</span><span class=p>,</span>
+<span class=ln>35</span>      <span class=n>face</span> <span class=o>=</span> <span class=s>&#34;bold&#34;</span><span class=p>,</span>
+<span class=ln>36</span>      <span class=n>family</span> <span class=o>=</span> <span class=s>&#34;Helvetica&#34;</span><span class=p>,</span>
+<span class=ln>37</span>      <span class=n>hjust</span> <span class=o>=</span> <span class=m>0.5</span>
+<span class=ln>38</span>    <span class=p>),</span>
+<span class=ln>39</span>    <span class=n>legend.title</span> <span class=o>=</span> <span class=nf>element_text</span><span class=p>(</span><span class=n>size</span> <span class=o>=</span> <span class=m>12</span><span class=p>,</span> <span class=n>family</span> <span class=o>=</span> <span class=s>&#34;Rubik&#34;</span><span class=p>),</span>
+<span class=ln>40</span>    <span class=n>plot.caption</span> <span class=o>=</span> <span class=nf>element_text</span><span class=p>(</span><span class=n>family</span> <span class=o>=</span> <span class=s>&#34;Helvetica&#34;</span><span class=p>)</span>
+<span class=ln>41</span>  <span class=p>)</span>
+</code></pre></div><ul>
+<li><strong><code>theme_void()</code></strong>: elimina el fondo y los ejes de nuestra gráfica.</li>
+<li><strong><code>geom_text(size, alpha, fontface, data, mapping = aes(x, y, label), color)</code></strong>: extrae los datos de <code>data</code>, para graficar el texto <code>label</code> en las coordenadas <code>x</code> e <code>y</code>, si, se desea una diferenciacion de colores usesé <code>color</code>. Con <code>size</code>, <code>alpha</code> y <code>fontface</code>, se establece el tamaño, la opacidad y la estetica del texto respectivamente.</li>
+<li><strong><code>format(v, big.mark)</code></strong>: da el formato al valor <code>v</code>, indicando la separación de miles con <code>big.mark</code> (En nuestro ejemplo el separador de miles es sólo el espacio " ").</li>
+<li><strong><code>labs(title, fill, caption)</code></strong>: con <code>title</code>, <code>fill</code>, <code>caption</code> pone el texto del título, la leyenda y el pie del gráfico respectivamente.</li>
+<li><strong><code>scale_colour_gradientn(colours, guide)</code></strong>: aplica una escala de colores a todos los valores asignados a el argumento <code>color</code>, en nuestro ejemplo tenemos color dentro de la función <code>geom_text(... aes(.. color = pob ...) ...)</code>, es decir los valores de <code>pob</code> estarán coloreados según los valores de <code>colours</code> (la sintaxis <code>color</code> <code>colors</code> pueden intercambiarse sin problema con <code>colour</code> y <code>colours</code>) y para que la guia de leyenda no se muestre usamos <code>guide = "none"</code>.</li>
+<li><strong><code>scale_fill_continuous(low, high, guide, labels)</code></strong>: establece una escala de colores continua a los valores asignados a <code>fill</code>, en nuestro ejemplo <code>fill</code>, está dentro de la función <code>geom_polygon(... aes(... fill = Poblacion2022 ...) ...)</code>, es decir los valores de la columna <code>Poblacion2022</code> estaran afectados por esta función. Usamos <code>low</code> para el color correspondiente al valor más bajo y <code>high</code> para el color del valor más alto. Con <code>guide = colorbar</code> mostramos nuestra leyenda en forma de colobar y con<code>labels</code> modificamos la apariencia en la escala de nuestro colorbar.</li>
+<li><strong><code>scales::label_number(big.mark=" ")</code></strong>: usa la función <code>label_number()</code> de la biblioteca <code>scales</code>.
+Con esto modificamos la apariencia de los números de nuestra leyenda poniéndole un espacio <strong>" "</strong> como separador de miles.
+(Nótese que podemos usar <code>scales::funcion()</code> en vez de <code>library(scales) funcion())</code>.</li>
+<li><strong><code>theme(plot.title, legend.title, plot.caption)</code></strong>: modifica la apariencia del título del gráfico, el título de la leyenda y el pie de gráfico respectivamente.</li>
+<li><strong><code>element_text(size, face, family, hjust)</code></strong>: extrae propiedades del texto para modificar el tamaño, la estética, el tipo y la posición en horizontal.</li>
+</ul>
+<p>
+<figure>
+<picture>
+<img loading=lazy decoding=async alt="Mapa de Bolivia: Población por departamento" class="image_figure image_internal image_unprocessed" src=/blog/dibuja-tus-mapas-en-r-usando-archivos-de-formato-shapefile/grafica2.png>
+</picture>
+</figure>
+</p>
+<h2 id=añadiendo-ubicaciones-a-nuestro-mapa>Añadiendo ubicaciones a nuestro mapa</h2>
+<p>Incluyendo las ubicaciones de ciudades capitales de departamento a nuestro mapa:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-r data-lang=r><span class=ln> 1</span><span class=n>ciudades</span> <span class=o>=</span> <span class=nf>import</span><span class=p>(</span><span class=s>&#34;ciudades.csv&#34;</span><span class=p>)</span> <span class=c1># importamos la localización de las ciudades capitales</span>
+<span class=ln> 2</span>
+<span class=ln> 3</span><span class=nf>ggplot</span><span class=p>()</span> <span class=o>+</span>
+<span class=ln> 4</span>  <span class=nf>geom_polygon</span><span class=p>(</span>
+<span class=ln> 5</span>    <span class=n>data</span> <span class=o>=</span> <span class=n>datos</span><span class=p>,</span>
+<span class=ln> 6</span>    <span class=nf>aes</span><span class=p>(</span>
+<span class=ln> 7</span>      <span class=n>x</span> <span class=o>=</span> <span class=n>long</span><span class=p>,</span>
+<span class=ln> 8</span>      <span class=n>y</span> <span class=o>=</span> <span class=n>lat</span><span class=p>,</span>
+<span class=ln> 9</span>      <span class=n>group</span> <span class=o>=</span> <span class=n>group</span><span class=p>,</span>
+<span class=ln>10</span>      <span class=n>fill</span> <span class=o>=</span> <span class=n>DEPARTAMEN</span>
+<span class=ln>11</span>    <span class=p>),</span>
+<span class=ln>12</span>    <span class=n>color</span> <span class=o>=</span> <span class=s>&#34;gray&#34;</span><span class=p>,</span>
+<span class=ln>13</span>    <span class=n>size</span> <span class=o>=</span> <span class=m>0.5</span>
+<span class=ln>14</span>  <span class=p>)</span> <span class=o>+</span>
+<span class=ln>15</span>  <span class=nf>geom_point</span><span class=p>(</span>
+<span class=ln>16</span>    <span class=n>alpha</span> <span class=o>=</span> <span class=m>0.7</span><span class=p>,</span>
+<span class=ln>17</span>    <span class=n>data</span> <span class=o>=</span> <span class=n>ciudades</span><span class=p>,</span>
+<span class=ln>18</span>    <span class=n>mapping</span> <span class=o>=</span> <span class=nf>aes</span><span class=p>(</span><span class=n>x</span> <span class=o>=</span> <span class=n>lat</span><span class=p>,</span> <span class=n>y</span> <span class=o>=</span> <span class=n>long</span><span class=p>,</span> <span class=n>colour</span> <span class=o>=</span> <span class=n>Ciudad</span><span class=p>),</span>
+<span class=ln>19</span>    <span class=n>size</span> <span class=o>=</span> <span class=m>5</span>
+<span class=ln>20</span>  <span class=p>)</span> <span class=o>+</span>
+<span class=ln>21</span>  <span class=nf>coord_equal</span><span class=p>()</span> <span class=o>+</span> <span class=nf>labs</span><span class=p>(</span><span class=n>title</span> <span class=o>=</span> <span class=s>&#34;Capitales de Departamento en Bolivia&#34;</span><span class=p>,</span>
+<span class=ln>22</span>                       <span class=n>color</span> <span class=o>=</span> <span class=s>&#34;Ciudades Capitales&#34;</span><span class=p>,</span>
+<span class=ln>23</span>                       <span class=n>caption</span> <span class=o>=</span> <span class=s>&#34;Fuente: geodatos.net, GeoBolivia&#34;</span><span class=p>)</span> <span class=o>+</span>
+<span class=ln>24</span>  <span class=nf>scale_fill_brewer</span><span class=p>(</span><span class=n>palette</span> <span class=o>=</span> <span class=s>&#39;PuBuGn&#39;</span><span class=p>,</span> <span class=n>guide</span> <span class=o>=</span> <span class=s>&#34;none&#34;</span><span class=p>)</span> <span class=o>+</span>
+<span class=ln>25</span>  <span class=nf>scale_color_manual</span><span class=p>(</span><span class=n>values</span> <span class=o>=</span> <span class=nf>rainbow</span><span class=p>(</span><span class=m>9</span><span class=p>))</span> <span class=o>+</span>
+<span class=ln>26</span>  <span class=nf>theme_void</span><span class=p>()</span> <span class=o>+</span>
+<span class=ln>27</span>  <span class=nf>theme</span><span class=p>(</span>
+<span class=ln>28</span>    <span class=n>plot.title</span> <span class=o>=</span> <span class=nf>element_text</span><span class=p>(</span>
+<span class=ln>29</span>      <span class=n>size</span> <span class=o>=</span> <span class=m>14</span><span class=p>,</span>
+<span class=ln>30</span>      <span class=n>face</span> <span class=o>=</span> <span class=s>&#34;bold&#34;</span><span class=p>,</span>
+<span class=ln>31</span>      <span class=n>family</span> <span class=o>=</span> <span class=s>&#34;Helvetica&#34;</span><span class=p>,</span>
+<span class=ln>32</span>      <span class=n>hjust</span> <span class=o>=</span> <span class=m>0.5</span>
+<span class=ln>33</span>    <span class=p>),</span>
+<span class=ln>34</span>    <span class=n>legend.title</span> <span class=o>=</span> <span class=nf>element_text</span><span class=p>(</span><span class=n>size</span> <span class=o>=</span> <span class=m>12</span><span class=p>,</span> <span class=n>family</span> <span class=o>=</span> <span class=s>&#34;Rubik&#34;</span><span class=p>),</span>
+<span class=ln>35</span>    <span class=n>plot.caption</span> <span class=o>=</span> <span class=nf>element_text</span><span class=p>(</span><span class=n>family</span> <span class=o>=</span> <span class=s>&#34;Helvetica&#34;</span><span class=p>)</span>
+<span class=ln>36</span>  <span class=p>)</span> 
+</code></pre></div><ul>
+<li><strong><code>geom_point(alpha, data, mapping = aes(x, y, colour), size)</code></strong>: dibuja puntos dentro del gráfico, comparte similares argumentos con <code>geom_poligon()</code> y <code>geom_text()</code>.</li>
+<li><strong><code>scale_fill_brewer(palette, guide)</code></strong>: similar a la función <code>scale_fill_continuous(low, high, guide, labels)</code> aplica una escala de colores tipo brewer a todos los objetos asignados a <code>fill</code> y con <code>pallete</code> seleccionamos el tipo de paleta de colores a aplicarse.</li>
+<li><strong><code>scale_color_manual(values)</code></strong>: nos permite usar una escala de colores manual, <code>values</code> debe ser un vector que contenga los valores de los colores de la escala.</li>
+<li>*<strong><code>raibow(9)</code></strong>: devuelve un vector con 9 colores del arcoiris.</li>
+</ul>
+<p>
+<figure>
+<picture>
+<img loading=lazy decoding=async alt="Mapa de Bolivia: Capitales de departamento" class="image_figure image_internal image_unprocessed" src=/blog/dibuja-tus-mapas-en-r-usando-archivos-de-formato-shapefile/grafica3.png>
+</picture>
+</figure>
+</p>
+<h4 id=asignando-colores>Asignando colores</h4>
+<p>Puedes asignar los colores simplemente usando su nombre en inglés. Para el blanco es <strong>white</strong>, para el rojo, <strong>red</strong>. También puedes utilizar el código hexadecimal, como <strong>#FF4500</strong> para el rojo anaranjado; agruparlos en una escala de colores, utilizando el comando <code>c("red","#FF4500"...)</code>. Una página recomendable para seleccionar colores y obtener su código de color con un click es <a href=https://r-charts.com/colors/>r-chart.com/colors/</a>.
+También puede emplear las funciones auxiliares que ofrece <code>R</code>, por ejemplo: <code>scale_color</code>/<code>fill_brewer</code>/<code>viridis_</code>. Estas proporcionan escalas predefinidas que podrían mejorar el impacto visual.</p>
+<h2 id=guardando-nuestro-mapa>Guardando nuestro mapa</h2>
+<p>RStudio ofrece la posibilidad de exportar fácilmente desde su menú, ubicado encima de la vista previa del gráfico "Export". Podemos optar por guardar nuestro mapa con mayor calidad o cierto formato y, para ello, podemos usar <code>ggsave()</code>, que nos permite exportar o guardar nuestro último gráfico ejecutado.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-r data-lang=r><span class=ln>1</span><span class=nf>ggsave</span><span class=p>(</span>
+<span class=ln>2</span>  <span class=n>filename</span> <span class=o>=</span> <span class=s>&#34;grafica.png&#34;</span><span class=p>,</span>
+<span class=ln>3</span>  <span class=n>path</span> <span class=o>=</span> <span class=s>&#34;.../mypath/&#34;</span><span class=p>,</span>
+<span class=ln>4</span>  <span class=n>scale</span> <span class=o>=</span> <span class=m>1</span><span class=p>,</span>
+<span class=ln>5</span>  <span class=n>device</span> <span class=o>=</span> <span class=s>&#34;png&#34;</span><span class=p>,</span>
+<span class=ln>6</span>  <span class=n>dpi</span> <span class=o>=</span> <span class=m>320</span>
+<span class=ln>7</span><span class=p>)</span>
+</code></pre></div><p>Guarda el mapa con el nombre <code>filename</code> en la ruta <code>path</code>, con la escala y formato de <code>scale</code> y <code>device</code>. Con <code>dpi</code> indicamos la cantidad de píxeles por pulgada, que es la calidad de nuestro archivo a exportar.</p>
+<h2 id=referencias>Referencias</h2>
+<ul>
+<li><a href=https://www.ine.gob.bo>Instituto Nacional de Estadística Bolivia</a></li>
+<li><a href=https://geo.gob.bo/>GeoBolivia</a></li>
+<li><a href=https://www.geodatos.net/coordenadas/bolivia>geodatos.net</a></li>
+<li><a href=https://github.com/Robinlovelace/Creating-maps-in-R>Robinlovelace</a></li>
+<li><a href=https://www.rdocumentation.org>Documentacion de R</a></li>
+</ul>
+</div>
+<div class=post_comments>
+</div>
+</article>
+<aside class=sidebar>
+<section class=sidebar_inner>
+<br>
+<div class=search>
+<input type=search class="search_field form_field" placeholder=Buscar... id=find autocomplete=off data-scope=blog>
+<label for=find class=search_label><svg class="icon"><title>search</title><use xlink:href="#search"/></svg>
+</label>
+<div class="search_results results"></div>
+</div>
+<h2 class=mt-4>Posts destacados</h2>
+<ul>
+<li>
+<a href=https://osl-hugo.github.io%27/guidelines/dei/guide/ class=nav-link title="Declaración de Diversidad, Equidad e Inclusión">Declaración de Diversidad, Equidad e Inclusión</a>
+</li>
+<li>
+<a href=https://osl-hugo.github.io%27/guidelines/articles/guide/ class=nav-link title="Guía Editorial para creación de Artículos">Guía Editorial para creación de Artículos</a>
+</li>
+</ul>
+<h2 class=mt-4>Posts recientes</h2>
+<ul class=flex-column>
+<li>
+<a href=https://osl-hugo.github.io%27/blog/nube-de-palabras/ class=nav-link title="Crea tu nube de palabras en R a partir de un documento de texto">Crea tu nube de palabras en R a partir de un documento de texto</a>
+</li>
+<li>
+<a href=https://osl-hugo.github.io%27/blog/reorganiza-tus-tablas-con-tidyr/ class=nav-link title="Reorganiza tu tabla con tidyr en R">Reorganiza tu tabla con tidyr en R</a>
+</li>
+<li>
+<a href=https://osl-hugo.github.io%27/blog/art-filtrar-datos/ class=nav-link title="Cómo filtrar datos de tu tabla con dplyr en R">Cómo filtrar datos de tu tabla con dplyr en R</a>
+</li>
+<li>
+<a href=https://osl-hugo.github.io%27/guidelines/governance/governance/ class=nav-link title="Open Science Labs Project Governance">Open Science Labs Project Governance</a>
+</li>
+<li>
+<a href=https://osl-hugo.github.io%27/guidelines/roadmap/roadmap/ class=nav-link title="Open Science Labs Roadmap">Open Science Labs Roadmap</a>
+</li>
+<li>
+<a href=https://osl-hugo.github.io%27/guidelines/coc/coc/ class=nav-link title="Código de conducta de las mentorías">Código de conducta de las mentorías</a>
+</li>
+<li>
+<a href=https://osl-hugo.github.io%27/blog/dibuja-tus-mapas-en-r-usando-archivos-de-formato-shapefile/ class=nav-link title="Dibuja tus mapas en R usando archivos de formato Shapefile">Dibuja tus mapas en R usando archivos de formato Shapefile</a>
+</li>
+<li>
+<a href=https://osl-hugo.github.io%27/guidelines/articles/guide/ class=nav-link title="Guía Editorial para creación de Artículos">Guía Editorial para creación de Artículos</a>
+</li>
+</ul>
+<div>
+<h2 class="mt-4 taxonomy" id=tags-section>Tags</h2>
+<nav class=tags_nav>
+<a href=https://osl-hugo.github.io%27/tags/r/ class="post_tag button button_translucent" title=r>
+R
+<span class=button_tally>5</span>
+</a>
+<a href=https://osl-hugo.github.io%27/tags/visualizaci%C3%B3n-de-datos/ class="post_tag button button_translucent" title=visualización-de-datos>
+VISUALIZACIÓN-DE-DATOS
+<span class=button_tally>3</span>
+</a>
+<a href=https://osl-hugo.github.io%27/tags/ciencia-de-datos/ class="post_tag button button_translucent" title=ciencia-de-datos>
+CIENCIA-DE-DATOS
+<span class=button_tally>2</span>
+</a>
+<a href=https://osl-hugo.github.io%27/tags/maps/ class="post_tag button button_translucent" title=maps>
+MAPS
+<span class=button_tally>2</span>
+</a>
+<a href=https://osl-hugo.github.io%27/tags/mentor%C3%ADas/ class="post_tag button button_translucent" title=mentorías>
+MENTORÍAS
+<span class=button_tally>2</span>
+</a>
+<a href=https://osl-hugo.github.io%27/tags/coc/ class="post_tag button button_translucent" title=coc>
+COC
+<span class=button_tally>1</span>
+</a>
+<a href=https://osl-hugo.github.io%27/tags/dei/ class="post_tag button button_translucent" title=dei>
+DEI
+<span class=button_tally>1</span>
+</a>
+<a href=https://osl-hugo.github.io%27/tags/dplyr/ class="post_tag button button_translucent" title=dplyr>
+DPLYR
+<span class=button_tally>1</span>
+</a>
+<a href=https://osl-hugo.github.io%27/tags/filtrado-de-datos/ class="post_tag button button_translucent" title=filtrado-de-datos>
+FILTRADO-DE-DATOS
+<span class=button_tally>1</span>
+</a>
+<a href=https://osl-hugo.github.io%27/tags/gobernance/ class="post_tag button button_translucent" title=gobernance>
+GOBERNANCE
+<span class=button_tally>1</span>
+</a>
+<a href=https://osl-hugo.github.io%27/tags/mentoria/ class="post_tag button button_translucent" title=mentoria>
+MENTORIA
+<span class=button_tally>1</span>
+</a>
+<a href=https://osl-hugo.github.io%27/tags/nube-de-palabras/ class="post_tag button button_translucent" title=nube-de-palabras>
+NUBE-DE-PALABRAS
+<span class=button_tally>1</span>
+</a>
+<a href=https://osl-hugo.github.io%27/tags/tratamiento-de-datos/ class="post_tag button button_translucent" title=tratamiento-de-datos>
+TRATAMIENTO-DE-DATOS
+<span class=button_tally>1</span>
+</a>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+</main><svg width="0" height="0" class="hidden"><symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="facebook"><path d="M437 0H75C33.648.0.0 33.648.0 75v362c0 41.352 33.648 75 75 75h151V331h-60v-90h60v-61c0-49.629 40.371-90 90-90h91v90h-91v61h91l-15 90h-76v181h121c41.352.0 75-33.648 75-75V75c0-41.352-33.648-75-75-75zm0 0"/></symbol><symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.001 18.001" id="twitter"><path d="M15.891 4.013c.808-.496 1.343-1.173 1.605-2.034a8.68 8.68.0 01-2.351.861c-.703-.756-1.593-1.14-2.66-1.14-1.043.0-1.924.366-2.643 1.078A3.56 3.56.0 008.766 5.383c0 .309.039.585.117.819-3.076-.105-5.622-1.381-7.628-3.837-.34.601-.51 1.213-.51 1.846.0 1.301.549 2.332 1.645 3.089-.625-.053-1.176-.211-1.645-.47.0.929.273 1.705.82 2.388a3.623 3.623.0 002.115 1.291c-.312.08-.641.118-.979.118-.312.0-.533-.026-.664-.083.23.757.664 1.371 1.291 1.841a3.652 3.652.0 002.152.743C4.148 14.173 2.625 14.69.902 14.69c-.422.0-.721-.006-.902-.038 1.697 1.102 3.586 1.649 5.676 1.649 2.139.0 4.029-.542 5.674-1.626 1.645-1.078 2.859-2.408 3.639-3.974a10.77 10.77.0 001.172-4.892v-.468a7.788 7.788.0 001.84-1.921 8.142 8.142.0 01-2.11.593z"/></symbol><symbol aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="mail"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V4e2c0 26.5-21.5 48-48 48H48c-26.5.0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5.0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></symbol><symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="calendar"><path d="M452 40h-24V0h-40v40H124V0H84v40H60C26.916 40 0 66.916.0 1e2v352c0 33.084 26.916 60 60 60h392c33.084.0 60-26.916 60-60V1e2c0-33.084-26.916-60-60-60zm20 412c0 11.028-8.972 20-20 20H60c-11.028.0-20-8.972-20-20V188h432v264zm0-304H40v-48c0-11.028 8.972-20 20-20h24v40h40V80h264v40h40V80h24c11.028.0 20 8.972 20 20v48z"/><path d="M76 230h40v40H76zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zM76 310h40v40H76zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zM76 390h40v40H76zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zm80-80h40v40h-40z"/></symbol><symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="github"><path d="M255.968 5.329C114.624 5.329.0 120.401.0 262.353c0 113.536 73.344 209.856 175.104 243.872 12.8 2.368 17.472-5.568 17.472-12.384.0-6.112-.224-22.272-.352-43.712-71.2 15.52-86.24-34.464-86.24-34.464-11.616-29.696-28.416-37.6-28.416-37.6-23.264-15.936 1.728-15.616 1.728-15.616 25.696 1.824 39.2 26.496 39.2 26.496 22.848 39.264 59.936 27.936 74.528 21.344 2.304-16.608 8.928-27.936 16.256-34.368-56.832-6.496-116.608-28.544-116.608-127.008.0-28.064 9.984-51.008 26.368-68.992-2.656-6.496-11.424-32.64 2.496-68 0 0 21.504-6.912 70.4 26.336 20.416-5.696 42.304-8.544 64.096-8.64 21.728.128 43.648 2.944 64.096 8.672 48.864-33.248 70.336-26.336 70.336-26.336 13.952 35.392 5.184 61.504 2.56 68 16.416 17.984 26.304 40.928 26.304 68.992.0 98.72-59.84 120.448-116.864 126.816 9.184 7.936 17.376 23.616 17.376 47.584.0 34.368-.32 62.08-.32 70.496.0 6.88 4.608 14.88 17.6 12.352C438.72 472.145 512 375.857 512 262.353 512 120.401 397.376 5.329 255.968 5.329z"/></symbol><symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212 212" id="gitlab"><path d="M12.3 74.7h54L43.3 3c-1-3.6-6.4-3.6-7.6.0L12.3 74.8z"/><path d="M12.3 74.7.5 111c-1 3.2.0 6.8 3 8.8l101.6 74-92.5-119z"/><path d="M105 193.7l-38.6-119h-54l92.7 119z"/><path d="M105 193.7l38.7-119H66.4l38.7 119z"/><path d="M105 193.7l38.7-119H198l-93 119z"/><path d="M198 74.7l11.6 36.2c1 3 0 6.6-3 8.6l-101.5 74 93-119z"/><path d="M198 74.7h-54.3L167 3c1.2-3.6 6.4-3.6 7.6.0L198 74.8z"/></symbol><symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="rss"><circle cx="3.429" cy="20.571" r="3.429"/><path d="M11.429 24h4.57C15.999 15.179 8.821 8.001.0 8v4.572c6.302.001 11.429 5.126 11.429 11.428z"/><path d="M24 24C24 10.766 13.234.0.0.0v4.571c10.714.0 19.43 8.714 19.43 19.429z"/></symbol><symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="linkedin"><path d="M437 0H75C33.648.0.0 33.648.0 75v362c0 41.352 33.648 75 75 75h362c41.352.0 75-33.648 75-75V75c0-41.352-33.648-75-75-75zM181 406h-60V196h60zm0-240h-60v-60h60zm210 240h-60V286c0-16.54-13.46-30-30-30s-30 13.46-30 30v120h-60V196h60v11.309C286.719 202.422 296.93 196 316 196c40.691.043 75 36.547 75 79.688zm0 0"/></symbol><symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 612" id="to-top"><path d="M604.501 440.509 325.398 134.956c-5.331-5.357-12.423-7.627-19.386-7.27-6.989-.357-14.056 1.913-19.387 7.27L7.499 440.509c-9.999 10.024-9.999 26.298.0 36.323s26.223 10.024 36.222.0l262.293-287.164L568.28 476.832c9.999 10.024 26.222 10.024 36.221.0 9.999-10.023 9.999-26.298.0-36.323z"/></symbol><symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="carly"><path d="M504.971 239.029 448 182.059V84c0-46.317-37.682-84-84-84h-44c-13.255.0-24 10.745-24 24s10.745 24 24 24h44c19.851.0 36 16.149 36 36v108c0 6.365 2.529 12.47 7.029 16.971L454.059 256l-47.029 47.029A24.002 24.002.0 004e2 320v108c0 19.851-16.149 36-36 36h-44c-13.255.0-24 10.745-24 24s10.745 24 24 24h44c46.318.0 84-37.683 84-84v-98.059l56.971-56.971c9.372-9.372 9.372-24.568.0-33.941zM112 192V84c0-19.851 16.149-36 36-36h44c13.255.0 24-10.745 24-24S205.255.0 192 0h-44c-46.318.0-84 37.683-84 84v98.059l-56.971 56.97c-9.373 9.373-9.373 24.568.0 33.941L64 329.941V428c0 46.317 37.682 84 84 84h44c13.255.0 24-10.745 24-24s-10.745-24-24-24h-44c-19.851.0-36-16.149-36-36V320c0-6.365-2.529-12.47-7.029-16.971L57.941 256l47.029-47.029A24.002 24.002.0 00112 192z"/></symbol><symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="copy"><path d="M23 2.75A2.75 2.75.0 0020.25.0H8.75A2.75 2.75.0 006 2.75v13.5A2.75 2.75.0 008.75 19h11.5A2.75 2.75.0 0023 16.25zM18.25 14.5h-7.5a.75.75.0 010-1.5h7.5a.75.75.0 010 1.5zm0-3h-7.5a.75.75.0 010-1.5h7.5a.75.75.0 010 1.5zm0-3h-7.5a.75.75.0 010-1.5h7.5a.75.75.0 010 1.5z"/><path d="M8.75 20.5A4.255 4.255.0 014.5 16.25V2.75c0-.086.02-.166.025-.25H3.75A2.752 2.752.0 001 5.25v16A2.752 2.752.0 003.75 24h12a2.752 2.752.0 002.75-2.75v-.75z"/></symbol><symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.001 512.001" id="closeme"><path d="M284.286 256.002 506.143 34.144c7.811-7.811 7.811-20.475.0-28.285-7.811-7.81-20.475-7.811-28.285.0L256 227.717 34.143 5.859c-7.811-7.811-20.475-7.811-28.285.0-7.81 7.811-7.811 20.475.0 28.285l221.857 221.857L5.858 477.859c-7.811 7.811-7.811 20.475.0 28.285a19.938 19.938.0 0014.143 5.857 19.94 19.94.0 0014.143-5.857L256 284.287l221.857 221.857c3.905 3.905 9.024 5.857 14.143 5.857s10.237-1.952 14.143-5.857c7.811-7.811 7.811-20.475.0-28.285L284.286 256.002z"/></symbol><symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="open-menu"><path d="M492 236H20c-11.046.0-20 8.954-20 20s8.954 20 20 20h472c11.046.0 20-8.954 20-20s-8.954-20-20-20zm0-160H20C8.954 76 0 84.954.0 96s8.954 20 20 20h472c11.046.0 20-8.954 20-20s-8.954-20-20-20zm0 320H20c-11.046.0-20 8.954-20 20s8.954 20 20 20h472c11.046.0 20-8.954 20-20s-8.954-20-20-20z"/></symbol><symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="instagram"><path d="M12 2.163c3.204.0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849.0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204.0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849.0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741.0 8.333.014 7.053.072c-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.668.072 4.948c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.668-.014 4.948-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403.0-6.162 2.759-6.162 6.162S8.597 18.163 12 18.163s6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zM12 16c-2.209.0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796.0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795.0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></symbol><symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="youtube"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23.0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23.0C23.512 20.55 23.971 18.196 24 12c-.029-6.185-.484-8.549-4.385-8.816zM9 16V8l8 3.993L9 16z"/></symbol><symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="stackoverflow"><path d="M21 27v-8h3v11H0V19h3v8h18z"/><path d="M17.1.2 15 1.8l7.9 10.6 2.1-1.6L17.1.2zm3.7 14.7L10.6 6.4l1.7-2 10.2 8.5-1.7 2zM7.2 12.3l12 5.6 1.1-2.4-12-5.6-1.1 2.4zm-1.8 6.8 13.56 1.96.17-2.38-13.26-2.55-.47 2.97zM19 25H5v-3h14v3z"/></symbol><symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="xing"><path d="M18.188.0c-.517.0-.741.325-.927.66.0.0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211.0.375-.078.463-.22.089-.151.089-.346-.009-.536l-4.879-8.916c-.004-.006-.004-.016.0-.022L22.139.756c.095-.191.097-.387.006-.535C22.056.078 21.894.0 21.686.0h-3.498zM3.648 4.74c-.211.0-.385.074-.473.216-.09.149-.078.339.02.531l2.34 4.05c.004.01.004.016.0.021L1.86 16.051c-.099.188-.093.381.0.529.085.142.239.234.45.234h3.461c.518.0.766-.348.945-.667l3.734-6.609-2.378-4.155c-.172-.315-.434-.659-.962-.659H3.648v.016z"/></symbol><symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71 55" id="discord"><path d="M60.1045 4.8978C55.5792 2.8214 50.7265 1.2916 45.6527.41542 45.5603.39851 45.468.440769 45.4204.525289 44.7963 1.6353 44.105 3.0834 43.6209 4.2216c-5.4572-.817-10.8864-.817-16.2317.0C26.905 3.0581 26.1886 1.6353 25.5617.525289 25.5141.443589 25.4218.40133 25.3294.41542c-5.071.87338-9.9237 2.40318-14.4518 4.48238C10.8384 4.9147 10.8048 4.9429 10.7825 4.9795 1.57795 18.7309-.943561 32.1443.293408 45.3914.299005 45.4562.335386 45.5182.385761 45.5576 6.45866 50.0174 12.3413 52.7249 18.1147 54.5195 18.2071 54.5477 18.305 54.5139 18.3638 54.4378 19.7295 52.5728 20.9469 50.6063 21.9907 48.5383 22.0523 48.4172 21.9935 48.2735 21.8676 48.2256 19.9366 47.4931 18.0979 46.6 16.3292 45.5858 16.1893 45.5041 16.1781 45.304 16.3068 45.2082 16.679 44.9293 17.0513 44.6391 17.4067 44.3461 17.471 44.2926 17.5606 44.2813 17.6362 44.3151c11.6196 5.3051 24.1992 5.3051 35.6817.0C53.3935 44.2785 53.4831 44.2898 53.5502 44.3433 53.9057 44.6363 54.2779 44.9293 54.6529 45.2082 54.7816 45.304 54.7732 45.5041 54.6333 45.5858c-1.7687 1.0339-3.6074 1.9073-5.5412 2.637C48.9662 48.2707 48.9102 48.4172 48.9718 48.5383c1.0662 2.0651 2.2836 4.0316 3.6241 5.8967C52.6519 54.5139 52.7526 54.5477 52.845 54.5195c5.8014-1.7946 11.684-4.5021 17.7569-8.9619C70.6551 45.5182 70.6887 45.459 70.6943 45.3942 72.1747 30.0791 68.2147 16.7757 60.1968 4.9823 60.1772 4.9429 60.1437 4.9147 60.1045 4.8978zM23.7259 37.3253c-3.4983.0-6.3808-3.2117-6.3808-7.156s2.8266-7.156 6.3808-7.156c3.5821.0 6.4367 3.2399 6.3807 7.156.0 3.9443-2.8266 7.156-6.3807 7.156zm23.5919.0c-3.4982.0-6.3807-3.2117-6.3807-7.156s2.8265-7.156 6.3807-7.156c3.5822.0 6.4367 3.2399 6.3808 7.156.0 3.9443-2.7986 7.156-6.3808 7.156z"/></symbol></svg>
+<footer class=footer>
+<div class="footer_inner wrap pale">
+<img src=https://osl-hugo.github.io%27/icons/osl-logo-black.svg class="icon icon_2 transparent" alt="Open Science Labs">
+<p>Copyright&nbsp;<span class=year></span>&nbsp;Open Science Labs. </p><a class=to_top href=#documentTop><svg class="icon"><title>to-top</title><use xlink:href="#to-top"/></svg>
+</a>
+</div>
+</footer>
+<script type=text/javascript src=https://osl-hugo.github.io%27/es/js/bundle.d96a8899b2b4b1d1d5e580e7c621594028467ef0c023ee355419b61111c8e920fa3f91925012bf35a00189039eba7c76c42ecdf019f6fff5df1de54778a109c5.js integrity="sha512-2WqImbK0sdHV5YDnxiFZQChGfvDAI+41VBm2ERHI6SD6P5GSUBK/NaABiQOeunx2xC7N8Bn2//XfHeVHeKEJxQ==" crossorigin=anonymous></script>
+<script src=https://osl-hugo.github.io%27/js/search.min.dccee927a4cb3e64cbeb8bee9751586dfbfc5f44650cdf7da15aa00f0bf4474897dee089b4dc63d8cc3a48649f50783154ee4daf6bae5f57b71e6e295cbbd35b.js></script>
+</body>
+</html>
