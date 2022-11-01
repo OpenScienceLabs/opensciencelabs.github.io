@@ -23,7 +23,7 @@ jobs:
           extended: true
 
       - name: Build
-        run: hugo --minify --baseURL=https://osl-incubator.github.io/
+        run: hugo --minify 
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
