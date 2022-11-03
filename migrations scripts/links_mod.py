@@ -18,22 +18,22 @@ import re
 import logging
 
 from pathlib import Path
-from _config import _gen_all_files_with_extension
+from _config import gen_all_files_with_extension
 
 def replace(ROOT_DIR):
-    for md_file in _gen_all_files_with_extension(ROOT_DIR):
-        _replace_header_links(md_file)
+    for md_file in gen_all_files_with_extension(ROOT_DIR):
+        replace_header_links(md_file)
 
 
-def _replace_header_links(md_file):
+def replace_header_links(md_file):
 
     content = Path(md_file).read_text()
 
-    regex = "(!\[[a-zA-Z ]+\]\()[\.\.\/]+\/images\/blog\/[a-zA-Z-]+\/(header\.png\))"
+    pattern = "(!\[[a-zA-Z ]+\]\()[\.\.\/]+\/images\/blog\/[a-zA-Z-]+\/(header\.png\))"
     subst = r"\1../../\2"
 
     output = open(md_file,"w")
-    output.write(re.sub(regex, subst, content, 0, re.MULTILINE))
+    output.write(re.sub(pattern, subst, content, 0, re.MULTILINE))
     output.close()
 
     logging.warning(f'{md_file} updated.')
