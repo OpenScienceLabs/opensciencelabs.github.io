@@ -37,7 +37,7 @@ En OpenScienceLabs estamos trabajando en:
 No, la comunidad se mantiene gracias al voluntariado que aporta su tiempo libre a la comunidad. Aunque está entre nuestros planes conseguir apoyos para el sostenimiento de nuestra labor.
 
 ### Tengo algunas sugerencias. ¿Cómo me contacto con OSL?
-Puedes hacerlo a traves de Discord, casi siempre esta un administrador que pueda responderte. [Discord Group](http://discord.opensciencelabs.org/)
+Puedes hacerlo a traves de Discord, casi siempre esta un administrador que pueda responderte. [Discord Group](opensciencelabs.org/discord)
 
 ### ¿Quienes dirigen OSL?
 Tenemos un directorio llamado Board, el cúal se reune semanalmete para fijar actividades y metas para la comunidad.

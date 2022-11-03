@@ -4,26 +4,26 @@
   weight = -110
 
 #[[main]]
-#  name = "Archivos"
+#  name = "Actividades"
 #  url = "post/archive/"
 #  weight = -109
 
 # Submenus are done this way: parent -> identifier
 [[main]]
-  name = "About"
+  name = "Acerca de"
   identifier = "about"
   weight = 122
 [[main]]
   parent = "about"
-  name = "Guidelines"
+  name = "Guías"
   url = "guidelines/"
 [[main]]
   parent = "about"
-  name = "Team"
+  name = "Equipo"
   url = "team/"
 [[main]]
   parent = "about"
-  name = "Partners"
+  name = "Asociados"
   url = "partners/"
 
 
@@ -55,7 +55,7 @@
 [[social]]
   name = "discord"
   type = "social"
-  url = "http://discord.opensciencelabs.org/"
+  url = "https://opensciencelabs.org/discord"
   weight = 5
 [[social]]
   name = "rss"

@@ -17,7 +17,7 @@ draft: true
 <!-- # [EN] Discord -->
 
 Discord is our main comunication tool for our community. The direct link
-to our discord is [http://discord.opensciencelabs.org](http://discord.opensciencelabs.org).
+to our discord is [http://discord.opensciencelabs.org](opensciencelabs.org/discord).
 
 ## Conventions
 
