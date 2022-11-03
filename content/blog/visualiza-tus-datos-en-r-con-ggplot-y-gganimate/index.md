@@ -1,16 +1,23 @@
----
-title: "Visualiza tus datos en R con ggplot2 y gganimate"
-date: 2019-04-08
-author: Ever Vino
-draft: false
-usePageBundles: true
-thumbnail: '/header.png'
+<!--
+.. title: Visualiza tus datos en R con ggplot2 y gganimate
+.. slug: visualiza-tus-datos-en-r-con-ggplot-y-gganimate
+.. date: 2019-04-08
+.. author: Ever Vino
+.. tags: r, visualization
+.. category: r
+.. link: 
+.. description: 
+.. type: text
+-->
 
-featureImage: '/header.png'
-tags: [r, visualización de datos ]
----
+<!-- # Visualiza tus datos en R con ggplot2 y gganimate -->
+<!-- **Autor**: [Ever Vino](../../authors/ever-vino.md) -->
+
+![header](../../../images/blog/visualiza-tus-datos-en-r-con-ggplot-y-gganimate/header.png)
 
 Una gráfica es una buena manera de expresar los datos, estos ayudan a ver detalles que simplemente pueden pasar desapercibidos cuando sólo se los analizan numericamente, estos pueden tener aún mayor impacto si estan animados. ¿Por qué no hacerlo?. En este artículo se describe como hacer animación usando ggplot2 y gganimate en R.
+
+<!-- TEASER_END -->
 
 ## Comenzando
 
@@ -34,7 +41,7 @@ install.package(ggplot2)    # Biblioteca para realizar las gráficas
 install.package(gganimate)  # Biblioteca para realizar la animación
 ```
 
-## Preparación de los datos para graficar
+## Preparación de los datos para graficar 
 
 Los datos usados pertenecen a la base de datos del INE [(Instituto Nacional de Estadística Bolivia)](https://www.ine.gob.bo), el archivo usado tiene el nombre de "Importaciones de Productos y Artículos de Bolivia 1992-2021p"
 
@@ -156,7 +163,6 @@ p1 <- ggplot(data = datos) +
     subtitle = "Expresado en Millones de Bolivianos"
   )
 p1
-
 ```
 
 Funciones utilizadas
@@ -172,7 +178,7 @@ Funciones utilizadas
 
 - **`labs(x, y, color, title, subtitle)`**: capa que pone los nombres a eje `x` y al eje `y`, además de poner el nombre encima de las leyendas con `color`, el nombre título y subtítulo con `title` y `subtitle` respectivamente.
 
-![Importaciones de Bolivia 1991-2021](Rplot.png)
+![Importaciones de Bolivia 1991-2021](../../../images/blog/visualiza-tus-datos-en-r-con-ggplot-y-gganimate/Rplot.png)
 
 ## Gráfica Animada 
 
@@ -277,7 +283,7 @@ animate(
 
 Hay casos en los que extrañamente no se instalan los renders para hacer la renderización de la animación y aparece un error al tratar de ejecutar el código arriba mostrado, en ese caso puede probar con la siguiente solución: Ejecute en modo administrador RStudio e instale los renders con `install.packages("gifski")` para el render que viene por defecto con `gganimate`, tambien puede instalar el render magick con `install.packages("magick")` para tener otra opción para renderizar. Para saber que opciones tiene el render magick ejecute `help("magick_renderer")` y se le mostrara su breve manual.
 
-![Importaciones de Bolivia durante la pandemia](datosimportpandemia.gif)
+![Importaciones de Bolivia durante la pandemia](../../../images/blog/visualiza-tus-datos-en-r-con-ggplot-y-gganimate/datosimportpandemia.gif)
 
 Despues de ver la animación podemos guardarla haciendo:
 
@@ -300,10 +306,10 @@ anim_save(filename = "datosimportpandemia.gif",
 **`anim_save(filename, animation, path)`**:
 guarda el renderizado de `animation` con el nombre `filename` en la ruta `path`.
 
+
 ## Referencias
 
-* [Instituto Nacional de Estadística Bolivia](https://www.ine.gob.bo)
-
-* [Documentacion de R](https://www.rdocumentation.org)
+- [Instituto Nacional de Estadística Bolivia](https://www.ine.gob.bo) 
+- [Documentacion de R](https://www.rdocumentation.org)
 
 ______________________________________________________________________

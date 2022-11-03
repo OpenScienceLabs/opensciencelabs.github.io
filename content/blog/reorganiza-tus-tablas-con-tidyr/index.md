@@ -1,15 +1,22 @@
----
-title: "Reorganiza tu tabla con tidyr en R"
-date: 2022-07-17
-author: Ever Vino
-draft: false
-usePageBundles: true
-thumbnail: '/header.png'
-featureImage: '/header.png'
-tags: [r, tratamiento de datos, ciencia de datos ]
----
+<!--
+.. title: Reorganiza tu tabla con tidyr en R
+.. slug: reorganiza-tus-tablas-con-tidyr
+.. date: 2022-07-17 19:52:05 UTC
+.. author: Ever Vino
+.. tags: open science, r, filtrar datos, tidyr, data science, columnas a filas, filas a columnas
+.. category: data science
+.. link: 
+.. description: 
+.. type: text
+-->
+
+<!-- # Reorganiza tu tabla con tidyr en R  -->
+
+![hoja de datos](../../../images/blog/reorganiza-tus-tablas-con-tidyr/header.png)
 
 En este artículo, modificaremos la forma de nuestra tabla, combinando varias columnas en una sola o viceversa, usando la biblioteca `tidyr` con sus funciones `gather()`, `spread()`, `separate()`, y `unite()` con ejemplos.
+
+<!-- TEASER_END -->
 
 ## Requisitos
 
@@ -217,7 +224,7 @@ ggplot(data = top_turistas_2016_2021) +
 
 ```
 
-![Viajero llegados por avión a Bolivia 2016-2021](Viajeros_2016_2021.jpeg)
+![Viajero llegados por avión a Bolivia 2016-2021](../../../images/blog/reorganiza-tus-tablas-con-tidyr/Viajeros_2016_2021.jpeg)
 
 ## Función unite()
 
@@ -367,7 +374,7 @@ ggplot(data = top_turistas_trimestre_1_2019) +
 
 ```
 
-![Viajero llegados por avión a Bolivia 2016-2021](Viajeros_trimestre_1_2019.jpeg)
+![Viajero llegados por avión a Bolivia 2016-2021](../../../images/blog/reorganiza-tus-tablas-con-tidyr/Viajeros_trimestre_1_2019.jpeg)
 
 ## Outro
 
