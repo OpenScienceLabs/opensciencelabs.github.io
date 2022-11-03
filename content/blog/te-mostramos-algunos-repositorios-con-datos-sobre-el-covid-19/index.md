@@ -1,14 +1,17 @@
-<!--
-.. title: Te mostramos algunos repositorios con datos sobre el COVID-19
-.. slug: te-mostramos-algunos-repositorios-con-datos-sobre-el-covid-19
-.. date: 2020-03-23
-.. author: Anavelyz Pérez
-.. tags: open science, covid19
-.. category: open data
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "Te mostramos algunos repositorios con datos sobre el COVID-19"
+slug: te-mostramos-algunos-repositorios-con-datos-sobre-el-covid-19
+date: 2020-03-23
+author: Anavelyz Pérez
+tags: [open science, covid19]
+category: [open data]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # Te mostramos algunos repositorios con datos sobre el COVID-19 -->
 

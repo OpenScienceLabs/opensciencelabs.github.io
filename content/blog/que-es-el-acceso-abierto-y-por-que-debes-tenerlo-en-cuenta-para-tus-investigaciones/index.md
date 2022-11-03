@@ -1,19 +1,22 @@
-<!--
-.. title: ¿Qué es el acceso abierto y por qué debes tenerlo en cuenta para tus investigaciones?
-.. slug: que-es-el-acceso-abierto-y-por-que-debes-tenerlo-en-cuenta-para-tus-investigaciones
-.. date: 2020-01-27
-.. author: Anavelyz Pérez
-.. tags: open science
-.. category: open access
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "¿Qué es el acceso abierto y por qué debes tenerlo en cuenta para tus investigaciones?"
+slug: que-es-el-acceso-abierto-y-por-que-debes-tenerlo-en-cuenta-para-tus-investigaciones
+date: 2020-01-27
+author: Anavelyz Pérez
+tags: [open science]
+category: [open access]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # ¿Qué es el acceso abierto y por qué debes tenerlo en cuenta para tus investigaciones? -->
 <!-- **Por Anavelyz Pérez** -->
 
-![header](../../../images/blog/que-es-el-acceso-abierto-y-por-que-debes-tenerlo-en-cuenta-para-tus-investigaciones/header.png)
+
 
 El acceso abierto es un término que se utiliza para definir aquellos proyectos
 que están disponibles para todo público de forma libre y gratuita, en Internet o

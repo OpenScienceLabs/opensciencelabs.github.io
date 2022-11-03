@@ -1,18 +1,21 @@
-<!--
-.. title: 10 Plataformas que te ayudarán en la gestión de tu grupo de trabajo.
-.. slug: plataformas-que-te-ayudaran-en-la-gestion-de-tu-grupo-de-trabajo
-.. date: 2021-01-23
-.. author: Mariangela Petrizzo Páez
-.. tags: communication
-.. category: communication
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "10 Plataformas que te ayudarán en la gestión de tu grupo de trabajo."
+slug: plataformas-que-te-ayudaran-en-la-gestion-de-tu-grupo-de-trabajo
+date: 2021-01-23
+author: Mariangela Petrizzo Páez
+tags: [communication]
+category: [communication]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # 10 Plataformas que te ayudarán en la gestión de tu grupo de trabajo. -->
 
-![header](../../../images/blog/plataformas-que-te-ayudaran-en-la-gestion-de-tu-grupo-de-trabajo/header.png)
+
 
 El manejo de los equipos de trabajo es interés constante para Open Science Labs, porque tenemos la convicción de que un equipo de trabajo bien manejado puede crecer en conjunto y construir mejores resultados para la ciencia abierta.
 
@@ -58,7 +61,7 @@ Hemos seleccionado 10 de las herramientas más utilizadas en el trabajo en equip
 
 Asana es una plataforma en línea que permite la gestión de proyectos y grupos de trabajo. Como plataforma es gratuita para personas o equipos que están comenzando, aunque tiene limitaciones en cuanto al manejo de tareas (sólo hasta 1.000 tareas por equipo), número de integrantes de cada equipo (hasta 15) y ofrece más de 100 integraciones de las que están disponibles de forma gratuita. Asana, cuenta un espacio de gestión de proyectos, actualización de estatus de proyectos, priorización de tareas, mensajes, conversaciones integradas sobre cada tarea programada, tablero tipo Kanban y calendario.
 
-![Asana](../../../images/blog/plataformas-que-te-ayudaran-en-la-gestion-de-tu-grupo-de-trabajo/Asana1.png)
+![Asana](Asana1.png)
 
 Cuenta también  con plantillas que pueden adaptarse a los requerimientos que tenga cada tipo de proyecto, estas plantillas son bastante prácticas si lo que deseas es comenzar a organizar y planificar las  tareas del equipo pero no tienes muy claro cuáles herramientas utilizar. Puede que algunos de los componentes del proyecto sean de pago pero, en líneas generales, los que están disponibles en la versión gratuita cumplen con los propósitos mínimos requeridos de planificación. Ofrece integraciones con varias aplicaciones como Dropbox, Jira, MSTeams, Box y Zoom entre otros.
 
@@ -66,7 +69,7 @@ Cuenta también  con plantillas que pueden adaptarse a los requerimientos que te
 
 Discourse for teams es una versión de Discourse orientada a equipos de trabajo, pensada para mejorar su productividad. Ofrece organización de las conversaciones, también presenta un calendario que actualiza a hora local las citas y actividades en agenda, un buscador que permite localizar información a través de distintos tipos de documentos: desde conversaciones hasta documentación en wikis; ofrece personalización de los temas del escritorio y la interfaz, además de algunos aspectos de seguridad como encriptación de conversaciones y dos factores de autenticación en las cuentas.
 
-![Discourse](../../../images/blog/plataformas-que-te-ayudaran-en-la-gestion-de-tu-grupo-de-trabajo/Discourse1.png)
+![Discourse](Discourse1.png)
 
 El enfoque de Discourse es la conversación que puede serguirse a través de notificaciones por correo e incluye integraciones interesantes para equipos de desarrollo como Slack, Github y Zendesk.
 
@@ -74,7 +77,7 @@ El enfoque de Discourse es la conversación que puede serguirse a través de not
 
 Sin lugar a dudas esta es la aplicación que domina el mercado de aplicaciones de comunicación para equipos, ésto pese al grupo nada despreciable de personas y equipos que se resisten a utilizar Slack. Es un software que posibilita que los equipos de trabajo organicen sus intercambios de información en canales públicos o privados, facilita la búsqueda de información, intercambio de archivos y conexión con aplicaciones como Google Drive, Trello, Confluence, Jira, Asana y Zendesk.
 
-![Slack](../../../images/blog/plataformas-que-te-ayudaran-en-la-gestion-de-tu-grupo-de-trabajo/Slack1.png)
+![Slack](Slack1.png)
 
 Otra funcionalidad que tiene Slack, es que permite conectar el trabajo entre equipos/empresas diferentes, así como integrar videollamadas y mensajería, así como la función de generación de flujos de trabajo.
 
@@ -82,7 +85,7 @@ Otra funcionalidad que tiene Slack, es que permite conectar el trabajo entre equ
 
 Twist es una plataforma que, al igual que otras reseñadas en este artículo, incluye espacio para gestionar el trabajo colaborativo remoto y también generar conversaciones entre los integrantes de los equipos. Twist promete estar centrada en la conversación que ocurre entre los equipos de trabajo, permitiendo que esté disponible y transparente para todos los integrantes del equipo, organizada por temas de trabajo, estructurándola de forma que ofrece hacer sencillo retomar la conversación luego de un tiempo sin participar en ella por estar enfocado en el trabajo. De esta forma, la conversación de los equipos de trabajo ocurre de forma asíncrona pero, según ofrece la herramienta, no deja de ser un apoyo a los procesos internos garantizando que cualquier persona pueda retomar o entender el hilo de una conversación. Quienes conocen Slack verán en Twist a primera vista una interfaz muy similar que muestra las conversaciones agrupadas en canales y por mensajes individuales, Twist incorpora, sin embargo, la opción de visualizar y localizar las conversaciones también por temas.
 
-![Twist](../../../images/blog/plataformas-que-te-ayudaran-en-la-gestion-de-tu-grupo-de-trabajo/twist1.png)
+![Twist](twist1.png)
 
 Al igual que Slack, Twist facilita la configuración personalizada de las notificaciones, menciones e información suministrada a los integrantes del equipo y facilita la conexión con aplicaciones muy utilizadas por equipos de desarrollo como Github. Una comparativa que presenta Twist con su competencia directa, Slack, enfatiza en la posibilidad de organizar el proceso de comunicación entre los integrantes del equipo evitando que se sientan abrumados por el constante flujo de mensajes, notificaciones e información de Slack.
 
@@ -90,7 +93,7 @@ Al igual que Slack, Twist facilita la configuración personalizada de las notifi
 
 Carrot es otra de las varias aplicaciones ideadas para favorecer el proceso de comunicación en equipos de trabajo, remotos o no. El aspecto diferenciador de Carrot es manejar las comunicaciones como feeds personalizados y tratando cada mensaje como una noticia. Es un proyecto Open source que es gratuito para organizaciones sin fines de lucro.
 
-![08f960fd.png](../../../images/blog/plataformas-que-te-ayudaran-en-la-gestion-de-tu-grupo-de-trabajo/Carrot1.png)
+![08f960fd.png](Carrot1.png)
 
 Un aspecto interesante de Carrot cómo muestra estadísticas de los mensaes dentro de una conversación, además de permitir compartir mensajes con canales específicos de Slack a través de su integración. Permite incorporar bloques de código, y encabezados con formato H2, además de encuestas y recordatorios generales para los equipos de trabajo y configuración de tema en modo oscuro. Es una aplicación relativamente joven que cuenta con mejoras continuas.
 
@@ -98,7 +101,7 @@ Un aspecto interesante de Carrot cómo muestra estadísticas de los mensaes dent
 
 A diferencia de las aplicaciones que hemos reseñado hasta aquí, Threads sólo está disponible como aplicación descargable en computadoras de escritorio (ambiente Windows o Mac) y en móbiles (Apple y Android). Se centran en un caso de uso exitoso por parte de la empresa Buffer, que optó por utilizar esta herramienta para mejorar la comunicación entre su equipo de trabajo. Los números que exponen en ese caso de uso son realmente interesante, registrando hasta un 80% de mejora en la productividad de los empleados de un equipo que, como el de Buffer, está totalmente distribuido a lo largo y ancho del mundo.
 
-![Windows_app](../../../images/blog/plataformas-que-te-ayudaran-en-la-gestion-de-tu-grupo-de-trabajo/1._Windows_app.png)
+![Windows_app](thread.png)
 
 Esta aplicación está centrada, al igual que las otras reseñadas, en la dar estructura, orden y sistematización a la conversación de los equipos, y la forma en que Buffer expone la ha utilizado, echa mano de tarjetas de conversación, hilos y espacios en los cuales se puede dar lugar a chats para distención del equipo de trabajo, pero también acceso a los distintos temas manejados por el equipo de trabajo a través de chats organizados a modo de tarjetas y un buscador que prometen hacer mucho más sencillo la localización de conversaciones específicas.
 
@@ -106,7 +109,7 @@ Esta aplicación está centrada, al igual que las otras reseñadas, en la dar es
 
 Basecamp es otra de las aplicaciones disponibles para el manejo de las actividades grupales, que incluye mensajes, manejo de tableros de tareas pendientes, calendarios, vinculación de documentos y archivos, chats grupales y un banco de preguntas comunes. Ofrece la posibilidad de programar las notificaciones para garantizar tiempos de descanso en lugar de la exigente conectividad que imponen aplicaciones como Slack.
 
-![838028b1.png](../../../images/blog/plataformas-que-te-ayudaran-en-la-gestion-de-tu-grupo-de-trabajo/Basecamp1.png)
+![838028b1.png](Basecamp1.png)
 
 Este producto incluye una opción gratuita para uso personal, con la posibilidad de manejar hasta 3 proyectos, 20 usuarios y 1GB de almacenamiento en la nube.
 
@@ -114,7 +117,7 @@ Este producto incluye una opción gratuita para uso personal, con la posibilidad
 
 A diferencia de las aplicaciones presentadas antes y aunque esta es version beta aún, Flarum está centrada en servir de plataforma para conducir los foros en páginas y portales web, y por ello ofrece una especie de interfaz renovada de la interfaz tipo de foros web. Es un software de licencia abierta que garantiza su expansividad y flexibilidad a las necesidades de los equipos de trabajo.
 
-![Flarum](../../../images/blog/plataformas-que-te-ayudaran-en-la-gestion-de-tu-grupo-de-trabajo/Flarum1.png)
+![Flarum](Flarum1.png)
 
 Una versión demo puede utilizarse [desde aquí](https://beta.flarum.site) y cuenta con todas las funcionalidades disponibles, entre ellas el manejo de etiquetas que es lo que que permite organizar de una forma más pulcra la lista de discusiones visibles, tanto a través de la barra lateral como de las banderas indicadas junto a cada discusión dentro de la lista de las más recientes.
 
@@ -122,7 +125,7 @@ Una versión demo puede utilizarse [desde aquí](https://beta.flarum.site) y cue
 
 Keybase es una aplicación gratuita, de código abierto, disponible para pc y móbiles. Enfatiza en sus capacidades para manejo de mensajería y y envío de archivos de forma encriptada. Aunque no está pensada de forma exclusiva para el manejo del trabajo en equipos, resulta un apoyo importante por la vinculación con aplicaciones como Github y Google Drive, por ejemplo.
 
-![Keybase](../../../images/blog/plataformas-que-te-ayudaran-en-la-gestion-de-tu-grupo-de-trabajo/Keybase1.png)
+![Keybase](Keybase1.png)
 
 Permite el uso de etiquetas, el diseño de canales, el manejo de conversaciones particulares, la localización de mensajes y archivos de forma relativamente flexible, se conecta también con identidades públicas, lo cual permite también el manejo de comunidades amplias. Aunque se centra en el cifrado como valor agregado, y aunque resulta un poco pesada en su funcionamiento para algunos dispositivos, lo cierto es que resulta muy potente para el manejo de conversaciones importantes para los equipos de trabajo.
 
@@ -130,7 +133,7 @@ Permite el uso de etiquetas, el diseño de canales, el manejo de conversaciones 
 
 Notion es una aplicación que incluye herramientas para buena parte de las tareas más necesarias en los equipos de trabajo: comunicación (chats), tareas (tasks) y bases de conocimiento (wikis) entre otras. La posibilidad de reordenar esta información en función de, por ejemplo, los proyectos y sus etiquetas, le aporta a Notion una flexibilidad mayor al momento de ser implementada en los equipos de trabajo.
 
-![Notion](../../../images/blog/plataformas-que-te-ayudaran-en-la-gestion-de-tu-grupo-de-trabajo/Notion1.png)
+![Notion](Notion1.png)
 
 A quienes conocen Paper Dropbox, el manejo de los documentos de Notion puede resultarles muy similar en cuanto a las menciones, la inclusión de tareas y otros elementos que facilitan, dentro de los documentos, abrir y concretar discusiones dentro de los equipos de trabajo. Es gratuita para uso personal con acceso ilimitado a bloques y páginas, sincronización entre servicios y hasta 5 integrantes de un equipo de trabajo.
 

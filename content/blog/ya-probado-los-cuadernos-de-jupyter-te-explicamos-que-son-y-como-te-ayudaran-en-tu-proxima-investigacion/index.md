@@ -1,19 +1,22 @@
-<!--
-.. title: ¿Ya has probado los Cuadernos de Jupyter? Te explicamos qué son y cómo te ayudarán en tu próxima investigación.
-.. slug: ya-probado-los-cuadernos-de-jupyter-te-explicamos-que-son-y-como-te-ayudaran-en-tu-proxima-investigacion
-.. date: 2020-01-13
-.. author: Rainer Palm
-.. tags: open science
-.. category: jupyter
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "¿Ya has probado los Cuadernos de Jupyter? Te explicamos qué son y cómo te ayudarán en tu próxima investigación."
+slug: ya-probado-los-cuadernos-de-jupyter-te-explicamos-que-son-y-como-te-ayudaran-en-tu-proxima-investigacion
+date: 2020-01-13
+author: Rainer Palm
+tags: [open science]
+category: [jupyter]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # ¿Ya has probado los cuadernos de Jupyter? Te explicamos qué son y cómo te ayudarán en tu próxima investigación. -->
 <!-- **Por Rainer Palm** -->
 
-![header](../../../images/blog/ya-probado-los-cuadernos-de-jupyter-te-explicamos-que-son-y-como-te-ayudaran-en-tu-proxima-investigacion/header.png)
+
 
 ¿Quieres cambiar tus artículos a un formato más intuitivo, legible y
 fácil de editar? Si tu respuesta es sí, puedes hacerlo con los [Jupyter

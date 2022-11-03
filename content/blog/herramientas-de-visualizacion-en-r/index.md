@@ -1,19 +1,22 @@
-<!--
-.. title: Herramientas de visualización en R
-.. slug: herramientas-de-visualizacion-en-r
-.. date: 2020-04-09
-.. author: Yurely Camacho
-.. tags: r, visualization, lattice, ggplot2, tidyverse, ggmap, plotly, shiny
-.. category: r
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "Herramientas de visualización en R"
+slug: herramientas-de-visualizacion-en-r
+date: 2020-04-09
+author: Yurely Camacho
+tags: [r, visualization, lattice, ggplot2, tidyverse, ggmap, plotly, shiny]
+category: [r]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # Herramientas de visualización en R -->
 <!-- **Por Yurely Camacho** -->
 
-![header](../../../images/blog/herramientas-de-visualizacion-en-r/header.png)
+
 
 Sin duda, los datos deben considerarse como la materia prima para
 cualquier proyecto de ciencia abierta, pues todos se basan en el manejo

@@ -1,19 +1,22 @@
-<!--
-.. title: Cinco cosas que no debes olvidar al trabajar con Markdown
-.. slug: cinco-cosas-que-no-debes-olvidar-al-trabajar-con-markdown
-.. date: 2020-01-24
-.. author: Yurely Camacho
-.. tags: open science
-.. category: markdown
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "Cinco cosas que no debes olvidar al trabajar con Markdown"
+slug: cinco-cosas-que-no-debes-olvidar-al-trabajar-con-markdown
+date: 2020-01-24
+author: Yurely Camacho
+tags: [open science]
+category: [markdown]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # Cinco cosas que no debes olvidar al trabajar con Markdown -->
 <!-- **Por Yurely Camacho** -->
 
-![header](../../../images/blog/cinco-cosas-que-no-debes-olvidar-al-trabajar-con-markdown/header.png)
+
 
 Si eres una persona que escribe constantemente artículos para blogs o informes, utilizando para ello editores de texto convencionales, detente en este momento y pregúntate: ¿Qué pasaría con todo el trabajo que he venido
 escribiendo con mi editor de texto si ya no pudiera volver a utilizarlo? ¿Te asusta verdad? y si no es tu caso, imagínate ¿si esto le ocurre a una persona que por años ha estado escribiendo un libro? Para combatir esa incertidumbre, puedes comenzar a escribir en texto plano y darle formato con la ayuda de **Markdown**.

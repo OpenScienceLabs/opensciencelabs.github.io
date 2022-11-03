@@ -1,19 +1,22 @@
-<!--
-.. title: Dataverse y su potencial para proyectos de ciencia abierta
-.. slug: dataverse-y-su-potencial-para-proyectos-de-ciencia-abierta
-.. date: 2020-08-08
-.. author: Rainer Palm
-.. tags: open science, open data
-.. category: open data
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "Dataverse y su potencial para proyectos de ciencia abierta"
+slug: dataverse-y-su-potencial-para-proyectos-de-ciencia-abierta
+date: 2020-08-08
+author: Rainer Palm
+tags: [open science, open data]
+category: [open data]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # Dataverse y su potencial para proyectos de ciencia abierta -->
 <!-- **Por Rainer Palm** -->
 
-![header](../../../images/blog/dataverse-y-su-potencial-para-proyectos-de-ciencia-abierta/header.png)
+
 
 A lo largo de un proyecto de investigación suelen experimentarse dificultades en cualquiera de sus fases: desarrollo, su divulgación, promoción, en la publicación de los datos de forma abierta, en su catalogación o en su disposición de forma abierta para ser consultado en cualquier investigación. En cualquiera de estos casos, Dataverse[1] es una solución que promete no solamente incorporar al flujo de trabajo métodos rápidos para asegurar que los datos cumplan los principios FAIR[2], sino también ofrece un espacio donde alojarlos organizados en conjuntos, agrupando metadatos y codigo clasificados con su propio numero DOI, en repositorios llamados 'Dataversos'.
 

@@ -1,17 +1,18 @@
-<!--
-.. title: Ethereum merge is coming. ¿Pero qué significa?
-.. slug: ethereum-merge-is-coming-pero-que-significa
-.. date: 2022-03-22
-.. author: Alan Hurtarte
-.. tags: crypto,ethereum,merge,web3
-.. category: open science, web3, ethereum
-.. link:
-.. description:
-.. type: text
--->
-<!-- # The Ethereum merge is coming. ¿Pero qué significa? -->
+---
+title: "Ethereum merge is coming. ¿Pero qué significa?"
+slug: ethereum-merge-is-coming-pero-que-significa
+date: 2022-03-22
+author: Alan Hurtarte
+tags: [crypto,ethereum,merge,web3]
+category: [open science, web3, ethereum]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
 
-![header](../../../../images/blog/ethereum-merge/header.jpeg)
+<!-- # The Ethereum merge is coming. ¿Pero qué significa? -->
 
 Oh sweet summer child, Ethereum ya no será el mismo, está evolucionando, al mismo tiempo que todo el ecosistema. No es secreto que todo el ecosistema crece, y a una velocidad agigantada. La masiva adopción de Ethereum trajo consigo problemas a la red como:
 * Transacciones con gas demasiado alto (provocando transacciones de alto costo)
@@ -23,12 +24,12 @@ Oh sweet summer child, Ethereum ya no será el mismo, está evolucionando, al mi
 Estos problemas lo sufren las dos blockchains más grandes del momento, bitcoin y Ethereum. En el caso de bitcoin, la solución es ligthing network. Para Ethereum, es este merge.
 
 
-![Meme GOT](../../../../images/blog/ethereum-merge/meme-summer.jpeg)
+![Meme GOT](meme-summer.jpeg)
 
 Este puede ser uno de los cambios más esperado por la comunidad, trae consigo un gran cambio en el modo en que valida las transacciones, actualmente utiliza un mecanismo llamado POW (proof of work) y cambia a un mecanismo llamado POS (proof of stake). Este cambio mejorará la descentralización y el reducir bastante el consumo de energía que con eso traerá menores costos.
 
 ### Proof of work Vs. Proof of stake
-![Eth POW vr POS](../../../../images/blog/ethereum-merge/eth-pow-pos.png)
+![Eth POW vr POS](eth-pow-pos.png)
 
 El concepto de **Proof of Work** existe desde antes de los crypto assets. La primera idea fue publicada por Cynthia Dwork y Moni Naor en un artículo publicado en 1993, sin embargo, no fue hasta 1999 que el término "Proof of work" fue creada por Markus Jakobsson.
 
@@ -53,12 +54,12 @@ Ethereum tiene muchos problemas, y este merge busca solucionar el blockchain tri
 * Sostenibilidad: Proof of stake usa al menos 99% menos energía que proof of work.
 
 
-![Energy scale per Transaction](../../../../images/blog/ethereum-merge/energy.png)
+![Energy scale per Transaction](energy.png)
 
 
 
 ## ETH 2.0
-![Ethereum panda](../../../../images/blog/ethereum-merge/ethereum_panda.png)
+![Ethereum panda](ethereum_panda.png)
 
 Este cambio en Ethereum ya venía siendo discutido desde el 2018, y había sido añadido al roadmap, pero se dieron cuenta de varias cosas:
 * Tomaría años en entregar por completo el roadmap.
@@ -70,7 +71,7 @@ Entonces surgió la propuesta Eth1+Eth2 = Ethereum. Donde:
 
 El Consensus Layer es donde estará implementado el PoS, de esa manera se podrá aplicar el merge, sin requerir cambios en los usuarios actuales de la red. Este cambió lo explican más a fondo aquí [The Great TH2 renaming](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
 
-![Ethereum roadmap](../../../../images/blog/ethereum-merge/upgrade_path.png)
+![Ethereum roadmap](upgrade_path.png)
 ## Conclusión
 Para el usuario final no significará un cambio en billetera o en como interactúa con la red. Pero si verá los beneficios al tener transacciones más rápidas y de menor costo. Esto nos acercará a una blockchain más útil para el día a día, intercambiando valor.
 Es emocionante ver los cambios suceder y como se va mejorando el ecosistema.

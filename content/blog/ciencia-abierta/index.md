@@ -1,19 +1,22 @@
-<!--
-.. title: 5 proyectos de inteligencia artificial que te sorprenderan
-.. slug: ciencia-abierta
-.. date: 2021-02-08
-.. author: Rainer Palm
-.. tags: artificial intelligence
-.. category: artificial intelligence
-.. link: 
-.. description:
-.. type: text
--->
+---
+title: "5 proyectos de inteligencia artificial que te sorprenderan"
+slug: ciencia-abierta
+date: 2021-02-08
+author: Rainer Palm
+tags: [artificial intelligence]
+category: [artificial intelligence]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # 5 proyectos de inteligencia artificial que te sorprenderan -->
 
 <!-- ![doi](images/blog/2022/01/header.png) -->
-![header](../../../images/blog/proyectos-de-inteligencia-artificial-que-te-sorprenderan/header.png)
+
 
 <!-- 
 <p align="center">

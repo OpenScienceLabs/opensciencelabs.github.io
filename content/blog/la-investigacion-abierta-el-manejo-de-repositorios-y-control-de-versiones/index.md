@@ -1,19 +1,22 @@
-<!--
-.. title: La investigación abierta, el manejo de repositorios y control de versiones
-.. slug: la-investigacion-abierta-el-manejo-de-repositorios-y-control-de-versiones
-.. date: 2020-02-28
-.. author: Anavelyz Pérez
-.. tags: open science, versioning
-.. category: open science
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "La investigación abierta, el manejo de repositorios y control de versiones"
+slug: la-investigacion-abierta-el-manejo-de-repositorios-y-control-de-versiones
+date: 2020-02-28
+author: Anavelyz Pérez
+tags: [open science, versioning]
+category: [open science]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # La investigación abierta, el manejo de repositorios y control de versiones -->
 <!-- **Por Anavelyz Pérez** -->
 
-![header](../../../images/blog/la-investigacion-abierta-el-manejo-de-repositorios-y-control-de-versiones/header.png)
+
 
 Las investigaciones son esenciales en el avance tecnológico y social porque nos
 permiten encontrar respuestas a muchas dudas e hipótesis que surgen diariamente

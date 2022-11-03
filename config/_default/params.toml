@@ -64,7 +64,7 @@ centerLogo = false # Set to "true" for centering or "false" for left aligned.
 enableMathNotation = false
 
 # directory(s) where your articles are located
-mainSections = ["blog", "guidelines"] # see config details here https://gohugo.io/functions/where/#mainsections
+mainSections = ["guidelines", "blog"] # see config details here https://gohugo.io/functions/where/#mainsections
 
 # Label Non inline images on an article body
 figurePositionShow = false # toggle on or off globally

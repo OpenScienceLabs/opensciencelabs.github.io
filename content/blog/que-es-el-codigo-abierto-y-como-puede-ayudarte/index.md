@@ -1,19 +1,22 @@
-<!--
-.. title: ¿Qué es el código abierto y cómo puede ayudarte?
-.. slug: que-es-el-codigo-abierto-y-como-puede-ayudarte
-.. date: 2020-02-10
-.. author: Anavelyz Pérez
-.. tags: open source
-.. category: open source
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "¿Qué es el código abierto y cómo puede ayudarte?"
+slug: que-es-el-codigo-abierto-y-como-puede-ayudarte
+date: 2020-02-10
+author: Anavelyz Pérez
+tags: [open source]
+category: [open source]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # ¿Qué es el código abierto y cómo puede ayudarte? -->
 <!-- **Por Anavelyz Pérez** -->
 
-![header](../../../images/blog/que-es-el-codigo-abierto-y-como-puede-ayudarte/header.png)
+
 
 Cuando escuchamos la palabra *código* podríamos pensar que se trata de algo
 oculto y secreto, en una contraseña o simplemente algún identificador. Sin

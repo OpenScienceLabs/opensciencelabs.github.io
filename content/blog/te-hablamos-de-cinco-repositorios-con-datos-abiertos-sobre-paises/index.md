@@ -1,19 +1,22 @@
-<!--
-.. title: Te hablamos de cinco repositorios con datos abiertos sobre países
-.. slug: te-hablamos-de-cinco-repositorios-con-datos-abiertos-sobre-paises
-.. date: 2020-01-29
-.. author: Yurely Camacho
-.. tags: open science
-.. category: open data
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "Te hablamos de cinco repositorios con datos abiertos sobre países"
+slug: te-hablamos-de-cinco-repositorios-con-datos-abiertos-sobre-paises
+date: 2020-01-29
+author: Yurely Camacho
+tags: [open science]
+category: [open data]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # Te hablamos de cinco repositorios con datos abiertos sobre  países -->
 <!-- **Por Yurely Camacho** -->
 
-![header](../../../images/blog/te-hablamos-de-cinco-repositorios-con-datos-abiertos-sobre-paises/header.png)
+
 
 Si estas interesado en practicar la ciencia abierta o simplemente
 quieres o necesitas conocer más acerca del tema, resulta de suma

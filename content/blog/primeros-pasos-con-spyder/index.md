@@ -1,18 +1,21 @@
-<!--
-.. title: Primeros pasos con Spyder
-.. slug: primeros-pasos-con-spyder
-.. date: 2021-02-22
-.. author: Yurely Camacho
-.. tags: ide, interfaz, python, spyder, spyder online
-.. category: ide
-.. link:
-.. description:
-.. type: text
--->
+---
+title: "Primeros pasos con Spyder"
+slug: primeros-pasos-con-spyder
+date: 2021-02-22
+author: Yurely Camacho
+tags: [ide, interfaz, python, spyder, spyder online]
+category: [ide]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # Primeros pasos con Spyder -->
 
-![header](../../../images/blog/primeros-pasos-con-spyder/header.png)
+
 
 Si has elegido programar en Python, luego de haberlo instalado quizás te
 preguntarás; ¿dónde voy a programar? Para esto necesitas un editor de código.
@@ -123,7 +126,7 @@ de comandos, un **Explorador de Variables** para ver qué variables se han
 definido durante la evaluación, que cuenta con botones de **ayuda** para
 cualquier comando y **explorador de archivos**.
 
-![Spyder](../../../images/blog/primeros-pasos-con-spyder/spyder.png)
+![Spyder](spyder.png)
 
 Como puedes observar, del lado izquierdo tenemos el *Editor de código*. En la
 parte superior derecha se encuentran las pestañas: *Explorador de variables*,

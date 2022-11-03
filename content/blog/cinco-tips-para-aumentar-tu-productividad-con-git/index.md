@@ -1,19 +1,22 @@
-<!--
-.. title: Cinco tips para aumentar tu productividad con Git
-.. slug: cinco-tips-para-aumentar-tu-productividad-con-git
-.. date: 2020-02-05
-.. author: Yurely Camacho
-.. tags: versioning
-.. category: git
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "Cinco tips para aumentar tu productividad con Git"
+slug: cinco-tips-para-aumentar-tu-productividad-con-git
+date: 2020-02-05
+author: Yurely Camacho
+tags: [versioning]
+category: [git]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # Cinco tips para aumentar tu productividad con Git -->
 <!-- **Por Yurely Camacho** -->
 
-![header](../../../images/blog/cinco-tips-para-aumentar-tu-productividad-con-git/header.png)
+
 
 En artículos anteriores publicados, te hablamos sobre Git de 0 a 100 e
 investigación colaborativa con Git. Allí hemos repasado sobre las

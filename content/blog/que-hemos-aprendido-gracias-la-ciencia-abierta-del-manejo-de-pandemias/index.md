@@ -1,19 +1,22 @@
-<!--
-.. title: ¿Qué hemos aprendido, gracias a la ciencia abierta, del manejo de pandemias?
-.. slug: que-hemos-aprendido-gracias-la-ciencia-abierta-del-manejo-de-pandemias
-.. date: 2020-05-27
-.. author: Yurely Camacho
-.. tags: open science, pandemic
-.. category: open science
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "¿Qué hemos aprendido, gracias a la ciencia abierta, del manejo de pandemias?"
+slug: que-hemos-aprendido-gracias-la-ciencia-abierta-del-manejo-de-pandemias
+date: 2020-05-27
+author: Yurely Camacho
+tags: [open science, pandemic]
+category: [open science]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # ¿Qué hemos aprendido, gracias a la ciencia abierta, del manejo de pandemias? -->
 <!-- **Por Yurely Camacho** -->
 
-![header](../../../images/blog/que-hemos-aprendido-gracias-la-que-hemos-aprendido-gracias-la-ciencia-abierta-del-manejo-de-pandemias-del-manejo-de-pandemias/header.png)
+
 
 Al transcurrir los años se han presentado pandemias que han azotado y puesto en alerta al mundo. Por tal motivo, la manera como las personas, instituciones y gobiernos lo han manejado resulta de suma importancia ya sea para prevenir errores cometidos, tomar medidas similares o reinventarse acciones en el tema. Justo es aquí donde entra en juego la ciencia abierta. Tal vez te preguntarás ¿Cuál es el papel de la ciencia abierta en todo esto? Pues las distintas disciplinas que abarca, como el acceso y los datos abiertos, han permitido producir conocimiento científico para combatir estas pandemias, por ejemplo, para realizar un diagnóstico temprano, en la gestión de la producción de vacunas, o para predecir niveles de propagación de las enfermedades y generar soluciones tecnológicas.
 

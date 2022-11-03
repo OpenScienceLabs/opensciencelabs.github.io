@@ -1,19 +1,22 @@
-<!--
-.. title: NFT. Más que un JPG
-.. slug: nft-mas-que-un-jpg
-.. date: 2019-04-08
-.. author: Alan Hurtarte
-.. tags: nft, blockchain
-.. category: nft
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "NFT. Más que un JPG"
+slug: nft-mas-que-un-jpg
+date: 2022-04-08
+author: Alan Hurtarte
+tags: [nft, blockchain]
+category: [nft]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # NFT. Más que un JPG -->
 <!-- **Autor**: [Alan Hurtarte](../../authors/alan-hurtarte.md) -->
 
-![Bored ape yacht club](../../../images/blog/nft-mas-que-un-jpg/header.png)
+
 
 Quizá hayas escuchado el término NFT últimamente. Títulos de noticias descabelladas como [«Porque este CryptoPunk NFT  fue vendido por \$532 millones de USD»](https://www.cnet.com/news/why-this-cryptopunk-nft-sold-for-532-million-sort-of/) o [«Memes clásicos que fueron vendidos como NFT»](https://mashable.com/article/classic-memes-sold-nft-prices).
 

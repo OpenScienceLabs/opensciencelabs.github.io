@@ -1,18 +1,21 @@
-<!--
-.. title: ¿Qué es la ciencia abierta?
-.. slug: que-es-la-ciencia-abierta
-.. date: 2020-01-06
-.. author: Yurely Camacho
-.. tags: open science
-.. category: open science
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "¿Qué es la ciencia abierta?"
+slug: que-es-la-ciencia-abierta
+date: 2020-01-06
+author: Yurely Camacho
+tags: [open science]
+category: [open science]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # ¿Qué es la ciencia abierta? -->
 
-![header](../../../images/blog/que-es-la-ciencia-abierta/header.png)
+
 
 Si buscas la democratización del conocimiento, oportunidades de
 intercambio y colaboración, mayor productividad científica, y mucho

@@ -1,19 +1,22 @@
-<!--
-.. title: Te hablamos del uso de dashboards para visualización de datos de tu próximo proyecto
-.. slug: te-hablamos-del-uso-de-dashboards-para-visualizacion-de-datos-de-tu-proximo-proyecto
-.. date: 2020-03-11
-.. author: Rainer Palm
-.. tags: open science
-.. category: dashboard
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "Te hablamos del uso de dashboards para visualización de datos de tu próximo proyecto"
+slug: te-hablamos-del-uso-de-dashboards-para-visualizacion-de-datos-de-tu-proximo-proyecto
+date: 2020-03-11
+author: Rainer Palm
+tags: [open science]
+category: [dashboard]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # Te hablamos del uso de dashboards para visualización de datos de tu próximo proyecto -->
 <!-- **Por Rainer Palm** -->
 
-![header](../../../images/blog/te-hablamos-del-uso-de-dashboards-para-visualizacion-de-datos-de-tu-proximo-proyecto/header.png)
+
 
 Muchas veces ocurre que, a pesar de que te has tomado el tiempo para analizar y modelar un problema, escribir código, depurarlo y asegurarte de que todo funcione bien, necesitas simplificar y compartimentar los datos y la salida de tu programa para que puedas presentar tu trabajo y que este sea entendido, usualmente mediante un informe y/o una visualización de lo realizado. Las herramientas comúnmente usadas para este propósito tienen varias dificultades: suelen ser estáticas (tal como las diapositivas o los informes escritos), ser diseñadas en mente solo para gente con conocimiento técnico, o permitir solo el uso de ciertos lenguajes de programación o librerías.
 

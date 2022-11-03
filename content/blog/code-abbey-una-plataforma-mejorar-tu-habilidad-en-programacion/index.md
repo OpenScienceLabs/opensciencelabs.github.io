@@ -1,18 +1,21 @@
-<!--
-.. title: Code Abbey una plataforma para mejorar tu habilidad en programación
-.. slug: code-abbey-una-plataforma-mejorar-tu-habilidad-en-programacion
-.. date: 2022-03-22 19:52:05 UTC
-.. author: Ever Vino
-.. tags: open science, programacion, recursos
-.. category: programming
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "Code Abbey una plataforma para mejorar tu habilidad en programación"
+slug: code-abbey-una-plataforma-mejorar-tu-habilidad-en-programacion
+date: 2022-03-22
+author: Ever Vino
+tags: [open science, programacion, recursos]
+category: [programming]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # Code Abbey una plataforma para mejorar tu habilidad en programación -->
 
-![header](../../../images/blog/code-abbey-una-plataforma-mejorar-tu-habilidad-en-programacion/header.png)
+
 
 Alguna vez te has pregundado, ¿Cómo puedo mejorar mis habilidades de programación?. Este artículo tiene la respuesta, te mostraremos una de las mejores plataformas para que puedas practicar programación resolviendo problemas.
 
@@ -29,17 +32,17 @@ Puedes resolver los problemas en varios lenguajes: C, C++, C#, Python, Java, Jav
 
 Puedes registrarte con una cuenta de gmail, facebook o de GitHub.
 
-![Portada CodeAbbey](../../../images/blog/code-abbey-una-plataforma-mejorar-tu-habilidad-en-programacion/codeabbey.png)
+![Portada CodeAbbey](codeabbey.png)
 
 Un vez hecho el **Login** puedes ver los problemas haciendo click en la pestaña **Problems**.
 Seleccionado el problema se te abrira la siguiente ventana:
 
-![Portada CodeAbbey problemas](../../../images/blog/code-abbey-una-plataforma-mejorar-tu-habilidad-en-programacion/problems1.png)
+![Portada CodeAbbey problemas](problems1.png)
 
 La primera sección podrás ver el enunciado del problema y un ejemplo de entrada y salida de lo solicitado.
 Cuando tengas la resolución del problema (script o código), lo haces correr con los datos de entrada del test (**Test Data**).
 
-![Portada CodeAbbey problemas](../../../images/blog/code-abbey-una-plataforma-mejorar-tu-habilidad-en-programacion/problems2.png)
+![Portada CodeAbbey problemas](problems2.png)
 
 La solución que arroje tu programa la copias en el espacio vacio de de **You Answer**. Luego le puedes dar click a **Submit**, una vez se haya comprobado que la respuesta es correcta, la resolución del problema será dada como válida.
 

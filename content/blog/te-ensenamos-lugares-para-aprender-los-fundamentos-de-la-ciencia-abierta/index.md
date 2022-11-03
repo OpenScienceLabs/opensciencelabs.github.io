@@ -1,19 +1,22 @@
-<!--
-.. title: Te enseñamos 4 lugares para aprender los fundamentos de la ciencia abierta
-.. slug: te-ensenamos-lugares-para-aprender-los-fundamentos-de-la-ciencia-abierta
-.. date: 2020-06-22
-.. author: Rainer Palm
-.. tags: open science
-.. category: open science
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "Te enseñamos 4 lugares para aprender los fundamentos de la ciencia abierta"
+slug: te-ensenamos-lugares-para-aprender-los-fundamentos-de-la-ciencia-abierta
+date: 2020-06-22
+author: Rainer Palm
+tags: [open science]
+category: [open science]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # Te enseñamos 4 lugares para aprender los fundamentos de la ciencia abierta -->
 <!-- **Por Rainer Palm** -->
 
-![header](../../../images/blog/te-ensenamos-lugares-para-aprender-los-fundamentos-de-la-ciencia-abierta/header.png)
+
 
 ¿Qué es realmente la ciencia abierta? A pesar de que parece una idea simple, su implementación puede concurrir en todo tipo de preguntas y problemas posteriores sin una definición clara de los permisos de uso sobre resultados o metodologías, concedidos tanto a los investigadores como a los lectores y posteriores usuarios de la investigación, y de qué es lo que se busca lograr con este tipo de práctica de investigación.
 

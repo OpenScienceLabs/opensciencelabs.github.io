@@ -1,19 +1,22 @@
-<!--
-.. title: Visualiza tus datos en R con ggplot2 y gganimate
-.. slug: visualiza-tus-datos-en-r-con-ggplot-y-gganimate
-.. date: 2019-04-08
-.. author: Ever Vino
-.. tags: r, visualization
-.. category: r
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "Visualiza tus datos en R con ggplot2 y gganimate"
+slug: visualiza-tus-datos-en-r-con-ggplot-y-gganimate
+date: 2022-04-08
+author: Ever Vino
+tags: [r, visualization]
+category: [r]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # Visualiza tus datos en R con ggplot2 y gganimate -->
 <!-- **Autor**: [Ever Vino](../../authors/ever-vino.md) -->
 
-![header](../../../images/blog/visualiza-tus-datos-en-r-con-ggplot-y-gganimate/header.png)
+
 
 Una gráfica es una buena manera de expresar los datos, estos ayudan a ver detalles que simplemente pueden pasar desapercibidos cuando sólo se los analizan numericamente, estos pueden tener aún mayor impacto si estan animados. ¿Por qué no hacerlo?. En este artículo se describe como hacer animación usando ggplot2 y gganimate en R.
 
@@ -283,7 +286,7 @@ animate(
 
 Hay casos en los que extrañamente no se instalan los renders para hacer la renderización de la animación y aparece un error al tratar de ejecutar el código arriba mostrado, en ese caso puede probar con la siguiente solución: Ejecute en modo administrador RStudio e instale los renders con `install.packages("gifski")` para el render que viene por defecto con `gganimate`, tambien puede instalar el render magick con `install.packages("magick")` para tener otra opción para renderizar. Para saber que opciones tiene el render magick ejecute `help("magick_renderer")` y se le mostrara su breve manual.
 
-![Importaciones de Bolivia durante la pandemia](../../../images/blog/visualiza-tus-datos-en-r-con-ggplot-y-gganimate/datosimportpandemia.gif)
+![Importaciones de Bolivia durante la pandemia](datosimportpandemia.gif)
 
 Despues de ver la animación podemos guardarla haciendo:
 

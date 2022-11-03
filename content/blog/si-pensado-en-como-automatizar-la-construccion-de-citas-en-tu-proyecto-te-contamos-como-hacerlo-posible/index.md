@@ -1,19 +1,22 @@
-<!--
-.. title: Si has pensado en cómo automatizar la construcción de citas en tu proyecto, te contamos cómo hacerlo posible.
-.. slug: si-pensado-en-como-automatizar-la-construccion-de-citas-en-tu-proyecto-te-contamos-como-hacerlo-posible
-.. date: 2020-05-16
-.. author: Rainer Palm
-.. tags: citation
-.. category: citation
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "Si has pensado en cómo automatizar la construcción de citas en tu proyecto, te contamos cómo hacerlo posible."
+slug: si-pensado-en-como-automatizar-la-construccion-de-citas-en-tu-proyecto-te-contamos-como-hacerlo-posible
+date: 2020-05-16
+author: Rainer Palm
+tags: [citation]
+category: [citation]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # Si has pensado en cómo automatizar la construcción de citas en tu proyecto, te contamos cómo hacerlo posible. -->
 <!-- **Rainer Palm** -->
 
-![header](../../../images/blog/si-pensado-en-como-automatizar-la-construccion-de-citas-en-tu-proyecto-te-contamos-como-hacerlo-posible/header.png)
+
 
 En el proceso de escritura de un artículo científico, o documentación de un proyecto, siempre se busca optimizar el uso del tiempo dedicado a la transcripción y elaboración de los documentos y presentaciones del trabajo, así como en tareas como la elaboración de citas y referencias para artículos entre otros. Aunque el uso de herramientas de procesamiento de texto facilita bastante la tarea de compartir y escribir el trabajo, aun así se suele tener que configurar manualmente cosas tales como indices, código insertado dentro del texto, formulas matemáticas… y citas. Esto se complica un poco más pues, dependiendo de la forma en la que estés publicando tu artículo, todas estas tareas pueden tener formatos muy distintos.
 

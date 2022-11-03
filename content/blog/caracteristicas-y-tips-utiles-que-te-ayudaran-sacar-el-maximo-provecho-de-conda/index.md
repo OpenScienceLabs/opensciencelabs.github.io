@@ -1,19 +1,22 @@
-<!--
-.. title: Características y tips útiles que te ayudarán a sacar el máximo provecho de CONDA
-.. slug: caracteristicas-y-tips-utiles-que-te-ayudaran-sacar-el-maximo-provecho-de-conda
-.. date: 2020-12-14
-.. author: Yurely Camacho
-.. tags: devops, packaging
-.. category: packaging
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "Características y tips útiles que te ayudarán a sacar el máximo provecho de CONDA"
+slug: caracteristicas-y-tips-utiles-que-te-ayudaran-sacar-el-maximo-provecho-de-conda
+date: 2020-12-14
+author: Yurely Camacho
+tags: [devops, packaging]
+category: [packaging]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # Características y tips útiles que te ayudarán a sacar el máximo provecho de CONDA -->
 <!-- **Por Yurely Camacho** -->
 
-![header](../../../images/blog/caracteristicas-y-tips-utiles-que-te-ayudaran-sacar-el-maximo-provecho-de-conda/header.png)
+
 
 Si posees algún conocimiento sobre conda o visitaste anteriormente
 nuestro artículo sobre Cómo instalar y comenzar a utilizar Conda (enlace

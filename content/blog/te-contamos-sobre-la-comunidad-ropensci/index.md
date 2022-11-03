@@ -1,19 +1,22 @@
-<!--
-.. title: Te contamos sobre la comunidad rOpenSci
-.. slug: te-contamos-sobre-la-comunidad-ropensci
-.. date: 2020-08-18
-.. author: Yurely Camacho
-.. tags: r, community, open science, ropensci
-.. category: open science
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "Te contamos sobre la comunidad rOpenSci"
+slug: te-contamos-sobre-la-comunidad-ropensci
+date: 2020-08-18
+author: Yurely Camacho
+tags: [r, community, open science, ropensci]
+category: [open science]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- Te contamos sobre la comunidad rOpenSci -->
 <!-- **Por Yurely Camacho** -->
 
-![header](../../../images/blog/te-contamos-sobre-la-comunidad-ropensci/header.png)
+
 
 Para compartir, almacenar y divulgar de una manera fácil los datos y
 resultados de las investigaciones, los científicos deben contar con

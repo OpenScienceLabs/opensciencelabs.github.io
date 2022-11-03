@@ -71,8 +71,8 @@ def replace_metadata(md_file):
         new_content = re.sub("\n\s+\n", "\n", new_content, re.MULTILINE)
         new_content += 'draft: false\n'
         new_content += 'usePageBundles: true\n'
-        new_content += 'thumbnail: \n'
-        new_content += 'featureImage: \n'
+        new_content += 'thumbnail: "/header.png"\n'
+        new_content += 'featureImage: "/header.png"\n'
         new_content = f"---{new_content}---\n"
 
         output = open(md_file,"w")

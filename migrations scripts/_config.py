@@ -4,7 +4,7 @@ Mutual configuration for python scripts
 
 from pathlib import Path
 
-BLOG_PATH = Path(Path(__file__).parent / 'test_files' / 'blog')
+BLOG_PATH = Path(Path(__file__).parent.parent / 'content' / 'blog')
 
 def gen_all_files_with_extension(ROOT_DIR, EXTENSIONS=['.md']):
     if Path(ROOT_DIR).exists():

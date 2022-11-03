@@ -1,14 +1,17 @@
-<!--
-.. title: ¿Cuáles son los principios de la investigación reproducible?
-.. slug: cuales-son-los-principios-de-la-investigacion-reproducible
-.. date: 2020-01-31
-.. author: Rainer Palm
-.. tags: open science
-.. category: open science
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "¿Cuáles son los principios de la investigación reproducible?"
+slug: cuales-son-los-principios-de-la-investigacion-reproducible
+date: 2020-01-31
+author: Rainer Palm
+tags: [open science]
+category: [open science]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # ¿Cuáles son los principios de la investigación reproducible? -->
 <!-- **Por Rainer Palm** -->

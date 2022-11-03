@@ -1,19 +1,22 @@
-<!--
-.. title: ¿Qué es el Lenguaje R y cómo puede ayudarte en tus proyectos?
-.. slug: que-es-el-lenguaje-r-y-como-puede-ayudarte-en-tus-proyectos
-.. date: 2020-01-17
-.. author: Yurely Camacho
-.. tags: open science, r, rstudio, posit, data science, ciencia de datos, rmarkdown
-.. category: r
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "¿Qué es el Lenguaje R y cómo puede ayudarte en tus proyectos?"
+slug: que-es-el-lenguaje-r-y-como-puede-ayudarte-en-tus-proyectos
+date: 2020-01-17
+author: Yurely Camacho
+tags: [open science, r, rstudio, posit, data science, ciencia de datos, rmarkdown]
+category: [r]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # ¿Qué es el Lenguaje R y cómo puede ayudarte en tus proyectos? -->
 <!-- **Por Yurely Camacho** -->
 
-![header](../../../images/blog/que-es-el-lenguaje-r-y-como-puede-ayudarte-en-tus-proyectos/header.png)
+
 
 Si eres una persona con deseos de desarrollar proyectos de código
 abierto que puedan ser compartidos, quieres replicar y /o mejorar

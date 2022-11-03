@@ -1,19 +1,22 @@
-<!--
-.. title: pyOpenSci: un promotor de la ciencia abierta
-.. slug: pyopensci-un-promotor-de-la-ciencia-abierta
-.. date: 2020-08-06
-.. author: Yurely Camacho
-.. tags: open science, python, pyopensci, ciencia  abierta, open source
-.. category: open science
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "pyOpenSci: un promotor de la ciencia abierta"
+slug: pyopensci-un-promotor-de-la-ciencia-abierta
+date: 2020-08-06
+author: Yurely Camacho
+tags: [open science, python, pyopensci, ciencia  abierta, open source]
+category: [open science]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # pyOpenSci: un promotor de la ciencia abierta -->
 <!-- **Por Yurely Camacho** -->
 
-![header](../../../images/blog/pyopensci-un-promotor-de-la-ciencia-abierta/header.png)
+
 
 Las distintas disciplinas que abarca la ciencia abierta trabajan de
 manera conjunta; tal es el caso del código abierto, la investigación

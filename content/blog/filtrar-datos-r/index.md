@@ -1,18 +1,21 @@
-<!--
-.. title: Cómo filtrar datos de tu tabla con dplyr en R
-.. slug: filtrar-datos-r
-.. date: 2022-06-14 19:52:05 UTC
-.. author: Ever Vino
-.. tags: open science, r, filtrar datos, dplyr, recursos, data science
-.. category: data science
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "Cómo filtrar datos de tu tabla con dplyr en R"
+slug: filtrar-datos-r
+date: 2022-06-14
+author: Ever Vino
+tags: [open science, r, filtrar datos, dplyr, recursos, data science]
+category: [data science]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # Cómo filtrar datos de tu tabla con dplyr en R  -->
 
-![hoja de datos](../../../images/blog/filtrar-datos-r/header.png)
+
 
 En este artículo mostraremos como usar algunas funciones importantes de la biblioteca de `dplyr`, específicamente veremos como usar las funciones `filter()`, `select()`, `group_by()`, `sumarize()` y `mutate()` dentro de un ejemplo práctico.
 
@@ -153,7 +156,7 @@ geom_line(aes(x = date, y = new_cases_smoothed, color = location), size = 0.5) +
 
 ```
 
-![Nuevos casos covid en Bolivia, Perú, Chile y Ecuador](../../../images/blog/filtrar-datos-r/covid_region.png)
+![Nuevos casos covid en Bolivia, Perú, Chile y Ecuador](covid_region.png)
 
 
 ## Cómo usar summarise() y group_by()
@@ -253,7 +256,7 @@ ggplot(covid_continentes) +
   )
 ```
 
-![Nuevos casos covid por Continente](../../../images/blog/filtrar-datos-r/covid_continentes.png)
+![Nuevos casos covid por Continente](covid_continentes.png)
 
 ## Para que sirve la función mutate()
 
@@ -302,7 +305,7 @@ ggplot(covid_continentes_indicador) +
     color = "Continente"
   )
 ```
-![Relación muertes diarias por 1000 contagiados por Continente](../../../images/blog/filtrar-datos-r/covid_continentes_indicador.png)
+![Relación muertes diarias por 1000 contagiados por Continente](covid_continentes_indicador.png)
 
 ## Conclusiones
 

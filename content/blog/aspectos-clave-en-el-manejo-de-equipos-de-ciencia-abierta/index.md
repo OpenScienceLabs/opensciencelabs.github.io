@@ -1,19 +1,22 @@
-<!--
-.. title: Aspectos clave en el manejo de equipos de ciencia abierta
-.. slug: aspectos-clave-en-el-manejo-de-equipos-de-ciencia-abierta
-.. date: 2020-01-20
-.. author: Rainer Palm
-.. tags: open science
-.. category: open science
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "Aspectos clave en el manejo de equipos de ciencia abierta"
+slug: aspectos-clave-en-el-manejo-de-equipos-de-ciencia-abierta
+date: 2020-01-20
+author: Rainer Palm
+tags: [open science]
+category: [open science]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # Aspectos clave en el manejo de equipos de ciencia abierta -->
 <!-- **Por Rainer Palm** -->
 
-![header](../../../images/blog/aspectos-clave-en-el-manejo-de-equipos-de-ciencia-abierta/header.png)
+
 
 Ya sea por temas de financiamiento, el uso de tecnologías de comunicación más avanzadas, o la necesidad de realizar proyectos interdisciplinarios, la investigación colaborativa es una práctica bastante frecuente. A pesar de el enfoque historico y el tratamiento en medios de comunicación, hacia descubrimientos individuales, y pese a la presencia de ciertos personajes carismáticos, la realidad hoy en dia es otra: la gran mayoría de los científicos trabajan dentro de grupos donde los involucrados aportan al resultado final gracias a la retroalimentación constante, a pesar de que muchas veces ni siquiera comparten la misma disciplina entre los investigadores involucrados. La eficiencia de la cooperación se hace notar por si sola, y la necesidad de dar resultados rápidos en proyectos cada vez más grandes, requiere de la creación de grupos con flujos de trabajos disciplinados y metodologías ágiles.
 

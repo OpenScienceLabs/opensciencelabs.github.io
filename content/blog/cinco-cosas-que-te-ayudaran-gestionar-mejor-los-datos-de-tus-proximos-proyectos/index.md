@@ -1,19 +1,22 @@
-<!--
-.. title: Cinco cosas que te ayudarán a gestionar mejor los datos de tus próximos proyectos
-.. slug: cinco-cosas-que-te-ayudaran-gestionar-mejor-los-datos-de-tus-proximos-proyectos
-.. date: 2020-01-19
-.. author: Yurely Camacho
-.. tags: open science
-.. category: data
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "Cinco cosas que te ayudarán a gestionar mejor los datos de tus próximos proyectos"
+slug: cinco-cosas-que-te-ayudaran-gestionar-mejor-los-datos-de-tus-proximos-proyectos
+date: 2020-01-19
+author: Yurely Camacho
+tags: [open science]
+category: [data]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # Cinco cosas que te ayudarán a gestionar mejor los datos de tus próximos proyectos -->
 <!-- **Por Yurely Camacho**-->
 
-![header](../../../images/blog/cinco-cosas-que-te-ayudaran-gestionar-mejor-los-datos-de-tus-proximos-proyectos/header.png)
+
 
 Los datos se consideran, y así debe ser, la materia prima para realizar
 distintas actividades como la investigación, la toma de decisiones

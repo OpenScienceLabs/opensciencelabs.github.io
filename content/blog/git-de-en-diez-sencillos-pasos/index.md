@@ -1,19 +1,22 @@
-<!--
-.. title: Git de 0 a 100 en diez sencillos pasos
-.. slug: git-de-en-diez-sencillos-pasos
-.. date: 2020-01-08
-.. author: Por Rainer Palm
-.. tags: versioning
-.. category: git
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "Git de 0 a 100 en diez sencillos pasos"
+slug: git-de-en-diez-sencillos-pasos
+date: 2020-01-08
+author: Por Rainer Palm
+tags: [versioning]
+category: [git]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # Git de 0 a 100 en diez sencillos pasos -->
 <!-- **Por Rainer Palm** -->
 
-![header](../../../images/blog/git-de-en-diez-sencillos-pasos/header.png)
+
 
 ¿Necesitas aprender [Git](https://git-scm.com/) para manejar con mayor
 eficiencia y control tus projectos y trabajos? Ya sea para desarrollo de

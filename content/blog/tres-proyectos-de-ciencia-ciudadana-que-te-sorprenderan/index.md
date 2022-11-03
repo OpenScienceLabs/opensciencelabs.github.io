@@ -1,19 +1,22 @@
-<!--
-.. title: Tres proyectos de ciencia ciudadana que te sorprenderán
-.. slug: tres-proyectos-de-ciencia-ciudadana-que-te-sorprenderan
-.. date: 2020-02-12
-.. author: Rainer Palm
-.. tags: citizen science
-.. category: citizen science
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "Tres proyectos de ciencia ciudadana que te sorprenderán"
+slug: tres-proyectos-de-ciencia-ciudadana-que-te-sorprenderan
+date: 2020-02-12
+author: Rainer Palm
+tags: [citizen science]
+category: [citizen science]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # Tres proyectos de ciencia ciudadana que te sorprenderán -->
 <!-- **Por Rainer Palm** -->
 
-![header](../../../images/blog/tres-proyectos-de-ciencia-ciudadana-que-te-sorprenderan/header.png)
+
 
 Alguna vez has querido saber como es realmente participar en una investigación científica, sin necesariamente tener el entrenamiento o la educación del area? Descubrir nuevas especies, identíficar cuerpos celestes, quizás simplemente hacer trabajo de campo en las fronteras de tu propia ciudad, catalogando los animales y plantas que coexisten en tu habitat local. Mediante proyectos y aplicaciones de ciencia ciudadana, esto es una posibilidad, y ya hay una diversidad de personas cotidianas que la han aprovechado, indirectamente volviendose científicos.
 

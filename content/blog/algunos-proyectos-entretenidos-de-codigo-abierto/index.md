@@ -1,19 +1,22 @@
-<!--
-.. title: Algunos proyectos entretenidos de código abierto
-.. slug: algunos-proyectos-entretenidos-de-codigo-abierto
-.. date: 2020-01-10
-.. author: Rainer Palm
-.. tags: open source
-.. category: open source
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "Algunos proyectos entretenidos de código abierto"
+slug: algunos-proyectos-entretenidos-de-codigo-abierto
+date: 2020-01-10
+author: Rainer Palm
+tags: [open source]
+category: [open source]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # Algunos proyectos entretenidos de código abierto -->
 <!-- **Por Rainer Palm** -->
 
-![header](../../../images/blog/algunos-proyectos-entretenidos-de-codigo-abierto/header.png)
+
 
 Alrededor del mundo, gracias a la importancia del sector tecnológico a nivel global, existe una gran cantidad de programadores, todos con sus destrezas, afinidades y aspiraciones particulares que hacen de sus proyectos colaborativos algo interesante y único, contribuyendo con su toque personal. Debido a la gran prevalencia de prácticas de código abierto en plataformas tales como Github, utilizadas por la mayoría de los desarrolladores de software existentes, se puede ver en ocasiones cómo el proceso mediante el cual proyecto se llevó a cabo y cómo pensaron respecto a ciertos problemas que se presentaron, cómo previeron cada mínimo detalle necesario para reproducir y crear de manera independiente el producto final, ya sea una pieza de software, un diseño de hardware, o inclusive algo tan común pero no menos importante como lo es una foto o un sonido, reproducibles en todo sentido de la palabra.
 

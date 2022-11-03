@@ -1,18 +1,21 @@
-<!--
-.. title: Primeros pasos con RStudio
-.. slug: primeros-pasos-con-rstudio
-.. date: 2021-04-05
-.. author: Anavelyz Pérez
-.. tags: ide, r, rstudio, rstudio desktop, rstudio server, interfaz de r
-.. category: ide
-.. link:
-.. description:
-.. type: text
--->
+---
+title: "Primeros pasos con RStudio"
+slug: primeros-pasos-con-rstudio
+date: 2021-04-05
+author: Anavelyz Pérez
+tags: [ide, r, rstudio, rstudio desktop, rstudio server, interfaz de r]
+category: [ide]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # Primeros pasos con RStudio -->
 
-![header](../../../images/blog/primeros-pasos-con-rstudio/header.png)
+
 
 RStudio es un entorno de desarrollo integrado (IDE) para el lenguaje de
 programación R, el cual puedes utilizar para realizar scripts de análisis de
@@ -66,7 +69,7 @@ Ahora, **Conozcamos la Interfaz de RStudio:**
 El ambiente de RStudio es similar en todas sus versiones. Por defecto está
 dividido en cuatro cuadrantes o regiones:
 
-![RStudio](../../../images/blog/primeros-pasos-con-rstudio/Rstudio.png)
+![RStudio](Rstudio.png)
 
 - El cuadrante superior izquierdo contiene una ventana que permite crear y
   editar scripts y, mostrar datos. También cuenta con una serie de comandos o
@@ -75,7 +78,7 @@ dividido en cuatro cuadrantes o regiones:
   primera vez que abres RStudio este cuadrante no aparece hasta que se genere un
   nuevo script o se abra uno que ya haya sido generado previamente.
 
-![Source Panel](../../../images/blog/primeros-pasos-con-rstudio/C1.gif)
+![Source Panel](C1.gif)
 
 - El cuadrante inferior izquierdo contiene una consola, que recibe directamente
   las instrucciones y las interpreta. Luego de esto muestra el resultado. Por
@@ -87,7 +90,7 @@ dividido en cuatro cuadrantes o regiones:
   locales y trabajos remotos. Puedes usarlas para ejecutar tus scripts en
   segundo plano mientras sigues usando el IDE.
 
-![Consola](../../../images/blog/primeros-pasos-con-rstudio/2consola.gif)
+![Consola](2consola.gif)
 
 - En el cuadrante superior derecho podemos encontrar el Panel de Environment
   (ambiente), Historial y las Conexiones. *Environment* muestra las
@@ -100,7 +103,7 @@ dividido en cuatro cuadrantes o regiones:
   los comandos directamente a la consola, o al script. Además es posible guardar
   el historial de comandos para utilizarlos en otra sesión.
 
-![Environment](../../../images/blog/primeros-pasos-con-rstudio/Environment.gif)
+![Environment](Environment.gif)
 
 - El cuadrante inferior derecho contiene varias pestañas:
 
@@ -141,7 +144,7 @@ tener una vista previa de los archivos .rmd.
 Nota: Los cuadrantes se pueden agrandar o reducir. Permitiendo ajustar la
 pantalla a tus necesidades.
 
-![RStudio](../../../images/blog/primeros-pasos-con-rstudio/cambiotam.gif)
+![RStudio](cambiotam.gif)
 
 La barra de menú tiene opciones asociadas con los archivos, proyectos y
 carpetas, puedes crearlos, editarlos y/o eliminarlos (File), edición de código
@@ -163,7 +166,7 @@ escribir de forma tal que estén separados por un espacio o una coma.
 
 También puedes descargar los paquetes desde R-cran e instalarlos desde RStudio.
 
-![RStudio](../../../images/blog/primeros-pasos-con-rstudio/paq.gif)
+![RStudio](paq.gif)
 
 **Buscar o ubicar Tutoriales y material de apoyo sobre R y RStudio**
 

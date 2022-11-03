@@ -1,19 +1,22 @@
-<!--
-.. title: Todo lo que debes saber sobre la investigación colaborativa
-.. slug: todo-lo-que-debes-saber-sobre-la-investigacion-colaborativa
-.. date: 2020-01-10
-.. author: Anavelyz Pérez
-.. tags: open science
-.. category: research
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "Todo lo que debes saber sobre la investigación colaborativa"
+slug: todo-lo-que-debes-saber-sobre-la-investigacion-colaborativa
+date: 2020-01-10
+author: Anavelyz Pérez
+tags: [open science]
+category: [research]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # Todo lo que debes saber sobre la investigación colaborativa -->
 <!-- **Por Anavelyz Pérez** -->
 
-![header](../../../images/blog/todo-lo-que-debes-saber-sobre-la-investigacion-colaborativa/header.png)
+
 
 La investigación colaborativa es un término que se le atribuye al hecho de
 realizar o llevar a cabo investigaciones y/o proyectos donde participan más de

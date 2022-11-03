@@ -1,18 +1,21 @@
-<!--
-.. title: Todas las posibilidades que te ofrece utilizar figshare en tus proyectos
-.. slug: todas-las-posibilidades-que-te-ofrece-utilizar-figshare-en-tus-proyectos
-.. date: 2020-12-21
-.. author: Anavelyz Pérez
-.. tags: open science
-.. category: open science 
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "Todas las posibilidades que te ofrece utilizar figshare en tus proyectos"
+slug: todas-las-posibilidades-que-te-ofrece-utilizar-figshare-en-tus-proyectos
+date: 2020-12-21
+author: Anavelyz Pérez
+tags: [open science]
+category: [open science ]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # Todas las posibilidades que te ofrece utilizar figshare en tus proyectos -->
 
-![header](../../../images/blog/todas-las-posibilidades-que-te-ofrece-utilizar-figshare-en-tus-proyectos/header.png)
+
 
 ¿Qué es figshare?
 

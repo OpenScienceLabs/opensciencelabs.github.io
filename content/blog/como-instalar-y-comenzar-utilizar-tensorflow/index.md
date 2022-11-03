@@ -1,18 +1,21 @@
-<!--
-.. title: Cómo instalar y comenzar a utilizar Tensorflow
-.. slug: como-instalar-y-comenzar-utilizar-tensorflow
-.. date: 2020-09-10
-.. author: Anavelyz Pérez
-.. tags: machine learning
-.. category: machine learning
-.. link: 
-.. description: 
-.. type: text
--->
+---
+title: "Cómo instalar y comenzar a utilizar Tensorflow"
+slug: como-instalar-y-comenzar-utilizar-tensorflow
+date: 2020-09-10
+author: Anavelyz Pérez
+tags: [machine learning]
+category: [machine learning]
+type: text
+draft: false
+usePageBundles: true
+thumbnail: "/header.png"
+featureImage: "/header.png"
+---
+
 
 <!-- # Cómo instalar y comenzar a utilizar Tensorflow -->
 
-![header](../../../images/blog/como-instalar-y-comenzar-utilizar-tensorflow/header.png)
+
 
 Hablar de Tensorflow, es hablar de Machine Learning porque es una plataforma que
 permite y facilita la creación de modelos asociados a algoritmos en los que se
