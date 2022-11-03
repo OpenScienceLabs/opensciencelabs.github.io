@@ -1,7 +1,7 @@
 ---
 menu:
     main:
-        name: Archivos
+        name: Actividades
         identifier: archives
         weight: 110
 

@@ -5,6 +5,7 @@ author: Ivan Ogasawara
 draft: false
 usePageBundles: false
 tags: ["gobernance"]
+aliases: ["/governance/"]
 ---
 
 
