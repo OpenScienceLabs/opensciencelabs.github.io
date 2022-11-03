@@ -8,7 +8,7 @@ const scaleImageClass = 'image-scale';
 const pageHasLoaded = 'DOMContentLoaded';
 const imageAltClass = 'img_alt'
 
-const baseURL = 'https://osl-incubator.github.io/osl-hugo.github.io/';
+const baseURL = 'https://opensciencelabs.org/opensciencelabs2.github.io/';
 const searchFieldClass = '.search_field';
 const searchClass = '.search';
 const goBackClass = 'button_back';
@@ -16,10 +16,10 @@ const lineClass = '.line';
 
 // defined in i18n / translation files
 const quickLinks = 'Resultados';
-const searchResultsLabel = 'Resultados da pesquisa';
-const shortSearchQuery = 'A consulta é muito curta'
-const typeToSearch = 'Digite para pesquisar';
-const noMatchesFound = 'Nenhum resultado encontrado';
+const searchResultsLabel = 'Resultados de búsqueda';
+const shortSearchQuery = 'La consulta es demasiado corta'
+const typeToSearch = 'Escriba para buscar';
+const noMatchesFound = 'No se encontraron resultados';
 
 ;
 // global variables
