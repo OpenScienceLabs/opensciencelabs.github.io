@@ -37,7 +37,7 @@ We need help in areas, such as:
 * Mentoring
 * Project Managements
 
-Join our community on discord.
+Join our community on [discord](https://opensciencelabs.org/discord).
 Learn more and contribute on [GitHub](https://github.com/opensciencelabs).
 
 ## Roadmap
