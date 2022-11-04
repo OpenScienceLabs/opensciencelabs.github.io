@@ -1,7 +1,6 @@
 # osl-hugo.github.io
 
 A blog page for OpenScienceLabs with Hugo site generator.
-Not finished yet.
 
 ## To deploy locally
 
@@ -24,6 +23,6 @@ cd osl-hugo.github.io
 hugo server
 ```
 
-## To check how it works check the template
+## To check how it works see the template
 
 [Hugo Clarity](https://github.com/chipzoller/hugo-clarity)
