@@ -27,8 +27,7 @@ de resultados óptimos, visualmente atractivos y lo suficientemente informativos
 
 <!-- TEASER_END -->
 
-Antes de continuar recordemos del artículo [¿Qué es la ciencia
-abierta?]([https://opensciencelabs.org/blog/0001-ciencia_abierta/que-es-la-ciencia-abierta/),
+Antes de continuar recordemos del artículo [¿Qué es la ciencia abierta?](https://opensciencelabs.org/blog/que-es-la-ciencia-abierta/),
 que la ciencia abierta es un movimiento, una manera de ver y hacer ciencia, que
 busca crear una cultura donde la información de todo el proceso de investigación
 científica, ya sean los datos, protocolos, cuadernos de laboratorio, resultados

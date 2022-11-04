@@ -126,8 +126,8 @@ la distribución geográfica del virus https://arcg.is/918mf
 
 ## Referencias:
 
-\[Periódico global: El país\] (https://elpais.com/)
+[Periódico global: El país](https://elpais.com/)
 
 Material informativo de la Universidad Central de Venezuela, Facultad de Medicina
 
-\[Portal Regional de la BVS\] (https://bvsalud.org/vitrinas/es/post_vitrines/nuevo_coronavirus/)
+[Portal Regional de la BVS](https://bvsalud.org/vitrinas/es/post_vitrines/nuevo_coronavirus/)

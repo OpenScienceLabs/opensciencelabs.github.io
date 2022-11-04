@@ -19,6 +19,7 @@ DefaultContentLanguage = "es"
 category = "categories"
 tag = "tags"
 series = "series"
+# authors = "author"
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]

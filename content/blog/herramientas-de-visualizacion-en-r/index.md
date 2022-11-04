@@ -46,11 +46,9 @@ R](https://www.r-project.org/).
 R es fundamentalmente un lenguaje de análisis estadístico y por tanto,
 tiene en su librería "base" soporte incorporado para gráficos. Otras
 funcionalidades avanzadas se incorporan mediante la instalación de
-paquetes encontrados en \[https://cran.r-project.org\] y son generados por
+paquetes encontrados en https://cran.r-project.org y son generados por
 una gran comunidad activa de desarrolladores de R. Puedes acceder a más
-información que te proporcionamos acerca de R en nuestro artículo \[¿Qué
-es el Lenguaje R y cómo puede ayudarte en tus proyectos?\](enlace a
-artículo LenguajeR).
+información que te proporcionamos acerca de R en nuestro artículo [¿Qué es el Lenguaje R y cómo puede ayudarte en tus proyectos?](https://opensciencelabs.org/blog/que-es-el-lenguaje-r-y-como-puede-ayudarte-en-tus-proyectos/).
 
 R posee una [**Galería de gráficos**](https://www.r-graph-gallery.com/),
 esto es una colección de gráficos hechos en R, cuyos ejemplos están
@@ -160,7 +158,7 @@ barras, error, cajas, histogramas, mapas térmicos, subgráficos, de
 múltiples ejes y gráficos 3D. Es gratuito y de código abierto con
 licencia del MIT, puedes ver la fuente, informar de los problemas o
 contribuir en GitHub. Funciona sin conexión y no requiere ningún
-registro de cuenta. Más información en \[https://plot.ly/r/\].
+registro de cuenta. Más información en https://plot.ly/r/.
 
 ### shiny
 

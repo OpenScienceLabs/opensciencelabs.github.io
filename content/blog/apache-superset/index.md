@@ -119,7 +119,7 @@ Fuente:[EpigraphHub Superset](https://dash.epigraphhub.org/superset/welcome/)
 
 Puedes conocer más sobre EpiGrapHub en nuestro artículo: [EpiGraphHub:
 un proyecto de código abierto para el análisis de datos de
-calidad](https://opensciencelabs.org/blog/epigraphhub/epigraphhub-un-proyecto-de-c%C3%B3digo-abierto-para-el-analisis-de-datos-de-calidad/)
+calidad](https://opensciencelabs.org/blog/epigraphhub-un-proyecto-de-c%C3%B3digo-abierto-para-el-analisis-de-datos-de-calidad/)
 
 ## Cómo inciar con Superset
 
