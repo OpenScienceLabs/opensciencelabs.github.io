@@ -5,7 +5,7 @@ author: Ivan Ogasawara
 draft: false
 usePageBundles: false
 tags: ["gobernance"]
-aliases: ["/governance/"]
+aliases: ["/governance/","/guidelines/governance/governance/"]
 ---
 
 

@@ -5,17 +5,7 @@ author: Mariangela Petrizzo
 draft: true
 usePageBundles: false
 ---
-<!--
-.. title: Mentoring Code of Conduct
-.. slug: en
-.. date: 2019-04-08
-.. author: Mariangela Petrizzo
-.. tags: mentoring, coc
-.. category: mentoring
-.. link: 
-.. description: 
-..  
--->
+
 
 # Mentoring Code of Conduct
 

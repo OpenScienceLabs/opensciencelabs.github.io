@@ -5,7 +5,7 @@ author: Mariangela Petrizzo
 draft: false
 tags: [coc]
 usePageBundles: true
-aliases: ["/coc"]
+aliases: ["/coc/", "/guidelines/mentoring/en/coc/"]
 ---
 ## Our Pledge
 
