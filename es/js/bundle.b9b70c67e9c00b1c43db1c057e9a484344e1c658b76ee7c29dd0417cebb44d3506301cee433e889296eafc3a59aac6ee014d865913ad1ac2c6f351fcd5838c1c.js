@@ -8,7 +8,7 @@ const scaleImageClass = 'image-scale';
 const pageHasLoaded = 'DOMContentLoaded';
 const imageAltClass = 'img_alt'
 
-const baseURL = 'https://opensciencelabs.org/opensciencelabs2.github.io/';
+const baseURL = 'https://opensciencelabs.org/';
 const searchFieldClass = '.search_field';
 const searchClass = '.search';
 const goBackClass = 'button_back';
