@@ -33,19 +33,23 @@
 #  weight = 121
 
 # social menu links
-
+[[social]]
+  name = "youtube"
+  type = "social"
+  url = "https://www.youtube.com/@opensciencelabs"
+  weight = 1
 [[social]]
   name = "github"
   type = "social"
-  weight = 1
+  weight = 2
   url = "https://github.com/OpenScienceLabs"
 [[social]]
   name = "twitter"
-  weight = 2
+  weight = 3
   url = "https://twitter.com/opensciencelabs"
 [[social]]
   name = "linkedin"
-  weight = 3
+  weight = 2
   url = "https://www.linkedin.com/company/open-science-labs/"
 [[social]]
   name = "facebook"
