@@ -4,7 +4,8 @@ menu:
         name: Actividades
         identifier: archives
         weight: 110
-
+showdate: false
+showreadtime: false 
 ---
 
 ## Pycafe charlas

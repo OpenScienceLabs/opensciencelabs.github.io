@@ -4,7 +4,9 @@ menu:
         name: Preguntas frecuentes
         identifier: faq
         weight: 120
+showdate: false
 
+showreadtime: false 
 ---
 
 
