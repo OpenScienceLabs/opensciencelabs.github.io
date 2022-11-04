@@ -38,11 +38,11 @@ This section describes the governance and leadership model of The Project.
 
 The principles of Project governance are:
 
-    Openness & Transparency
-    Active Contribution
-    Institutional Neutrality
-    Diversity, Equity and Inclusion
-    Education
+* Openness & Transparency
+* Active Contribution
+* Institutional Neutrality
+* Diversity, Equity and Inclusion
+* Education
 
 ### Consensus-based decision making by the community
 
