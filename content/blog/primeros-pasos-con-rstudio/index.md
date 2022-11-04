@@ -139,7 +139,7 @@ de usuario, preguntas frecuentes, Acerca de R, entre otros.
 -Viewer: esta pestaña es complemento de la extensión RMarkdown, la cual permite
 tener una vista previa de los archivos .rmd.
 
-![Files, Plots, Packages, Help](../../../images/blog/primeros-pasos-con-rstudio/4.gif)
+![Files, Plots, Packages, Help](4.gif)
 
 Nota: Los cuadrantes se pueden agrandar o reducir. Permitiendo ajustar la
 pantalla a tus necesidades.
