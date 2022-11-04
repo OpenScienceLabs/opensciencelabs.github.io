@@ -4,13 +4,14 @@ on:
   push:
     branches:
       - main  # Set a branch to deploy
+  pull_request:
   
 
 jobs:
   deploy:
     runs-on: ubuntu-22.04
     concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
+      group: ${{ github.workflow }}-deploy-${{ github.ref }}
     
     steps:
       - uses: actions/checkout@v3
