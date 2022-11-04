@@ -1,5 +1,5 @@
 ---
-aliases: ["/toc/"]
+aliases: ["/toc/", "/guidelines/toc/"]
 ---
 # The Open Science Labs Guideline is a collection of documents about how to get started in specific areas.
 
