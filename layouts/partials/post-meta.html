@@ -1,14 +1,17 @@
 {{- $showShare := ne (.Param "showshare") false }}
 {{- $showDate := ne (.Param "showdate") false }}
 {{- $showReadTime := ne (.Param "showreadtime") false }}
+{{- $showAuthor := ne (.Param "showauthor") false }}
 {{- $showPostMeta := or ($showShare) ($showDate) ($showReadTime) (isset .Params "tags") }}
 {{- $scratch := newScratch }}
 {{- $scratch.Set "writeSeparator" false }}
 {{- if $showPostMeta }}
   <div class="post_meta">
 {{- end }}
+  {{- if $showAuthor }}
     <span>{{ partial "sprite" (dict "icon" "author") }}</span>
     <span class="author_name">{{- .Params.author -}}</span>
+  {{- end}}
   {{- if $showDate }}
     <span>{{ partial "sprite" (dict "icon" "calendar") }}</span>
     <span class="post_date">

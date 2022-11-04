@@ -6,6 +6,7 @@ menu:
         weight: 110
 showdate: false
 showreadtime: false 
+showauthor: false
 ---
 
 ## Pycafe charlas

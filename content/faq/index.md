@@ -7,6 +7,7 @@ menu:
 showdate: false
 
 showreadtime: false 
+showauthor: false
 ---
 
 
