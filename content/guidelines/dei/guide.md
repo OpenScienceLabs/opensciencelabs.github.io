@@ -16,7 +16,7 @@ tags: ["DEI"]
 .. category: open science
 .. link: 
 .. description: 
-.. type: text
+..  
 -->
 
 <!-- # [ES] Declaración de Diversidad, Equidad e Inclusión -->

@@ -14,7 +14,7 @@ nikola format
 .. category: data science
 .. link: 
 .. description: 
-.. type: text
+..  
 -->
 
 to hugo format

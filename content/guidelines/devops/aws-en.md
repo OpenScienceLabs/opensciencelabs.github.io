@@ -12,7 +12,7 @@ draft: true
 .. category: open science
 .. link: 
 .. description: 
-.. type: text
+..  
 -->
 
 <!-- # [EN] AWS -->

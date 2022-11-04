@@ -7,7 +7,7 @@
 .. category: data science
 .. link: 
 .. description: 
-.. type: text
+..  
 -->
 
 <!-- # Cómo filtrar datos de tu tabla con dplyr en R  -->

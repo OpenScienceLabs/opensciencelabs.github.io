@@ -16,7 +16,7 @@ usePageBundles: false
 .. category: open science
 .. link: 
 .. description: 
-.. type: text
+..  
 -->
 
 <!-- # [ES] Guía para Recaudación de Fondos -->

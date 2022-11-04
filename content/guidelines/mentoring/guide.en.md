@@ -12,7 +12,7 @@ draft: true
 .. category: mentoring
 .. link: 
 .. description: 
-.. type: text
+..  
 -->
 
 <!-- # [EN] Mentoring Guideline -->

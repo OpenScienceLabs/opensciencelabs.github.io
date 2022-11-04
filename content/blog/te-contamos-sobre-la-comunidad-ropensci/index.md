@@ -5,7 +5,7 @@ date: 2020-08-18
 author: Yurely Camacho
 tags: [r, community, open science, ropensci]
 category: [open science]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

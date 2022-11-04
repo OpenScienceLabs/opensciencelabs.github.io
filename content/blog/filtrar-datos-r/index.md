@@ -5,7 +5,6 @@ date: 2022-06-14
 author: Ever Vino
 tags: [open science, r, filtrar datos, dplyr, recursos, data science]
 category: [data science]
-type: text
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

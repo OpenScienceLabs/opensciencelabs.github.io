@@ -5,7 +5,7 @@ date: 2020-01-18
 author: Rainer Palm
 tags: [open science]
 category: [open data]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

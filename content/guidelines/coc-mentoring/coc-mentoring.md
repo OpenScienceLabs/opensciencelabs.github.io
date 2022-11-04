@@ -16,7 +16,7 @@ tags: ["mentoria", "coc"]
 .. category: mentoring
 .. link: 
 .. description: 
-.. type: text
+..  
 -->
 
 # Código de conducta de las mentorías

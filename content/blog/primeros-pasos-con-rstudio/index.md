@@ -5,7 +5,7 @@ date: 2021-04-05
 author: Anavelyz Pérez
 tags: [ide, r, rstudio, rstudio desktop, rstudio server, interfaz de r]
 category: [ide]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

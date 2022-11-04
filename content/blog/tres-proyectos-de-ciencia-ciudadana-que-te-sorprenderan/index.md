@@ -5,7 +5,7 @@ date: 2020-02-12
 author: Rainer Palm
 tags: [citizen science]
 category: [citizen science]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

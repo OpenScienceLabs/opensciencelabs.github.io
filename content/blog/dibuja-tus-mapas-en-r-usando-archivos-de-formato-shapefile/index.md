@@ -5,7 +5,7 @@ date: 2022-04-08
 author: Ever Vino
 tags: [r, maps, visualization]
 category: [r]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

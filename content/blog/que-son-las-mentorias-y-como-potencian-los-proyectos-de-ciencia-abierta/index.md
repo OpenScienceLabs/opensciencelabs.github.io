@@ -5,7 +5,7 @@ date: 2020-02-14
 author: Yurely Camacho
 tags: [mentoring]
 category: [mentoring]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

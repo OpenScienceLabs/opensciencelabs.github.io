@@ -5,7 +5,6 @@ date: 2020-12-14
 author: Yurely Camacho
 tags: [devops, packaging]
 category: [packaging]
-type: text
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

@@ -7,7 +7,7 @@
 .. category: nft
 .. link: 
 .. description: 
-.. type: text
+..  
 -->
 
 <!-- # NFT. Más que un JPG -->

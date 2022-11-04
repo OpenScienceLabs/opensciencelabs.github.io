@@ -5,7 +5,7 @@ date: 2022-03-01
 author: Ever Vino
 tags: [r, rstudio, nube de palabras, wordcloud, mineria de texto]
 category: [r]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

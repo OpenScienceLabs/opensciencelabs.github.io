@@ -5,7 +5,7 @@ date: 2020-08-06
 author: Yurely Camacho
 tags: [open science, python, pyopensci, ciencia  abierta, open source]
 category: [open science]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

@@ -5,7 +5,7 @@ date: 2020-01-08
 author: Por Rainer Palm
 tags: [versioning]
 category: [git]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

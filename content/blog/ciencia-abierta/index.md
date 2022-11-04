@@ -5,7 +5,6 @@ date: 2021-02-08
 author: Rainer Palm
 tags: [artificial intelligence]
 category: [artificial intelligence]
-type: text
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

@@ -5,7 +5,7 @@ date: 2021-02-22
 author: Yurely Camacho
 tags: [ide, interfaz, python, spyder, spyder online]
 category: [ide]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

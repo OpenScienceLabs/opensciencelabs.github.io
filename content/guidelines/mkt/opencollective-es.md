@@ -12,7 +12,7 @@ draft: true
 .. category: mkt
 .. link: 
 .. description: 
-.. type: text
+..  
 -->
 
 <!-- # [ES] OpenCollective -->

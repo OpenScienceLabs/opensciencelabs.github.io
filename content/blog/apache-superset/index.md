@@ -5,7 +5,6 @@ date: 2022-10-26
 author: Yurely Camacho
 tags: [visualización, dashboard, superset, bi, sql]
 category: [citizen science]
-type: text
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

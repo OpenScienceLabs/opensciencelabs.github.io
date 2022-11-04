@@ -5,7 +5,7 @@ date: 2020-05-14
 author: Anavelyz Pérez
 tags: [dashboard]
 category: [dashboard]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

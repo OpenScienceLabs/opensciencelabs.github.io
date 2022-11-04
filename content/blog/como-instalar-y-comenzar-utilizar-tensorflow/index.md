@@ -5,7 +5,7 @@ date: 2020-09-10
 author: Anavelyz Pérez
 tags: [machine learning]
 category: [machine learning]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

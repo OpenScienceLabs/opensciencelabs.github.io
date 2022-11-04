@@ -14,7 +14,7 @@ usePageBundles: false
 .. category: mentoring
 .. link: 
 .. description: 
-.. type: text
+..  
 -->
 
 # Mentoring Code of Conduct

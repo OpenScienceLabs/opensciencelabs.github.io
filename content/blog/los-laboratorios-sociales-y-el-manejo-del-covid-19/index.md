@@ -5,7 +5,7 @@ date: 2020-07-06
 author: Yurely Camacho
 tags: [social labs, covid19]
 category: [social labs]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

@@ -5,7 +5,7 @@ date: 2020-05-16
 author: Rainer Palm
 tags: [citation]
 category: [citation]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

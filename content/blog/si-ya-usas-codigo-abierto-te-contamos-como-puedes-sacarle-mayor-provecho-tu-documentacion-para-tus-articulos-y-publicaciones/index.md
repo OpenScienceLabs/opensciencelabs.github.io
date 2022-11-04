@@ -5,7 +5,7 @@ date: 2020-02-17
 author: Rainer Palm
 tags: [open source, documentation]
 category: [documentation]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

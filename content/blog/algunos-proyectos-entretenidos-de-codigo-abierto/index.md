@@ -5,7 +5,6 @@ date: 2020-01-10
 author: Rainer Palm
 tags: [open source]
 category: [open source]
-type: text
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

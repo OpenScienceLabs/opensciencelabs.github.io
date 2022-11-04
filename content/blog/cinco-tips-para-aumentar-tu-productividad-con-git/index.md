@@ -5,7 +5,7 @@ date: 2020-02-05
 author: Yurely Camacho
 tags: [versioning]
 category: [git]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

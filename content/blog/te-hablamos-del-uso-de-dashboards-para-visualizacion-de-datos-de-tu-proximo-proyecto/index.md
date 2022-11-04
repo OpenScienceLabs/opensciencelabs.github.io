@@ -5,7 +5,7 @@ date: 2020-03-11
 author: Rainer Palm
 tags: [open science]
 category: [dashboard]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

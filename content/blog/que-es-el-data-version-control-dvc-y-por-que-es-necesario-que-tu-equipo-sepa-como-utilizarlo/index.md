@@ -5,7 +5,7 @@ date: 2021-03-22
 author: Yurely Camacho
 tags: [versioning, data]
 category: [data]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

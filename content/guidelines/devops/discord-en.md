@@ -11,7 +11,7 @@ draft: true
 .. category: devops
 .. link: 
 .. description: 
-.. type: text
+..  
 -->
 
 <!-- # [EN] Discord -->

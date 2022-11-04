@@ -5,7 +5,7 @@ date: 2020-03-30
 author: Anavelyz Pérez
 tags: [open science]
 category: [open access]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

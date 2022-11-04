@@ -5,7 +5,7 @@ date: 2022-08-03
 author: Luã Bida Vacaro
 tags: [python, sql, base de dados, ibis]
 category: [python]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.jpg"

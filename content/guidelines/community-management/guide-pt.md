@@ -12,7 +12,7 @@ draft: true
 .. category: community management
 .. link: 
 .. description: 
-.. type: text
+..  
 -->
 
 <!-- # [PT] Guia para Community Management -->

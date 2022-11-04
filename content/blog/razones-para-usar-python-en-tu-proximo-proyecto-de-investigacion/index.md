@@ -5,7 +5,7 @@ date: 2020-01-22
 author: Rainer Palm
 tags: [open science]
 category: [python]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

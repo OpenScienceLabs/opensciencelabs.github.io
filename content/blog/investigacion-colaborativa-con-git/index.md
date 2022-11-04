@@ -5,7 +5,7 @@ date: 2020-01-20
 author: Anavelyz Pérez
 tags: [open science]
 category: [git]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

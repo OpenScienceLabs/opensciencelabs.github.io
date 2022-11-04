@@ -5,7 +5,7 @@ date: 2021-03-08
 author: Anavelyz Pérez
 tags: [data science, learning, carpentries, ciencia de datos]
 category: [learning]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

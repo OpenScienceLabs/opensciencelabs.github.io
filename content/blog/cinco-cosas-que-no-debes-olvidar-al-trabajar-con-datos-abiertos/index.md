@@ -5,7 +5,7 @@ date: 2020-02-21
 author: Anavelyz Pérez
 tags: [open data]
 category: [open data]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

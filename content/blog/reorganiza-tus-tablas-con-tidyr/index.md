@@ -5,7 +5,7 @@ date: 2022-07-17
 author: Ever Vino
 tags: [open science, r, filtrar datos, tidyr, data science, columnas a filas, filas a columnas]
 category: [data science]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

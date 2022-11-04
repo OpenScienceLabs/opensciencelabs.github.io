@@ -5,7 +5,7 @@ date: 2020-05-27
 author: Yurely Camacho
 tags: [open science, pandemic]
 category: [open science]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

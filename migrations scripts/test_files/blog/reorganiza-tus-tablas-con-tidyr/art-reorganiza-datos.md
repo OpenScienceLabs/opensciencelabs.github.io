@@ -7,7 +7,7 @@
 .. category: data science
 .. link: 
 .. description: 
-.. type: text
+..  
 -->
 
 <!-- # Reorganiza tu tabla con tidyr en R  -->

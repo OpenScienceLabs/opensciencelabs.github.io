@@ -7,7 +7,7 @@
 .. category: programming
 .. link: 
 .. description: 
-.. type: text
+..  
 -->
 
 <!-- # Code Abbey una plataforma para mejorar tu habilidad en programación -->

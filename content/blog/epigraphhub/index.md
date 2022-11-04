@@ -5,7 +5,7 @@ date: 2022-09-28
 author: Anavelyz Pérez
 tags: [epigraphhub, código abierto, visualización, datos, datasets]
 category: [código abierto]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

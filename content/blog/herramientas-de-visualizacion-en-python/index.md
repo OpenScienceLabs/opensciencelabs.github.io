@@ -5,7 +5,7 @@ date: 2020-05-29
 author: Anavelyz Pérez
 tags: [python, visualization]
 category: [python]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

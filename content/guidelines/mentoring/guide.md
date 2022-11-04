@@ -16,7 +16,7 @@ tags: ["mentorías"]
 .. category: mentoring
 .. link: 
 .. description: 
-.. type: text
+..  
 -->
 
 <!-- # [ES] Breve guía de Mentoría -->

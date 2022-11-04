@@ -5,7 +5,7 @@ date: 2021-01-23
 author: Mariangela Petrizzo Páez
 tags: [communication]
 category: [communication]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

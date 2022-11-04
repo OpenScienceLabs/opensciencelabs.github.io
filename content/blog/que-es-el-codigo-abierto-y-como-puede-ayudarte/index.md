@@ -5,7 +5,7 @@ date: 2020-02-10
 author: Anavelyz Pérez
 tags: [open source]
 category: [open source]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

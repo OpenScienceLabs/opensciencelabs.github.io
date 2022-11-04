@@ -5,7 +5,7 @@ date: 2020-04-09
 author: Yurely Camacho
 tags: [r, visualization, lattice, ggplot2, tidyverse, ggmap, plotly, shiny]
 category: [r]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

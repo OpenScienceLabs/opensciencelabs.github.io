@@ -5,7 +5,7 @@ date: 2020-02-28
 author: Anavelyz Pérez
 tags: [open science, versioning]
 category: [open science]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

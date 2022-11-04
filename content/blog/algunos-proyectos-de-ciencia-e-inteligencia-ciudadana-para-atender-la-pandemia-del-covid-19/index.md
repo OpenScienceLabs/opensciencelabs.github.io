@@ -5,7 +5,7 @@ date: 2020-04-16
 author: Yurely Camacho
 tags: [open science, citizen science, covid19]
 category: [citizen science]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

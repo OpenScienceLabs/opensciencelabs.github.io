@@ -5,7 +5,7 @@ date: 2022-03-22
 author: Ever Vino
 tags: [open science, programacion, recursos]
 category: [programming]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

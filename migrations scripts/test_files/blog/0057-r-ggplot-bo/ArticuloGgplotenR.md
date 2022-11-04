@@ -7,7 +7,7 @@
 .. category: r
 .. link: 
 .. description: 
-.. type: text
+..  
 -->
 
 <!-- # Visualiza tus datos en R con ggplot2 y gganimate -->

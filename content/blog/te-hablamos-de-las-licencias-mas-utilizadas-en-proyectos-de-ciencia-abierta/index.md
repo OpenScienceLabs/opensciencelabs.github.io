@@ -5,7 +5,7 @@ date: 2020-05-06
 author: Rainer Palm
 tags: [open science, license]
 category: [open science]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

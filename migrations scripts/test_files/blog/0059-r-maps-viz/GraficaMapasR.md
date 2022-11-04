@@ -7,7 +7,7 @@
 .. category: r
 .. link: 
 .. description: 
-.. type: text
+..  
 -->
 
 <!-- # Dibuja tus mapas en R usando archivos de formato Shapefile -->

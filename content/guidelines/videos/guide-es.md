@@ -12,7 +12,7 @@ draft: true
 .. category: guideline
 .. link: 
 .. description: 
-.. type: text
+..  
 -->
 
 <!-- # [ES] Guía para Creación de Videos -->

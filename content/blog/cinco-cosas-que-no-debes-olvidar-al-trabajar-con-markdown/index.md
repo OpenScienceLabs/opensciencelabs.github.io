@@ -5,7 +5,7 @@ date: 2020-01-24
 author: Yurely Camacho
 tags: [open science]
 category: [markdown]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

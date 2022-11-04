@@ -5,7 +5,7 @@ date: 2020-06-09
 author: Anavelyz Pérez
 tags: [open science, python]
 category: [open science]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

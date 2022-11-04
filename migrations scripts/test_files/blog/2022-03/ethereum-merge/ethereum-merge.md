@@ -7,7 +7,7 @@
 .. category: open science, web3, ethereum
 .. link:
 .. description:
-.. type: text
+..  
 -->
 <!-- # The Ethereum merge is coming. ¿Pero qué significa? -->
 

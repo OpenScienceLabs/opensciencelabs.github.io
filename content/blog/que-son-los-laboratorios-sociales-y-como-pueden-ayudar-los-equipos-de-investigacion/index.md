@@ -5,7 +5,7 @@ date: 2020-02-07
 author: Rainer Palm
 tags: [social labs]
 category: [social labs]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

@@ -7,7 +7,7 @@
 .. category: open science, web3
 .. link:
 .. description:
-.. type: text
+..  
 -->
 
 <!-- # Como desarrollador, ¿Que necesito para entrar en la web3? -->

@@ -5,7 +5,7 @@ date: 2020-03-23
 author: Anavelyz Pérez
 tags: [open science, covid19]
 category: [open data]
-type: text
+ 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
