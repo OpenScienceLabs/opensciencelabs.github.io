@@ -15,8 +15,6 @@ featureImage: "/header.png"
 
 <!-- # Reorganiza tu tabla con tidyr en R  -->
 
-
-
 En este artículo, modificaremos la forma de nuestra tabla, combinando varias columnas en una sola o viceversa, usando la biblioteca `tidyr` con sus funciones `gather()`, `spread()`, `separate()`, y `unite()` con ejemplos.
 
 <!-- TEASER_END -->
@@ -38,13 +36,13 @@ p_load("scales") # Biblioteca para dar formato de miles en el eje "y"
 
 ```
 
-Recuerde, también puede instalar y abrir las bibliotecas de manera tradicional, por ejemplo con: `install.packages("tidyr")`, luego abrir la misma biblioteca con `library(tidyr)`.
+Recuerda, también puedes instalar y abrir las bibliotecas de manera tradicional, por ejemplo con: `install.packages("tidyr")`, luego abrir la misma biblioteca con `library(tidyr)`.
 
 ## Importando nuestros datos
 
-La base de datos usada, ha sido descargada de [La base de datos de Instituto de Estadística de Bolivia (INE)](https://www.ine.gob.bo/). Descargada la base de datos se la modifica para que se encuentre en formato `.csv` y la importamos a nuestro entorno de R.
+La base de datos usada, ha sido descargada de [La base de datos de Instituto de Estadística de Bolivia (INE)](https://www.ine.gob.bo/). Una vez que se tiene los datos en nuestro equipo, se modifica para que se encuentre en formato `.csv` y la importamos a nuestro entorno de R.
 
-Puede descargar los archivos usados en este artículo [Repositorio de este artículo aquí](https://github.com/EverVino/Example_data_tidyr).
+Puedes descargar los archivos usados en este artículo [aquí](https://github.com/EverVino/Example_data_tidyr).
 
 Importamos el archivo `.csv` a la variable `datos_turistas`.
 
@@ -69,9 +67,9 @@ dbl (168): 31/01/08, 28/02/08, 31/03/08, 30/04/08, 31/05/08, 30/06/08, 31/07/08,
 
 ```
 
-Nuestra tabla tiene varias columnas correspondientes al acumulativo por mes, si queremos graficar estos datos con `ggplot()` estos datos no nos van a ser de mucha utilidad. Por ello vamos a usar `gather()` para convertir las fechas de las columnas en datos de una sola columna.
+Nuestra tabla tiene varias columnas correspondientes al acumulativo por mes, si queremos graficar estos datos, `ggplot()` no nos será de mucha utilidad. Por ello vamos a usar `gather()` para convertir las fechas de las columnas en datos de una sola columna.
 
-Si quiere explorar los datos manualmente puede ejecutar la función `(View(datos_turistas))` en la consola.
+Si quieres explorar los datos manualmente puedes ejecutar la función `(View(datos_turistas))` en la consola.
 
 ## Cómo usar la función gather()
 
@@ -79,7 +77,7 @@ La función `gather()` puede agrupar los nombres de las columnas en una sola, as
 
 ![Fucionamiento de gather de tidyr()](https://user-images.githubusercontent.com/209714/48026738-e9a06a80-e114-11e8-9a24-ecc8b37b8a53.gif)
 
-En nuestro caso quremos hacer algo similar, agrupar las fechas en una columna llamada `Fecha`.
+En nuestro caso queremos hacer algo similar, agrupar las fechas en una columna llamada `Fecha`.
 
 ```r
 
@@ -131,9 +129,9 @@ Ejecutando head(datos_turistas), notamos que hemos obtenido lo deseado.
 Función que es usada para agrupar columnas en dos nuevas columnas.
 
 - **`data`** : Dataframe o tabla que se va a modificar.
-- **`key`** : Nombre de la nueva columna que va almacenar los *nombres de la columnas* que se van a agruparse.
-- **`value`** : Nombre de la nueva columna que va contener los *valores de la columnas* que se van a agruparse.
-- **`...`** : Nombres o selección de columnas a agruparse, puede usar los nombres de las columnas con la función concatenar `c()`. Ejemplo `c(nombre_col1, nombre_col2...)`  ó hacer la selección del complemento con `!c()`, también puede usar como referencia el número de columna. Para hacer referencia a una serie sucesiva use `:`  Ejemplo: `n_col1:n_col2`.
+- **`key`** : Nombre de la nueva columna que va almacenar los *nombres de la columnas* que se van a agrupar.
+- **`value`** : Nombre de la nueva columna que va contener los *valores de la columnas* que se van a agrupar.
+- **`...`** : Nombres o selección de columnas a agruparse, puedes usar los nombres de las columnas con la función concatenar `c()`. Por ejemplo, `c(nombre_col1, nombre_col2...)`  o hacer la selección del complemento con `!c()`, también puedes utilizar como referencia el número de columna. Para hacer referencia a una serie sucesiva emplea `:`, algo como: `n_col1:n_col2`.
 
 ## Separa una columna con separate()
 
@@ -174,13 +172,13 @@ Función que es usada para separar una columna en varias.
 
 - **`data`** : Dataframe o tabla que se va a modificar.
 - **`col`** : Nombre de la columna que va a separarse.
-- **`into`** : Nombres de la nuevas columnas que van a crearse a partir de `col`. Puede usar para nombrar a las columnas la función concatenar `c()`.
-- **`sep`** : Separador, un caracter que va a servir para identificar en donde se separa para generar las nuevas columnas. Puede usar *Regular Expresions*.
+- **`into`** : Nombres de la nuevas columnas que van a crearse a partir de `col`. Puedes usar la función concatenar `c()` para nombrar a las columnas.
+- **`sep`** : Separador, un carácter que va a servir para identificar en donde se separa para generar las nuevas columnas. Puedes usar *Regular Expressions*.
 - **`remove`** : Acepta valores booleanos `TRUE` y `FALSE`, por defecto es `TRUE`, si es igual `TRUE` borra la columna que se separa, en `FALSE` la mantiene.
 
 Vamos a aprovechar los nuevos datos generados, para graficar el top de turistas que han visitado Bolivia en los años 2016-2021.
 
-En el código abajo usamos muchas funciones de la biblioteca `dplyr` si quiere aprender más sobre esa biblioteca puede leer [este artículo](https://opensciencelabs.org/blog/filtrar-datos-r/filtrar-datos-r/).
+En el código abajo usamos muchas funciones de la biblioteca `dplyr` si quieres aprender más sobre esa biblioteca lee [este artículo](https://opensciencelabs.org/blog/filtrar-datos-r/filtrar-datos-r/).
 
 ```r
 
@@ -264,13 +262,14 @@ Función que une varias columnas en una.
 
 - **`data`** : Dataframe o tabla que se va a modificar.
 - **`col`** : Nombre de la nueva columna que va a unir otras columnas.
-- **`... `** : Nombres de la nuevas columnas que van a juntarse en `col`. Puede usar para nombrar las columnas la función concatenar `c()`.
-- **`sep`** : Separador, un caracter que va a servir para unir los valores de las columnas que se unen.
+- **`... `** : Nombres de la nuevas columnas que van a juntarse en `col`. Puedes emplearla para nombrar las columnas la función concatenar `c()`.
+- **`sep`** : Separador, un carácter que va a servir para unir los valores de las columnas que se unen.
 - **`remove`** : Acepta valores booleanos `TRUE` y `FALSE`, por defecto es `TRUE`, si es igual `TRUE` borra la columnas que se unen, en `FALSE` las mantiene.
 
 ## Función spread()
 
-Esta función es la que complementa a la función `gather()`, y hace exactamente lo contrario. esparcir una columna en varias.
+Esta función es la que complementa a la función `gather()`, y hace exactamente lo contrario. 
+Esparcir una columna en varias.
 
 Antes de utilizar `spread()` vamos a agrupar nuestro datos en trimestres.
 
@@ -341,10 +340,10 @@ Ahora observamos que nuestros datos se han esparcido, este formato es útil para
 Función que es usada para esparcir los datos de una columna como nombres de columnas.
 
 - **`data`** : Dataframe o tabla que se va a modificar.
-- **`key`** : Nombre de la columna cuyos valores se van esparcir como los *nombres de la  nuevas columnas*.
-- **`value`** : Nombre de la columna cuyos valores van a convertirse en los  *nuevos valores de las nuevas columnas*.
+- **`key`** : Nombre de la columna cuyos valores se van esparcir como los *nombres de las nuevas columnas*.
+- **`value`** : Nombre de la columna cuyos valores van a convertirse en los *nuevos valores de las nuevas columnas*.
 
-Aprovechemos estos datos para graficar los top países que han visitado Bolivia en el primer trimestre del 2019.
+Aprovechemos estos datos para graficar el top de países que han visitado Bolivia en el primer trimestre del 2019.
 
 ```r
 
@@ -379,11 +378,11 @@ ggplot(data = top_turistas_trimestre_1_2019) +
 
 ![Viajero llegados por avión a Bolivia 2016-2021](Viajeros_trimestre_1_2019.jpeg)
 
-## Outro
+## Otros detalles
 
-Las funciones mostradas en el árticulo son las más usadas y permiten una mejor manipulación de datos en R. Como siempre es bueno revisar la [documentación oficial](https://www.rdocumentation.org) si se quiere aprender más.
+Las funciones mostradas en el artículo son las más usadas, y permiten un mejor manejo de datos en R. Te recomiendo revisar la [documentación oficial](https://www.rdocumentation.org) si se quieres aprender más.
 
-Puede descargar el [repositorio de este artículo aquí](https://github.com/EverVino/Example_data_tidyr).
+En el caso de que quieras descargar el repositorio de este artículo puedes hacerlo [aquí](https://github.com/EverVino/Example_data_tidyr).
 
 ## Referencias
 
