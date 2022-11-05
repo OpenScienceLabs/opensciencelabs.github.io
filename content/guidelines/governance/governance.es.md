@@ -2,7 +2,7 @@
 title: "Gobernanza del proyecto Open Science Labs"
 date: 2019-09-14
 author: Ivan Ogasawara
-draft: false
+draft: true
 usePageBundles: false
 tags: ["gobernanza"]
 aliases: ["/governance/","/guidelines/governance/governance/gobernanza"]
