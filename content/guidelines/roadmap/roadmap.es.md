@@ -2,7 +2,7 @@
 title: "Open Science Labs Roadmap"
 date: 2019-09-14
 author: Ivan Ogasawara
-draft: false
+draft: true
 usePageBundles: false
 tags: ["mentorías"]
 aliases: ["/roadmap/"]
