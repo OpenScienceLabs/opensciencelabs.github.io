@@ -53,7 +53,7 @@ engineering, all located in different parts of Latin America.
 
 ## Do you offer mentoring?
 
-Yes, to become an OSL mentor just fill out this
+Yes, to become an OSL mentee just fill out this
 [form]https://github.com/OpenScienceLabs/request-forms/issues/new/choose?fbclid=IwAR3pDhR5soLQJrgKTUzmT9I1ty8rEyMTtn8LarkDzdDqkUadQc_ugwX5IsE)
 and we will notify you as soon as possible if we have a mentor
 available. You can also be a tutor or mentor by filling out this other
