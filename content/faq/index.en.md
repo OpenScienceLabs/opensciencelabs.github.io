@@ -80,7 +80,7 @@ sustain our work.
 ## I have some suggestions. How do I contact OSL?
 
 You can do it through Discord. There is almost always an administrator
-who can answer you. [Discord Group](http://discord.opensciencelabs.org/)
+who can answer you. [Discord Group](https://opensciencelabs.org/discord)
 
 ## Who manages OSL?
 
