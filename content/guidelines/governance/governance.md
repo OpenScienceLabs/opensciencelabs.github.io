@@ -2,9 +2,9 @@
 title: "Open Science Labs Project Governance"
 date: 2019-09-14
 author: Ivan Ogasawara
-draft: false
+draft: true
 usePageBundles: false
-tags: ["gobernance"]
+tags: ["governance"]
 aliases: ["/governance/","/guidelines/governance/governance/"]
 ---
 
@@ -30,7 +30,6 @@ The Project is conducted by a distributed team of contributors, who are individu
 The Project Community consists of all Contributors and Users of the Project. Contributors work on behalf of and are responsible to the larger Project Community and we strive to keep the barrier between Contributors and Users as low as possible.
 
 In order to improve transparency and a better fiscal workflow, OSL is currently looking for a fiscal sponsor to help our project to grow.
-
 
 ## Governance
 
@@ -69,7 +68,6 @@ If one does need to invoke a formal veto, then the process should consist of:
 If all proposals for resolving some issue are vetoed, then the status quo wins by default.
 
 In the worst case, if a Contributor is genuinely misusing their veto obstructively to the detriment of the project, then they can be ejected from the project by consensus of the Steering Council -- see below.
-
 
 ### Steering Council
 
@@ -122,7 +120,6 @@ To the maximum extent possible, Council discussions and activities will be publi
 #### Subcommittees
 
 The Council can create subcommittees that provide leadership and guidance for specific aspects of the project. Like the Council as a whole, subcommittees should conduct their business in an open and public manner unless privacy is specifically called for. Private subcommittee communications should happen on the main private discord channel of the Council unless specifically called for.
-
 
 ## Institutional Partners and Funding
 
