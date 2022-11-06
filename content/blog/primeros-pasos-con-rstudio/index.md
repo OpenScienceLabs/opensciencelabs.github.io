@@ -28,7 +28,7 @@ más.
 
 Para acceder o utilizar esta herramienta se tienen las siguientes opciones:
 [RStudio Desktop](https://rstudio.com/products/rstudio/#rstudio-desktop) y
-[RServer](https://rstudio.com/products/rstudio/#rstudio-server). Cada uno de
+[RServer](https://rstudio.com/products/rstudio/#rstudio-server). Cada una de
 ellas tiene una en versión Open Source (código abierto) y otra Pro.
 
 **RStudio Desktop** brinda acceso local a RStudio y tiene entre sus
@@ -57,9 +57,9 @@ Sin embargo, en este artículo nos centraremos en RStudio Desktop.
 1. Ir a la sección Download https://rstudio.com/products/rstudio/download/
    específicamente hasta "All Installers" cerca de la parte inferior de la
    página.
-1. Hacer clic en el enlace de descarga correspondiente al sistema operativo de
-   su ordenador.
-1. Seleccionar el archivo descargado e instalar de acuerdo a su sistema
+1. Haz clic en el enlace de descarga correspondiente al sistema operativo de
+   tu ordenador.
+1. Selecciona el archivo descargado e instala de acuerdo a tu sistema
    operativo.
 
 Ahora, **Conozcamos la Interfaz de RStudio:**
@@ -98,43 +98,38 @@ dividido en cuatro cuadrantes o regiones:
 
   Por otro lado, en el *Historial* puedes ver las líneas de comandos que han
   sido ejecutadas recientemente, buscar mediante la caja de búsqueda o copiar
-  los comandos directamente a la consola, o al script. Además es posible guardar
+  los comandos directamente a la consola, o al script. Además, es posible guardar
   el historial de comandos para utilizarlos en otra sesión.
 
 ![Environment](Environment.gif)
 
 - El cuadrante inferior derecho contiene varias pestañas:
 
--Files(Archivos): es un gestor de archivos propio de RStudio, te permite crear,
+  - Files(Archivos): es un gestor de archivos propio de RStudio, te permite crear,
 editar y eliminar tus archivos, así como crear carpetas.
 
--Plots: en esta pestaña se muestran los gráficos que se generen a través del
+  - Plots: en esta pestaña se muestran los gráficos que se generen a través del
 script o líneas de comandos. También te permite exportarlos en distintos
 formatos.
 
--Packages: Si damos clic en esta pestaña aparecen dos botones, install y
+  - Packages: Si damos clic en esta pestaña aparecen dos botones, install y
 update, seguido por una lista de paquetes que pueden estar o no instalados en tu
 ordenador y que puedes usar o instalar según sea el caso.
 
--Help: Nos da acceso a la ayuda que está compuesta por varias secciones,
+  - Help: Nos da acceso a la ayuda que está compuesta por varias secciones,
 
-* R Resources: Contiene una lista de enlaces que te dirigen a páginas web de
-las ayudas oficiales de R.
+    - R Resources: Contiene una lista de enlaces que te dirigen a páginas web de las ayudas oficiales de R.
 
-* RStudio: Contiene enlaces asociados a los sitios web oficiales de RStudio.
+    - RStudio: Contiene enlaces asociados a los sitios web oficiales de RStudio.
 
-* Manuals: Esta sección contiene los enlaces que te permiten acceder de forma
-local a una serie de manuales a cerca de R.
+    - Manuals: Esta sección contiene los enlaces que te permiten acceder de forma local a una serie de manuales a cerca de R.
 
-* Reference: Hay dos enlaces, uno es el índice de los paquetes instalados y
-otro muestra una serie de palabras clave y la clasificación por tópicos de
-paquetes; al hacer clic en cualquiera de estos enlaces la información es
-cargada de forma local.
+    - Reference: Hay dos enlaces, uno es el índice de los paquetes instalados y otro muestra una serie de palabras clave y la clasificación por tópicos de paquetes; al hacer clic en cualquiera de estos enlaces la información es cargada de forma local.
+    
+    - Miscellaneous Material: Muestra material diverso sobre R, tal como manuales de usuario preguntas frecuentes, Acerca de R, entre otros.
 
-* Miscellaneous Material: Muestra material diverso sobre R, tal como manuales
-de usuario, preguntas frecuentes, Acerca de R, entre otros.
+- Viewer: esta pestaña es complemento de la extensión RMarkdown, la cual permite
 
--Viewer: esta pestaña es complemento de la extensión RMarkdown, la cual permite
 tener una vista previa de los archivos .rmd.
 
 ![Files, Plots, Packages, Help](4.gif)
@@ -162,7 +157,8 @@ en la pantalla que aparecerá el o los nombres de los paquetes que deseas
 instalar. En el caso de que sea más de un paquete, los nombres de estos se deben
 escribir de forma tal que estén separados por un espacio o una coma.
 
-También puedes descargar los paquetes desde R-cran e instalarlos desde RStudio.
+También puedes descargar los paquetes desde R-cran e instalarlos a partir de
+RStudio.
 
 ![RStudio](paq.gif)
 
