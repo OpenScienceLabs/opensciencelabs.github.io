@@ -157,7 +157,7 @@ ciencia abierta. A continuación mencionamos algunos:
 [**ODSL (Open Data Science Latam)**](https://www.odsla.org/)
 [**Datalat**](https://www.datalat.org/)
 [**Open Science Comunity Leiden**](https://www.universiteitleiden.nl/open-science-community-leiden)
-[\***Open Knowledge Foundation**](https://okfn.org/)
+[**Open Knowledge Foundation**](https://okfn.org/)
 [**Amelica**](http://amelica.org/)
 [**Association of European Research Libraries LIBER**](https://libereurope.eu/)
 [**MonuMAI**](https://*monumai.ugr.es/proyecto)

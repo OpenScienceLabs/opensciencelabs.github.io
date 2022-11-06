@@ -34,20 +34,20 @@ Una de las principales herramientas de visualización son las bibliotecas destin
 
 Algunas de las bibliotecas más populares en Python son:
 
-\*[matplotlib](https://matplotlib.org/): Es una biblioteca de visualización que
+* [matplotlib](https://matplotlib.org/): Es una biblioteca de visualización que
 permite realizar visualizaciones estáticas, animadas e interactivas en
 Python. Con ella se pueden generar gráficos de barras, histogramas,
 espectros de potencia, stemplots, scatterplots, gráficos de error, gráficos
 circulares y muchos otros. En su sitio oficial de Internet hay una serie de
 tutoriales y ejemplos de lo que podemos hacer con ella.
 
-\*[seaborn](https://seaborn.pydata.org/): Al igual que matplotlib, es una
+* [seaborn](https://seaborn.pydata.org/): Al igual que matplotlib, es una
 biblioteca que brinda grandes opciones para realizar gráficos. De hecho,
 esta biblioteca esta basada en matplotlib. La diferencia principal esta en
 sus estilos y paletas de colores que son más estéticos y visualmente
 atractivos.
 
-\*[Bokeh](https://docs.bokeh.org): Es una biblioteca de visualización muy
+* [Bokeh](https://docs.bokeh.org): Es una biblioteca de visualización muy
 completa porque permite realizar cualquier tipo de diagrama gráfico. Es
 ideal para presentaciones basadas en la web, proporciona la construcción de
 gráficos elegantes y versátiles de forma concisa. Una de las ventajas
@@ -63,23 +63,23 @@ pueden clasificar en tres grupos importantes:
 - Dirigido a desarrolladores e ingenieros de software.
 ```
 
-\*[Plotly](https://plotly.com/): Es una herramienta de visualización en línea
+* [Plotly](https://plotly.com/): Es una herramienta de visualización en línea
 que ha desarrollado bibliotecas  tanto para Python como para R. Es la opción
 más útil y fácil para crear visualizaciones altamente interactivas en la web
 (dashboard).
 
-\*[Pygal](http://www.pygal.org/): Al igual que las bibliotecas que hemos
+* [Pygal](http://www.pygal.org/): Al igual que las bibliotecas que hemos
 descrito anteriormente Pygal permite realizar cualquier gráfico con pocas
 líneas de código, esta tiene la particularidad de estar principalmente
 orientada a la creación de gráficos en formato SVG, lo cual indica que
 cualquiera de nuestros resultados puede ser editado en un editor de imágenes
 e imprimirlos en una resolución de muy alta calidad.
 
-\*[Ggplot](http://ggplot.yhathq.com/): Es un conjunto de métodos para graficar
+* [Ggplot](http://ggplot.yhathq.com/): Es un conjunto de métodos para graficar
 basado en GGplot2 de R y la gramática de los gráficos. Los resultados se
 generan rápidamente y con pocas líneas de código.
 
-\*[Altair](https://altair-viz.github.io/): es una biblioteca de visualización
+* [Altair](https://altair-viz.github.io/): es una biblioteca de visualización
 estadística para Python, basada en Vega y Vega-Lite (gramáticas de
 visualización). Permite construir una amplia gama de visualizaciones
 rápidamente.

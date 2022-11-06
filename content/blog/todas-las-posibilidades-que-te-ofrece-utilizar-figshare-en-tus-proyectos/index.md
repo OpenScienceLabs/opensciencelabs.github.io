@@ -119,7 +119,7 @@ y ayuda al crecimiento del conocimiento.
 más de 5 mil proyectos, más de 500 mil colecciones y más de 800 mil usuarios que
 cargan o comparten sus archivos a través de ella. \[https://figshare.com/about\]**
 
-\*Referencias:
+* Referencias:
 
 (Sitio oficial defigshare) \[https://figshare.com/\]
 

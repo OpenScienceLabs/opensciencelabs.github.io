@@ -15,8 +15,6 @@ featureImage: "/header.png"
 
 <!-- # Primeros pasos con RStudio -->
 
-
-
 RStudio es un entorno de desarrollo integrado (IDE) para el lenguaje de
 programación R, el cual puedes utilizar para realizar scripts de análisis de
 datos, aplicaciones web interactivas, documentos, reportes, gráficos y mucho
@@ -120,20 +118,20 @@ ordenador y que puedes usar o instalar según sea el caso.
 
 -Help: Nos da acceso a la ayuda que está compuesta por varias secciones,
 
-\*R Resources: Contiene una lista de enlaces que te dirigen a páginas web de
+* R Resources: Contiene una lista de enlaces que te dirigen a páginas web de
 las ayudas oficiales de R.
 
-\*RStudio: Contiene enlaces asociados a los sitios web oficiales de RStudio.
+* RStudio: Contiene enlaces asociados a los sitios web oficiales de RStudio.
 
-\*Manuals: Esta sección contiene los enlaces que te permiten acceder de forma
+* Manuals: Esta sección contiene los enlaces que te permiten acceder de forma
 local a una serie de manuales a cerca de R.
 
-\*Reference: Hay dos enlaces, uno es el índice de los paquetes instalados y
+* Reference: Hay dos enlaces, uno es el índice de los paquetes instalados y
 otro muestra una serie de palabras clave y la clasificación por tópicos de
 paquetes; al hacer clic en cualquiera de estos enlaces la información es
 cargada de forma local.
 
-\*Miscellaneous Material: Muestra material diverso sobre R, tal como manuales
+* Miscellaneous Material: Muestra material diverso sobre R, tal como manuales
 de usuario, preguntas frecuentes, Acerca de R, entre otros.
 
 -Viewer: esta pestaña es complemento de la extensión RMarkdown, la cual permite
