@@ -308,7 +308,7 @@ ggplot() +
 - **`geom_point(alpha, data, mapping = aes(x, y, colour), size)`**: dibuja puntos dentro del gráfico, comparte similares argumentos con `geom_poligon()` y `geom_text()`.
 - **`scale_fill_brewer(palette, guide)`**: similar a la función `scale_fill_continuous(low, high, guide, labels)` aplica una escala de colores tipo brewer a todos los objetos asignados a `fill` y con `pallete` seleccionamos el tipo de paleta de colores a aplicarse.
 - **`scale_color_manual(values)`**: nos permite usar una escala de colores manual, `values` debe ser un vector que contenga los valores de los colores de la escala.
-- \***`raibow(9)`**: devuelve un vector con 9 colores del arcoiris.
+- **`raibow(9)`**: devuelve un vector con 9 colores del arcoiris.
 
 ![Mapa de Bolivia: Capitales de departamento](grafica3.png)
 

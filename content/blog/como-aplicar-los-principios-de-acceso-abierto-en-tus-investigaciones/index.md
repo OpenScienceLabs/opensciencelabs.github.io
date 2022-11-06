@@ -90,25 +90,25 @@ sociedad a través del tiempo y a su vez incentivar el proceso de investigación
 futuro. Las herramientas son brindadas por distintas organizaciones y equipos de
 trabajo. Casos que lo demuestran son los diferentes repositorios como:
 
-\*ACS (American Chemical Association)
-\*arXiv
-\*BioMed Central
-\*Cambridge University Press
-\*Copernicus Publications
-\*F1000Research
-\*Frontiers
-\*IntechOpen
-\*Knowledge Unlatched
-\*MDPI
-\*Open Library of Humanities
-\*Oxford University Press
-\*PeerJ.
-\*Pensoft Publishers
-\*PLOS ONE
-\*PNAS
-\*Royal Society of Chemistry (RSC)
-\*SCOAP3
-\*Springer Open
+* ACS (American Chemical Association)
+* arXiv
+* BioMed Central
+* Cambridge University Press
+* Copernicus Publications
+* F1000Research
+* Frontiers
+* IntechOpen
+* Knowledge Unlatched
+* MDPI
+* Open Library of Humanities
+* Oxford University Press
+* PeerJ.
+* Pensoft Publishers
+* PLOS ONE
+* PNAS
+* Royal Society of Chemistry (RSC)
+* SCOAP3
+* Springer Open
 
 Que brindan opciones para que los investigadores puedan hacer visibles sus
 resultados.

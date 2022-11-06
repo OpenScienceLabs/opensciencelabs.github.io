@@ -104,7 +104,7 @@ Datos*](https://datacatalog.worldbank.org/) y al [*Banco de
 Datos*](https://databank.bancomundial.org/home.aspx) del Banco Mundial
 que te servirá para complementar información.
 
-### 3. [\*\*Portal de Datos Abiertos: Números para el desarrollo](https://code.iadb.org/es) del Banco Interamericano de desarrollo.
+### 3. [Portal de Datos Abiertos: Números para el desarrollo](https://code.iadb.org/es) del Banco Interamericano de desarrollo.
 
 Permite explorar, visualizar y descargar datos sobre indicadores
 socioeconómicos de América Latina y el Caribe. Los datos disponibles

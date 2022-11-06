@@ -16,8 +16,6 @@ featureImage: "/header.png"
 <!-- # Algunos proyectos de ciencia e inteligencia ciudadana para atender la pandemia del COVID-19 -->
 <!-- **Por Yurely Camacho** -->
 
-![header](../../../images/blog/algunos-proyectos-de-ciencia-e-inteligencia-ciudadana-para-atender-la-pandemia-del-covid-19/header.png)
-
 La enfermedad COVID-19 causada por el coronavirus SARS-CoV-2 actualmente
 es una pandemia mundial. Por tal motivo su prevención resulta sumamente
 importante, y para esto es indispensable nuestra participación activa

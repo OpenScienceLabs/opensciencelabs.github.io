@@ -15,8 +15,6 @@ featureImage: "/header.png"
 
 <!-- # Primeros pasos con RStudio -->
 
-
-
 RStudio es un entorno de desarrollo integrado (IDE) para el lenguaje de
 programación R, el cual puedes utilizar para realizar scripts de análisis de
 datos, aplicaciones web interactivas, documentos, reportes, gráficos y mucho
@@ -131,6 +129,7 @@ ordenador y que puedes usar o instalar según sea el caso.
     - Miscellaneous Material: Muestra material diverso sobre R, tal como manuales de usuario preguntas frecuentes, Acerca de R, entre otros.
 
 - Viewer: esta pestaña es complemento de la extensión RMarkdown, la cual permite
+
 tener una vista previa de los archivos .rmd.
 
 ![Files, Plots, Packages, Help](4.gif)
