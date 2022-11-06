@@ -22,7 +22,7 @@ In this document, we are focusing on our three current main areas: events, inter
 
 ## Events
 
-Open Science Labs motivate anyone and any group from the community to organize events about open science and tecnlogies.
+Open Science Labs motivate anyone and any group from the community to organize events about open science and technologies.
 
 For open science and technologies we mean any topic about science or technology that its usage is not restricted by license or agreements. Examples of topics that is accepted:
 
@@ -52,7 +52,7 @@ Now, there are two events that is happening periodically:
 
 **Plans:**
 
-For these events, a plan is needed to reach to reach out more people and increase the engagment.
+For these events, a plan is needed to reach to reach out more people and increase the engagement.
 
 Other meetings that are being considered and that need a greater commitment from the community to make them possible include:
 
@@ -76,7 +76,7 @@ Interns also work on internal tasks to help Open Science Labs to grow, such as: 
 
 **Plans:**
 
-For now, the number of inters that the project can afford is very small, but for this phase, it would be great to have around 10 interns in order to contribute to all the partnerships open source projects and to the Open Science Labs internal tasks.
+For now, the number of interns that the project can afford is very small, but for this phase, it would be great to have around 10 interns in order to contribute to all the partnerships open source projects and to the Open Science Labs internal tasks.
 
 Also, it would be great to participate to Google Summer of Code as well.
 
