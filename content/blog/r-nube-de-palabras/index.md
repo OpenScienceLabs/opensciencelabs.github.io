@@ -5,7 +5,7 @@ date: 2022-03-01
 author: Ever Vino
 tags: [r, rstudio, nube de palabras, wordcloud, mineria de texto]
 category: [r]
- 
+aliases: ["/blog/0061-r-nube-palabras/crea-una-nube-de-palabras-en-r-partir-de-un-documento-de-texto/"] 
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

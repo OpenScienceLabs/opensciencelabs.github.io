@@ -36,8 +36,7 @@
 [[social]]
   name = "youtube"
   type = "social"
-  url = "https://www.youtube.com/@opensciencelabs"
-  weight = 1
+  url = "/youtube"
 [[social]]
   name = "github"
   type = "social"
@@ -50,16 +49,16 @@
 [[social]]
   name = "linkedin"
   weight = 2
-  url = "https://www.linkedin.com/company/open-science-labs/"
+  url = "/linkedin"
 [[social]]
   name = "facebook"
   type = "social"
-  url = "https://www.facebook.com/opensciencelabscommunity"
+  url = "facebook"
   weight = 4
 [[social]]
   name = "discord"
   type = "social"
-  url = "https://opensciencelabs.org/discord"
+  url = "/discord"
   weight = 5
 [[social]]
   name = "rss"

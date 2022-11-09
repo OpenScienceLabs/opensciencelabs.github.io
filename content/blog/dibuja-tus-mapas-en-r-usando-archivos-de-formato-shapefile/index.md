@@ -5,7 +5,7 @@ date: 2022-04-08
 author: Ever Vino
 tags: [r, maps, visualization]
 category: [r]
- 
+aliases: ["/blog/0059-r-maps-viz/dibuja-tus-mapas-en-r-usando-archivos-de-formato-shapefile/"]
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
@@ -335,6 +335,7 @@ Guarda el mapa con el nombre `filename` en la ruta `path`, con la escala y forma
 
 ## Referencias
 
+- [Repositorio del ejemplo](https://github.com/EverVino/dataviz-Bolivia)
 - [Instituto Nacional de Estadística Bolivia](https://www.ine.gob.bo)
 - [GeoBolivia](https://geo.gob.bo/)
 - [geodatos.net](https://www.geodatos.net/coordenadas/bolivia)
