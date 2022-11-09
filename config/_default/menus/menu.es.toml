@@ -24,7 +24,7 @@
 [[main]]
   parent = "about"
   name = "Asociados"
-  url = "partners/"
+  url = "/partners/"
 
 
 #[[main]]

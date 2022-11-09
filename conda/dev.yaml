@@ -1,0 +1,7 @@
+name: osl-page
+channels:
+  - nodefaults
+  - conda-forge
+dependencies:
+  - opensciencelabs::hugo-extended
+  - pre-commit
