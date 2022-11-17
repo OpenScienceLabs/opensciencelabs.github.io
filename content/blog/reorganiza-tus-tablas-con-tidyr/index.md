@@ -266,7 +266,7 @@ Función que une varias columnas en una.
 - **`col`** : Nombre de la nueva columna que va a unir otras columnas.
 - **`... `** : Nombres de la nuevas columnas que van a juntarse en `col`. Puedes emplearla para nombrar las columnas la función concatenar `c()`.
 - **`sep`** : Separador, un carácter que va a servir para unir los valores de las columnas que se unen.
-- **`remove`** : Acepta valores booleanos `TRUE` y `FALSE`. Si es igual a `TRUE` borra la columnas que se unen, en `FALSE` las mantiene. Por defecto su valor es `TRUE`.
+- **`remove`** : Acepta valores booleanos `TRUE` y `FALSE`. Si es igual a `TRUE`, borra las columnas que se unen, pero si `FALSE`, las mantiene. Por defecto, su valor es `TRUE`.
 
 ## Función `spread()`
 
