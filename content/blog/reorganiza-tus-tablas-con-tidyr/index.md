@@ -42,7 +42,7 @@ Recuerda, también puedes instalar y abrir las bibliotecas de manera tradicional
 
 ## Importando nuestros datos
 
-Los datos usados, han sido descargados de [la base de datos del Instituto de Estadística de Bolivia (INE)](https://www.ine.gob.bo/). Una vez que se tiene los datos en nuestro equipo, se modifica para que se encuentren en formato `.csv` y los importamos a nuestro entorno de R.
+Los datos usados han sido descargados de [la base de datos del Instituto de Estadística de Bolivia (INE)](https://www.ine.gob.bo/). Una vez que se tiene los datos en nuestro equipo, se modifica para que se encuentren en formato `.csv` y los importamos a nuestro entorno de R.
 
 Puedes descargar los archivos usados en este artículo [aquí](https://github.com/EverVino/Example_data_tidyr).
 
