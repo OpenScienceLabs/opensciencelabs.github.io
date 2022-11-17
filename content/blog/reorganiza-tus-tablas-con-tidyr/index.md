@@ -1,5 +1,5 @@
 ---
-title: "Reorganiza tus tabla con tidyr en R"
+title: "Reorganiza tus tablas con tidyr en R"
 slug: reorganiza-tus-tablas-con-tidyr
 date: 2022-07-17
 author: Ever Vino
