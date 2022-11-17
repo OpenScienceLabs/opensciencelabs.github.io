@@ -2,7 +2,7 @@
 title: "Herramientas de visualización en Python"
 slug: herramientas-de-visualizacion-en-python
 date: 2020-05-29
-author: Anavelyz Pérez
+author: Anavelyz Perez
 tags: [python, visualization]
 category: [python]
  
@@ -14,7 +14,7 @@ featureImage: "/header.png"
 
 
 <!-- # Herramientas de visualización en Python -->
-<!-- **Por Anavelyz Pérez** -->
+<!-- **Por Anavelyz Perez** -->
 
 
 
