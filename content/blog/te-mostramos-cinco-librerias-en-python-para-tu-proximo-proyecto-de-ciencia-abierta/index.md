@@ -3,8 +3,13 @@ title: "Te mostramos cinco librerías en Python para tu próximo proyecto de cie
 slug: te-mostramos-cinco-librerias-en-python-para-tu-proximo-proyecto-de-ciencia-abierta
 date: 2020-06-09
 author: Anavelyz Perez
+<<<<<<< HEAD
 tags: [datos, visualización de datos, pandas, scipy, matplotlib, seaborn, bokeh]
 categories: [ciencia abierta, código abierto, Python]
+=======
+tags: [open science, python]
+category: [open science]
+>>>>>>> 84b7337 (Review of the article Cinco librerías de python)
  
 draft: false
 usePageBundles: true
