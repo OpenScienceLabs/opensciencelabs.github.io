@@ -264,9 +264,9 @@ Función que une varias columnas en una.
 
 - **`data`** : Dataframe o tabla que se va a modificar.
 - **`col`** : Nombre de la nueva columna que va a unir otras columnas.
-- **`... `** : Nombres de la nuevas columnas que van a juntarse en `col`. Puedes emplearla para nombrar las columnas la función concatenar `c()`.
+- **`... `** : Nombres de las nuevas columnas que van a juntarse en `col`. Puedes emplear la función concatenar `c()` para nombrar las columnas.
 - **`sep`** : Separador, un carácter que va a servir para unir los valores de las columnas que se unen.
-- **`remove`** : Acepta valores booleanos `TRUE` y `FALSE`. Si es igual a `TRUE`, borra las columnas que se unen, pero si `FALSE`, las mantiene. Por defecto, su valor es `TRUE`.
+- **`remove`** : Acepta valores booleanos `TRUE` y `FALSE`. Si es igual a `TRUE`, borra las columnas que se unen, pero si es `FALSE`, las mantiene. Por defecto, su valor es `TRUE`.
 
 ## Función `spread()`
 
