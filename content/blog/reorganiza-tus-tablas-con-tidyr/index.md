@@ -1,5 +1,5 @@
 ---
-title: "Reorganiza tu tabla con tidyr en R"
+title: "Reorganiza tus tablas con tidyr en R"
 slug: reorganiza-tus-tablas-con-tidyr
 date: 2022-07-17
 author: Ever Vino
@@ -12,10 +12,12 @@ thumbnail: "/header.png"
 featureImage: "/header.png"
 ---
 
+<!-- # Reorganiza tus tablas con tidyr en R  -->
 
-<!-- # Reorganiza tu tabla con tidyr en R  -->
-
-En este artículo, modificaremos la forma de nuestra tabla, combinando varias columnas en una sola o viceversa, usando la biblioteca `tidyr` con sus funciones `gather()`, `spread()`, `separate()`, y `unite()` con ejemplos.
+En este artículo, veremos cómo modificar la forma de una tabla, combinando
+varias columnas en una sola o viceversa, veremos ejemplos en los que
+utilizaremos la biblioteca `tidyr` con sus funciones `gather()`, `spread()`,
+`separate()`, y `unite()`.
 
 <!-- TEASER_END -->
 
@@ -40,7 +42,7 @@ Recuerda, también puedes instalar y abrir las bibliotecas de manera tradicional
 
 ## Importando nuestros datos
 
-La base de datos usada, ha sido descargada de [La base de datos de Instituto de Estadística de Bolivia (INE)](https://www.ine.gob.bo/). Una vez que se tiene los datos en nuestro equipo, se modifica para que se encuentre en formato `.csv` y la importamos a nuestro entorno de R.
+Los datos usados han sido descargados de [la base de datos del Instituto de Estadística de Bolivia (INE)](https://www.ine.gob.bo/). Una vez que se tiene los datos en nuestro equipo, se modifica para que se encuentren en formato `.csv` y los importamos a nuestro entorno de R.
 
 Puedes descargar los archivos usados en este artículo [aquí](https://github.com/EverVino/Example_data_tidyr).
 
@@ -71,7 +73,7 @@ Nuestra tabla tiene varias columnas correspondientes al acumulativo por mes, si 
 
 Si quieres explorar los datos manualmente puedes ejecutar la función `(View(datos_turistas))` en la consola.
 
-## Cómo usar la función gather()
+## ¿Cómo usar la función `gather()`?
 
 La función `gather()` puede agrupar los nombres de las columnas en una sola, así como se muestra en la siguiente animación.
 
@@ -108,7 +110,7 @@ datos_turistas <-
 
 ```
 
-Ejecutando head(datos_turistas), notamos que hemos obtenido lo deseado.
+Ejecutando `head(datos_turistas)`, notamos que hemos obtenido lo deseado.
 
 ```r
 
@@ -133,7 +135,7 @@ Función que es usada para agrupar columnas en dos nuevas columnas.
 - **`value`** : Nombre de la nueva columna que va contener los *valores de la columnas* que se van a agrupar.
 - **`...`** : Nombres o selección de columnas a agruparse, puedes usar los nombres de las columnas con la función concatenar `c()`. Por ejemplo, `c(nombre_col1, nombre_col2...)`  o hacer la selección del complemento con `!c()`, también puedes utilizar como referencia el número de columna. Para hacer referencia a una serie sucesiva emplea `:`, algo como: `n_col1:n_col2`.
 
-## Separa una columna con separate()
+## Separa una columna con `separate()`
 
 Para ejemplificar el operador `separate()` vamos a separar la columna `Fecha` en las columnas `día`, `mes` y `año`.
 
@@ -225,9 +227,9 @@ ggplot(data = top_turistas_2016_2021) +
 
 ```
 
-![Viajero llegados por avión a Bolivia 2016-2021](Viajeros_2016_2021.jpeg)
+![Cantidad de viajeros llegados por avión a Bolivia 2016-2021](Viajeros_2016_2021.jpeg)
 
-## Función unite()
+## Función `unite()`
 
 Unite es una función complementaria a `separate()` y hace lo contrario, une las columnas en un sola.
 Vamos a usarlo para juntar las columnas de `mes` y `año`.
@@ -262,13 +264,13 @@ Función que une varias columnas en una.
 
 - **`data`** : Dataframe o tabla que se va a modificar.
 - **`col`** : Nombre de la nueva columna que va a unir otras columnas.
-- **`... `** : Nombres de la nuevas columnas que van a juntarse en `col`. Puedes emplearla para nombrar las columnas la función concatenar `c()`.
+- **`... `** : Nombres de las nuevas columnas que van a juntarse en `col`. Puedes emplear la función concatenar `c()` para nombrar las columnas.
 - **`sep`** : Separador, un carácter que va a servir para unir los valores de las columnas que se unen.
-- **`remove`** : Acepta valores booleanos `TRUE` y `FALSE`, por defecto es `TRUE`, si es igual `TRUE` borra la columnas que se unen, en `FALSE` las mantiene.
+- **`remove`** : Acepta valores booleanos `TRUE` y `FALSE`. Si es igual a `TRUE`, borra las columnas que se unen, pero si es `FALSE`, las mantiene. Por defecto, su valor es `TRUE`.
 
-## Función spread()
+## Función `spread()`
 
-Esta función es la que complementa a la función `gather()`, y hace exactamente lo contrario. 
+Esta función es la que complementa a la función `gather()`, y hace exactamente lo contrario.
 Esparcir una columna en varias.
 
 Antes de utilizar `spread()` vamos a agrupar nuestro datos en trimestres.
@@ -376,11 +378,11 @@ ggplot(data = top_turistas_trimestre_1_2019) +
 
 ```
 
-![Viajero llegados por avión a Bolivia 2016-2021](Viajeros_trimestre_1_2019.jpeg)
+![Viajeros que llegaron por avión a Bolivia 2016-2021](Viajeros_trimestre_1_2019.jpeg)
 
 ## Otros detalles
 
-Las funciones mostradas en el artículo son las más usadas, y permiten un mejor manejo de datos en R. Te recomiendo revisar la [documentación oficial](https://www.rdocumentation.org) si se quieres aprender más.
+Las funciones mostradas en el artículo son las más usadas, y permiten un mejor manejo de datos en R. Te recomiendo revisar la [documentación oficial](https://www.rdocumentation.org) si quieres aprender más.
 
 En el caso de que quieras descargar el repositorio de este artículo puedes hacerlo [aquí](https://github.com/EverVino/Example_data_tidyr).
 
