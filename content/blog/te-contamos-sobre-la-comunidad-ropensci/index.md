@@ -21,8 +21,8 @@ featureImage: "/header.png"
 Para compartir, almacenar y divulgar de una manera fácil los datos y
 resultados de las investigaciones, los científicos deben contar con
 paquetes que lo garanticen. De esta manera, las investigaciones serán
-compatibles con formatos estandarizados y se logrará progresivamente el
-avance de la ciencia, bajo el enfoque de ciencia abierta.
+compatibles con formatos estandarizados y se logrará, progresivamente, el
+avance de la ciencia bajo el enfoque de ciencia abierta.
 
 <!-- TEASER_END -->
 
@@ -58,7 +58,7 @@ un imponente sistema de software abierto para el desarrollo y la revisión por p
 (https://ropensci.org/pdfs/2018-08-15_rpharma_ropensci_butland.pdf).
 Desde estos enlaces puedes conocer tanto el [equipo principal](https://ropensci.org/about/#team), como el de becarios
 de investigación, alumnos y
-[colaboradores](https://ropensci.org/about/#collaborators) del Proyecto.
+[colaboradores](https://ropensci.org/about/#collaborators) del proyecto.
 
 La comunidad de rOpenSci acepta [donaciones](https://ropensci.org/donate/) de
 individuos, instituciones y corporaciones que apoyen sus actividades. Si
@@ -84,12 +84,7 @@ rOpenSci ofrece una documentación diversa, incluyendo
 [videotutoriales](https://vimeo.com/ropensci) que muestran un recorrido
 detallado acerca de lo que puedes hacer con sus paquetes. Asimismo, presenta
 [casos de Uso](https://ropensci.org/usecases/) con ejemplos de su manejo en
-situaciones reales, entre ellos: [Modelización de la distribución de
-especies](https://ropensci.org/usecases/rgbif_nichemodel/), [Comparaciones de
-biodiversidad entre ciudades](https://ropensci.org/usecases/rgbif_biodivcomp/),
-[Crear fácilmente un mapa interactivo en la web desde
-R](https://ropensci.org/usecases/spocc_gistmap/).
-
+situaciones reales.
 ### Infórmate brevemente sobre la revisión por pares de software en rOpenSci
 
 #### ¿Cómo enviar un paquete a rOpenSci?, y ¿cómo es el proceso de revisión?
@@ -109,16 +104,15 @@ examinan el código del software y la experiencia del usuario. Dicho
 proceso se lleva a cabo en el [repositorio de GitHub de Revisión de
 Software](https://github.com/ropensci/software-review/), allí notarás
 que se trata de una conversación continua hasta la aceptación del
-paquete, donde el autor recibe recomendaciones para la mejora del
-software.
+paquete, donde el autor recibe recomendaciones.
 
-Si tu colaboración es aceptada, seguirás recibiendo el apoyo de la comunidad
-en lo referente a temas de mantenimiento, como lo referente a las
+Si tu colaboración es aceptada, seguirás recibiendo el apoyo de la
+comunidad en lo referente a temas de mantenimiento y a las
 actualizaciones de R. Sin embargo, conservarás la propiedad y el control
 de tu paquete. La comunidad te ofrece promocionarlo en su [página
 web](https://ropensci.org/), blog y redes sociales. Cabe destacar, que
-si tienes un documento de desarrollo del mismo puede ser enviado, luego
-de la revisión, a la Journal of Open-Source Software
+si tienes un documento de desarrollo este puede ser enviado, luego de la
+revisión, a la Journal of Open-Source Software
 [(JOSS)](https://joss.theoj.org/) para su publicación.
 
 La comunidad cuenta con un [libro guía](https://devguide.ropensci.org/)
@@ -130,7 +124,7 @@ otros tópicos de interés. No puedes dejar de leerlo.
 
 **Si deseas enviar un paquete, lo primero que debes hacer** es darle un
 vistazo a la [Guía para
-autores](https://devguide.ropensci.org/guide-for-authors.html) antes de
+autores](https://devguide.ropensci.org/authors-guide.html) antes de
 abrir un número de envío en el [repositorio de revisión de
 software](https://github.com/ropensci/software-review/).
 
@@ -162,17 +156,17 @@ un paquete, siendo editor o revisor, puedes:
   de las actividades de la comunidad en tu correo.
 
 - Asistir a las llamadas de la comunidad [**rOpenSci community
-  calls**](https://ropensci.org/commcalls/), son llamadas trimestrales
+  calls**](https://ropensci.org/commcalls/). Son llamadas trimestrales
   para aprender más sobre los desarrollos de rOpenSci y nuevos
-  proyectos. Son gratuitas y abiertas; las llamadas anteriores se
+  proyectos. Son gratuitas y abiertas, las llamadas anteriores se
   encuentran grabadas y disponibles en línea. Si tienes alguna idea para
   un tema de la llamada comunitaria puedes plasmarlo en el [depósito
   público de ideas](https://github.com/ropensci-org/community-calls).
 
-- Hacer y responder preguntas en el [**foro de
+- Plantear y responder preguntas en el [**foro de
   discusión**](https://discuss.ropensci.org/), en
   [**Stackoverflow**](https://stackoverflow.com/questions/tagged/ropensci) con la etiqueta #ropensci
-  o en [Twitter](https://twitter.com/ropensci).
+  o en Twitter.
 
 - Conocer los eventos próximos en la página oficial
   (https://ropensci.org/events/).
@@ -185,7 +179,7 @@ un paquete, siendo editor o revisor, puedes:
 La comunidad rOpenSci está abierta a tu participación y a la de
 cualquier persona. Si usas el lenguaje R, unirte a ella es una buena
 oportunidad. Puedes darle un vistazo a nuestro post sobre [pyOpenSci: un
-promotor de la ciencia abierta](https://opensciencelabs.org/blog/0043-PyOpenSci/pyopensci-un-promotor-de-la-ciencia-abierta/) si tu
+promotor de la ciencia abierta](https://opensciencelabs.org/blog/pyopensci-un-promotor-de-la-ciencia-abierta/) si tu
 lenguaje de programación es Python; y tus aspiraciones son las de
 desarrollar un paquete, ser editor, revisor, o seguir a esta comunidad.
 
