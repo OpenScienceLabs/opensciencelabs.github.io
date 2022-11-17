@@ -18,32 +18,31 @@ featureImage: "/header.png"
 
 
 
-Sin duda, los datos deben considerarse como la materia prima para
-cualquier proyecto de ciencia abierta, pues todos se basan en el manejo
-de datos de distintos tipos. Para *entender esos datos* debe realizarse
-una inspección visual de su comportamiento. Esto se conoce como la
-*Visualización de Datos* que consiste en generar representaciones
-gráficas de las variables que componen un conjunto de datos para obtener
-información fácilmente interpretable de lo que ellos nos quieren decir y
-así, poder comunicarla de una manera asertiva.
+Sin duda, los datos deben considerarse como la materia prima para cualquier
+proyecto de ciencia abierta, pues todos se basan en el manejo de datos de
+distintos tipos. Para *entender esos datos* debe realizarse una inspección
+visual de su comportamiento. Esto se conoce como *Visualización de Datos*, que
+consiste en generar representaciones gráficas de las variables que componen un
+conjunto de datos para obtener información fácilmente interpretable de lo que
+ellos nos quieren decir y así, poder comunicarla de una manera asertiva.
 
 <!-- TEASER_END -->
 
 La visualización es un método de exploración de datos que muestra, de una
 mirada, algunas cosas que de otra forma hubiese sido muy difícil observar. Por
-tanto, se suele realizar al comienzo de cualquier análisis estadístico formal
-que se haga con ellos o para la presentación de resultados en informes
-descriptivos de datos. La visualización de datos se ve grandemente influenciada
-por su calidad y capacidades de las herramientas computacionales y software
-estadísticos utilizados para ello. Es aquí donde la decisión del analista de
-datos por escoger entre uno u otro lenguaje de programación y/o paquete
-estadístico es sumamente importante.
+tanto, se suele realizar al comienzo de cualquier análisis estadístico formal o
+para la presentación de resultados en informes descriptivos de datos. La
+visualización de datos se ve grandemente influenciada por su calidad y
+capacidades de las herramientas computacionales y software estadísticos
+utilizados para ello. Es aquí donde la decisión del analista de datos por
+escoger entre uno u otro lenguaje de programación y/o paquete estadístico es
+sumamente importante.
 
 En esta oportunidad, te hablamos de las capacidades para la
 visualización de datos que posee el [Lenguaje estadístico
 R](https://www.r-project.org/).
 
-R es fundamentalmente un lenguaje de análisis estadístico y por tanto,
+R es fundamentalmente un lenguaje de análisis estadístico y, por tanto,
 tiene en su librería "base" soporte incorporado para gráficos. Otras
 funcionalidades avanzadas se incorporan mediante la instalación de
 paquetes encontrados en https://cran.r-project.org y son generados por
@@ -87,10 +86,10 @@ gráficas, la mayoría de las cuales se encuentran en el paquete
 
 - `pie()` o `piechart()` gráfico circular o de sectores.
 
-Para todos los gráficos que se pueden realizar bajo el motor tradicional
+Para todos los gráficos que se pueden hacer bajo el motor tradicional
 de R, se pueden fijar múltiples elementos, algunos son: márgenes,
 espacios, títulos, colores, tipos de marcadores, grosor de líneas.
-Además de los gráficos mencionados anteriormente también se pueden
+Además de los gráficos mencionados anteriormente, también se pueden
 realizar gráficos de coordenadas polares, eventos, pirámides de edades,
 matrices de dispersión, gráficos de independencia y de estrellas,
 realizar combinaciones de gráficos, colocar curvas a histogramas,
@@ -116,7 +115,7 @@ relaciones multivariantes. Está desarrollado bajo el motor gráfico grid. Con
 este paquete puedes realizar los gráficos *trellis*, que describen situaciones
 complejas (mayormente multivariantes) como la relación entre variables
 condicionada a una o más variables, representándolo en un sólo gráfico
-organizado en paneles. Además tiene la funcionalidad para generar gráficos en
+organizado en paneles. Además, tiene la funcionalidad para generar gráficos en
 3D, puedes consultar la [documentación de este
 paquete](http://cran.fhcrc.org/web/packages/lattice/) para más información.
 
@@ -138,7 +137,7 @@ por ejemplo, `geom_point`, `geom_line`, `geom_histogram`, `geom_bar`,
 `geom_boxplot`, **Facetas** y **Temas**, referentes a aspectos
 estéticos, por ejemplo, ejes, etiquetas, colores de fondo, tamaño de los
 márgenes y otros. Puedes consultar más sobre este poderoso paquete en
-\[http://www.ggplot2.org\]
+su [página web](https://ggplot2.tidyverse.org/).
 
 ### ggmap
 
