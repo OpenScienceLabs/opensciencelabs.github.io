@@ -31,7 +31,7 @@ Software Foundation anunció que Superset era un proyecto de alto nivel.
 Puedes encontrar el proyecto alojado en
 <a href=https://github.com/apache/superset>GitHub</a>.</p><h2 id=características-y-funcionalidades>Características y funcionalidades</h2><ul><li><p>Es intuitivo y rápido.</p></li><li><p>Brinda una amplia variedad de opciones de gráficos y consultas que
 facilitan la exploración y visualización de datos. Así como la
-creación de reportes basados en datos.</p></li><li><p>Es utilizado por usuarios de todo tipo de conocimientos. No necesitas
+creación de reportes.</p></li><li><p>Es utilizado por usuarios con todo tipo de conocimientos. No necesitas
 ser experto en programación o SQL para usarlo.</p></li><li><p>Permite la creación de dashboards interactivos y gráficos sin escribir código.</p></li><li><p>Es compatible con la mayoría de fuentes de datos basadas en SQL a
 través de SQLAlchemy, entre ellas: <a href=https://aws.amazon.com/es/redshift/>Amazon
 Redshift</a>,
@@ -44,15 +44,15 @@ Redshift</a>,
 <a href=https://www.postgresql.org/>PostgreSQL</a>, entre otras. Puedes
 consultar esta <a href=https://superset.apache.org/docs/databases/installing-database-drivers/>lista con todas las fuentes de datos que soporta
 Superset</a>.</p></li><li><p>Ofrece un entorno llamado <strong>SQL Lab</strong> que permite hacer consultas SQL
-para la exploración de los datos antes de la representación gráfica.</p></li><li><p>Proporciona un sencillo e intuitivo constructor de vizualizaciones sin
+para la exploración de los datos antes de la representación gráfica.</p></li><li><p>Proporciona un sencillo e intuitivo constructor de visualizaciones sin
 código que te permite personalizar tus gráficos.</p></li><li><p>Tiene una arquitectura nativa de la nube. Permite escalar a grandes
 entornos distribuidos y funciona bien dentro de contenedores. Es
 flexible y permite elegir el servidor web, motor de base de datos,
 cola de mensajes, backend de resultados y capa de almacenamiento en
 caché.</p></li><li><p>Su instalación y configuración es rápida.</p></li><li><p>Permite trabajar con grandes configuraciones de <em>data lake</em> y <em>data warehouse</em>.</p></li><li><p>Brinda un modelo de seguridad con reglas complejas que pueden
 configurarse de acuerdo a quién puede acceder y a qué características.</p></li><li><p>Tiene la posibilidad de añadir plugins de visualizaciones personalizados.</p></li></ul><p>Hemos visto una gran cantidad de ventajas y funcionalidades que ofrece
-Superset. Debido a esto, exste una gran variedad de industrias y
-empresas que utilizan Superset en sus tareas, entre ellas se encuentran:
+Superset. Debido a esto, existe una gran variedad de industrias y
+empresas que lo utilizan en sus tareas, entre ellas se encuentran:
 <a href=https://es.airbnb.org/>Airbnb</a>, <a href=https://www.americanexpress.com/>American
 Express</a>,
 <a href=https://www.netflix.com/ve/>Netflix</a>, <a href=https://www.udemy.com/>Udemy</a>,
@@ -61,13 +61,12 @@ Express</a>,
 aplicación web para el manejo y visualización de datos de salud pública.</p><p><figure><picture><img loading=lazy decoding=async alt=EpiGraphHub class="image_figure image_internal image_processed" width=1594 height=741 src=/blog/apache-superset/EpiGraphHub.jpg></picture></figure>Fuente:<a href=https://dash.epigraphhub.org/superset/welcome/>EpigraphHub Superset</a></p><p>Allí puedes crear una cuenta o ingresar con la cuenta de invitado para
 la cual el usuario y la contraseña es <em>guest</em>. EpiGrapHub Superset te
 ofrece una variedad de dashboards referentes, entre otras cosas, a datos
-de COVID en distintos países y continentes donde se visualizan
+de COVID en distintos países y continentes. Allí se visualizan
 características importantes en cada caso (sexo, fecha, grupos de edad,
 número de casos positivos, división política, estado de salud, entre
-otras). Podemos explorar estos datos a través de sus servidores. A
-continuación te mostramos un dashboard en el Superset de EpiGraphHub.</p><p><figure><picture><img loading=lazy decoding=async alt=Superset class="image_figure image_internal image_processed" width=1599 height=751 src=/blog/apache-superset/Superset.jpg></picture></figure>Fuente:<a href=https://dash.epigraphhub.org/superset/welcome/>EpigraphHub Superset</a></p><p>Puedes conocer más sobre EpiGrapHub en nuestro artículo: <a href=https://opensciencelabs.org/blog/epigraphhub-un-proyecto-de-c%C3%B3digo-abierto-para-el-analisis-de-datos-de-calidad/>EpiGraphHub:
+otras). Podemos explorar estos datos a través de sus servidores.</p><p>A continuación te mostramos un dashboard en el Superset de EpiGraphHub.</p><p><figure><picture><img loading=lazy decoding=async alt=Superset class="image_figure image_internal image_processed" width=1599 height=751 src=/blog/apache-superset/Superset.jpg></picture></figure>Fuente:<a href=https://dash.epigraphhub.org/superset/welcome/>EpigraphHub Superset</a></p><p>Puedes conocer más sobre EpiGrapHub en nuestro artículo: <a href=https://opensciencelabs.org/blog/epigraphhub-un-proyecto-de-c%C3%B3digo-abierto-para-el-analisis-de-datos-de-calidad/>EpiGraphHub:
 un proyecto de código abierto para el análisis de datos de
-calidad</a></p><h2 id=cómo-inciar-con-superset>Cómo inciar con Superset</h2><p>A continuación te presentamos algunas formas diferentes de empezar con Superset:</p><ul><li><p>Descarga el <a href=https://dist.apache.org/repos/dist/release/superset/>código fuente del sitio web de The Apache
+calidad</a></p><h2 id=cómo-iniciar-con-superset>Cómo iniciar con Superset</h2><p>A continuación te presentamos algunas formas diferentes de empezar con Superset:</p><ul><li><p>Descarga el <a href=https://dist.apache.org/repos/dist/release/superset/>código fuente del sitio web de The Apache
 Foundation</a></p></li><li><p>Descarga la <a href=https://pypi.org/project/apache-superset/>última versión de Superset desde
 Pypi</a></p></li><li><p>Configura Superset localmente con un comando usando <a href=https://superset.apache.org/docs/installation/installing-superset-using-docker-compose/><em>Docker
 Compose</em></a></p></li><li><p>Descarga el <em>Docker image</em> desde
@@ -79,22 +78,22 @@ necesarios que te permitirán crear un gráfico y guardarlo en un
 dashboard en esta aplicación. Puedes consultar un paso a paso más
 detallado sobre esto en la <a href=https://superset.apache.org/docs/creating-charts-dashboards/creating-your-first-dashboard/>documentación oficial de
 Superset</a>.</p><ul><li><p><strong>Conectar Superset a una nueva base de datos</strong>. Como Superset no
-puede guardar los datos, debe conectarse a nuestra base de datos
-existente que soporte SQL. Inicialmente debemos añadir las
-credenciales de conexión a esa base de datos para poder consultar y
-visualizar los datos.</p><p>Este paso puede obviarse si se utiliza Superset localmente a través de
-Docker compose. Esto se debe a que está incluida y preconfigurada una
-base de datos Postgres, llamada <em>examples</em> a nuestra disposición.</p><p>Para hacer la conexión, seleccionamos la opción <em>Databases</em> del menú
+puede guardar los datos, debe conectarse a una base de datos existente
+que soporte SQL. Inicialmente debemos añadir las credenciales de
+conexión a esa base de datos para poder consultar y visualizar los
+datos.</p><p>Este paso puede obviarse si se utiliza Superset localmente a través de
+Docker compose. Esto se debe a que está incluida, preconfigurada y disponible una
+base de datos Postgres, llamada <em>examples</em>.</p><p>Para hacer la conexión, seleccionamos la opción <em>Databases</em> del menú
 <em>Data</em> y seguimos los pasos para crear y probar la conexión.</p></li><li><p><strong>Registrar una tabla en la base de datos</strong>. Ahora seleccionamos las
 tablas específicas (denominadas <em>datasets</em> en Superset) que deseemos
-explorar en Superset. Esto lo hacemos seleccionando la opción <em>Data</em>,
+explorar. Esto lo hacemos seleccionando la opción <em>Data</em>,
 luego <em>Datasets</em> y nuevo dataset (en la esquina superior derecha).
 Seleccionamos la base de datos, el esquema, la tabla y añadimos estos
 cambios.</p></li><li><p><strong>Personalizar las propiedades de las columnas</strong>. Se configuran las
 propiedades de las columnas como: tipo de dato, si la columna es
 temporal, si debe ser filtrada, si es dimensional, cómo debe tratarla
 Superset si es una columna de fecha-hora, entre otras. Esto se hace
-para saber cómo deben tratarse las columnas del <em>dataset</em> al momento
+para saber cómo deben manejarse las columnas del <em>dataset</em> al momento
 de la exploración.</p></li><li><p><strong>Capa semántica de Superset</strong>. Esta capa nos ofrece mejoras como
 analistas, puede almacenar 2 tipos de datos calculados:</p><ol><li><p><em>Métricas virtuales</em>: podemos escribir consultas SQL con funciones
 de agregación para varias columnas y colocar los resultados como
@@ -103,7 +102,7 @@ SQL que involucren cambios en la apariencia o el comportamiento de
 una columna específica, por ejemplo, cambiar el tipo de dato que
 almacena. No debemos usar funciones de agregación, como SUM, en las
 columnas calculadas.</p></li></ol></li><li><p><strong>Crear gráficos en la vista de exploración</strong>. En Superset podemos
-explorar los datos utilizando dos interfaces:</p><ol><li><p><em>Explore</em>: es un constructor de vizualizaciones sin código. Es tan
+explorar los datos utilizando dos interfaces:</p><ol><li><p><em>Explore</em>: es un constructor de visualizaciones sin código. Es tan
 simple como seleccionar el <em>dataset</em>, el tipo de gráfico que
 corresponda, lo personalizamos y lo publicamos.</p></li><li><p><em>SQL Lab</em>: es un IDE (Entorno de Desarrollo Integrado) que nos
 permite preparar y unir los datos que son tomados en el flujo de
@@ -125,10 +124,10 @@ Podemos cambiar el tamaño del gráfico, haciendo clic en el botón del
 lápiz en la esquina superior derecha.</p></li></ul><p>Y !Esto es todo! hemos creado un gráfico y lo añadimos a un dashboard en
 Superset. Existen muchas opciones de configuración y visualización de
 datasets, es cuestión de que comiences a probar y explorar y te
-sorprenderás de lo que puedes lograr con esta plataforma.</p><h3 id=otros-recursos>Otros recursos</h3><ul><li><p><a href=https://superset.apache.org/docs/intro/>Documentación de Superset</a>.</p></li><li><p>Consulta el
+sorprenderás de lo que puedes lograr con esta plataforma.</p><h3 id=otros-recursos>Otros recursos</h3><ul><li>Consulta el
 <a href=https://github.com/apache/superset/blob/master/CONTRIBUTING.md>CONTRIBUTING.md</a>
-del proyecto si estás interesado en contribuir que contiene también
-una guía detallada sobre cómo configurar un entorno de desarrollo.</p></li></ul><h3 id=referencias>Referencias</h3><ul><li><p><a href=https://superset.apache.org/>Website de Apache Superset</a></p></li><li><p><a href=https://superset.apache.org/docs/intro/>Documentación oficial de Apache
+del proyecto si estás interesado en contribuir. Este contiene también
+una guía detallada sobre cómo configurar un entorno de desarrollo.</li></ul><h3 id=referencias>Referencias</h3><ul><li><p><a href=https://superset.apache.org/>Website de Apache Superset</a></p></li><li><p><a href=https://superset.apache.org/docs/intro/>Documentación oficial de Apache
 Superset</a></p></li></ul></div><div class=post_comments></div></article><aside class=sidebar><section class=sidebar_inner><br><div class=search><input type=search class="search_field form_field" placeholder=Buscar... id=find autocomplete=off data-scope=blog>
 <label for=find class=search_label><svg class="icon"><title>search</title><use xlink:href="#search"/></svg></label><div class="search_results results"></div></div><h2 class=mt-4>Posts destacados</h2><ul><li><a href=https://opensciencelabs.org/guidelines/dei/guide/ class=nav-link title="Declaración de Diversidad, Equidad e Inclusión">Declaración de Diversidad, Equidad e Inclusión</a></li><li><a href=https://opensciencelabs.org/guidelines/articles/guide/ class=nav-link title="Guía Editorial para creación de Artículos">Guía Editorial para creación de Artículos</a></li></ul><h2 class=mt-4>Posts recientes</h2><ul class=flex-column><li><a href=https://opensciencelabs.org/blog/apache-superset/ class=nav-link title="Crea una aplicación web eficiente y atractiva para el manejo, exploración y visualización de datos con Apache Superset">Crea una aplicación web eficiente y atractiva para el manejo, exploración y visualización de datos con Apache Superset</a></li><li><a href=https://opensciencelabs.org/blog/epigraphhub-un-proyecto-de-c%C3%B3digo-abierto-para-el-analisis-de-datos-de-calidad/ class=nav-link title="EpiGraphHub: un proyecto de código abierto para el análisis de datos de calidad">EpiGraphHub: un proyecto de código abierto para el análisis de datos de calidad</a></li><li><a href=https://opensciencelabs.org/guidelines/coc/ class=nav-link title="Contributor Covenant Code of Conduct">Contributor Covenant Code of Conduct</a></li><li><a href=https://opensciencelabs.org/blog/ibis-framework/ class=nav-link title="Ibis -  Escalonando a Análise de Dados com Expressões Ibis">Ibis - Escalonando a Análise de Dados com Expressões Ibis</a></li><li><a href=https://opensciencelabs.org/blog/reorganiza-tus-tablas-con-tidyr/ class=nav-link title="Reorganiza tus tablas con tidyr en R">Reorganiza tus tablas con tidyr en R</a></li><li><a href=https://opensciencelabs.org/blog/filtrar-datos-r/ class=nav-link title="Cómo filtrar datos de tu tabla con dplyr en R">Cómo filtrar datos de tu tabla con dplyr en R</a></li><li><a href=https://opensciencelabs.org/blog/dibuja-tus-mapas-en-r-usando-archivos-de-formato-shapefile/ class=nav-link title="Dibuja tus mapas en R usando archivos de formato Shapefile">Dibuja tus mapas en R usando archivos de formato Shapefile</a></li><li><a href=https://opensciencelabs.org/blog/nft-mas-que-un-jpg/ class=nav-link title="NFT. Más que un JPG">NFT. Más que un JPG</a></li><li><a href=https://opensciencelabs.org/guidelines/dei/guide/ class=nav-link title="Declaración de Diversidad, Equidad e Inclusión">Declaración de Diversidad, Equidad e Inclusión</a></li><li><a href=https://opensciencelabs.org/guidelines/articles/guide/ class=nav-link title="Guía Editorial para creación de Artículos">Guía Editorial para creación de Artículos</a></li></ul><div><h2 class="mt-4 taxonomy" id=tags-section>Tags</h2><nav class=tags_nav><a href=https://opensciencelabs.org/tags/open-science/ class="post_tag button button_translucent" title=open-science>OPEN-SCIENCE
 <span class=button_tally>33</span></a>
