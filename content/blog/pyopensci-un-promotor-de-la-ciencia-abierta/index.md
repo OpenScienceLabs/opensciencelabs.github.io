@@ -25,7 +25,7 @@ tratamos sobre **pyOpenSci**, un proyecto al servicio de la ciencia,
 desarrollado bajo el enfoque de estas disciplinas. Si eres un
 programador, quieres desarrollar (o estás desarrollando) algún paquete
 científico con
-[Python](https://opensciencelabs.org/blog/0011-10razonesparausarpython/razones-para-usar-python-en-tu-proximo-proyecto-de-investigacion/)
+[Python](https://opensciencelabs.org/blog/razones-para-usar-python-en-tu-proximo-proyecto-de-investigacion/)
 y que sea aceptado por una gran comunidad de *pythonistas*, entonces
 aquí está lo que necesitas saber para lograrlo.
 
@@ -39,7 +39,7 @@ de promover la ciencia abierta mediante el apoyo al desarrollo, la
 pares*](https://es.wikipedia.org/wiki/Revisi%C3%B3n_por_pares) y la
 publicación abierta de **paquetes científicos escritos en Python** que
 cuenten con una buena
-[documentación](https://opensciencelabs.org/blog/0031-documentacion_cienciaabierta/como-documentar-tu-proyecto-de-ciencia-abierta/)
+[documentación](https://opensciencelabs.org/blog/como-documentar-tu-proyecto-de-ciencia-abierta/)
 y estén probados previamente. Estos paquetes son utilizados para
 recopilar, descargar y transformar datos científicos con una metodología
 de trabajo abierta y reproducible.
@@ -56,9 +56,9 @@ paquetes con un [DOI](https://www.doi.org/) (Digital Object Identifier)
 de manera que puedan ser citados y encontrados por los buscadores de
 artículos científicos.
 
-En este momento pyOpenSci se está trasladando a un patrocinador fiscal.
-Por tal motivo, la revisión del software está en pausa y se reanudará en
-septiembre de 2022.
+En este momento (noviembre 2022), pyOpenSci es un proyecto patrocinado
+fiscalmente por Community Initiatives, razón por la cual se ha reanudado
+la revisión del software desde septiembre de 2022.
 
 ## Inicios de pyOpenSci, un relato de su fundador
 
@@ -70,8 +70,8 @@ razones de *¿Por qué Python?*, *¿Por qué pyOpenSci?* donde textualmente
 dice: "quería, ante todo, facilitar la mejora del campo científico,
 permitiendo y promoviendo la apertura y el intercambio dentro y entre
 las comunidades científicas. Creo que solo es posible que la ciencia
-progrese si se hace completamente transparente". De allí es donde se
-fundamentan los ideales de pyOpenSci.
+progrese si se hace completamente transparente" (traducción propia al
+español). De allí es donde se fundamentan los ideales de pyOpenSci.
 
 El proyecto pretende mejorar y facilitar la apertura de la investigación
 científica. Para ese momento Steve Moss tenía la esperanza de poder
@@ -86,10 +86,6 @@ expresa en su artículo.
 
 Puedes involucrarte en este proyecto de distintas maneras, a
 continuación te las presentamos:
-
-- [**Únete a una reunión de la
-  comunidad**](https://www.pyopensci.org/#community-meetings). Son
-  reuniones de video aproximadamente cada dos semanas.
 
 - [**Súmate al foro comunitario**](https://pyopensci.discourse.group/).
   Un espacio donde se discuten los temas de interés y se publican los
@@ -126,7 +122,7 @@ activos de pyOpenSci: [Leah Wasser](https://github.com/lwasser), [Chris
 Holdraf](https://github.com/choldgraf), [Max
 Joseph](https://github.com/mbjoseph), [Ivan
 Ogasawara](https://github.com/xmnlab) miembro del Consejo Directivo de
-nuestra plataforma OpenScienceLabs.
+nuestra plataforma Open Science Labs.
 
 ## Paquetes pyOpenSci
 
@@ -146,7 +142,8 @@ Algunos de los paquetes aprobados hasta ahora por pyOpenSci son:
 - Exploración y visualización de datos espaciales
   [earthpy](https://github.com/earthlab/earthpy).
 
-- Diapositivas de Jupyter Notebooks (enlace a artículo que-es-jupyter)
+- Diapositivas de [Jupyter Notebooks](
+https://opensciencelabs.org/blog/ya-probado-los-cuadernos-de-jupyter-te-explicamos-que-son-y-como-te-ayudaran-en-tu-proxima-investigacion/) con
   [Nbless](https://github.com/py4ds/nbless).
 
 - Validación de las estructuras de datos manejadas por
@@ -157,11 +154,10 @@ Algunos de los paquetes aprobados hasta ahora por pyOpenSci son:
   [pyrolite](https://github.com/morganjwilliams/pyrolite).
 
 - Integrar conjuntos de datos multimétricos
-  [openomics](https://github.com/BioMeCIS-Lab/OpenOmics)
+  [OpenOmics](https://github.com/JonnyTran/OpenOmics)
 
 Pasemos ahora a conocer algunos de los sitios y recursos técnicos que
-mantiene el proyecto (además de las reuniones y el
-[foro](https://pyopensci.discourse.group/)).
+mantiene el proyecto (además de las reuniones y el foro).
 
 ## pyOpenSci blog
 
@@ -184,21 +180,23 @@ tópicos, entre ellos:
   cookiecutter](https://cookiecutter-pyopensci.readthedocs.io/en/latest/)
   es una plantilla que facilita el empaquetado del código Python.
 
-- [Guía de
-  pyOpenSci](https://www.pyopensci.org/contributing-guide/intro) con
+- [Guía de desarrollo de
+  paquetes](https://www.pyopensci.org/python-package-guide/) y [Guía de
+  revisión por pares](https://www.pyopensci.org/peer-review-guide/) con
   información para los autores y revisores de los paquetes, que incluye
   todo el proceso. Es lo primero que debes leer si estás interesado en
   enviar un paquete a pyOpenSci.
 
 - [Repositorio de Gobernanza de
   pyOpenSci](https://github.com/pyOpenSci/governance). Donde se discuten
-  la dirección y el alcance de pyOpenSci.
+  la dirección y el alcance de pyOpenSci. También ofrece notas de las
+  reuniones de la comunidad.
 
 La comunidad pyOpenSci está abierta para que envíes un paquete, te
 conviertas en revisor, ayudes a difundir sus actividades y buenas
 prácticas o para que participes en los foros donde tomarán en cuenta tus
-dudas. De esta manera, estarás contribuyendo con la comunidad científica
-de Python.
+intervenciones. De esta manera, estarás contribuyendo con la comunidad
+científica de Python.
 
 ### Referencias
 
