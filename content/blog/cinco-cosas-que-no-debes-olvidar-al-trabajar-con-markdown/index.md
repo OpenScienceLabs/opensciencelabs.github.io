@@ -64,7 +64,7 @@ El Markdown no es solamente usado para escribir y publicar artículos en la web.
 
 Puedes trabajar con Markdown en editores online y offline, como te mencionamos anteriormente. Por tal motivo, puedes acceder y editar archivos `.md` desde distintos dispositivos: tablets, computadores de escritorio, teléfonos inteligentes. Puedes leer este tipo de archivos de texto independientemente del editor, esto quiere decir que Markdown es compatible con otros formatos. De la misma manera, puedes ejecutar código, comentarlo y escribir texto en Markdown al mismo tiempo. Por ejemplo, utilizando Cuadernos de Jupyter o RMarkdown, entre otras herramientas.
 
-Si deseas conocer más acerca de los cuadernos de Jupyter, te invito a que revises nuestro artículo [¿Ya has probado los Cuadernos de Jupyter? Te explicamos qué son y cómo te ayudarán en tu próxima investigación.](https://opensciencelabs.org/blog/ya-probado-los-cuadernos-de-jupyter-te-explicamos-que-son-y-como-te-ayudaran-en-tu-proxima-investigacion/)
+Si deseas conocer más acerca de los cuadernos de Jupyter, te invito a que revises nuestro artículo [¿Ya has probado los Cuadernos de Jupyter? Te explicamos qué son y cómo te ayudarán en tu próxima investigación.](https://opensciencelabs.org/blog/ya-probado-los-cuadernos-de-jupyter-te-explicamos-que-son-y-como-te-ayudaran-en-tu-proxima-investigacion/).
 
 ## 5. Usando caracteres le das formato al texto
 
