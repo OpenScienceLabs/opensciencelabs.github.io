@@ -5,7 +5,7 @@ date: 2022-04-08
 author: Ever Vino
 tags: [r, visualization]
 category: [r]
- 
+aliases: ["/blog/0057-r-ggplot-bo/visualiza-tus-datos-en-r-con-ggplot-y-gganimate/"]
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

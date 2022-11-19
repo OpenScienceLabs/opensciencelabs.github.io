@@ -47,9 +47,9 @@ Puedes encontrar el proyecto alojado en
 
 - Brinda una amplia variedad de opciones de gráficos y consultas que
   facilitan la exploración y visualización de datos. Así como la
-  creación de reportes basados en datos.
+  creación de reportes.
 
-- Es utilizado por usuarios de todo tipo de conocimientos. No necesitas
+- Es utilizado por usuarios con todo tipo de conocimientos. No necesitas
   ser experto en programación o SQL para usarlo.
 
 - Permite la creación de dashboards interactivos y gráficos sin escribir código.
@@ -70,7 +70,7 @@ Puedes encontrar el proyecto alojado en
 - Ofrece un entorno llamado **SQL Lab** que permite hacer consultas SQL
   para la exploración de los datos antes de la representación gráfica.
 
-- Proporciona un sencillo e intuitivo constructor de vizualizaciones sin
+- Proporciona un sencillo e intuitivo constructor de visualizaciones sin
   código que te permite personalizar tus gráficos.
 
 - Tiene una arquitectura nativa de la nube. Permite escalar a grandes
@@ -89,8 +89,8 @@ Puedes encontrar el proyecto alojado en
 - Tiene la posibilidad de añadir plugins de visualizaciones personalizados.
 
 Hemos visto una gran cantidad de ventajas y funcionalidades que ofrece
-Superset. Debido a esto, exste una gran variedad de industrias y
-empresas que utilizan Superset en sus tareas, entre ellas se encuentran:
+Superset. Debido a esto, existe una gran variedad de industrias y
+empresas que lo utilizan en sus tareas, entre ellas se encuentran:
 [Airbnb](https://es.airbnb.org/), [American
 Express](https://www.americanexpress.com/),
 [Netflix](https://www.netflix.com/ve/), [Udemy](https://www.udemy.com/),
@@ -108,11 +108,12 @@ Fuente:[EpigraphHub Superset](https://dash.epigraphhub.org/superset/welcome/)
 Allí puedes crear una cuenta o ingresar con la cuenta de invitado para
 la cual el usuario y la contraseña es *guest*. EpiGrapHub Superset te
 ofrece una variedad de dashboards referentes, entre otras cosas, a datos
-de COVID en distintos países y continentes donde se visualizan
+de COVID en distintos países y continentes. Allí se visualizan
 características importantes en cada caso (sexo, fecha, grupos de edad,
 número de casos positivos, división política, estado de salud, entre
-otras). Podemos explorar estos datos a través de sus servidores. A
-continuación te mostramos un dashboard en el Superset de EpiGraphHub.
+otras). Podemos explorar estos datos a través de sus servidores. 
+
+A continuación te mostramos un dashboard en el Superset de EpiGraphHub.
 
 ![Superset](Superset.jpg)
 Fuente:[EpigraphHub Superset](https://dash.epigraphhub.org/superset/welcome/)
@@ -121,7 +122,7 @@ Puedes conocer más sobre EpiGrapHub en nuestro artículo: [EpiGraphHub:
 un proyecto de código abierto para el análisis de datos de
 calidad](https://opensciencelabs.org/blog/epigraphhub-un-proyecto-de-c%C3%B3digo-abierto-para-el-analisis-de-datos-de-calidad/)
 
-## Cómo inciar con Superset
+## Cómo iniciar con Superset
 
 A continuación te presentamos algunas formas diferentes de empezar con Superset:
 
@@ -153,21 +154,21 @@ detallado sobre esto en la [documentación oficial de
 Superset](https://superset.apache.org/docs/creating-charts-dashboards/creating-your-first-dashboard/).
 
 - **Conectar Superset a una nueva base de datos**. Como Superset no
-  puede guardar los datos, debe conectarse a nuestra base de datos
-  existente que soporte SQL. Inicialmente debemos añadir las
-  credenciales de conexión a esa base de datos para poder consultar y
-  visualizar los datos.
+  puede guardar los datos, debe conectarse a una base de datos existente
+  que soporte SQL. Inicialmente debemos añadir las credenciales de
+  conexión a esa base de datos para poder consultar y visualizar los
+  datos.
 
   Este paso puede obviarse si se utiliza Superset localmente a través de
-  Docker compose. Esto se debe a que está incluida y preconfigurada una
-  base de datos Postgres, llamada *examples* a nuestra disposición.
+  Docker compose. Esto se debe a que está incluida, preconfigurada y disponible una
+  base de datos Postgres, llamada *examples*.
 
   Para hacer la conexión, seleccionamos la opción *Databases* del menú
   *Data* y seguimos los pasos para crear y probar la conexión.
 
 - **Registrar una tabla en la base de datos**. Ahora seleccionamos las
   tablas específicas (denominadas *datasets* en Superset) que deseemos
-  explorar en Superset. Esto lo hacemos seleccionando la opción *Data*,
+  explorar. Esto lo hacemos seleccionando la opción *Data*,
   luego *Datasets* y nuevo dataset (en la esquina superior derecha).
   Seleccionamos la base de datos, el esquema, la tabla y añadimos estos
   cambios.
@@ -176,7 +177,7 @@ Superset](https://superset.apache.org/docs/creating-charts-dashboards/creating-y
   propiedades de las columnas como: tipo de dato, si la columna es
   temporal, si debe ser filtrada, si es dimensional, cómo debe tratarla
   Superset si es una columna de fecha-hora, entre otras. Esto se hace
-  para saber cómo deben tratarse las columnas del *dataset* al momento
+  para saber cómo deben manejarse las columnas del *dataset* al momento
   de la exploración.
 
 - **Capa semántica de Superset**. Esta capa nos ofrece mejoras como
@@ -195,7 +196,7 @@ Superset](https://superset.apache.org/docs/creating-charts-dashboards/creating-y
 - **Crear gráficos en la vista de exploración**. En Superset podemos
   explorar los datos utilizando dos interfaces:
 
-  1. *Explore*: es un constructor de vizualizaciones sin código. Es tan
+  1. *Explore*: es un constructor de visualizaciones sin código. Es tan
      simple como seleccionar el *dataset*, el tipo de gráfico que
      corresponda, lo personalizamos y lo publicamos.
 
@@ -220,7 +221,7 @@ Superset](https://superset.apache.org/docs/creating-charts-dashboards/creating-y
   vista. Podemos guardarlo y añadirlo a un dashboard existente o a uno
   nuevo. Para publicarlo, hacemos clic en *Save and goto Dashboard*.
   Podemos cambiar el tamaño del gráfico, haciendo clic en el botón del
-  lápiz en la esquina superior derecha. 
+  lápiz en la esquina superior derecha.
   
 Y !Esto es todo! hemos creado un gráfico y lo añadimos a un dashboard en
 Superset. Existen muchas opciones de configuración y visualización de
@@ -229,11 +230,9 @@ sorprenderás de lo que puedes lograr con esta plataforma.
 
 ### Otros recursos
 
-- [Documentación de Superset](https://superset.apache.org/docs/intro/).
-
 - Consulta el
   [CONTRIBUTING.md](https://github.com/apache/superset/blob/master/CONTRIBUTING.md)
-  del proyecto si estás interesado en contribuir que contiene también
+  del proyecto si estás interesado en contribuir. Este contiene también
   una guía detallada sobre cómo configurar un entorno de desarrollo.  
 
 

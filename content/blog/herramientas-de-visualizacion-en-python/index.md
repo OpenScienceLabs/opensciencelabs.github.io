@@ -5,7 +5,7 @@ date: 2020-05-29
 author: Anavelyz Perez
 tags: [python, visualization]
 category: [python]
- 
+aliases: ["/blog/0037-visualizacion_python/herramientas-de-visualizacion-en-python/"]
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
