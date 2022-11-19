@@ -16,21 +16,18 @@ featureImage: "/header.png"
 <!-- # Te hablamos de cinco repositorios con datos abiertos sobre  países -->
 <!-- **Por Yurely Camacho** -->
 
-
-
-Si estas interesado en practicar la ciencia abierta o simplemente
+Si estás interesado en practicar la ciencia abierta o simplemente
 quieres o necesitas conocer más acerca del tema, resulta de suma
-importancia que descubras sobre los **datos abiertos**, es decir, datos
+importancia que descubras sobre los **datos abiertos**. Es decir, datos
 que sean accesibles a cualquier persona con la finalidad que sean
 **reutilizados y redistribuidos** y no tengan grandes exigencias de
 permisos específicos para su descarga y procesamiento, los cuales te
 servirán para llevar a cabo cualquier proyecto que tengas en mente o
 culminar alguno. Sin embargo, la finalidad de este post no es hablarte
-específicamente sobre los datos abiertos sino sobre algunos repositorios
-de datos abiertos. Sin embargo, una pequeña introducción a estos no está
+específicamente sobre los datos abiertos, sino sobre algunos repositorios
+de datos abiertos. A pesar de esto, una pequeña introducción no está
 de más para entrar en confianza sobre el tema. Puedes visitar nuestro
-post sobre Datos abiertos \[aquí\](enlace a artículo de Rainer sobre datos
-abiertos).
+artículo sobre Datos abiertos [aquí](https://opensciencelabs.org/blog/que-son-los-datos-abiertos/).
 
 <!-- TEASER_END -->
 
@@ -39,18 +36,18 @@ finalidad de promover un entorno de libre acceso al compartirlos entre
 personas, permitiendo la creación de diferentes enfoques respecto a los
 datos manejados, obteniendo soluciones innovadoras e incentivando la
 redistribución y reproducibilidad en las investigaciones. En cualquier
-caso se necesitan, en todos los países, datos de buena calidad que
+caso, en todos los países se necesitan datos de buena calidad que
 permitan identificar medidas públicas y privadas eficaces, realizar
 comparaciones y evaluar cambios en el tiempo con respecto a otros
 países, afianzar metas sociales, supervisar avances, entre otras cosas.
 
-En la web puedes encontrar gran cantidad de repositorios y portales de
-datos abiertos que te dan acceso a la descarga y visualización de
-conjuntos de datos en diferentes formatos, los cuales también pueden
-utilizarse para dar solución a tareas académicas, realizar pruebas para
-probar herramientas de manejo de datos, entre otras situaciones afines.
+En la web puedes encontrar gran cantidad de repositorios y portales de datos
+abiertos que te dan acceso a la descarga y visualización de conjuntos de datos
+en diferentes formatos, los cuales también pueden utilizarse para dar solución a
+tareas académicas, hacer pruebas, probar herramientas de manejo de datos, entre
+otras situaciones afines.
 
-A continuación te contamos de cinco repositorios de datos abiertos sobre
+A continuación te contamos acerca de cinco repositorios de datos abiertos sobre
 algunos países, sin orden en particular:
 
 ### 1. [**Portal de Datos de Europa**](https://www.europeandataportal.eu/es/homepage)
@@ -104,7 +101,7 @@ Datos*](https://datacatalog.worldbank.org/) y al [*Banco de
 Datos*](https://databank.bancomundial.org/home.aspx) del Banco Mundial
 que te servirá para complementar información.
 
-### 3. [Portal de Datos Abiertos: Números para el desarrollo](https://code.iadb.org/es) del Banco Interamericano de desarrollo.
+### 3. [Portal de Datos Abiertos: Números para el desarrollo](https://code.iadb.org/es) del Banco Interamericano de desarrollo
 
 Permite explorar, visualizar y descargar datos sobre indicadores
 socioeconómicos de América Latina y el Caribe. Los datos disponibles
@@ -139,12 +136,12 @@ En estos menús encontrarás descripciones con el contenido económico de
 los países que necesites, puedes acceder a la información contenida
 sobre los 200 productos más comercializados a nivel internacional,
 explorar los datos de forma gráfica, construyendo y filtrando la
-información de interes. También observarás un listado de los productos y
+información de interés. También observarás un listado de los productos y
 los países clasificados de acuerdo a la complejidad económica,
 encontrarás artículos, notas y documentos referentes al avance del sitio
 en la explicación de la complejidad económica de los países. Puedes
 realizar búsquedas por periodicidad y profundidad, por año, categorías,
-países y realizar comparaciones entre ellos. Asimismo los datos,
+países y realizar comparaciones entre ellos. Asimismo, los datos,
 visualizaciones y publicaciones se encuentran disponibles para su
 descarga y envío.
 
@@ -154,7 +151,7 @@ Esta iniciativa lleva el nombre de *Aporta* y se desarrolló con el fin
 de promocionar la apertura de la información pública y desarrollo de
 servicios avanzados basados en datos en el Gobierno de España. Cuenta,
 entre otros productos, con la plataforma **datos.gob.es** que sirve como
-punto de encuentro entre todos los actores del etorno de datos abiertos
+punto de encuentro entre todos los actores del entorno de datos abiertos
 en España: usuarios, ciudadanos o profesionales que demandan datos y/o
 quieren conocer novedades, aplicaciones o servicios relacionados con
 ellos. También organismos públicos que proporcionan y utilizan datos y
@@ -173,19 +170,21 @@ información sobre el desarrollo del Gobierno en España.
 En **Open Science Labs** pensamos que cada país debe contar con un
 repositorio de datos abiertos, donde se encuentre información referente
 al desempeño del país en todos los ámbitos (social, económico,
-educativo, tecnológico, entre otros). Asimismo apostamos a que se
+educativo, tecnológico, entre otros). Asimismo, apostamos a que se
 divulgue en cada país la cultura de los datos abiertos y aún más allá,
 la práctica de la ciencia abierta. Las estadísticas y datos de todos los
 países deben estar a disposición de cualquier ciudadano y/o institución,
 siempre y cuando el acceso y manejo de ellos se haga de manera
-responsable. [**El Barómetro de Datos
+responsable.
+
+[**El Barómetro de Datos
 Abiertos**](https://opendatabarometer.org/?_year=2017&indicator=ODB) es
 una medida global del grado en que los gobiernos están publicando y
 utilizando datos abiertos con el propósito de rendir cuentas, innovar y
 lograr un impacto social con beneficios a los ciudadanos.
 
 Los repositorios de datos abiertos que te mostramos son algunos de los
-muchos que están disponibles y que te pueden ser de gran ayuda. En los
+muchos que están disponibles y te pueden ser de gran ayuda. En los
 siguientes enlaces encontrarás referencias a otros repositorios.
 
 - [*Biblioteca Universitaria Huelva*](https://guiasbuh.uhu.es/c.php?g=498100&p=3907565)
