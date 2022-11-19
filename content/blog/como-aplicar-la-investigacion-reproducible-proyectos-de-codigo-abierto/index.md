@@ -52,7 +52,7 @@ Garantiza que tu investigación sea reproducible, no formes parte de la crisis a
 
 ### Referencias
 
-- [Ciencia reproducible, qué, por qué, cómo](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwj_56jEhbn7AhUzmIQIHfa-BtkQFnoECAgQAw&url=https%3A%2F%2Fwww.revistaecosistemas.net%2Findex.php%2Fecosistemas%2Farticle%2Fview%2F1178%2F973&usg=AOvVaw16R__FAmO4aFgylMrmCIL1)
+- [Ciencia reproducible, qué, por qué, cómo](https://www.revistaecosistemas.net/index.php/ecosistemas/article/view/1178/973)
 
 - [Manual de capacitación sobre ciencia abierta de la FOSTER](https://book.fosteropenscience.eu/es/)
 
