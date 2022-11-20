@@ -19,7 +19,7 @@ featureImage: "/header.png"
 
 
 ¿Necesitas aprender [Git](https://git-scm.com/) para manejar con mayor
-eficiencia y control tus projectos y trabajos? Ya sea para desarrollo de
+eficiencia y control tus proyectos y trabajos? Ya sea para desarrollo de
 software, creación de páginas web, investigaciones científicas, o para
 manejar tus escritos, te podría ser muy útil aprovechar la seguridad que
 te da Git para el control de versiones, o la facilidad con la que
@@ -49,16 +49,15 @@ quieras, o simplemente usarlo de forma gratuita.
 
 ## 2. Crea tu primer repositorio
 
-Inmediatamente después de crear tu primera cuenta, Github te guiará
-hacia la creación de tu primer repositorio, a través de
-https://github.com/new, donde tendrás que ponerle un nombre y una
-descripción. Github automáticamente crea el repositorio con un archivo
-`README.md`, el cual es un simple archivo de texto que será visto al
-entrar en la página del repositorio. Este archivo tiene información
-importante acerca del repositorio, el propósito de los archivos que
-están allí y de cómo está organizado el repositorio. También puedes
-colocar allí algún enlace a la página web del proyecto (si la tienes), o
-un correo para contactos e información.
+Inmediatamente después de crear tu primera cuenta, Github te guiará hacia la
+creación de tu primer repositorio, a través de https://github.com/new, donde
+tendrás que ponerle un nombre y una descripción. Github automáticamente genera
+el repositorio con un archivo `README.md`, el cual es un simple archivo de texto
+que será visto al entrar en la página del repositorio. Este archivo tiene
+información importante acerca del repositorio, el propósito de los archivos que
+están allí y de cómo está organizado. También puedes incluir en él algún enlace
+a la página web del proyecto (si la tienes), o un correo para contactos e
+información.
 
 ## 3. Instala Git en tu computadora
 
@@ -67,7 +66,11 @@ que instalar Git en tu computadora. Simplemente descárgalo desde
 https://git-scm.com/, o, si estás usando Linux, instálalo mediante el
 gestor de paquetes de tu distribución buscando el paquete git. Después
 podrás usarlo en la línea de comandos. Verifica si se instaló
-correctamente ejecutando `git –-help`
+correctamente ejecutando
+
+```
+git –-help
+```
 
 ## 4. Clona un repositorio
 
@@ -76,9 +79,14 @@ oculta `.git` con información de los archivos y ramas de tu repositorio,
 los cambios a estos y el último commit. Tu repositorio en Github también
 contiene esta carpeta, así que, para ahorrarte un dolor de cabeza,
 deberías clonarlo (copiarlo en tu ordenador), ya sea descargándolo desde
-su página o en la línea de comandos escribiendo: `git clone
-https://github.com/(tu usuario)/(nombre del repositorio).git`. También
-puedes copiar la URL del repositorio desde la página.
+su página o en la línea de comandos escribiendo: 
+
+```
+git clone https://github.com/(tu usuario)/(nombre del repositorio).git
+
+```
+
+También puedes copiar la URL del repositorio desde la página.
 
 ## 5. Agrega archivos a tu repositorio y haz tu primer commit
 
@@ -86,16 +94,28 @@ Cada vez que realizas cambios en tu repositorio (ya sea modificando,
 agregando o borrando archivos), deberás sincronizarlos haciendo lo que
 se conoce como un commit. Puedes utilizar los comandos:
 
-- `git add {nombre de tu archivo}`
+```
+git add {nombre de tu archivo}
+```
 
-- `git rm {nombre de tu archivo}`
+```
+git rm {nombre de tu archivo}
+```
 
 para hacer cambios en la copia local de tu repositorio, ya sea añadir y
 modificar o eliminar archivos, respectivamente. Antes de sincronizar los
-cambios, debes ‘empaquetarlos’ en un commit, mediante el comando `git commit -m “{descripción de los cambios}”`
+cambios, debes ‘empaquetarlos’ en un commit, mediante el comando 
+
+```
+git commit -m “{descripción de los cambios}”
+```
 
 Después podrás sincronizar ese commit con el servidor de Github
-utilizando el comando `git push origin master`. 
+utilizando el comando 
+
+```
+git push origin master
+``` 
 
 Con aplicaciones gráficas como Github Desktop u otra similar, podrás
 realizar estos cambios de una forma mucho más intuitiva.
@@ -112,14 +132,18 @@ podrás sincronizar ambas ramas más tarde.
 
 Para crear otra rama, simplemente ejecuta:
 
-`git checkout -b {nombre de tu rama}`
+```
+git checkout -b {nombre de tu rama}
+```
 
 Esto hará que, a partir de ahora, todos los cambios que realices a
-tus archivos sean parte de la rama que has creado. 
+tus archivos sean parte de la rama que has creado.
 
 Si deseas sincronizar tu nueva rama con el servidor de Github, ejecutas:
 
-`git push origin {nombre de tu rama}`
+```
+git push origin {nombre de tu rama}
+```
 
 Igual que para hacer cambios en master, deberás hacer un commit para
 sincronizar los cambios locales con el repositorio de Github.
@@ -130,28 +154,44 @@ El comando `git checkout` nos permite cambiar de rama dentro del
 repositorio. Puedes usarlo para volver a hacer cambios en la rama master
 con el siguiente comando:
 
-`git checkout master`
+```
+git checkout master
+```
 
 Si estás satisfecho con los cambios que has hecho en la rama, puedes
 hacer un merge, lo que quiere decir que se fusionan los cambios hechos
 en la rama secundaria con los de la rama en la que estás ubicado
 actualmente (en este caso, master) de la siguiente manera:
 
-`git merge {rama con cambios}`
+```
+git merge {rama con cambios}
+```
 
 Git intentará hacer este proceso automáticamente, pero puede ser que
 hayan conflictos entre ramas con los cambios hechos. En este caso,
 tendrás que editar los archivos que te muestra Git, y agregarlos
-manualmente ejecutando `git add {nombre de archivo}`.
+manualmente ejecutando 
+
+```
+git add {nombre de archivo}
+```
 
 ## 8. Verifica cambios con tu copia local
 
 En caso de que tu copia local del repositorio no tenga los cambios
 hechos hasta el último commit en la rama que estás trabajando, puedes
-actualizarla ejecutando `git pull`.
+actualizarla ejecutando 
+
+```
+git pull
+```
 
 Para ver los cambios que se han realizado entre las distintas ramas del
-repositorio, ejecuta el comando `git diff {rama fuente} {rama a comparar}`
+repositorio, ejecuta el comando 
+
+```
+git diff {rama fuente} {rama a comparar}
+```
 
 También puedes ver la historia del repositorio (los commits hechos a lo
 largo del tiempo) usando el comando `git log`. Recomendamos que primero
@@ -166,7 +206,7 @@ Github, hacer un **fork** (una copia personal de ese repositorio, como un
 puente hacia el original), y clonarlo en tu computadora.
 
 Luego de crear los commit deseados y subirlos a tu fork, podrás
-dirigirte a la página donde este se encuentra y dar click a **New pull
+dirigirte a la página donde este se encuentra y dar clic a **New pull
 request** (o solicitud de extracción). Esto te llevará a una página
 donde puedes evaluar los cambios que has hecho y crear una solicitud
 para que los propietarios del repositorio los fusionen con su rama
@@ -185,7 +225,7 @@ propuestos y fusionar su fork con la rama master de tu repositorio.
 En caso de que quieras que un colaborador pueda contribuir al proyecto
 sin necesidad de aprobar sus commit, podrás invitarlos mediante la
 página de *Parámetros* (accesible desde la página del repositorio),
-simplemente dando click a *Colaboradores* en la barra lateral izquierda
+simplemente dando clic a *Colaboradores* en la barra lateral izquierda
 y añadiendo su nombre de usuario de GitHub.
 
 Si has seguido todos los pasos hasta ahora, felicidades, ya puedes
