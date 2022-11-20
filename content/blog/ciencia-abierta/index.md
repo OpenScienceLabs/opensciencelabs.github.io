@@ -1,5 +1,5 @@
 ---
-title: "5 proyectos de inteligencia artificial que te sorprenderan"
+title: "5 proyectos de inteligencia artificial que te sorprenderán"
 slug: ciencia-abierta
 date: 2021-02-08
 author: Rainer Palm
@@ -12,7 +12,7 @@ featureImage: "/header.png"
 ---
 
 
-<!-- # 5 proyectos de inteligencia artificial que te sorprenderan -->
+<!-- # 5 proyectos de inteligencia artificial que te sorprenderán -->
 
 <!-- ![doi](images/blog/2022/01/header.png) -->
 
