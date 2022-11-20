@@ -2,7 +2,7 @@
 title: "La investigación abierta podría cambiar el futuro de la investigación en ciencias puras. Te contamos por qué."
 slug: la-investigacion-abierta-podria-cambiar-el-futuro-de-la-investigacion-en-ciencias-puras-te-contamos-por-que
 date: 2020-01-15
-author: Anavelyz Pérez
+author: Anavelyz Perez
 tags: [open science]
 category: [open science]
  
