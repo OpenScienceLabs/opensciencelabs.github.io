@@ -16,8 +16,6 @@ featureImage: "/header.png"
 <!-- # Te contamos qué es el Data Version Control (DVC) y por qué es necesario que tu equipo sepa cómo utilizarlo -->
 <!-- **Por Yurely Camacho** -->
 
-
-
 Cuando colaboramos en proyectos que involucran un manejo y
 transformación constante de conjuntos de datos y/o modelos derivados de
 estos, nos vemos en la necesidad de indagar y poner en práctica técnicas
@@ -34,13 +32,13 @@ que permiten hacerlo y también listamos las ventajas que tiene su uso en
 equipos de trabajo.
 
 En nuestro artículo [Investigación colaborativa con
-Git](https://opensciencelabs.org/blog/0009-investigacion_colaborativa_con_git/investigacion-colaborativa-con-git/)
+Git](https://opensciencelabs.org/blog/investigacion-colaborativa-con-git/)
 mencionamos que los *Sistemas de control de versiones* permiten
 almacenar los cambios realizados en los archivos en todas sus fases de
 desarrollo y también la información asociada a ellos (fecha y autoría de
 los cambios). En la mayoría de ocasiones, se utilizan en entornos de
 desarrollo de software, pero son realmente útiles cuando necesitamos un
-control sobre cualquier tarea que estemos realizando. En este caso
+control sobre cualquier tarea que estemos ejecutando. Para este caso
 hablamos de transformar conjuntos de datos y experimentar, por ejemplo,
 modelos de Machine Learning donde el seguimiento de todos los pasos y
 dependencias entre el código y los conjuntos de datos es fundamental.
@@ -78,7 +76,7 @@ conjuntos de datos y flujo de trabajo. Como DVC hace que los proyectos
 sean reproducibles y compartibles; podemos saber cómo se construyeron y
 probaron los modelos y cómo han sido transformados los datos originales.
 DVC está basado en
-[Git](https://opensciencelabs.org/blog/0002-GitCeroACien/git-de-en-diez-sencillos-pasos/);
+[Git](https://opensciencelabs.org/blog/git-de-en-diez-sencillos-pasos/);
 aunque puede funcionar de manera autónoma (pero sin capacidad de
 versionado). "Es como un Git solo para Datos".
 
@@ -126,7 +124,7 @@ beneficios o ventajas como las mencionadas a continuación:
 - Permite que los desarrolladores de un proyecto, que trabajan en un mismo
   archivo de datos, combinen de forma eficiente las ideas y cambios.
 
-En OpenScienceLabs te invitamos a utilizar el versionado de datos y de
+En **OpenScienceLabs** te invitamos a utilizar el versionado de datos y de
 modelos de Machine Learning con DVC, para que puedas llevar un
 seguimiento adecuado de los cambios de los conjuntos de datos y modelos
 durante todas las fases del proyecto, haciendo más eficiente dicho
