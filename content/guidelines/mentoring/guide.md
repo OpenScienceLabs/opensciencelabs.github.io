@@ -14,20 +14,20 @@ tags: ["mentorías"]
 .. author: Ingrid Bianka Garcia
 .. tags: mentoring
 .. category: mentoring
-.. link: 
-.. description: 
-..  
+.. link:
+.. description:
+..
 -->
 
 <!-- # [ES] Breve guía de Mentoría -->
 
 ## ¿Qué es la una mentoría?
 
- La mentoría es una técnica o proceso en el que una persona con experiencia (mentor/a) guía a otras personas (aprendices o mentorados/as) para lograr su meta y objetivos personales en un espacio de tiempo limitado. Quien ejerce la mentoría no necesariamente es quien enseña, entrena o impulsa, sino también apoya, alienta a sus aprendices y conservando apertura a preguntas y a escuchar. Se trata de ayudarse mutuamente a expandirse y crecer para que todas las personas aprendan.
- 
- Además, una mentoría efectiva brinda oportunidades para compartir talentos, habilidades, experiencias y conocimientos obtenidos a través de la capacitación regular, el entrenamiento y la retroalimentación continuos, no sólo para aprendices sino también para mentores/as.
+La mentoría es una técnica o proceso en el que una persona con experiencia (mentor/a) guía a otras personas (aprendices o mentorados/as) para lograr su meta y objetivos personales en un espacio de tiempo limitado. Quien ejerce la mentoría no necesariamente es quien enseña, entrena o impulsa, sino también apoya, alienta a sus aprendices y conservando apertura a preguntas y a escuchar. Se trata de ayudarse mutuamente a expandirse y crecer para que todas las personas aprendan.
 
- Quienes ofrecen la mentoría no tienen responsabilidad directa por el desempeño laboral de los/las aprendices. Solo ofrecen consejos y motivan para potenciar el desarrollo profesional de éstos.
+Además, una mentoría efectiva brinda oportunidades para compartir talentos, habilidades, experiencias y conocimientos obtenidos a través de la capacitación regular, el entrenamiento y la retroalimentación continuos, no sólo para aprendices sino también para mentores/as.
+
+Quienes ofrecen la mentoría no tienen responsabilidad directa por el desempeño laboral de los/las aprendices. Solo ofrecen consejos y motivan para potenciar el desarrollo profesional de éstos.
 
 
 ## Tipos de mentoría
@@ -44,9 +44,9 @@ tags: ["mentorías"]
 Según la [Universidad Metropolitana de Manchester (MMU)](mmu-mentoring-guidlines), existen al menos diez requisitos para ser mentor/a:
 
 1. Autoconciencia: se relaciona con tener objetivos personales propios, carrera y conocer las propias fortalezas.
-   
+
 2. Saber hacer organizacional: significa un conocimiento individual que tienen los/as mentores/as, y que proporciona una ventaja sobre otros en el mismo campo, se trata de saber cómo funcionan las cosas.
-   
+
 3. Credibilidad en la determinación de objetivos y desarrollo de capacidades: es importante que los/as mentores/as tengan credibilidad personal y profesional en su área y que sean miembros de organizaciones relevantes.
 
 4. Accesibilidad: El éxito de la mentoría depende del tiempo dedicado a los/as aprendices. Además, los/as mentores/as deben hablar regularmente para establecer un nivel de comodidad en la relación en torno a los temas fáciles, luego, cuando surge un desafío o una inquietud, es mucho más fácil para tener una discusión útil.
@@ -62,7 +62,7 @@ Según la [Universidad Metropolitana de Manchester (MMU)](mmu-mentoring-guidline
 9. Empatía: la capacidad de sentir las emociones de los/as aprendices, o lo que podría estar pensando o sintiendo.
 
 10. Comprensión: los/las mentores/as pueden observar a sus aprendices cómo aprenden y brindarles comentarios constructivos.
-    
+
 Algunas otras habilidades adicionales son:
 
 Alentar e inspirar: los/as mentores/as tienen la capacidad de comentar sobre los logros de los/as aprendices. Creen en la capacidad de éstos para crecer personal y profesionalmente. Además, responden a sus frustraciones y desafíos. Es importante que los/as mentores/as compartan su visión personal o la de otros líderes, como sus experiencias, errores y éxitos en el logro de sus objetivos [The Center for Health Leadership & Practice (CHLP)](umich-mentoring-guide).
@@ -76,7 +76,7 @@ El proceso de mentoría es una actividad que tiene un principio y un final. En e
 1. Sesiones de mentoría; planificación de sesiones de mentoría (revisión de experiencias, cuándo y cuánto tiempo, metas, avance de avances). Quienes conducen la mentoría deben hablar sobre sí mismos/as, sus habilidades, su organización, experiencia y los desafíos que enfrentan. Además, pueden intercambiar información y ayudar a sus aprendices a establecer y reenfocar sus objetivos periódicamente. Finalmente, deben trabajar hacia las metas (parte larga y desafiante del proceso de mentoría), mediante discusiones, compartiéndoles material, probando otros contenidos de aprendizaje y actividades de desarrollo. Los/as mentores/as crean oportunidades para que los/as aprendices adquieran experiencia, es un buen momento para presentarlos a otros/as colegas.
 1. Evaluar el progreso de esta relación mentor/a-aprendices (ajustes, resultados, beneficios).
 1. Avanzar; identificar cuándo terminará la relación mentores/as-aprendices, como cuando concluyen los objetivos, los desafíos y el progreso hacia las metas. Ayude a los/as aprendices a identificar y próximos pasos, fomente la autorreflexión. Explore otros tipos de apoyo para cubrir sus necesidades. Además, es importante considerar que hay otras razones para terminar la relación de mentoría, por ejemplo, el programa puede estar llegando a su fin o la relación no está funcionando correctamente y ambas partes desean seguir de forma separada.
- 
+
 ## Establecer metas y expectativas
 
 La [Harvard University](harvard-mentoring-guide) sugiere que tanto mentores/as como aprendices establezcan sus objetivos, expectativas y colaboren activamente para tener una mentoría efectiva. Aquí hay algunos pasos a considerar:
@@ -97,7 +97,7 @@ Los/as mentores necesitan examinar y reflexionar continuamente sobre sus valores
 1. En la mayoría de las profesiones, un conjunto de valores determina la conducta profesional ética y se convierte en parte de la identidad profesional.
 1. Los/as mentores/as deben asumir la responsabilidad del poder que ostentan y nunca utilizarlo de forma abusiva sobre otros más vulnerables. Debe haber una estructura de denuncia abierta y clara para cualquier abuso de poder.
 1. Los/as aprendices pueden identificarse con mentores/as que tienen valores, actitudes y experiencias que ellos tienen o aspiran a tener.
-   
+
 Además, [The Actuaries w Without Borders](actuaries-mentoring-guidelines) describe algunas características personales en la mentoría:
 
 1. Mentores/as; hacer preguntas abiertas y de apoyo y proporcionar comentarios constructivos.
@@ -146,7 +146,7 @@ Como organización, nos unimos al [![Contributor Covenant](https://img.shields.i
 [mejores prácticas de tutoría de Albany]: https://www.albany.edu/academics/mentoring.best.practices.chapter3.shtml
 
 [auckland-mentoring-guide-final]: https://cdn.auckland.ac.nz/assets/auckland/business/current-students/PDFs/mentoring-guide-final.pdf
-  
+
 [Guía de tutoría de Harvard]: https://cdn2.sph.harvard.edu/wp-content/uploads/sites/31/2015/10/Mentoring_Guide.pdf
 
-[actuaries-mentoring-guidelines]: https://www.actuaries.org/AWB/Projects/Global_Mentorship/Guidelines%20for%20Mentors%20and%20Mentees.pdf 
+[actuaries-mentoring-guidelines]: https://www.actuaries.org/AWB/Projects/Global_Mentorship/Guidelines%20for%20Mentors%20and%20Mentees.pdf
