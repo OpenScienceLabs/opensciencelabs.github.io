@@ -1,0 +1,22 @@
+
+<div class="card">
+    <img src="{{ .Params.image_url }}"
+     class="card-img-top" alt="{{ .Params.name }}">
+    <br>
+    <h3>{{ .Params.name }}</h3>
+
+    {{ .Params.description }}
+
+    <p class="card-text">
+      <a href="{{ .Params.github_url }}">
+        <i class="fa fa-brands fa-github-square position-static text-dark"></i>
+      </a>
+    </p>
+    {{- if isset .Params "github_sponsor" }}
+     Support his work on community and open source projects via:
+    <iframe src="{{ .Params.github_sponsor }}"
+     title="Sponsor {{ .Params.name }}" height="35" width="116" style="border: 0;"></iframe>
+     {{- end }}
+</div>
+
+

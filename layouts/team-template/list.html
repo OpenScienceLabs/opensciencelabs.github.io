@@ -1,0 +1,24 @@
+{{ define "main" }}
+{{ $council := "steering-council"}}
+
+<div class="wrap content">
+
+<article class="post_content">
+  <div class="post_body"></div>
+    {{.Content}}
+    <h2>Steering Council</h2>
+    <div class="card-columns">
+      {{- partial "steering-archive.html"  . }}
+    </div>
+    <h2>Interns</h2>
+    <div class="card-columns">
+      {{- partial "interns-archive.html"  . }}
+    </div>
+    <h2>Steering Council Emeritus</h2>
+    <div class="card-columns">
+      {{- partial "emeritus-archive.html"  . }}
+    </div>
+  </div>
+</article>
+</div>
+{{ end }}
