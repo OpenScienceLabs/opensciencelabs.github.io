@@ -73,12 +73,15 @@ singlecolumn = true
           <small>
             Ingeniero Ambiental con experiencia en Investigación, análisis químico,
             desarrollo de modelos matemáticos para bioprocesos, diseño de sistemas
-            de tratamiento de aguas residuales.
+            de tratamiento de aguas residuales. Experto en Python y
+            Modelos Matemáticos para procesos químicos.
           </small>
         </p>
         <div>
           <span class="badge bg-light text-dark">Python</span>
           <span class="badge bg-light text-dark">R</span>
+          <span class="badge bg-light text-dark">Modelos Matemáticos</span>
+          <span class="badge bg-light text-dark">Procesos Químicos</span>
         </div>
         <div class="mt-3">
           <a href="https://github.com/OpenScienceLabs/request-forms/issues/new/choose">
