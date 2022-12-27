@@ -132,3 +132,73 @@ singlecolumn = true
     </div>
   </div>
 </div>
+
+<div class="card mb-3">
+  <div class="row g-0">
+    <div class="col-md-4 p-0">
+      <img src="https://avatars.githubusercontent.com/u/98857005?v=4"
+        class="img-fluid rounded-start m-0" alt="" />
+    </div>
+    <div class="col-md-7">
+      <div class="card-body">
+        <h5 class="card-title">Evelyn Donis</h5>
+        <span class="badge bg-warning">1 cupo disponible</span>
+        <span class="badge bg-warning">Mentoría Grátis</span>
+        <p class="card-text">
+          <small>
+            Ingeniera en Sistemas y Auditor Líder Certificado en ISO27001 Seguridad de la Información e ISO22301 Continuidad del Negocio. Con más de 12 años de experiencia en seguridad de la información, seguridad informática, así como la realización de auditoría de sistemas y asesoramiento e implementación de sistemas de gestión de continuidad del negocio, gestión de incidentes y plan de continuidad del negocio, gestión de incidentes y plan de recuperación de desastres, para diferentes industrias financieras, telecomunicaciones, manufactureras, entre otras. Cuenta con experiencia en seguridad informática, evaluación, identificación y mitigación de riesgos de acuerdo a la implementación de controles internos en las áreas de TI. Sus principales análisis se basan en estructuración, verificación y validación de logs de los sistemas de información, operativos y bases de datos, dentro de los cuales ha podido identificar fraudes informáticos y transaccionales dentro de las organizaciones en las que ha laborado. Así mismo ha realizado análisis de acceso de usuarios a través de la validación de privilegios, roles y segregación de funciones en sistema SAP. Actualmente se desempeña como Consultora Senior en Seguridad de la Información y Ciberseguridad en ES Consulting.
+          </small>
+        </p>
+        <div>
+          <span class="badge bg-light text-dark">Ciberseguridad</span>
+          <span class="badge bg-light text-dark">Seguridad de la información</span>
+          <span class="badge bg-light text-dark">Auditoría de Sistemas</span>
+        </div>
+        <div class="mt-3">
+          <a href="https://github.com/OpenScienceLabs/request-forms/issues/new/choose">
+            <button class="btn bg-primary text-light">
+              Solicitud de Mentoría
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3">
+  <div class="row g-0">
+    <div class="col-md-4 p-0">
+      <img src="https://avatars.githubusercontent.com/u/23584921?v=4"
+        class="img-fluid rounded-start m-0" alt="" />
+    </div>
+    <div class="col-md-7">
+      <div class="card-body">
+        <h5 class="card-title">Fausto Mauricio Lagos Suarez</h5>
+        <span class="badge bg-warning">3 cupos disponibles</span>
+        <span class="badge bg-warning">Mentoría Grátis</span>
+        <p class="card-text">
+          <small>
+            Matemático con matetría en ingeniería computacional y matemática.
+            Área de investigación: Ecuaciones Diferenciales Ordinarias.
+            Activista por el Software Libre y el Conocimiento Abierto.
+            Desarrollador de Software (Criptología) en el equipo del Centro de
+            Autonomía Digital en Quito (Ecuador).
+          </small>
+        </p>
+        <div>
+          <span class="badge bg-light text-dark">Python</span>
+          <span class="badge bg-light text-dark">Golang</span>
+          <span class="badge bg-light text-dark">Privacidad</span>
+        </div>
+        <div class="mt-3">
+          <a href="https://github.com/OpenScienceLabs/request-forms/issues/new/choose">
+            <button class="btn bg-primary text-light">
+              Solicitud de Mentoría
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
