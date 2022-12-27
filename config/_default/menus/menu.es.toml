@@ -10,6 +10,18 @@
 
 # Submenus are done this way: parent -> identifier
 [[main]]
+  identifier = "mentoring"
+  name = "Mentorías"
+  weight = 121
+[[main]]
+  parent = "mentoring"
+  name = "Guía de Mentorías"
+  url = "/guidelines/mentoring/guide/"
+[[main]]
+  parent = "mentoring"
+  name = "Mentoras y Mentores"
+  url = "mentoring/mentors"
+[[main]]
   name = "Acerca de"
   identifier = "about"
   weight = 122
