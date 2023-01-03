@@ -254,7 +254,7 @@ singlecolumn = true
 <div class="card mb-3">
   <div class="row g-0">
     <div class="col-md-4 p-0">
-      <img src="https://avatars.githubusercontent.com/u/38964103?v=4"
+      <img src="https://mateusvenancio.com.br/assets/profile.png"
         class="img-fluid rounded-start m-0" alt="" />
     </div>
     <div class="col-md-7">
