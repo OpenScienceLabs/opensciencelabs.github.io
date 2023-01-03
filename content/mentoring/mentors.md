@@ -202,3 +202,37 @@ singlecolumn = true
     </div>
   </div>
 </div>
+
+<div class="card mb-3">
+  <div class="row g-0">
+    <div class="col-md-4 p-0">
+      <img src="https://avatars.githubusercontent.com/u/38964103?v=4"
+        class="img-fluid rounded-start m-0" alt="" />
+    </div>
+    <div class="col-md-7">
+      <div class="card-body">
+        <h5 class="card-title">Mateus Venâncio</h5>
+        <span class="badge bg-warning">3 cupos disponibles</span>
+        <span class="badge bg-warning">Mentoría Grátis</span>
+        <p class="card-text">
+          <small>
+            Desenvolvedor de software autodidata. Apaixonado por tecnologia,
+            cachorros e Pokémon. Amo aprender coisas novas e me aperfeiçoar
+            no que eu trabalho.
+          </small>
+        </p>
+        <div>
+          <span class="badge bg-light text-dark">NodeJS</span>
+          <span class="badge bg-light text-dark">Flutter</span>
+        </div>
+        <div class="mt-3">
+          <a href="https://github.com/OpenScienceLabs/request-forms/issues/new/choose">
+            <button class="btn bg-primary text-light">
+              Solicitud de Mentoría
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
