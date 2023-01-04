@@ -260,12 +260,13 @@ singlecolumn = true
     <div class="col-md-7">
       <div class="card-body">
         <h5 class="card-title">Mateus Venâncio</h5>
-        <span class="badge bg-warning">1 cupo disponible</span>
+        <span class="badge bg-warning">3 cupos disponibles</span>
         <span class="badge bg-warning">Mentoría Grátis</span>
         <p class="card-text">
           <small>
             <bold>Idiomas para la mentoría</bold>:
             <span class="badge bg-light text-dark">Portugués</span>
+            <span class="badge bg-light text-dark">Inglés</span>
             <br/>
             Desenvolvedor de software autodidata. Apaixonado por tecnologia,
             cachorros e Pokémon. Amo aprender coisas novas e me aperfeiçoar
