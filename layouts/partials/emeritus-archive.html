@@ -1,5 +1,0 @@
-{{ $pages := .Pages}}
-      {{- range where $pages "Params.group" "==" "steering-emeritus" }}
-        {{ partial "team-excerpt" . }}
-      {{- end }}
-  
