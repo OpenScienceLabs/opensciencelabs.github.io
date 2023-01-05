@@ -13,13 +13,29 @@
      rel="stylesheet"
      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
      crossorigin="anonymous">
-     <link rel="stylesheet" href="https://use.fontawesome.com/aa402b3835.css">
-     <link rel="stylesheet" href="{{ "/index.css" | relURL }}"/>
-     
+    <link rel="stylesheet" href="https://use.fontawesome.com/aa402b3835.css">
+    <link rel="stylesheet" href="{{ "/index.css" | relURL }}" />
+
     <script
      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
      crossorigin="anonymous"></script>
+
+    <style>
+    .card-columns {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 10px;
+
+    }
+
+    .card {
+
+      padding: 10px;
+    }
+
+  </style>
 
     {{- partial "head" . }}
     {{- partial "hooks/head-end" . }}
@@ -31,7 +47,45 @@
    data-lang="{{ .Lang }}">
     {{- partial "header" . }}
     <main>
-      {{- block "main" . }}{{ end }}
+      <div class="wrap content">
+
+        <article class="post_content">
+          <div class="post_body"></div>
+          {{.Content}}
+          {{ $groups := .Params.teams }}
+          {{- range $group := $groups  }}
+          <h2>{{ $group.name }}</h2>
+          <div class="card-columns">
+            {{- range $member := $group.members  }}
+
+            <div class="card p-0">
+              <img src="{{ $member.image_url }}" class="card-img-top m-0">
+              <div class="card-body">
+                <h3>{{ $member.name }}</h3>
+
+                <a href="{{ $member.github_url }}">
+                  <i
+                  class="fa fa-brands fa-github-square position-static text-dark"></i>
+                </a>
+
+                <p class="card-text">
+                  {{ $member.bio }}
+                </p>
+
+                {{- if isset $member "github_sponsor" }}
+                Support his work on community and open source projects via:
+                <iframe src="{{ $member.github_sponsor }}"
+                title="Sponsor {{ $member.name }}" height="35" width="116"
+                style="border: 0;"></iframe>
+                {{- end }}
+              </div>
+            </div>
+            {{- end }}
+          </div>
+          {{- end }}
+      </div>
+      </article>
+      </div>
     </main>
 
     {{- partialCached "icons" . }}

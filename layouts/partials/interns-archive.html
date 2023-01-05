@@ -1,5 +1,0 @@
-{{ $pages := .Pages.ByDate }}
-      {{- range where $pages "Params.group" "==" "interns" }}
-        {{ partial "team-excerpt" . }}
-      {{- end }}
-  
