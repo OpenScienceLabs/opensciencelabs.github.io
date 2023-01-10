@@ -52,7 +52,7 @@ singlecolumn = true
           <span class="badge bg-light text-dark">C++</span>
         </div>
         <div class="mt-3">
-          <a href="https://github.com/OpenScienceLabs/request-forms/issues/new?assignees=EverVino%2C+xmnlab&labels=mentoring-request&template=es-mentoring-request.yaml&title=Solicitud+de+mentor%C3%ADa%3A+%3CINFORME+TU+NOMBRE+AQU%C3%8D%3E">
+          <a href="https://github.com/OpenScienceLabs/request-forms/issues/new?assignees=xmnlab&labels=mentoring-request&template=es-mentoring-request.yaml&title=Solicitud+de+mentor%C3%ADa%3A+%3CINFORME+TU+NOMBRE+AQU%C3%8D%3E">
             <button class="btn bg-primary text-light">
               Solicitud de Mentoría
             </button>
@@ -92,7 +92,7 @@ singlecolumn = true
           <span class="badge bg-light text-dark">Procesos Químicos</span>
         </div>
         <div class="mt-3">
-          <a href="https://github.com/OpenScienceLabs/request-forms/issues/new?assignees=EverVino%2C+xmnlab&labels=mentoring-request&template=es-mentoring-request.yaml&title=Solicitud+de+mentor%C3%ADa%3A+%3CINFORME+TU+NOMBRE+AQU%C3%8D%3E">
+          <a href="https://github.com/OpenScienceLabs/request-forms/issues/new?assignees=EverVino&labels=mentoring-request&template=es-mentoring-request.yaml&title=Solicitud+de+mentor%C3%ADa%3A+%3CINFORME+TU+NOMBRE+AQU%C3%8D%3E">
             <button class="btn bg-primary text-light">
               Solicitud de Mentoría
             </button>
@@ -133,7 +133,7 @@ singlecolumn = true
           <span class="badge bg-light text-dark">Kubernetes</span>
         </div>
         <div class="mt-3">
-          <a href="https://github.com/OpenScienceLabs/request-forms/issues/new?assignees=EverVino%2C+xmnlab&labels=mentoring-request&template=es-mentoring-request.yaml&title=Solicitud+de+mentor%C3%ADa%3A+%3CINFORME+TU+NOMBRE+AQU%C3%8D%3E">
+          <a href="https://github.com/OpenScienceLabs/request-forms/issues/new?assignees=luisgagocasas&labels=mentoring-request&template=es-mentoring-request.yaml&title=Solicitud+de+mentor%C3%ADa%3A+%3CINFORME+TU+NOMBRE+AQU%C3%8D%3E">
             <button class="btn bg-primary text-light">
               Solicitud de Mentoría
             </button>
@@ -200,7 +200,7 @@ singlecolumn = true
           <span class="badge bg-light text-dark">Auditoría de Sistemas</span>
         </div>
         <div class="mt-3">
-          <a href="https://github.com/OpenScienceLabs/request-forms/issues/new?assignees=EverVino%2C+xmnlab&labels=mentoring-request&template=es-mentoring-request.yaml&title=Solicitud+de+mentor%C3%ADa%3A+%3CINFORME+TU+NOMBRE+AQU%C3%8D%3E">
+          <a href="https://github.com/OpenScienceLabs/request-forms/issues/new?assignees=Aledonisgt&labels=mentoring-request&template=es-mentoring-request.yaml&title=Solicitud+de+mentor%C3%ADa%3A+%3CINFORME+TU+NOMBRE+AQU%C3%8D%3E">
             <button class="btn bg-primary text-light">
               Solicitud de Mentoría
             </button>
@@ -240,7 +240,7 @@ singlecolumn = true
           <span class="badge bg-light text-dark">Privacidad</span>
         </div>
         <div class="mt-3">
-          <a href="https://github.com/OpenScienceLabs/request-forms/issues/new?assignees=EverVino%2C+xmnlab&labels=mentoring-request&template=es-mentoring-request.yaml&title=Solicitud+de+mentor%C3%ADa%3A+%3CINFORME+TU+NOMBRE+AQU%C3%8D%3E">
+          <a href="https://github.com/OpenScienceLabs/request-forms/issues/new?assignees=piratax007&labels=mentoring-request&template=es-mentoring-request.yaml&title=Solicitud+de+mentor%C3%ADa%3A+%3CINFORME+TU+NOMBRE+AQU%C3%8D%3E">
             <button class="btn bg-primary text-light">
               Solicitud de Mentoría
             </button>
@@ -278,7 +278,7 @@ singlecolumn = true
           <span class="badge bg-light text-dark">Flutter</span>
         </div>
         <div class="mt-3">
-          <a href="https://github.com/OpenScienceLabs/request-forms/issues/new?assignees=EverVino%2C+xmnlab&labels=mentoring-request&template=es-mentoring-request.yaml&title=Solicitud+de+mentor%C3%ADa%3A+%3CINFORME+TU+NOMBRE+AQU%C3%8D%3E">
+          <a href="https://github.com/OpenScienceLabs/request-forms/issues/new?assignees=mateushvenancio&labels=mentoring-request&template=es-mentoring-request.yaml&title=Solicitud+de+mentor%C3%ADa%3A+%3CINFORME+TU+NOMBRE+AQU%C3%8D%3E">
             <button class="btn bg-primary text-light">
               Solicitud de Mentoría
             </button>
