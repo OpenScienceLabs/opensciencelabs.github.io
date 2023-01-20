@@ -10,3 +10,9 @@
 
     padding: 10px;
   }
+  .row.g-0 {
+      background-color: var(--choice-bg);
+  }
+  .card.mb-3 {
+    padding: 0;
+  }
