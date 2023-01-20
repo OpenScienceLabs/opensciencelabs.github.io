@@ -25,14 +25,22 @@
     .card-columns {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      align-items: flex-start;
       gap: 15px;
       padding: 10px;
 
     }
 
     .card {
+      background-color: rgba(var(--choice-bg), 0.8);
+      
+    }
+    .card-body h3 {
+      margin-bottom: 0;
+    }
 
-      padding: 10px;
+    iframe {
+      margin-top: 8px;
     }
 
   </style>
@@ -63,9 +71,8 @@
               <div class="card-body">
                 <h3>{{ $member.name }}</h3>
 
-                <a href="{{ $member.github_url }}">
-                  <i
-                  class="fa fa-brands fa-github-square position-static text-dark"></i>
+                <a class = "git_ico" href="{{ $member.github_url }}">
+                    {{ partial "sprite" (dict "icon" "github") }}
                 </a>
 
                 <p class="card-text">
@@ -74,9 +81,11 @@
 
                 {{- if isset $member "github_sponsor" }}
                 Support his work on community and open source projects via:
+                
                 <iframe src="{{ $member.github_sponsor }}"
                 title="Sponsor {{ $member.name }}" height="35" width="116"
                 style="border: 0;"></iframe>
+                
                 {{- end }}
               </div>
             </div>
