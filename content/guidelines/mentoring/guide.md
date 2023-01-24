@@ -129,7 +129,7 @@ La mentoría implica la relación entre mentores/as y aprendices. Los/as buenos/
 
 ## Comenzando a ser mentorado en OpenScienceLabs
 
-- Quien aspire a contar con una mentoría deberá solicitar la mentoría en nuestro ![GitHub](https://opensciencelabs.org/mentoring/mentors/), luego hacer click en **"Solicitar mentoría""**, y llenar el formulario correspondiente, detallando el área de mentoría, la disponibilidad de tiempo (incluir la zona horaria) y objetivos que se quiere lograr después de terminada la mentoría.
+- Quien aspire a contar con una mentoría deberá solicitar la mentoría en nuestro [GitHub](https://opensciencelabs.org/mentoring/mentors/), luego hacer click en **"Solicitar mentoría""**, y llenar el formulario correspondiente, detallando el área de mentoría, la disponibilidad de tiempo (incluir la zona horaria) y objetivos que se quiere lograr después de terminada la mentoría.
 - Con base en el formulario, OpenScienceLabs buscará mentores/as dentro la comunidad, en un plazo no mayor a una semana se le mostrará las opciones al/la aspirante a aprendiz.
 - Una vez se haya coordinado con el/la mentor/a y el/la aprendiz se organizará una primer encuentro que en lo posible tendrá la participación de una persona del Steering Council de OpenScienceLabs. A partir de esa primera reunión el/la aprendiz y el/la mentora coordinarán sus siguientes sesiones para la mentoría.
 - Una vez finalizada la mentoría ambos, mentor/a y aprendiz llenarán un formulario para indicar si la mentoría alacanzó sus objetivos, cuáles fueron las dificultades y/o razones de conclusión de la mentoría.
