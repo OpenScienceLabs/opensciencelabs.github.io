@@ -3,8 +3,8 @@ title: "Investigación Colaborativa con Git"
 slug: investigacion-colaborativa-con-git
 date: 2020-01-20
 author: Anavelyz Pérez
-tags: [open science]
-category: [git]
+tags: [git, ramas]
+categories: [ciencia abierta, investigación abierta, desarrollo de software, control de versiones]
  
 draft: false
 usePageBundles: true

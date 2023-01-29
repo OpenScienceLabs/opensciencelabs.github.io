@@ -3,8 +3,8 @@ title: "Te hablamos de las licencias mas utilizadas en proyectos de ciencia abie
 slug: te-hablamos-de-las-licencias-mas-utilizadas-en-proyectos-de-ciencia-abierta
 date: 2020-05-06
 author: Rainer Palm
-tags: [open science, license]
-category: [open science]
+tags: [licencia, proyectos, free software]
+categories: [ciencia abierta]
  
 draft: false
 usePageBundles: true

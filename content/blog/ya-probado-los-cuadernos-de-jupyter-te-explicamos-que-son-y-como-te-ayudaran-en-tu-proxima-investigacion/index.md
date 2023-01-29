@@ -3,8 +3,8 @@ title: "¿Ya has probado los Cuadernos de Jupyter? Te explicamos qué son y cóm
 slug: ya-probado-los-cuadernos-de-jupyter-te-explicamos-que-son-y-como-te-ayudaran-en-tu-proxima-investigacion
 date: 2020-01-13
 author: Rainer Palm
-tags: [open science]
-category: [jupyter]
+tags: [jupyter, cuaderno]
+categories: [ciencia abierta, código abierto, programación, IDE]
  
 draft: false
 usePageBundles: true

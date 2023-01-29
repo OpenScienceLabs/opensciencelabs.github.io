@@ -3,8 +3,8 @@ title: "Características y tips útiles que te ayudarán a sacar el máximo prov
 slug: caracteristicas-y-tips-utiles-que-te-ayudaran-sacar-el-maximo-provecho-de-conda
 date: 2020-12-14
 author: Yurely Camacho
-tags: [devops, packaging]
-category: [packaging]
+tags: [conda, empaquetado, paquetes, entorno virtual]
+categories: [ciencia abierta, código abierto, desarrollo de software, DevOps]
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

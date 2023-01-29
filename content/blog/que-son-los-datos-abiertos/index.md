@@ -3,8 +3,8 @@ title: "¿Qué son los datos abiertos?"
 slug: que-son-los-datos-abiertos
 date: 2020-01-18
 author: Rainer Palm
-tags: [open science]
-category: [open data]
+tags: [datos]
+categories: [ciencia abierta, datos abiertos, investigación abierta]
  
 draft: false
 usePageBundles: true

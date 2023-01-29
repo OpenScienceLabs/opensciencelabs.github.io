@@ -3,8 +3,8 @@ title: "¿Qué es ciencia ciudadana?"
 slug: que-es-ciencia-ciudadana
 date: 2020-02-03
 author: Rainer Palm
-tags: [citizen science]
-category: [citizen science]
+tags: [ciencia ciudadana, comunidad]
+categories: [ciencia abierta, investigación abierta]
  
 draft: false
 usePageBundles: true

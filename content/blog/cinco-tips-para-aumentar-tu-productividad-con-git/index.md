@@ -3,8 +3,8 @@ title: "Cinco tips para aumentar tu productividad con Git"
 slug: cinco-tips-para-aumentar-tu-productividad-con-git
 date: 2020-02-05
 author: Yurely Camacho
-tags: [versioning]
-category: [git]
+tags: [git, ramas, repositorios, cambios]
+categories: [desarrollo de software, control de versiones, aprendizaje]
  
 draft: false
 usePageBundles: true

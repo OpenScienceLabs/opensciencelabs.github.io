@@ -1,10 +1,10 @@
 ---
 title: "Crea una nube de palabras en R a partir de un documento de texto"
-slug: crea-una-nube-de-palabras-en-r-partir-de-un-documento-de-texto
+slug: r-nube-de-palabras
 date: 2022-03-01
 author: Ever Vino
-tags: [r, rstudio, nube de palabras, wordcloud, mineria de texto]
-category: [r]
+tags: [nube de palabras, tm]
+categories: [ciencia abierta, código abierto, R, ciencia de datos, minería de datos]
 aliases: ["/blog/0061-r-nube-palabras/crea-una-nube-de-palabras-en-r-partir-de-un-documento-de-texto/"] 
 draft: false
 usePageBundles: true

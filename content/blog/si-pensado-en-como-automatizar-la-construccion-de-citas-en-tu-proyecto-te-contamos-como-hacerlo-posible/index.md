@@ -3,8 +3,8 @@ title: "Si has pensado en cómo automatizar la construcción de citas en tu proy
 slug: si-pensado-en-como-automatizar-la-construccion-de-citas-en-tu-proyecto-te-contamos-como-hacerlo-posible
 date: 2020-05-16
 author: Rainer Palm
-tags: [citation]
-category: [citation]
+tags: [proyectos, citas, referencias, zotero, metadatos]
+categories: [ciencia abierta]
  
 draft: false
 usePageBundles: true

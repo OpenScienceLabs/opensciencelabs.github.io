@@ -3,8 +3,8 @@ title: "¿Cómo presentar tu código como un artículo científico?"
 slug: como-presentar-tu-codigo-como-un-articulo-cientifico
 date: 2020-03-04
 author: Rainer Palm
-tags: [science]
-category: [science]
+tags: [artículos, publicación, código, herramientas]
+categories: [ciencia abierta, código abierto]
  
 draft: false
 usePageBundles: true

@@ -3,8 +3,8 @@ title: "¿Cómo documentar tu proyecto de ciencia abierta?"
 slug: como-documentar-tu-proyecto-de-ciencia-abierta
 date: 2020-05-04
 author: Yurely Camacho
-tags: [open science, documentation]
-category: [open science]
+tags: [proyectos, documentación]
+categories: [ciencia abierta, desarrollo de software]
  
 draft: false
 usePageBundles: true

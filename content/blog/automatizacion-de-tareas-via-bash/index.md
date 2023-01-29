@@ -3,8 +3,8 @@ title: "Automatización de tareas vía bash"
 slug: automatizacion-de-tareas-via-bash
 date: 2020-06-21
 author: Anavelyz Pérez
-tags: [bash, automation]
-category: [bash]
+tags: [bash, automatización]
+categories: [desarrollo de software]
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

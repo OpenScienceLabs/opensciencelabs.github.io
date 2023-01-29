@@ -3,8 +3,8 @@ title: "Visualiza tus datos en R con ggplot2 y gganimate"
 slug: visualiza-tus-datos-en-r-con-ggplot-y-gganimate
 date: 2022-04-08
 author: Ever Vino
-tags: [r, visualization]
-category: [r]
+tags: [visualización de datos, ggplot2, gganimate]
+categories: [ciencia abierta, código abierto,  R]
 aliases: ["/blog/0057-r-ggplot-bo/visualiza-tus-datos-en-r-con-ggplot-y-gganimate/"]
 draft: false
 usePageBundles: true

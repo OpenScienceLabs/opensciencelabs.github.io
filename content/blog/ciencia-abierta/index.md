@@ -3,8 +3,8 @@ title: "5 proyectos de inteligencia artificial que te sorprenderán"
 slug: ciencia-abierta
 date: 2021-02-08
 author: Rainer Palm
-tags: [artificial intelligence]
-category: [artificial intelligence]
+tags: [datos]
+categories: [ciencia abierta, ciencia de datos, inteligencia artificial]
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

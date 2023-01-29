@@ -3,8 +3,8 @@ title: "Tres proyectos de ciencia ciudadana que te sorprenderán"
 slug: tres-proyectos-de-ciencia-ciudadana-que-te-sorprenderan
 date: 2020-02-12
 author: Rainer Palm
-tags: [citizen science]
-category: [citizen science]
+tags: [comunidad, proyectos, basura, ciencia ciudadana]
+categories: [ciencia abierta]
  
 draft: false
 usePageBundles: true

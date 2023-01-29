@@ -3,8 +3,8 @@ title: "Como desarrollador, ¿Qué necesito para entrar en la web3?"
 slug: que-necesitas-para-desarrollar-en-la-web3
 date: 2022-03-22
 author: Alan Hurtarte
-tags: [crypto,roadmap,env,developer,web3]
-category: [open science, web3]
+tags: [cripto, desarrollador]
+categories: [desarrollo de software, UI-UX, web3]
 aliases: ["/blog/0060-crypto-dev-ecosystem/que-necesitas-para-desarrollar-en-la-web3/"]
 draft: false
 usePageBundles: true

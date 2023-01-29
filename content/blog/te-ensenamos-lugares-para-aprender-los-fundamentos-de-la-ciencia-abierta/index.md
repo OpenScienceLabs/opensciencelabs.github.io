@@ -3,8 +3,8 @@ title: "Te enseñamos 4 lugares para aprender los fundamentos de la ciencia abie
 slug: te-ensenamos-lugares-para-aprender-los-fundamentos-de-la-ciencia-abierta
 date: 2020-06-22
 author: Rainer Palm
-tags: [open science]
-category: [open science]
+tags: [datos, manual]
+categories: [ciencia abierta]
  
 draft: false
 usePageBundles: true

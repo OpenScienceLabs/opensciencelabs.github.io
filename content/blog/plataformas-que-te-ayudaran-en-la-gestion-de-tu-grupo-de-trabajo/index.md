@@ -3,8 +3,8 @@ title: "10 Plataformas que te ayudarán en la gestión de tu grupo de trabajo."
 slug: plataformas-que-te-ayudaran-en-la-gestion-de-tu-grupo-de-trabajo
 date: 2021-01-23
 author: Mariangela Petrizzo Páez
-tags: [communication]
-category: [communication]
+tags: [comunicación, gestión]
+categories: [organización, gestión de equipos]
 aliases: ["/blog/0050-10herramientasgestionequipos/plataformas-que-te-ayudaran-en-la-gestion-de-tu-grupo-de-trabajo/"]
 draft: false
 usePageBundles: true

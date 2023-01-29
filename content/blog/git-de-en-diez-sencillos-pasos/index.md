@@ -3,8 +3,8 @@ title: "Git de 0 a 100 en diez sencillos pasos"
 slug: git-de-en-diez-sencillos-pasos
 date: 2020-01-08
 author: Rainer Palm
-tags: [versioning]
-category: [git]
+tags: [git, repositorios, github]
+categories: [desarrollo de software, control de versiones]
  
 draft: false
 usePageBundles: true

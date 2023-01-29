@@ -3,8 +3,8 @@ title: "Dataverse y su potencial para proyectos de ciencia abierta"
 slug: dataverse-y-su-potencial-para-proyectos-de-ciencia-abierta
 date: 2020-08-08
 author: Rainer Palm
-tags: [open science, open data]
-category: [open data]
+tags: [datosverse, datos, repositorios]
+categories: [ciencia abierta, datos abiertos, acceso abierto]
  
 draft: false
 usePageBundles: true

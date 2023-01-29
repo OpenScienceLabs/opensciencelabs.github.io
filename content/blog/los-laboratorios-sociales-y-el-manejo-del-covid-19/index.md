@@ -3,8 +3,8 @@ title: "Los laboratorios sociales y el manejo del COVID-19"
 slug: los-laboratorios-sociales-y-el-manejo-del-covid-19
 date: 2020-07-06
 author: Yurely Camacho
-tags: [social labs, covid19]
-category: [social labs]
+tags: [laboratorios sociales, covid19,  ciencia ciudadana]
+categories: [ciencia abierta]
  
 draft: false
 usePageBundles: true

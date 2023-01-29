@@ -3,8 +3,8 @@ title: "¿Qué son los laboratorios sociales y cómo pueden ayudar a los equipos
 slug: que-son-los-laboratorios-sociales-y-como-pueden-ayudar-los-equipos-de-investigacion
 date: 2020-02-07
 author: Rainer Palm
-tags: [social labs]
-category: [social labs]
+tags: [laboratorios sociales, comunidad, ciencia ciudadana]
+categories: [ciencia abierta]
  
 draft: false
 usePageBundles: true

@@ -3,8 +3,8 @@ title: "Reorganiza tus tablas con tidyr en R"
 slug: reorganiza-tus-tablas-con-tidyr
 date: 2022-07-17
 author: Ever Vino
-tags: [open science, r, filtrar datos, tidyr, data science, columnas a filas, filas a columnas]
-category: [data science]
+tags: [tidyr, bibliotecas, tablas, reorganizar, filtrar datos]
+categories: [R, ciencia de datos]
  
 draft: false
 usePageBundles: true

@@ -3,8 +3,8 @@ title: "Te contamos sobre la comunidad rOpenSci"
 slug: te-contamos-sobre-la-comunidad-ropensci
 date: 2020-08-18
 author: Yurely Camacho
-tags: [r, community, open science, ropensci]
-category: [open science]
+tags: [comunidad, ropensci, paquetes, revisión]
+categories: [ciencia abierta,  R]
  
 draft: false
 usePageBundles: true

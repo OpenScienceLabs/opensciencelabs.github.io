@@ -3,8 +3,8 @@ title: "Ethereum merge is coming. ¿Pero qué significa?"
 slug: ethereum-merge-is-coming-pero-que-significa
 date: 2022-03-22
 author: Alan Hurtarte
-tags: [crypto,ethereum,merge,web3]
-category: [open science, web3, ethereum]
+tags: [ethereum, transacciones, bitcoin, criptomoneda]
+categories: [tecnología, web3]
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
