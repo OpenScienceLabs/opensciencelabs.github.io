@@ -3,8 +3,8 @@ title: "¿Cómo aplicar la investigación reproducible a proyectos de código ab
 slug: como-aplicar-la-investigacion-reproducible-proyectos-de-codigo-abierto
 date: 2020-03-09
 author:  Yurely Camacho
-tags: [open science]
-category: [open science]
+tags: [código, reproducibilidad]
+categories: [ciencia abierta, investigación abierta, código abierto]
  
 draft: false
 usePageBundles: true

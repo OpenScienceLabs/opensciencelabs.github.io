@@ -3,8 +3,8 @@ title: "Te hablamos de cinco repositorios con datos abiertos sobre países"
 slug: te-hablamos-de-cinco-repositorios-con-datos-abiertos-sobre-paises
 date: 2020-01-29
 author: Yurely Camacho
-tags: [open science]
-category: [open data]
+tags: [datos, repositorios, acceso]
+categories: [ciencia abierta, datos abiertos, acceso abierto]
  
 draft: false
 usePageBundles: true

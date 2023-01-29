@@ -3,8 +3,8 @@ title: "NFT. Más que un JPG"
 slug: nft-mas-que-un-jpg
 date: 2022-04-08
 author: Alan Hurtarte
-tags: [nft, blockchain]
-category: [nft]
+tags: [nft, criptomoneda, Blockchain]
+categories: [tecnología]
  
 draft: false
 usePageBundles: true

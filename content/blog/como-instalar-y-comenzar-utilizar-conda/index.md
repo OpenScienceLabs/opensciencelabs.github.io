@@ -3,8 +3,8 @@ title: "Cómo instalar y comenzar a utilizar Conda"
 slug: como-instalar-y-comenzar-utilizar-conda
 date: 2020-12-03
 author: Yurely Camacho
-tags: [devops, packaging]
-category: [packaging]
+tags: [conda, empaquetado, paquetes, gestor, entorno virtual]
+categories: [ciencia abierta, código abierto, desarrollo de software, DevOps]
  
 draft: false
 usePageBundles: true

@@ -3,8 +3,8 @@ title: "Primeros pasos con RStudio"
 slug: primeros-pasos-con-rstudio
 date: 2021-04-05
 author: Anavelyz Pérez
-tags: [ide, r, rstudio, rstudio desktop, rstudio server, interfaz de r]
-category: [ide]
+tags: [rstudio]
+categories: [ciencia abierta, código abierto,  R, IDE]
  
 draft: false
 usePageBundles: true

@@ -3,8 +3,8 @@ title: "¿Qué es la ciencia abierta?"
 slug: que-es-la-ciencia-abierta
 date: 2020-01-06
 author: Yurely Camacho
-tags: [open science]
-category: [open science]
+tags: [datos]
+categories: [ciencia abierta]
  
 draft: false
 usePageBundles: true

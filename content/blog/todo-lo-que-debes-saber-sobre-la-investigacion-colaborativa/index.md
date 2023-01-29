@@ -3,8 +3,8 @@ title: "Todo lo que debes saber sobre la investigación colaborativa"
 slug: todo-lo-que-debes-saber-sobre-la-investigacion-colaborativa
 date: 2020-01-10
 author: Anavelyz Pérez
-tags: [open science]
-category: [research]
+tags: [investigación colaborativa, equipos]
+categories: [ciencia abierta,  investigación abierta]
  
 draft: false
 usePageBundles: true

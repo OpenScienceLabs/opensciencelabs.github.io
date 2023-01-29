@@ -3,8 +3,8 @@ title: "Cómo filtrar datos de tu tabla con dplyr en R"
 slug: filtrar-datos-r
 date: 2022-06-14
 author: Ever Vino
-tags: [open science, r, filtrar datos, dplyr, recursos, data science]
-category: [data science]
+tags: [datos, paquetes, tablas, dplyr, filtrar datos]
+categories: [ciencia de datos,  R]
 aliases: ["/blog/filtrar-datos-r/filtrar-datos-r/"]
 draft: false
 usePageBundles: true

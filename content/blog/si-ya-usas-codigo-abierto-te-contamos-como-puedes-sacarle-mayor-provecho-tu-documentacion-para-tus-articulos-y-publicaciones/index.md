@@ -3,8 +3,8 @@ title: "Si ya usas código abierto, te contamos cómo puedes sacarle mayor prove
 slug: si-ya-usas-codigo-abierto-te-contamos-como-puedes-sacarle-mayor-provecho-tu-documentacion-para-tus-articulos-y-publicaciones
 date: 2020-02-17
 author: Rainer Palm
-tags: [open source, documentation]
-category: [documentation]
+tags: [documentación, código, proyectos, artículos]
+categories: [ciencia abierta, código abierto, desarrollo de software]
  
 draft: false
 usePageBundles: true

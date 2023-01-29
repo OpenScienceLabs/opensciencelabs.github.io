@@ -3,8 +3,8 @@ title: "Todas las posibilidades que te ofrece utilizar figshare en tus proyectos
 slug: todas-las-posibilidades-que-te-ofrece-utilizar-figshare-en-tus-proyectos
 date: 2020-12-21
 author: Anavelyz Pérez
-tags: [open science]
-category: [open science ]
+tags: [figshare, proyectos, plataforma]
+categories: [ciencia abierta, investigación abierta, acceso abierto]
  
 draft: false
 usePageBundles: true

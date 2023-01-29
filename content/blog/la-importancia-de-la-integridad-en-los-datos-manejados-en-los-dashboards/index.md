@@ -3,8 +3,8 @@ title: "La importancia de la integridad en los datos manejados en los dashboards
 slug: la-importancia-de-la-integridad-en-los-datos-manejados-en-los-dashboards
 date: 2020-05-14
 author: Anavelyz Pérez
-tags: [dashboard]
-category: [dashboard]
+tags: [datos, dashboard, herramientas, código]
+categories: [ciencia de datos]
  
 draft: false
 usePageBundles: true

@@ -3,8 +3,8 @@ title: "Herramientas de visualización en R"
 slug: herramientas-de-visualizacion-en-r
 date: 2020-04-09
 author: Yurely Camacho
-tags: [r, visualization, lattice, ggplot2, tidyverse, ggmap, plotly, shiny]
-category: [r]
+tags: [datos, visualización de datos, lattice, ggplot2, tidyverse, ggmap, plotly, shiny]
+categories: [ciencia abierta, código abierto,  R]
 aliases: ["/blog/0032-visualizacionR/herramientas-de-visualizacion-en-r/"]
 draft: false
 usePageBundles: true

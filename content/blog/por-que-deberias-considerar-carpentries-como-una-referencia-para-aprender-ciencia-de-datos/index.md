@@ -3,8 +3,8 @@ title: "Por qué deberías considerar a The Carpentries como una referencia para
 slug: por-que-deberias-considerar-carpentries-como-una-referencia-para-aprender-ciencia-de-datos
 date: 2021-03-08
 author: Anavelyz Pérez
-tags: [data science, learning, carpentries, ciencia de datos]
-category: [learning]
+tags: [carpentries, datos, proyectos]
+categories: [ciencia de datos, aprendizaje]
  
 draft: false
 usePageBundles: true

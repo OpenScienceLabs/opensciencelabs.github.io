@@ -9,9 +9,6 @@ que-es-el-acceso-abierto-y-por-que-debes-tenerlo-en-cuenta-para-tus-investigacio
 [ciencia abierta, acceso abierto]","[research, projects]
 [investigación, proyectos]"
 plataformas-que-te-ayudaran-en-la-gestion-de-tu-grupo-de-trabajo,[organization/team management] [organización/gestión de equipos],"[communication, management] [comunicación, gestión]"
-ibis-framework,"[programming languages/python, data science]
-[lenguajes de programación/python, ciencia de datos]","[ibis, dataframe, data, pandas]
-[ibis, dataframe, datos, pandas]"
 como-aplicar-la-investigacion-reproducible-proyectos-de-codigo-abierto,"[open science/open research, open source] [ciencia abierta/investigación abierta, código abierto]","[code, reproducibility, research]
 [código, reproducibilidad, investigación] "
 por-que-deberias-considerar-carpentries-como-una-referencia-para-aprender-ciencia-de-datos,"[data science]
@@ -23,13 +20,14 @@ que-son-las-mentorias-y-como-potencian-los-proyectos-de-ciencia-abierta,"[organi
 [proyectos]"
 te-hablamos-de-cinco-repositorios-con-datos-abiertos-sobre-paises,"[open science/open data, open access] [ciencia abierta/datos abiertos, acceso abierto]","[data, repository, access] 
 [datos, repositorios, acceso]"
-como-aplicar-los-principios-de-acceso-abierto-en-tus-investigaciones,[open science/open access],"[research, repository]
+como-aplicar-los-principios-de-acceso-abierto-en-tus-investigaciones,"[open science/open access]
+[ciencia abierta/datos abiertos, acceso abierto]","[research, repository]
 [investigación, repositorios]"
 visualiza-tus-datos-en-r-con-ggplot-y-gganimate,"[open science/open source, programming languages/ R] [ciencia abierta/código abierto, lenguajes de programación/R]","[visualization, data, graph, ggplot, gganimate] [visualización,datos, gráfico, ggplot, gganimate]"
 que-es-la-ciencia-abierta,"[open science]
 [ciencia abierta]","[research, data]
 [investigación, datos]"
-dibuja-tus-mapas-en-r-usando-archivos-de-formato-shapefile,"[open science/open source, programming languages/ R] [ciencia abierta/código abierto, lenguajes de programación/R]","[maps, data, visualization, shapefile, R][mapas, datos, visualización, shapefile, R]"
+dibuja-tus-mapas-en-r-usando-archivos-de-formato-shapefile,[open science] [ciencia abierta],"[maps, data, visualization, shapefile, R][mapas, datos, visualización, shapefile, R]"
 cinco-tips-para-aumentar-tu-productividad-con-git,"[software development/version control]
 [desarrollo de software/control de versiones]","[git, branchs, commits, repository, changes]
 [git, ramas, commits, repositorios, cambios]"
@@ -149,3 +147,5 @@ te-ensenamos-lugares-para-aprender-los-fundamentos-de-la-ciencia-abierta,"[open 
 [ciencia abierta]","[data, research, manual]
 [datos, investigación, manual]"
 primeros-pasos-con-spyder,"[open science/open source, programming/IDE, programming languages/Python][ciencia abierta/código abierto, programación/IDE, lenguajes de programación/Python]","[spyder, code, py, variables][spyder, código, py, variables]"
+ibis-framework,"[open science/open data, open access][ciencia abierta/datos abiertos, acceso abierto]","[ibis, dataframe, data, pandas]
+[ibis, dataframe, datos, pandas]"

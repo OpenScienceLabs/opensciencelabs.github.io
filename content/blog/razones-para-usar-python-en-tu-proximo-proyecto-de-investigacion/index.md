@@ -3,8 +3,8 @@ title: "10 razones para usar Python en tu proximo proyecto de investigación"
 slug: razones-para-usar-python-en-tu-proximo-proyecto-de-investigacion
 date: 2020-01-22
 author: Rainer Palm
-tags: [open science]
-category: [python]
+tags: [bibliotecas, herramientas, código]
+categories: [ciencia abierta, investigación abierta, ciencia de datos, Python]
  
 draft: false
 usePageBundles: true

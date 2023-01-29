@@ -3,8 +3,8 @@ title: "Crea una aplicación web eficiente y atractiva para el manejo, exploraci
 slug: apache-superset
 date: 2022-10-26
 author: Yurely Camacho
-tags: [visualización, dashboard, superset, bi, sql]
-category: [citizen science]
+tags: [apache superset, datos, visualización de datos, dashboard]
+categories: [ciencia de datos, SQL]
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

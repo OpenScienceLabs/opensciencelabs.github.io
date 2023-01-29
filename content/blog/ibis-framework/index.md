@@ -3,8 +3,8 @@ title: "Ibis -  Escalonando a Análise de Dados com Expressões Ibis"
 slug: ibis-framework
 date: 2022-08-03
 author: Luã Bida Vacaro
-tags: [python, sql, base de dados, ibis]
-category: [python]
+tags: [ibis, dataframe, datos, pandas]
+categories: [ciencia abierta, datos abiertos, acceso abierto, Python, SQL]
  
 draft: false
 usePageBundles: true

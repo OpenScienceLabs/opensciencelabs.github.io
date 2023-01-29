@@ -3,8 +3,8 @@ title: "Primeros pasos con Spyder"
 slug: primeros-pasos-con-spyder
 date: 2021-02-22
 author: Yurely Camacho
-tags: [ide, interfaz, python, spyder, spyder online]
-category: [ide]
+tags: [spyder, código]
+categories: [ciencia abierta, código abierto, programación, IDE, Python]
  
 draft: false
 usePageBundles: true

@@ -3,8 +3,8 @@ title: "Code Abbey una plataforma para mejorar tu habilidad en programación"
 slug: code-abbey-una-plataforma-mejorar-tu-habilidad-en-programacion
 date: 2022-03-22
 author: Ever Vino
-tags: [open science, programacion, recursos]
-category: [programming]
+tags: [codeabbey, retos de programación]
+categories: [programación]
  
 draft: false
 usePageBundles: true

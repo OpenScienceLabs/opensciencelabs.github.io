@@ -3,8 +3,8 @@ title: "Algunos proyectos entretenidos de código abierto"
 slug: algunos-proyectos-entretenidos-de-codigo-abierto
 date: 2020-01-10
 author: Rainer Palm
-tags: [open source]
-category: [open source]
+tags: [código, proyectos]
+categories: [ciencia abierta, código abierto]
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

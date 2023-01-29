@@ -3,8 +3,8 @@ title: "Te hablamos del uso de dashboards para visualización de datos de tu pr�
 slug: te-hablamos-del-uso-de-dashboards-para-visualizacion-de-datos-de-tu-proximo-proyecto
 date: 2020-03-11
 author: Rainer Palm
-tags: [open science]
-category: [dashboard]
+tags: [visualización de datos, proyectos, datos, código, dashboard, framework]
+categories: [ciencia abierta]
  
 draft: false
 usePageBundles: true
