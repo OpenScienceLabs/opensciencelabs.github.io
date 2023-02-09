@@ -30,7 +30,7 @@ singlecolumn = true
     <div class="col-md-7">
       <div class="card-body">
         <h5 class="card-title">Ivan Ogasawara</h5>
-        <span class="badge bg-warning">1 cupo disponible</span>
+        <span class="badge bg-danger">0 cupo disponible</span>
         <span class="badge bg-warning">Mentoría Grátis</span>
         <p class="card-text">
           <small>
@@ -72,7 +72,7 @@ singlecolumn = true
     <div class="col-md-7">
       <div class="card-body">
         <h5 class="card-title">Ever Vino</h5>
-        <span class="badge bg-warning">1 cupo disponible</span>
+        <span class="badge bg-danger">0 cupo disponible</span>
         <span class="badge bg-warning">Mentoría Grátis</span>
         <p class="card-text">
           <small>
@@ -112,7 +112,7 @@ singlecolumn = true
     <div class="col-md-7">
       <div class="card-body">
         <h5 class="card-title">Luis Gago Casas</h5>
-        <span class="badge bg-warning">1 cupo disponible</span>
+        <span class="badge bg-danger">0 cupo disponible</span>
         <span class="badge bg-warning">Mentoría Grátis</span>
         <p class="card-text">
           <small>
@@ -153,7 +153,7 @@ singlecolumn = true
     <div class="col-md-7">
       <div class="card-body">
         <h5 class="card-title">Evelyn Donis</h5>
-        <span class="badge bg-warning">1 cupo disponible</span>
+        <span class="badge bg-warning">5 cupo disponible</span>
         <span class="badge bg-warning">Mentoría Grátis</span>
         <p class="card-text">
           <small>
@@ -226,6 +226,7 @@ singlecolumn = true
           <small>
             <bold>Idiomas para la mentoría</bold>:
             <span class="badge bg-light text-dark">Español</span>
+            <span class="badge bg-light text-dark">Inglés</span>
             <br/>
             Matemático con matetría en ingeniería computacional y matemática.
             Área de investigación: Ecuaciones Diferenciales Ordinarias.
