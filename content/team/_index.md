@@ -40,6 +40,16 @@ teams:
         github_url: https://github.com/luisgagocasas
         # github_sponsor:
 
+      - name: Agustina Pesce Lopez
+        bio: |
+          I'm a Physicist and a PhD in Geophysics. All those years, I worked in applied
+          geophysics and studied subduction zones through geodynamical numerical modeling.
+          I'm also committed to contribute to open-source software projects to improve 
+          science openness and reproducibility.
+        image_url: https://avatars.githubusercontent.com/u/13738018?v=4
+        github_url: https://github.com/aguspesce
+        # github_sponsor:
+
   - name: Interns
     members:
       - name: Anavelyz Pérez
