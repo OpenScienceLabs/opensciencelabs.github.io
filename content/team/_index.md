@@ -59,15 +59,6 @@ teams:
         github_url: https://github.com/Anavelyz
         # github_sponsor:
 
-      - name: Luã Bida Vacaro
-        bio: |
-          Software Developer and DevOps
-        image_url: https://avatars.githubusercontent.com/u/82233055?v=4
-        type: team-template
-        date: 2022-04-12
-        github_sponsor: https://github.com/sponsors/luabida/button
-        github_url: https://github.com/luabida
-
       - name: Yurely Camacho
         bio: |
           Statistician, data analyst. Python and R learner.
@@ -111,6 +102,17 @@ teams:
         image_url: https://avatars.githubusercontent.com/u/3450741?v=4%22
         github_url: https://github.com/esloch
         github_sponsor: https://github.com/sponsors/esloch/button
+
+  - name: Alumni
+    members:
+      - name: Luã Bida Vacaro
+        bio: |
+          Software Developer and DevOps
+        image_url: https://avatars.githubusercontent.com/u/82233055?v=4
+        type: team-template
+        date: 2022-04-12
+        github_sponsor: https://github.com/sponsors/luabida/button
+        github_url: https://github.com/luabida
 ---
 
 # OSL Team
