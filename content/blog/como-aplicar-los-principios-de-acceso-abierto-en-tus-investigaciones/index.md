@@ -3,8 +3,8 @@ title: "¿Cómo aplicar los principios de acceso abierto en tus investigaciones?
 slug: como-aplicar-los-principios-de-acceso-abierto-en-tus-investigaciones
 date: 2020-03-30
 author: Anavelyz Perez
-tags: [repositorios]
-categories: [ciencia abierta, datos abiertos, acceso abierto]
+tags: [open science]
+category: [open access]
  
 draft: false
 usePageBundles: true
