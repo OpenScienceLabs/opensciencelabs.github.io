@@ -24,4 +24,4 @@ static static analysis tools, etc. Thanks to the grant, dependencies
 will be and some configuration changes.
 
 You can visit the Cookiecutter Python project at:
-https://github.com/osl-incubator/cookiecutter-python/
+https://github.com/osl-incubator/osl-python-template

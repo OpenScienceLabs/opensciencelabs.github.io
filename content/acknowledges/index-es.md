@@ -26,4 +26,4 @@ Gracias a la subvención se actualizarán las dependencias y se realizarán
 algunos cambios de configuración.
 
 Puedes visitar el proyecto de Cookiecutter-Python en:
-https://github.com/osl-incubator/cookiecutter-python/ 
+https://github.com/osl-incubator/osl-python-template
