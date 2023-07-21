@@ -3,56 +3,149 @@
 {{- $p := .Params }}
 {{- $scratch := newScratch }}
 {{- if isset $p "image" }}
-  {{- $scratch.Set "image" $p.image }}
+{{- $scratch.Set "image" $p.image }}
 {{- else }}
-  {{ $scratch.Set "image" $s.fallBackOgImage }}
+{{ $scratch.Set "image" $s.fallBackOgImage }}
 {{- end }}
 {{- $image := $scratch.Get "image" }}
 {{- $bg := absLangURL (path.Join "images" $image) }}
-<div class="wrap content">
 
-    <section class="landing-content">
-    <div >
-      <img src="./icons/logo-osl.svg" alt="" style="width:450px"/>
-      
-      <h3>Buscamos ofrecer un espacio virtual amable, productivo y atractivo para el aprendizaje de las herramientas más útiles y las mejores prácticas disponibles en la Ciencia Abierta y el Código Abierto.</h3>
+<style>
+  .partners img {
+    height: 200px !important;
+  }
+
+</style>
+
+<div class="container">
+
+  <section class="wrap content" id="home">
+
+    <div class="row align-items-center">
+
+      <div
+        class="col-md-11 col-xl-6 col-xxl-7 order-0 order-sm-1 align-text-top text-md-end">
+        <img src="images/home/Teacher-bro.png"
+          alt="https://storyset.com/people" />
+      </div>
+
+      <div class="col-md-75 col-xl-6 col-xxl-5 text-md-start text-center">
+        <h1 class="fw-bolder fs-6 fs-xxl-7 mb-2">Open ScienceLabs,</h1>
+        <p class="fs-1 mb-2">
+          La comunidad abierta para la ciencia y tecnología.
+        </p>
+        <p>
+          Open Science Labs, es una comunidad amigable, colaborativa y
+          apasionada
+          por la ciencia y la tecnología, con el principal objetivo de promover
+          la Ciencia Abierta y el Código Abierto, proporcionándo herramientas
+          y diseminando las mejores prácticas para que podamos aprender, crecer
+          y contribuir activamente en este emocionante campo.
+        </p>
+        <a class="btn btn-primary me-2"
+          href="https://opensciencelabs.org/discord" role="button">¡Ingresa a
+          nuestro discord!
+        </a>
+      </div>
     </div>
-    </section>
-    
-    <section class="info">
-      <h1>Queremos crear oportunidades</h1>
-      <h3>
-        Sabemos que se requiere de una masa crítica de personas que colaboren en proyectos de ciencia abierta, para que esta y sus resultados se proyecten hacia la solución real de problemas.
-      </h3>
-      
-      <h3>También conocemos que los proyectos a abordar bajo un enfoque de ciencia abierta, pueden atender tanto a problemas globales como a situaciones cotidianas en el entorno inmediato de esta masa crítica.</h3>
-    
-      <br>
-      <h1>La experiencia reciente nos lo muestra así.</h1>
+  </section>
 
-        <h3>Por eso, construir de forma colaborativa contenidos y experiencias que enriquezcan y hagan más atractivos y útiles los procesos de aprendizaje, es la clave del presente y del futuro de la investigación abierta.</h3>
+  <section class="wrap content">
+    <div class="row align-items-center">
+      <div class="col-sm-12 col-md-5 col-lg-5 order-0">
+        <img src="images/home/Soft skills-bro.png" />
+      </div>
 
-        <h3>En Open Science Labs, te ofrecemos un espacio amplio con contenidos, acompañamiento, formación y promoción en las herramientas, las competencias y las buenas prácticas que necesitas en tu proceso de autoformación para la Ciencia Abierta.</h3>
+      <div
+        class="col-sm-12 col-md-7 col-lg-7 text-md-start text-center order-1 order-md-0">
+        <p class="fs-1 mb-2">
+          ¡Superando desafíos científicos y tecnológicos juntos!
+        </p>
 
-        <br>
-      <h1>Roadmap</h1>
-      
-        <h3>
-          Si te interesa saber más sobre los próximos pasos de Open Science Labs,
-          visita nuestro <a href="/guidelines/roadmap/roadmap/">Roadmap</a>.
-        </h3>
-      
-        <br>
-    <h1>Gobernanza</h1>
+        <p>Creemos en la fuerza de la colaboración y en la importancia de unir
+          fuerzas para abordar los desafíos científicos y tecnológicos que
+          enfrentamos en la actualidad. Sabemos que una comunidad diversa y
+          comprometida es clave para impulsar la investigación y encontrar
+          soluciones innovadoras a problemas globales y locales.</p>
 
-    <h3>
-      Para más información sobre la gobernanza de Open Science Labs, puedes
-      acceder a <a href="/guidelines/governance/governance/">nuestro documento
-      de gobernanza</a>.
-    </h3>
+        <p>
+          En Open Science Labs, encontrarás un ambiente acogedor en el que
+          podrás compartir tus conocimientos, aprender de otros miembros de la
+          comunidad y trabajar en proyectos conjuntos. Además, podrás encontrar
+          recursos, información y apoyo para que puedas
+          desarrollar tus habilidades en ciencia abierta y tecnología de código
+          abierto.</p>
+      </div>
+    </div>
+  </section>
 
-    </section>
+  <section class="wrap content">
+    <div class="row align-items-center">
+      <div class="col-sm-12 col-md-5 col-lg-5 order-1">
+        <img src="images/home/Company-pana.png" />
+      </div>
 
+      <div
+        class="col-sm-12 col-md-7 col-lg-7 text-md-start text-center order-0">
+        <p class="fs-1 mb-2">
+          ¡Comunidad abierta a personas de todas las disciplinas y niveles de
+          experiencia!
+        </p>
+
+        <p>Nuestra comunidad está abierta a personas de todas las disciplinas y
+          niveles de experiencia. No importa si eres un investigador,
+          estudiante, desarrollador, entusiasta o simplemente alguien curioso
+          por la ciencia y
+          la tecnología; en Open Science Labs, todos son bienvenidos.</p>
+        <p>Únete a nosotros y forma parte de esta emocionante aventura en la que
+          juntos exploraremos nuevos horizontes, fomentaremos la colaboración y
+          contribuiremos al avance del conocimiento científico y tecnológico de
+          manera abierta y transparente.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Asociados</h2>
+
+    <div class="card-columns" class="partners">
+      <div class="card">
+        <a href="https://info.dengue.mat.br/">
+          <center><img
+              src="https://raw.githubusercontent.com/AlertaDengue/AlertaDengue/main/AlertaDengue/static/img/info-dengue-logo-multicidades.png"
+              alt="AlertaDengue">
+        </a></center>
+      </div>
+      <div class="card">
+        <a href="https://epigraphhub.org/">
+          <center><img
+              src="https://raw.githubusercontent.com/thegraphnetwork/EpiGraphHub/main/images/epigraphhub.png"
+              alt="EpiGraphHub">
+        </a></center>
+      </div>
+      <div class="card">
+        <a href="https://arxlang.org/">
+          <center><img
+              src="https://avatars.githubusercontent.com/u/78741258?s=200&v=4"
+              class="" alt="ArxLang">
+        </a></center>
+      </div>
+      <div class="card">
+        <a href="https://www.pyopensci.org/">
+          <center><img
+              src="https://avatars.githubusercontent.com/u/28938222?s=200&v=4"
+              class="" alt="pyOpenSci">
+        </a></center>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <a href=https://pydatastructs.readthedocs.io/en/stable
+            style="text-decoration: None; ">
+            <img
+              src="https://avatars.githubusercontent.com/u/50073448?s=200&v=4" />
+          </a>
+        </div>
+      </div>
+  </section>
 </div>
 {{- end }}
-

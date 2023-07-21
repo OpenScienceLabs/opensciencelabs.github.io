@@ -37,7 +37,18 @@
   parent = "about"
   name = "Asociados"
   url = "/partners/"
-
+[[main]]
+  parent = "about"
+  name = "Actividades"
+  url = "/archives/"
+[[main]]
+  parent = "about"
+  name = "Reconocimientos"
+  url = "/acknowledges/"
+[[main]]
+  parent = "about"
+  name = "FAQ"
+  url = "/es/faq/"
 
 #[[main]]
 #  name = "About"

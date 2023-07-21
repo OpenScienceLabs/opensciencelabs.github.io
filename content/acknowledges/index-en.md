@@ -1,12 +1,8 @@
 ---
-menu:
-  main:
-    name: Acknowledges
-    identifier: ack
-    weight: 120
 showdate: false
-showreadtime: false 
+showreadtime: false
 draft: true
+aliases: ["/acknowledges/"]
 ---
 
 ## Python Sotfware Foundation (PSF)
