@@ -11,8 +11,22 @@
 {{- $bg := absLangURL (path.Join "images" $image) }}
 
 <style>
-  .partners img {
-    height: 200px !important;
+  .card-columns div {
+    height: 200px;
+  }
+
+  .card-columns img {
+    height: 160px;
+  }
+
+  .card-columns a {
+    text-decoration: None;
+  }
+
+  footer.citation * {
+    margin-top: 20px;
+    font-size: 10px !important;
+    font-style: italic !important;
   }
 
 </style>
@@ -109,43 +123,43 @@
     <h2>Asociados</h2>
 
     <div class="card-columns" class="partners">
-      <div class="card">
+      <div class="card align-middle text-center">
         <a href="https://info.dengue.mat.br/">
-          <center><img
-              src="https://raw.githubusercontent.com/AlertaDengue/AlertaDengue/main/AlertaDengue/static/img/info-dengue-logo-multicidades.png"
-              alt="AlertaDengue">
-        </a></center>
+          <img src="/images/partners/info-dengue.png" alt="AlertaDengue">
+        </a>
       </div>
-      <div class="card">
+      <div class="card align-middle text-center">
         <a href="https://epigraphhub.org/">
-          <center><img
-              src="https://raw.githubusercontent.com/thegraphnetwork/EpiGraphHub/main/images/epigraphhub.png"
-              alt="EpiGraphHub">
-        </a></center>
+          <img src="/images/partners/epigraphhub.png" alt="EpiGraphHub">
+        </a>
       </div>
-      <div class="card">
+      <div class="card align-middle text-center">
         <a href="https://arxlang.org/">
-          <center><img
-              src="https://avatars.githubusercontent.com/u/78741258?s=200&v=4"
-              class="" alt="ArxLang">
-        </a></center>
+          <img src="/images/partners/arx.png" alt="ArxLang">
+        </a>
       </div>
-      <div class="card">
+      <div class="card align-middle text-center">
         <a href="https://www.pyopensci.org/">
-          <center><img
-              src="https://avatars.githubusercontent.com/u/28938222?s=200&v=4"
-              class="" alt="pyOpenSci">
-        </a></center>
+          <img src="/images/partners/pyopensci.png" alt="pyOpenSci">
+        </a>
       </div>
-      <div class="card">
-        <div class="card-body">
-          <a href=https://pydatastructs.readthedocs.io/en/stable
-            style="text-decoration: None; ">
-            <img
-              src="https://avatars.githubusercontent.com/u/50073448?s=200&v=4" />
-          </a>
-        </div>
+      <div class="card align-middle text-center">
+        <a href="https://pydatastructs.readthedocs.io/en/stable">
+          <img src="/images/partners/pydatastructs.png" />
+        </a>
+      </div>
+      <div class="card align-middle text-center">
+        <a href="https://igdore.org/">
+          <img src="/images/partners/IGDORE-logo-200pxx200px.png" />
+        </a>
       </div>
   </section>
+  <footer class="citation">
+    <p>
+      *Some images were obtained from
+      <a href="https://storyset.com/education">Education illustrations by
+        Storyset</a>
+    </p>
+  </footer>
 </div>
 {{- end }}
