@@ -1,12 +1,10 @@
 ---
-menu:
-  main:
-    name: Acknowledges
-    identifier: ack
-    weight: 120
+title: "Agradecimientos a la Python Software Foundation por la subvención de nuestro proyecto de CookieCutter"
+author: Anavelyz Perez
 showdate: false
-showreadtime: false 
+showreadtime: false
 draft: true
+aliases: ["/acknowledges/"]
 ---
 
 ## Python Sotfware Foundation (PSF)

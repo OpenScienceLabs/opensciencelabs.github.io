@@ -1,12 +1,8 @@
 ---
-menu:
-    main:
-        name: Actividades
-        identifier: archives
-        weight: 110
 showdate: false
-showreadtime: false 
+showreadtime: false
 showauthor: false
+aliases: ["/archives/"]
 ---
 
 ## Pycafe charlas

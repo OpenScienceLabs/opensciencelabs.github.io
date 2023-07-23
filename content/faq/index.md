@@ -1,12 +1,7 @@
 ---
-menu:
-    main:
-        name: Preguntas frecuentes
-        identifier: faq
-        weight: 120
 showdate: false
-
-showreadtime: false 
+showreadtime: false
+aliases: ["/es/faq"]
 ---
 
 

@@ -1,13 +1,8 @@
 ---
-menu:
-    main:
-        name: FAQ Open Science Labs
-        identifier: faq
-        weight: 120
 showdate: false
-
-showreadtime: false 
+showreadtime: false
 draft: true
+aliases: ["/en/faq/"]
 ---
 
 

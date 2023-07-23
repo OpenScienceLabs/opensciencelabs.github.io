@@ -1,13 +1,9 @@
 ---
-menu:
-  main:
-    name: Reconocimientos
-    identifier: ack
-    weight: 120 
 showdate: false
-showreadtime: false 
+showreadtime: false
 usePageBundles: true
---- 
+aliases: ["/acknowledges/"]
+---
 
 ## Python Sotfware Foundation (PSF)
 
