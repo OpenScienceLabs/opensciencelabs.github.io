@@ -9,7 +9,7 @@ categories: [open-source, gsoc]
 draft: false
 usePageBundles: true
 thumbnail: "/GSoC-Vertical.png"
-featureImage: "/header.png"
+featureImage: "/GSoC-Vertical.png"
 ---
 
 ## Google Summer of Code- Week 4th & 7th Midterm Evaluation
