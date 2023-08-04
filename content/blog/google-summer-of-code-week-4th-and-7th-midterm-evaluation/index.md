@@ -31,7 +31,7 @@ After merging this issue I move forward to issue called "Add Hatchling as an opt
 
 [**Hatchling**]() known for its user-friendly nature, was my next target. It promised to simplify the build and deployment processes, which could be particularly beneficial for newcomers to the lab and projects with straightforward requirements. Integrating Hatchling into the lab's ecosystem required thorough documentation and integration tests to ensure its smooth adoption. Overcoming initial hurdles, I was elated to see the positive response from the lab's community as they began adopting Hatchling for their projects. My contribution to this issue is [here](https://github.com/osl-incubator/scicookie/pull/144)
 
-After completetion of this issue I shifted to issue called "Add Scikit-build-core as an option" 
+After completetion of this issue, I jumped to a task to add support for `Scikit-Build-Core`.
 
 ### Scikit-build-core
 
