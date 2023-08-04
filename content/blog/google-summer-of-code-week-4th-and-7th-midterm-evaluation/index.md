@@ -37,6 +37,8 @@ After completetion of this issue, I jumped to a task to add support for `Scikit-
 
 [**Scikit-build-core**]() a cross-platform build-system, offered a robust option for integrating CPython extensions. While challenging to implement, I recognized its potential to support projects with complex native code dependencies. My experience with Scikit-build exposed me to advanced build and packaging concepts, and I was thrilled to see it complementing the existing build-systems in the lab, catering to a broader range of projects. My contribution to this issue is [here](https://github.com/osl-incubator/scicookie/pull/161)
 
+### Conclusions
+
 In conclusion, my Google Summer of Code experience with implementing new build-systems for the Open-Science Lab was a transformative journey. Overcoming hurdles with Maturin, embracing user-friendliness with Hatchling, exploring the potential of Scikit-build.I realized the importance of innovation and adaptability in the world of open-source development. This experience has not only enriched my technical skills but also instilled in me a passion for contributing to projects that drive positive change in the world of scientific research. As I look to the future, I am excited to continue this journey, collaborating with the open-source community to create solutions that empower researchers and advance the boundaries of knowledge.
 
 You can read my previous blog [here](https://medium.com/@ayeankit)
