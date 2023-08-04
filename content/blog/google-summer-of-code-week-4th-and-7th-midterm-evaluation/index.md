@@ -25,7 +25,7 @@ In this period, I started working on to add support for `Maturin` build-system.
 
 [**Maturin**]() was the first build-system I explored. Its unique approach of building Python bindings for Rust libraries intrigued me, and I wondered if it could provide a novel solution to the lab's needs. The seamless blending of Python and Rust offered the potential for unparalleled performance and memory efficiency in research projects. However, I faced a steep learning curve to master the intricacies of Rust and its integration with Python. Overcoming these challenges was a significant achievement, and I managed to create a functional prototype that demonstrated Maturin's potential to revolutionize the Open-Science Lab's workflow. My contribution to this issue is [here](https://github.com/osl-incubator/scicookie/pull/152)
 
-After merging this issue I move forward to issue called "Add Hatchling as an option" 
+After merging this pull request, I started to add support for `Hatchling` build-system.
 
 ### Hatchling
 
