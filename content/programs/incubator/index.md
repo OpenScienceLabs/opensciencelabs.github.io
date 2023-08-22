@@ -12,7 +12,7 @@ singlecolumn = true
 
 Open Science Labs is committed to fostering the growth and development of
 innovative scientific projects and/or software for support tasks like DevOps,
-Automation, Daetc. Our Incubator Program is designed to provide structure and
+Automation, etc. Our Incubator Program is designed to provide structure and
 support at various stages of development, helping projects grow from a mere idea
 to a fully-fledged, sustainable project. The program is divided into three
 distinct phases:
