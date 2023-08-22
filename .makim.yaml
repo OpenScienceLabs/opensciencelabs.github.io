@@ -1,0 +1,10 @@
+version: 1.0
+groups:
+  pages:
+    targets:
+      build:
+        help: build the static page with hugo
+        run: hugo --minify
+      preview:
+        help: preview the web page dynamically
+        run: hugo server

@@ -5,3 +5,6 @@ channels:
 dependencies:
   - opensciencelabs::hugo-extended
   - pre-commit
+  - pip
+  - pip:
+    - makim==1.8.3
