@@ -4,9 +4,7 @@ menu:
         name: Blog
         identifier: blog
         url: "blog/"
-        weight: -107
+        weight: 100
 title: "Blog"
 
 ---
-
-
