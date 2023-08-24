@@ -18,6 +18,10 @@
   name = "Incubator Program"
   url = "/programs/incubator/"
 [[main]]
+  parent = "programs"
+  name = "Internship OSL Program"
+  url = "/programs/internship/"
+[[main]]
   identifier = "mentoring"
   name = "Mentorías"
   weight = 121
