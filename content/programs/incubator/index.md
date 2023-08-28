@@ -1,7 +1,7 @@
 +++
 title = "Incubator Program"
 description = "Incubator Program"
-date = "2019-02-28"
+date = "2023-08-23"
 aliases = ["incubator"]
 author = "OSL Team"
 sidebar = false
