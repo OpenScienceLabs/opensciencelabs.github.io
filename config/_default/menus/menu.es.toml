@@ -19,8 +19,28 @@
   url = "/programs/incubator/"
 [[main]]
   parent = "programs"
-  name = "Internship OSL Program"
+  name = "Internship Program"
   url = "/programs/internship/"
+[[main]]
+  parent = "programs"
+  name = "Affiliation Program"
+  url = "/programs/affiliation/"
+[[main]]
+  parent = "programs"
+  name = "Ambassadors Program"
+  url = "/programs/ambassadors/"
+[[main]]
+  parent = "partners"
+  name = "Partners Program"
+  url = "/programs/partners/"
+[[main]]
+  parent = "programs"
+  name = "Packaging Support Program"
+  url = "/programs/packaging-support/"
+[[main]]
+  parent = "programs"
+  name = "Virtual-Labs"
+  url = "/programs/virtual-labs/"
 [[main]]
   identifier = "mentoring"
   name = "Mentorías"
