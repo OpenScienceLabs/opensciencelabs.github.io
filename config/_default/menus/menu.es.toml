@@ -30,7 +30,7 @@
   name = "Ambassadors Program"
   url = "/programs/ambassadors/"
 [[main]]
-  parent = "partners"
+  parent = "programs"
   name = "Partners Program"
   url = "/programs/partners/"
 [[main]]
