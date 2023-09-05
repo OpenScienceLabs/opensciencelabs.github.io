@@ -64,7 +64,22 @@ For any further inquiries, please contact our dedicated Internship Program team
 at OSL. Together, we can shape the future of open science and open source
 projects.
 
-## Projects for the Internship Program
+## Projects available for the Internship Program
 
-Stay tuned! We'll soon be releasing a curated list of exciting projects that
-will be part of this program.
+Below is a list of projects currently available for the Internship Program:
+
+| Repository Name                    | Description                                          |
+| ---------------------------------- | ---------------------------------------------------- |
+| conda-forge-warning                | A panel that shows packages from conda-forge with no maintenance activities  |
+| pyreaddbc                          |                                                      |
+| ghreport                           | GitHub Report tool                                   |
+| satellite-weather-downloader       |                                                      |
+| scicookie                          | Cookiecutter template for a Python package.          |
+| makim                              | Make Improved                                        |
+| gh-check-pr-is-updated             |                                                      |
+| github-actions-self-hosted-runner  |                                                      |
+| containers-sugar                   | Simplify the usage of containers                     |
+| github-actions-chatgpt-pr-reviewer |                                                      |
+| semantic-release-pr-title-check    | Checks for Angular commit message format in the Pull Request Title.           |
+| CrawlClima                         |                                                      |
+| downloader-app                     |                                                      |
