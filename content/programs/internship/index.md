@@ -71,15 +71,16 @@ Below is a list of projects currently available for the Internship Program:
 | Repository Name                    | Description                                          |
 | ---------------------------------- | ---------------------------------------------------- |
 | conda-forge-warning                | A panel that shows packages from conda-forge with no maintenance activities  |
-| pyreaddbc                          |                                                      |
+| pyreaddbc                          | A Python library for working with DBase database file. |
 | ghreport                           | GitHub Report tool                                   |
-| satellite-weather-downloader       |                                                      |
+| satellite-weather-downloader       | A system for downloading, transforming and analysing Copernicus weather data using Xarray. |
 | scicookie                          | Cookiecutter template for a Python package.          |
 | makim                              | Make Improved                                        |
-| gh-check-pr-is-updated             |                                                      |
-| github-actions-self-hosted-runner  |                                                      |
+| gh-check-pr-is-updated             | This GitHub actions aims to check if the current PR's branch is updated on top of the upstream branch. |
+| github-actions-self-hosted-runner  | Dockerfile for the creation of a GitHub Actions runner image to be deployed dynamically. |
 | containers-sugar                   | Simplify the usage of containers                     |
-| github-actions-chatgpt-pr-reviewer |                                                      |
+| github-actions-chatgpt-pr-reviewer | This GitHub actions uses OpenAI ChatGPT in order to review the changes presented in a PR and will recommend improvements. |
 | semantic-release-pr-title-check    | Checks for Angular commit message format in the Pull Request Title.           |
-| CrawlClima                         |                                                      |
-| downloader-app                     |                                                      |
+| CrawlClima                         | This package contains the PEGATWEETS and PEGATEMPERATURA modules for automatically capturing tweets and weather data. |
+| downloader-app                     | A shapefiles downloader.|
+| fqlearn                            | A graphic solver tool to teach mass transfer and thermodynamics. |
