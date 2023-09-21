@@ -84,3 +84,4 @@ Below is a list of projects currently available for the Internship Program:
 | CrawlClima                         | This package contains the PEGATWEETS and PEGATEMPERATURA modules for automatically capturing tweets and weather data. |
 | downloader-app                     | A shapefiles downloader.|
 | fqlearn                            | A graphic solver tool to teach mass transfer and thermodynamics. |
+| pydatastructs                      | PyDataStructs aims to be a Python package for various data structures and algorithms (including their parallel implementations). |
