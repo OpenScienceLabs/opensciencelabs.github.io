@@ -68,6 +68,8 @@ projects.
 
 Below is a list of projects currently available for the Internship Program:
 
+To apply for the internship program fill out the [form](https://github.com/OpenScienceLabs/request-forms/issues/new?&title=Internship+Apply+YOUR+NAME+HERE&labels=internship&template=en-internship.yaml)
+
 | Repository Name                    | Description                                          |
 | ---------------------------------- | ---------------------------------------------------- |
 | conda-forge-warning                | A panel that shows packages from conda-forge with no maintenance activities  |
@@ -84,3 +86,4 @@ Below is a list of projects currently available for the Internship Program:
 | CrawlClima                         | This package contains the PEGATWEETS and PEGATEMPERATURA modules for automatically capturing tweets and weather data. |
 | downloader-app                     | A shapefiles downloader.|
 | fqlearn                            | A graphic solver tool to teach mass transfer and thermodynamics. |
+| pydatastructs                      | PyDataStructs aims to be a Python package for various data structures and algorithms (including their parallel implementations). |
