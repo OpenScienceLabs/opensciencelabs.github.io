@@ -86,6 +86,47 @@ Graduated projects are available at
   detailing achievements and future plans.
 - Undergo a final review and approval by OSL’s governing board.
 
+#### Evaluation for Scientific Python Projects via PyOpenSci
+
+For all Scientific Python projects under the Open Science Labs Incubator
+program, the evaluation process will be conducted via
+[pyOpenSci](https://www.pyopensci.org/), a community-led organization that
+offers peer reviews of Python software to enhance its quality, usability, and
+long-term maintainability. These peer reviews are pivotal in advancing the
+open-source tools that underpin open science initiatives.
+
+#### Benefits of Using pyOpenSci for Evaluation
+
+1. **High-Quality Review**: pyOpenSci's review process focuses on ensuring that
+   your Python package meets high standards in terms of code quality,
+   documentation, and usability.
+
+2. **JOSS Acceptance**: The Journal of Open Source Software (JOSS) recognizes
+   the pyOpenSci peer review, allowing your project to reap the benefits of both
+   pyOpenSci and JOSS through a single review process.
+
+3. **Community-Led**: Gain insights and recommendations from experts in the open
+   science and Python communities.
+
+##### Guidelines and Review Process
+
+- **Project Guidelines**: All projects should strictly adhere to pyOpenSci's
+  packaging guidelines which can be accessed
+  [here](https://www.pyopensci.org/python-package-guide/).
+
+- **Peer Review Process**: The detailed guide for pyOpenSci's peer review
+  process can be found
+  [here](https://www.pyopensci.org/about-peer-review/index.html). We highly
+  recommend going through this guide to understand what to expect during the
+  review.
+
+By following pyOpenSci's robust evaluation framework, we aim to fortify the
+quality and impact of the Scientific Python projects emerging from the Open
+Science Labs Incubator program. We encourage all projects to actively engage in
+this evaluation process to facilitate their scientific rigor and reach.
+
+## Conclusion
+
 The OSL Incubator Program is a robust pathway for innovative scientific projects
 and projects for support tasks to grow and succeed. We invite all creators,
 researchers, and enthusiasts to explore our program and become part of this
