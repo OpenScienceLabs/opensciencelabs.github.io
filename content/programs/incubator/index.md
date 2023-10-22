@@ -120,10 +120,10 @@ open-source tools that underpin open science initiatives.
   recommend going through this guide to understand what to expect during the
   review.
 
-By following pyOpenSci's robust evaluation framework, we aim to fortify the
-quality and impact of the Scientific Python projects emerging from the Open
-Science Labs Incubator program. We encourage all projects to actively engage in
-this evaluation process to facilitate their scientific rigor and reach.
+The pyOpenSci review process offers a valuable opportunity to enhance the
+quality, usability, and maintainability of your software. Additionally, your
+tool will gain increased visibility and community support once it is accepted
+into the pyOpenSci ecosystem.
 
 ## Conclusion
 
