@@ -249,7 +249,7 @@ algunos roles diferentes que los/as mentores/as pueden estar obligados a tomar:
   del Steering Council de OpenScienceLabs. A partir de esa primera reunión el/la
   aprendiz y el/la mentora coordinarán sus siguientes sesiones para la mentoría.
 - Una vez finalizada la mentoría ambos, mentor/a y aprendiz llenarán un
-  formulario para indicar si la mentoría alacanzó sus objetivos, cuáles fueron
+  formulario para indicar si la mentoría alcanzó sus objetivos, cuáles fueron
   las dificultades y/o razones de conclusión de la mentoría.
 
 ## Código de conducta de mentores (MCOC)
