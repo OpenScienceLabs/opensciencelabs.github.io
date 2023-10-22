@@ -110,7 +110,7 @@ open-source tools that underpin open science initiatives.
 
 ##### Guidelines and Review Process
 
-- **Project Guidelines**: All projects should strictly adhere to pyOpenSci's
+- **Project Guidelines**: All projects should follow pyOpenSci's
   packaging guidelines which can be accessed
   [here](https://www.pyopensci.org/python-package-guide/).
 
