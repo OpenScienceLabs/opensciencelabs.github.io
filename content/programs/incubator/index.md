@@ -88,7 +88,7 @@ Graduated projects are available at
 
 #### Peer review of scientific Python Projects via pyOpenSci
 
-For all Scientific Python projects under the Open Science Labs Incubator
+For all scientific Python projects under the Open Science Labs Incubator
 program, the evaluation process will be conducted via
 [pyOpenSci](https://www.pyopensci.org/), a community-led organization that
 offers peer reviews of Python software to enhance its quality, usability, and
