@@ -101,9 +101,9 @@ open-source tools that underpin open science initiatives.
    your Python package meets high standards in terms of code quality,
    documentation, and usability.
 
-2. **JOSS Acceptance**: The Journal of Open Source Software (JOSS) recognizes
-   the pyOpenSci peer review, allowing your project to reap the benefits of both
-   pyOpenSci and JOSS through a single review process.
+2. **JOSS Acceptance**: The Journal of Open Source Software (JOSS) accepts
+   a pyOpenSci review as their own. As such your project, if it is in scope for JOSS, can reap the benefits of both
+   pyOpenSci and JOSS through a single peer review process.
 
 3. **Community-Led**: Gain insights and recommendations from experts in the open
    science and Python communities.
