@@ -86,7 +86,7 @@ Graduated projects are available at
   detailing achievements and future plans.
 - Undergo a final review and approval by OSL’s governing board.
 
-#### Evaluation for Scientific Python Projects via PyOpenSci
+#### Peer review of scientific Python Projects via pyOpenSci
 
 For all Scientific Python projects under the Open Science Labs Incubator
 program, the evaluation process will be conducted via
