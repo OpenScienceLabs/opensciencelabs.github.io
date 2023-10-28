@@ -135,3 +135,29 @@
 # url = "https://gitlab.com/#"
 # name = "discord"
 # url = "http://discord.opensciencelabs.org/"
+
+
+[[extra_main]]
+  name = "Home 1 "
+  url = ""
+  weight = -110
+
+# Submenus are done this way: parent -> identifier
+[[extra_main]]
+  identifier = "project1"
+  name = "Proyecto1"
+  weight = 10
+[[extra_main]]
+  parent = "project1"
+  name = "Packaging Support Program"
+  url = "/programs/packaging-support/"
+[[extra_main]]
+  parent = "project1"
+  name = "Virtual-Labs"
+  url = "/project1/virtual-labs/"
+[[extra_main]]
+  identifier = "project2"
+  name = "Project2"
+  weight = 121
+  url = ""
+

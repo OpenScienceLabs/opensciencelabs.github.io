@@ -33,4 +33,15 @@
       {{- partialCached "follow" . }}
     </div>
   </nav>
+  <nav class="nav">
+    <div class='nav_center nav_body nav_body_{{ default "left" $params.mobileNavigation }}'>
+      {{ $context := . }}
+      {{ $menuData := .Site.Data.menu }}
+      {{ with $menuData }}
+        {{ partial "extra-nav" (dict "context" $context "menu" $menuData) }}
+        {{- else }}
+          {{ partial "extra-nav" (dict "context" . "menu" .Site.Menus.extra_main) }}
+      {{- end }}
+      
+  </nav>
 </header>
