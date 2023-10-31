@@ -1,10 +1,13 @@
-name: osl-page
+name: osl-web
 channels:
   - nodefaults
   - conda-forge
 dependencies:
-  - opensciencelabs::hugo-extended
+  - python
+  - mkdocs
+  - mkdocs-jupyter
   - pre-commit
   - pip
   - pip:
-    - makim==1.8.3
+    - makim
+    - mkdocs-blogging-plugin

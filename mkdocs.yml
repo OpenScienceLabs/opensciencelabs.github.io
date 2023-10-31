@@ -1,0 +1,31 @@
+site_name: EpiGraphHub
+
+docs_dir: pages
+site_dir: build
+
+theme:
+  name: null
+  custom_dir: 'theme/'
+
+extra_css:
+  - css/style.css
+  - css/index.css
+
+extra_javascript:
+  - js/bundle.js
+  - js/search.js
+  - js/index.json
+
+nav:
+  - Home: 'index.md'
+  - Blog: 'blog/index.md'
+  - Programs: 'programs/index.md'
+  - Mentoring: 'mentoring/index.md'
+
+plugins:
+  - blogging:
+      template: theme/blog-list.html
+      dirs:
+        - blog
+      features:
+        tags: {}

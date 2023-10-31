@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+  .card-columns div {
+    height: 200px;
+  }
+
+  .card-columns img {
+    height: 160px;
+  }
+
+  .card-columns a {
+    text-decoration: None;
+  }
+
+  footer.citation * {
+    margin-top: 20px;
+    font-size: 10px !important;
+    font-style: italic !important;
+  }
+
+</style>
+
+<section class="wrap content extra" id="home">
+
+  <div class="row align-items-center">
+
+    <div
+      class="col-md-11 col-xl-6 col-xxl-7 order-0 order-sm-1 align-text-top text-md-end">
+      <img src="images/home/Teacher-bro.png"
+        alt="https://storyset.com/people" />
+    </div>
+
+    <div class="col-md-75 col-xl-6 col-xxl-5 text-md-start text-center">
+      <h1 class="fw-bolder fs-2 fs-xxl-7 mb-2">Open ScienceLabs,</h1>
+      <p class="fs-1 mb-2">
+        La comunidad abierta para la ciencia y tecnología.
+      </p>
+      <p>
+        Open Science Labs, es una comunidad amigable, colaborativa y
+        apasionada
+        por la ciencia y la tecnología, con el principal objetivo de promover
+        la Ciencia Abierta y el Código Abierto, proporcionando herramientas
+        y diseminando las mejores prácticas para que podamos aprender, crecer
+        y contribuir activamente en este emocionante campo.
+      </p>
+      <a class="btn btn-primary me-2"
+        href="https://opensciencelabs.org/discord" role="button">¡Ingresa a
+        nuestro discord!
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="wrap content">
+  <div class="row align-items-center">
+    <div class="col-sm-12 col-md-5 col-lg-5 order-0">
+      <img src="images/home/Soft skills-bro.png" />
+    </div>
+
+    <div
+      class="col-sm-12 col-md-7 col-lg-7 text-md-start text-center order-1 order-md-0">
+      <p class="fs-1 mb-2">
+        ¡Superando desafíos científicos y tecnológicos juntos!
+      </p>
+
+      <p>Creemos en la fortaleza de la colaboración y en la importancia de unir
+        fuerzas para abordar los desafíos científicos y tecnológicos que
+        enfrentamos en la actualidad. Sabemos que una comunidad diversa y
+        comprometida es clave para impulsar la investigación y encontrar
+        soluciones innovadoras a problemas globales y locales.</p>
+
+      <p>
+        En Open Science Labs, encontrarás un ambiente acogedor en el que
+        podrás compartir tus conocimientos, aprender de otros miembros de la
+        comunidad y trabajar en proyectos conjuntos. Además, podrás encontrar
+        recursos, información y apoyo para que puedas
+        desarrollar tus habilidades en ciencia abierta y tecnología de código
+        abierto.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap content">
+  <div class="row align-items-center">
+    <div class="col-sm-12 col-md-5 col-lg-5 order-1">
+      <img src="images/home/Company-pana.png" />
+    </div>
+
+    <div
+      class="col-sm-12 col-md-7 col-lg-7 text-md-start text-center order-0">
+      <p class="fs-1 mb-2">
+        ¡Comunidad abierta a personas de todas las disciplinas y niveles de
+        experiencia!
+      </p>
+
+      <p>Nuestra comunidad está abierta a personas de todas las disciplinas y
+        niveles de experiencia. No importa si eres un investigador,
+        estudiante, desarrollador, entusiasta o simplemente alguien curioso
+        por la ciencia y
+        la tecnología; en Open Science Labs, todos son bienvenidos.</p>
+      <p>Únete a nosotros y forma parte de esta emocionante aventura en la que
+        juntos exploraremos nuevos horizontes, fomentaremos la colaboración y
+        contribuiremos al avance del conocimiento científico y tecnológico de
+        manera abierta y transparente.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="text-center fs-2">Asociados</h2>
+
+  <div class="card-columns partners">
+    <div class="card align-middle text-center">
+      <a href="https://info.dengue.mat.br/">
+        <img src="/images/partners/info-dengue.png" alt="AlertaDengue">
+      </a>
+    </div>
+    <div class="card align-middle text-center">
+      <a href="https://epigraphhub.org/">
+        <img src="/images/partners/epigraphhub.png" alt="EpiGraphHub">
+      </a>
+    </div>
+    <div class="card align-middle text-center">
+      <a href="https://arxlang.org/">
+        <img src="/images/partners/arx.png" alt="ArxLang">
+      </a>
+    </div>
+    <div class="card align-middle text-center">
+      <a href="https://www.pyopensci.org/">
+        <img src="/images/partners/pyopensci.png" alt="pyOpenSci">
+      </a>
+    </div>
+    <div class="card align-middle text-center">
+      <a href="https://pydatastructs.readthedocs.io/en/stable">
+        <img src="/images/partners/pydatastructs.png" />
+      </a>
+    </div>
+    <div class="card align-middle text-center">
+      <a href="https://igdore.org/">
+        <img src="/images/partners/IGDORE-logo-200pxx200px.png" />
+      </a>
+    </div>
+  </div>
+</section>
+<footer class="citation">
+  <p>
+    *Some images were obtained from
+    <a href="https://storyset.com/education">Education illustrations by
+      Storyset</a>
+  </p>
+</footer>
+
+
+{% endblock %}
