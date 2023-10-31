@@ -3,14 +3,22 @@ title: "Cómo instalar y comenzar a utilizar Tensorflow"
 slug: como-instalar-y-comenzar-utilizar-tensorflow
 date: 2020-09-10
 author: Anavelyz Pérez
-tags: [tensorflow,código, tensorflow, pip, docker]
-categories: [ciencia abierta, código abierto, Python, ciencia de datos, inteligencia artificial]
+tags: [tensorflow, código, tensorflow, pip, docker]
+categories:
+  [
+    ciencia abierta,
+    código abierto,
+    Python,
+    ciencia de datos,
+    inteligencia artificial,
+  ]
 description: |
   Hablar de Tensorflow, es hablar de Machine Learning porque es una plataforma que
   permite y facilita la creación de modelos asociados a algoritmos en los que se
-  configura al equipo involucrado. Esto de manera tal que se obtengan sistemas capaces
-  de construir y entrenar redes neuronales para detectar y descifrar patrones y
-  correlaciones análogos al aprendizaje y razonamiento usados por los humanos.
+  configura al equipo involucrado. Esto de manera tal que se obtengan sistemas
+  capaces de construir y entrenar redes neuronales para detectar y descifrar
+  patrones y correlaciones análogos al aprendizaje y razonamiento usados por los
+  humanos.
 
 draft: false
 usePageBundles: true
@@ -18,33 +26,34 @@ thumbnail: "/header.png"
 featureImage: "/header.png"
 ---
 
-
 <!-- # Cómo instalar y comenzar a utilizar Tensorflow -->
 
 Hablar de Tensorflow, es hablar de Machine Learning porque es una plataforma que
 permite y facilita la creación de modelos asociados a algoritmos en los que se
-configura al equipo involucrado. Esto de manera tal que se obtengan sistemas capaces
-de construir y entrenar redes neuronales para detectar y descifrar patrones y
-correlaciones análogos al aprendizaje y razonamiento usados por los humanos.
+configura al equipo involucrado. Esto de manera tal que se obtengan sistemas
+capaces de construir y entrenar redes neuronales para detectar y descifrar
+patrones y correlaciones análogos al aprendizaje y razonamiento usados por los
+humanos.
 
 <!-- TEASER_END -->
 
 Tensorflow fue ideado y desarrollado por un equipo de programadores de Google.
-El 9 de noviembre de 2015 se publicó bajo una licencia de código abierto Apache 2.0.
+El 9 de noviembre de 2015 se publicó bajo una licencia de código abierto Apache
+2.0.
 
 ## Cómo comenzar a utilizar Tensorflow
 
 Es importante tener en cuenta que antes de instalar y comenzar a utilizar
-Tensorflow es necesario contar con conocimientos previos de Machine
-Learning, Codificación, Matemáticas y Estadística; esto permitirá que las tareas
-de implementación de la plataforma en cualquiera de nuestros proyectos sea más
+Tensorflow es necesario contar con conocimientos previos de Machine Learning,
+Codificación, Matemáticas y Estadística; esto permitirá que las tareas de
+implementación de la plataforma en cualquiera de nuestros proyectos sea más
 eficiente.
 
 En el caso de que no se cuente con conocimiento alguno o si simplemente se
 quiera ampliar lo que se sabe de estos ámbitos, en el sitio web oficial de
-Tensorflow se encuentra una [página
-educativa](https://www.tensorflow.org/resources/learn-ml?hl=es) donde está
-disponible una serie de herramientas ideadas para instruirse.
+Tensorflow se encuentra una
+[página educativa](https://www.tensorflow.org/resources/learn-ml?hl=es) donde
+está disponible una serie de herramientas ideadas para instruirse.
 
 Ahora bien, para instalar y utilizar Tensorflow tenemos tres opciones: pip,
 docker y Gooogle Colab. Veamos el procedimiento en cada caso.
@@ -61,16 +70,15 @@ https://realpython.com/python-ides-code-editors-guide/
 
 2. Luego de que tengas Python en tu sistema verifica que este configurado; se
    requiere la versión de Python entre 3.5 a 3.7 y pip 19.0 o posterior. Para
-   esto puedes ejecutar las siguientes líneas de código y observar las versiones.
+   esto puedes ejecutar las siguientes líneas de código y observar las
+   versiones.
 
-`python3 --version`
-`pip3 --version`
-`virtualenv --version`
+`python3 --version` `pip3 --version` `virtualenv --version`
 
 3. Crear un entorno virtual, este paso es opcional pero se recomienda para
-   trabajar de forma separada de los archivos del sistema y así evitar algún error o
-   actualización que puede alterar el rendimiento y funcionamiento de este. En
-   la página de Tensorflow hay un espacio dedicado a este punto
+   trabajar de forma separada de los archivos del sistema y así evitar algún
+   error o actualización que puede alterar el rendimiento y funcionamiento de
+   este. En la página de Tensorflow hay un espacio dedicado a este punto
    https://www.tensorflow.org/install/pip?lang=python3#2.-create-a-virtual-environment-recommended
 
 1. Instalar el paquete de tensorflow con pip, utilizando:
@@ -87,8 +95,8 @@ Luego, puedes importar tensorflow como una biblioteca, colocando:
 
 Docker es una plataforma abierta para desarrollar, enviar y ejecutar
 aplicaciones. Con Docker podemos mantener aislados los programas que estemos
-ejecutando con los elementos del sistema, aprovechando mejor los recursos lo cual
-agregaría velocidad y eficiencia al momento de compilar o ejecutar código.
+ejecutando con los elementos del sistema, aprovechando mejor los recursos lo
+cual agregaría velocidad y eficiencia al momento de compilar o ejecutar código.
 
 Para obtener información sobre la instalación de esta plataforma puedes visitar
 su [página web](https://docs.docker.com/get-docker/) o seguir la guía que nos
@@ -98,9 +106,11 @@ https://www.tensorflow.org/install/docker.
 En el caso de tener o haber instalado Docker en tu equipo, con las siguientes
 líneas de código puedes obtener Tensorflow:
 
-`docker pull tensorflow/tensorflow:latest-py3`  # Descarga la imagen estable más reciente de Tensorflow
+`docker pull tensorflow/tensorflow:latest-py3` # Descarga la imagen estable más
+reciente de Tensorflow
 
-`docker run -it -p 8888:8888 tensorflow/tensorflow:latest-py3-jupyter`  #Inicia un servidor de Jupyter
+`docker run -it -p 8888:8888 tensorflow/tensorflow:latest-py3-jupyter` #Inicia
+un servidor de Jupyter
 
 - Ejecutar Tensorflow desde Google Colab.
 

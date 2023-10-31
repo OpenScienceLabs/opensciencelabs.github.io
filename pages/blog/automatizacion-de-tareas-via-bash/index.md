@@ -17,36 +17,34 @@ thumbnail: "/header.png"
 featureImage: "/header.png"
 ---
 
-
 <!-- # Automatización de tareas vía bash -->
 <!-- **Por Anavelyz Pérez** -->
-
-
 
 ¿Qué es Bash?
 
 Es un shell, o intérprete de lenguaje de comandos, para el sistema operativo
-GNU. Su nombre es un acrónimo de "*Bourne-Again SHell*", un juego de palabras
+GNU. Su nombre es un acrónimo de "_Bourne-Again SHell_", un juego de palabras
 sobre Stephen Bourne, el autor del antepasado directo del actual shell de Unix
-sh, que apareció en la séptima edición de la versión de *Bell Labs Research* de
+sh, que apareció en la séptima edición de la versión de _Bell Labs Research_ de
 Unix.
 
 <!-- TEASER_END -->
 
-El shell también es conocido como **terminal**; una interfaz entre el usuario
-y el propio sistema operativo. Podemos acceder a él a través del menú o una
+El shell también es conocido como **terminal**; una interfaz entre el usuario y
+el propio sistema operativo. Podemos acceder a él a través del menú o una
 combinación teclas. Linux proporciona por defecto seis terminales de este tipo,
 de Control+Alt+F1 a Control+Alt+F6. Si queremos volver al modo gráfico lo
 hacemos con Alt+F7 (estos atajos pueden variar según la distribución).
 
 Es importante destacar que el sistema operativo GNU proporciona otros shell sin
-embargo, Bash es el shell por defecto. Este, al igual que otros programas de GNU,
-es bastante portátil. Actualmente funciona en casi todas las versiones de Unix y
-otros sistemas operativos como Mac OS X Tiger. También se ha llevado a Microsoft
-Windows por el proyecto Cygwin.
+embargo, Bash es el shell por defecto. Este, al igual que otros programas de
+GNU, es bastante portátil. Actualmente funciona en casi todas las versiones de
+Unix y otros sistemas operativos como Mac OS X Tiger. También se ha llevado a
+Microsoft Windows por el proyecto Cygwin.
 
-Ahora bien, cuando desde una distribución Linux abrimos o activamos un terminal se indica que estamos en
-nuestro home mediante el signo ~.Veremos en pantalla algo similar a:
+Ahora bien, cuando desde una distribución Linux abrimos o activamos un terminal
+se indica que estamos en nuestro home mediante el signo ~.Veremos en pantalla
+algo similar a:
 
 ![Terminal](terminal1.png)
 
@@ -71,7 +69,7 @@ características principales.
 
 ## Crear, eliminar y editar carpetas o directorios
 
-Entre las tareas que podemos realizar con bash están  crear, eliminar y editar
+Entre las tareas que podemos realizar con bash están crear, eliminar y editar
 carpetas o directorios. Algunos de los comandos asociados a estas son:
 
 `pwd` nos indica el directorio en el que estamos actualmente. Si probamos este
@@ -88,8 +86,8 @@ la que se desea ir nos permitirá realizar esta tarea. De modo que `cd /` te
 llevara a la raíz, `cd ~` al home ( `cd` solo hace lo mismo), `cd /usr/doc` te
 lleva al directorio de documentación del sistema.
 
-Si quieres crear una carpeta (o varias) lo puedes hacer en tu home, usando `mkdir`
-y el nombre de la carpeta que quieres crear, luego entra en ella con cd.
+Si quieres crear una carpeta (o varias) lo puedes hacer en tu home, usando
+`mkdir` y el nombre de la carpeta que quieres crear, luego entra en ella con cd.
 
 Para borrar una carpeta escribe `rmdir` seguido por un espacio y el nombre, pero
 la carpeta tiene que estar vacía y contar con permiso para borrarla.
@@ -100,18 +98,18 @@ El comando `mv`, permite dos operaciones. Cambiar un fichero de sitio, para lo
 cual es necesario que se tenga permiso de escritura sobre ese fichero y el lugar
 de destino. Se utiliza simplemente indicando mv nombre_origen ruta_destino.
 
-*Con este comando también es posible mover directorios, o todos los ficheros de
-un directorio.*
+_Con este comando también es posible mover directorios, o todos los ficheros de
+un directorio._
 
-La otra operación que se puede realizar con `mv` es el cambio de nombre, así basta con
-indicar el nombre de un fichero o directorio, y luego su nuevo nombre.
+La otra operación que se puede realizar con `mv` es el cambio de nombre, así
+basta con indicar el nombre de un fichero o directorio, y luego su nuevo nombre.
 
-*Los comandos cat, more y less sirven para mostrar el contenido de ficheros de
-texto.*
+_Los comandos cat, more y less sirven para mostrar el contenido de ficheros de
+texto._
 
-El comando `rm` se utiliza para borrar ficheros. Es importante destacar que estos
-ficheros no se envían a una papelera así que NO SE PUEDEN RECUPERAR UNA VEZ
-BORRADOS.
+El comando `rm` se utiliza para borrar ficheros. Es importante destacar que
+estos ficheros no se envían a una papelera así que NO SE PUEDEN RECUPERAR UNA
+VEZ BORRADOS.
 
 Otro comando útil es `cp` sirve para copiar ficheros. En el proceso de copia
 intervienen tres elementos: lo que se copia, la ruta de origen y la ruta de
@@ -157,7 +155,7 @@ Puedes consultar más de los comandos en https://ss64.com/bash/index.html
 
 ## Referencias
 
-Manual Práctico de Linux con ejercicios por Luis José Sánchez González.
-Manual de Linux por Álvaro Alea Fdz.
+Manual Práctico de Linux con ejercicios por Luis José Sánchez González. Manual
+de Linux por Álvaro Alea Fdz.
 [EcuRed-Terminal](https://www.ecured.cu/Terminal_de_GNU/Linux)
 [EcuRed-Bash](https://www.ecured.cu/Bash)

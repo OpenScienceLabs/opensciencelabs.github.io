@@ -11,3 +11,4 @@ dependencies:
   - pip:
     - makim
     - mkdocs-blogging-plugin
+    - mkdocs-rss-plugin

@@ -18,7 +18,6 @@ thumbnail: "/header.png"
 featureImage: "/header.png"
 ---
 
-
 <!-- # Primeros pasos con Spyder -->
 
 Si has elegido programar en Python, luego de haberlo instalado quizás te
@@ -96,27 +95,27 @@ Para trabajar con Spyder tienes algunas opciones, entre las más comunes están:
 - **Spyder online**, permite que trabajes con una copia de Spyder que se ejecuta
   directamente en tu navegador web, es decir, no es necesaria su instalación.
   Esto es posible gracias a [Binder](https://mybinder.org/). Si deseas probarlo
-  debes acceder a la [página de Spyder en
-  Binder](https://mybinder.org/v2/gh/spyder-ide/spyder/4.x?urlpath=/desktop).
+  debes acceder a la
+  [página de Spyder en Binder](https://mybinder.org/v2/gh/spyder-ide/spyder/4.x?urlpath=/desktop).
 
 - Empleando [Anaconda](https://www.anaconda.com/) o
   [Miniconda](https://docs.conda.io/en/latest/miniconda.html). Spyder viene
   incluido, por defecto, en estas distribuciones. Esta es la forma más fácil de
   instalarlo y lo recomendamos para evitar cualquier inconveniente.
 
-- Puedes instalarlo también usando [*pip*](https://pypi.org/project/spyder/) o
-  [*conda*](https://anaconda.org/anaconda/spyder) en tu entorno local con los
+- Puedes instalarlo también usando [_pip_](https://pypi.org/project/spyder/) o
+  [_conda_](https://anaconda.org/anaconda/spyder) en tu entorno local con los
   siguientes comandos `conda install -c anaconda spyder` o `pip install spyder`.
-  La documentación oficial del proyecto te ofrece una [guía de
-  instalación](https://docs.spyder-ide.org/current/installation.html) que te
-  será de gran ayuda si surgen dudas.
+  La documentación oficial del proyecto te ofrece una
+  [guía de instalación](https://docs.spyder-ide.org/current/installation.html)
+  que te será de gran ayuda si surgen dudas.
 
 ### Ya tengo Spyder, ahora cómo lo uso
 
-Para correr Spyder en Windows, dirígete al menú *Inicio* y luego busca la
-aplicación de *Spyder*. En Linux, si instalaste Spyder usando Anaconda o
+Para correr Spyder en Windows, dirígete al menú _Inicio_ y luego busca la
+aplicación de _Spyder_. En Linux, si instalaste Spyder usando Anaconda o
 Miniconda, puedes acceder buscando su nombre en tu ícono de Menú. Si deseas
-hacerlo utilizando la línea de comandos, en Windows abre *Anaconda Prompt* y haz
+hacerlo utilizando la línea de comandos, en Windows abre _Anaconda Prompt_ y haz
 clic en Spyder. En las demás plataformas accede a una ventana del terminal y
 teclea `conda activate nombre_entorno` (en su defecto, nombre_entorno es `base`
 para activar tu entorno de trabajo local; o coloca el nombre del entorno donde
@@ -132,11 +131,11 @@ cualquier comando y **explorador de archivos**.
 
 ![Spyder](spyder.png)
 
-Como puedes observar, del lado izquierdo tenemos el *Editor de código*. En la
-parte superior derecha se encuentran las pestañas: *Explorador de variables*,
-*Explorador de archivos*, *Ayuda*. En la parte inferior derecha tenemos: *El
-intérprete interactivo de Python (IPython Console)* y *El historial de
-comandos*.
+Como puedes observar, del lado izquierdo tenemos el _Editor de código_. En la
+parte superior derecha se encuentran las pestañas: _Explorador de variables_,
+_Explorador de archivos_, _Ayuda_. En la parte inferior derecha tenemos: _El
+intérprete interactivo de Python (IPython Console)_ y _El historial de
+comandos_.
 
 La barra de Menú se encuentra en la parte superior y debajo de ella la barra de
 herramientas. Esta última contiene botones que permiten realizar distintas
@@ -150,7 +149,7 @@ adicional, accede al Explorador de archivos. Los archivos generados en Spyder se
 guardan, por defecto, con extensión `.py`.
 
 Al iniciar Spyder, puedes comenzar a trabajar en la ventana de la consola, si lo
-deseas. Estás en la potestad de cambiar los paneles de lugar y su  diseño según
+deseas. Estás en la potestad de cambiar los paneles de lugar y su diseño según
 tus preferencias.
 
 A continuación te mostramos de una manera sencilla cómo hacer para crear, abrir
@@ -158,29 +157,29 @@ y guardar un archivo en spyder y como ejecutar un script:
 
 - Para **Crear un nuevo archivo**, elige una de las siguientes opciones:
 
-  - Accede a la barra de Menú, haz clic en *Archivo* y luego en *Nuevo*.
+  - Accede a la barra de Menú, haz clic en _Archivo_ y luego en _Nuevo_.
   - Presiona las teclas Ctrl + N.
-  - Haz clic en el botón *Nuevo Archivo* de la barra de herramientas.
+  - Haz clic en el botón _Nuevo Archivo_ de la barra de herramientas.
 
 - Si deseas **Guardar un archivo**, elige entre:
 
-  - Hacer clic en *Archivo* y luego en *Guardar* en la barra de Menú.
+  - Hacer clic en _Archivo_ y luego en _Guardar_ en la barra de Menú.
   - Presionar las teclas Ctrl + S.
-  - Dar clic en el botón *Guardar Archivo* de la barra de herramientas.
+  - Dar clic en el botón _Guardar Archivo_ de la barra de herramientas.
 
 - Para **Abrir un archivo `.py` existente** tienes varias alternativas:
 
-  - Dirígete a la barra de Menú, haz clic en *Archivo*, luego en *Abrir*,
+  - Dirígete a la barra de Menú, haz clic en _Archivo_, luego en _Abrir_,
     después busca el archivo que desees.
   - Presiona Ctrl + O.
-  - En la barra de herramientas, haz clic en el botón *Abrir archivo*. Luego se
+  - En la barra de herramientas, haz clic en el botón _Abrir archivo_. Luego se
     abre una ventana donde buscarás la ubicación, luego selecciona el archivo
-    deseado y haz clic en *Abrir*. Posteriormente, se mostrará el archivo en el
+    deseado y haz clic en _Abrir_. Posteriormente, se mostrará el archivo en el
     Editor de Código.
 
 Te hemos presentado lo que debes saber para iniciarte en Spyder, esperamos que
 sea de provecho para tus proyectos. Anímate a usar este potente y popular
-*Entorno de Desarrollo*.
+_Entorno de Desarrollo_.
 
 ### Referencias
 

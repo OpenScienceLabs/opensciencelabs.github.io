@@ -15,7 +15,6 @@ thumbnail: "/header.png"
 featureImage: "/header.png"
 ---
 
-
 <!-- # Cinco cosas que no debes olvidar al trabajar con datos abiertos -->
 <!-- **Por Anavelyz Perez** -->
 
@@ -34,11 +33,12 @@ en cuanto a quien lo puede ver), y que según sea apropiado, permita además uso
 comercial.
 
 Esto deriva en tres particularidades que los datos deben cumplir para que sean
-abiertos, tal como es expresado en https://ceweb.br/guias/dados-abertos/es/capitulo-2/.
+abiertos, tal como es expresado en
+https://ceweb.br/guias/dados-abertos/es/capitulo-2/.
 
 - Disponibilidad y acceso: los datos deben estar disponibles de manera integral
-  y en una forma en que no genere costos exhorbitantes para la parte interesada en
-  copiarlos. El escenario más favorable es poner los datos a disposición para
+  y en una forma en que no genere costos exhorbitantes para la parte interesada
+  en copiarlos. El escenario más favorable es poner los datos a disposición para
   que sean descargados a través de Internet. Asimismo, los datos deben ofrecerse
   en un formato conveniente y modificable.
 

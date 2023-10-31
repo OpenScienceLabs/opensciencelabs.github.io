@@ -3,22 +3,22 @@ title: "PSF financiando el desarrollo de proyectos open source: SciCookie"
 slug: psf-funding-open-source-projects-development-scicookie
 date: 2023-09-02
 author: Anavelyz Perez, Yurely Camacho
-tags: [psf, osl, scicookie, subvención, grant, comunidad, colaboración, desarrollo]
+tags:
+  [psf, osl, scicookie, subvención, grant, comunidad, colaboración, desarrollo]
 categories: [código abierto, desarrollo de software, python]
 description: |
   En este artículo, compartiremos nuestra experiencia en la solicitud y ejecución
   de una subvención de la Python Software Foundation (PSF) a nombre de Open
   Science Labs (OSL) que fue enviada entre enero y febrero de 2023. La propuesta
   se hizo con la finalidad de contribuir con el desarrollo y mantenimiento de
-  SciCookie, una herramienta de Python que se encuentra dentro de los [proyectos
-  de incubación de OSL](https://opensciencelabs.org/programs/incubator/).
+  SciCookie, una herramienta de Python que se encuentra dentro de los
+  [proyectos de incubación de OSL](https://opensciencelabs.org/programs/incubator/).
 draft: false
 usePageBundles: true
 thumbnail: "/header.svg"
 featureImage: "/header.svg"
 template: "blog-post.html"
 ---
-
 
 <!-- # PSF financiando el desarrollo de proyectos open source: SciCookie -->
 <!-- **Por Anavelyz Perez & Yurely Camacho** -->
@@ -27,8 +27,8 @@ En este artículo, compartiremos nuestra experiencia en la solicitud y ejecució
 de una subvención de la Python Software Foundation (PSF) a nombre de Open
 Science Labs (OSL) que fue enviada entre enero y febrero de 2023. La propuesta
 se hizo con la finalidad de contribuir con el desarrollo y mantenimiento de
-SciCookie, una herramienta de Python que se encuentra dentro de los [proyectos
-de incubación de OSL](https://opensciencelabs.org/programs/incubator/).
+SciCookie, una herramienta de Python que se encuentra dentro de los
+[proyectos de incubación de OSL](https://opensciencelabs.org/programs/incubator/).
 
 Comenzaremos con una breve introducción a SciCookie, algunas de sus
 características clave y aspectos de interés. Luego, discutiremos el proceso de
@@ -79,8 +79,8 @@ nuevos proyectos o ideas.
 Continuando con el programa de subvenciones, debes conocer que la PSF evalúa una
 serie de aspectos en cada propuesta, entre ellos la utilidad del proyecto y el
 impacto en la comunidad Python. En caso de que desees conocer más, te
-recomendamos visitar el espacio que tiene PSF en su página web para el [grants
-Program](https://www.python.org/psf/grants/ ).
+recomendamos visitar el espacio que tiene PSF en su página web para el
+[grants Program](https://www.python.org/psf/grants/).
 
 Hasta ahora y de manera resumida, te hemos relatado los principales aspectos
 sobre las dos partes involucradas: SciCookie y PSF. Proseguiremos contándote
@@ -106,8 +106,8 @@ Después de completar la planificación y la investigación, comenzamos el proce
 de solicitud formal. Esto incluyó completar un formulario en línea y presentar
 una propuesta detallada. La propuesta contiene una descripción del proyecto, un
 cronograma, un presupuesto y una sección de impacto. En nuestro caso y para
-revisar con detenimiento cada aspecto elaboramos un [archivo con las
-respuestas](https://github.com/OpenScienceLabs/grant-proposals/blob/96263f736e7f36eb22a3dd1baa16376fd1782e98/psf_proposal.md)
+revisar con detenimiento cada aspecto elaboramos un
+[archivo con las respuestas](https://github.com/OpenScienceLabs/grant-proposals/blob/96263f736e7f36eb22a3dd1baa16376fd1782e98/psf_proposal.md)
 [1] y llenamos el esquema del presupuesto (plantilla proporcionada por la PSF).
 Este proceso se hizo bajo la asesoría del Steering Council de OSL.
 
@@ -125,8 +125,8 @@ había sido ¡aceptada!
 Con la subvención de la PSF, pudimos comenzar a desarrollar y mantener SciCookie
 a medio tiempo. Trabajamos con algunos desarrolladores de la comunidad para
 agregar nuevas funcionalidades, mejorar la documentación y corregir errores o
-bugs. Entre esto destacamos la creación de una [guía de
-usuario](https://github.com/osl-incubator/scicookie/blob/main/docs/guide.md)
+bugs. Entre esto destacamos la creación de una
+[guía de usuario](https://github.com/osl-incubator/scicookie/blob/main/docs/guide.md)
 para ayudar a los entusiastas y desarrolladores a aprender a utilizar SciCookie.
 
 En cuanto la especificación de las tareas, como te mencionamos en la sección
@@ -148,11 +148,11 @@ donde se construyó un espacio amigable y nos permitió aprender bastante.
 
 ![Flujo de trabajo](workflow.png)
 
-> Aprovechamos este espacio para agradecer a [Ivan
-> Ogasawara](https://github.com/xmnlab) y a [Ever
-> Vino](https://github.com/EverVino), por su tiempo y dedicación. Ambos son
-> miembros activos de OSL y parte del steering council; estuvieron apoyándonos y
-> aclarando nuestras dudas.
+> Aprovechamos este espacio para agradecer a
+> [Ivan Ogasawara](https://github.com/xmnlab) y a
+> [Ever Vino](https://github.com/EverVino), por su tiempo y dedicación. Ambos
+> son miembros activos de OSL y parte del steering council; estuvieron
+> apoyándonos y aclarando nuestras dudas.
 
 A continuación te contamos sobre nuestra experiencia y la etapa de colaboración.
 
@@ -240,6 +240,6 @@ contado en este espacio :D
 [1] **Nota adicional**: SciCookie originalmente llevaba por nombre
 cookiecutter-python y luego pasó a ser osl-python-template.
 
-<small size="0">Elementos gráficos de la portada fueron extraídos de [Work illustrations by
-Storyset](https://storyset.com/work), y luego editados para adaptarlos al
-artículo.</small>
+<small size="0">Elementos gráficos de la portada fueron extraídos de
+[Work illustrations by Storyset](https://storyset.com/work), y luego editados
+para adaptarlos al artículo.</small>

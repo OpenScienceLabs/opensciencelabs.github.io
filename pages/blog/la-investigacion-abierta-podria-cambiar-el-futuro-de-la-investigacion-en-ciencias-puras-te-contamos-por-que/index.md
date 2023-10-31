@@ -1,24 +1,34 @@
 ---
-title: "La investigación abierta podría cambiar el futuro de la investigación en ciencias puras. Te contamos por qué."
+title:
+  "La investigación abierta podría cambiar el futuro de la investigación en
+  ciencias puras. Te contamos por qué."
 slug: la-investigacion-abierta-podria-cambiar-el-futuro-de-la-investigacion-en-ciencias-puras-te-contamos-por-que
 date: 2020-01-15
 author: Anavelyz Perez
 tags: [datos]
 categories: [ciencia abierta, investigación abierta]
 description: |
-  La investigación abierta despliega nuevos horizontes en distintos niveles, económicos, sociales, industriales, políticos e incluso en las ciencias puras. Esta investigación permite que los resultados de los estudios y de los procesos sean abiertos, respetando la licencia de conocimiento libre. Además, se publican los datos, procedimientos y otras herramientas de la investigación (cuadernos de notas, cuadernos de campo, videos de experimentos, datos de encuestas, etc.).
-
+  La investigación abierta despliega nuevos horizontes en distintos niveles,
+  económicos, sociales, industriales, políticos e incluso en las ciencias puras.
+  Esta investigación permite que los resultados de los estudios y de los procesos
+  sean abiertos, respetando la licencia de conocimiento libre. Además, se publican
+  los datos, procedimientos y otras herramientas de la investigación (cuadernos de
+  notas, cuadernos de campo, videos de experimentos, datos de encuestas, etc.).
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
 featureImage: "/header.png"
 ---
 
-
 <!-- # La investigación abierta podría cambiar el futuro de la investigación en ciencias puras. Te contamos por qué. -->
 <!-- **Por Anavelyz Pérez** -->
 
-La investigación abierta despliega nuevos horizontes en distintos niveles, económicos, sociales, industriales, políticos e incluso en las ciencias puras. Esta investigación permite que los resultados de los estudios y de los procesos sean abiertos, respetando la licencia de conocimiento libre. Además, se publican los datos, procedimientos y otras herramientas de la investigación (cuadernos de notas, cuadernos de campo, videos de experimentos, datos de encuestas, etc.).
+La investigación abierta despliega nuevos horizontes en distintos niveles,
+económicos, sociales, industriales, políticos e incluso en las ciencias puras.
+Esta investigación permite que los resultados de los estudios y de los procesos
+sean abiertos, respetando la licencia de conocimiento libre. Además, se publican
+los datos, procedimientos y otras herramientas de la investigación (cuadernos de
+notas, cuadernos de campo, videos de experimentos, datos de encuestas, etc.).
 
 <!-- TEASER_END -->
 
@@ -46,10 +56,10 @@ entes públicos. Es importante saber que los derechos de autor son respetados.
 Por otro lado, las ciencias puras se caracterizan por ver los cambios en
 entidades, entender, mostrar soluciones y considerar la aplicación de nuevas
 técnicas. Principalmente, se encargan de ensanchar el conocimiento básico de la
-naturaleza, excluye intereses  prácticos. Además, este tipo de ciencia ha
-sufrido una serie de altibajos a lo largo del tiempo por la cantidad de
-información que revela, la cual puede no beneficiar a muchos intereses, es una
-práctica que requiere grandes inversiones y no siempre se cuenta con ella.
+naturaleza, excluye intereses prácticos. Además, este tipo de ciencia ha sufrido
+una serie de altibajos a lo largo del tiempo por la cantidad de información que
+revela, la cual puede no beneficiar a muchos intereses, es una práctica que
+requiere grandes inversiones y no siempre se cuenta con ella.
 
 Algunos ejemplos de ciencia pura son:
 
@@ -81,12 +91,12 @@ era no serian posibles por la capacidad de aporte de cada una.
 > **Ejemplo**
 >
 > Un grupo de científicos independientes estudiaron la genética de unos osos
-> polares de la Antártida y encontraron que tienen características
-> especiales con respecto al clima y su comida. Es importante entonces que los
-> resultados se publiquen en revistas o plataformas que pueden difundir el tema.
-> Es posible pensar en que se debiere hacer en una revista  especializada, no
-> obstante se requiere una cantidad de tiempo para que esto se logre
-> satisfactoriamente. A corto plazo no es viable.
+> polares de la Antártida y encontraron que tienen características especiales
+> con respecto al clima y su comida. Es importante entonces que los resultados
+> se publiquen en revistas o plataformas que pueden difundir el tema. Es posible
+> pensar en que se debiere hacer en una revista especializada, no obstante se
+> requiere una cantidad de tiempo para que esto se logre satisfactoriamente. A
+> corto plazo no es viable.
 >
 > Mientras que si se decide publicar los resultados bajo investigación abierta
 > se tiene que los resultados, los datos y otros aspectos generales y
@@ -100,6 +110,6 @@ el acceso a la información. Implicando de esta manera un esfuerzo continuo de
 las partes que conforman la sociedad. Cuando se implementa la investigación
 abierta para hacer ciencias puras se está permitiendo el incentivo de personas a
 realizar trabajos similares, se cubre en un abanico de necesidades de
-conocimiento y se permite la educación continua porque logra que los
-educadores, docentes y profesores tengan acceso a nuevos avances de manera
-gratuita y sin limitación alguna.
+conocimiento y se permite la educación continua porque logra que los educadores,
+docentes y profesores tengan acceso a nuevos avances de manera gratuita y sin
+limitación alguna.

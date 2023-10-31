@@ -58,60 +58,93 @@
           </div>
         </a>
         <div class='nav_body nav_body_left'>
+          <!-- MENU -->
           {% if nav|length>1 %}
           {% for nav_item in nav %}
+          {% if not nav_item.children %}
           <div class="nav_parent {% if nav_item.active %}nav_active{% endif %}">
             <a href="{{ nav_item.url|url }}" class="nav_item" title="{{ nav_item.title }}">
               {{ nav_item.title }}
             </a>
           </div>
+          {% else %}
+          {% for nav_child in nav_item.children %}
+            {% if nav_child.title == "index" %}
+            <div class="nav_parent {% if nav_item.active %}nav_active{% endif %}">
+              <a href="{{ nav_child.url|url }}" class="nav_item" title="{{ nav_item.title }}">
+                {{ nav_item.title }}
+              </a>
+            </div>
+            {% endif%}
+          {% endfor %}
+          {% endif %}
           {% endfor %}
           {% endif %}
         </div>
         <div class=follow>
-          <a href=https://github.com/OpenScienceLabs>
+          <a href=https://github.com/OpenScienceLabs target="_blank">
             <svg class="icon">
               <title>github</title>
               <use xlink:href="#github"/>
             </svg>
           </a>
-          <a href=/linkedin>
+          <a href=/linkedin target="_blank">
             <svg class="icon">
               <title>linkedin</title>
               <use xlink:href="#linkedin"/>
             </svg>
           </a>
-          <a href=https://twitter.com/opensciencelabs>
+          <a href=https://twitter.com/opensciencelabs target="_blank">
             <svg class="icon">
               <title>twitter</title>
               <use xlink:href="#twitter"/>
             </svg>
           </a>
-          <a href=/facebook>
+          <a href=/facebook target="_blank">
             <svg class="icon">
               <title>facebook</title>
               <use xlink:href="#facebook"/>
             </svg>
           </a>
-          <a href=/discord>
+          <a href=/discord target="_blank">
             <svg class="icon">
               <title>discord</title>
               <use xlink:href="#discord"/>
             </svg>
           </a>
-          <a href=/index.xml>
+          <a href="/feed_rss_created.xml" target="_blank">
             <svg class="icon">
               <title>rss</title>
               <use xlink:href="#rss"/>
             </svg>
           </a>
-          <a href=/youtube>
+          <a href=/youtube target="_blank">
             <svg class="icon">
               <title>youtube</title>
               <use xlink:href="#youtube"/>
             </svg>
           </a>
           <div class=color_mode><input type=checkbox class=color_choice id=mode></div>
+        </div>
+      </nav>
+      <nav class="nav">
+        <div class='nav nav_extra extra'>
+          <!-- SUB-MENU -->
+          {% if nav|length>1 %}
+          {% for nav_item in nav %}
+          {% if nav_item.active and nav_item.children %}
+          {% for nav_child in nav_item.children %}
+            {% if nav_child.title != "index" %}
+            <div class="nav {% if nav_child.active %}nav_active{% endif %}">
+              <a href="{{ nav_child.url|url }}" class="nav_item" title="{{ nav_child.title }}">
+                {{ nav_child.title }}
+              </a>
+            </div>
+            {% endif%}
+          {% endfor %}
+          {% endif %}
+          {% endfor %}
+          {% endif %}
         </div>
       </nav>
     </header>
@@ -128,6 +161,21 @@
           {{ page.content }}
           {% endblock content %}
         </section>
+        <div>
+          <p>
+            <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
+                <img
+                  alt="Creative Commons License"
+                  style="border-width:0"
+                  src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
+            </a>
+            <br />
+            This work is licensed under a
+            <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
+                Creative Commons Attribution-ShareAlike 4.0 International License
+            </a>.
+          </p>
+        </div>
       </div>
     </main>
     <svg width="0" height="0" class="hidden">
