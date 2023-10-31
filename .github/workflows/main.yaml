@@ -25,12 +25,14 @@ jobs:
         mamba-version: "*"
         environment-file: conda/dev.yaml
         channels: conda-forge,nodefaults
-        activate-environment: osl
+        activate-environment: osl-web
         use-mamba: true
         miniforge-variant: Mambaforge
 
     - name: Build the book
-      run: make build
+      run: |
+        make build
+        echo "opensciencelabs.org" > build/CNAME
 
     # Push the book's HTML to github-pages
     - name: GitHub Pages action
