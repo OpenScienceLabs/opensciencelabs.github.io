@@ -4,7 +4,7 @@ title:
   ciencias puras. Te contamos por qué."
 slug: la-investigacion-abierta-podria-cambiar-el-futuro-de-la-investigacion-en-ciencias-puras-te-contamos-por-que
 date: 2020-01-15
-author: Anavelyz Perez
+authors: ["Anavelyz Perez"]
 tags: [datos]
 categories: [ciencia abierta, investigación abierta]
 description: |
@@ -14,10 +14,7 @@ description: |
   sean abiertos, respetando la licencia de conocimiento libre. Además, se publican
   los datos, procedimientos y otras herramientas de la investigación (cuadernos de
   notas, cuadernos de campo, videos de experimentos, datos de encuestas, etc.).
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # La investigación abierta podría cambiar el futuro de la investigación en ciencias puras. Te contamos por qué. -->

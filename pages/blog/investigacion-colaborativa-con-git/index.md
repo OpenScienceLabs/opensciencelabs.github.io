@@ -2,7 +2,7 @@
 title: "Investigación Colaborativa con Git"
 slug: investigacion-colaborativa-con-git
 date: 2020-01-20
-author: Anavelyz Pérez
+authors: ["Anavelyz Perez"]
 tags: [git, ramas]
 categories:
   [
@@ -18,11 +18,7 @@ description: |
   encontrar soluciones, descubrir o explicar comportamientos de un fenómeno en
   particular el cual puede ser económico, social, político, científico, entre
   otros.
-
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # Investigación Colaborativa con Git -->

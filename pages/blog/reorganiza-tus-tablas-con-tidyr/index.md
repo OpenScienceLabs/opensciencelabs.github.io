@@ -2,7 +2,7 @@
 title: "Reorganiza tus tablas con tidyr en R"
 slug: reorganiza-tus-tablas-con-tidyr
 date: 2022-07-17
-author: Ever Vino
+authors: ["Ever Vino"]
 tags: [tidyr, bibliotecas, tablas, reorganizar, filtrar datos]
 categories: [R, ciencia de datos]
 description: |
@@ -10,11 +10,7 @@ description: |
   varias columnas en una sola o viceversa, veremos ejemplos en los que
   utilizaremos la biblioteca `tidyr` con sus funciones `gather()`, `spread()`,
   `separate()`, y `unite()`.
-
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # Reorganiza tus tablas con tidyr en R  -->

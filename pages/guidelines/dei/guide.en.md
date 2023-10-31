@@ -1,9 +1,7 @@
 ---
 title: "Statement on Diversity, Equity and Inclusion"
 date: 2019-04-08
-author: Mariangela Petrizzo
-draft: true
-usePageBundles: false
+authors: ["Mariangela Petrizzo"]
 featured: true
 tags: ["DEI"]
 ---
@@ -32,7 +30,7 @@ OSL recognizes that the **pedagogical processes associated with the development 
 Based on this, our community considers the following parameters with respect to the DEI:
 
 * **Diversity:** Our community is open to multiple demographics, social, political, identities, perspectives and backgrounds.
-  
+
 * **Equity:** Those who make up our community, as well as its different groups and work teams, have access to all the opportunities and activities that we carry out as we organize them explicitly seeking to eliminate the barriers that have historically prevented the participation of minority or excluded groups.
-  
+
 * **Inclusion:** Everyone in our community experiences a sense of belonging, high levels of commitment to the activities in which they participate, and shared and mutually expressed respect.

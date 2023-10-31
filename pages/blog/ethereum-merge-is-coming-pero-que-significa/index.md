@@ -2,7 +2,7 @@
 title: "Ethereum merge is coming. ¿Pero qué significa?"
 slug: ethereum-merge-is-coming-pero-que-significa
 date: 2022-03-22
-author: Alan Hurtarte
+authors: ["Alan Hurtarte"]
 tags: [ethereum, transacciones, bitcoin, criptomoneda]
 categories: [tecnología, web3]
 description: |
@@ -15,10 +15,7 @@ description: |
   - Transacciones demasiado lentas. No te puedes imaginar pagar un café o una
     hamburguesa con Ethereum si el proceso tarde 5 o 10 minutos en validarse.
   - Debido a las dos anteriores, demasiado consumo de energía eléctrica.
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # The Ethereum merge is coming. ¿Pero qué significa? -->

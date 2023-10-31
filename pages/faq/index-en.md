@@ -1,10 +1,7 @@
 ---
-showdate: false
-showreadtime: false
-draft: true
-aliases: ["/en/faq/"]
+title: FAQ
+authors: ["Ever Vino"]
 ---
-
 
 ## What is Open Science Labs (OSL)?
 

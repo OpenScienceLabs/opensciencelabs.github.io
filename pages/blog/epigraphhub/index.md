@@ -4,7 +4,7 @@ title:
   calidad"
 slug: epigraphhub
 date: 2022-09-28
-author: Anavelyz Pérez
+authors: ["Anavelyz Perez"]
 tags: [epigraphhub, visualización de datos, análisis, datos, epidemiología]
 categories: [ciencia abierta, código abierto]
 description: |
@@ -13,10 +13,8 @@ description: |
   puedes analizar datos? Entonces este artículo es para ti. Vamos a describir
   EpiGraphHub, un proyecto de código abierto orientado al análisis de datos de
   calidad.
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
+template: "blog-post.html"
 ---
 
 ¿Quieres realizar un análisis y no encuentras datos?, ¿quieres realizar
@@ -63,14 +61,14 @@ y sus aplicaciones.
 
 Las bibliotecas permiten realizar o aplicar:
 
-- Estadística Bayesiana
-- Análisis epidemiológico
-- Modelado matemático
-- Análisis de Costo-efectividad
-- Pronósticos
-- Aprendizaje automático
-- Minería de textos
-- Análisis Geoespacial
+* Estadística Bayesiana
+* Análisis epidemiológico
+* Modelado matemático
+* Análisis de Costo-efectividad
+* Pronósticos
+* Aprendizaje automático
+* Minería de textos
+* Análisis Geoespacial
 
 Esto se encuentra disponible para los lenguajes de programación
 [R](https://github.com/thegraphnetwork/r-epigraphhub/blob/main/epigraphhub.Rproj)

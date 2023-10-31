@@ -1,13 +1,15 @@
 ---
-
-draft: true
-
+title: Mentoring Guideline
+date: 2019-04-08
+authors: ["Ingrid Bianka Garcia"]
+tags: ["mentoring"]
+category: ["mentoring"]
 ---
 <!--
 .. title: Mentoring Guideline
 .. slug: en
 .. date: 2019-04-08
-.. author: Ingrid Bianka Garcia
+.. authors: ["Ingrid Bianka Garcia"]
 .. tags: mentoring
 .. category: mentoring
 .. link:

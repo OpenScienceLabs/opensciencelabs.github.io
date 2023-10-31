@@ -3,7 +3,7 @@ title:
   "Te hablamos de las licencias mas utilizadas en proyectos de ciencia abierta"
 slug: te-hablamos-de-las-licencias-mas-utilizadas-en-proyectos-de-ciencia-abierta
 date: 2020-05-06
-author: Rainer Palm
+authors: ["Rainer Palm"]
 tags: [licencia, proyectos, free software]
 categories: [ciencia abierta]
 description: |
@@ -18,11 +18,7 @@ description: |
   reproductibilidad, libertad de acceso, mayor eficacia durante el desarrollo,
   entre otras), nos interesan sobre todo aquellas licencias de código abierto, ya
   que hacen posible el desarrollo de muchas prácticas de la ciencia abierta.
-
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # Te hablamos de las licencias mas utilizadas en proyectos de ciencia abierta -->

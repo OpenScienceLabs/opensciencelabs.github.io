@@ -2,7 +2,7 @@
 title: "PSF funding open source projects development: SciCookie"
 slug: psf-funding-open-source-projects-development-scicookie
 date: 2023-09-22
-author: Anavelyz Perez, Yurely Camacho
+authors: ["Anavelyz Perez", "Yurely Camacho"]
 tags: [psf, osl, scicookie, grant, community, collaboration, development]
 categories: [open source, software development, python]
 description: |
@@ -12,10 +12,7 @@ description: |
   proposal was submitted to contribute to the development and maintenance
   of SciCookie, a Python tool within the [OSL incubation
   projects](https://opensciencelabs.org/programs/incubator/).
-draft: false
-usePageBundles: true
 thumbnail: "/header.svg"
-featureImage: "/header.svg"
 template: "blog-post.html"
 ---
 

@@ -4,7 +4,7 @@ title:
   abierta"
 slug: te-mostramos-cinco-librerias-en-python-para-tu-proximo-proyecto-de-ciencia-abierta
 date: 2020-06-09
-author: Anavelyz Perez
+authors: ["Anavelyz Perez"]
 tags: [datos, visualización de datos, pandas, scipy, matplotlib, seaborn, bokeh]
 categories: [ciencia abierta, código abierto, Python]
 description: |
@@ -14,10 +14,7 @@ description: |
   alcance e impacto en la comunidad científica y sociedad en general, es vital
   estudiar las herramientas que se utilizarán porque de ellas depende la obtención
   de resultados óptimos, visualmente atractivos y lo suficientemente informativos.
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # Te mostramos cinco librerías en Python para tu próximo proyecto de ciencia abierta -->

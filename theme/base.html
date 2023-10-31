@@ -75,6 +75,18 @@
                 {{ nav_item.title }}
               </a>
             </div>
+            <div class="d-block d-sm-block d-md-none">
+              {% for nav_child in nav_item.children %}
+              {% if nav_child.title != "index" %}
+
+              <div class="nav {% if nav_child.active %}nav_active{% endif %}">
+                <a href="{{ nav_child.url|url }}" class="nav_item" title="{{ nav_child.title }}">
+                  {{ nav_child.title }}
+                </a>
+              </div>
+              {% endif%}
+              {% endfor %}
+            </div>
             {% endif%}
           {% endfor %}
           {% endif %}
@@ -127,15 +139,15 @@
           <div class=color_mode><input type=checkbox class=color_choice id=mode></div>
         </div>
       </nav>
-      <nav class="nav">
-        <div class='nav nav_extra extra'>
+      <nav class="nav d-none d-sm-none d-md-block">
+        <div class='nav_body nav_extra extra'>
           <!-- SUB-MENU -->
           {% if nav|length>1 %}
           {% for nav_item in nav %}
           {% if nav_item.active and nav_item.children %}
           {% for nav_child in nav_item.children %}
             {% if nav_child.title != "index" %}
-            <div class="nav {% if nav_child.active %}nav_active{% endif %}">
+            <div class="{% if nav_child.active %}nav_active{% endif %}" style="border-top:1px solid white;">
               <a href="{{ nav_child.url|url }}" class="nav_item" title="{{ nav_child.title }}">
                 {{ nav_child.title }}
               </a>

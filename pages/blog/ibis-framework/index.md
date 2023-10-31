@@ -2,7 +2,7 @@
 title: "Ibis -  Escalonando a Análise de Dados com Expressões Ibis"
 slug: ibis-framework
 date: 2022-08-03
-author: Luã Bida Vacaro
+authors: ["Luã Bida Vacaro"]
 tags: [ibis, dataframe, datos, pandas]
 categories: [ciencia abierta, datos abiertos, acceso abierto, Python, SQL]
 description: |
@@ -11,10 +11,7 @@ description: |
   [Wes McKinney](https://github.com/wesm), o mesmo criador do Pandas, voltado para
   integração de diferentes Engines de Bancos de Dados através de Expressões Ibis
   com Python.
-draft: false
-usePageBundles: true
 thumbnail: "/header.jpg"
-featureImage: "/header.jpg"
 ---
 
 # Escalonando a Análise de Dados com Expressões Ibis

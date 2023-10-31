@@ -1,12 +1,9 @@
-+++
-title = "Mentoras y Mentores"
-description = "Mentoras y Mentores"
-date = "2019-02-28"
-aliases = ["mentors"]
-author = "OSL Team"
-sidebar = false
-singlecolumn = true
-+++
+---
+title: "Mentoras y Mentores"
+description: "Mentoras y Mentores"
+date: "2019-02-28"
+authors = ["OSL Team"]
+---
 
 <small>
   La mentoría es una técnica o proceso en el que una persona con experiencia

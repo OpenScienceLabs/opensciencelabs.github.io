@@ -2,20 +2,15 @@
 title: "Herramientas de visualización en Python"
 slug: herramientas-de-visualizacion-en-python
 date: 2020-05-29
-author: Anavelyz Perez
+authors: ["Anavelyz Perez"]
 tags: [visualización de datos, bibliotecas, código, herramientas]
 categories: [Python]
-aliases:
-  ["/blog/0037-visualizacion_python/herramientas-de-visualizacion-en-python/"]
 description: |
   En uno de nuestros artículos,
   específicamente [10 razones para usar Python en tu próximo proyecto de investigación](http://opensciencelabs.org/blog/razones-para-usar-python-en-tu-proximo-proyecto-de-investigacion/),
   se da un recorrido por las ventajas que brinda el lenguaje de programación
   Python, de allí podemos extraer algunas de sus características.
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # Herramientas de visualización en Python -->

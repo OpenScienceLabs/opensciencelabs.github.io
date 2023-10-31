@@ -2,7 +2,7 @@
 title: "Cinco tips para aumentar tu productividad con Git"
 slug: cinco-tips-para-aumentar-tu-productividad-con-git
 date: 2020-02-05
-author: Yurely Camacho
+authors: ["Yurely Camacho"]
 tags: [git, ramas, repositorios, cambios]
 categories: [desarrollo de software, control de versiones, aprendizaje]
 description: |
@@ -13,10 +13,7 @@ description: |
   eficiencia e inspección al ser un sistema de control de versiones distribuido, lo
   que indica que cada desarrollador tiene el historial completo de su repositorio
   de manera local y existe una copia central.
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # Cinco tips para aumentar tu productividad con Git -->

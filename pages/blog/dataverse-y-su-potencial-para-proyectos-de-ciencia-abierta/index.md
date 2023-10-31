@@ -2,7 +2,7 @@
 title: "Dataverse y su potencial para proyectos de ciencia abierta"
 slug: dataverse-y-su-potencial-para-proyectos-de-ciencia-abierta
 date: 2020-08-08
-author: Rainer Palm
+authors: ["Rainer Palm"]
 tags: [datosverse, datos, repositorios]
 categories: [ciencia abierta, datos abiertos, acceso abierto]
 description: |
@@ -15,10 +15,7 @@ description: |
   cumplan los principios FAIR[2], sino también ofrece un espacio donde alojarlos
   organizados en conjuntos, agrupando metadatos y codigo clasificados con su
   propio numero DOI, en repositorios llamados 'Dataversos'.
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # Dataverse y su potencial para proyectos de ciencia abierta -->

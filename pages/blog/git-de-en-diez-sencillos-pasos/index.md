@@ -2,7 +2,7 @@
 title: "Git de 0 a 100 en diez sencillos pasos"
 slug: git-de-en-diez-sencillos-pasos
 date: 2020-01-08
-author: Rainer Palm
+authors: ["Rainer Palm"]
 tags: [git, repositorios, github]
 categories: [desarrollo de software, control de versiones]
 description: |
@@ -19,10 +19,7 @@ description: |
   los 10 pasos que presentamos a continuación, te darás cuenta de lo sencillo que
   puede resultar subir y manejar archivos en tu primer repositorio, crear varias
   ramas en el mismo y compartir archivos con colaboradores.
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # Git de 0 a 100 en diez sencillos pasos -->

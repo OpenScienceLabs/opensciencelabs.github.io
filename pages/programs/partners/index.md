@@ -1,12 +1,9 @@
-+++
-title = "Partners Program"
-description = "Partners Program"
-date = "2023-08-27"
-aliases = ["partners"]
-author = "OSL Team"
-sidebar = false
-singlecolumn = true
-+++
+---
+title: "Partners Program"
+description: "Partners Program"
+date: "2023-08-27"
+authors: ["OSL Team"]
+---
 
 # Open Science Labs (OSL) Partners Program
 

@@ -2,8 +2,8 @@
 title: "5 proyectos de inteligencia artificial que te sorprenderán"
 slug: ciencia-abierta
 date: 2021-02-08
-author: Rainer Palm
-tags: [datos]
+authors: ["Rainer Palm"]
+tags: ["datos"]
 categories: [ciencia abierta, ciencia de datos, inteligencia artificial]
 description: |
   Una de las areas de investigación mas prometedoras de la ultima decada es sín
@@ -17,10 +17,7 @@ description: |
   increiblemente utíl no solamente a la hora de realizar investigaciones regulares
   con estas tecnícas, sino también para crear nuevas herramientas de simulación y
   experimentación, tanto para uso científico como el particular o comercial.
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 Una de las areas de investigación mas prometedoras de la ultima decada es sín

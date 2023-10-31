@@ -4,7 +4,7 @@ title:
   ayudarán en tu próxima investigación."
 slug: ya-probado-los-cuadernos-de-jupyter-te-explicamos-que-son-y-como-te-ayudaran-en-tu-proxima-investigacion
 date: 2020-01-13
-author: Rainer Palm
+authors: ["Rainer Palm"]
 tags: [jupyter, cuaderno]
 categories: [ciencia abierta, código abierto, programación, IDE]
 description: |
@@ -16,10 +16,7 @@ description: |
   elementos permitirá ver la descripción y resultados de tu analísis de una forma
   más gráfica y en tiempo real, algo especialmente útil para garantizar la
   reproducibilidad de tus resultados.
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # ¿Ya has probado los cuadernos de Jupyter? Te explicamos qué son y cómo te ayudarán en tu próxima investigación. -->

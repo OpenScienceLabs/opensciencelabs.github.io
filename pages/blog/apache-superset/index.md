@@ -4,7 +4,7 @@ title:
   visualización de datos con Apache Superset"
 slug: apache-superset
 date: 2022-10-26
-author: Yurely Camacho
+authors: ["Yurely Camacho"]
 tags: [apache superset, datos, visualización de datos, dashboard]
 categories: [ciencia de datos, SQL]
 description: |
@@ -15,10 +15,7 @@ description: |
   Superset. Conoce con nosotros sus características más importantes, las
   funcionalidades que ofrece, algunas empresas que lo utilizan y cómo
   hacer tu primer gráfico y dashboard.
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 Fuente:[Apache Superset](https://superset.apache.org/)

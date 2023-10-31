@@ -1,15 +1,12 @@
 ---
 title: "Guía Editorial para creación de Artículos"
 date: 2019-04-08
-author: Mariangela Petrizzo
-draft: true
-usePageBundles: false
+authors: ["Mariangela Petrizzo"]
 ---
-
 
 # Mentoring Code of Conduct
 
-By accessing or using the OSL mentoring services, and thereby becoming a part of this community, you are agreeing to abide by our Code of Conduct.  
+By accessing or using the OSL mentoring services, and thereby becoming a part of this community, you are agreeing to abide by our Code of Conduct.
 
 Participants agree not to engage in any tortious or criminal activity and if you do engage in such activity, you understand that you are fully responsible to the fullest extent of the law and that you will retain your own legal counsel at your own expense, pay and all necessary fines and other costs and agree to hold OSL harmless. OSL is further indemnified for any actions that you take outside the scope of your contract and mentorship.
 

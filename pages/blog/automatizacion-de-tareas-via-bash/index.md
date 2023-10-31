@@ -2,7 +2,7 @@
 title: "Automatización de tareas vía bash"
 slug: automatizacion-de-tareas-via-bash
 date: 2020-06-21
-author: Anavelyz Pérez
+authors: ["Anavelyz Pérez"]
 tags: [bash, automatización]
 categories: [desarrollo de software]
 description: |
@@ -11,10 +11,7 @@ description: |
   sobre Stephen Bourne, el autor del antepasado directo del actual shell de Unix
   sh, que apareció en la séptima edición de la versión de *Bell Labs Research* de
   Unix.
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # Automatización de tareas vía bash -->

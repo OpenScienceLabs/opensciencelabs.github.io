@@ -2,7 +2,7 @@
 title: "Cómo filtrar datos de tu tabla con dplyr en R"
 slug: filtrar-datos-r
 date: 2022-06-14
-author: Ever Vino
+authors: ["Ever Vino"]
 tags: [datos, paquetes, tablas, dplyr, filtrar datos]
 categories: [ciencia de datos, R]
 description: |
@@ -10,12 +10,7 @@ description: |
   biblioteca de `dplyr`, específicamente veremos como usar las funciones
   `filter()`, `select()`, `group_by()`, `sumarize()` y `mutate()` dentro de un
   ejemplo práctico.
-
-aliases: ["/blog/filtrar-datos-r/filtrar-datos-r/"]
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # Cómo filtrar datos de tu tabla con dplyr en R  -->

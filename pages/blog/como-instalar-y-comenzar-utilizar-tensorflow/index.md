@@ -2,7 +2,7 @@
 title: "Cómo instalar y comenzar a utilizar Tensorflow"
 slug: como-instalar-y-comenzar-utilizar-tensorflow
 date: 2020-09-10
-author: Anavelyz Pérez
+authors: ["Anavelyz Pérez"]
 tags: [tensorflow, código, tensorflow, pip, docker]
 categories:
   [
@@ -19,11 +19,7 @@ description: |
   capaces de construir y entrenar redes neuronales para detectar y descifrar
   patrones y correlaciones análogos al aprendizaje y razonamiento usados por los
   humanos.
-
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # Cómo instalar y comenzar a utilizar Tensorflow -->

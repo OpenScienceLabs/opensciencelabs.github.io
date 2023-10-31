@@ -1,10 +1,7 @@
 ---
 title: "Guía Editorial para creación de Artículos"
 date: 2019-04-08
-author: Mariangela Petrizzo
-draft: false
-usePageBundles: false
-featured: true
+authors: ["Mariangela Petrizzo"]
 ---
 
 ## Introducción General

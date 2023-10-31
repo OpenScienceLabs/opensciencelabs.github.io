@@ -4,7 +4,7 @@ title:
   pandemia del COVID-19"
 slug: algunos-proyectos-de-ciencia-e-inteligencia-ciudadana-para-atender-la-pandemia-del-covid-19
 date: 2020-04-16
-author: Yurely Camacho
+authors: ["Yurely Camacho"]
 tags: [covid19, proyectos, ciencia ciudadana]
 categories: [ciencia abierta]
 description: |
@@ -18,10 +18,7 @@ description: |
   artículo *Qué es ciencia ciudadana* (enlace a artículo
   queescienciaciudadana).
 
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # Algunos proyectos de ciencia e inteligencia ciudadana para atender la pandemia del COVID-19 -->

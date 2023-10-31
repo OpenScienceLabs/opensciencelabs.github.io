@@ -1,12 +1,9 @@
-+++
-title = "Packaging Support Program"
-description = "Packaging Support Program"
-date = "2023-08-27"
-aliases = ["packaging-support"]
-author = "OSL Team"
-sidebar = false
-singlecolumn = true
-+++
+---
+title: "Packaging Support Program"
+description: "Packaging Support Program"
+date: "2023-08-27"
+authors: ["OSL Team"]
+---
 
 # Open Science Labs (OSL) Packaging Support Program
 

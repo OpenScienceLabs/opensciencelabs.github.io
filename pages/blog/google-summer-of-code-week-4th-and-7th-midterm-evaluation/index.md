@@ -2,16 +2,13 @@
 title: "Google Summer of Code- Week 4th & 7th Midterm Evaluation"
 slug: google-summer-of-code-week-4th-and-7th-midterm-evaluation
 date: 2023-07-25
-author: Ankit Kumar
+authors: ["Ankit Kumar"]
 tags: [google summer of code, gsoc, open-source open-sciencelab]
 categories: [open-source, gsoc]
 description: |
   In this article, I will share the progress for Week 4th week to 7th week for my
   contribution to Open-science labs as a part of Google Summer of Code 2023.
-draft: false
-usePageBundles: true
 thumbnail: "/GSoC-Vertical.png"
-featureImage: "/GSoC-Vertical.png"
 ---
 
 ## Google Summer of Code- Week 4th & 7th Midterm Evaluation

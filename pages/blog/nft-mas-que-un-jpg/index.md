@@ -2,7 +2,7 @@
 title: "NFT. Más que un JPG"
 slug: nft-mas-que-un-jpg
 date: 2022-04-08
-author: Alan Hurtarte
+authors: ["Alan Hurtarte"]
 tags: [nft, criptomoneda, Blockchain]
 categories: [tecnología]
 description: |
@@ -13,10 +13,7 @@ description: |
   [«Memes clásicos que fueron vendidos como NFT»](https://mashable.com/article/classic-memes-sold-nft-prices).
   En este último artículo, se hace mención al meme de la «novia posesiva» que fue
   vendido por \$411,000.00 USD.
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # NFT. Más que un JPG -->

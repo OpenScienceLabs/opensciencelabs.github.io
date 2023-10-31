@@ -1,12 +1,9 @@
-+++
-title = "Virtual Labs"
-description = "Virtual Labs"
-date = "2023-08-27"
-aliases = ["virtual-labs"]
-author = "OSL Team"
-sidebar = false
-singlecolumn = true
-+++
+---
+title: "Virtual Labs"
+description: "Virtual Labs"
+date: "2023-08-27"
+authors: ["OSL Team"]
+---
 
 # Virtual Labs by Open Science Labs (OSL)
 

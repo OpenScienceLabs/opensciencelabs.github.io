@@ -4,7 +4,7 @@ title:
   CONDA"
 slug: caracteristicas-y-tips-utiles-que-te-ayudaran-sacar-el-maximo-provecho-de-conda
 date: 2020-12-14
-author: Yurely Camacho
+authors: ["Yurely Camacho"]
 tags: [conda, empaquetado, paquetes, entorno virtual]
 categories: [ciencia abierta, código abierto, desarrollo de software, DevOps]
 description: |
@@ -16,10 +16,7 @@ description: |
   recomendaciones para que conozcas los usos de conda y puedas usarla de
   manera eficiente y sin complicaciones.
 
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # Características y tips útiles que te ayudarán a sacar el máximo provecho de CONDA -->

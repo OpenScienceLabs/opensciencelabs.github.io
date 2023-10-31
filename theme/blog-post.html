@@ -1,4 +1,4 @@
-{% extends "main.html" %}
+{% extends "single.html" %}
 
 {% block content_inner %}
 
@@ -12,7 +12,7 @@
       </svg>
     </span>
     <span class=author_name>
-      {{ page.meta["author"] + " · " if "author" in page.meta else "" }}
+      {{ ", ".join(page.meta["authors"]) + " · " if "authors" in page.meta else "" }}
     </span>
     <span>
       <svg class="icon">

@@ -1,6 +1,8 @@
 ---
-aliases: ["/toc/", "/guidelines/toc/", "/guidelines/list/"]
+title: Guidelines
+authors: ["OSL Team"]
 ---
+
 # The Open Science Labs Guideline is a collection of documents about how to get started in specific areas.
 
 ## Articles

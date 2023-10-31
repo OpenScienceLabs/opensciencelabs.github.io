@@ -2,7 +2,7 @@
 title: "Code Abbey una plataforma para mejorar tu habilidad en programación"
 slug: code-abbey-una-plataforma-mejorar-tu-habilidad-en-programacion
 date: 2022-03-22
-author: Ever Vino
+authors: ["Ever Vino"]
 tags: [codeabbey, retos de programación]
 categories: [programación]
 description: |
@@ -10,10 +10,7 @@ description: |
   programación?. Este artículo tiene la respuesta, te mostraremos una de las
   mejores plataformas para que puedas practicar programación resolviendo
   problemas.
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # Code Abbey una plataforma para mejorar tu habilidad en programación -->

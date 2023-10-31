@@ -2,7 +2,7 @@
 title: "Herramientas de visualización en R"
 slug: herramientas-de-visualizacion-en-r
 date: 2020-04-09
-author: Yurely Camacho
+authors: ["Yurely Camacho"]
 tags:
   [
     datos,
@@ -15,7 +15,6 @@ tags:
     shiny,
   ]
 categories: [ciencia abierta, código abierto, R]
-aliases: ["/blog/0032-visualizacionR/herramientas-de-visualizacion-en-r/"]
 description: |
   Sin duda, los datos deben considerarse como la materia prima para cualquier
   proyecto de ciencia abierta, pues todos se basan en el manejo de datos de
@@ -24,10 +23,7 @@ description: |
   consiste en generar representaciones gráficas de las variables que componen un
   conjunto de datos para obtener información fácilmente interpretable de lo que
   ellos nos quieren decir y así, poder comunicarla de una manera asertiva.
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # Herramientas de visualización en R -->

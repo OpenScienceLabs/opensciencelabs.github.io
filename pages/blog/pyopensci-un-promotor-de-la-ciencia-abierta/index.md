@@ -2,7 +2,7 @@
 title: "pyOpenSci: un promotor de la ciencia abierta"
 slug: pyopensci-un-promotor-de-la-ciencia-abierta
 date: 2020-08-06
-author: Yurely Camacho
+authors: ["Yurely Camacho"]
 tags: [pyopensci]
 categories:
   [ciencia abierta, revisión abierta por pares, código abierto, Python]
@@ -16,10 +16,7 @@ description: |
   [Python](https://opensciencelabs.org/blog/razones-para-usar-python-en-tu-proximo-proyecto-de-investigacion/)
   y que sea aceptado por una gran comunidad de _pythonistas_, entonces aquí está
   lo que necesitas saber para lograrlo.
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # pyOpenSci: un promotor de la ciencia abierta -->

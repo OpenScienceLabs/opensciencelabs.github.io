@@ -2,7 +2,7 @@
 title: "¿Qué es el código abierto y cómo puede ayudarte?"
 slug: que-es-el-codigo-abierto-y-como-puede-ayudarte
 date: 2020-02-10
-author: Anavelyz Pérez
+authors: ["Anavelyz Perez"]
 tags: [código, software]
 categories: [ciencia abierta, código abierto]
 description: |
@@ -14,11 +14,7 @@ description: |
   proceso de alguna tarea o forman un sistema en especifico. En desarrollo de
   software, la palabra _código_ hace referencia a uno o varios lenguajes de
   programación.
-
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # ¿Qué es el código abierto y cómo puede ayudarte? -->

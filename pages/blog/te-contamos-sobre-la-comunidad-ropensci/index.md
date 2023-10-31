@@ -2,7 +2,7 @@
 title: "Te contamos sobre la comunidad rOpenSci"
 slug: te-contamos-sobre-la-comunidad-ropensci
 date: 2020-08-18
-author: Yurely Camacho
+authors: ["Yurely Camacho"]
 tags: [comunidad, ropensci, paquetes, revisión]
 categories: [ciencia abierta, R]
 description: |
@@ -11,10 +11,7 @@ description: |
   garanticen. De esta manera, las investigaciones serán compatibles con formatos
   estandarizados y se logrará, progresivamente, el avance de la ciencia bajo el
   enfoque de ciencia abierta.
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- Te contamos sobre la comunidad rOpenSci -->

@@ -2,22 +2,14 @@
 title: "10 Plataformas que te ayudarán en la gestión de tu grupo de trabajo."
 slug: plataformas-que-te-ayudaran-en-la-gestion-de-tu-grupo-de-trabajo
 date: 2021-01-23
-author: Mariangela Petrizzo Páez
+authors: ["Mariangela Petrizzo"]
 tags: [comunicación, gestión]
 categories: [organización, gestión de equipos]
 description: |
   El manejo de los equipos de trabajo es interés constante para Open Science Labs,
   porque tenemos la convicción de que un equipo de trabajo bien manejado puede
   crecer en conjunto y construir mejores resultados para la ciencia abierta.
-
-aliases:
-  [
-    "/blog/0050-10herramientasgestionequipos/plataformas-que-te-ayudaran-en-la-gestion-de-tu-grupo-de-trabajo/",
-  ]
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # 10 Plataformas que te ayudarán en la gestión de tu grupo de trabajo. -->

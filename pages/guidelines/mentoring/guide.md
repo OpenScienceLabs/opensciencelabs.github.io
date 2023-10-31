@@ -1,9 +1,7 @@
 ---
 title: "Guía de Mentorías"
 date: 2019-04-08
-author: Ingrid Bianka Garcia
-draft: false
-usePageBundles: false
+authors: ["Ingrid Bianka Garcia"]
 tags: ["mentorías"]
 ---
 
@@ -11,7 +9,7 @@ tags: ["mentorías"]
 .. title: Guía de Mentorías
 .. slug: es
 .. date: 2021-01-01
-.. author: Ingrid Bianka Garcia
+.. authors: ["Ingrid Bianka Garcia"]
 .. tags: mentoring
 .. category: mentoring
 .. link:

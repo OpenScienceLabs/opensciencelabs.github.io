@@ -1,17 +1,14 @@
 ---
 title: "Declaración de Diversidad, Equidad e Inclusión"
 date: 2019-04-08
-author: Mariangela Petrizzo
-draft: false
-usePageBundles: false
-featured: true
+authors: ["Mariangela Petrizzo"]
 tags: ["DEI"]
 ---
 
 ## Descripción de OSL :
 Open Science Labs (OSL) es una comunidad que ofrece un espacio abierto para compartir, aprender y enseñar temas relacionados de Ciencia Abierta y Tecnologías Computacionales al público de Latinoamérica, pero no restringido a ello.
 
-### Misión de OSL: 
+### Misión de OSL:
 Crear un espacio abierto colaborativo para el aprendizaje orgánico entre todos de la comunidad.
 La Diversidad Equidad e Inclusión es uno de los ejes de la comunidad.
 

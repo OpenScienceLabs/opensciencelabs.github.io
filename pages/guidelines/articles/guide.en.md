@@ -1,10 +1,7 @@
 ---
 title: "Editorial Guidelines for Article Creation"
 date: 2019-04-08
-author: Mariangela Petrizzo
-draft: true
-usePageBundles: false
-featured: true
+authors: ["Mariangela Petrizzo"]
 ---
 
 ## General Introduction

@@ -1,12 +1,9 @@
-+++
-title = "Ambassadors Program"
-description = "Ambassadors Program"
-date = "2023-08-27"
-aliases = ["ambassadors"]
-author = "OSL Team"
-sidebar = false
-singlecolumn = true
-+++
+---
+title: "Ambassadors Program"
+description: "Ambassadors Program"
+date: "2023-08-27"
+authors: ["OSL Team"]
+---
 
 # Open Science Labs (OSL) Ambassadors Program
 

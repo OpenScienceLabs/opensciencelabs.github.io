@@ -2,21 +2,14 @@
 title: "Dibuja tus mapas en R usando archivos de formato Shapefile"
 slug: dibuja-tus-mapas-en-r-usando-archivos-de-formato-shapefile
 date: 2022-04-08
-author: Ever Vino
+authors: ["Ever Vino"]
 tags: [mapas, datos, visualización de datos, shapefile]
 categories: [ciencia abierta, R]
-aliases:
-  [
-    "/blog/0059-r-maps-viz/dibuja-tus-mapas-en-r-usando-archivos-de-formato-shapefile/",
-  ]
 description: |
   Este breve tutorial te mostrará como graficar mapas en R, extraer datos de
   archivos de formato shapefile, resaltar puntos en tu mapa y modificar su
   apariencia utilizando las bibliotecas `rgdal` y `ggplot2`.
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # Dibuja tus mapas en R usando archivos de formato Shapefile -->

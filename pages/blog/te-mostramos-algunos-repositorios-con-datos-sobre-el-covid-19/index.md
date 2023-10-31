@@ -2,7 +2,7 @@
 title: "Te mostramos algunos repositorios con datos sobre el COVID-19"
 slug: te-mostramos-algunos-repositorios-con-datos-sobre-el-covid-19
 date: 2020-03-23
-author: Anavelyz Pérez
+authors: ["Anavelyz Perez"]
 tags: [repositorios, datos, salud, covid19]
 categories: [ciencia abierta, datos abiertos, acceso abierto]
 description: |
@@ -15,10 +15,7 @@ description: |
   También se transmite al tocarse ojos, nariz o boca tras tocar superficies
   contaminadas. Este virus se ha extendido y el número de países en los que sus
   ciudadanos se han contagiado incrementó masivamente en los últimos días.
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # Te mostramos algunos repositorios con datos sobre el COVID-19 -->

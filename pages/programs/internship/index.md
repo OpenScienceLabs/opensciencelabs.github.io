@@ -1,12 +1,9 @@
-+++
-title = "OSL Internship Program"
-description = "Internship Program about"
-date = "2023-08-24"
-aliases = ["internship"]
-author = "OSL Team"
-sidebar = false
-singlecolumn = true
-+++
+---
+title: "OSL Internship Program"
+description: "Internship Program about"
+date: "2023-08-24"
+authors: ["OSL Team"]
+---
 
 # Open Science Labs Internship Program
 

@@ -1,12 +1,9 @@
-+++
-title = "Incubator Program"
-description = "Incubator Program"
-date = "2023-08-23"
-aliases = ["incubator"]
-author = "OSL Team"
-sidebar = false
-singlecolumn = true
-+++
+---
+title: "Incubator Program"
+description: "Incubator Program"
+date: "2023-08-23"
+authors: ["OSL Team"]
+---
 
 # Open Science Labs (OSL) Incubator Program
 

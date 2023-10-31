@@ -3,7 +3,7 @@ title:
   "Te enseñamos 4 lugares para aprender los fundamentos de la ciencia abierta"
 slug: te-ensenamos-lugares-para-aprender-los-fundamentos-de-la-ciencia-abierta
 date: 2020-06-22
-author: Rainer Palm
+authors: ["Rainer Palm"]
 tags: [datos, manual]
 categories: [ciencia abierta]
 description: |
@@ -13,10 +13,7 @@ description: |
   concedidos tanto a los investigadores como a los lectores y posteriores usuarios
   de la investigación, y de qué es lo que se busca lograr con este tipo de
   práctica de investigación.
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # Te enseñamos 4 lugares para aprender los fundamentos de la ciencia abierta -->

@@ -3,7 +3,7 @@ title:
   "¿Qué hemos aprendido, gracias a la ciencia abierta, del manejo de pandemias?"
 slug: que-hemos-aprendido-gracias-la-ciencia-abierta-del-manejo-de-pandemias
 date: 2020-05-27
-author: Yurely Camacho
+authors: ["Yurely Camacho"]
 tags: [pandemias, covid19]
 categories: [ciencia abierta, investigación abierta]
 description: |
@@ -18,10 +18,7 @@ description: |
   para realizar un diagnóstico temprano, en la gestión de la producción de
   vacunas, o para predecir niveles de propagación de las enfermedades y generar
   soluciones tecnológicas.
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # ¿Qué hemos aprendido, gracias a la ciencia abierta, del manejo de pandemias? -->

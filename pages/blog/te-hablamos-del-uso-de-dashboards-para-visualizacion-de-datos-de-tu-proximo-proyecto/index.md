@@ -4,7 +4,7 @@ title:
   proyecto"
 slug: te-hablamos-del-uso-de-dashboards-para-visualizacion-de-datos-de-tu-proximo-proyecto
 date: 2020-03-11
-author: Rainer Palm
+authors: ["Rainer Palm"]
 tags: [visualización de datos, proyectos, datos, código, dashboard, framework]
 categories: [ciencia abierta]
 description: |
@@ -17,10 +17,7 @@ description: |
   suelen ser estáticas (tal como las diapositivas o los informes escritos), ser
   diseñadas en mente solo para gente con conocimiento técnico, o permitir solo el
   uso de ciertos lenguajes de programación o librerías.
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # Te hablamos del uso de dashboards para visualización de datos de tu próximo proyecto -->

@@ -1,16 +1,19 @@
 ---
-draft: true
+title: Discord
+slug: discord-es
+date: 2019-04-08
+authors: ["Ivan Ogasawara"]
 ---
 
 <!--
 .. title: Discord
 .. slug: discord/es
 .. date: 2019-04-08
-.. author: Ivan Ogasawara
+.. authors: ["Ivan Ogasawara"]
 .. tags: devops, discord
 .. category: devops
-.. link: 
-.. description: 
+.. link:
+.. description:
 .. type: text
 -->
 
@@ -28,7 +31,7 @@ ejemplo, un canal dentro de la categoría Python comienza con el prefijo
 
 Algunos nombres de categorías son largos y a veces es difícil encontrar
 un prefijo para eso. Pero, es importante que el prefijo tenga alguna
-relación con la categoría. 
+relación con la categoría.
 
 ## Configuración
 
@@ -48,7 +51,7 @@ clasificación, pero tal vez en el futuro podamos utilizarla.
 
 ### Dyno
 
-**Dyno bot** se utiliza para tareas de mantenimiento, tales como: 
+**Dyno bot** se utiliza para tareas de mantenimiento, tales como:
 
 
 - Mensaje de bienvenida
@@ -61,9 +64,9 @@ clasificación, pero tal vez en el futuro podamos utilizarla.
 
 El bot **YAGPDB.xyz** se utiliza para la suscripción en categorías.
 
-Para más información de cómo utilizarlo, consulte el siguiente tutorial: 
+Para más información de cómo utilizarlo, consulte el siguiente tutorial:
 
-https://docs.yagpdb.xyz/tools-and-utilities/self-assignable-roles 
+https://docs.yagpdb.xyz/tools-and-utilities/self-assignable-roles
 
 Cuando tengas el grupo y los roles configurados en **YAGPDB.xyz**, el
 siguiente paso es crear un mensaje personalizado en **discord**, en el

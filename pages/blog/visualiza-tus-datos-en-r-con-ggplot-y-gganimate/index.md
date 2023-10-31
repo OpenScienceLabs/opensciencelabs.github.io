@@ -2,21 +2,16 @@
 title: "Visualiza tus datos en R con ggplot2 y gganimate"
 slug: visualiza-tus-datos-en-r-con-ggplot-y-gganimate
 date: 2022-04-08
-author: Ever Vino
+authors: ["Ever Vino"]
 tags: [visualización de datos, ggplot2, gganimate]
 categories: [ciencia abierta, código abierto, R]
-aliases:
-  ["/blog/0057-r-ggplot-bo/visualiza-tus-datos-en-r-con-ggplot-y-gganimate/"]
 description: |
   Una gráfica es una buena manera de expresar los datos, estos ayudan a ver
   detalles que simplemente pueden pasar desapercibidos cuando sólo se los analizan
   numericamente, estos pueden tener aún mayor impacto si estan animados. ¿Por qué
   no hacerlo?. En este artículo se describe como hacer animación usando ggplot2 y
   gganimate en R.
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # Visualiza tus datos en R con ggplot2 y gganimate -->

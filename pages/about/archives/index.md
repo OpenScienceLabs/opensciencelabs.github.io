@@ -1,41 +1,61 @@
 ---
-showdate: false
-showreadtime: false
-showauthor: false
-aliases: ["/archives/"]
+title: Archives
 ---
 
 ## Pycafe charlas
 
-{{< youtube hsrIDxiHkVk >}}
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/hsrIDxiHkVk"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen></iframe>
 
-<br>
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/SkaXPIzolPs"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen></iframe>
 
-{{< youtube SkaXPIzolPs >}}
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/h4XeorBiV18"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen></iframe>
 
-<br>
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/lPsOB8dEiNI"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen></iframe>
 
-{{< youtube h4XeorBiV18 >}}
-
-<br>
-
-{{< youtube lPsOB8dEiNI >}}
-
-<br>
-
-{{< youtube vI6wppDdY_g >}}
-
-<br>
-
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/vI6wppDdY_g"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen></iframe>
 
 ## DevOps Charlas
 
-{{< youtube sfBu6RiH07A >}}
-
-<br>
-
-## Anuncios de eventos
-https://twitter.com/opensciencelabs/status/1570867241138245633?s=20&t=UjgCpGqlFdXKkZWXfVNP_g
-{{< tweet user="opensciencelabs" id="1570867241138245633?s=20&t=UjgCpGqlFdXKkZWXfVNP_g" >}}
-
-<br>
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/sfBu6RiH07A"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen></iframe>

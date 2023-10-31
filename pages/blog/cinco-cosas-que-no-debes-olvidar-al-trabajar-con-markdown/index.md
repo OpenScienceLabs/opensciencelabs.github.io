@@ -2,7 +2,7 @@
 title: "Cinco cosas que no debes olvidar al trabajar con Markdown"
 slug: cinco-cosas-que-no-debes-olvidar-al-trabajar-con-markdown
 date: 2020-01-24
-author: Yurely Camacho
+authors: ["Yurely Camacho"]
 tags: [markdown]
 categories: [ciencia de datos]
 description: |
@@ -13,11 +13,7 @@ description: |
   no es tu caso imagínate, ¿si esto le ocurre a una persona que por años ha estado
   escribiendo un libro? Para combatir esa incertidumbre, puedes comenzar a
   escribir en texto plano y darle formato con la ayuda de **Markdown**.
-
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # Cinco cosas que no debes olvidar al trabajar con Markdown -->

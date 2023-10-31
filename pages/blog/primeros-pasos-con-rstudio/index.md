@@ -2,7 +2,7 @@
 title: "Primeros pasos con RStudio"
 slug: primeros-pasos-con-rstudio
 date: 2021-04-05
-author: Anavelyz Pérez
+authors: ["Anavelyz Perez"]
 tags: [rstudio]
 categories: [ciencia abierta, código abierto, R, IDE]
 description: |
@@ -10,11 +10,7 @@ description: |
   programación R, el cual puedes utilizar para realizar scripts de análisis de
   datos, aplicaciones web interactivas, documentos, reportes, gráficos y mucho
   más.
-
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # Primeros pasos con RStudio -->

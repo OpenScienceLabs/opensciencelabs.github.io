@@ -1,12 +1,10 @@
 ---
 title: "Contributor Covenant Code of Conduct"
 date: 2022-09-14
-author: Mariangela Petrizzo
-draft: false
+authors: ["Mariangela Petrizzo"]
 tags: [coc]
-usePageBundles: true
-aliases: ["/coc/", "/guidelines/mentoring/en/coc/"]
 ---
+
 ## Our Pledge
 
 We as members, contributors, and leaders pledge to make participation in our

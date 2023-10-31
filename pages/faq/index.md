@@ -1,9 +1,7 @@
 ---
-showdate: false
-showreadtime: false
-aliases: ["/es/faq"]
+title: FAQ
+authors: ["Ever Vino"]
 ---
-
 
 ### ¿Qué es Open Science Labs (OSL)?
 Open Science Labs es una comunidad que tiene como objetivo unir a personas de todas partes del mundo, especialmente de países latinoamericanos y crear un espacio abierto para enseñar, aprender y compartir temas relacionados con la ciencia abierta y las herramientas computacionales.

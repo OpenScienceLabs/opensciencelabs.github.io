@@ -2,7 +2,7 @@
 title: "Algunos proyectos entretenidos de código abierto"
 slug: algunos-proyectos-entretenidos-de-codigo-abierto
 date: 2020-01-10
-author: Rainer Palm
+authors: ["Rainer Palm"]
 tags: [código, proyectos]
 categories: [ciencia abierta, código abierto]
 description: |
@@ -18,11 +18,7 @@ description: |
   producto final, ya sea una pieza de software, un diseño de hardware, o inclusive
   algo tan común pero no menos importante como lo es una foto o un sonido,
   reproducibles en todo sentido de la palabra.
-
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # Algunos proyectos entretenidos de código abierto -->

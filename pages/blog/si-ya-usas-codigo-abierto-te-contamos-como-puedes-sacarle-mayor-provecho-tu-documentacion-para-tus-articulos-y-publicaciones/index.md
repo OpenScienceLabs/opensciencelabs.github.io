@@ -4,7 +4,7 @@ title:
   tu documentación (para tus artículos y publicaciones)"
 slug: si-ya-usas-codigo-abierto-te-contamos-como-puedes-sacarle-mayor-provecho-tu-documentacion-para-tus-articulos-y-publicaciones
 date: 2020-02-17
-author: Rainer Palm
+authors: ["Rainer Palm"]
 tags: [documentación, código, proyectos, artículos]
 categories: [ciencia abierta, código abierto, desarrollo de software]
 description: |
@@ -17,10 +17,7 @@ description: |
   los problemas más agravantes dentro de la esfera del software libre. En la misma
   encuesta, 60% de los participantes admitían también contribuir a la
   documentación de sus proyectos con muy poca frecuencia.
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # Si ya usas código abierto, te contamos como puedes sacarle mayor provecho a tu documentación (para tus artículos y publicaciones) -->

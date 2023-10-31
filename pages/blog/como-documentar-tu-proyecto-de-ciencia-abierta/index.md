@@ -2,7 +2,7 @@
 title: "¿Cómo documentar tu proyecto de ciencia abierta?"
 slug: como-documentar-tu-proyecto-de-ciencia-abierta
 date: 2020-05-04
-author: Yurely Camacho
+authors: ["Yurely Camacho"]
 tags: [proyectos, documentación]
 categories: [ciencia abierta, desarrollo de software]
 description: |
@@ -12,10 +12,7 @@ description: |
   proyecto sea comprensible por personas ajenas a él y así puedan desarrollar
   algún interés sobre el mismo. A todo el proceso de registro de esa información
   se le conoce como **Documentación**.
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # ¿Cómo documentar tu proyecto de ciencia abierta? -->

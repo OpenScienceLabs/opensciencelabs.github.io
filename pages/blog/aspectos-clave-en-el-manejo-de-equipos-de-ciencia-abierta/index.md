@@ -2,7 +2,7 @@
 title: "Aspectos clave en el manejo de equipos de ciencia abierta"
 slug: aspectos-clave-en-el-manejo-de-equipos-de-ciencia-abierta
 date: 2020-01-20
-author: Rainer Palm
+authors: ["Rainer Palm"]
 tags: [investigación colaborativa]
 categories: [organización, gestión de equipos]
 description: |
@@ -18,10 +18,7 @@ description: |
   eficiencia de la cooperación se hace notar por si sola, y la necesidad de dar
   resultados rápidos en proyectos cada vez más grandes, requiere de la creación de
   grupos con flujos de trabajos disciplinados y metodologías ágiles.
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # Aspectos clave en el manejo de equipos de ciencia abierta -->

@@ -1,11 +1,8 @@
 ---
 title: "Gobernanza del proyecto Open Science Labs"
 date: 2019-09-14
-author: Ivan Ogasawara
-draft: true
-usePageBundles: false
+authors: ["Ivan Ogasawara"]
 tags: ["gobernanza"]
-aliases: ["/governance/","/guidelines/governance/governance/gobernanza"]
 ---
 
 Los objetivos de este documento incluyen la formalización de la gobernanza del proyecto Open Science Labs (OSL). Tanto en las situaciones comunes como en las infrecuentes, perfilar el procedimiento de toma de decisiones y las interacciones entre los distintos miembros de la comunidad, incluyendo la relación entre el trabajo que puede ser apoyado por organizaciones con o sin ánimo de lucro y el desarrollo colaborativo de código abierto.

@@ -1,9 +1,7 @@
 ---
 title: "Código de conducta de las mentorías"
 date: 2019-04-08
-author: Mariangela Petrizzo
-draft: false
-usePageBundles: false
+authors: ["Mariangela Petrizzo"]
 tags: ["mentoria", "coc"]
 ---
 
@@ -11,12 +9,12 @@ tags: ["mentoria", "coc"]
 .. title: Código de conducta de las mentorías
 .. slug: es
 .. date: 2019-04-08
-.. author: Mariangela Petrizzo
+.. authors: ["Mariangela Petrizzo"]
 .. tags: mentoring, coc
 .. category: mentoring
-.. link: 
-.. description: 
-..  
+.. link:
+.. description:
+..
 -->
 
 # Código de conducta de las mentorías

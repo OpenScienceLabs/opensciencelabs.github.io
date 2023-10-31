@@ -4,17 +4,14 @@ title:
   aprender ciencia de datos"
 slug: por-que-deberias-considerar-carpentries-como-una-referencia-para-aprender-ciencia-de-datos
 date: 2021-03-08
-author: Anavelyz Pérez
+authors: ["Anavelyz Perez"]
 tags: [carpentries, datos, proyectos]
 categories: [ciencia de datos, aprendizaje]
 description: |
   Cuando estamos por aprender y comprender al máximo sobre algo en específico, es
   vital que tengamos fuentes de información que nos hagan este proceso más
   sencillo, y que ante cualquier duda que tengamos la ayuda sea oportuna.
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # Por qué deberías considerar a The Carpentries como una referencia para aprender ciencia de datos -->

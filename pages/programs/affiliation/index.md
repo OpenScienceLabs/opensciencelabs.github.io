@@ -1,12 +1,9 @@
-+++
-title = "Affiliation Program"
-description = "Affiliation Program"
-date = "2023-08-27"
-aliases = ["affiliation"]
-author = "OSL Team"
-sidebar = false
-singlecolumn = true
-+++
+---
+title: "Affiliation Program"
+description: "Affiliation Program"
+date: "2023-08-27"
+authors: ["OSL Team"]
+---
 
 # Open Science Labs (OSL) Affiliation Program
 

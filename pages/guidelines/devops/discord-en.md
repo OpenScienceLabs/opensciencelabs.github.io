@@ -1,17 +1,20 @@
 ---
-draft: true
+title: Discord
+slug: discord-en
+date: 2019-04-08
+authors: ["Ivan Ogasawara"]
 ---
 
 <!--
 .. title: Discord
 .. slug: discord/en
 .. date: 2019-04-08
-.. author: Ivan Ogasawara
+.. authors: ["Ivan Ogasawara"]
 .. tags: devops, discord
 .. category: devops
-.. link: 
-.. description: 
-..  
+.. link:
+.. description:
+..
 -->
 
 <!-- # [EN] Discord -->
@@ -21,7 +24,7 @@ to our discord is [http://discord.opensciencelabs.org](opensciencelabs.org/disco
 
 ## Conventions
 
-Each channel has a unique name with a prefix, according to the category. For example, 
+Each channel has a unique name with a prefix, according to the category. For example,
 a channel inside the category Python starts with the prefix `py-`.
 
 Some category name are long and some times it is hard to find a prefix for that.
@@ -37,7 +40,7 @@ We use bots to help us to maintain our server.
 
 ### MEE6
 
-For ranking we are using **MEE6**. We don't have any activity our any rewards using the 
+For ranking we are using **MEE6**. We don't have any activity our any rewards using the
 ranking score, but maybe in the future we can use it.
 
 
@@ -65,11 +68,11 @@ have this subscription mechanism.
 1. In the message, add a title, a general description and the emoticons and theirs
 meaning (https://unicode.org/emoji/charts/full-emoji-list.html).
 2. Get the message ID (you need to activate the development mode)
-3. Run the following command `!yagpdb-rolemenu create (group name) -m (message id) -nodm`, 
-where `(group name)` and `(message id)` are placeholders and should be replaced by 
+3. Run the following command `!yagpdb-rolemenu create (group name) -m (message id) -nodm`,
+where `(group name)` and `(message id)` are placeholders and should be replaced by
 the correct values.
 
-**Note**: An alternative to **yagpdb** would be 
+**Note**: An alternative to **yagpdb** would be
 [**carl-bot**](https://top.gg/bot/235148962103951360). But for now, **yagpdb.xyz**
 seems to be working properly for our needs.
 
@@ -77,7 +80,7 @@ seems to be working properly for our needs.
 
 We have an internal channel for discussions about discord: `#collab-devops-discord`.
 
-Alos, there is a discord server for development, where we can test bots, new 
+Alos, there is a discord server for development, where we can test bots, new
 configurations or new features.
 
 If you want to join that server, you need to ask it in `#collab-devops-discord` channel.

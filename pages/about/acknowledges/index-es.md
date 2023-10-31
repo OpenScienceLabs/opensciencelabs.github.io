@@ -1,8 +1,6 @@
 ---
-showdate: false
-showreadtime: false
-usePageBundles: true
-aliases: ["/acknowledges/"]
+title: Acknowledges
+authors: ["Anavelyz Perez", "Yurely Camacho"]
 ---
 
 ## Python Sotfware Foundation (PSF)

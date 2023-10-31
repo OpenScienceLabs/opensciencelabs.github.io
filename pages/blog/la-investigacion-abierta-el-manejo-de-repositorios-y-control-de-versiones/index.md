@@ -3,7 +3,7 @@ title:
   "La investigación abierta, el manejo de repositorios y control de versiones"
 slug: la-investigacion-abierta-el-manejo-de-repositorios-y-control-de-versiones
 date: 2020-02-28
-author: Anavelyz Perez
+authors: ["Anavelyz Perez"]
 tags: [versionado, repositorios]
 categories:
   [
@@ -18,11 +18,7 @@ description: |
   así como encontrar soluciones a acontecimientos que lo requieran. Por ello,
   cuando se menciona el término investigación abierta, se hace alusión a aquella
   investigación que toma en cuenta los elementos de la ciencia abierta.
-
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # La investigación abierta, el manejo de repositorios y control de versiones -->

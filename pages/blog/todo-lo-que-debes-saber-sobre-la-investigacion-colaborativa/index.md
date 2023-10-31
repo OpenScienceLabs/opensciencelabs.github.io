@@ -2,7 +2,7 @@
 title: "Todo lo que debes saber sobre la investigación colaborativa"
 slug: todo-lo-que-debes-saber-sobre-la-investigacion-colaborativa
 date: 2020-01-10
-author: Anavelyz Pérez
+authors: ["Anavelyz Perez"]
 tags: [investigación colaborativa, equipos]
 categories: [ciencia abierta, investigación abierta]
 description: |
@@ -12,10 +12,7 @@ description: |
   es la unión de distintos conocimientos, experiencias y perspectivas que pueden
   resultar en innovaciones, aprendizajes mutuos y condiciones estables u optimas
   para enfrentar obstáculos.
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # Todo lo que debes saber sobre la investigación colaborativa -->

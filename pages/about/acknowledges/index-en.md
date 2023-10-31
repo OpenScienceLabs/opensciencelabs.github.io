@@ -1,10 +1,6 @@
 ---
 title: "Agradecimientos a la Python Software Foundation por la subvención de nuestro proyecto de CookieCutter"
-author: Anavelyz Perez
-showdate: false
-showreadtime: false
-draft: true
-aliases: ["/acknowledges/"]
+authors: Anavelyz Perez
 ---
 
 ## Python Sotfware Foundation (PSF)

@@ -2,7 +2,7 @@
 title: "Que es el Open Science Framework?"
 slug: que-es-el-open-science-framework
 date: 2021-04-19
-author: Rainer Palm
+authors: ["Rainer Palm"]
 tags: [osf, framework, proyectos]
 categories: [ciencia abierta, investigación abierta]
 description: |
@@ -15,11 +15,7 @@ description: |
   ("subproyectos"), metadatos, usuarios, y demás, con su respectivo registro de
   actividad, que junto a un sistema de control de versiones permiten la eficaz
   revisión de cualquier error que se presenté.
-
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # Que es el Open Science Framework? -->

@@ -4,7 +4,7 @@ title:
   proyectos"
 slug: cinco-cosas-que-te-ayudaran-gestionar-mejor-los-datos-de-tus-proximos-proyectos
 date: 2020-01-19
-author: Yurely Camacho
+authors: ["Yurely Camacho"]
 tags: [datos, proyectos, gestión]
 categories: [ciencia de datos, investigación abierta]
 description: |
@@ -13,11 +13,7 @@ description: |
   basadas en estadísticas, la divulgación de información, la colaboración
   entre proyectos y otras. Por tal motivo si estás manejando datos
   (independientemente de la cantidad) lo mejor es garantizar una buena gestión de ellos.
-
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # Cinco cosas que te ayudarán a gestionar mejor los datos de tus próximos proyectos -->

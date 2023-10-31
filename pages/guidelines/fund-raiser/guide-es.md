@@ -1,22 +1,19 @@
 ---
 title: "Guía para Recaudación de Fondos"
 date: 2019-04-08
-author: Yurely Camacho
-draft: false
-usePageBundles: false
-
+authors: ["Yurely Camacho"]
 ---
 
 <!--
 .. title: Guía para Recaudación de Fondos
 .. slug: es
 .. date: 2019-04-08
-.. author: Yurely Camacho
+.. authors: ["Yurely Camacho"]
 .. tags: open science
 .. category: open science
-.. link: 
-.. description: 
-..  
+.. link:
+.. description:
+..
 -->
 
 <!-- # [ES] Guía para Recaudación de Fondos -->
@@ -107,7 +104,7 @@ trimestral para este año:
    y realizar una evaluación de riesgos de las actividades propuestas.
    Será de 45 o 90 minutos de acuerdo al tipo o modelo de solicitud
    considerada (A o C).
-   
+
 4. La [Junta directiva de Community
 Initiatives](https://communityin.org/meet-us/board-of-directors/) debe
 aprobar la solicitud antes de que el proyecto se incorpore a su amplia

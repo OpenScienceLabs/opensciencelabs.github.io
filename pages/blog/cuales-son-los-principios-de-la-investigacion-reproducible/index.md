@@ -2,17 +2,14 @@
 title: "¿Cuáles son los principios de la investigación reproducible?"
 slug: cuales-son-los-principios-de-la-investigacion-reproducible
 date: 2020-01-31
-author: Rainer Palm
+authors: ["Rainer Palm"]
 tags: [reproducibilidad, datos]
 categories: [ciencia abierta, investigación abierta]
 description: |
   ¿Como puedes tener total confianza y seguridad en que tu metodología es sensata,
   y de que tu investigación ha dado resultados certeros y facil de verificar? ¿Son
   veraces los estudios y descubrimientos de otros científicos?
-draft: false
-usePageBundles: true
 thumbnail: "/header.png"
-featureImage: "/header.png"
 ---
 
 <!-- # ¿Cuáles son los principios de la investigación reproducible? -->
