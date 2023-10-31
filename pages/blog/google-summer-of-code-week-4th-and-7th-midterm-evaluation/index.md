@@ -5,7 +5,8 @@ date: 2023-07-25
 author: Ankit Kumar
 tags: [google summer of code, gsoc, open-source open-sciencelab]
 categories: [open-source, gsoc]
- 
+description: |
+  In this article, I will share the progress for Week 4th week to 7th week for my contribution to Open-science labs as a part of Google Summer of Code 2023.
 draft: false
 usePageBundles: true
 thumbnail: "/GSoC-Vertical.png"
@@ -13,6 +14,7 @@ featureImage: "/GSoC-Vertical.png"
 ---
 
 ## Google Summer of Code- Week 4th & 7th Midterm Evaluation
+
 In this article, I will share the progress for Week 4th week to 7th week for my contribution to Open-science labs as a part of Google Summer of Code 2023.
 
  <img src="GSoC-Vertical.png" width="400">
@@ -21,7 +23,7 @@ As my Google Summer of Code journey continued, I found myself faced with an exci
 
 In this period, I started working on to add support for `Maturin` build-system.
 
-### Maturin 
+### Maturin
 
 [**Maturin**]() was the first build-system I explored. Its unique approach of building Python bindings for Rust libraries intrigued me, and I wondered if it could provide a novel solution to the lab's needs. The seamless blending of Python and Rust offered the potential for unparalleled performance and memory efficiency in research projects. However, I faced a steep learning curve to master the intricacies of Rust and its integration with Python. Overcoming these challenges was a significant achievement, and I managed to create a functional prototype that demonstrated Maturin's potential to revolutionize the Open-Science Lab's workflow. My contribution to this issue is [here](https://github.com/osl-incubator/scicookie/pull/152)
 

@@ -1,22 +1,27 @@
 ---
-title: "Te mostramos cinco librerías en Python para tu próximo proyecto de ciencia abierta"
+title:
+  "Te mostramos cinco librerías en Python para tu próximo proyecto de ciencia
+  abierta"
 slug: te-mostramos-cinco-librerias-en-python-para-tu-proximo-proyecto-de-ciencia-abierta
 date: 2020-06-09
 author: Anavelyz Perez
 tags: [datos, visualización de datos, pandas, scipy, matplotlib, seaborn, bokeh]
 categories: [ciencia abierta, código abierto, Python]
- 
+description: |
+  Un proyecto de ciencia abierta, así como cualquier otro, requiere de una
+  evaluación previa para determinar lo que se necesita hacer y cómo debe llevarse
+  a cabo. En el caso de ciencia abierta, debemos tener en cuenta que, por su
+  alcance e impacto en la comunidad científica y sociedad en general, es vital
+  estudiar las herramientas que se utilizarán porque de ellas depende la obtención
+  de resultados óptimos, visualmente atractivos y lo suficientemente informativos.
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
 featureImage: "/header.png"
 ---
 
-
 <!-- # Te mostramos cinco librerías en Python para tu próximo proyecto de ciencia abierta -->
 <!-- **Por Anavelyz Perez** -->
-
-
 
 Un proyecto de ciencia abierta, así como cualquier otro, requiere de una
 evaluación previa para determinar lo que se necesita hacer y cómo debe llevarse
@@ -27,7 +32,8 @@ de resultados óptimos, visualmente atractivos y lo suficientemente informativos
 
 <!-- TEASER_END -->
 
-Antes de continuar, recordemos del artículo [¿Qué es la ciencia abierta?](https://opensciencelabs.org/blog/que-es-la-ciencia-abierta/),
+Antes de continuar, recordemos del artículo
+[¿Qué es la ciencia abierta?](https://opensciencelabs.org/blog/que-es-la-ciencia-abierta/),
 que la ciencia abierta es un movimiento, una manera de ver y hacer ciencia, que
 busca crear una cultura donde la información de todo el proceso de investigación
 científica, ya sean los datos, protocolos, cuadernos de laboratorio, resultados
@@ -46,60 +52,58 @@ contenido de las investigaciones científicas en todas las áreas (instrumentos 
 trabajo, resultados intermedios y finales) mediante la digitalización y las
 bondades del internet.
 
-Cuando elaboramos un proyecto bajo la modalidad de ciencia abierta, por
-lo general analizamos, describimos y descubrimos información que está
-contenida en datos, lo cual se hace aplicando métodos estadísticos u
-otros similares. Estos se pueden complementar con una o varias
-visualizaciones o gráficos que permitirán, tanto a los analistas como a
-los lectores, tener una visión más general de lo que las medidas
-numéricas o palabras describen. Además, una visualización logra
-presentar resultados estéticamente más atractivos y captar la atención
-en puntos donde se requiera un mayor enfoque.
+Cuando elaboramos un proyecto bajo la modalidad de ciencia abierta, por lo
+general analizamos, describimos y descubrimos información que está contenida en
+datos, lo cual se hace aplicando métodos estadísticos u otros similares. Estos
+se pueden complementar con una o varias visualizaciones o gráficos que
+permitirán, tanto a los analistas como a los lectores, tener una visión más
+general de lo que las medidas numéricas o palabras describen. Además, una
+visualización logra presentar resultados estéticamente más atractivos y captar
+la atención en puntos donde se requiera un mayor enfoque.
 
 Para tener esto último un poco más claro, representémoslo en un ejemplo.
-Supongamos que estamos estudiando las enfermedades en un período de
-tiempo dado y en una región específica, y tenemos la información que
-corresponde a la edad, sexo y la enfermedad que presentan los pacientes
-atendidos en los centros hospitalarios de ese período.
+Supongamos que estamos estudiando las enfermedades en un período de tiempo dado
+y en una región específica, y tenemos la información que corresponde a la edad,
+sexo y la enfermedad que presentan los pacientes atendidos en los centros
+hospitalarios de ese período.
 
-Entonces podemos considerar la estadística descriptiva como una de las
-técnicas ideales, en este caso se calcularían estadísticos como la media
-para la edad, la proporción para el sexo y el tipo de enfermedad. A su
-vez, podemos hacer cruces de información a través de tablas de
-contingencia y a partir de estas elaborar gráficos que complementarán
-esta información. Estos gráficos mostrarán, de forma sintetizada, lo que
-los datos revelan y resultará más fácil hacer comparaciones. Además los
-colores y las áreas de las figuras trazadas captarán la atención de lo
-que verdaderamente se requiere para la toma de decisiones. Todo ello es
-una clara y simple noción de lo que una visualización puede ayudar.
+Entonces podemos considerar la estadística descriptiva como una de las técnicas
+ideales, en este caso se calcularían estadísticos como la media para la edad, la
+proporción para el sexo y el tipo de enfermedad. A su vez, podemos hacer cruces
+de información a través de tablas de contingencia y a partir de estas elaborar
+gráficos que complementarán esta información. Estos gráficos mostrarán, de forma
+sintetizada, lo que los datos revelan y resultará más fácil hacer comparaciones.
+Además los colores y las áreas de las figuras trazadas captarán la atención de
+lo que verdaderamente se requiere para la toma de decisiones. Todo ello es una
+clara y simple noción de lo que una visualización puede ayudar.
 
 A continuación veamos cinco bibliotecas o librerías de Python que puedes
 implementar en tu proyecto de ciencia abierta:
 
-- pandas: Es una biblioteca que permite realizar tareas de manejo y
-  análisis de datos de forma rápida y eficiente. Se complementa con la
-  biblioteca de visualización Matplotlib. Puedes consultar más
-  información en https://pandas.pydata.org/.
+- pandas: Es una biblioteca que permite realizar tareas de manejo y análisis de
+  datos de forma rápida y eficiente. Se complementa con la biblioteca de
+  visualización Matplotlib. Puedes consultar más información en
+  https://pandas.pydata.org/.
 
   SciPy: Es uno de los paquetes centrales que componen la pila de SciPy.
-  Proporciona muchas rutinas numéricas eficientes y fáciles de usar,
-  como las rutinas de integración numérica, interpolación, optimización,
-  álgebra lineal y estadística. Esta descripción se encuentra disponible
-  en https://www.scipy.org/scipylib/index.html.
+  Proporciona muchas rutinas numéricas eficientes y fáciles de usar, como las
+  rutinas de integración numérica, interpolación, optimización, álgebra lineal y
+  estadística. Esta descripción se encuentra disponible en
+  https://www.scipy.org/scipylib/index.html.
 
 - Matplotlib: es una de las primeras y más populares bibliotecas de
   visualización de Python. En su [página web](https://matplotlib.org/) podemos
-  encontrar una corta descripción de ella: Matplotlib es una
-  biblioteca muy completa para crear visualizaciones estáticas, animadas e
-  interactivas en Python. Con esta biblioteca se pueden generar gráficos de
-  barras, histogramas, espectros de potencia, stemplots, scatterplots, gráficos
-  de error, gráficos circulares y muchos otros.
+  encontrar una corta descripción de ella: Matplotlib es una biblioteca muy
+  completa para crear visualizaciones estáticas, animadas e interactivas en
+  Python. Con esta biblioteca se pueden generar gráficos de barras, histogramas,
+  espectros de potencia, stemplots, scatterplots, gráficos de error, gráficos
+  circulares y muchos otros.
 
   Es uno de los métodos más simples para las representaciones básicas, está
   diseñada con la filosofía de que deberías generar un gráfico simple con pocas
   líneas de código, o simplemente una. Además, se complementa muy bien con otras
   bibliotecas de análisis de datos, tal es el caso mencionado líneas arriba con
-  *pandas*.
+  _pandas_.
 
 - Seaborn: es una biblioteca de visualización basada en Matplotlib, permite
   hacer gráficos estadísticos visualmente atractivos, posee estilos
@@ -107,22 +111,21 @@ implementar en tu proyecto de ciencia abierta:
   resultados más estéticos y modernos. Podemos obtener gráficos de barras,
   histogramas, circulares, gráficos de error, entre otros.
 
-  Podemos encontrar más información de esta biblioteca en su [página
-  web](https://seaborn.pydata.org/).
+  Podemos encontrar más información de esta biblioteca en su
+  [página web](https://seaborn.pydata.org/).
 
-- Bokeh: Es una biblioteca de visualización que permite crear tanto
-  gráficos sencillos como especializados, dashboards y gráficos
-  orientados a la web. Los resultados de las visualizaciones constan de
-  elegancia y son estéticamente atractivos, los gráficos son muy
-  versátiles. Es posible consultar más información acerca de esta
-biblioteca en su [página
-web](https://docs.bokeh.org/en/latest/index.html).
+- Bokeh: Es una biblioteca de visualización que permite crear tanto gráficos
+  sencillos como especializados, dashboards y gráficos orientados a la web. Los
+  resultados de las visualizaciones constan de elegancia y son estéticamente
+  atractivos, los gráficos son muy versátiles. Es posible consultar más
+  información acerca de esta biblioteca en su
+  [página web](https://docs.bokeh.org/en/latest/index.html).
 
 Todas estas bibliotecas son de código abierto y cuentan con un soporte en la
 web, existen foros y varios canales de información sobre ellas. No son las
 únicas que puedes incluir en tu proyecto, hay muchas opciones más, te invitamos
 a que explores y pruebes estas herramientas.
 
-En nuestro artículo [**Herramientas de visualización en
-Python**](https://opensciencelabs.org/blog/herramientas-de-visualizacion-en-python/)
+En nuestro artículo
+[**Herramientas de visualización en Python**](https://opensciencelabs.org/blog/herramientas-de-visualizacion-en-python/)
 puedes encontrar otras bibliotecas o librerías que te pueden interesar.

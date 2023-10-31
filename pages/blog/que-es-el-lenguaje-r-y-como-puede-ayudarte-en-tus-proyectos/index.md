@@ -5,18 +5,23 @@ date: 2020-01-17
 author: Yurely Camacho
 tags: [rstudio, rmarkdown, proyectos, markdown]
 categories: [ciencia de datos, estadística,  R, aprendizaje]
- 
+description: |
+  Si eres una persona con deseos de desarrollar proyectos de código
+  abierto que puedan ser compartidos, quieres replicar y /o mejorar
+  proyectos existentes o convertirte en un científico de datos, es muy
+  probable que hayas leído o escuchado sobre el [Lenguaje
+  R](https://www.r-project.org/). En este post daremos un paso breve sobre
+  sus características, las posibilidades de emplearlo en tus proyectos y
+  las oportunidades laborales que tendrás cuando aprendas a utilizarlo.
+
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
 featureImage: "/header.png"
 ---
 
-
 <!-- # ¿Qué es el Lenguaje R y cómo puede ayudarte en tus proyectos? -->
 <!-- **Por Yurely Camacho** -->
-
-
 
 Si eres una persona con deseos de desarrollar proyectos de código
 abierto que puedan ser compartidos, quieres replicar y /o mejorar

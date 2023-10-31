@@ -5,7 +5,13 @@ date: 2020-01-08
 author: Rainer Palm
 tags: [git, repositorios, github]
 categories: [desarrollo de software, control de versiones]
- 
+description: |
+  ¿Necesitas aprender [Git](https://git-scm.com/) para manejar con mayor
+  eficiencia y control tus proyectos y trabajos? Ya sea para desarrollo de
+  software, creación de páginas web, investigaciones científicas, o para
+  manejar tus escritos, te podría ser muy útil aprovechar la seguridad que
+  te da Git para el control de versiones, o la facilidad con la que
+  permite la investigación colaborativa.
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
@@ -15,8 +21,6 @@ featureImage: "/header.png"
 
 <!-- # Git de 0 a 100 en diez sencillos pasos -->
 <!-- **Por Rainer Palm** -->
-
-
 
 ¿Necesitas aprender [Git](https://git-scm.com/) para manejar con mayor
 eficiencia y control tus proyectos y trabajos? Ya sea para desarrollo de
@@ -79,7 +83,7 @@ oculta `.git` con información de los archivos y ramas de tu repositorio,
 los cambios a estos y el último commit. Tu repositorio en Github también
 contiene esta carpeta, así que, para ahorrarte un dolor de cabeza,
 deberías clonarlo (copiarlo en tu ordenador), ya sea descargándolo desde
-su página o en la línea de comandos escribiendo: 
+su página o en la línea de comandos escribiendo:
 
 ```
 git clone https://github.com/(tu usuario)/(nombre del repositorio).git
@@ -104,18 +108,18 @@ git rm {nombre de tu archivo}
 
 para hacer cambios en la copia local de tu repositorio, ya sea añadir y
 modificar o eliminar archivos, respectivamente. Antes de sincronizar los
-cambios, debes ‘empaquetarlos’ en un commit, mediante el comando 
+cambios, debes ‘empaquetarlos’ en un commit, mediante el comando
 
 ```
 git commit -m “{descripción de los cambios}”
 ```
 
 Después podrás sincronizar ese commit con el servidor de Github
-utilizando el comando 
+utilizando el comando
 
 ```
 git push origin master
-``` 
+```
 
 Con aplicaciones gráficas como Github Desktop u otra similar, podrás
 realizar estos cambios de una forma mucho más intuitiva.
@@ -170,7 +174,7 @@ git merge {rama con cambios}
 Git intentará hacer este proceso automáticamente, pero puede ser que
 hayan conflictos entre ramas con los cambios hechos. En este caso,
 tendrás que editar los archivos que te muestra Git, y agregarlos
-manualmente ejecutando 
+manualmente ejecutando
 
 ```
 git add {nombre de archivo}
@@ -180,14 +184,14 @@ git add {nombre de archivo}
 
 En caso de que tu copia local del repositorio no tenga los cambios
 hechos hasta el último commit en la rama que estás trabajando, puedes
-actualizarla ejecutando 
+actualizarla ejecutando
 
 ```
 git pull
 ```
 
 Para ver los cambios que se han realizado entre las distintas ramas del
-repositorio, ejecuta el comando 
+repositorio, ejecuta el comando
 
 ```
 git diff {rama fuente} {rama a comparar}

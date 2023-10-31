@@ -2,20 +2,19 @@
 title: "Que es el Open Science Framework?"
 slug: que-es-el-open-science-framework
 date: 2021-04-19
-author: Rainer Palm 
+author: Rainer Palm
 tags: [osf, framework, proyectos]
 categories: [ciencia abierta, investigación abierta]
- 
+description: |
+  El Open Science Framework (OSF)[1] es un conjunto de herramientas diseñadas tanto para organizar, facilitar y mantener el proceso de vida de la investigación, como para la captura de los distintos estados que esta toma a lo largo de su realización. Mediante la creación de un "proyecto" (asociado a un DOI) y su respectiva wiki en su sitio web[1], los usuarios son llevados a un dashboard donde podrán administrar de manera sencilla archivos, componentes ("subproyectos"), metadatos, usuarios, y demás, con su respectivo registro de actividad, que junto a un sistema de control de versiones permiten la eficaz revisión de cualquier error que se presenté.
+
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
 featureImage: "/header.png"
 ---
 
-
 <!-- # Que es el Open Science Framework? -->
-
-
 
 El Open Science Framework (OSF)[1] es un conjunto de herramientas diseñadas tanto para organizar, facilitar y mantener el proceso de vida de la investigación, como para la captura de los distintos estados que esta toma a lo largo de su realización. Mediante la creación de un "proyecto" (asociado a un DOI) y su respectiva wiki en su sitio web[1], los usuarios son llevados a un dashboard donde podrán administrar de manera sencilla archivos, componentes ("subproyectos"), metadatos, usuarios, y demás, con su respectivo registro de actividad, que junto a un sistema de control de versiones permiten la eficaz revisión de cualquier error que se presenté.
 

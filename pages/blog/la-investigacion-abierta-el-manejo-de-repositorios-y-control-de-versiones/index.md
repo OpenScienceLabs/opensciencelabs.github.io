@@ -5,7 +5,14 @@ date: 2020-02-28
 author: Anavelyz Perez
 tags: [versionado, repositorios]
 categories: [ciencia abierta, investigación abierta, desarrollo de software, control de versiones]
- 
+description: |
+  Las investigaciones son esenciales en el avance tecnológico y social
+  porque nos permiten encontrar respuestas a muchas dudas e hipótesis que
+  surgen diariamente, así como encontrar soluciones a acontecimientos que
+  lo requieran. Por ello, cuando se menciona el término investigación
+  abierta, se hace alusión a aquella investigación que toma en cuenta los
+  elementos de la ciencia abierta.
+
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
@@ -15,8 +22,6 @@ featureImage: "/header.png"
 
 <!-- # La investigación abierta, el manejo de repositorios y control de versiones -->
 <!-- **Por Anavelyz Perez** -->
-
-
 
 Las investigaciones son esenciales en el avance tecnológico y social
 porque nos permiten encontrar respuestas a muchas dudas e hipótesis que

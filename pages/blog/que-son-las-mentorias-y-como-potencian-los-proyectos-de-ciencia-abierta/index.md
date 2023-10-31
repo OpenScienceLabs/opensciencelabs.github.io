@@ -5,18 +5,24 @@ date: 2020-02-14
 author: Yurely Camacho
 tags: [proyectos]
 categories: [organización, mentorías]
- 
+description: |
+  La competitividad y los deseos de superación a nivel personal, profesional y
+  laboral impulsan los deseos individuales por aprender continuamente para afianzar
+  nuestros conocimientos, aptitudes y habilidades. En muchos casos,
+  el aprendizaje demanda la adquisición o fortalecimiento de capacidades y
+  destrezas, para las cuales el proceso de mentoría
+  nos brinda una buena oportunidad para lograrlo. En el presente artículo
+  proporcionamos una definición de mentoría, te daremos un paseo por
+  algunos programas actuales de mentoría y al final reflexionamos sobre
+  las bondades de este proceso en proyectos de ciencia abierta.
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
 featureImage: "/header.png"
 ---
 
-
 <!-- # ¿Qué son las mentorías y cómo potencian los proyectos de  ciencia abierta? -->
 <!-- **Por Yurely Camacho** -->
-
-
 
 La competitividad y los deseos de superación a nivel personal, profesional y
 laboral impulsan los deseos individuales por aprender continuamente para afianzar

@@ -6,6 +6,8 @@ author: Anavelyz Perez
 tags: [visualización de datos, bibliotecas, código, herramientas]
 categories: [Python]
 aliases: ["/blog/0037-visualizacion_python/herramientas-de-visualizacion-en-python/"]
+description: |
+  En uno de nuestros artículos, específicamente [10 razones para usar Python en tu próximo proyecto de investigación](http://opensciencelabs.org/blog/razones-para-usar-python-en-tu-proximo-proyecto-de-investigacion/), se da un recorrido por las ventajas que brinda el lenguaje de programación Python, de allí podemos extraer algunas de sus características
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
@@ -15,8 +17,6 @@ featureImage: "/header.png"
 
 <!-- # Herramientas de visualización en Python -->
 <!-- **Por Anavelyz Perez** -->
-
-
 
 En uno de nuestros artículos, específicamente [10 razones para usar Python en tu próximo proyecto de investigación](http://opensciencelabs.org/blog/razones-para-usar-python-en-tu-proximo-proyecto-de-investigacion/), se da un recorrido por las ventajas que brinda el lenguaje de programación Python, de allí podemos extraer algunas de sus características tales como:
 
@@ -56,7 +56,7 @@ pueden clasificar en tres grupos importantes:
 
 ```
 - Gráficos rápidos, son aquellos que se pueden realizar con pocas líneas de código.
- 
+
 - Especialidades de matplotlib, gráficos que modifican y mejoran los gráficos de matplotlib.
 
 - Dirigido a desarrolladores e ingenieros de software.

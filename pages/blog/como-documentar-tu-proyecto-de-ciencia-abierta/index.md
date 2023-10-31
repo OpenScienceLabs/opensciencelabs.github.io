@@ -5,7 +5,9 @@ date: 2020-05-04
 author: Yurely Camacho
 tags: [proyectos, documentación]
 categories: [ciencia abierta, desarrollo de software]
- 
+description: |
+  Para hacer reproducible una investigación y que ésta pueda ser verificada a largo plazo, debes contar con un registro donde tomes nota de todos los pasos realizados durante este proceso, lo cual servirá, al mismo tiempo, para que tu proyecto sea comprensible por personas ajenas a él y así puedan desarrollar algún interés sobre el mismo. A todo el proceso de registro de esa información se le conoce como **Documentación**.
+
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
@@ -15,8 +17,6 @@ featureImage: "/header.png"
 
 <!-- # ¿Cómo documentar tu proyecto de ciencia abierta? -->
 <!-- **Por Yurely Camacho** -->
-
-
 
 Para hacer reproducible una investigación y que ésta pueda ser verificada a largo plazo, debes contar con un registro donde tomes nota de todos los pasos realizados durante este proceso, lo cual servirá, al mismo tiempo, para que tu proyecto sea comprensible por personas ajenas a él y así puedan desarrollar algún interés sobre el mismo. A todo el proceso de registro de esa información se le conoce como **Documentación**.
 

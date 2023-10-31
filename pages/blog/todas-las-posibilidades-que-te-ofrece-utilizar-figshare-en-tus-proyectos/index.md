@@ -1,21 +1,24 @@
 ---
-title: "Todas las posibilidades que te ofrece utilizar figshare en tus proyectos"
+title:
+  "Todas las posibilidades que te ofrece utilizar figshare en tus proyectos"
 slug: todas-las-posibilidades-que-te-ofrece-utilizar-figshare-en-tus-proyectos
 date: 2020-12-21
 author: Anavelyz Pérez
 tags: [figshare, proyectos, plataforma]
 categories: [ciencia abierta, investigación abierta, acceso abierto]
- 
+description: |
+  Figshare es un repositorio de acceso abierto en línea en el cual los usuarios pueden
+  poner a disposición todos los resultados de sus investigaciones. Esto de manera
+  que sean citables, compartibles y descubribles. Los resultados pueden incluir
+  cifras, los conjuntos de datos, imágenes y vídeos.
+
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
 featureImage: "/header.png"
 ---
 
-
 <!-- # Todas las posibilidades que te ofrece utilizar figshare en tus proyectos -->
-
-
 
 ¿Qué es figshare?
 
@@ -26,8 +29,8 @@ cifras, los conjuntos de datos, imágenes y vídeos.
 
 <!-- TEASER_END -->
 
-**figshare** fue ideado y desarrollado por Mark Hahnel, se lanzó originalmente en el
-año 2011. "Hahnel diseñó e implementó esta plataforma como una alternativa
+**figshare** fue ideado y desarrollado por Mark Hahnel, se lanzó originalmente
+en el año 2011. "Hahnel diseñó e implementó esta plataforma como una alternativa
 propia para organizar, publicar y compartir, los recursos, los productos y los
 resultados que a partir de su investigación doctoral en biología de células
 madre, generaba y obtenía de forma complementaría"
@@ -50,13 +53,13 @@ proyectos hasta la promoción de ellos. Veamos esto detenidamente.
   categorías y etiquetas que son fáciles de buscar, logrando así que los
   investigadores encuentren los datos que necesitan más rápido.
 
-- Compartir tu trabajo: con esta plataforma tienes la posibilidad de hacer público
-  tu proyecto, compartir tus archivos y controlar el acceso a tus datos privados.
-  Adicional a esto puedes asignarle un DOI y obtener citaciones por los resultados
-  de tu investigación.
+- Compartir tu trabajo: con esta plataforma tienes la posibilidad de hacer
+  público tu proyecto, compartir tus archivos y controlar el acceso a tus datos
+  privados. Adicional a esto puedes asignarle un DOI y obtener citaciones por
+  los resultados de tu investigación.
 
 - Opciones de acceso: Actualmente Figshare tiene tres opciones de acceso, un
-  acceso para investigadores, un acceso para instituciones  y un acceso para
+  acceso para investigadores, un acceso para instituciones y un acceso para
   editores. El acceso para investigadores se conoce generalmente como free
   accounts.
 
@@ -70,10 +73,10 @@ proyectos hasta la promoción de ellos. Veamos esto detenidamente.
 * Editar todo el contenido antes de que se publique
 * Colocar una marca de agua en los archivos correspondientes a la institución
 * Descartar los archivos que han sido publicados por error
-* Permite alojar grandes cantidades de datos en sus artículos en
-  línea sin que ello afecte a su infraestructura.
-* Se contará con estadísticas públicas sobre todas las vistas, descargas,
-  citas y otras alteraciones de los productos de su institución.
+* Permite alojar grandes cantidades de datos en sus artículos en línea sin que
+  ello afecte a su infraestructura.
+* Se contará con estadísticas públicas sobre todas las vistas, descargas, citas
+  y otras alteraciones de los productos de su institución.
 
 Para ver estas y otras características puedes visitar
 \[https://figshare.com/features\].
@@ -87,13 +90,12 @@ ampliar el conocimiento y promover la ciencia abierta.
 - Proyectos y productos propios de figshare:
 
 -“The State of Open Data” es uno de estos proyectos, se ha venido implementando
-desde 2016, su principal objetivo es "aprender para ayudar a conformar el
-futuro de los datos abiertos sobre la base de la información y las pruebas
-reunidas en la comunidad". Además, se tiene en una sección en la cual se
-consigue información, análisis, datos y encuestas referentes a 16 disciplinas
-o sectores en los que se ha implementado la ciencia abierta. Para tener una
-mejor idea de este proyecto puedes visitar el sitio web
-\[https://stateofopendata.od4d.net/\].
+desde 2016, su principal objetivo es "aprender para ayudar a conformar el futuro
+de los datos abiertos sobre la base de la información y las pruebas reunidas en
+la comunidad". Además, se tiene en una sección en la cual se consigue
+información, análisis, datos y encuestas referentes a 16 disciplinas o sectores
+en los que se ha implementado la ciencia abierta. Para tener una mejor idea de
+este proyecto puedes visitar el sitio web \[https://stateofopendata.od4d.net/\].
 
 -"The Reproducibility Initiative”, es un proyecto en conjunto con Science
 Exchange, PLOS y Mendeley, cuyo objetivo es identificar y recompensar la
@@ -117,9 +119,10 @@ y ayuda al crecimiento del conocimiento.
 **Al día de hoy, figshare ha recibido más de 26 millones de page views y más de
 7.5 millones de descargas, tiene en su plataforma más de 2 millones artículos,
 más de 5 mil proyectos, más de 500 mil colecciones y más de 800 mil usuarios que
-cargan o comparten sus archivos a través de ella. \[https://figshare.com/about\]**
+cargan o comparten sus archivos a través de ella.
+\[https://figshare.com/about\]**
 
-* Referencias:
+- Referencias:
 
 (Sitio oficial defigshare) \[https://figshare.com/\]
 

@@ -6,17 +6,18 @@ author: Ever Vino
 tags: [mapas, datos, visualización de datos, shapefile]
 categories: [ciencia abierta, R]
 aliases: ["/blog/0059-r-maps-viz/dibuja-tus-mapas-en-r-usando-archivos-de-formato-shapefile/"]
+description: |
+  Este breve tutorial te mostrará como graficar mapas en R, extraer datos
+  de archivos de formato shapefile, resaltar puntos en tu mapa y modificar
+  su apariencia utilizando las bibliotecas `rgdal` y `ggplot2`.
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
 featureImage: "/header.png"
 ---
 
-
 <!-- # Dibuja tus mapas en R usando archivos de formato Shapefile -->
 <!-- **Autor**: Ever Vino -->
-
-
 
 Este breve tutorial te mostrará como graficar mapas en R, extraer datos
 de archivos de formato shapefile, resaltar puntos en tu mapa y modificar
@@ -111,7 +112,7 @@ shapefile = readOGR(
   layer = "departamentos_geo",
   encoding = 'utf-8',
   use_iconv = TRUE
-) 
+)
 ```
 
 - **`dsn`**: carpeta dentro del directorio actual, donde se encuentran
@@ -135,14 +136,14 @@ head(geotable)
 ```r
 > head(geotable)
 # A tibble: 6 x 7
-   long   lat order hole  piece group id   
+   long   lat order hole  piece group id
   <dbl> <dbl> <int> <lgl> <fct> <fct> <chr>
-1 -65.8 -18.0     1 FALSE 1     0.1   0    
-2 -65.8 -18.0     2 FALSE 1     0.1   0    
-3 -65.8 -18.0     3 FALSE 1     0.1   0    
-4 -65.8 -18.0     4 FALSE 1     0.1   0    
-5 -65.8 -18.0     5 FALSE 1     0.1   0    
-6 -65.8 -18.0     6 FALSE 1     0.1   0    
+1 -65.8 -18.0     1 FALSE 1     0.1   0
+2 -65.8 -18.0     2 FALSE 1     0.1   0
+3 -65.8 -18.0     3 FALSE 1     0.1   0
+4 -65.8 -18.0     4 FALSE 1     0.1   0
+5 -65.8 -18.0     5 FALSE 1     0.1   0
+6 -65.8 -18.0     6 FALSE 1     0.1   0
 ```
 
 Nótese que geotable, no posee las etiquetas de los nombres de las
@@ -340,7 +341,7 @@ ggplot() +
     ),
     legend.title = element_text(size = 12, family = "Rubik"),
     plot.caption = element_text(family = "Helvetica")
-  ) 
+  )
 ```
 
 - **`geom_point(alpha, data, mapping = aes(x, y, colour), size)`**: dibuja puntos dentro del gráfico, comparte similares argumentos con `geom_poligon()` y `geom_text()`.

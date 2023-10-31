@@ -5,7 +5,9 @@ date: 2020-03-09
 author:  Yurely Camacho
 tags: [código, reproducibilidad]
 categories: [ciencia abierta, investigación abierta, código abierto]
- 
+description: |
+  Los avances en la ciencia están fuertemente relacionados con la reproducibilidad en las investigaciones. Resulta muy importante lograr que otras personas puedan reproducir nuestros trabajos. ¡Imagínate la aceptación que tendría una investigación si todos los intentos posteriores de ratificar los resultados fracasan!
+
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

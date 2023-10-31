@@ -16,6 +16,7 @@ draft: false
 usePageBundles: true
 thumbnail: "/header.svg"
 featureImage: "/header.svg"
+template: "blog-post.html"
 ---
 
 

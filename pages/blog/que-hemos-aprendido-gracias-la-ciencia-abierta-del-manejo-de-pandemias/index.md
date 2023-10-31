@@ -5,18 +5,20 @@ date: 2020-05-27
 author: Yurely Camacho
 tags: [pandemias, covid19]
 categories: [ciencia abierta, investigación abierta]
- 
+description: |
+  Al transcurrir los años se han presentado pandemias que han azotado y
+  puesto en alerta al mundo. Por tal motivo, la manera como las personas,
+  instituciones y gobiernos lo han manejado resulta de suma importancia ya
+  sea para prevenir errores cometidos, tomar medidas similares o
+  reinventarse acciones en el tema.
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
 featureImage: "/header.png"
 ---
 
-
 <!-- # ¿Qué hemos aprendido, gracias a la ciencia abierta, del manejo de pandemias? -->
 <!-- **Por Yurely Camacho** -->
-
-
 
 Al transcurrir los años se han presentado pandemias que han azotado y
 puesto en alerta al mundo. Por tal motivo, la manera como las personas,

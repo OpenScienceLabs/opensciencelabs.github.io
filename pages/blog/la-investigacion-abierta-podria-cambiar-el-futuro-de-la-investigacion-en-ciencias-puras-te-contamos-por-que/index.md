@@ -5,7 +5,9 @@ date: 2020-01-15
 author: Anavelyz Perez
 tags: [datos]
 categories: [ciencia abierta, investigación abierta]
- 
+description: |
+  La investigación abierta despliega nuevos horizontes en distintos niveles, económicos, sociales, industriales, políticos e incluso en las ciencias puras. Esta investigación permite que los resultados de los estudios y de los procesos sean abiertos, respetando la licencia de conocimiento libre. Además, se publican los datos, procedimientos y otras herramientas de la investigación (cuadernos de notas, cuadernos de campo, videos de experimentos, datos de encuestas, etc.).
+
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
@@ -77,7 +79,7 @@ importante saber que sin estos dos tipos de ciencia las tecnologías y la nueva
 era no serian posibles por la capacidad de aporte de cada una.
 
 > **Ejemplo**
-> 
+>
 > Un grupo de científicos independientes estudiaron la genética de unos osos
 > polares de la Antártida y encontraron que tienen características
 > especiales con respecto al clima y su comida. Es importante entonces que los

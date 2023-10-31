@@ -5,7 +5,14 @@ date: 2020-01-20
 author: Anavelyz Pérez
 tags: [git, ramas]
 categories: [ciencia abierta, investigación abierta, desarrollo de software, control de versiones]
- 
+description: |
+  La Investigación colaborativa surge en el momento en el que varias
+  entidades, que pueden estar especializadas en diferentes áreas, se
+  establecen un mismo objetivo o proyecto. La finalidad de una
+  investigación bajo este modelo es encontrar soluciones, descubrir o
+  explicar comportamientos de un fenómeno en particular el cual puede ser
+  económico, social, político, científico, entre otros.
+
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
@@ -15,8 +22,6 @@ featureImage: "/header.png"
 
 <!-- # Investigación Colaborativa con Git -->
 <!-- **Por Anavelyz Pérez** -->
-
-
 
 La Investigación colaborativa surge en el momento en el que varias
 entidades, que pueden estar especializadas en diferentes áreas, se

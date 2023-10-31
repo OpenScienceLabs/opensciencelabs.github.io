@@ -4,27 +4,37 @@ slug: visualiza-tus-datos-en-r-con-ggplot-y-gganimate
 date: 2022-04-08
 author: Ever Vino
 tags: [visualización de datos, ggplot2, gganimate]
-categories: [ciencia abierta, código abierto,  R]
-aliases: ["/blog/0057-r-ggplot-bo/visualiza-tus-datos-en-r-con-ggplot-y-gganimate/"]
+categories: [ciencia abierta, código abierto, R]
+aliases:
+  ["/blog/0057-r-ggplot-bo/visualiza-tus-datos-en-r-con-ggplot-y-gganimate/"]
+description: |
+  Una gráfica es una buena manera de expresar los datos, estos ayudan a ver
+  detalles que simplemente pueden pasar desapercibidos cuando sólo se los analizan
+  numericamente, estos pueden tener aún mayor impacto si estan animados. ¿Por qué
+  no hacerlo?. En este artículo se describe como hacer animación usando ggplot2 y
+  gganimate en R.
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
 featureImage: "/header.png"
 ---
 
-
 <!-- # Visualiza tus datos en R con ggplot2 y gganimate -->
 <!-- **Autor**: [Ever Vino](../../authors/ever-vino.md) -->
 
-
-
-Una gráfica es una buena manera de expresar los datos, estos ayudan a ver detalles que simplemente pueden pasar desapercibidos cuando sólo se los analizan numericamente, estos pueden tener aún mayor impacto si estan animados. ¿Por qué no hacerlo?. En este artículo se describe como hacer animación usando ggplot2 y gganimate en R.
+Una gráfica es una buena manera de expresar los datos, estos ayudan a ver
+detalles que simplemente pueden pasar desapercibidos cuando sólo se los analizan
+numericamente, estos pueden tener aún mayor impacto si estan animados. ¿Por qué
+no hacerlo?. En este artículo se describe como hacer animación usando ggplot2 y
+gganimate en R.
 
 <!-- TEASER_END -->
 
 ## Comenzando
 
-Usamos R por ser un lenguaje especializado para ciencia de datos y tener una gran Comunidad Open Source. Antes de comenzar recomendamos tener las versiones actualizadas de R y su IDE RStudio.
+Usamos R por ser un lenguaje especializado para ciencia de datos y tener una
+gran Comunidad Open Source. Antes de comenzar recomendamos tener las versiones
+actualizadas de R y su IDE RStudio.
 
 _Puedes descargar R y RStudio desde sus páginas web oficiales:_
 
@@ -34,8 +44,10 @@ _Puedes descargar R y RStudio desde sus páginas web oficiales:_
 
 ### Instalación de pre-requisitos
 
-Para este ejemplo usamos las bibliotecas de `rio`, `dplyr`, `ggplot2` y `gganimate`. Las instalamos con los siguientes comandos en R
-_(Recuerde que para ejecutar una linea de Comando en el Editor de RStudio Es con Ctrl+Enter o puede escribirlo directamento en la Consola)_
+Para este ejemplo usamos las bibliotecas de `rio`, `dplyr`, `ggplot2` y
+`gganimate`. Las instalamos con los siguientes comandos en R _(Recuerde que para
+ejecutar una linea de Comando en el Editor de RStudio Es con Ctrl+Enter o puede
+escribirlo directamento en la Consola)_
 
 ```r
 install.package(rio)        # Biblioteca para importar archivos csv o xlsx
@@ -44,9 +56,12 @@ install.package(ggplot2)    # Biblioteca para realizar las gráficas
 install.package(gganimate)  # Biblioteca para realizar la animación
 ```
 
-## Preparación de los datos para graficar 
+## Preparación de los datos para graficar
 
-Los datos usados pertenecen a la base de datos del INE [(Instituto Nacional de Estadística Bolivia)](https://www.ine.gob.bo), el archivo usado tiene el nombre de "Importaciones de Productos y Artículos de Bolivia 1992-2021p"
+Los datos usados pertenecen a la base de datos del INE
+[(Instituto Nacional de Estadística Bolivia)](https://www.ine.gob.bo), el
+archivo usado tiene el nombre de "Importaciones de Productos y Artículos de
+Bolivia 1992-2021p"
 
 Abrimos nuestras bibliotecas:
 
@@ -63,7 +78,8 @@ Importamos los datos a un objeto llamado `libro` con:
 libro <- import(".my/path/DatosImportacionBolivia1992-2021.csv")
 ```
 
-Para ver la cabecera del libro, y para ver la estructura del `libro` ejecutamos respectivamente `head(libro)` y ` str(libro)`.
+Para ver la cabecera del libro, y para ver la estructura del `libro` ejecutamos
+respectivamente `head(libro)` y ` str(libro)`.
 
 ```r
 > head(libro)
@@ -96,9 +112,16 @@ Para ver la cabecera del libro, y para ver la estructura del `libro` ejecutamos 
  $ ARTÍCULOS DE CONSUMO                          : num  5.59 6.53 6.2 5.42 5.46 ...
 ```
 
-Es importante verificar el tipo de dato, antes de graficar, en este caso nos importa que la fecha tenga formato de `IDate` y los demás sean tengan formato de `num`. En caso de que la fecha no tenga formato `IDate` puedo tranformar la columna usando la el comando `columna<-as.Date(columna)`.
+Es importante verificar el tipo de dato, antes de graficar, en este caso nos
+importa que la fecha tenga formato de `IDate` y los demás sean tengan formato de
+`num`. En caso de que la fecha no tenga formato `IDate` puedo tranformar la
+columna usando la el comando `columna<-as.Date(columna)`.
 
-Con las siguientes líneas de código, compactamos el número de columnas de nuestro `libro` en un nuevo objeto llamado `datos`. _(Notese que solamente utilizaremos las primeras 4 columnas del objeto libro)._ Es decir una columna para la fecha, una columna para su valor y otra columna que muestre su clasificación.
+Con las siguientes líneas de código, compactamos el número de columnas de
+nuestro `libro` en un nuevo objeto llamado `datos`. _(Notese que solamente
+utilizaremos las primeras 4 columnas del objeto libro)._ Es decir una columna
+para la fecha, una columna para su valor y otra columna que muestre su
+clasificación.
 
 ```r
 # Simplificando nuestra tabla para realizar las gráficas
@@ -124,11 +147,13 @@ Funciones auxiliares usadas:
 
 - **`libro$columna`**: para acceder al `columna` del `libro`.
 
-- **`data.frame(columna1, columna2 ...)`**: para crear una nuevo `objeto de Datos`.
+- **`data.frame(columna1, columna2 ...)`**: para crear una nuevo
+  `objeto de Datos`.
 
 - **`c(elemento1, elemento2, ...)`**: para juntar `elementos` en un vector.
 
-- **`rep(elemento, n_veces)`**: para generar un vector con el `elemento` repetido `n_veces`.
+- **`rep(elemento, n_veces)`**: para generar un vector con el `elemento`
+  repetido `n_veces`.
 
 - **`nrow(tabla)`**: para obtener el número de filas de tabla.
 
@@ -147,7 +172,9 @@ Observemos la cabecera de `datos` para verificar, con `head(datos)` :
 
 ## Gráfica estática
 
-Para graficar con `ggplot2`, es conveniente entender que esta biblioteca añade sus componentes en layers (capas), estos layers son objetos a los cuales se le puede modificar su apariencia y especificar de donde extraer sus valores.
+Para graficar con `ggplot2`, es conveniente entender que esta biblioteca añade
+sus componentes en layers (capas), estos layers son objetos a los cuales se le
+puede modificar su apariencia y especificar de donde extraer sus valores.
 
 Asignamos a un objeto ggplot llamado p1 lo que vamos a graficar:
 
@@ -170,22 +197,32 @@ p1
 
 Funciones utilizadas
 
-- **`theme_set(theme_bw())`**:
-  modifica el conjunto de colores usado en el tema para realizar la gráfica.
+- **`theme_set(theme_bw())`**: modifica el conjunto de colores usado en el tema
+  para realizar la gráfica.
 
-- **`ggplot(data)`**: esta es la primera capa a utilizarse inicialmente le asignamos nuestos datos `data` para que cree las dimensiones de las coordenadas y esta se herede a las otras capas.
+- **`ggplot(data)`**: esta es la primera capa a utilizarse inicialmente le
+  asignamos nuestos datos `data` para que cree las dimensiones de las
+  coordenadas y esta se herede a las otras capas.
 
-- **`geom_line(aes(x, y, color), size)`**: capa que hereda los datos de `ggplot()`, se los puede usar  directamente con el nombre de sus columnas, grafica los datos `x` e `y` como líneas, las clasifica de acuerdo al `color` y `size` determina el grosor de sus líneas.
+- **`geom_line(aes(x, y, color), size)`**: capa que hereda los datos de
+  `ggplot()`, se los puede usar directamente con el nombre de sus columnas,
+  grafica los datos `x` e `y` como líneas, las clasifica de acuerdo al `color` y
+  `size` determina el grosor de sus líneas.
 
-- **`theme(legend.position)`**: capa que modifica la posición de la leyenda dentro gráfico, con `legend.position`, esta puede adquirir valores de `top`, `left`, etc.
+- **`theme(legend.position)`**: capa que modifica la posición de la leyenda
+  dentro gráfico, con `legend.position`, esta puede adquirir valores de `top`,
+  `left`, etc.
 
-- **`labs(x, y, color, title, subtitle)`**: capa que pone los nombres a eje `x` y al eje `y`, además de poner el nombre encima de las leyendas con `color`, el nombre título y subtítulo con `title` y `subtitle` respectivamente.
+- **`labs(x, y, color, title, subtitle)`**: capa que pone los nombres a eje `x`
+  y al eje `y`, además de poner el nombre encima de las leyendas con `color`, el
+  nombre título y subtítulo con `title` y `subtitle` respectivamente.
 
 ![Importaciones de Bolivia 1991-2021](../../../images/blog/visualiza-tus-datos-en-r-con-ggplot-y-gganimate/Rplot.png)
 
-## Gráfica Animada 
+## Gráfica Animada
 
-Ya teniendo nuestra nuestra gráfica estática, vamos a realizar algunas modificaciones para que se resalten los datos de nuestro interés.
+Ya teniendo nuestra nuestra gráfica estática, vamos a realizar algunas
+modificaciones para que se resalten los datos de nuestro interés.
 
 Filtrando datos con fecha mayor al año 2019.
 
@@ -193,11 +230,13 @@ Filtrando datos con fecha mayor al año 2019.
 datos <- filter(datos, datos$Fecha >= as.Date("2019-01-01"))
 ```
 
-- **`filter(datos, condicion)`**: evalua cada fila de `datos` y filtra de acuerdo a la `condicion`.
+- **`filter(datos, condicion)`**: evalua cada fila de `datos` y filtra de
+  acuerdo a la `condicion`.
 
 - `as.Date(var)` convierte `var` a un formato de fecha `IDate`
 
-Agregando un nuevo data frame periodos para resaltar las fechas de confinamiento por Covid19.
+Agregando un nuevo data frame periodos para resaltar las fechas de confinamiento
+por Covid19.
 
 ```r
 periodos <-
@@ -238,14 +277,16 @@ p2 <- ggplot(data = datos) +
 p2
 ```
 
-- **`geom_rect(data, alpha, aes(xmin, xmax, ymin, ymax, fill))`**: dibuja un rectangulo a partir de los datos en `Data`,
-  modifica su opacidad de acuerdo a `alpha`,
-  extrae los datos de acuerdo a `xmin, xmax, ymin, ymax`,
-  y los clasifica de acuerdo a `fill`.
+- **`geom_rect(data, alpha, aes(xmin, xmax, ymin, ymax, fill))`**: dibuja un
+  rectangulo a partir de los datos en `Data`, modifica su opacidad de acuerdo a
+  `alpha`, extrae los datos de acuerdo a `xmin, xmax, ymin, ymax`, y los
+  clasifica de acuerdo a `fill`.
 
-- **`lab(fill)`**: pone el nombre encima de la leyenda de los datos clasificados con `fill`.
+- **`lab(fill)`**: pone el nombre encima de la leyenda de los datos clasificados
+  con `fill`.
 
-Con las modificaciones ya hechas en p2, creamos el objeto `gganimate` llamado `anim` el cuál contendrá nuestra grafico a animar.
+Con las modificaciones ya hechas en p2, creamos el objeto `gganimate` llamado
+`anim` el cuál contendrá nuestra grafico a animar.
 
 ```r
 anim <- p2 + transition_reveal(Fecha) +
@@ -258,14 +299,22 @@ anim <- p2 + transition_reveal(Fecha) +
   size = 15)
 ```
 
-- **`transition_reveal(var)`**: añade la capa de animacion del tipo transición usando como referencia la variable `var`.
+- **`transition_reveal(var)`**: añade la capa de animacion del tipo transición
+  usando como referencia la variable `var`.
 
-- **`geom_label((aes(x,y,label)) col, size)`**:
-  añade la capa de etiquetas del año dentro de la gráfica, con `aes(x, y, label)`: `x` e `y` son las coordenadas donde se grafica la etiqueta `label`, con `col` seleccionamos un color y con `size` el tamaño.
+- **`geom_label((aes(x,y,label)) col, size)`**: añade la capa de etiquetas del
+  año dentro de la gráfica, con `aes(x, y, label)`: `x` e `y` son las
+  coordenadas donde se grafica la etiqueta `label`, con `col` seleccionamos un
+  color y con `size` el tamaño.
 
-_Nota: geom_label() fué diseñado para graficar etiquetas que acompañen a la gráfica. En este ejemplo en específico fué usado como una etiqueta estática fijando sus coordenadas `x` e `y` en un sólo punto. Se optó por esta opción ya que genera un buen impacto visual._
+_Nota: geom_label() fué diseñado para graficar etiquetas que acompañen a la
+gráfica. En este ejemplo en específico fué usado como una etiqueta estática
+fijando sus coordenadas `x` e `y` en un sólo punto. Se optó por esta opción ya
+que genera un buen impacto visual._
 
-Con el objeto `anim` creado podemos invocar la función `animate()` de `gganimate`. Una vez ejecutada la función se abrirá una ventana con el resultado en formato .gif.
+Con el objeto `anim` creado podemos invocar la función `animate()` de
+`gganimate`. Una vez ejecutada la función se abrirá una ventana con el resultado
+en formato .gif.
 
 ```r
 animate(
@@ -278,13 +327,21 @@ animate(
 )
 ```
 
-- **` animate(anim, fps, duration, width, height, end_pause)`**: `animate()` funcion para generar la animación, `anim` objeto a animarse,
-  `fps` cantidad de frames por segundo,
-  `duration` duración de la animación en segundos,
-  `with`, `height` ancho y alto de la animación respectivamente en pixeles,
-  `end_pause` cantidad de veces a repetirse el último frame para la animación.
+- **` animate(anim, fps, duration, width, height, end_pause)`**: `animate()`
+  funcion para generar la animación, `anim` objeto a animarse, `fps` cantidad de
+  frames por segundo, `duration` duración de la animación en segundos, `with`,
+  `height` ancho y alto de la animación respectivamente en pixeles, `end_pause`
+  cantidad de veces a repetirse el último frame para la animación.
 
-Hay casos en los que extrañamente no se instalan los renders para hacer la renderización de la animación y aparece un error al tratar de ejecutar el código arriba mostrado, en ese caso puede probar con la siguiente solución: Ejecute en modo administrador RStudio e instale los renders con `install.packages("gifski")` para el render que viene por defecto con `gganimate`, tambien puede instalar el render magick con `install.packages("magick")` para tener otra opción para renderizar. Para saber que opciones tiene el render magick ejecute `help("magick_renderer")` y se le mostrara su breve manual.
+Hay casos en los que extrañamente no se instalan los renders para hacer la
+renderización de la animación y aparece un error al tratar de ejecutar el código
+arriba mostrado, en ese caso puede probar con la siguiente solución: Ejecute en
+modo administrador RStudio e instale los renders con
+`install.packages("gifski")` para el render que viene por defecto con
+`gganimate`, tambien puede instalar el render magick con
+`install.packages("magick")` para tener otra opción para renderizar. Para saber
+que opciones tiene el render magick ejecute `help("magick_renderer")` y se le
+mostrara su breve manual.
 
 ![Importaciones de Bolivia durante la pandemia](datosimportpandemia.gif)
 
@@ -306,13 +363,12 @@ anim_save(filename = "datosimportpandemia.gif",
           path = ".my/path/save/")
 ```
 
-**`anim_save(filename, animation, path)`**:
-guarda el renderizado de `animation` con el nombre `filename` en la ruta `path`.
-
+**`anim_save(filename, animation, path)`**: guarda el renderizado de `animation`
+con el nombre `filename` en la ruta `path`.
 
 ## Referencias
 
-- [Instituto Nacional de Estadística Bolivia](https://www.ine.gob.bo) 
+- [Instituto Nacional de Estadística Bolivia](https://www.ine.gob.bo)
 - [Documentacion de R](https://www.rdocumentation.org)
 
-______________________________________________________________________
+---

@@ -5,18 +5,20 @@ date: 2020-01-27
 author: Anavelyz Pérez
 tags: [proyectos]
 categories: [ciencia abierta, acceso abierto]
- 
+description: |
+  El acceso abierto es un término que se utiliza para definir aquellos proyectos
+  que están disponibles para todo público de forma libre y gratuita, en Internet o
+  cualquier otro medio. En este tipo de proyectos se permite copiar, utilizar o
+  distribuir el contenido con la condición de que se le den créditos al autor.
+
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
 featureImage: "/header.png"
 ---
 
-
 <!-- # ¿Qué es el acceso abierto y por qué debes tenerlo en cuenta para tus investigaciones? -->
 <!-- **Por Anavelyz Pérez** -->
-
-
 
 El acceso abierto es un término que se utiliza para definir aquellos proyectos
 que están disponibles para todo público de forma libre y gratuita, en Internet o

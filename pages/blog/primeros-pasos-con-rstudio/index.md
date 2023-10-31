@@ -5,7 +5,12 @@ date: 2021-04-05
 author: Anavelyz Pérez
 tags: [rstudio]
 categories: [ciencia abierta, código abierto,  R, IDE]
- 
+description: |
+  RStudio es un entorno de desarrollo integrado (IDE) para el lenguaje de
+  programación R, el cual puedes utilizar para realizar scripts de análisis de
+  datos, aplicaciones web interactivas, documentos, reportes, gráficos y mucho
+  más.
+
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
@@ -125,7 +130,7 @@ ordenador y que puedes usar o instalar según sea el caso.
     - Manuals: Esta sección contiene los enlaces que te permiten acceder de forma local a una serie de manuales a cerca de R.
 
     - Reference: Hay dos enlaces, uno es el índice de los paquetes instalados y otro muestra una serie de palabras clave y la clasificación por tópicos de paquetes; al hacer clic en cualquiera de estos enlaces la información es cargada de forma local.
-    
+
     - Miscellaneous Material: Muestra material diverso sobre R, tal como manuales de usuario preguntas frecuentes, Acerca de R, entre otros.
 
 - Viewer: esta pestaña es complemento de la extensión RMarkdown, la cual permite

@@ -5,7 +5,11 @@ date: 2022-08-03
 author: Luã Bida Vacaro
 tags: [ibis, dataframe, datos, pandas]
 categories: [ciencia abierta, datos abiertos, acceso abierto, Python, SQL]
- 
+description: |
+  Ibis Framework é uma biblioteca Python que gera expressões de busca em banco de dados.
+  O framework foi idealizado por Wes McKinney, o mesmo criador do Pandas,
+  voltado para integração de diferentes Engines de Bancos de Dados através de
+  Expressões Ibis com Python.
 draft: false
 usePageBundles: true
 thumbnail: "/header.jpg"
@@ -13,7 +17,7 @@ featureImage: "/header.jpg"
 ---
 # Escalonando a Análise de Dados com Expressões Ibis
 
-[Ibis Framework](https://github.com/ibis-project/ibis/) é uma biblioteca Python que gera expressões de busca em banco de dados. O framework foi idealizado por [Wes McKinney](https://github.com/wesm), o mesmo criador do Pandas, voltado para integração de diferentes Engines de Bancos de Dados através de Expressões Ibis com Python. 
+[Ibis Framework](https://github.com/ibis-project/ibis/) é uma biblioteca Python que gera expressões de busca em banco de dados. O framework foi idealizado por [Wes McKinney](https://github.com/wesm), o mesmo criador do Pandas, voltado para integração de diferentes Engines de Bancos de Dados através de Expressões Ibis com Python.
 
 Enquanto os motores de busca e análise de dados crescem e ficam mais robustos com o avanço da era dos Dados, algumas complicações podem ser encontradas em diferentes ambientes de desenvolvimento. Um dos exemplos mais comuns é o crescimento de aplicações que realizam buscas SQL em um banco de dados, com o tempo as buscas se tornam complexas e de difícil leitura.
 
@@ -220,26 +224,26 @@ df.info()
     <class 'pandas.core.frame.DataFrame'>
     RangeIndex: 3853648 entries, 0 to 3853647
     Data columns (total 18 columns):
-     #   Column                                         Dtype  
-    ---  ------                                         -----  
-     0   city                                           object 
+     #   Column                                         Dtype
+    ---  ------                                         -----
+     0   city                                           object
      1   city_ibge_code                                 float64
-     2   date                                           object 
-     3   epidemiological_week                           int64  
+     2   date                                           object
+     3   epidemiological_week                           int64
      4   estimated_population                           float64
      5   estimated_population_2019                      float64
-     6   is_last                                        bool   
-     7   is_repeated                                    bool   
-     8   last_available_confirmed                       int64  
+     6   is_last                                        bool
+     7   is_repeated                                    bool
+     8   last_available_confirmed                       int64
      9   last_available_confirmed_per_100k_inhabitants  float64
-     10  last_available_date                            object 
+     10  last_available_date                            object
      11  last_available_death_rate                      float64
-     12  last_available_deaths                          int64  
-     13  order_for_place                                int64  
-     14  place_type                                     object 
-     15  state                                          object 
-     16  new_confirmed                                  int64  
-     17  new_deaths                                     int64  
+     12  last_available_deaths                          int64
+     13  order_for_place                                int64
+     14  place_type                                     object
+     15  state                                          object
+     16  new_confirmed                                  int64
+     17  new_deaths                                     int64
     dtypes: bool(2), float64(5), int64(6), object(5)
     memory usage: 477.8+ MB
 
@@ -273,9 +277,9 @@ display(casos)
 ```
 
 
-    
+
 ![png](output_14_0.png)
-    
+
 
 
 Assim como no Pandas, as colunas podem ser chamadas diretamente. Entretanto, como o Ibis funciona por padrão em [`Lazy mode`](https://ibis-project.org/docs/3.1.0/tutorial/03-Expressions-Lazy-Mode-Logging/?h=lazy), o resultado da query não fica armazenado em memória e ela só será executada utilizando o comando `execute()`. O lazy mode busca diminuir a utilização da memória, ao invés de executar a busca quando o objeto é instanciado, o Ibis retorna uma expressão contendo os parâmetros de busca, executando a busca somente quando necessário:
@@ -311,7 +315,7 @@ Por exemplo: já vimos que é possível criar buscas SQL através de expressões
 print(data_min.compile())
 ```
 
-    SELECT min(t0.date) AS first_entry 
+    SELECT min(t0.date) AS first_entry
     FROM main."casos_covid19_BR" AS t0
 
 
@@ -331,23 +335,23 @@ total_new_cases
 
 
 
-    
+
 ![png](output_23_0.png)
-    
+
 
 
 
 
 ```python
 epiweek_covid = casos.group_by('epidemiological_week').aggregate((
-                                                                    total_new_cases, 
+                                                                    total_new_cases,
                                                                     total_new_deaths,
                                                                     ))
 
 print(epiweek_covid.compile())
 ```
 
-    SELECT t0.epidemiological_week, sum(t0.new_confirmed) AS total_new_cases, sum(t0.new_deaths) AS total_new_deaths 
+    SELECT t0.epidemiological_week, sum(t0.new_confirmed) AS total_new_cases, sum(t0.new_deaths) AS total_new_deaths
     FROM main."casos_covid19_BR" AS t0 GROUP BY t0.epidemiological_week
 
 
@@ -514,9 +518,9 @@ plt.show()
 ```
 
 
-    
+
 ![png](output_28_0.png)
-    
+
 
 
 ## Manipulando os dados e inserindo novas colunas:
@@ -549,9 +553,9 @@ south_br
 
 
 
-    
+
 ![png](output_32_0.png)
-    
+
 
 
 
@@ -564,7 +568,7 @@ print(percentage_cases.compile().compile(
                                 compile_kwargs={"literal_binds": True}))
 ```
 
-    SELECT (t0.new_confirmed / t0.estimated_population) * 100 AS porc_cases 
+    SELECT (t0.new_confirmed / t0.estimated_population) * 100 AS porc_cases
     FROM main."casos_covid19_BR" AS t0
 
 
@@ -575,7 +579,7 @@ print(south_br.compile().compile(
                                 compile_kwargs={"literal_binds": True}))
 ```
 
-    SELECT CASE WHEN (t0.state = 'SC') THEN 'Santa Catarina' WHEN (t0.state = 'RS') THEN 'Rio Grande do Sul' WHEN (t0.state = 'PR') THEN 'Parana' ELSE CAST(NULL AS TEXT) END AS "Regiao Sul" 
+    SELECT CASE WHEN (t0.state = 'SC') THEN 'Santa Catarina' WHEN (t0.state = 'RS') THEN 'Rio Grande do Sul' WHEN (t0.state = 'PR') THEN 'Parana' ELSE CAST(NULL AS TEXT) END AS "Regiao Sul"
     FROM main."casos_covid19_BR" AS t0
 
 
@@ -588,9 +592,9 @@ sul = casos.group_by(south_br).aggregate(percentage_cases.mean().name('Media Cas
 print(sul.compile().compile(compile_kwargs={"literal_binds": True}))
 ```
 
-    SELECT t0."Regiao Sul", t0."Media Casos" 
-    FROM (SELECT CASE WHEN (t1.state = 'SC') THEN 'Santa Catarina' WHEN (t1.state = 'RS') THEN 'Rio Grande do Sul' WHEN (t1.state = 'PR') THEN 'Parana' ELSE CAST(NULL AS TEXT) END AS "Regiao Sul", avg((t1.new_confirmed / t1.estimated_population) * 100) AS "Media Casos" 
-    FROM main."casos_covid19_BR" AS t1 GROUP BY CASE WHEN (t1.state = 'SC') THEN 'Santa Catarina' WHEN (t1.state = 'RS') THEN 'Rio Grande do Sul' WHEN (t1.state = 'PR') THEN 'Parana' ELSE CAST(NULL AS TEXT) END) AS t0 
+    SELECT t0."Regiao Sul", t0."Media Casos"
+    FROM (SELECT CASE WHEN (t1.state = 'SC') THEN 'Santa Catarina' WHEN (t1.state = 'RS') THEN 'Rio Grande do Sul' WHEN (t1.state = 'PR') THEN 'Parana' ELSE CAST(NULL AS TEXT) END AS "Regiao Sul", avg((t1.new_confirmed / t1.estimated_population) * 100) AS "Media Casos"
+    FROM main."casos_covid19_BR" AS t1 GROUP BY CASE WHEN (t1.state = 'SC') THEN 'Santa Catarina' WHEN (t1.state = 'RS') THEN 'Rio Grande do Sul' WHEN (t1.state = 'PR') THEN 'Parana' ELSE CAST(NULL AS TEXT) END) AS t0
     WHERE t0."Regiao Sul" IS NOT NULL AND t0."Media Casos" IS NOT NULL
 
 

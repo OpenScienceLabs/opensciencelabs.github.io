@@ -5,7 +5,13 @@ date: 2021-02-22
 author: Yurely Camacho
 tags: [spyder, código]
 categories: [ciencia abierta, código abierto, programación, IDE, Python]
- 
+description: |
+  Si has elegido programar en Python, luego de haberlo instalado quizás te
+  preguntarás; ¿dónde voy a programar? Para esto necesitas un editor de código.
+  Existen muchas opciones de IDE (Entorno de Desarrollo Integrado) que puedes
+  usar, la elección dependerá de la herramienta que te haga sentir comodidad, se
+  adapte a tus necesidades de trabajo y, muy importante, sea sencilla de manejar.
+
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
@@ -14,8 +20,6 @@ featureImage: "/header.png"
 
 
 <!-- # Primeros pasos con Spyder -->
-
-
 
 Si has elegido programar en Python, luego de haberlo instalado quizás te
 preguntarás; ¿dónde voy a programar? Para esto necesitas un editor de código.

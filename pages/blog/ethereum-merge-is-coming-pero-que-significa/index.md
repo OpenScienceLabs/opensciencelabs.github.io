@@ -5,6 +5,8 @@ date: 2022-03-22
 author: Alan Hurtarte
 tags: [ethereum, transacciones, bitcoin, criptomoneda]
 categories: [tecnología, web3]
+description: |
+  Oh sweet summer child, Ethereum ya no será el mismo, está evolucionando, al mismo tiempo que todo el ecosistema. No es secreto que todo el ecosistema crece, y a una velocidad agigantada
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

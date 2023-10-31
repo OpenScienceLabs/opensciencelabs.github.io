@@ -5,13 +5,21 @@ date: 2020-03-23
 author: Anavelyz Pérez
 tags: [repositorios, datos, salud, covid19]
 categories: [ciencia abierta, datos abiertos, acceso abierto]
- 
+description: |
+  El covid-19 es un virus que emergió en Wuhan, China a finales del año 2019, este
+  virus ha generado desde entonces una gran alarma internacional. Se trata de una
+  infección respiratoria que comienza con fiebre y tos seca y que, al cabo de
+  cerca de una semana, puede provocar falta de aire. La vía principal de
+  transmisión del virus es a través de pequeñas gotas que se producen cuando una
+  persona infectada tose o estornuda \[https://www.isglobal.org/coronavirus\].
+  También se transmite al tocarse ojos, nariz o boca tras tocar superficies
+  contaminadas. Este virus se ha extendido y el número de países en los que sus
+  ciudadanos se han contagiado incrementó masivamente en los últimos días.
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
 featureImage: "/header.png"
 ---
-
 
 <!-- # Te mostramos algunos repositorios con datos sobre el COVID-19 -->
 
@@ -21,12 +29,11 @@ El covid-19 es un virus que emergió en Wuhan, China a finales del año 2019, es
 virus ha generado desde entonces una gran alarma internacional. Se trata de una
 infección respiratoria que comienza con fiebre y tos seca y que, al cabo de
 cerca de una semana, puede provocar falta de aire. La vía principal de
-transmisión del virus es a través de pequeñas gotas que se
-producen cuando una persona infectada tose o estornuda
-\[https://www.isglobal.org/coronavirus\]. También se transmite al tocarse ojos,
-nariz o boca tras tocar superficies contaminadas.  Este virus se ha extendido y
-el número de países en los que sus ciudadanos se han contagiado incrementó
-masivamente en los últimos días.
+transmisión del virus es a través de pequeñas gotas que se producen cuando una
+persona infectada tose o estornuda \[https://www.isglobal.org/coronavirus\].
+También se transmite al tocarse ojos, nariz o boca tras tocar superficies
+contaminadas. Este virus se ha extendido y el número de países en los que sus
+ciudadanos se han contagiado incrementó masivamente en los últimos días.
 
 <!-- TEASER_END -->
 
@@ -39,31 +46,33 @@ menciona que el virus se encuentra en más de 100 países, ha infectado a unas
 
 Por esta razón, los científicos han venido realizando un esfuerzo continuo para
 estudiar el virus y conseguir la cura. De manera que cada uno de los avances de
-sus investigaciones están siendo publicados en revistas o repositorios de acceso abierto. La
-particularidad de esto es la omisión de las revisiones preprint de los artículos
-y/o archivos involucrados para agilizar el proceso de publicación. Algunos
-repositorios y editoriales conocidos han prestado sus espacios para publicar los
-avances a pesar de esta condición.
+sus investigaciones están siendo publicados en revistas o repositorios de acceso
+abierto. La particularidad de esto es la omisión de las revisiones preprint de
+los artículos y/o archivos involucrados para agilizar el proceso de publicación.
+Algunos repositorios y editoriales conocidos han prestado sus espacios para
+publicar los avances a pesar de esta condición.
 
-Aunque podemos pensar que los artículos publicados en abierto no son tan fiables por la falta de
-la revisión, es importante tener en cuenta que, sin embargo, al tener una cantidad importante de personas
-(científicos, médicos, profesionales de las salud, politicos, entre otros) al
-pendiente de lo que ocurre, la validación de los archivos se hace entre los
-lectores y estudiosos del área, y que cualquier sugerencia o comentario se realiza en
-la plataforma o se envían directamente a los autores.
+Aunque podemos pensar que los artículos publicados en abierto no son tan fiables
+por la falta de la revisión, es importante tener en cuenta que, sin embargo, al
+tener una cantidad importante de personas (científicos, médicos, profesionales
+de las salud, politicos, entre otros) al pendiente de lo que ocurre, la
+validación de los archivos se hace entre los lectores y estudiosos del área, y
+que cualquier sugerencia o comentario se realiza en la plataforma o se envían
+directamente a los autores.
 
 Además de ello, tal y como es descrito en el articulo "El coronavirus empuja a
 la ciencia a compartir" se ha dispuesto a la comunidad internacional secuencias
 genéticas del coronavirus en tiempo real. Una acción similar que funcionó para
-monitorear el brote de SARS o los inicios de la gripe A. La idea de esta práctica es
-evaluar la situación y guiar las acciones políticas. De forma tal que el control
-de la pandemia se realiza bajo un proceso colaborativo que, al complementarlo
-con la iniciativa de tener repositorios de acceso abierto para los resultados, logra que la sociedad
-en general y la comunidad científica en particular, consigan puntos de referencia e información
-clave en cortos periodos de tiempo.
+monitorear el brote de SARS o los inicios de la gripe A. La idea de esta
+práctica es evaluar la situación y guiar las acciones políticas. De forma tal
+que el control de la pandemia se realiza bajo un proceso colaborativo que, al
+complementarlo con la iniciativa de tener repositorios de acceso abierto para
+los resultados, logra que la sociedad en general y la comunidad científica en
+particular, consigan puntos de referencia e información clave en cortos periodos
+de tiempo.
 
-Entre los repositorios más difundidos con datos y artículos sobre el
-covid-19 están:
+Entre los repositorios más difundidos con datos y artículos sobre el covid-19
+están:
 
 -medRxiv: es un servidor gratuito de archivo y distribución en línea para
 manuscritos completos pero no publicados (preprints) en las ciencias médicas,
@@ -80,7 +89,8 @@ https://www.medrxiv.org/search/Coronavirus
 Hay alrededor de 400 artículos disponibles en este repositorio sobre el
 coronavirus. https://www.biorxiv.org/search/Coronavirus
 
-También revistas como Nature \[https://www.nature.com/search?q=coronavirus\], Cell
+También revistas como Nature \[https://www.nature.com/search?q=coronavirus\],
+Cell
 \[https://www.cell.com/action/doSearch?searchType=quick&searchText=coronavirus&searchScope=fullSite&occurrences=all&code=cell-site\]
 o The Lancet
 \[https://www.thelancet.com/action/doSearch?searchType=quick&searchText=coronavirus&searchScope=fullSite&occurrences=all&code=lancet-site\]
@@ -128,6 +138,7 @@ la distribución geográfica del virus https://arcg.is/918mf
 
 [Periódico global: El país](https://elpais.com/)
 
-Material informativo de la Universidad Central de Venezuela, Facultad de Medicina
+Material informativo de la Universidad Central de Venezuela, Facultad de
+Medicina
 
 [Portal Regional de la BVS](https://bvsalud.org/vitrinas/es/post_vitrines/nuevo_coronavirus/)

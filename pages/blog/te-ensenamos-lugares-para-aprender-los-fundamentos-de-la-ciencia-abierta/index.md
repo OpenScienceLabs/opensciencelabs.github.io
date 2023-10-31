@@ -5,18 +5,16 @@ date: 2020-06-22
 author: Rainer Palm
 tags: [datos, manual]
 categories: [ciencia abierta]
- 
+description: |
+  ¿Qué es realmente la ciencia abierta? A pesar de que parece una idea simple, su implementación puede concurrir en todo tipo de preguntas y problemas posteriores sin una definición clara de los permisos de uso sobre resultados o metodologías, concedidos tanto a los investigadores como a los lectores y posteriores usuarios de la investigación, y de qué es lo que se busca lograr con este tipo de práctica de investigación.
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
 featureImage: "/header.png"
 ---
 
-
 <!-- # Te enseñamos 4 lugares para aprender los fundamentos de la ciencia abierta -->
 <!-- **Por Rainer Palm** -->
-
-
 
 ¿Qué es realmente la ciencia abierta? A pesar de que parece una idea simple, su implementación puede concurrir en todo tipo de preguntas y problemas posteriores sin una definición clara de los permisos de uso sobre resultados o metodologías, concedidos tanto a los investigadores como a los lectores y posteriores usuarios de la investigación, y de qué es lo que se busca lograr con este tipo de práctica de investigación.
 

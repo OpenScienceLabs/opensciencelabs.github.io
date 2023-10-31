@@ -1746,3 +1746,7 @@ code.noClass{
 a.link {
   opacity: 1!important;
 }
+
+a.page-number.active {
+  background: #0ca5de!important;
+}

@@ -5,14 +5,16 @@ date: 2022-09-28
 author: Anavelyz Pérez
 tags: [epigraphhub, visualización de datos, análisis, datos, epidemiología]
 categories: [ciencia abierta, código abierto]
- 
+description: |
+  ¿Quieres realizar un análisis y no encuentras datos?, ¿quieres realizar visualizaciones como dashboards o gráficos?, o simplemente explorar, ¿cómo puedes analizar datos?
+  Entonces este artículo es para ti. Vamos a describir EpiGraphHub, un proyecto de código abierto orientado al análisis de datos de calidad.
+
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
 featureImage: "/header.png"
 
 ---
-
 
 ¿Quieres realizar un análisis y no encuentras datos?, ¿quieres realizar visualizaciones como dashboards o gráficos?, o simplemente explorar, ¿cómo puedes analizar datos?
 Entonces este artículo es para ti. Vamos a describir EpiGraphHub, un proyecto de código abierto orientado al análisis de datos de calidad.

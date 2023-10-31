@@ -5,18 +5,17 @@ date: 2020-02-03
 author: Rainer Palm
 tags: [ciencia ciudadana, comunidad]
 categories: [ciencia abierta, investigación abierta]
- 
+description: |
+  Comúnmente, existe una visión de la ciencia que la dibuja como una actividad que se realiza de forma solitaria y apartada del grupo más numeroso de la sociedad, que es desarrollada por científicos *asociales* y que realizan sus investigaciones de forma privada, casi oculta, y comparten su descubrimientos solamente entre una comunidad selecta de individuos, casi todos hombres, hablando con un vocabulario rebuscado y imposible de entender.
+
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
 featureImage: "/header.png"
 ---
 
-
 <!-- # ¿Qué es ciencia ciudadana? -->
 <!-- **Por Rainer Palm** -->
-
-
 
 Comúnmente, existe una visión de la ciencia que la dibuja como una actividad que se realiza de forma solitaria y apartada del grupo más numeroso de la sociedad, que es desarrollada por científicos *asociales* y que realizan sus investigaciones de forma privada, casi oculta, y comparten su descubrimientos solamente entre una comunidad selecta de individuos, casi todos hombres, hablando con un vocabulario rebuscado y imposible de entender.
 

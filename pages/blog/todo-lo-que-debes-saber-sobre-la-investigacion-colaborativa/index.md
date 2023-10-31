@@ -4,19 +4,22 @@ slug: todo-lo-que-debes-saber-sobre-la-investigacion-colaborativa
 date: 2020-01-10
 author: Anavelyz Pérez
 tags: [investigación colaborativa, equipos]
-categories: [ciencia abierta,  investigación abierta]
- 
+categories: [ciencia abierta, investigación abierta]
+description: |
+  La investigación colaborativa es un término que se le atribuye al hecho de
+  realizar o llevar a cabo investigaciones y/o proyectos donde participan más de
+  una persona, instituciones o empresas. La ventaja de este tipo de investigación
+  es la unión de distintos conocimientos, experiencias y perspectivas que pueden
+  resultar en innovaciones, aprendizajes mutuos y condiciones estables u optimas
+  para enfrentar obstáculos.
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
 featureImage: "/header.png"
 ---
 
-
 <!-- # Todo lo que debes saber sobre la investigación colaborativa -->
 <!-- **Por Anavelyz Pérez** -->
-
-
 
 La investigación colaborativa es un término que se le atribuye al hecho de
 realizar o llevar a cabo investigaciones y/o proyectos donde participan más de
@@ -106,7 +109,7 @@ cambios.
 Además, afianzará la confianza y toda la información estará respaldada.
 
 Existen diversos sistemas que permiten realizar un control de versiones, una de
-ellos es *Git*.
+ellos es _Git_.
 
 ## Limitaciones
 
@@ -115,10 +118,10 @@ aparezcan en este caso las limitaciones. Pueden ser de carácter económico,
 social, personal, entre otros. El equipo debe estudiar y encontrar posibilidades
 que solventen estas situaciones. Existe la opción de delimitar la investigación.
 
-En resumen, la investigación colaborativa presenta un conjunto muy interesante de oportunidades,
-crecimiento grupal o individual e implementación de nuevas tecnologías,
-innovaciones y cambios que pueden marcar la diferencia en pro de una mejor
-sociedad. Cada uno de los entes involucrados debe tener en cuenta que tanto su
-opinión como la de los demás es importante, la confianza, el respeto y los
-distintos canales de comunicación son claves para lograr un recorrido productivo
-para asi obtener un proyecto con buenos resultados.
+En resumen, la investigación colaborativa presenta un conjunto muy interesante
+de oportunidades, crecimiento grupal o individual e implementación de nuevas
+tecnologías, innovaciones y cambios que pueden marcar la diferencia en pro de
+una mejor sociedad. Cada uno de los entes involucrados debe tener en cuenta que
+tanto su opinión como la de los demás es importante, la confianza, el respeto y
+los distintos canales de comunicación son claves para lograr un recorrido
+productivo para asi obtener un proyecto con buenos resultados.

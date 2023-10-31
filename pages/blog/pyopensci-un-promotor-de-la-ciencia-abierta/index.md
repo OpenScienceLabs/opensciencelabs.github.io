@@ -5,7 +5,17 @@ date: 2020-08-06
 author: Yurely Camacho
 tags: [pyopensci]
 categories: [ciencia abierta, revisión abierta por pares, código abierto, Python]
- 
+description: |
+  Las distintas disciplinas que abarca la ciencia abierta trabajan de
+  manera conjunta; tal es el caso del código abierto, la investigación
+  abierta y reproducible y los datos abiertos. En el presente artículo
+  tratamos sobre **pyOpenSci**, un proyecto al servicio de la ciencia,
+  desarrollado bajo el enfoque de estas disciplinas. Si eres un
+  programador, quieres desarrollar (o estás desarrollando) algún paquete
+  científico con
+  [Python](https://opensciencelabs.org/blog/razones-para-usar-python-en-tu-proximo-proyecto-de-investigacion/)
+  y que sea aceptado por una gran comunidad de *pythonistas*, entonces
+  aquí está lo que necesitas saber para lograrlo.
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
@@ -15,8 +25,6 @@ featureImage: "/header.png"
 
 <!-- # pyOpenSci: un promotor de la ciencia abierta -->
 <!-- **Por Yurely Camacho** -->
-
-
 
 Las distintas disciplinas que abarca la ciencia abierta trabajan de
 manera conjunta; tal es el caso del código abierto, la investigación

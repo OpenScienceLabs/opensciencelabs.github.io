@@ -5,7 +5,15 @@ date: 2020-03-30
 author: Anavelyz Perez
 tags: [open science]
 category: [open access]
- 
+description: |
+  Al realizar una investigación estamos sujetos a distintos panoramas en
+  los cuales nuestro criterio tiene un papel muy importante, porque de
+  ello va a depender cosas tales como la difusión, edición y evaluación
+  del proyecto. De acuerdo con esto, los trabajos de investigación han
+  venido adoptando esquemas formales y estructuras de manera tal que se
+  conviertan en estándares para todos. Al principio, para lograr esto, se
+  recurría al asesoramiento de editores que por lo general estaban
+  adscritos a una revista específica.
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
@@ -15,8 +23,6 @@ featureImage: "/header.png"
 
 <!-- # ¿Cómo aplicar los principios de acceso abierto en tus investigaciones? -->
 <!-- **Por Anavelyz Perez** -->
-
-
 
 Al realizar una investigación estamos sujetos a distintos panoramas en
 los cuales nuestro criterio tiene un papel muy importante, porque de

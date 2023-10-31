@@ -5,7 +5,9 @@ date: 2020-05-14
 author: Anavelyz Pérez
 tags: [datos, dashboard, herramientas, código]
 categories: [ciencia de datos]
- 
+description: |
+  Si trabajamos en una empresa o institución pública o simplemente queremos ver el comportamiento de nuestros datos, podemos pensar en realizar uno o varios gráficos. Los gráficos son representaciones visuales de los datos que nos permiten comprenderlos, compararlos, analizarlos y describirlos de forma tal que se tenga una noción más clara de lo que ocurre con ellos.
+
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
@@ -14,8 +16,6 @@ featureImage: "/header.png"
 
 
 <!-- # La importancia de la integridad en los datos manejados en los dashboards -->
-
-
 
 Si trabajamos en una empresa o institución pública o simplemente queremos ver el comportamiento de nuestros datos, podemos pensar en realizar uno o varios gráficos. Los gráficos son representaciones visuales de los datos que nos permiten comprenderlos, compararlos, analizarlos y describirlos de forma tal que se tenga una noción más clara de lo que ocurre con ellos.
 

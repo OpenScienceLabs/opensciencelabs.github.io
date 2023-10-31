@@ -5,7 +5,9 @@ date: 2020-03-04
 author: Rainer Palm
 tags: [artículos, publicación, código, herramientas]
 categories: [ciencia abierta, código abierto]
- 
+description: |
+  Muchos científicos emplean la creación de software cuando desarollan sus investigaciones, usando herramientas tales como scripts y simulaciones, personalizadas y adaptadas a sus necesidades. En los casos en que no es así, igual la mayoría termina empleando analísis computacional de alguna manera, con software prediseñado para graficar, realizar calculos elementales, visualizar estadísticas o datos que luego se mostrarán dentro de la presentación de su investigación. Sea como sea, lo cierto es que cada vez el rol del desarrolador y el del científico estan más relacionados, exigiendo que estas dos disciplinas se vinculen de forma más estrecha.
+
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
@@ -15,8 +17,6 @@ featureImage: "/header.png"
 
 <!-- # ¿Cómo presentar tu código como un artículo científico? -->
 <!-- **Por Rainer Palm** -->
-
-
 
 Muchos científicos emplean la creación de software cuando desarollan sus investigaciones, usando herramientas tales como scripts y simulaciones, personalizadas y adaptadas a sus necesidades. En los casos en que no es así, igual la mayoría termina empleando analísis computacional de alguna manera, con software prediseñado para graficar, realizar calculos elementales, visualizar estadísticas o datos que luego se mostrarán dentro de la presentación de su investigación. Sea como sea, lo cierto es que cada vez el rol del desarrolador y el del científico estan más relacionados, exigiendo que estas dos disciplinas se vinculen de forma más estrecha.
 

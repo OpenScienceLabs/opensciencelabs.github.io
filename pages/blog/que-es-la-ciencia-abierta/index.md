@@ -5,7 +5,12 @@ date: 2020-01-06
 author: Yurely Camacho
 tags: [datos]
 categories: [ciencia abierta]
- 
+description: |
+  Si buscas la democratización del conocimiento, oportunidades de
+  intercambio y colaboración, mayor productividad científica, y mucho
+  más, la **Ciencia Abierta** es el camino. La producción del
+  conocimiento científico se verá revolucionado gracias a esta forma
+  de hacer ciencia.
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

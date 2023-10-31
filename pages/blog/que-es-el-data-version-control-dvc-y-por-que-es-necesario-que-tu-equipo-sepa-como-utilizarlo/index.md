@@ -5,13 +5,19 @@ date: 2021-03-22
 author: Yurely Camacho
 tags: [dvc, datos, versionado]
 categories: [ciencia abierta, investigación abierta, desarrollo de software, control de versiones]
- 
+description: |
+  Cuando colaboramos en proyectos que involucran un manejo y
+  transformación constante de conjuntos de datos y/o modelos derivados de
+  estos, nos vemos en la necesidad de indagar y poner en práctica técnicas
+  que permitan tener un control de todos los cambios realizados en ellos
+  durante la investigación; para lo cual se necesitan herramientas que lo
+  hagan posible. Allí entra en juego el *Control de versiones de datos* o
+  Data Version Control (DVC).
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
 featureImage: "/header.png"
 ---
-
 
 <!-- # Te contamos qué es el Data Version Control (DVC) y por qué es necesario que tu equipo sepa cómo utilizarlo -->
 <!-- **Por Yurely Camacho** -->

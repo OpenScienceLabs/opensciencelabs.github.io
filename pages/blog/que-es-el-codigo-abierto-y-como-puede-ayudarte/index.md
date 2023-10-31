@@ -5,18 +5,24 @@ date: 2020-02-10
 author: Anavelyz Pérez
 tags: [código, software]
 categories: [ciencia abierta, código abierto]
- 
+description: |
+  Cuando escuchamos la palabra *código* podríamos pensar que se trata de algo
+  oculto y secreto, en una contraseña o simplemente algún identificador. Sin
+  embargo, en el mundo computacional, por ejemplo, cuando se habla de
+  *código* se hace referencia a una serie de palabras, números y símbolos que,
+  combinadas, corresponden a un conjunto de comandos que producen una solución,
+  generan el proceso de alguna tarea o forman un sistema en especifico. En
+  desarrollo de software, la palabra *código* hace referencia a uno o varios
+  lenguajes de programación.
+
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
 featureImage: "/header.png"
 ---
 
-
 <!-- # ¿Qué es el código abierto y cómo puede ayudarte? -->
 <!-- **Por Anavelyz Pérez** -->
-
-
 
 Cuando escuchamos la palabra *código* podríamos pensar que se trata de algo
 oculto y secreto, en una contraseña o simplemente algún identificador. Sin

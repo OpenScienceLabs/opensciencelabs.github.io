@@ -5,6 +5,9 @@ date: 2022-06-14
 author: Ever Vino
 tags: [datos, paquetes, tablas, dplyr, filtrar datos]
 categories: [ciencia de datos,  R]
+description: |
+  En este artículo mostraremos como usar algunas funciones importantes de la biblioteca de `dplyr`, específicamente veremos como usar las funciones `filter()`, `select()`, `group_by()`, `sumarize()` y `mutate()` dentro de un ejemplo práctico.
+
 aliases: ["/blog/filtrar-datos-r/filtrar-datos-r/"]
 draft: false
 usePageBundles: true
@@ -14,8 +17,6 @@ featureImage: "/header.png"
 
 
 <!-- # Cómo filtrar datos de tu tabla con dplyr en R  -->
-
-
 
 En este artículo mostraremos como usar algunas funciones importantes de la biblioteca de `dplyr`, específicamente veremos como usar las funciones `filter()`, `select()`, `group_by()`, `sumarize()` y `mutate()` dentro de un ejemplo práctico.
 
@@ -49,7 +50,7 @@ covid_data <- read_csv("owid-covid-data.csv")
 En la consola observamos lo siguiente:
 
 ```r
-Rows: 193573 Columns: 67                                                                                                               
+Rows: 193573 Columns: 67
 ── Column specification ────────────────────────────────────────────────────────────────────────────
 Delimiter: ","
 chr   (4): iso_code, continent, location, tests_units
@@ -124,8 +125,8 @@ Usando el operador `%>%` podemos simplificar a una línea de comando encadenada,
 
 ```r
 covid_sudamerica <-
-  covid_data %>% 
-  filter(continent == "South America" & !is.na(new_cases_smoothed)) %>% 
+  covid_data %>%
+  filter(continent == "South America" & !is.na(new_cases_smoothed)) %>%
   select(location, date, new_cases_smoothed)
 ```
 
@@ -134,17 +135,17 @@ Para poder graficar este ejemplo lo vamos a reducir un poco más, obteniendo una
 ```r
 paises_andinos = c("Bolivia", "Peru", "Chile", "Ecuador")
 covid_paises_region <-
-  covid_data %>% 
-  filter(location %in% paises_andinos) %>% 
+  covid_data %>%
+  filter(location %in% paises_andinos) %>%
   select(location, date, new_cases_smoothed)
 ```
 
 Para observar nuestros datos obtenidos graficamos
 
 ```r
-ggplot(covid_paises_region) + 
+ggplot(covid_paises_region) +
 geom_line(aes(x = date, y = new_cases_smoothed, color = location), size = 0.5) +
-  scale_color_brewer(palette = "Set1") + theme_bw() + 
+  scale_color_brewer(palette = "Set1") + theme_bw() +
   labs(
     x = "",
     y = "",
@@ -205,7 +206,7 @@ Para el ejemplo, si quisieramos no obtener el total sino el total por países us
 
 ```r
 total_covid_paises_region <-
-    covid_paises_region %>% group_by(location) %>% 
+    covid_paises_region %>% group_by(location) %>%
     summarise(total_contagios = sum(new_cases_smoothed, na.rm = TRUE))
 
 total_covid_paises_region
@@ -234,18 +235,18 @@ Hagamos algo más interesante, queremos ver la evolución del contagios de COVID
 
 ```r
 covid_continentes <-
-  covid_data %>% 
-  group_by(continent, date) %>% 
-  summarise(total_contagios = sum(new_cases_smoothed, na.rm = TRUE)) %>% 
+  covid_data %>%
+  group_by(continent, date) %>%
+  summarise(total_contagios = sum(new_cases_smoothed, na.rm = TRUE)) %>%
   filter(!is.na(continent))
 ```
 
 Graficando los resultados
 
 ```r
-ggplot(covid_continentes) + 
+ggplot(covid_continentes) +
   geom_line(aes(x = date, y = total_contagios, color = continent), size = 0.8) +
-  scale_color_brewer(palette = "Set1") + theme_bw() + 
+  scale_color_brewer(palette = "Set1") + theme_bw() +
   labs(
     x = "",
     y = "",
@@ -268,17 +269,17 @@ _Puede que no sea excelente indicador y que no refleje muy bien lo que se quiere
 # Obtenemos nuestros datos que nos van a ayudar a calcular el indicador
 # Filtramos los valores que sean iguales a 0 y los datos NA con filter()
 covid_continentes_indicador <-
-  covid_data %>% 
-  group_by(continent, date) %>% 
-  summarise(nuevos_casos = sum(new_cases_smoothed, na.rm = TRUE), nuevas_muertes = sum(new_deaths_smoothed, na.rm = TRUE)) %>% 
+  covid_data %>%
+  group_by(continent, date) %>%
+  summarise(nuevos_casos = sum(new_cases_smoothed, na.rm = TRUE), nuevas_muertes = sum(new_deaths_smoothed, na.rm = TRUE)) %>%
   filter(!is.na(continent) & nuevos_casos != 0 & nuevas_muertes != 0)
 ```
 
 Usamos la función mutate para obtener nuestro indicador
 
 ```r
-covid_continentes_indicador <- 
-  covid_continentes_indicador %>% 
+covid_continentes_indicador <-
+  covid_continentes_indicador %>%
   mutate(indicador = nuevas_muertes/nuevos_casos*1000)
 ```
 
@@ -293,9 +294,9 @@ Crea una nuevas columnas las modifica a partir de los datos de otras columnas.
 Mostrando los resultados en una gráfica
 
 ```r
-ggplot(covid_continentes_indicador) + 
+ggplot(covid_continentes_indicador) +
   geom_line(aes(x = date, y = indicador, color = continent), size = 0.8) +
-  scale_color_brewer(palette = "Dark2") + theme_bw() + 
+  scale_color_brewer(palette = "Dark2") + theme_bw() +
   labs(
     x = "",
     y = "",

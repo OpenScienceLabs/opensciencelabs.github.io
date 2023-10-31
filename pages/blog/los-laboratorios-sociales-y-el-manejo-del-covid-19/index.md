@@ -5,7 +5,16 @@ date: 2020-07-06
 author: Yurely Camacho
 tags: [laboratorios sociales, covid19,  ciencia ciudadana]
 categories: [ciencia abierta]
- 
+description: |
+  Frente a la pandemia ocasionada por la enfermedad COVID-19 se han
+  desarrollado en todo el mundo, distintas prácticas de ciencia abierta
+  para hacerle frente. Una de ellas son los **Laboratorios Sociales**
+  donde los integrantes desarrollan y difunden actividades virtuales
+  respecto a este tema. Recordemos que los laboratorios sociales son
+  espacios donde cualquier ciudadano puede participar, colaborando con
+  otros, compartiendo sus conocimientos, ideas y experiencias con el
+  propósito de generar proyectos que ofrezcan propuestas o soluciones para
+  mejorar situaciones diversas.
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"

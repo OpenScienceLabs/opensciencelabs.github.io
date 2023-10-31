@@ -6,6 +6,14 @@ author: Yurely Camacho
 tags: [datos, visualización de datos, lattice, ggplot2, tidyverse, ggmap, plotly, shiny]
 categories: [ciencia abierta, código abierto,  R]
 aliases: ["/blog/0032-visualizacionR/herramientas-de-visualizacion-en-r/"]
+description: |
+  Sin duda, los datos deben considerarse como la materia prima para cualquier
+  proyecto de ciencia abierta, pues todos se basan en el manejo de datos de
+  distintos tipos. Para *entender esos datos* debe realizarse una inspección
+  visual de su comportamiento. Esto se conoce como *Visualización de Datos*, que
+  consiste en generar representaciones gráficas de las variables que componen un
+  conjunto de datos para obtener información fácilmente interpretable de lo que
+  ellos nos quieren decir y así, poder comunicarla de una manera asertiva.
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
@@ -15,8 +23,6 @@ featureImage: "/header.png"
 
 <!-- # Herramientas de visualización en R -->
 <!-- **Por Yurely Camacho** -->
-
-
 
 Sin duda, los datos deben considerarse como la materia prima para cualquier
 proyecto de ciencia abierta, pues todos se basan en el manejo de datos de

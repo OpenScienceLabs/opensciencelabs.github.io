@@ -5,7 +5,13 @@ date: 2020-09-10
 author: Anavelyz Pérez
 tags: [tensorflow,código, tensorflow, pip, docker]
 categories: [ciencia abierta, código abierto, Python, ciencia de datos, inteligencia artificial]
- 
+description: |
+  Hablar de Tensorflow, es hablar de Machine Learning porque es una plataforma que
+  permite y facilita la creación de modelos asociados a algoritmos en los que se
+  configura al equipo involucrado. Esto de manera tal que se obtengan sistemas capaces
+  de construir y entrenar redes neuronales para detectar y descifrar patrones y
+  correlaciones análogos al aprendizaje y razonamiento usados por los humanos.
+
 draft: false
 usePageBundles: true
 thumbnail: "/header.png"
@@ -14,8 +20,6 @@ featureImage: "/header.png"
 
 
 <!-- # Cómo instalar y comenzar a utilizar Tensorflow -->
-
-
 
 Hablar de Tensorflow, es hablar de Machine Learning porque es una plataforma que
 permite y facilita la creación de modelos asociados a algoritmos en los que se

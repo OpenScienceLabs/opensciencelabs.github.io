@@ -5,6 +5,11 @@ date: 2022-03-22
 author: Alan Hurtarte
 tags: [cripto, desarrollador]
 categories: [desarrollo de software, UI-UX, web3]
+description: |
+  Si ya eres desarrollador y tienes la meta, el deseo, o simplemente
+  la curiosidad de adentrarte en la web3, en este blog te mencionaré
+  las tecnologías que se utilizan en el tech stack para desarrollar.
+
 aliases: ["/blog/0060-crypto-dev-ecosystem/que-necesitas-para-desarrollar-en-la-web3/"]
 draft: false
 usePageBundles: true

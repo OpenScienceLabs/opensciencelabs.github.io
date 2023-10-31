@@ -1,7 +1,5 @@
-{# Import the original template, required. #}
-{% extends "blog.html" %}
+{% extends "blog-list-base.html" %}
 
-{# A macro to render a blog entry, required. #}
 {% macro render_blog(title, description, time, url, page) -%}
 {% if title != "Blog" %}
 <ul class="posts" id="posts">
@@ -28,6 +26,7 @@
           <span class=post_date>{{ page.meta["date"].strftime('%b %-d, %Y') }}</span>
 
           <span class=page_only>
+            ·
             <div class=post_share>
               Share it:
               <a href="https://twitter.com/intent/tweet?text={{ title }}&url={{ url }}&tw_p=tweetbutton" class=twitter title="Compartir en Twitter" target=_blank rel=nofollow>
