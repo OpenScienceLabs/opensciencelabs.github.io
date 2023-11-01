@@ -1,4 +1,5 @@
 site_name: Open Science Labs
+site_url: https://opensciencelabs.org
 
 docs_dir: pages
 site_dir: build
