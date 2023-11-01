@@ -15,6 +15,7 @@ description: |
   el propósito de generar proyectos que ofrezcan propuestas o soluciones para
   mejorar situaciones diversas.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Los laboratorios sociales y el manejo del COVID-19 -->

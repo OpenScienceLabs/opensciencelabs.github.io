@@ -14,6 +14,7 @@ description: |
   que indica que cada desarrollador tiene el historial completo de su repositorio
   de manera local y existe una copia central.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Cinco tips para aumentar tu productividad con Git -->

@@ -16,6 +16,7 @@ description: |
   actividad, que junto a un sistema de control de versiones permiten la eficaz
   revisión de cualquier error que se presenté.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Que es el Open Science Framework? -->

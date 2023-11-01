@@ -19,6 +19,7 @@ description: |
   cuando se menciona el término investigación abierta, se hace alusión a aquella
   investigación que toma en cuenta los elementos de la ciencia abierta.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # La investigación abierta, el manejo de repositorios y control de versiones -->

@@ -18,6 +18,7 @@ description: |
   diseñadas en mente solo para gente con conocimiento técnico, o permitir solo el
   uso de ciertos lenguajes de programación o librerías.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Te hablamos del uso de dashboards para visualización de datos de tu próximo proyecto -->

@@ -11,6 +11,7 @@ description: |
   Abierta** es el camino. La producción del conocimiento científico se verá
   revolucionado gracias a esta forma de hacer ciencia.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # ¿Qué es la ciencia abierta? -->

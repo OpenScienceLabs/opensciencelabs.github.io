@@ -13,6 +13,7 @@ description: |
   permiten comprenderlos, compararlos, analizarlos y describirlos de forma tal que
   se tenga una noción más clara de lo que ocurre con ellos.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # La importancia de la integridad en los datos manejados en los dashboards -->

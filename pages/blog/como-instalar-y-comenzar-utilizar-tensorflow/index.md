@@ -20,6 +20,7 @@ description: |
   patrones y correlaciones análogos al aprendizaje y razonamiento usados por los
   humanos.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Cómo instalar y comenzar a utilizar Tensorflow -->

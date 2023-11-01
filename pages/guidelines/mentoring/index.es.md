@@ -5,18 +5,6 @@ authors: ["Ingrid Bianka Garcia"]
 tags: ["mentorías"]
 ---
 
-<!--
-.. title: Guía de Mentorías
-.. slug: es
-.. date: 2021-01-01
-.. authors: ["Ingrid Bianka Garcia"]
-.. tags: mentoring
-.. category: mentoring
-.. link:
-.. description:
-..
--->
-
 <!-- # [ES] Breve guía de Mentoría -->
 
 ## ¿Qué es la una mentoría?

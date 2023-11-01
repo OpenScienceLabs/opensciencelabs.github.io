@@ -169,25 +169,14 @@
       </style>
       <div class=container>
         <section class="wrap content">
+          {% if page.parent.children %}
+          <div class="d-none d-sm-none d-md-block" style="margin-top:80px"></div>
+          <div class="d-block d-sm-block d-md-none" style="margin-top:50px"></div>
+          {% endif %}
           {% block content %}
           {{ page.content }}
           {% endblock content %}
         </section>
-        <div>
-          <p>
-            <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
-                <img
-                  alt="Creative Commons License"
-                  style="border-width:0"
-                  src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
-            </a>
-            <br />
-            This work is licensed under a
-            <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
-                Creative Commons Attribution-ShareAlike 4.0 International License
-            </a>.
-          </p>
-        </div>
       </div>
     </main>
     <svg width="0" height="0" class="hidden">

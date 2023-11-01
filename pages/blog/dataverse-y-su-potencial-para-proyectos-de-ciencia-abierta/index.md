@@ -16,6 +16,7 @@ description: |
   organizados en conjuntos, agrupando metadatos y codigo clasificados con su
   propio numero DOI, en repositorios llamados 'Dataversos'.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Dataverse y su potencial para proyectos de ciencia abierta -->

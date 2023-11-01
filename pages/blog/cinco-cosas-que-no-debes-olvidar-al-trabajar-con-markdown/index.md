@@ -14,6 +14,7 @@ description: |
   escribiendo un libro? Para combatir esa incertidumbre, puedes comenzar a
   escribir en texto plano y darle formato con la ayuda de **Markdown**.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Cinco cosas que no debes olvidar al trabajar con Markdown -->

@@ -12,6 +12,7 @@ description: |
   sh, que apareció en la séptima edición de la versión de *Bell Labs Research* de
   Unix.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Automatización de tareas vía bash -->

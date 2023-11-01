@@ -13,6 +13,7 @@ description: |
   algún interés sobre el mismo. A todo el proceso de registro de esa información
   se le conoce como **Documentación**.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # ¿Cómo documentar tu proyecto de ciencia abierta? -->

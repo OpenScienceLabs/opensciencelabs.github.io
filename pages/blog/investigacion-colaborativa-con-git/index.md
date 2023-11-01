@@ -19,6 +19,7 @@ description: |
   particular el cual puede ser económico, social, político, científico, entre
   otros.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Investigación Colaborativa con Git -->

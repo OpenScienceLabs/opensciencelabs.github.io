@@ -21,6 +21,7 @@ description: |
   se necesitan herramientas que lo hagan posible. Allí entra en juego el _Control
   de versiones de datos_ o Data Version Control (DVC).
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Te contamos qué es el Data Version Control (DVC) y por qué es necesario que tu equipo sepa cómo utilizarlo -->

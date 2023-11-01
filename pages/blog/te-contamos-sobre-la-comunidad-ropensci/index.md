@@ -12,6 +12,7 @@ description: |
   estandarizados y se logrará, progresivamente, el avance de la ciencia bajo el
   enfoque de ciencia abierta.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- Te contamos sobre la comunidad rOpenSci -->

@@ -11,6 +11,7 @@ description: |
   se da un recorrido por las ventajas que brinda el lenguaje de programación
   Python, de allí podemos extraer algunas de sus características.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Herramientas de visualización en Python -->

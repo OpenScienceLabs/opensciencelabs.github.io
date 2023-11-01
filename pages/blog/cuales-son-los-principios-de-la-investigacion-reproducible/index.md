@@ -10,6 +10,7 @@ description: |
   y de que tu investigación ha dado resultados certeros y facil de verificar? ¿Son
   veraces los estudios y descubrimientos de otros científicos?
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # ¿Cuáles son los principios de la investigación reproducible? -->

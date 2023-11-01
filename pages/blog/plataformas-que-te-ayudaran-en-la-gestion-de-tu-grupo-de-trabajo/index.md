@@ -10,6 +10,7 @@ description: |
   porque tenemos la convicción de que un equipo de trabajo bien manejado puede
   crecer en conjunto y construir mejores resultados para la ciencia abierta.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # 10 Plataformas que te ayudarán en la gestión de tu grupo de trabajo. -->

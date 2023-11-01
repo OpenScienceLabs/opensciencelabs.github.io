@@ -19,6 +19,7 @@ description: |
   vacunas, o para predecir niveles de propagación de las enfermedades y generar
   soluciones tecnológicas.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # ¿Qué hemos aprendido, gracias a la ciencia abierta, del manejo de pandemias? -->

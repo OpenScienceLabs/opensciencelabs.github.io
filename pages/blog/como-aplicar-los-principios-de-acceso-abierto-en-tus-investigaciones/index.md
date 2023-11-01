@@ -14,6 +14,7 @@ description: |
   Al principio, para lograr esto, se recurría al asesoramiento de editores que por
   lo general estaban adscritos a una revista específica.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # ¿Cómo aplicar los principios de acceso abierto en tus investigaciones? -->

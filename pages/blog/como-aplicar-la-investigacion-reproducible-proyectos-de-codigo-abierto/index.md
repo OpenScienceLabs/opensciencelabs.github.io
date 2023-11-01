@@ -13,6 +13,7 @@ description: |
   investigación si todos los intentos posteriores de ratificar los resultados
   fracasan!
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # ¿Cómo aplicar la investigación reproducible a proyectos de código abierto? -->

@@ -10,6 +10,7 @@ description: |
   sepamos del todo lo que esto significa. Por ello, vamos a revisar inicialmente
   este concepto.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Cinco cosas que no debes olvidar al trabajar con datos abiertos -->

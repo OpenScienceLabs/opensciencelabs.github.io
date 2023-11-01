@@ -17,6 +17,7 @@ description: |
   manera eficiente y sin complicaciones.
 
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Características y tips útiles que te ayudarán a sacar el máximo provecho de CONDA -->

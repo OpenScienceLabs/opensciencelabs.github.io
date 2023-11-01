@@ -17,8 +17,8 @@ description: |
   Puedes consultar más información sobre ciencia ciudadana en nuestro
   artículo *Qué es ciencia ciudadana* (enlace a artículo
   queescienciaciudadana).
-
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Algunos proyectos de ciencia e inteligencia ciudadana para atender la pandemia del COVID-19 -->

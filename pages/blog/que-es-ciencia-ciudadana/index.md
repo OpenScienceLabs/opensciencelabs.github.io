@@ -13,6 +13,7 @@ description: |
   solamente entre una comunidad selecta de individuos, casi todos hombres,
   hablando con un vocabulario rebuscado y imposible de entender.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # ¿Qué es ciencia ciudadana? -->

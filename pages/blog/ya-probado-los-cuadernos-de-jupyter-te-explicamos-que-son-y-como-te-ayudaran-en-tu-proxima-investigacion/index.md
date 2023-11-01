@@ -17,6 +17,7 @@ description: |
   más gráfica y en tiempo real, algo especialmente útil para garantizar la
   reproducibilidad de tus resultados.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # ¿Ya has probado los cuadernos de Jupyter? Te explicamos qué son y cómo te ayudarán en tu próxima investigación. -->

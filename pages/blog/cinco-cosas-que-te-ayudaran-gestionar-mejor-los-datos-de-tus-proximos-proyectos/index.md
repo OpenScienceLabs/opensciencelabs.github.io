@@ -14,6 +14,7 @@ description: |
   entre proyectos y otras. Por tal motivo si estás manejando datos
   (independientemente de la cantidad) lo mejor es garantizar una buena gestión de ellos.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Cinco cosas que te ayudarán a gestionar mejor los datos de tus próximos proyectos -->

@@ -18,6 +18,7 @@ description: |
   entrar en confianza sobre el tema. Puedes visitar nuestro artículo sobre Datos
   abiertos [aquí](https://opensciencelabs.org/blog/que-son-los-datos-abiertos/).
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Te hablamos de cinco repositorios con datos abiertos sobre  países -->

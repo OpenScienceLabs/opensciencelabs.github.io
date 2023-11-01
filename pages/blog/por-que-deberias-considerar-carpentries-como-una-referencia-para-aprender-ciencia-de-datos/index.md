@@ -12,6 +12,7 @@ description: |
   vital que tengamos fuentes de información que nos hagan este proceso más
   sencillo, y que ante cualquier duda que tengamos la ayuda sea oportuna.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Por qué deberías considerar a The Carpentries como una referencia para aprender ciencia de datos -->

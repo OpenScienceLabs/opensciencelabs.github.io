@@ -18,6 +18,7 @@ description: |
   encuesta, 60% de los participantes admitían también contribuir a la
   documentación de sus proyectos con muy poca frecuencia.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Si ya usas código abierto, te contamos como puedes sacarle mayor provecho a tu documentación (para tus artículos y publicaciones) -->

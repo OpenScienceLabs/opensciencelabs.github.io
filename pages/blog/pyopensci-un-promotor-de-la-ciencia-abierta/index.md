@@ -17,6 +17,7 @@ description: |
   y que sea aceptado por una gran comunidad de _pythonistas_, entonces aquí está
   lo que necesitas saber para lograrlo.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # pyOpenSci: un promotor de la ciencia abierta -->

@@ -14,6 +14,7 @@ description: |
   de la investigación, y de qué es lo que se busca lograr con este tipo de
   práctica de investigación.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Te enseñamos 4 lugares para aprender los fundamentos de la ciencia abierta -->

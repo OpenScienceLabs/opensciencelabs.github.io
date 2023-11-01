@@ -19,6 +19,7 @@ description: |
   podrá garantizar la veracidad de la investigación permitiendo generar una fuerte
   confianza en ésta.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Que son los datos abiertos? -->

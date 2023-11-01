@@ -14,6 +14,7 @@ description: |
   en tus proyectos y las oportunidades laborales que tendrás cuando aprendas a
   utilizarlo.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # ¿Qué es el Lenguaje R y cómo puede ayudarte en tus proyectos? -->

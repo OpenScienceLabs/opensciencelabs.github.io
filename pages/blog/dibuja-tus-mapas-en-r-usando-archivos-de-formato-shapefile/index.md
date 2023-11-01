@@ -10,6 +10,7 @@ description: |
   archivos de formato shapefile, resaltar puntos en tu mapa y modificar su
   apariencia utilizando las bibliotecas `rgdal` y `ggplot2`.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Dibuja tus mapas en R usando archivos de formato Shapefile -->

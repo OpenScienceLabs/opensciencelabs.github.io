@@ -16,6 +16,7 @@ description: |
     hamburguesa con Ethereum si el proceso tarde 5 o 10 minutos en validarse.
   - Debido a las dos anteriores, demasiado consumo de energía eléctrica.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # The Ethereum merge is coming. ¿Pero qué significa? -->

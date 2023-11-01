@@ -12,6 +12,7 @@ description: |
   (https://es.wikipedia.org/wiki/Inteligencia_artificial) de Wikipedia para
   construir nuestra nube de palabras usando las bibliotecas `tm` y `wordcloud`.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 # Crea tu nube de palabras en R a partir de un documento de texto

@@ -19,6 +19,7 @@ description: |
   algo tan común pero no menos importante como lo es una foto o un sonido,
   reproducibles en todo sentido de la palabra.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Algunos proyectos entretenidos de código abierto -->

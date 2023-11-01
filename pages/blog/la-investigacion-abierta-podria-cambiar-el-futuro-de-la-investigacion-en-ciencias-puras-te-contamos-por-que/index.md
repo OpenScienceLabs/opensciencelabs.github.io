@@ -15,6 +15,7 @@ description: |
   los datos, procedimientos y otras herramientas de la investigación (cuadernos de
   notas, cuadernos de campo, videos de experimentos, datos de encuestas, etc.).
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # La investigación abierta podría cambiar el futuro de la investigación en ciencias puras. Te contamos por qué. -->

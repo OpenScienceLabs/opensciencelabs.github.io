@@ -15,6 +15,7 @@ description: |
   diversidad de personas cotidianas que la han aprovechado, indirectamente
   volviendose científicos.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Tres proyectos de ciencia ciudadana que te sorprenderán -->

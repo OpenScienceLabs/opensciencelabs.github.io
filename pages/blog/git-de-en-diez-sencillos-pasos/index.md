@@ -20,6 +20,7 @@ description: |
   puede resultar subir y manejar archivos en tu primer repositorio, crear varias
   ramas en el mismo y compartir archivos con colaboradores.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Git de 0 a 100 en diez sencillos pasos -->

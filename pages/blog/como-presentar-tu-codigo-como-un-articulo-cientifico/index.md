@@ -16,6 +16,7 @@ description: |
   el del científico estan más relacionados, exigiendo que estas dos disciplinas se
   vinculen de forma más estrecha.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # ¿Cómo presentar tu código como un artículo científico? -->

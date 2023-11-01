@@ -15,6 +15,7 @@ description: |
   estudiar las herramientas que se utilizarán porque de ellas depende la obtención
   de resultados óptimos, visualmente atractivos y lo suficientemente informativos.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Te mostramos cinco librerías en Python para tu próximo proyecto de ciencia abierta -->

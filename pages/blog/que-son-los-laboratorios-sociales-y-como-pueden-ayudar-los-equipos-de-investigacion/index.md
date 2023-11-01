@@ -17,6 +17,7 @@ description: |
   académico o emprendedor de ninguna forma, permitiéndoles _cocrear_
   investigaciones y productos de forma independiente.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # ¿Qué son los laboratorios sociales y cómo pueden ayudar a los equipos de investigación? -->

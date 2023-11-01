@@ -11,6 +11,7 @@ description: |
   mejores plataformas para que puedas practicar programación resolviendo
   problemas.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Code Abbey una plataforma para mejorar tu habilidad en programación -->

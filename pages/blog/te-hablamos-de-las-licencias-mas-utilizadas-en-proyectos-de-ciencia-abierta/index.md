@@ -19,6 +19,7 @@ description: |
   entre otras), nos interesan sobre todo aquellas licencias de código abierto, ya
   que hacen posible el desarrollo de muchas prácticas de la ciencia abierta.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Te hablamos de las licencias mas utilizadas en proyectos de ciencia abierta -->

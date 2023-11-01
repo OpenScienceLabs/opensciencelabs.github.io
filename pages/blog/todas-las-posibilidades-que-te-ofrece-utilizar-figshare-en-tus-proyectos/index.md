@@ -12,6 +12,7 @@ description: |
   que sean citables, compartibles y descubribles. Los resultados pueden incluir
   cifras, los conjuntos de datos, imágenes y vídeos.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Todas las posibilidades que te ofrece utilizar figshare en tus proyectos -->

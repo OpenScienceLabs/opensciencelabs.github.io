@@ -13,6 +13,7 @@ description: |
   resultar en innovaciones, aprendizajes mutuos y condiciones estables u optimas
   para enfrentar obstáculos.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Todo lo que debes saber sobre la investigación colaborativa -->

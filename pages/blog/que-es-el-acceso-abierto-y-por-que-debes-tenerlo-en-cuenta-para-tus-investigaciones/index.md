@@ -11,6 +11,7 @@ description: |
   cualquier otro medio. En este tipo de proyectos se permite copiar, utilizar o
   distribuir el contenido con la condición de que se le den créditos al autor.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # ¿Qué es el acceso abierto y por qué debes tenerlo en cuenta para tus investigaciones? -->

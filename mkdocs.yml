@@ -29,13 +29,23 @@ nav:
     - "Package Support": 'programs/packaging-support/index.md'
     - Partners: 'programs/partners/index.md'
     - Virtual-Labs: 'programs/virtual-labs/index.md'
+  - Guidelines:
+    - index: guidelines/index.md
+    - Articles: guidelines/articles/index.md
+    - CoC: guidelines/coc/index.md
+    - CoC for Mentoring: guidelines/coc-mentoring/index.md
+    - DEI: guidelines/dei/index.md
+    - DevOps/Discord: guidelines/devops/discord.md
+    - Fund Raiser: guidelines/fund-raiser/index.md
+    - Governance: guidelines/governance/index.md
+    - Mentoring: guidelines/mentoring/index.md
+    - Roadmap: guidelines/roadmap/index.md
   - About:
     - index: 'about/index.md'
-    - About OSL: about.md
-    - Partners: partners/list/index.md
+    - About OSL: 'about/index.md'
+    - Partners: programs/partners/list/index.md
     - Activities: about/archives/index.md
     - FAQ: faq/index-en.md
-    - Guidelines: guidelines/index.md
     - Acknowledge: about/acknowledge/index-en.md
 
 plugins:

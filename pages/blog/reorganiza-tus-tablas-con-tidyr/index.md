@@ -11,6 +11,7 @@ description: |
   utilizaremos la biblioteca `tidyr` con sus funciones `gather()`, `spread()`,
   `separate()`, y `unite()`.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Reorganiza tus tablas con tidyr en R  -->

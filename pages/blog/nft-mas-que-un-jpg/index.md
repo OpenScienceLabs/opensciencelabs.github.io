@@ -14,6 +14,7 @@ description: |
   En este último artículo, se hace mención al meme de la «novia posesiva» que fue
   vendido por \$411,000.00 USD.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # NFT. Más que un JPG -->

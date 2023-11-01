@@ -16,6 +16,7 @@ description: |
   contaminadas. Este virus se ha extendido y el número de países en los que sus
   ciudadanos se han contagiado incrementó masivamente en los últimos días.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Te mostramos algunos repositorios con datos sobre el COVID-19 -->

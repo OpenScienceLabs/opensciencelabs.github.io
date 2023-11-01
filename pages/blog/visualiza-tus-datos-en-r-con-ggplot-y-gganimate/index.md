@@ -12,6 +12,7 @@ description: |
   no hacerlo?. En este artículo se describe como hacer animación usando ggplot2 y
   gganimate en R.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Visualiza tus datos en R con ggplot2 y gganimate -->

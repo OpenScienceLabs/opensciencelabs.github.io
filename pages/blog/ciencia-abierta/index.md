@@ -18,6 +18,7 @@ description: |
   con estas tecnícas, sino también para crear nuevas herramientas de simulación y
   experimentación, tanto para uso científico como el particular o comercial.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 Una de las areas de investigación mas prometedoras de la ultima decada es sín

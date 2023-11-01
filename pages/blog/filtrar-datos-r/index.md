@@ -11,6 +11,7 @@ description: |
   `filter()`, `select()`, `group_by()`, `sumarize()` y `mutate()` dentro de un
   ejemplo práctico.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Cómo filtrar datos de tu tabla con dplyr en R  -->

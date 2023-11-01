@@ -10,6 +10,7 @@ description: |
   Windows, Linux y MacOs. Inicialmente se creó para programas Python y está
   escrito en python, pero puede implementarse para cualquier lenguaje.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Cómo instalar y comenzar a utilizar Conda -->

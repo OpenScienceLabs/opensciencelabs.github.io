@@ -17,6 +17,7 @@ description: |
   reflexionamos sobre las bondades de este proceso en proyectos de ciencia
   abierta.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # ¿Qué son las mentorías y cómo potencian los proyectos de  ciencia abierta? -->

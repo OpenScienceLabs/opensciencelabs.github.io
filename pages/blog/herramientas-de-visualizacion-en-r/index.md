@@ -24,6 +24,7 @@ description: |
   conjunto de datos para obtener información fácilmente interpretable de lo que
   ellos nos quieren decir y así, poder comunicarla de una manera asertiva.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Herramientas de visualización en R -->

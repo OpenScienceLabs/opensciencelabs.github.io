@@ -14,6 +14,7 @@ description: |
   disponibles, con una cantidad prácticamente infinita de usos, puede serte
   difícil decidir con cuál empezar a aprender o cuál aportará más a tu trabajo.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # 10 razones para usar Python en tu proximo proyecto de  investigación -->

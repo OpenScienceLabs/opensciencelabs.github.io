@@ -331,13 +331,11 @@ main{
   flex:1
 }
 
-/*
-ul{
-   list-style:none;
-  -webkit-padding-start:0;
-  -moz-padding-start:0
+ul.posts {
+   list-style:none!important;
+  -webkit-padding-start:0!important;
+  -moz-padding-start:0!important;
 }
-*/
 
 em{
   font-weight:500

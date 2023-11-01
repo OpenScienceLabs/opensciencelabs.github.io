@@ -12,6 +12,7 @@ description: |
   usar, la elección dependerá de la herramienta que te haga sentir comodidad, se
   adapte a tus necesidades de trabajo y, muy importante, sea sencilla de manejar.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Primeros pasos con Spyder -->

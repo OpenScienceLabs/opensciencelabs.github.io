@@ -19,6 +19,7 @@ description: |
   dependiendo de la forma en la que estés publicando tu artículo, todas estas
   tareas pueden tener formatos muy distintos.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Si has pensado en cómo automatizar la construcción de citas en tu proyecto, te contamos cómo hacerlo posible. -->

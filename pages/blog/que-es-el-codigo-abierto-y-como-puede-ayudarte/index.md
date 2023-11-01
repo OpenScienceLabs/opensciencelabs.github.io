@@ -15,6 +15,7 @@ description: |
   software, la palabra _código_ hace referencia a uno o varios lenguajes de
   programación.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # ¿Qué es el código abierto y cómo puede ayudarte? -->

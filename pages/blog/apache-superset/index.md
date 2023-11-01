@@ -16,6 +16,7 @@ description: |
   funcionalidades que ofrece, algunas empresas que lo utilizan y cómo
   hacer tu primer gráfico y dashboard.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 Fuente:[Apache Superset](https://superset.apache.org/)

@@ -11,6 +11,7 @@ description: |
   datos, aplicaciones web interactivas, documentos, reportes, gráficos y mucho
   más.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Primeros pasos con RStudio -->

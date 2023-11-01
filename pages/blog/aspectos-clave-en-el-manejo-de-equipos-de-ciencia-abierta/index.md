@@ -19,6 +19,7 @@ description: |
   resultados rápidos en proyectos cada vez más grandes, requiere de la creación de
   grupos con flujos de trabajos disciplinados y metodologías ágiles.
 thumbnail: "/header.png"
+template: "blog-post.html"
 ---
 
 <!-- # Aspectos clave en el manejo de equipos de ciencia abierta -->
