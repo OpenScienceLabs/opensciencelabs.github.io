@@ -4,11 +4,12 @@ channels:
   - conda-forge
 dependencies:
   - python
-  - mkdocs
+  - mkdocs 1.4.2
   - mkdocs-jupyter
   - pre-commit
   - pip
   - pip:
+    - mkdocs==1.4.2
     - makim
     - mkdocs-blogging-plugin
     - mkdocs-rss-plugin
