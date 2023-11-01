@@ -3,43 +3,86 @@ title: FAQ
 authors: ["Ever Vino"]
 ---
 
-### ¿Qué es Open Science Labs (OSL)?
-Open Science Labs es una comunidad que tiene como objetivo unir a personas de todas partes del mundo, especialmente de países latinoamericanos y crear un espacio abierto para enseñar, aprender y compartir temas relacionados con la ciencia abierta y las herramientas computacionales.
+## What is Open Science Labs (OSL)?
 
-### ¿Qué actividades realizan?
-Creamos y contribuimos a la comunidad OpenSource enfocada en Ciencia Abierta, creando artículos sobre herramientas para la Ciencia Abierta, Proyectos en DevOps, Ciencia de Datos y Open Hardware. También disponemos de espacios de intercambio de información a través de Discord y desarrollamos procesos de Mentorías y capacitaciones específicas, favoreciendo la adquisición de nuevas destrezas en quienes nos contactan.
+Open science labs is a community that aims to gather people from all parts of
+the world (specially from latin america countries) and create an open space for
+teaching, learning and sharing topics around open science and computational
+tools.
 
-### ¿Quiénes componen Open Science Labs?
-En la comunidad están varias personas curiosas con diferentes profesiones y que realizan diversas actividades y que colaboran de forma voluntaria. Algunas de las profesiones de quienes conforman Open Science Labs son: destrezas técnicas en electricidad, ingeniería ambiental, fullStack developers, ciencias políticas e ingeniería informática ubicadas todas en diferentes partes de Latinoamérica.
+## What activities do you perform?
 
-### ¿Cómo puedo aportar a la comunidad?
-* Puedes llenar el formulario para que nosotros te podamos contactar y coordinar una videollamada para establecer actividades.  [click aquí](https://github.com/OpenScienceLabs/request-forms/issues/new/choose?fbclid=IwAR3pDhR5soLQJrgKTUzmT9I1ty8rEyMTtn8LarkDzdDqkUadQc_ugwX5IsE)
-* O también puedes solicitar que tu aporte como artículo o código fuente se comparta en las redes sociales de la comunidad o el repositorio, a través de Discord. Una vez que tu aporte sea incorporado este será de Código Abierto con licencia tipo [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) y se agregará tu nombre a la lista de quienes contribuyen con Open Science Labs.
+We create and contribute to the OpenSource community focused on Open Science,
+creating articles about Open Science tools, DevOps Projects, Data Science and
+Open Hardware. We also have information exchange spaces through Discord and we
+develop Mentoring and specific training processes, favoring the acquisition of
+new skills in those who contact us.
 
-### ¿Ofrecen mentorías?
-Sí, para hacerte un mentorado de OSL solo llena este [formulario](https://github.com/OpenScienceLabs/request-forms/issues/new/choose?fbclid=IwAR3pDhR5soLQJrgKTUzmT9I1ty8rEyMTtn8LarkDzdDqkUadQc_ugwX5IsE) y te avisaremos a la brevedad notificándote si tenemos un tutor disponible.
-También puedes ser tutor o mentor, para lo cual llena este otro formulario de [aquí](https://github.com/OpenScienceLabs/request-forms/issues/new/choose?fbclid=IwAR3pDhR5soLQJrgKTUzmT9I1ty8rEyMTtn8LarkDzdDqkUadQc_ugwX5IsE).
+## Who are the members of Open Science Labs?
 
-### ¿Qué actividades específicas están haciendo actualmente?
-En Open Science Labs estamos trabajando en:
-* Puesta en marcha y mantenimiento de nuestra página web.
-* Mentorías en DevOps.
-* Guias de herramientas para R y otras herramientas de uso frecuente en Ciencia Abierta.
-* Creación de artículos sobre tecnologías emergentes y Ciencia Abierta.
-* Manejo de redes sociales.
+In the community there are several curious people with different professions and
+who perform various activities and collaborate on a voluntary basis. Some of the
+professions of those who are part of Open Science Labs are: technical skills in
+electricity, environmental engineering, fullStack developers, political science
+and computer engineering, all located in different parts of Latin America.
 
-### ¿Les están pagando algo?
-No, la comunidad se mantiene gracias al voluntariado que aporta su tiempo libre a la comunidad. Aunque está entre nuestros planes conseguir apoyos para el sostenimiento de nuestra labor.
+## How can I contribute to the community?
 
-### Tengo algunas sugerencias. ¿Cómo me contacto con OSL?
-Puedes hacerlo a través de Discord, casi siempre está un administrador que puede responderte. [Discord Group](https://opensciencelabs.org/discord)
+- You can fill out the form below so that we can contact you and coordinate a
+  video call to set up activities,
+  [click here](https://github.com/OpenScienceLabs/request-forms/issues/new/choose?fbclid=IwAR3pDhR5soLQJrgKTUzmT9I1ty8rEyMTtn8LarkDzdDqkUadQc_ugwX5IsE)
 
-### ¿Quiénes dirigen OSL?
-Tenemos una Junta directiva(Steering Council), la cual se reúne semanalmete para fijar actividades y metas para la comunidad.
+- Or you can also request that your contribution as an article or source code be
+  shared on the community's social media or repository, through Discord. Once
+  your contribution is incorporated, it will be Open Source with a license type
+  [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) and your name
+  will be added to the list of contributors to Open Science Labs.
 
-### ¿Qué tipo de licencia tiene OpenScienceLabs?
-Todo lo que compartimos está bajo la [Licencia CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), es decir que puedes compartir, redistribuir o transformar el material siempre que: se dé el crédito apropiado al autor y que si los transformas se debe distribuir bajo la misma licencia. Para más detalles sobre la licencia puedes visitar la página web de Creative Commons [Attribution-ShareAlike 4.0 Internacional](https://creativecommons.org/licenses/by-sa/4.0/).
+## Do you offer mentoring?
 
+Yes, to become an OSL mentee just fill out this
+[form]https://github.com/OpenScienceLabs/request-forms/issues/new/choose?fbclid=IwAR3pDhR5soLQJrgKTUzmT9I1ty8rEyMTtn8LarkDzdDqkUadQc_ugwX5IsE)
+and we will notify you as soon as possible if we have a mentor available. You
+can also be a tutor or mentor by filling out this other form
+[here](https://github.com/OpenScienceLabs/request-forms/issues/new/choose?fbclid=IwAR3pDhR5soLQJrgKTUzmT9I1ty8rEyMTtn8LarkDzdDqkUadQc_ugwX5IsE).
 
-### ¿Cuál es su motivación para aportar a la comunidad Open Source?
-Creemos que la educación y la tecnología deberían ser lo más accesible posible para todos. Y para lograrlo ¡OpenScienceLabs es un buen lugar!
+## What specific activities are you currently doing?
+
+At Open Science Labs we are working on:
+
+- Implementation and maintenance of our website.
+- DevOps mentoring.
+- Tool guides for R and other frequently used tools in Open Science.
+- Creation of articles on emerging technologies and Open Science.
+- Management of social media.
+
+## Are you paying them anything?
+
+No, the community is maintained thanks to the volunteers who give their free
+time to the community. However, we are planning to get support to sustain our
+work.
+
+## I have some suggestions. How do I contact OSL?
+
+You can do it through Discord. There is almost always an administrator who can
+answer you. [Discord Group](https://opensciencelabs.org/discord)
+
+## Who manages OSL?
+
+We have a Steering Council, which meets weekly to set activities and goals for
+the community.
+
+## What type of license does Open Science Labs have?
+
+Everything we share is under the
+[CC BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/), meaning
+that you can share, redistribute or transform the material as long as: proper
+credit is given to the author and that if you transform them they must be
+distributed under the same license. For more details about the license you can
+visit the Creative Commons website
+[Attribution-ShareAlike 4.0 Internacional](https://creativecommons.org/licenses/by-sa/4.0/).
+
+## What is your motivation for contributing to the Open Source community?
+
+We believe that education and technology should be as accessible as possible for
+everyone. And to achieve this, Open Science Labs is a good place!

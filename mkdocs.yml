@@ -46,8 +46,8 @@ nav:
     - About OSL: 'about/index.md'
     - Partners: programs/partners/list/index.md
     - Activities: about/archives/index.md
-    - FAQ: faq/index-en.md
-    - Acknowledge: about/acknowledge/index-en.md
+    - FAQ: faq/index.md
+    - Acknowledges: about/acknowledges/index.md
 
 plugins:
   - blogging:
