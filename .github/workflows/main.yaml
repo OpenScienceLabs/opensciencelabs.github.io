@@ -31,7 +31,7 @@ jobs:
 
     - name: Build the book
       run: |
-        make build
+        makim pages.build
         echo "opensciencelabs.org" > build/CNAME
 
     # Push the book's HTML to github-pages
