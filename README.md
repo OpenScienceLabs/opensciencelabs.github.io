@@ -7,7 +7,7 @@ A blog page for OpenScienceLabs with mkdocs site generator.
 Clone the repository
 
 ```bash
-git clone git@github.com:osl-incubator/opensciencelabs.github.io
+git clone git@github.com:opensciencelabs/opensciencelabs.github.io
 cd opensciencelabs.github.io
 ```
 
