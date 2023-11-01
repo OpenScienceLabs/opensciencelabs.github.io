@@ -1,0 +1,105 @@
+{% extends "single.html" %}
+
+{% block content_inner %}
+
+<div>
+  <h3><a href="{{ url }}" title="{{ title }}" target="_self">{{ page.meta["title"] }}</a></h3>
+  <div class=>
+    <span>
+      <svg class="icon">
+        <title>author</title>
+        <use xlink:href="#author"/>
+      </svg>
+    </span>
+    <span class=author_name>
+      {{ ", ".join(page.meta["authors"]) + " · " if "authors" in page.meta else "" }}
+    </span>
+    <span>
+      <svg class="icon">
+        <title>calendar</title>
+        <use xlink:href="#calendar"/>
+      </svg>
+    </span>
+    <span class=post_date>{{ page.meta["date"].strftime('%b %-d, %Y') }}</span>
+
+    <span class=page_only>
+      ·
+      <div class=post_share>
+        Share it:
+        <a href="https://twitter.com/intent/tweet?text={{ title }}&url={{ url }}&tw_p=tweetbutton" class=twitter title="Compartir en Twitter" target=_blank rel=nofollow>
+          <svg class="icon">
+            <title>twitter</title>
+            <use xlink:href="#twitter"/>
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/sharer.php?u={{ url }}&t={{ title }}" class=facebook title="Compartir en Facebook" target=_blank rel=nofollow>
+          <svg class="icon">
+            <title>facebook</title>
+            <use xlink:href="#facebook"/>
+          </svg>
+        </a>
+        <a href=#linkedinshare id=linkedinshare class=linkedin title="Compartir en LinkedIn" rel=nofollow>
+          <svg class="icon">
+            <title>linkedin</title>
+            <use xlink:href="#linkedin"/>
+          </svg>
+        </a>
+        <a href="{{ url }}" title="Copy Link" class="link link_yank">
+          <svg class="icon">
+            <title>copy</title>
+            <use xlink:href="#copy"/>
+          </svg>
+        </a>
+      </div>
+    </span>
+
+    {% if show_tags and "tags" in page.meta %}
+    <div>
+    {% for tag in page.meta["tags"] %}
+      <a href="#{{tag}}" title="{{tag}}" class="post_tag button button_translucent">{{tag}}</a>
+    {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+
+</div>
+<div>
+  <div class=excerpt_thumbnail>
+    <figure>
+      <picture>
+        <img loading=lazy decoding=async alt="{{ title }}"
+          class="image_figure image_thumbnail image_internal image_unprocessed"
+          src="/blog/{{ page.meta["slug"] }}{{ page.meta["thumbnail"] }}" alt="{{ title }}"></picture>
+    </figure>
+  </div>
+  <div>
+    {{ page.content }}
+  </div>
+</div>
+
+{% for nav_item in nav %}
+
+{% if nav_item.title == "Blog" and nav_item.children %}
+
+{% for sub_nav_item in nav_item.children %}
+{% if sub_nav_item.title != "main" %}
+
+<div class="posts mt-5">
+  <article>
+    <a href="{{ sub_nav_item.url|url }}" class="image">
+      <img src="https://picsum.photos/id/{{ loop.index }}/400/200"
+       alt="{{ sub_nav_item.title }}" />
+    </a>
+    <h3>{{ sub_nav_item.title }}</h3>
+    <p>{{ sub_nav_item.summary }}</p>
+    <ul class="actions">
+      <li><a href="{{ sub_nav_item.url|url }}" class="button">Read</a></li>
+    </ul>
+  </article>
+  {% endif %}
+  {% endfor %}
+</div>
+{% endif %}
+{% endfor %}
+
+{% endblock content_inner %}

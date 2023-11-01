@@ -1,28 +1,20 @@
-# osl-hugo.github.io
+# opensciencelabs.github.io
 
-A blog page for OpenScienceLabs with Hugo site generator.
+A blog page for OpenScienceLabs with mkdocs site generator.
 
 ## To deploy locally
 
-Install Hugo via [Homebrew](https://brew.sh/) or you can install it via another options [Install Hugo](https://gohugo.io/getting-started/installing/)
+Clone the repository
 
 ```bash
-brew install hugo
+git clone git@github.com:opensciencelabs/opensciencelabs.github.io
+cd opensciencelabs.github.io
 ```
-
-Clone the repository 
 
 ```bash
-git clone git@github.com:osl-incubator/osl-hugo.github.io.git 
+mamba env create -f conda/dev.yaml
 ```
-
-Run locally
 
 ```bash
-cd osl-hugo.github.io
-hugo server
+makim pages.preview
 ```
-
-## To check how it works see the template
-
-[Hugo Clarity](https://github.com/chipzoller/hugo-clarity)

@@ -3,8 +3,8 @@ groups:
   pages:
     targets:
       build:
-        help: build the static page with hugo
-        run: hugo --minify
+        help: build the static page
+        run: mkdocs build --verbose --clean
       preview:
         help: preview the web page dynamically
-        run: hugo server
+        run: mkdocs serve --watch build --watch theme

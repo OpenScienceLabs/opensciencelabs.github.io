@@ -1,0 +1,81 @@
+site_name: Open Science Labs
+site_url: https://opensciencelabs.org
+
+docs_dir: pages
+site_dir: build
+
+theme:
+  name: null
+  custom_dir: 'theme/'
+
+extra_css:
+  - css/style.css
+  - css/index.css
+
+extra_javascript:
+  - js/bundle.js
+  - js/search.js
+  - js/index.json
+
+nav:
+  - Home: 'index.md'
+  - Blog: 'blog/index.md'
+  - Programs:
+    - index: 'programs/index.md'
+    - Affiliation: 'programs/affiliation/index.md'
+    - Ambassadors: 'programs/ambassadors/index.md'
+    - Incubator: 'programs/incubator/index.md'
+    - Internship: 'programs/internship/index.md'
+    - Mentoring: 'programs/mentoring/index.md'
+    - "Package Support": 'programs/packaging-support/index.md'
+    - Partners: 'programs/partners/index.md'
+    - Virtual-Labs: 'programs/virtual-labs/index.md'
+  - Guidelines:
+    - index: guidelines/index.md
+    - Articles: guidelines/articles/index.md
+    - CoC: guidelines/coc/index.md
+    - CoC for Mentoring: guidelines/coc-mentoring/index.md
+    - DEI: guidelines/dei/index.md
+    - DevOps/Discord: guidelines/devops/discord.md
+    - Fund Raiser: guidelines/fund-raiser/index.md
+    - Governance: guidelines/governance/index.md
+    - Mentoring: guidelines/mentoring/index.md
+    - Roadmap: guidelines/roadmap/index.md
+  - About:
+    - index: 'about/index.md'
+    - About OSL: 'about/index.md'
+    - Partners: programs/partners/list/index.md
+    - Activities: about/archives/index.md
+    - FAQ: faq/index-en.md
+    - Acknowledge: about/acknowledge/index-en.md
+
+plugins:
+  - blogging:
+      template: theme/blog-list.html
+      dirs:
+        - blog
+      features:
+        tags: {}
+
+  - rss:
+      abstract_chars_count: 160  # -1 for full content
+      abstract_delimiter: <!-- more -->
+      categories:
+        - tags
+      comments_path: "#__comments"
+      date_from_meta:
+        as_creation: "date"
+        as_update: false
+        datetime_format: "%Y-%m-%d"
+        default_timezone: Europe/Paris
+        default_time: "09:30"
+      enabled: true
+      feed_ttl: 1440
+      image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Feed-icon.svg/128px-Feed-icon.svg.png
+      length: 20
+      pretty_print: false
+      match_path: ".*"
+      url_parameters:
+        utm_source: "documentation"
+        utm_medium: "RSS"
+        utm_campaign: "feed-syndication"

@@ -1,0 +1,101 @@
+{% extends "blog-list-base.html" %}
+
+{% macro render_blog(title, description, time, url, page) -%}
+{% if title != "Blog" %}
+<ul class="posts" id="posts">
+  <li class=post_item>
+    <div class=excerpt>
+      <div class=excerpt_header>
+        <h3 class=post_link><a href="{{ url }}" title="{{ title }}" target="_self">{{ title }}</a></h3>
+        <div class=post_meta>
+          <span>
+            <svg class="icon">
+              <title>author</title>
+              <use xlink:href="#author"/>
+            </svg>
+          </span>
+          <span class=author_name>
+            {{ ", ".join(page.meta["authors"]) + " · " if "authors" in page.meta else "" }}
+          </span>
+          <span>
+            <svg class="icon">
+              <title>calendar</title>
+              <use xlink:href="#calendar"/>
+            </svg>
+          </span>
+          {% if "date" in page.meta %}
+          <span class=post_date>{{ page.meta["date"].strftime('%b %-d, %Y') }}</span>
+          {% endif %}
+
+          <span class=page_only>
+            ·
+            <div class=post_share>
+              Share it:
+              <a href="https://twitter.com/intent/tweet?text={{ title }}&url={{ url }}&tw_p=tweetbutton" class=twitter title="Compartir en Twitter" target=_blank rel=nofollow>
+                <svg class="icon">
+                  <title>twitter</title>
+                  <use xlink:href="#twitter"/>
+                </svg>
+              </a>
+              <a href="https://www.facebook.com/sharer.php?u={{ url }}&t={{ title }}" class=facebook title="Compartir en Facebook" target=_blank rel=nofollow>
+                <svg class="icon">
+                  <title>facebook</title>
+                  <use xlink:href="#facebook"/>
+                </svg>
+              </a>
+              <a href=#linkedinshare id=linkedinshare class=linkedin title="Compartir en LinkedIn" rel=nofollow>
+                <svg class="icon">
+                  <title>linkedin</title>
+                  <use xlink:href="#linkedin"/>
+                </svg>
+              </a>
+              <a href="{{ url }}" title="Copy Link" class="link link_yank">
+                <svg class="icon">
+                  <title>copy</title>
+                  <use xlink:href="#copy"/>
+                </svg>
+              </a>
+            </div>
+          </span>
+
+          {% if show_tags and "tags" in page.meta %}
+          <div>
+          {% for tag in page.meta["tags"] %}
+           <a href="#{{tag}}" title="{{tag}}" class="post_tag button button_translucent">{{tag}}</a>
+          {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+
+      </div>
+      <div class="excerpt_footer partition">
+        <div class=excerpt_thumbnail>
+          <figure>
+            <picture>
+              <img loading=lazy decoding=async alt="{{ title }}"
+                class="image_figure image_thumbnail image_internal image_unprocessed"
+                src="/blog/{{ page.meta["slug"] }}{{ page.meta["thumbnail"] }}" alt="{{ title }}"></picture>
+          </figure>
+        </div>
+        <div class=pale>
+          <p>{{ description }}</p>
+          <br><a href="{{ url }}" title="More" class="excerpt_more button">More</a>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+{{ caller() }}
+{% endif %}
+{%- endmacro %}
+
+
+{# Custom css, optional. #}
+{% block style %}
+{{ super() }}
+<style>
+    .md-typeset .blog-post-description {
+        margin-bottom: 0;
+    }
+</style>
+{% endblock %}
