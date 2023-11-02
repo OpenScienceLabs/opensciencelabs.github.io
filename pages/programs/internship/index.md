@@ -3,7 +3,7 @@ title: "OSL Internship Program"
 description: "Internship Program about"
 date: "2023-08-24"
 authors: ["OSL Team"]
-template: single-sidebar.html
+# template: single-sidebar.html
 ---
 
 # Open Science Labs Internship Program
