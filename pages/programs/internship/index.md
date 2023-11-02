@@ -1,87 +1,158 @@
 ---
 title: "OSL Internship Program"
-description: "Internship Program about"
-date: "2023-08-24"
+description: "Internship Program details"
+date: "2023-11-03"
 authors: ["OSL Team"]
 template: single-sidebar.html
 ---
+# Internship/Apprenticeship Program
 
-# Open Science Labs Internship Program
+Welcome to the Open Science Labs (OSL) Internship/Apprenticeship Program! At the
+heart of our mission lies the commitment to foster innovation and growth within
+the realm of open science and open source. This program is an embodiment of that
+commitment, providing an inclusive, dynamic, and nurturing environment for
+contributors of all backgrounds-whether you're a student stepping into the world
+of open-source, or a professional looking to give back and refine your skills.
 
-The Open Science Labs Internship Program aims to promote the engagement of a
-wider audience in the realm of open-source software development.
+This program is under [The GRAPH Network](https://thegraphnetwork.org) who
+enhances our reach and impact across the open science community.
 
-## Program Features
+With a structure inspired by the Google Summer of Code, our program offers some
+unique features:
 
-Each intern will be paired with a mentor who is an active member of the
-community. The mentor will provide guidance to the intern in achieving the
-specific goals of the internship. The internship will involve a series of
-activities and contributions to open-source projects. The internship is expected
-to have a minimum duration of 2 months and a maximum of six months.
+- **Open Participation**: We welcome everyone from students to professionals,
+  embracing diversity in knowledge and experience.
+- **Flexible Commitment**: A minimum of 20 hours per week allows for impactful
+  work while accommodating your schedule.
+- **Biannual Cycles**: With two distinct cycles per year, there are ample
+  opportunities to get involved at a time that suits you best.
+- **End-of-Cycle Presentations**: At the end of each cycle, participants are
+  encouraged to share their journey and project outcomes, enhancing their public
+  speaking and technical communication skills.
+- **Non-Monetary Rewards**: While the internship does not offer financial
+  compensation, it offers invaluable experience, mentorship, networking
+  opportunities, and the satisfaction of contributing to open-source projects
+  that matter.
 
-[The Graph Network](https://thegraphnetwork.org), legally represented by
-[ASCRES](https://site.ascres.org/site/), is our Fiscal Sponsor and will be in
-charge of all the necessary paperwork.
+In this program, contributors will not only gain practical experience by working
+on real-world projects but also become an integral part of a community striving
+for a collective goal—advancing open source and open science for a better
+future.
 
-Currently, we are aiming students from Bolivian Universities, but we will open
-for other countries soon.
+## Requirements
 
-## Stages of the Internship Program
+### Contributor Candidate Requirements
 
-### Call for Applications and Selection
+For those interested in taking advantage of the Open Science Labs
+Internship/Apprenticeship Program, there are several key requirements that
+ensure a productive and rewarding experience for both the contributor and the
+program:
 
-Once the projects for the internship program are defined, a call for
-applications will be announced for interested candidates (duration: 2 weeks).
+- **English Proficiency**: Candidates must be able to effectively communicate in
+  English, as it is the primary language used for collaboration and
+  communication within the program.
+- **Age Requirement**: All candidates must be at least 18 years old at the time
+  of applying to participate in the program.
+- **Time Commitment**: Prospective interns are expected to dedicate a minimum of
+  20 hours per week to the program throughout the cycle, which spans 3 months.
+- **Duration of Commitment**: Candidates must be prepared to commit to the full
+  duration of the program cycle to ensure continuity and impact of their
+  contributions.
+- **Nature of Opportunity**: It's important to note that this is a non-paid
+  opportunity, ideal for those looking to gain experience and grow their network
+  in the open science community.
+- **Initial Contribution**: Before official acceptance, candidates should make a
+  small contribution to their project of interest. This allows mentors to assess
+  the candidate’s skills and commitment levels.
 
-The selection process, overseen by project mentors and maintainers, will last
-for 1 week.
+We seek candidates who are passionate about open science and eager to make
+significant contributions to the open-source community. If you meet these
+requirements and are ready to engage with cutting-edge projects, we encourage
+you to apply.
 
-Upon completion of the selection process, necessary formalities will be
-conducted to finalize the onboarding.
+### Requirements for Sub-Organizations
 
-### Internship
+To join the Open Science Labs Internship/Apprenticeship Program as a
+sub-organization, the following criteria must be met:
 
-Throughout the internship, students will be required to submit monthly reports
-detailing their activities. These reports will include a record of hours spent
-and milestones achieved.
+- **Open Source Licensing**: The project(s) must be released under a license
+  approved by the Open Source Initiative (OSI) or have a Software Package Data
+  Exchange (SPDX) identifier. Licenses not recognized by OSI will be subject to
+  review to ensure alignment with the program's objectives.
+- **Issue Availability**: There should be an array of open issues available for
+  the duration of the program cycle, offering a variety of engagement
+  opportunities for contributors.
+- **Mentorship**: Each project under the sub-organization must have at least one
+  mentor committed to guiding contributors. However, for a robust mentoring
+  experience, having at least two mentors per project is recommended.
+- **Application Submission**: The application to join as a sub-organization must
+  be submitted by a core contributor or a maintainer of the project or
+  organization to ensure commitment and reliability.
+- **Code of Conduct**: All projects looking to participate must adhere to a
+  publicly visible code of conduct to ensure a safe, inclusive, and respectful
+  environment for all contributors.
 
-### Completion of the Internship Program
+By fulfilling these requirements, your sub-organization will contribute to a
+productive and ethical collaboration space, supporting the growth of
+contributors and the advancement of open-source projects through our
+internship/apprenticeship program.
 
-The internship will conclude upon fulfilling the stipulated hours, at which
-point a certificate will be issued to acknowledge the successful completion of
-the internship. The internship may also be terminated if the intern consistently
-misses scheduled meetings or fails to meet agreed-upon activity milestones.
+Certainly! Adjusting the timeline for Cycle 1 to begin on December 1st, 2023,
+here's the revised schedule:
 
-## Requirements to Join the Internship Program
+## OSL Internship/Apprenticeship Program Timeline
 
-Proficiency in English at least to an intermediate level. Basic knowledge
-related to the project to which the intern intends to contribute. Agreement to
-adhere to the established Codes of Conduct within the community.
+### Cycle 1: Winter/Spring 2024
 
-For any further inquiries, please contact our dedicated Internship Program team
-at OSL. Together, we can shape the future of open science and open source
-projects.
+- **December 1, 2023**: Call for Mentoring Organizations and Projects.
+- **December 22, 2023**: Deadline for Mentoring Organizations to apply.
+- **January 5, 2024**: Announcement of selected Mentoring Organizations.
+- **January 9, 2024**: Call for Interns/Apprentices opens.
+- **February 2, 2024**: Deadline for Interns/Apprentices applications.
+- **February 9, 2024**: Selection of Interns/Apprentices by mentors.
+- **February 14, 2024**: Announcement of approved Interns/Apprentices.
+- **February 21-25, 2024**: Integration Phase – interns engage with mentors and
+  familiarize themselves with the project.
+- **February 26, 2024**: Official Start Date.
+- **April 8, 2024**: Mid-term Evaluation.
+- **May 20, 2024**: Final Evaluation.
+- **May 27-31, 2024**: Interns present their work.
+- **June 3, 2024**: Official End Date; Certification process begins.
 
-## Projects available for the Internship Program
+### Cycle 2: Summer 2024 (Estimated Timeline & GSoC Alignment)
 
-Below is a list of projects currently available for the Internship Program:
+- **April**: Estimated Start Date; Call for Mentoring Organizations opens.
+- **May**: Deadline for Mentoring Organizations to apply.
+- **Early June**: Announcement of selected Mentoring Organizations.
+- **Mid-June**: Official Start Date of Internship Period; an alternative for
+  projects not selected by GSoC to run under the OSL Internship Program with The
+  Graph Network support.
+- **Mid-July**: Mid-term Evaluation.
+- **Mid-August**: Final Evaluation.
+- **Late August**: Interns' presentation period.
+- **Early September**: Official End Date; Certification process begins.
 
-To apply for the internship program fill out the [form](https://github.com/OpenScienceLabs/request-forms/issues/new?&title=Internship+Apply+YOUR+NAME+HERE&labels=internship&template=en-internship.yaml)
+**Notes:**
 
-| Repository Name                    | Description                                          |
-| ---------------------------------- | ---------------------------------------------------- |
-| conda-forge-warning                | A panel that shows packages from conda-forge with no maintenance activities  |
-| pyreaddbc                          | A Python library for working with DBase database file. |
-| ghreport                           | GitHub Report tool                                   |
-| satellite-weather-downloader       | A system for downloading, transforming and analysing Copernicus weather data using Xarray. |
-| scicookie                          | Cookiecutter template for a Python package.          |
-| makim                              | Make Improved                                        |
-| gh-check-pr-is-updated             | This GitHub actions aims to check if the current PR's branch is updated on top of the upstream branch. |
-| github-actions-self-hosted-runner  | Dockerfile for the creation of a GitHub Actions runner image to be deployed dynamically. |
-| containers-sugar                   | Simplify the usage of containers                     |
-| github-actions-chatgpt-pr-reviewer | This GitHub actions uses OpenAI ChatGPT in order to review the changes presented in a PR and will recommend improvements. |
-| semantic-release-pr-title-check    | Checks for Angular commit message format in the Pull Request Title.           |
-| CrawlClima                         | This package contains the PEGATWEETS and PEGATEMPERATURA modules for automatically capturing tweets and weather data. |
-| downloader-app                     | A shapefiles downloader.|
-| fqlearn                            | A graphic solver tool to teach mass transfer and thermodynamics. |
-| pydatastructs                      | PyDataStructs aims to be a Python package for various data structures and algorithms (including their parallel implementations). |
+- **GSoC Alignment Note**: Open Science Labs (OSL) is planning to participate as
+  a Mentoring Organization in the Google Summer of Code (GSoC). Consequently,
+  our Cycle 2 timeline is designed to align with the GSoC schedule. However,
+  please be aware that OSL's inclusion in GSoC is not guaranteed, and we will
+  confirm our participation status as soon as we have information.
+- **GSoC Application Note**: If OSL is accepted into GSoC, all projects intended
+  for Cycle 2 will be submitted as part of our GSoC application. This submission
+  will aim to provide our projects and their prospective contributors the
+  opportunity to benefit from the structure, support, and recognition that GSoC
+  provides.
+- **Cycle 2 Timeline**: The above estimates for Cycle 2 are tentative and should
+  be adjusted according to the actual GSoC schedule once announced.
+- **OSL Internship Contingency Plan**: In the event that a project is not
+  accepted into GSoC, there's no need to worry. These projects will have the
+  opportunity to proceed within the regular OSL Internship/Apprenticeship
+  Program, following the same planned timeline. We believe in providing a
+  platform for all valuable projects, ensuring that they have the chance to move
+  forward and thrive with or without GSoC inclusion.
+
+By preparing for these possibilities, OSL is committed to supporting project
+continuity and offering a stable, enriching internship experience to all
+participants.
