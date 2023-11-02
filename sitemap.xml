@@ -551,17 +551,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://opensciencelabs.org/programs/internship/2023-01/</loc>
+         <loc>https://opensciencelabs.org/programs/internship/cycles/2023-01/</loc>
          <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://opensciencelabs.org/programs/internship/guide/</loc>
+         <loc>https://opensciencelabs.org/programs/internship/guides/</loc>
          <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://opensciencelabs.org/programs/internship/guide/guide/</loc>
+         <loc>https://opensciencelabs.org/programs/internship/guides/interns/</loc>
+         <lastmod>2023-11-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://opensciencelabs.org/programs/internship/guides/mentors/</loc>
          <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
