@@ -8,11 +8,10 @@ authors: ["OSL Team"]
 ## Articles
 
 In this section, there are the guideline about how to write the blog posts for
-Open Science Labs. OSL Blogs can be accessed at:
-[https://opensciencelabs.org/blog/](https://opensciencelabs.org/blog/).
+Open Science Labs. OSL Blogs can be accessed [here](/blog/).
 
 <ul>
-  <li><a href="/guidelines/articles/es">Versión en Español</a></li>
+  <li><a href="/guidelines/articles/">Article Guideline</a></li>
 </ul>
 
 <!--
@@ -34,19 +33,19 @@ DEI is a very important aspect of our community and we really care about that.
 In this section we can find our initial DEI declaration.
 
 <ul>
-  <li><a href="/guidelines/dei/es">Versión en Español</a></li>
+  <li><a href="/guidelines/dei/">Statement on Diversity, Equity and Inclusion</a></li>
 </ul>
 
 ## DevOps
 
-In this section, we have the documentation about all our infrastucture (work in
+In this section, we have the documentation about all our infrastructure (work in
 progress), and our goal is to have the necessary information for anyone who
 wants to help us in the DevOps tasks.
 
 ### Discord
 
 <ul>
-  <li><a href="/guidelines/devops/discord/en">English Version</a></li>
+  <li><a href="/guidelines/devops/discord">Guideline for Discord</a></li>
 </ul>
 
 ## Fund Raiser
@@ -55,12 +54,8 @@ In the section, we are gathering all the information and investigation results
 about grants, institutes, fiscal sponsors, etc that can help us to decide the
 fund raising activities and help other communities as well.
 
-Documents in Spanish:
-
 <ul>
-  <li><a href="/guidelines/fund-raiser/es/guide">Guía para Recaudación de Fondos</a></li>
-  <li><a href="/guidelines/fund-raiser/es/grants-institutions">Posibles instituciones para aplicar por una subvención</a></li>
-  <li><a href="/guidelines/fund-raiser/es/numfocus">NumFOCUS como patrocinador fiscal</a></li>
+  <li><a href="/guidelines/fund-raiser/">Fund Raiser Guideline</a></li>
 </ul>
 
 ## Mentoring
@@ -73,36 +68,17 @@ to reach someone outside.
 
 Another way that the mentoring can happen is inside the internship program.
 
-Documents in Spanish:
-
 <ul>
-  <il><a href="/guidelines/mentoring/es">Guía de Mentorías</a><il>
-  <li><a href="/guidelines/mentoring/es/coc">Código de Conducta</a></li>
-  <li><a href="/guidelines/mentoring/es/gsoc">Google Summer of Code</a></li>
-</ul>
-
-Documents in English:
-
-<ul>
-  <il><a href="/guidelines/mentoring/en">Mentoring Guideline</a><il>
-  <li><a href="/guidelines/mentoring/en/coc">Code of Conduct</a></li>
-</ul>
-
-## Marketing
-
-In this section, we have some materials researched that maybe could be useful
-for other communities or for OSL in the future.
-
-<ul>
-  <li><a href="/guidelines/mkt/opencollective">Open Collective</a></li>
+  <li><a href="/guidelines/mentoring">Mentoring Guideline</a></li>
+  <li><a href="/guidelines/coc-mentoring">Code of Conduct for Mentoring</a></li>
 </ul>
 
 ## Roadmap
 
 If you are interested in the Open Science Labs next steps, please check our
-[Roadmap](/roadmap/).
+[Roadmap](/guidelines/roadmap/).
 
 ## Governance
 
 For more information about our project governance, please check
-[governance document](/governance/).
+[governance document](/guidelines/governance/).

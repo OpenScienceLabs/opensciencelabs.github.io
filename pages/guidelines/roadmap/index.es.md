@@ -5,6 +5,8 @@ authors: ["Ivan Ogasawara"]
 tags: ["mentorías"]
 ---
 
+# Open Science Labs Roadmap
+
 Esta es una versión inicial de la hoja de ruta(roadmap) de Open Science Labs.
 
 Los temas que aún no se han tenido en cuenta en este documento pero que deberían

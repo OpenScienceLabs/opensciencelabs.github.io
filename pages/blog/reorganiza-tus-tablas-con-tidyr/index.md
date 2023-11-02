@@ -208,7 +208,7 @@ que han visitado Bolivia en los años 2016-2021.
 
 En el código abajo usamos muchas funciones de la biblioteca `dplyr` si quieres
 aprender más sobre esa biblioteca lee
-[este artículo](https://opensciencelabs.org/blog/filtrar-datos-r/filtrar-datos-r/).
+[este artículo](/blog/filtrar-datos-r/filtrar-datos-r/).
 
 ```r
 

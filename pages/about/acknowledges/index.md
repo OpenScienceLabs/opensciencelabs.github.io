@@ -1,9 +1,11 @@
 ---
-title: "Agradecimientos a la Python Software Foundation por la subvención de nuestro proyecto de CookieCutter"
-authors: Anavelyz Perez
+title: "Acknowledges"
+authors: ["Anavelyz Perez", "Yurely Camacho"]
 ---
 
-## Python Sotfware Foundation (PSF)
+# Acknowledges
+
+## Python Software Foundation (PSF)
 
 
 <img src="https://wiki.python.org/psf/PSF%20Logos?action=AttachFile&do=get&target=psf-logo-372x84-alpha.png">

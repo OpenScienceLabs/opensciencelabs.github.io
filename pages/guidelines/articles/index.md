@@ -4,6 +4,8 @@ date: 2019-04-08
 authors: ["Mariangela Petrizzo"]
 ---
 
+# Articles
+
 ## General Introduction
 
 The purpose of this guide is to accompany the first steps of OSL collaborators

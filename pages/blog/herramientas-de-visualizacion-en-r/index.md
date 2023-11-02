@@ -59,7 +59,7 @@ avanzadas se incorporan mediante la instalación de paquetes encontrados en
 https://cran.r-project.org y son generados por una gran comunidad activa de
 desarrolladores de R. Puedes acceder a más información que te proporcionamos
 acerca de R en nuestro artículo
-[¿Qué es el Lenguaje R y cómo puede ayudarte en tus proyectos?](https://opensciencelabs.org/blog/que-es-el-lenguaje-r-y-como-puede-ayudarte-en-tus-proyectos/).
+[¿Qué es el Lenguaje R y cómo puede ayudarte en tus proyectos?](/blog/que-es-el-lenguaje-r-y-como-puede-ayudarte-en-tus-proyectos/).
 
 R posee una [**Galería de gráficos**](https://www.r-graph-gallery.com/), esto es
 una colección de gráficos hechos en R, cuyos ejemplos están basados mayormente

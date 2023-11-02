@@ -1,7 +1,8 @@
 ---
-title: OSL Team
+title: Team
 date: 2022-12-22
 type: team-template
+template: team.html
 teams:
   - name: Steering Council
     members:
@@ -44,7 +45,7 @@ teams:
         bio: |
           I'm a Physicist and a PhD in Geophysics. All those years, I worked in applied
           geophysics and studied subduction zones through geodynamical numerical modeling.
-          I'm also committed to contribute to open-source software projects to improve 
+          I'm also committed to contribute to open-source software projects to improve
           science openness and reproducibility.
         image_url: https://avatars.githubusercontent.com/u/13738018?v=4
         github_url: https://github.com/aguspesce
@@ -117,9 +118,12 @@ teams:
 
 # OSL Team
 
-OSL is a Open-Source community and everyone can join, check our [GitHub](https://github.com/OpenScienceLabs/opensciencelabs.github.io) to be apart of the issues.
+OSL is a Open-Source community and everyone can join, check our
+[GitHub](https://github.com/OpenScienceLabs/opensciencelabs.github.io) to be
+apart of the issues.
 
 ## How can you contribute?
 
-To be contributing with the community you must know our [Guidelines](https://opensciencelabs.org/guidelines/list/),
-there you will find the workflow of the running projects and how you can apply to our team.
+To be contributing with the community you must know our
+[Guidelines](/guidelines/), there you will find the
+workflow of the running projects and how you can apply to our team.

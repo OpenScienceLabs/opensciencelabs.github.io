@@ -72,7 +72,7 @@ editar en un solo documento.
 
 Para solucionar este problema, podemos recurrir al control de versiones. En
 nuestro artículo
-[Investigación Colaborativa con Git](https://opensciencelabs.org/blog/investigacion-colaborativa-con-git/)
+[Investigación Colaborativa con Git](/blog/investigacion-colaborativa-con-git/)
 se menciona que el control de versiones nos permite almacenar todos los cambios
 que ocurren durante el proceso de avance hasta que es alcanzado el objetivo
 final y si algún miembro del equipo hace cambios durante el proceso y
@@ -105,7 +105,7 @@ cual podemos hacer con Git, implicando conocer cómo añadir repositorios nuevos
 eliminar aquellos que ya no son válidos, gestionar ramas remotas e indicar si
 están bajo seguimiento o no, y otras cosas más. Te invitamos a revisar nuestro
 artículo
-[Git de 0 a 100 en diez sencillos pasos](https://opensciencelabs.org/blog/git-de-en-diez-sencillos-pasos/).
+[Git de 0 a 100 en diez sencillos pasos](/blog/git-de-en-diez-sencillos-pasos/).
 
 ## Referencias
 

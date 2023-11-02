@@ -42,7 +42,7 @@ permiten hacerlo y también listamos las ventajas que tiene su uso en equipos de
 trabajo.
 
 En nuestro artículo
-[Investigación colaborativa con Git](https://opensciencelabs.org/blog/investigacion-colaborativa-con-git/)
+[Investigación colaborativa con Git](/blog/investigacion-colaborativa-con-git/)
 mencionamos que los _Sistemas de control de versiones_ permiten almacenar los
 cambios realizados en los archivos en todas sus fases de desarrollo y también la
 información asociada a ellos (fecha y autoría de los cambios). En la mayoría de
@@ -85,7 +85,7 @@ archivos grandes, modelos de Machine Learning, conjuntos de datos y flujo de
 trabajo. Como DVC hace que los proyectos sean reproducibles y compartibles;
 podemos saber cómo se construyeron y probaron los modelos y cómo han sido
 transformados los datos originales. DVC está basado en
-[Git](https://opensciencelabs.org/blog/git-de-en-diez-sencillos-pasos/); aunque
+[Git](/blog/git-de-en-diez-sencillos-pasos/); aunque
 puede funcionar de manera autónoma (pero sin capacidad de versionado). "Es como
 un Git solo para Datos".
 

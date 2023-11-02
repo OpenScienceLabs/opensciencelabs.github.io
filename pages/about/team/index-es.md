@@ -1,6 +1,8 @@
 ---
 title: "Team"
 authors: ["OSL Team"]
+date: 2022-01-01
+template: team.html
 ---
 
 # Colaboradoras y Colaboradores de OSL
@@ -16,7 +18,7 @@ para que seas parte y puedas resolver Issues.
 <h2>¿Cómo puedes contribuir?</h2>
 
 Para contribuir con la comunidad debes conocer nuestras
-<a href="https://opensciencelabs.org/guidelines/list/">guías</a>, allí
+<a href="/guidelines/">guías</a>, allí
 encontrarás el flujo de trabajo de los proyectos en marcha y cómo puedes aplicar
 a nuestro equipo.
 

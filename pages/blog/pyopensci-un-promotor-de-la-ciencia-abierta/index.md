@@ -13,7 +13,7 @@ description: |
   **pyOpenSci**, un proyecto al servicio de la ciencia, desarrollado bajo el
   enfoque de estas disciplinas. Si eres un programador, quieres desarrollar (o
   estás desarrollando) algún paquete científico con
-  [Python](https://opensciencelabs.org/blog/razones-para-usar-python-en-tu-proximo-proyecto-de-investigacion/)
+  [Python](/blog/razones-para-usar-python-en-tu-proximo-proyecto-de-investigacion/)
   y que sea aceptado por una gran comunidad de _pythonistas_, entonces aquí está
   lo que necesitas saber para lograrlo.
 thumbnail: "/header.png"
@@ -29,7 +29,7 @@ reproducible y los datos abiertos. En el presente artículo tratamos sobre
 **pyOpenSci**, un proyecto al servicio de la ciencia, desarrollado bajo el
 enfoque de estas disciplinas. Si eres un programador, quieres desarrollar (o
 estás desarrollando) algún paquete científico con
-[Python](https://opensciencelabs.org/blog/razones-para-usar-python-en-tu-proximo-proyecto-de-investigacion/)
+[Python](/blog/razones-para-usar-python-en-tu-proximo-proyecto-de-investigacion/)
 y que sea aceptado por una gran comunidad de _pythonistas_, entonces aquí está
 lo que necesitas saber para lograrlo.
 
@@ -42,7 +42,7 @@ promover la ciencia abierta mediante el apoyo al desarrollo, la
 [_revisión por pares_](https://es.wikipedia.org/wiki/Revisi%C3%B3n_por_pares) y
 la publicación abierta de **paquetes científicos escritos en Python** que
 cuenten con una buena
-[documentación](https://opensciencelabs.org/blog/como-documentar-tu-proyecto-de-ciencia-abierta/)
+[documentación](/blog/como-documentar-tu-proyecto-de-ciencia-abierta/)
 y estén probados previamente. Estos paquetes son utilizados para recopilar,
 descargar y transformar datos científicos con una metodología de trabajo abierta
 y reproducible.
@@ -141,7 +141,7 @@ Algunos de los paquetes aprobados hasta ahora por pyOpenSci son:
   [earthpy](https://github.com/earthlab/earthpy).
 
 - Diapositivas de
-  [Jupyter Notebooks](https://opensciencelabs.org/blog/ya-probado-los-cuadernos-de-jupyter-te-explicamos-que-son-y-como-te-ayudaran-en-tu-proxima-investigacion/)
+  [Jupyter Notebooks](/blog/ya-probado-los-cuadernos-de-jupyter-te-explicamos-que-son-y-como-te-ayudaran-en-tu-proxima-investigacion/)
   con [Nbless](https://github.com/py4ds/nbless).
 
 - Validación de las estructuras de datos manejadas por

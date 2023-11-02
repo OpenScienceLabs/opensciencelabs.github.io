@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block header_extra %}
+<style>
+  .main-nav > li > a {
+    color: #000000 !important;
+  }
+</style>
+
+{% endblock header_extra%}
+
+{% block content %}
+<section>
+  <div class="row pt-5">
+    <div class="col-md-9 mx-auto pt-3">
+      {% block content_inner %}
+      {{ page.content }}
+      {% endblock content_inner %}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-9 mx-auto pt-3">
+
+      {% for partner in page.meta["partners"] %}
+
+      <div class="row">
+        <div class="col-4 text-center">
+          <a href="{{ partner.url }}">
+            <img src="{{ partner.thumbnail }}" />
+          </a>
+        </div>
+        <div class="col-8">
+          <h2>{{ partner.name }}</h2>
+          <p>{{ partner.summary }}</p>
+          <p>
+          {% if "github" in partner  %}
+            <a href="{{ partner.github }}"><i
+                class="fa fa-brands fa-github-square position-static text-dark"></i></a>
+          {% endif %}
+          {% if "twitter" in partner  %}
+            <a href="{{ partner.twitter }}"><i
+              class="fa fa-brands fa-twitter-square"></i>
+            </a>
+          {% endif %}
+          </p>
+        </div>
+      </div>
+      <hr />
+
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock content %}

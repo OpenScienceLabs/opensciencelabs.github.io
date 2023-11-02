@@ -5,6 +5,8 @@ authors: ["Ivan Ogasawara"]
 tags: ["governance"]
 ---
 
+# Open Science Labs Project Governance
+
 The objectives of this document include formalizing the governance of the Open
 Science Labs (OSL) project. In both common and uncommon situations, outlining
 the decision-making procedure and the interactions between the various members

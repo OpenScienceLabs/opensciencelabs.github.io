@@ -487,8 +487,11 @@ function copyCode(codeElement) {
 }
 
 function disableCodeLineNumbers(block){
-  const lines = elems(lineClass, block)
-  toggleLineNumbers(lines);
+  const lines = elems(lineClass, block);
+
+  if (lines !== false ) {
+    toggleLineNumbers(lines);
+  }
 }
 
 (function codeActions(){

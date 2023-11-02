@@ -44,7 +44,9 @@ nav:
   - About:
     - index: 'about/index.md'
     - About OSL: 'about/index.md'
-    - Partners: programs/partners/list/index.md
+    - Team: about/team/index.md
+    - Mentors: 'programs/mentoring/mentors.md'
+    - Partners: about/partners/index.md
     - Activities: about/archives/index.md
     - FAQ: faq/index.md
     - Acknowledges: about/acknowledges/index.md

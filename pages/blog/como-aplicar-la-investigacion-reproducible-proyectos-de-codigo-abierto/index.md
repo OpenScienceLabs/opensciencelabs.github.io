@@ -56,7 +56,7 @@ el código generado para el procesamiento de los datos (para aquellas
 investigaciones que lo generen), sea "abierto" para cualquiera que esté
 interesado en reproducir nuestra investigación. Recordemos que uno de los
 principios de la investigación reproducible, mencionado en nuestro artículo
-[¿Cuáles son los principios de la investigación reproducible?](https://opensciencelabs.org/blog/cuales-son-los-principios-de-la-investigacion-reproducible/),
+[¿Cuáles son los principios de la investigación reproducible?](/blog/cuales-son-los-principios-de-la-investigacion-reproducible/),
 es la _metodología abierta_ que, básicamente, busca compartir el procedimiento
 llevado a cabo antes, durante y después de la investigación, lo cual da
 confianza a la hora de compartir los resultados y también anima a revisar los
@@ -64,7 +64,7 @@ pasos de tu investigación y permite a otros verificarlo.
 
 Otro aspecto valioso a tomar en cuenta si la investigación tiene código y
 queremos que sea reproducible, es la documentación. Como lo mencionamos en
-[nuestro artículo sobre Documentación de código abierto](https://opensciencelabs.org/blog/si-ya-usas-codigo-abierto-te-contamos-como-puedes-sacarle-mayor-provecho-tu-documentacion-para-tus-articulos-y-publicaciones/),
+[nuestro artículo sobre Documentación de código abierto](/blog/si-ya-usas-codigo-abierto-te-contamos-como-puedes-sacarle-mayor-provecho-tu-documentacion-para-tus-articulos-y-publicaciones/),
 este es un factor muy importante a la hora de crear proyectos accesibles e
 inclusivos y también debe considerarse como un aspecto importante para hacer
 reproducible el proyecto de código abierto. Junto con la documentación resulta
@@ -80,7 +80,7 @@ GitHub, las cuales permiten llevar un control de versiones sobre las
 actualizaciones y cambios que se realizan al cabo del tiempo en el proyecto,
 para que cualquiera pueda conocer su trayecto y pueda o no, colaborar en él.
 Como lo mencionamos en
-[nuestro artículo sobre código abierto](https://opensciencelabs.org/blog/que-es-el-codigo-abierto-y-como-puede-ayudarte/)
+[nuestro artículo sobre código abierto](/blog/que-es-el-codigo-abierto-y-como-puede-ayudarte/)
 una de las comunidades más grandes de código abierto a nivel internacional es
 [GitHub](https://github.com/), que nos permite crear y consultar repositorios
 sobre investigaciones previas, pudiendo necesitar reproducir alguna de ellas o

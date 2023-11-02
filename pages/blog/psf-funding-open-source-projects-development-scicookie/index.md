@@ -12,7 +12,7 @@ description: |
   Science Labs (OSL) que fue enviada entre enero y febrero de 2023. La propuesta
   se hizo con la finalidad de contribuir con el desarrollo y mantenimiento de
   SciCookie, una herramienta de Python que se encuentra dentro de los
-  [proyectos de incubación de OSL](https://opensciencelabs.org/programs/incubator/).
+  [proyectos de incubación de OSL](/programs/incubator/).
 thumbnail: "/header.svg"
 template: "blog-post.html"
 ---
@@ -25,7 +25,7 @@ de una subvención de la Python Software Foundation (PSF) a nombre de Open
 Science Labs (OSL) que fue enviada entre enero y febrero de 2023. La propuesta
 se hizo con la finalidad de contribuir con el desarrollo y mantenimiento de
 SciCookie, una herramienta de Python que se encuentra dentro de los
-[proyectos de incubación de OSL](https://opensciencelabs.org/programs/incubator/).
+[proyectos de incubación de OSL](/programs/incubator/).
 
 Comenzaremos con una breve introducción a SciCookie, algunas de sus
 características clave y aspectos de interés. Luego, discutiremos el proceso de

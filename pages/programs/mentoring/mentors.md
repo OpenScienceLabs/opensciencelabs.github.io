@@ -2,7 +2,7 @@
 title: "Mentoras y Mentores"
 description: "Mentoras y Mentores"
 date: "2019-02-28"
-authors = ["OSL Team"]
+authors: ["OSL Team"]
 ---
 
 <small>
@@ -13,7 +13,7 @@ authors = ["OSL Team"]
   apoya, alienta a sus aprendices y conservando apertura a preguntas y a escuchar.
   Se trata de ayudarse mutuamente a expandirse y crecer para que todas las
   personas aprendan. Para más informaciones, ingrese a la
-  <a href="/guidelines/mentoring/guide/">Guía de Mentorías</a>.
+  <a href="/guidelines/mentoring/">Guía de Mentorías</a>.
 
   ¡Encuentre aquí tu mentora o mentor!
 </small>

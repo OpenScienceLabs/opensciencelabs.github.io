@@ -16,7 +16,7 @@ description: |
   específicamente sobre los datos abiertos, sino sobre algunos repositorios de
   datos abiertos. A pesar de esto, una pequeña introducción no está de más para
   entrar en confianza sobre el tema. Puedes visitar nuestro artículo sobre Datos
-  abiertos [aquí](https://opensciencelabs.org/blog/que-son-los-datos-abiertos/).
+  abiertos [aquí](/blog/que-son-los-datos-abiertos/).
 thumbnail: "/header.png"
 template: "blog-post.html"
 ---
@@ -34,7 +34,7 @@ culminar alguno. Sin embargo, la finalidad de este post no es hablarte
 específicamente sobre los datos abiertos, sino sobre algunos repositorios de
 datos abiertos. A pesar de esto, una pequeña introducción no está de más para
 entrar en confianza sobre el tema. Puedes visitar nuestro artículo sobre Datos
-abiertos [aquí](https://opensciencelabs.org/blog/que-son-los-datos-abiertos/).
+abiertos [aquí](/blog/que-son-los-datos-abiertos/).
 
 <!-- TEASER_END -->
 

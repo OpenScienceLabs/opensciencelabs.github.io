@@ -5,6 +5,8 @@ date: "2019-02-28"
 authors: ["OSL Team"]
 ---
 
+# About
+
 Open science labs is a community that aims to gather people from all parts of
 the world, specially from latin america countries and create an open space for
 teaching, learning and sharing topics around open science and computational
@@ -44,7 +46,7 @@ We need help in areas, such as:
 - Mentoring
 - Project Managements
 
-Join our community on [discord](https://opensciencelabs.org/discord). Learn more
+Join our community on [discord](/discord). Learn more
 and contribute on [GitHub](https://github.com/opensciencelabs).
 
 ## Roadmap

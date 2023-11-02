@@ -4,6 +4,8 @@ date: 2019-04-08
 authors: ["Mariangela Petrizzo"]
 ---
 
+# Artículos
+
 ## Introducción General
 
 El propósito de esta guía es acompañar los primeros pasos de colaboradoras y

@@ -173,7 +173,7 @@ además de hacerlo enviando un paquete, siendo editor o revisor, puedes:
 La comunidad rOpenSci está abierta a tu participación y a la de cualquier
 persona. Si usas el lenguaje R, unirte a ella es una buena oportunidad. Puedes
 darle un vistazo a nuestro post sobre
-[pyOpenSci: un promotor de la ciencia abierta](https://opensciencelabs.org/blog/pyopensci-un-promotor-de-la-ciencia-abierta/)
+[pyOpenSci: un promotor de la ciencia abierta](/blog/pyopensci-un-promotor-de-la-ciencia-abierta/)
 si tu lenguaje de programación es Python; y tus aspiraciones son las de
 desarrollar un paquete, ser editor, revisor, o seguir a esta comunidad.
 

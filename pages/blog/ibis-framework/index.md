@@ -1,17 +1,18 @@
 ---
 title: "Ibis -  Escalonando a Análise de Dados com Expressões Ibis"
-slug: ibis-framework
+slug: "ibis-framework"
 date: 2022-08-03
 authors: ["Luã Bida Vacaro"]
-tags: [ibis, dataframe, datos, pandas]
-categories: [ciencia abierta, datos abiertos, acceso abierto, Python, SQL]
+tags: ["ibis", "dataframe", "datos", "pandas"]
+categories: ["ciencia abierta", "datos abiertos", "acceso abierto", "Python", "SQL"]
 description: |
-  [Ibis Framework](https://github.com/ibis-project/ibis/) é uma biblioteca Python
+  Ibis Framework é uma biblioteca Python
   que gera expressões de busca em banco de dados. O framework foi idealizado por
-  [Wes McKinney](https://github.com/wesm), o mesmo criador do Pandas, voltado para
+  Wes McKinney, o mesmo criador do Pandas, voltado para
   integração de diferentes Engines de Bancos de Dados através de Expressões Ibis
   com Python.
 thumbnail: "/header.jpg"
+template: "blog-post.html"
 ---
 
 # Escalonando a Análise de Dados com Expressões Ibis
