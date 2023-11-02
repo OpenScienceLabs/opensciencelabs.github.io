@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block header_extra %}
+<style>
+.main-nav>li>a {
+  color: #000000 !important;
+}
+</style>
+{% endblock header_extra%}
+
+{% block content %}
+
+<section>
+  <div class="row pt-5">
+    {% block side_menu %}
+
+    {# prepare the nav3 content inside the side block -#}
+    {% set nav3_selected = [] -%}
+    {% for nav1 in nav -%}
+      {% for nav2 in (nav1.children or []) -%}
+        {% if nav2.active %}
+          {% for nav3 in (nav2.children or []) -%}
+            {% if nav3.title != "index" -%}
+            {{ nav3_selected.append(nav3) or "" -}}
+            {% endif %}
+          {% endfor -%}
+        {% endif -%}
+      {% endfor -%}
+    {% endfor %}
+
+    <div class="col">
+      <!-- List group for sidebar menu -->
+      <div class="list-group pt-4">
+        {% for nav3_item in nav3_selected %}
+        <a
+          href="/{{ nav3_item.url }}"
+          class="list-group-item list-group-item-action{% if nav3_item.active %} active{% endif %}"
+          {%- if nav3_item.active %} aria-current="true"{% endif -%}
+        >
+          {{ nav3_item.title }}
+        </a>
+        {% endfor %}
+      </div>
+
+      {% if menu_3rd_level_selected %}
+      <div>
+        {% for menu_item_3rd_level in menu_3rd_level_selected %}
+        <p>
+          <a href="{{ menu_item_3rd_level.url }}">{{ menu_item_3rd_level.title }}</a>
+        </p>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    {% endblock side_menu %}
+    <div class="col-md-9 mx-auto">
+      {% block content_inner %}
+        {{ page.content }}
+      {% endblock content_inner %}
+    </div>
+  </div>
+</section>
+{% endblock content %}

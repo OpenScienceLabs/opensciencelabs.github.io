@@ -1,3 +1,5 @@
+{% set menu_2nd_level_selected = [] %}
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -78,6 +80,9 @@
             <div class="d-block d-sm-block d-md-none">
               {% for nav_child in nav_item.children %}
               {% if nav_child.title != "index" %}
+              {% if nav_item.active and nav_item == nav_child.parent %}
+              {{ menu_2nd_level_selected.append(nav_child) or "" }}
+              {% endif %}
 
               <div class="nav {% if nav_child.active %}nav_active{% endif %}">
                 <a href="{{ nav_child.url|url }}" class="nav_item" title="{{ nav_child.title }}">
@@ -142,21 +147,26 @@
       <nav class="nav d-none d-sm-none d-md-block">
         <div class='nav_body nav_extra extra'>
           <!-- SUB-MENU -->
-          {% if nav|length>1 %}
-          {% for nav_item in nav %}
-          {% if nav_item.active and nav_item.children %}
-          {% for nav_child in nav_item.children %}
-            {% if nav_child.title != "index" %}
+          {# Extract the url for a nested menu from the index child -#}
+          {% for nav_child in menu_2nd_level_selected -%}
+            {% if not nav_child.children -%}
             <div class="{% if nav_child.active %}nav_active{% endif %}" style="border-top:1px solid white;">
               <a href="{{ nav_child.url|url }}" class="nav_item" title="{{ nav_child.title }}">
                 {{ nav_child.title }}
               </a>
             </div>
-            {% endif%}
+            {% else %}
+              {% for subsubmenu in nav_child.children -%}
+                {% if subsubmenu.title == "index" -%}
+                <div class="{% if nav_child.active %}nav_active{% endif %}" style="border-top:1px solid white;">
+                  <a href="{{ subsubmenu.url|url }}" class="nav_item" title="{{ nav_child.title }}">
+                    {{ nav_child.title }}
+                  </a>
+                </div>
+                {% endif -%}
+              {% endfor %}
+            {% endif -%}
           {% endfor %}
-          {% endif %}
-          {% endfor %}
-          {% endif %}
         </div>
       </nav>
     </header>
