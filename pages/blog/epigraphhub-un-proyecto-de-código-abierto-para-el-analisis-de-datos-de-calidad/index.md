@@ -2,7 +2,7 @@
 title:
   "EpiGraphHub: un proyecto de código abierto para el análisis de datos de
   calidad"
-slug: epigraphhub
+slug: epigraphhub-un-proyecto-de-código-abierto-para-el-analisis-de-datos-de-calidad
 date: 2022-09-28
 authors: ["Anavelyz Perez"]
 tags: [epigraphhub, visualización de datos, análisis, datos, epidemiología]

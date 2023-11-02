@@ -10,7 +10,7 @@ category: ["devops"]
 <!-- # [EN] Discord -->
 
 Discord is our main comunication tool for our community. The direct link to our
-discord is [https://opensciencelabs.org/discord](opensciencelabs.org/discord).
+discord is [/discord](opensciencelabs.org/discord).
 
 ## Conventions
 

@@ -31,7 +31,7 @@ de resultados óptimos, visualmente atractivos y lo suficientemente informativos
 <!-- TEASER_END -->
 
 Antes de continuar, recordemos del artículo
-[¿Qué es la ciencia abierta?](https://opensciencelabs.org/blog/que-es-la-ciencia-abierta/),
+[¿Qué es la ciencia abierta?](/blog/que-es-la-ciencia-abierta/),
 que la ciencia abierta es un movimiento, una manera de ver y hacer ciencia, que
 busca crear una cultura donde la información de todo el proceso de investigación
 científica, ya sean los datos, protocolos, cuadernos de laboratorio, resultados
@@ -125,5 +125,5 @@ web, existen foros y varios canales de información sobre ellas. No son las
 a que explores y pruebes estas herramientas.
 
 En nuestro artículo
-[**Herramientas de visualización en Python**](https://opensciencelabs.org/blog/herramientas-de-visualizacion-en-python/)
+[**Herramientas de visualización en Python**](/blog/herramientas-de-visualizacion-en-python/)
 puedes encontrar otras bibliotecas o librerías que te pueden interesar.

@@ -21,9 +21,9 @@ template: "blog-post.html"
 <!-- **Por Yurely Camacho** -->
 
 En otros de nuestros artículos publicados, te hablamos sobre
-[Git de 0 a 100](https://opensciencelabs.org/blog/git-de-en-diez-sencillos-pasos/)
+[Git de 0 a 100](/blog/git-de-en-diez-sencillos-pasos/)
 e
-[investigación colaborativa con Git](https://opensciencelabs.org/blog/investigacion-colaborativa-con-git/).
+[investigación colaborativa con Git](/blog/investigacion-colaborativa-con-git/).
 Allí hemos repasado sobre las bondades de este sistema y su uso actual en la
 colaboración en proyectos abiertos, grandes o pequeños, manejándolos con mayor
 eficiencia e inspección al ser un sistema de control de versiones distribuido,
@@ -43,7 +43,7 @@ productivo, posiblemente, que lo que ha sido hasta ahora.
 1. **Maneja las ramas adecuadamente**
 
 Como te mencionamos en nuestro artículo
-[Git de 0 a 100 en diez sencillos pasos](https://opensciencelabs.org/blog/git-de-en-diez-sencillos-pasos/)
+[Git de 0 a 100 en diez sencillos pasos](/blog/git-de-en-diez-sencillos-pasos/)
 puedes manejar distintas ramas en tu repositorio. En cada rama, se registran
 todos los cambios hechos por quienes la utilizan y también puedes realizar
 operaciones entre las ramas como su fusión, por ejemplo. Generalmente, las ramas

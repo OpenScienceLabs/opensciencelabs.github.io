@@ -118,7 +118,7 @@ A continuación te mostramos un dashboard en el Superset de EpiGraphHub.
 Fuente:[EpigraphHub Superset](https://dash.epigraphhub.org/superset/welcome/)
 
 Puedes conocer más sobre EpiGrapHub en nuestro artículo:
-[EpiGraphHub: un proyecto de código abierto para el análisis de datos de calidad](https://opensciencelabs.org/blog/epigraphhub-un-proyecto-de-c%C3%B3digo-abierto-para-el-analisis-de-datos-de-calidad/)
+[EpiGraphHub: un proyecto de código abierto para el análisis de datos de calidad](/blog/epigraphhub-un-proyecto-de-c%C3%B3digo-abierto-para-el-analisis-de-datos-de-calidad/)
 
 ## Cómo iniciar con Superset
 

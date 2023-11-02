@@ -11,7 +11,7 @@ category: ["devops"]
 
 Discord es nuestra principal herramienta de comunicación con la comunidad. El
 enlace directo a nuestro discord es
-[https://opensciencelabs.org/discord](https://opensciencelabs.org/discord).
+[/discord](/discord).
 
 ## Convenciones
 

@@ -6,7 +6,7 @@ tags: ["mentoring"]
 category: ["mentoring"]
 ---
 
-<!-- # [EN] Mentoring Guideline -->
+# Mentoring Guideline
 
 ## What is mentoring?
 

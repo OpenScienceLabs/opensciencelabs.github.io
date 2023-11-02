@@ -3,6 +3,8 @@ title: FAQ
 authors: ["Ever Vino"]
 ---
 
+# FAQ
+
 ## What is Open Science Labs (OSL)?
 
 Open science labs is a community that aims to gather people from all parts of
@@ -65,7 +67,7 @@ work.
 ## I have some suggestions. How do I contact OSL?
 
 You can do it through Discord. There is almost always an administrator who can
-answer you. [Discord Group](https://opensciencelabs.org/discord)
+answer you. [Discord Group](/discord)
 
 ## Who manages OSL?
 

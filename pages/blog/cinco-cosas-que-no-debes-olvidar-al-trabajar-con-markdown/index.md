@@ -108,7 +108,7 @@ otras herramientas.
 
 Si deseas conocer más acerca de los cuadernos de Jupyter, te invito a que
 revises nuestro artículo
-[¿Ya has probado los Cuadernos de Jupyter? Te explicamos qué son y cómo te ayudarán en tu próxima investigación.](https://opensciencelabs.org/blog/ya-probado-los-cuadernos-de-jupyter-te-explicamos-que-son-y-como-te-ayudaran-en-tu-proxima-investigacion/).
+[¿Ya has probado los Cuadernos de Jupyter? Te explicamos qué son y cómo te ayudarán en tu próxima investigación.](/blog/ya-probado-los-cuadernos-de-jupyter-te-explicamos-que-son-y-como-te-ayudaran-en-tu-proxima-investigacion/).
 
 ## 5. Usando caracteres le das formato al texto
 

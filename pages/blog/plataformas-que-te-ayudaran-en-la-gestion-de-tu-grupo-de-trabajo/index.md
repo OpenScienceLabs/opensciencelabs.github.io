@@ -22,9 +22,9 @@ crecer en conjunto y construir mejores resultados para la ciencia abierta.
 <!-- TEASER_END -->
 
 Ya en artículos anteriores hemos hablado de
-[las herramientas que pueden utilizarse en el manejo de investigación reproducible](https://opensciencelabs.org/blog/como-aplicar-la-investigacion-reproducible-proyectos-de-codigo-abierto/)
+[las herramientas que pueden utilizarse en el manejo de investigación reproducible](/blog/como-aplicar-la-investigacion-reproducible-proyectos-de-codigo-abierto/)
 en equipos de trabajo, o
-[cuáles son los aspectos clave a tener en cuenta en el manejo de equipos de ciencia abierta](https://opensciencelabs.org/blog/aspectos-clave-en-el-manejo-de-equipos-de-ciencia-abierta/),
+[cuáles son los aspectos clave a tener en cuenta en el manejo de equipos de ciencia abierta](/blog/aspectos-clave-en-el-manejo-de-equipos-de-ciencia-abierta/),
 y en este artículo queremos profundizar un poco más y mostrarte nuestra
 perspectiva del propósito de examinar no solo las herramientas utilizadas, sino
 también las prácticas de trabajo en equipo.

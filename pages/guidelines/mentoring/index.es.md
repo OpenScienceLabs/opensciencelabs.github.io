@@ -5,7 +5,7 @@ authors: ["Ingrid Bianka Garcia"]
 tags: ["mentorías"]
 ---
 
-<!-- # [ES] Breve guía de Mentoría -->
+# Guía de Mentorías
 
 ## ¿Qué es la una mentoría?
 
@@ -223,7 +223,7 @@ algunos roles diferentes que los/as mentores/as pueden estar obligados a tomar:
 ## Comenzando a ser mentorado en OpenScienceLabs
 
 - Quien aspire a contar con una mentoría deberá solicitar la mentoría en nuestro
-  [GitHub](https://opensciencelabs.org/mentoring/mentors/), luego hacer click en
+  [GitHub](/mentoring/mentors/), luego hacer click en
   **"Solicitar mentoría"**, y llenar el formulario correspondiente, detallando
   el área de mentoría, la disponibilidad de tiempo (incluir la zona horaria) y
   objetivos que se quiere lograr después de terminada la mentoría.

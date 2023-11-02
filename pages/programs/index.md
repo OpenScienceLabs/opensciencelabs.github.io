@@ -1,3 +1,7 @@
+---
+title: Programs
+---
+
 # Open Science Labs Programs
 
 Welcome to the Open Science Labs Programs Overview! We're delighted to share
