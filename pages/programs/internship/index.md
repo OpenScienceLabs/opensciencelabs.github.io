@@ -97,9 +97,6 @@ productive and ethical collaboration space, supporting the growth of
 contributors and the advancement of open-source projects through our
 internship/apprenticeship program.
 
-Certainly! Adjusting the timeline for Cycle 1 to begin on December 1st, 2023,
-here's the revised schedule:
-
 ## OSL Internship/Apprenticeship Program Timeline
 
 ### Cycle 1: Winter/Spring 2024
