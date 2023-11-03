@@ -7,61 +7,45 @@ authors: ["OSL Team"]
 
 # Open Science Labs (OSL) Packaging Support Program
 
-## Empowering Open Science Through Conda Packaging Excellence
+## Laying the Groundwork for Conda Packaging
 
-The OSL Packaging Support Program is designed to promote best practices in
-software packaging within the open science community. Our initiative aims to
-educate, facilitate, and inspire individuals to contribute to the
-Conda/Conda-Forge ecosystem.
+At Open Science Labs, we're laying the groundwork for a future-focused Packaging
+Support Program. Our vision is to assist projects with packaging libraries
+within the robust Conda/Conda-Forge ecosystem. While our full suite of services
+is still under development, we are currently engaged in internal activities
+aimed at equipping our associated projects with the knowledge and skills
+necessary to begin packaging with Conda-Forge.
 
-### Plans Available
+### Current Initiatives
 
-#### 🌐 **Community Plan**
+Our present efforts center on:
 
-Available to anyone affiliated through the Open Science Labs Affiliation
-Program, our Community Plan offers:
+- **Internal Training**: Offering guidance and support to our affiliated
+  projects as they navigate the intricacies of Conda and Conda-Forge.
+- **Foundation Building**: Establishing the baseline practices and
+  infrastructure required for effective Conda packaging.
 
-- **Educational Resources**: Learn the essentials of packaging with Conda to the
-  Conda-Forge channel.
+### Future Plans
 
-- **Community Involvement**: Get involved by helping package new software based
-  on community requests and maintain existing packages.
+Looking ahead, we are excited about the potential to expand our support, which
+will include:
 
-- **Ecosystem Support**: Benefit from our ongoing contributions to tools and
-  platforms around the Conda/Conda-Forge ecosystem.
+- **Comprehensive Training**: Developing training programs to help the wider
+  community in packaging and distribution.
+- **On-Demand Packaging**: Providing targeted assistance to projects needing to
+  package and distribute their libraries effectively.
 
-#### 💎 **Premium Plan**
+### Get Involved
 
-Our Premium Plan is available to affiliated members and offers additional,
-tailored services:
+As we build these initiatives, we invite you to:
 
-- **Conda/Conda-Forge Training**: Gain deep insights into the Conda ecosystem,
-  with open materials made available to the community.
+1. **Stay Tuned**: Watch for updates on the rollout of our full Packaging
+   Support Program.
+2. **Get Familiar**: Start by learning about Conda and Conda-Forge, and explore
+   how packaging can benefit your projects.
+3. **Prepare for the Future**: Consider how enhanced packaging support can
+   address distribution challenges within your projects.
 
-- **Online Training**: Receive personalized, on-demand online training sessions
-  to cater to your specific needs.
-
-### Why Choose Our Packaging Support Program?
-
-- **Expert Guidance**: Leverage our expertise to navigate the complexities of
-  Conda and Conda-Forge packaging.
-
-- **Community Engagement**: Be part of a community of like-minded individuals
-  who share your commitment to open science.
-
-- **Enhanced Learning**: Our Premium Plan offers advanced training resources,
-  allowing you to dive deeper into Conda packaging.
-
-### How to Get Started
-
-1. **Join the OSL Affiliation Program**: To become eligible for the Community
-   Plan, you need to be an affiliated member. Not a member yet? [Join now](#).
-
-2. **Choose Your Plan**: Decide between the Community or Premium Plan based on
-   your specific needs.
-
-3. **Engage and Learn**: Access educational resources, community channels, or
-   personalized training based on the plan you choose.
-
-Join the OSL Packaging Support Program today and be at the forefront of Conda
-packaging innovation!
+We're excited to pave the way for advanced packaging solutions within the OSL
+community. Join us in this journey, and let's push the boundaries of open
+science together!

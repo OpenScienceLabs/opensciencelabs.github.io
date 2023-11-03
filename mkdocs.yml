@@ -31,7 +31,7 @@ nav:
       - Mentors Guide: 'programs/internship/guides/mentors/index.md'
       - "Cycle 2023-01": 'programs/internship/cycles/2023-01.md'
     - Mentoring: 'programs/mentoring/index.md'
-    - "Package Support": 'programs/packaging-support/index.md'
+    - Packaging Support: 'programs/packaging-support/index.md'
     - Partners: 'programs/partners/index.md'
     - Virtual-Labs: 'programs/virtual-labs/index.md'
   - Guidelines:
