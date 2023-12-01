@@ -1752,3 +1752,8 @@ a.link {
 a.page-number.active {
   background: #0ca5de!important;
 }
+
+
+.highlight *{
+  color: white!important;
+}
