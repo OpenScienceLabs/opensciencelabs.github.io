@@ -1,0 +1,52 @@
+version: 1.0
+working-directory: "/tmp/multi_language_project"
+groups:
+  backend_python:
+    working-directory: "backend/python"
+    targets:
+      test:
+        run: |
+          echo "Running Python backend tests..."
+          # Add commands to run Python backend tests
+      lint:
+        run: |
+          echo "Linting Python code..."
+          # Add commands for linting Python code
+
+  backend_java:
+    working-directory: "backend/java"
+    targets:
+      test:
+        working-directory: "src"
+        run: |
+          echo "Running Java backend tests..."
+          # Add commands to run Java backend tests
+      build:
+        run: |
+          echo "Building Java artifacts..."
+          # Add commands for building Java artifacts
+
+  frontend_react:
+    working-directory: "frontend/react"
+    targets:
+      test:
+        run: |
+          echo "Running React frontend tests..."
+          # Add commands to run React frontend tests
+      build:
+        run: |
+          echo "Building React frontend..."
+          # Add commands for building React frontend
+
+  frontend_vue:
+    working-directory: "frontend/vue"
+    targets:
+      test:
+        run: |
+          echo "Running Vue.js frontend tests..."
+          # Add commands to run Vue.js frontend tests
+      build:
+        working-directory: "src"
+        run: |
+          echo "Building Vue.js frontend..."
+          # Add commands for building Vue.js frontend
