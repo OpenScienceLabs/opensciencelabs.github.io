@@ -22,12 +22,9 @@ groups:
           - target: pages.pre-build
         run: |
           mkdocs build --verbose --clean
-          makim pages.post-build
 
       preview:
         help: preview the web page dynamically
-        dependencies:
-          - target: pages.pre-build
         dependencies:
           - target: pages.pre-build
         run: mkdocs serve --watch build --watch theme
