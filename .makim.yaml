@@ -26,4 +26,4 @@ groups:
         help: preview the web page dynamically
         dependencies:
           - target: pages.pre-build
-        run: mkdocs serve --watch build --watch theme
+        run: mkdocs serve --watch pages --watch theme
