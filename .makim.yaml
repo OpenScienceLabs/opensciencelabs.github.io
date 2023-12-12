@@ -2,9 +2,28 @@ version: 1.0
 groups:
   pages:
     targets:
+      pre-build:
+        help: pre-build step
+        shell: bash
+        run: |
+          mkdir -p build
+          # Directory to search for .ipynb files
+          export SEARCH_DIR="pages/blog"
+
+          # Find all .ipynb files, excluding .ipynb_checkpoints,
+          # and convert them to Markdown named 'index.md'
+          find "$SEARCH_DIR" -path "*/.ipynb_checkpoints/*" -prune -o -name \
+            "*.ipynb" -exec sh -c \
+            'jupyter nbconvert --to markdown --output-dir "$(dirname "$0")" --output "index" "$0"' {} \;
+
       build:
         help: build the static page
+        dependencies:
+          - target: pages.pre-build
         run: mkdocs build --verbose --clean
+
       preview:
         help: preview the web page dynamically
-        run: mkdocs serve --watch build --watch theme
+        dependencies:
+          - target: pages.pre-build
+        run: mkdocs serve --watch pages --watch theme
