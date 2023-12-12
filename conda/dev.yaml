@@ -13,3 +13,6 @@ dependencies:
     - makim
     - mkdocs-blogging-plugin
     - mkdocs-rss-plugin
+    - mkdocs-jupyter
+    - jupyterlab
+    - nbconvert
