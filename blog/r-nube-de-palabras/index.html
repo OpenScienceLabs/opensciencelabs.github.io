@@ -560,204 +560,128 @@
     </figure>
   </div>
   <div>
-    <h1 id="crea-tu-nube-de-palabras-en-r-a-partir-de-un-documento-de-texto">Crea tu nube de palabras en R a partir de un documento de texto</h1>
-<p>Una nube de palabras o wordcloud nos sirve para visualizar la frecuencia de
-palabras dentro de un texto. En este tutorial, usaremos el artículo de
-<a href="https://es.wikipedia.org/wiki/Inteligencia_artificial">inteligencia artificial</a>
-de Wikipedia para construir nuestra nube de palabras usando las bibliotecas <code>tm</code>
-y <code>wordcloud</code>.</p>
+    <p>Una nube de palabras o wordcloud nos sirve para visualizar la frecuencia de palabras dentro de un texto.
+En este tutorial, usaremos el artículo de <a href="https://es.wikipedia.org/wiki/Inteligencia_artificial">inteligencia artificial</a> de Wikipedia para construir nuestra nube de palabras usando las bibliotecas <code>tm</code> y <code>wordcloud</code>.</p>
 <!-- TEASER_END -->
 
 <h2 id="instalacion-de-pre-requisitos">Instalación de pre-requisitos</h2>
-<p>Para un mejor manejo de los paquetes, aquí vamos a utilizar la biblioteca
-<code>pacman</code>, esta nos permitirá hacer una instalación y activación de las
-bibliotecas de manera rápida. Recuerde instalar <strong>Rtools</strong> y la versión más
-reciente de <strong>R</strong> si está usando <strong>Windows</strong>.</p>
-<pre><code class="language-R"># install.packages(&quot;pacman&quot;) # Si no tiene instalada la Biblioteca Pacman ejecutar esta línea de código
+<p>Para un mejor manejo de los paquetes, aquí vamos a utilizar la biblioteca <code>pacman</code>, esta nos permitirá hacer una instalación y activación de las bibliotecas de manera rápida. Recuerde instalar <strong>Rtools</strong> y la versión más reciente de <strong>R</strong> si está usando <strong>Windows</strong>.</p>
+<pre><code class="language-python"># install.packages(&quot;pacman&quot;) # Si no tiene instalada la Biblioteca Pacman ejecutar esta línea de código
 library(&quot;pacman&quot;)
 </code></pre>
 <p>Bibliotecas adicionales requeridas, instaladas y abiertas con <code>pacman</code>.</p>
-<pre><code class="language-R">p_load(&quot;tm&quot;) # Biblioteca para realizar el preprocesado del texto,
+<pre><code class="language-python">p_load(&quot;tm&quot;) # Biblioteca para realizar el preprocesado del texto,
 p_load(&quot;tidyverse&quot;) # Biblioteca con funciones para manipular datos.
 p_load(&quot;wordcloud&quot;) # Biblioteca para graficar nuestra nube de palabras.
 p_load(&quot;RColorBrewer&quot;) # Biblioteca para seleccionar una paleta de colores de nuestra nube de palabras.
 </code></pre>
 <h2 id="importacion-del-texto">Importación del texto</h2>
-<p>Para este ejemplo, descargamos nuestro artículo de formato texto de un
-repositorio, guardamos la dirección web en <code>articulo_IA</code> y lo descargamos usando
-la función <code>read_file()</code>. También puede usar los directorios locales para
-importar un texto de su preferencia. Si desea descargar el archivo que usamos en
-este ejemplo puede hacer hacerlo ejecutando
-<code>download.file("https://gist.github.com/EverVino/7bdbbe7ebdff5987970036f52f0e384f/raw/3a1997b6f9e3471555a941f8812ada0cef84977d/gistfile1.txt", paste(getwd(),"/texto.txt", sep=""))</code>
-en la línea de comando de R, esto descargará el archivo y lo guardara en la
-carpeta de trabajo de R con el nombre de <strong>texto.txt</strong>.</p>
-<p><em>Para saber la carpeta de trabajo puede ejecutar <code>getwd()</code>. puede cambiar la
-carpeta de trabajo con la función <code>setwd("/nuevo_directorio_trabajo/")</code>.</em></p>
-<p>Luego de importar el texto, vamos a convertirlo en un objeto tipo <code>Source</code>, esto
-facilitará la minería del texto y su posterior modificación.</p>
-<pre><code class="language-R">articulo_IA &lt;- &quot;https://gist.github.com/EverVino/7bdbbe7ebdff5987970036f52f0e384f/raw/3a1997b6f9e3471555a941f8812ada0cef84977d/gistfile1.txt&quot;
+<p>Para este ejemplo, descargamos nuestro artículo de formato texto de un repositorio, guardamos la dirección web en <code>articulo_IA</code> y lo descargamos usando la función <code>read_file()</code>. También puede usar los directorios locales para importar un texto de su preferencia. Si desea descargar el archivo que usamos en este ejemplo puede hacer hacerlo ejecutando <code>download.file("https://gist.github.com/EverVino/7bdbbe7ebdff5987970036f52f0e384f/raw/3a1997b6f9e3471555a941f8812ada0cef84977d/gistfile1.txt", paste(getwd(),"/texto.txt", sep=""))</code> en la línea de comando de R, esto descargará el archivo y lo guardara en la carpeta de trabajo de R con el nombre de <strong>texto.txt</strong>.</p>
+<p><em>Para saber la carpeta de trabajo puede ejecutar <code>getwd()</code>. puede cambiar la carpeta de trabajo con la función <code>setwd("/nuevo_directorio_trabajo/")</code>.</em></p>
+<p>Luego de importar el texto, vamos a convertirlo en un objeto tipo <code>Source</code>, esto facilitará la minería del texto y su posterior modificación.</p>
+<pre><code class="language-python">articulo_IA &lt;- &quot;https://gist.github.com/EverVino/7bdbbe7ebdff5987970036f52f0e384f/raw/3a1997b6f9e3471555a941f8812ada0cef84977d/gistfile1.txt&quot;
 texto &lt;- read_file(articulo_IA)
 </code></pre>
 <ul>
-<li><code>read_file(dir)</code>: Función de la biblioteca <code>tidyverse</code> que nos permite
-  importar archivos de texto. El resultado de la función es un vector de un sólo
-  elemento. <code>dir</code> es la <strong>direción local</strong> o <strong>url</strong> con el nombre del archivo
-  de formato <strong>txt</strong> a importar.</li>
+<li><code>read_file(dir)</code>: Función de la biblioteca <code>tidyverse</code> que nos permite importar archivos de texto. El resultado de la función es un vector de un sólo elemento. <code>dir</code> es la <strong>direción local</strong> o <strong>url</strong> con el nombre del archivo de formato <strong>txt</strong> a importar.</li>
 </ul>
-<pre><code class="language-R">texto &lt;- VCorpus(VectorSource(texto),
+<pre><code class="language-python">texto &lt;- VCorpus(VectorSource(texto), 
                  readerControl = list(reader = readPlain, language = &quot;es&quot;))
 </code></pre>
 <ul>
 <li>
-<p><code>VCorpus (x, readerControl(y))</code>: Donde <code>x</code> es un objeto del tipo <code>Source</code>, se
-  recomienda que sea un objeto del tipo <code>VectorSource</code>. Para <code>readerControl(y)</code>
-  <code>y</code> es una lista de parámetros para leer <code>x</code>.</p>
+<p><code>VCorpus (x, readerControl(y))</code>: Donde <code>x</code> es un objeto del tipo <code>Source</code>, se recomienda que sea un objeto del tipo <code>VectorSource</code>. Para <code>readerControl(y)</code> <code>y</code> es una lista de parámetros para leer <code>x</code>.</p>
 </li>
 <li>
-<p><code>VectorSource(vector)</code>: Convierte una lista o vector a un objeto tipo
-  VectorSource.</p>
+<p><code>VectorSource(vector)</code>: Convierte una lista o vector a un objeto tipo VectorSource. </p>
 </li>
 </ul>
 <h2 id="preprocesado-de-texto">Preprocesado de texto</h2>
-<p>Una vez importado el texto, tenemos que eliminar la palabras que actúan como
-conectores, separadores de palabras , de oraciones, y números que no aportarán
-al análisis del texto, para ello usamos la función <code>tm_map()</code> que nos permite
-aplicar funciones al texto del <code>Corpus</code>.</p>
-<pre><code class="language-R">texto &lt;- tm_map(texto, tolower)
-texto &lt;- texto %&gt;%
-            tm_map(removePunctuation) %&gt;%
-            tm_map(removeNumbers) %&gt;%
+<p>Una vez importado el texto, tenemos que eliminar la palabras que actúan como conectores, separadores de palabras , de oraciones, y números que no aportarán al análisis del texto, para ello usamos la función <code>tm_map()</code> que nos permite aplicar funciones al texto del <code>Corpus</code>.</p>
+<pre><code class="language-python">texto &lt;- tm_map(texto, tolower)
+texto &lt;- texto %&gt;% 
+            tm_map(removePunctuation) %&gt;% 
+            tm_map(removeNumbers) %&gt;% 
             tm_map(removeWords, stopwords(&quot;spanish&quot;))
 texto &lt;- tm_map(texto, removeWords, c(&quot;puede&quot;, &quot;ser&quot;, &quot;pues&quot;, &quot;si&quot;, &quot;aún&quot;, &quot;cómo&quot;))
 texto &lt;- tm_map(texto, stripWhitespace)
 </code></pre>
 <ul>
 <li>
-<p><code>tm_map(text, funcion_de_transformacion, parametros_de_funcion)</code>: Transforma
-  el contenido de texto de un objeto <code>Corpus</code> o <code>VCorpus</code>, aplicando las
-  funciones de transformación de texto.</p>
+<p><code>tm_map(text, funcion_de_transformacion, parametros_de_funcion)</code>: Transforma el contenido de texto de un objeto <code>Corpus</code> o <code>VCorpus</code>, aplicando las funciones de transformación de texto.</p>
 </li>
 <li>
-<p><code>tolower</code>: Función de transformación de texto, usado para convertir todas la
-  mayúsculas a minúsculas.</p>
+<p><code>tolower</code>: Función de transformación de texto, usado para convertir todas la mayúsculas a minúsculas.</p>
 </li>
 <li>
 <p><code>removeNumber</code>: Función para eliminar los números del texto.</p>
 </li>
 <li>
-<p><code>removeWord</code>: Función para remover palabras,</p>
+<p><code>removeWord</code>: Función para remover palabras, </p>
 </li>
 <li>
-<p><code>stopword("lang")</code>: Lista de palabras conectoras en el lenguaje lang, es
-  argumento de la función <code>removeWord</code>.</p>
+<p><code>stopword("lang")</code>: Lista de palabras conectoras en el lenguaje lang, es argumento de la función <code>removeWord</code>.</p>
 </li>
 <li>
 <p><code>stripWhitespace</code>: Función para remover los espacios blancos de un texto.</p>
 </li>
 </ul>
-<p>Nótese que usamos ambas notaciones para transformar el texto del <code>Corpus</code>, la
-notación normal <code>tm_map(x, FUN)</code> y también la notación de la biblioteca de
-<code>tydiverse</code> <code>pipeoperator</code> <code>&gt;%&gt;</code>, que toma como argumento inicial el resultado
-de la anterior función.</p>
-<p><em>Si quiere observar los cambios del texto puede ejecutar en la consola
-<code>writeLines(as.character(texto[[1]]))</code>, esto imprimirá el resultado en la
-consola.</em></p>
+<p>Nótese que usamos ambas notaciones para transformar el texto del <code>Corpus</code>, la notación normal <code>tm_map(x, FUN)</code> y también la notación de la biblioteca de <code>tydiverse</code> <code>pipeoperator</code> <code>&gt;%&gt;</code>, que toma como argumento inicial el resultado de la anterior función.</p>
+<p><em>Si quiere observar los cambios del texto puede ejecutar en la consola <code>writeLines(as.character(texto[[1]]))</code>, esto imprimirá el resultado en la consola.</em></p>
 <h2 id="construyendo-la-tabla-de-frecuencia">Construyendo la tabla de frecuencia</h2>
-<pre><code class="language-R">texto &lt;- tm_map(texto, PlainTextDocument)
+<pre><code class="language-python">texto &lt;- tm_map(texto, PlainTextDocument)
 </code></pre>
 <ul>
-<li><code>PlainTextDocument</code>: Convierte texto a un objeto tipo PlainTextDocument. Para
-  el ejemplo, convierte un <code>VCorpus</code> a <code>PlainTextDocument</code> el cuál contiene
-  metadatos y nombres de las filas, haciendo factible la conversión a un matriz.</li>
+<li><code>PlainTextDocument</code>: Convierte texto a un objeto tipo PlainTextDocument. Para el ejemplo, convierte un <code>VCorpus</code> a <code>PlainTextDocument</code> el cuál contiene metadatos y nombres de las filas, haciendo factible la conversión a un matriz.</li>
 </ul>
-<pre><code class="language-R">tabla_frecuencia &lt;- DocumentTermMatrix(texto)
+<pre><code class="language-python">tabla_frecuencia &lt;- DocumentTermMatrix(texto)
 </code></pre>
 <ul>
-<li><code>DocumentTermMatrix(texto)</code>: Convierte texto a un objeto tipo term-document
-  matrix. Es un objeto que va a contener la frecuencia de palabras.</li>
+<li><code>DocumentTermMatrix(texto)</code>: Convierte texto a un objeto tipo term-document matrix. Es un objeto que va a contener la frecuencia de palabras.</li>
 </ul>
-<pre><code class="language-R">tabla_frecuencia &lt;- cbind(palabras = tabla_frecuencia$dimnames$Terms,
+<pre><code class="language-python">tabla_frecuencia &lt;- cbind(palabras = tabla_frecuencia$dimnames$Terms, 
                           frecuencia = tabla_frecuencia$v)
 </code></pre>
-<p>Extraemos los datos que nos interesan del objeto <code>tabla_frecuencia</code> y los
-juntamos con <code>cbind()</code>.</p>
-<p><em>Ejecutando en la consola <code>View(tabla_frecuencia)</code> notamos que es un objeto,
-para acceder a sus valores usamos el símbolo <code>$</code> dicho de otra manera: para
-acceder a las <code>palabras</code> usamos <code>tabla_frecuencia$dimnames$Terms</code> y para su
-correspondientes frecuencia en el texto <code>tabla_frecuencia$v</code>.</em></p>
-<pre><code class="language-R"># Convertimos los valores enlazados con cbind a un objeto dataframe.
-tabla_frecuencia&lt;-as.data.frame(tabla_frecuencia)
+<p>Extraemos los datos que nos interesan del objeto <code>tabla_frecuencia</code> y los juntamos con <code>cbind()</code>.</p>
+<p><em>Ejecutando en la consola <code>View(tabla_frecuencia)</code> notamos que es un objeto, para acceder a sus valores usamos el símbolo <code>$</code> dicho de otra manera: para acceder a las <code>palabras</code> usamos <code>tabla_frecuencia$dimnames$Terms</code> y para su correspondientes frecuencia en el texto <code>tabla_frecuencia$v</code>.</em></p>
+<pre><code class="language-python"># Convertimos los valores enlazados con cbind a un objeto dataframe.
+tabla_frecuencia&lt;-as.data.frame(tabla_frecuencia) 
 # Forzamos a que la columna de frecuencia contenga valores numéricos.
 tabla_frecuencia$frecuencia&lt;-as.numeric(tabla_frecuencia$frecuencia)
 # Ordenamos muestra tabla de frecuencias de acuerdo a sus valores numéricos.
 tabla_frecuencia&lt;-tabla_frecuencia[order(tabla_frecuencia$frecuencia, decreasing=TRUE),]
 </code></pre>
-<p><em>Con estos últimos ajustes ya tenemos nuestra tabla de frecuencias para
-graficarla.</em> <em>Puede verificar los resultados ejecutando en la consola
-<code>head(tabla_frecuencia)</code></em></p>
+<p><em>Con estos últimos ajustes ya tenemos nuestra tabla de frecuencias para graficarla.</em>
+<em>Puede verificar los resultados ejecutando en la consola <code>head(tabla_frecuencia)</code></em></p>
 <h2 id="graficando-nuestra-nube-de-palabras">Graficando nuestra nube de palabras</h2>
-<p>Una vez obtenida nuestra tabla de frecuencia sólo es necesario aplicar la
-función <code>wordcloud()</code>.</p>
-<pre><code class="language-R">wordcloud(words = tabla_frecuencia$palabras,
-          freq = tabla_frecuencia$frecuencia,
-          min.freq = 5,
-          max.words = 100,
-          random.order = FALSE,
+<p>Una vez obtenida nuestra tabla de frecuencia sólo es necesario aplicar la función <code>wordcloud()</code>.</p>
+<pre><code class="language-python">wordcloud(words = tabla_frecuencia$palabras, 
+          freq = tabla_frecuencia$frecuencia, 
+          min.freq = 5, 
+          max.words = 100, 
+          random.order = FALSE, 
           colors = brewer.pal(8,&quot;Paired&quot;))
 </code></pre>
-<p><img alt="png" src="output_23_0.png" /></p>
+<p><img alt="png" src="index_files/index_24_0.png" /></p>
 <ul>
-<li><code>wordcloud(word, freq, min.freq, max.words, random.order, color)</code>: Función
-  para graficar la frecuencia de palabras, el tamaño de la palabra graficada
-  será proporcional a la frecuencia de la misma. Esta función grafica las
-  palabras en <code>word</code> con sus respectivas frecuencias <code>freq</code>, sólo usará las
-  palabras que como mínimo tenga una frecuencia mínima <code>min.freq</code>, la cantidad
-  de palabras en graficadas es igual a <code>maxwords</code>, las posiciones podrán ser
-  aleatorias o no, dependiendo del valor de <code>random.order</code>, los colores estan
-  dados en forma de lista en <code>colors</code>.</li>
-<li><code>brewer.pal(n, "paleta")</code>: Devuelve <code>n</code> valores de la <code>paleta</code>. Para la
-  función <code>brewer.pal()</code> puede usar las paletas <code>"Dark2"</code>, <code>"Set1"</code>, <code>"Blues"</code>
-  entre otros.</li>
+<li><code>wordcloud(word, freq, min.freq, max.words, random.order, color)</code>: Función para graficar la frecuencia de palabras, el tamaño de la palabra graficada será proporcional a la frecuencia de la misma. Esta función grafica las palabras en <code>word</code> con sus respectivas frecuencias <code>freq</code>, sólo usará las palabras que como mínimo tenga una frecuencia mínima <code>min.freq</code>, la cantidad de palabras en graficadas es igual a <code>maxwords</code>, las posiciones podrán ser aleatorias o no, dependiendo del valor de <code>random.order</code>, los colores estan dados en forma de lista en <code>colors</code>.</li>
+<li><code>brewer.pal(n, "paleta")</code>: Devuelve <code>n</code> valores de la <code>paleta</code>. Para la función <code>brewer.pal()</code> puede usar las paletas <code>"Dark2"</code>, <code>"Set1"</code>, <code>"Blues"</code> entre otros.</li>
 </ul>
-<p><em>Cada vez que ejecute la función le mostrará diferentes resultados, para
-evitarlo si así se desea, puede fijar un estado inicial para generar números
-aleatorios que utiliza la función wordcloud. Use: <code>set.seed(1234)</code> para este
-propósito (puede alterar el valor del argumento numeral para diferentes
-resultados).</em></p>
+<p><em>Cada vez que ejecute la función le mostrará diferentes resultados, para evitarlo si así se desea, puede fijar un estado inicial para generar números aleatorios que utiliza la función wordcloud. Use: <code>set.seed(1234)</code> para este propósito (puede alterar el valor del argumento numeral para diferentes resultados).</em></p>
 <h2 id="guardando-nuestra-nube-de-palabras">Guardando nuestra nube de palabras</h2>
-<p>Usamos la función <code>png()</code> para guardar la gráfica que se genera usando
-wordcloud. También puede usar otras funciones como <code>jpeg</code>, <code>svg</code> y otros. Nótese
-que usamos la función <code>png()</code> y <code>dev.off()</code> antes y despues de la función
-generadora de la grafica <code>wordcloud()</code></p>
+<p>Usamos la función <code>png()</code> para guardar la gráfica que se genera usando wordcloud. También puede usar otras funciones como <code>jpeg</code>, <code>svg</code> y otros.
+Nótese que usamos la función <code>png()</code> y <code>dev.off()</code> antes y despues de la función generadora de la grafica <code>wordcloud()</code></p>
 <pre><code class="language-r">png(&quot;nube.png&quot;, width = 800,height = 800, res = 100)
     wordcloud(...)
 dev.off()
 </code></pre>
 <ul>
-<li><code>png("nombre.png", with, height, res) ... dev.off()</code>: Guarda el gráfico
-  generado en formato <code>png</code>, dentro del directorio actual de trabajo. Lo guarda
-  con el nombre <code>"nombre.png"</code> con el ancho y alto en pixeles de <code>with</code> y
-  <code>height</code> respectivamente; y con la resolución <code>res</code> en ppi. Con <code>dev.off()</code>
-  concluimos la obtención de datos de <code>png()</code>.</li>
+<li><code>png("nombre.png", with, height, res) ... dev.off()</code>: Guarda el gráfico generado en formato <code>png</code>, dentro del directorio actual de trabajo. Lo guarda con el nombre <code>"nombre.png"</code> con el ancho y alto  en pixeles de <code>with</code> y <code>height</code> respectivamente; y con la resolución <code>res</code> en ppi. Con <code>dev.off()</code> concluimos la obtención de datos de <code>png()</code>.</li>
 </ul>
-<p><em>Otra biblioteca muy utilizada para generar una nube de palabras es
-<code>wordcloud2</code>, esta posee muchos más parámetros para modificar la apariencia de
-la nube, pero teniendo en cuenta que R está optimizado para realizar tratamiento
-de datos y no tanto para dibujar palabras, es recomendable usar otras opciones
-online o programas de diseño gráfico, si queremos mejores resultados. Y usar R
-para la obtención de la tabla de frecuencia de las palabras.</em> <em>Nota: Existen
-palabras que pueden derivar de una misma palabra y expresan el mismo
-significado, como ser nube, nubes, nubarrón, que estan diferenciadas aquí en
-este ejemplo, estos requieren la aplicación adicional de una función que
-contemple estas variaciones linguisticas, lamentablemente a la fecha no hay una
-función equivalente para el español para R. Sin embargo si realiza el análisis
-de palabras en inglés puede usar
-<code>tm_map(Corpus_en_ingles, stemDocument, language="english")</code>.</em></p>
-<p>Finalmente antes de concluir cerramos las bibliotecas abiertas con <code>pacman</code>. La
-ventaja de hacer esto se ve cuando manejamos diferentes bibliotecas que tienen
-funciones con el mismo nombre, al cerrar las bibliotecas con conflictos, nos
-evitamos de especificar en el código a que biblioteca de R nos referimos.</p>
-<pre><code class="language-R">p_unload(all)
+<p><em>Otra biblioteca muy utilizada para generar una nube de palabras es <code>wordcloud2</code>, esta posee muchos más parámetros para modificar la apariencia de la nube, pero teniendo en cuenta que R está optimizado para realizar tratamiento de datos y no tanto para dibujar palabras, es recomendable usar otras opciones online o programas de diseño gráfico, si queremos mejores resultados. Y usar R para la obtención de la tabla de frecuencia de las palabras.</em>
+<em>Nota: Existen palabras que pueden derivar de una misma palabra y expresan el mismo significado, como ser nube, nubes, nubarrón, que estan diferenciadas aquí en este ejemplo, estos requieren la aplicación adicional de una función que contemple estas variaciones linguisticas, lamentablemente a la fecha no hay una función equivalente para el español para R. Sin embargo si realiza el análisis de palabras en inglés puede usar <code>tm_map(Corpus_en_ingles, stemDocument, language="english")</code>.</em></p>
+<p>Finalmente antes de concluir cerramos las bibliotecas abiertas con <code>pacman</code>. La ventaja de hacer esto se ve cuando manejamos diferentes bibliotecas que tienen funciones con el mismo nombre, al cerrar las bibliotecas con conflictos, nos evitamos de especificar en el código a que biblioteca de R nos referimos.</p>
+<pre><code class="language-python">p_unload(all)
 </code></pre>
 <h2 id="referencias">Referencias</h2>
 <ul>
