@@ -3,7 +3,7 @@ title: "Efficent Workflows with Makim's Working Directory"
 slug: "makim-efficient-workflows-with-makims-working-directory"
 date: 2023-12-10
 authors: ["Abhijeet Saroha"]
-tags: ["makim", "osl", "working-directory"]
+tags: ["makim", "automation", "working-directory", "devops", "open-source"]
 categories: ["devops", "automation", "python"]
 description: |
   In this blog post, we'll explore the Working Directory feature, understand 
@@ -87,6 +87,8 @@ Embracing the Working Directory feature in Makim brings forth a multitude of adv
 ## Real-Life Example
 
 Consider a scenario where a development team is working on a project that involves multiple programming languages and technologies. The project structure looks like this:
+
+```
 multi_language_project/
 │
 ├── backend/
@@ -100,6 +102,7 @@ multi_language_project/
     │   └── src/
     └── vue/
         └── src/
+```
 
 The project consists of a backend with components implemented in both Python and Java, and a frontend with components using React and Vue.js. To efficiently manage and run tasks for each language or framework, the Working Directory feature proves invaluable.
 
