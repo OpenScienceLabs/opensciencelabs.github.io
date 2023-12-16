@@ -318,4 +318,4 @@ No olvides que puedes consultar fqlearn en [Github](https://github.com/osl-pocs/
 
 ## Contácto
 
-El autor de este artículo se encuentra disponible en [LinkedIn](linkedin.com/in/josé-maría-garcía-márquez-556a75199/), en [Github](github.com/JoseMariaGarciaMarquez), y en su [página](www.josemaria.me)
+El autor de este artículo se encuentra disponible en [LinkedIn](https://www.linkedin.com/in/josé-maría-garcía-márquez-556a75199/), en [Github](https://github.com/JoseMariaGarciaMarquez), y en su [página](https://www.josemaria.me)
