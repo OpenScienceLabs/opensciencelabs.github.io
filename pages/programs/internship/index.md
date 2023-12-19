@@ -102,7 +102,7 @@ internship/apprenticeship program.
 ### Cycle 1: Winter/Spring 2024
 
 - **December 1, 2023**: Call for Mentoring Organizations and Projects.
-- **December 22, 2023**: Deadline for Mentoring Organizations to apply.
+- **January 3, 2024**: Deadline for Mentoring Organizations to apply.
 - **January 5, 2024**: Announcement of selected Mentoring Organizations.
 - **January 9, 2024**: Call for Interns/Apprentices opens.
 - **February 2, 2024**: Deadline for Interns/Apprentices applications.
