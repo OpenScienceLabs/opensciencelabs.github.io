@@ -57,6 +57,10 @@ nav:
     - FAQ: faq/index.md
     - Acknowledges: about/acknowledges/index.md
 
+markdown_extensions:
+  - toc:
+      permalink: " #"
+
 plugins:
   - blogging:
       template: theme/blog-list.html
