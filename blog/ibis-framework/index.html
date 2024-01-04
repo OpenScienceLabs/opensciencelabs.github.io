@@ -565,7 +565,7 @@
 <p>Atualmente o Ibis possui 12 backends em seu escopo, alguns deles são responsáveis pela manipulação dos dados, outros, como por exemplo o SQLAlchemy, são responsáveis pela tradução das expressões Ibis em buscas SQL, etc. Você pode conferir todos os backends <a href="https://ibis-project.org/docs/3.1.0/backends/">aqui</a>.</p>
 <!-- TEASER_END -->
 
-<h2 id="setup-e-base-de-dados">Setup e Base de Dados</h2>
+<h2 id="setup-e-base-de-dados">Setup e Base de Dados<a class="headerlink" href="#setup-e-base-de-dados" title="Permanent link"> #</a></h2>
 <p>O Ibis pode ser instalado via <code>pip</code> ou <code>conda</code>. Nos exemplos a seguir utilizaremos apenas a instalação padrão do Ibis, mas você pode conferir como instalar outros Backends como o <a href="https://github.com/ibis-project/ibis-bigquery/">Google BigQuery</a>, <a href="https://github.com/ibis-project/ibis-bigquery/">Apache Impala</a>, <a href="https://ibis-project.org/docs/3.1.0/backends/PostgreSQL/">PostgreSQL</a> dependendo da sua necessidade.</p>
 <pre><code class="language-python">!mamba install ibis-framework matplotlib sqlalchemy -c conda-forge -y
 </code></pre>
@@ -577,7 +577,7 @@ import pandas as pd
 import sqlite3
 import ibis
 </code></pre>
-<h2 id="como-funciona-o-ibis">Como funciona o Ibis?</h2>
+<h2 id="como-funciona-o-ibis">Como funciona o Ibis?<a class="headerlink" href="#como-funciona-o-ibis" title="Permanent link"> #</a></h2>
 <p>O Ibis, a partir da criação de Expressões, se consitui em uma camada de abstração entre as Engines de banco de dados e o usuário final. Em seu backend, o Ibis utiliza Pandas como sua Engine de execução, então podemos ler o arquivo CSV com a função <code>read_csv()</code> do Pandas:</p>
 <pre><code class="language-python">df = ibis.backends.pandas.pd.read_csv('data/caso_full.csv')
 </code></pre>
@@ -783,7 +783,7 @@ print(data_max.execute()) # Dia da última entrada registrada na base de dados
 <pre><code>2020-02-25
 2022-03-27
 </code></pre>
-<h2 id="e-por-que-usar-ibis-ao-inves-das-ferramentas-sql-diretamente">E por que usar Ibis ao invés das ferramentas SQL diretamente?</h2>
+<h2 id="e-por-que-usar-ibis-ao-inves-das-ferramentas-sql-diretamente">E por que usar Ibis ao invés das ferramentas SQL diretamente?<a class="headerlink" href="#e-por-que-usar-ibis-ao-inves-das-ferramentas-sql-diretamente" title="Permanent link"> #</a></h2>
 <ul>
 <li>Ibis, por ser uma ferramenta escrita em Python, é atraente para quem não tem tanta familiaridade com SQL. Ao automatizar as buscas, novos desenvolvedores poderão entender como as buscas são feitas na Engine SQL.</li>
 <li>Com o crescimento da aplicação, os parâmetros de busca em SQL podem se tornar confusos e de difícil replicação. Com o Ibis é possível portabilizar as Expressões para serem reutilizadas em outras buscas sem a necessidade de reescrever código.</li>
@@ -955,7 +955,7 @@ plt.legend(['New cases', 'New deaths'])
 plt.show()
 </code></pre>
 <p><img alt="png" src="index_files/index_29_0.png" /></p>
-<h2 id="manipulando-os-dados-e-inserindo-novas-colunas">Manipulando os dados e inserindo novas colunas:</h2>
+<h2 id="manipulando-os-dados-e-inserindo-novas-colunas">Manipulando os dados e inserindo novas colunas:<a class="headerlink" href="#manipulando-os-dados-e-inserindo-novas-colunas" title="Permanent link"> #</a></h2>
 <p>Os DataFrames gerados pelo Pandas Engine são estáticos. Isso quer dizer que ao manipular os dados, as expressões não alteram o DataFrame em si, mas preparam os parâmetros de busca para gerar um novo DataFrame a partir do comando <code>execute()</code>, que pode ser visualizado, armazenado e exportado.</p>
 <p>No exemplo abaixo, estaremos parametrizando a busca a ser realizada na base de dados. Com uma sintaxe "Pandas-like", pode-se imaginar que estaremos manipulando o DataFrame em si. Entretanto, o Ibis armazena o resultado desejado para que a busca seja realizada somente quando o resultado deve ser exibido, executando-o. Ao extrair as colunas como em <code>percentage_cases</code>, por exemplo, uma query SQL é armazenada</p>
 <p>Operações matemáticas entre as colunas podem ser escritas de maneira Pythonica com o Ibis e facilmente adicionadas em outros critérios de busca:</p>
@@ -1042,9 +1042,9 @@ sul.execute()
 </table>
 </div>
 
-<h2 id="conclusao">Conclusão</h2>
+<h2 id="conclusao">Conclusão<a class="headerlink" href="#conclusao" title="Permanent link"> #</a></h2>
 <p>Como pudemos ver, o Ibis é uma ferramenta poderosa para acelerar sua análise de dados, capaz de integrar diferentes engines SQL com o Pandas, o Framework traz melhorias de performance e legibilidade ao código Python. Crie e realize buscas SQL como se estivesse trabalhando com um Pandas DataFrame, mas com uma economia de memória e alta portabilidade! Com o Ibis é possível utilizar o mesmo padrão de trabalho para desenvolvimento e produção, acelerar seus testes unitários, escalonar a aplicação para diferentes bases de dados, e muito mais!</p>
-<h3 id="referencias">Referências</h3>
+<h3 id="referencias">Referências<a class="headerlink" href="#referencias" title="Permanent link"> #</a></h3>
 <ul>
 <li>https://ibis-project.org/</li>
 <li>https://github.com/ibis-project/ibis</li>

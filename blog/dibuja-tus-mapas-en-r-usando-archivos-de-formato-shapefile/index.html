@@ -568,7 +568,7 @@ archivos de formato shapefile, resaltar puntos en tu mapa y modificar su
 apariencia utilizando las bibliotecas <code>rgdal</code> y <code>ggplot2</code>.</p>
 <!-- TEASER_END -->
 
-<h2 id="comenzando">Comenzando</h2>
+<h2 id="comenzando">Comenzando<a class="headerlink" href="#comenzando" title="Permanent link"> #</a></h2>
 <p>Para que todas las bibliotecas funcionen correctamente, se recomienda instalar o
 actualizar a las últimas versiones de <a href="https://cran.r-project.org/">R</a> y de su
 IDE <a href="https://www.rstudio.com/">RStudio</a> con su correspondiente complemento
@@ -601,7 +601,7 @@ Debajo mostramos algunos recursos web gratuitos que puedes usar.</p>
 del mundo (algunos están desactualizados).</p>
 <p><a href="https://geo.gob.bo/geonetwork/srv/spa/catalog.search#/home">geo.gob.bo</a> para
 shapefiles de Bolivia.</p>
-<h3 id="instalacion-de-pre-requisitos">Instalación de pre-requisitos</h3>
+<h3 id="instalacion-de-pre-requisitos">Instalación de pre-requisitos<a class="headerlink" href="#instalacion-de-pre-requisitos" title="Permanent link"> #</a></h3>
 <p>Las siguientes bibliotecas de R son necesarias, para realizar nuestro ejemplo.</p>
 <pre><code class="language-r">install.packages(&quot;ggplot2&quot;)    # biblioteca para graficar.
 install.packages(&quot;rgdal&quot;)      # biblioteca para abrir archivo de formato shapefiles (datos geográficos)
@@ -613,7 +613,7 @@ install.packages(&quot;extrafont&quot;) # biblioteca para importar los tipos de 
 </code></pre>
 <p><em>(Recuerde que para ejecutar una línea de comando en el Editor de RStudio se usa
 Ctrl+Enter)</em></p>
-<h2 id="preparacion-de-los-datos-para-graficar">Preparación de los datos para graficar</h2>
+<h2 id="preparacion-de-los-datos-para-graficar">Preparación de los datos para graficar<a class="headerlink" href="#preparacion-de-los-datos-para-graficar" title="Permanent link"> #</a></h2>
 <p>Nuestra base de datos fue descargada de <a href="https://geo.gob.bo">GeoBolivia</a>,
 <a href="https://www.ine.gob.bo/">INE Bolivia</a> y
 <a href="https://www.geodatos.net/coordenadas/bolivia">geodatos.net</a>. Una vez
@@ -703,7 +703,7 @@ colnames(poblacion)[colnames(poblacion) == &quot;DEPARTAMENTO&quot;] &lt;- &quot
 # juntamos en datos ambas tablas
 datos&lt;-left_join(geotable, poblacion, by = &quot;DEPARTAMEN&quot;)
 </code></pre>
-<h2 id="graficando-el-mapa-con-ggplot2">Graficando el mapa con ggplot2</h2>
+<h2 id="graficando-el-mapa-con-ggplot2">Graficando el mapa con ggplot2<a class="headerlink" href="#graficando-el-mapa-con-ggplot2" title="Permanent link"> #</a></h2>
 <p>Ahora, graficamos con <code>ggplot2</code>:</p>
 <pre><code class="language-r">ggplot() +
   geom_polygon(data = datos, aes(
@@ -724,7 +724,7 @@ datos&lt;-left_join(geotable, poblacion, by = &quot;DEPARTAMEN&quot;)
 <li><strong><code>lab(fill)</code></strong>: pone el título a la leyenda con <code>fill</code>.</li>
 </ul>
 <p><img alt="Mapa de Bolivia: Población por departamento" src="grafica1.png" /></p>
-<h2 id="mejorando-la-presentacion-de-nuestro-mapa">Mejorando la presentación de nuestro mapa</h2>
+<h2 id="mejorando-la-presentacion-de-nuestro-mapa">Mejorando la presentación de nuestro mapa<a class="headerlink" href="#mejorando-la-presentacion-de-nuestro-mapa" title="Permanent link"> #</a></h2>
 <p>Entre las cosas que podemos hacer para mejorar la apariencia de nuestra gráfica
 están: poner un título, cambiar los colores, el fondo, el formato de nuestra
 leyenda. A continuación mostramos como hacerlo.</p>
@@ -840,7 +840,7 @@ fonts() # Nos muestra las fuentes disponibles.
   para modificar el tamaño, la estética, el tipo y la posición en horizontal.</li>
 </ul>
 <p><img alt="Mapa de Bolivia: Población por departamento" src="grafica2.png" /></p>
-<h2 id="anadiendo-ubicaciones-a-nuestro-mapa">Añadiendo ubicaciones a nuestro mapa</h2>
+<h2 id="anadiendo-ubicaciones-a-nuestro-mapa">Añadiendo ubicaciones a nuestro mapa<a class="headerlink" href="#anadiendo-ubicaciones-a-nuestro-mapa" title="Permanent link"> #</a></h2>
 <p>Incluyendo las ubicaciones de ciudades capitales de departamentos a nuestro
 mapa:</p>
 <pre><code class="language-r">ciudades = import(&quot;ciudades.csv&quot;) # importamos la localización de las ciudades capitales
@@ -894,7 +894,7 @@ ggplot() +
 <li><strong><code>raibow(9)</code></strong>: devuelve un vector con 9 colores del arcoiris.</li>
 </ul>
 <p><img alt="Mapa de Bolivia: Capitales de departamento" src="grafica3.png" /></p>
-<h4 id="asignando-colores">Asignando colores</h4>
+<h4 id="asignando-colores">Asignando colores<a class="headerlink" href="#asignando-colores" title="Permanent link"> #</a></h4>
 <p>Puedes asignar los colores simplemente usando su nombre en inglés. Para el
 blanco es <strong>white</strong>, para el rojo, <strong>red</strong>. También puedes utilizar el código
 hexadecimal, como <strong>#FF4500</strong> para el rojo anaranjado; agruparlos en una escala
@@ -904,7 +904,7 @@ es <a href="https://r-charts.com/colors/">r-charts.com/colors/</a>. También pue
 las funciones auxiliares que ofrece <code>R</code>, por ejemplo:
 <code>scale_color</code>/<code>fill_brewer</code>/<code>viridis_</code>. Estas proporcionan escalas predefinidas
 que podrían mejorar el impacto visual.</p>
-<h2 id="guardando-nuestro-mapa">Guardando nuestro mapa</h2>
+<h2 id="guardando-nuestro-mapa">Guardando nuestro mapa<a class="headerlink" href="#guardando-nuestro-mapa" title="Permanent link"> #</a></h2>
 <p>RStudio ofrece la posibilidad de exportar fácilmente desde su menú ubicado
 encima de la vista previa del gráfico "Export". Podemos optar por guardar
 nuestro mapa con mayor calidad o cierto formato y, para ello, podemos usar
@@ -920,7 +920,7 @@ nuestro mapa con mayor calidad o cierto formato y, para ello, podemos usar
 <p>Guarda el mapa con el nombre <code>filename</code> en la ruta <code>path</code>, con la escala y
 formato de <code>scale</code> y <code>device</code>. Con <code>dpi</code> indicamos la cantidad de píxeles por
 pulgada, que es la calidad de nuestro archivo a exportar.</p>
-<h2 id="referencias">Referencias</h2>
+<h2 id="referencias">Referencias<a class="headerlink" href="#referencias" title="Permanent link"> #</a></h2>
 <ul>
 <li><a href="https://github.com/EverVino/dataviz-Bolivia">Repositorio del ejemplo</a></li>
 <li><a href="https://www.ine.gob.bo">Instituto Nacional de Estadística Bolivia</a></li>

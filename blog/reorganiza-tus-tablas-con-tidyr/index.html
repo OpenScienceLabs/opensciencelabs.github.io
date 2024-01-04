@@ -568,7 +568,7 @@ utilizaremos la biblioteca <code>tidyr</code> con sus funciones <code>gather()</
 <code>separate()</code>, y <code>unite()</code>.</p>
 <!-- TEASER_END -->
 
-<h2 id="requisitos">Requisitos</h2>
+<h2 id="requisitos">Requisitos<a class="headerlink" href="#requisitos" title="Permanent link"> #</a></h2>
 <p>Por comodidad usamos la biblioteca <code>pacman</code> como gestor de paquetes.</p>
 <pre><code class="language-r">
 # install.packages(&quot;pacman&quot;) Para instalar la biblioteca pacman
@@ -584,7 +584,7 @@ p_load(&quot;scales&quot;) # Biblioteca para dar formato de miles en el eje &quo
 <p>Recuerda, también puedes instalar y abrir las bibliotecas de manera tradicional,
 por ejemplo con: <code>install.packages("tidyr")</code>, luego abrir la misma biblioteca
 con <code>library(tidyr)</code>.</p>
-<h2 id="importando-nuestros-datos">Importando nuestros datos</h2>
+<h2 id="importando-nuestros-datos">Importando nuestros datos<a class="headerlink" href="#importando-nuestros-datos" title="Permanent link"> #</a></h2>
 <p>Los datos usados han sido descargados de
 <a href="https://www.ine.gob.bo/">la base de datos del Instituto de Estadística de Bolivia (INE)</a>.
 Una vez que se tiene los datos en nuestro equipo, se modifica para que se
@@ -614,7 +614,7 @@ ello vamos a usar <code>gather()</code> para convertir las fechas de las columna
 de una sola columna.</p>
 <p>Si quieres explorar los datos manualmente puedes ejecutar la función
 <code>(View(datos_turistas))</code> en la consola.</p>
-<h2 id="como-usar-la-funcion-gather">¿Cómo usar la función <code>gather()</code>?</h2>
+<h2 id="como-usar-la-funcion-gather">¿Cómo usar la función <code>gather()</code>?<a class="headerlink" href="#como-usar-la-funcion-gather" title="Permanent link"> #</a></h2>
 <p>La función <code>gather()</code> puede agrupar los nombres de las columnas en una sola, así
 como se muestra en la siguiente animación.</p>
 <p><img alt="Fucionamiento de gather de tidyr()" src="https://user-images.githubusercontent.com/209714/48026738-e9a06a80-e114-11e8-9a24-ecc8b37b8a53.gif" /></p>
@@ -671,7 +671,7 @@ datos_turistas &lt;-
   <code>!c()</code>, también puedes utilizar como referencia el número de columna. Para
   hacer referencia a una serie sucesiva emplea <code>:</code>, algo como: <code>n_col1:n_col2</code>.</li>
 </ul>
-<h2 id="separa-una-columna-con-separate">Separa una columna con <code>separate()</code></h2>
+<h2 id="separa-una-columna-con-separate">Separa una columna con <code>separate()</code><a class="headerlink" href="#separa-una-columna-con-separate" title="Permanent link"> #</a></h2>
 <p>Para ejemplificar el operador <code>separate()</code> vamos a separar la columna <code>Fecha</code> en
 las columnas <code>día</code>, <code>mes</code> y <code>año</code>.</p>
 <pre><code class="language-r">
@@ -760,7 +760,7 @@ ggplot(data = top_turistas_2016_2021) +
 
 </code></pre>
 <p><img alt="Cantidad de viajeros llegados por avión a Bolivia 2016-2021" src="Viajeros_2016_2021.jpeg" /></p>
-<h2 id="funcion-unite">Función <code>unite()</code></h2>
+<h2 id="funcion-unite">Función <code>unite()</code><a class="headerlink" href="#funcion-unite" title="Permanent link"> #</a></h2>
 <p>Unite es una función complementaria a <code>separate()</code> y hace lo contrario, une las
 columnas en un sola. Vamos a usarlo para juntar las columnas de <code>mes</code> y <code>año</code>.</p>
 <pre><code class="language-r">
@@ -795,7 +795,7 @@ datos_turistas_trimestre &lt;-
   <code>TRUE</code>, borra las columnas que se unen, pero si es <code>FALSE</code>, las mantiene. Por
   defecto, su valor es <code>TRUE</code>.</li>
 </ul>
-<h2 id="funcion-spread">Función <code>spread()</code></h2>
+<h2 id="funcion-spread">Función <code>spread()</code><a class="headerlink" href="#funcion-spread" title="Permanent link"> #</a></h2>
 <p>Esta función es la que complementa a la función <code>gather()</code>, y hace exactamente
 lo contrario. Esparcir una columna en varias.</p>
 <p>Antes de utilizar <code>spread()</code> vamos a agrupar nuestro datos en trimestres.</p>
@@ -891,13 +891,13 @@ ggplot(data = top_turistas_trimestre_1_2019) +
 
 </code></pre>
 <p><img alt="Viajeros que llegaron por avión a Bolivia 2016-2021" src="Viajeros_trimestre_1_2019.jpeg" /></p>
-<h2 id="otros-detalles">Otros detalles</h2>
+<h2 id="otros-detalles">Otros detalles<a class="headerlink" href="#otros-detalles" title="Permanent link"> #</a></h2>
 <p>Las funciones mostradas en el artículo son las más usadas, y permiten un mejor
 manejo de datos en R. Te recomiendo revisar la
 <a href="https://www.rdocumentation.org">documentación oficial</a> si quieres aprender más.</p>
 <p>En el caso de que quieras descargar el repositorio de este artículo puedes
 hacerlo <a href="https://github.com/EverVino/Example_data_tidyr">aquí</a>.</p>
-<h2 id="referencias">Referencias</h2>
+<h2 id="referencias">Referencias<a class="headerlink" href="#referencias" title="Permanent link"> #</a></h2>
 <ul>
 <li>
 <p><a href="https://github.com/tidyverse/tidyr/issues/515">Git Hub Issues tidyr</a></p>

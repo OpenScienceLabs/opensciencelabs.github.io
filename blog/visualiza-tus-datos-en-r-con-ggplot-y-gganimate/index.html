@@ -570,14 +570,14 @@ no hacerlo?. En este artículo se describe como hacer animación usando ggplot2 
 gganimate en R.</p>
 <!-- TEASER_END -->
 
-<h2 id="comenzando">Comenzando</h2>
+<h2 id="comenzando">Comenzando<a class="headerlink" href="#comenzando" title="Permanent link"> #</a></h2>
 <p>Usamos R por ser un lenguaje especializado para ciencia de datos y tener una
 gran Comunidad Open Source. Antes de comenzar recomendamos tener las versiones
 actualizadas de R y su IDE RStudio.</p>
 <p><em>Puedes descargar R y RStudio desde sus páginas web oficiales:</em></p>
 <p><a href="https://cran.r-project.org/">cran.r-project.org</a></p>
 <p><a href="https://www.rstudio.com/">rstudio.org</a></p>
-<h3 id="instalacion-de-pre-requisitos">Instalación de pre-requisitos</h3>
+<h3 id="instalacion-de-pre-requisitos">Instalación de pre-requisitos<a class="headerlink" href="#instalacion-de-pre-requisitos" title="Permanent link"> #</a></h3>
 <p>Para este ejemplo usamos las bibliotecas de <code>rio</code>, <code>dplyr</code>, <code>ggplot2</code> y
 <code>gganimate</code>. Las instalamos con los siguientes comandos en R <em>(Recuerde que para
 ejecutar una linea de Comando en el Editor de RStudio Es con Ctrl+Enter o puede
@@ -587,7 +587,7 @@ install.package(dplyr)      # Biblioteca para filtrar datos
 install.package(ggplot2)    # Biblioteca para realizar las gráficas
 install.package(gganimate)  # Biblioteca para realizar la animación
 </code></pre>
-<h2 id="preparacion-de-los-datos-para-graficar">Preparación de los datos para graficar</h2>
+<h2 id="preparacion-de-los-datos-para-graficar">Preparación de los datos para graficar<a class="headerlink" href="#preparacion-de-los-datos-para-graficar" title="Permanent link"> #</a></h2>
 <p>Los datos usados pertenecen a la base de datos del INE
 <a href="https://www.ine.gob.bo">(Instituto Nacional de Estadística Bolivia)</a>, el
 archivo usado tiene el nombre de "Importaciones de Productos y Artículos de
@@ -687,7 +687,7 @@ datos &lt;-
 5 2018-05-01 51.86330 Alimentos y Bebidas
 6 2018-06-01 43.84668 Alimentos y Bebidas
 </code></pre>
-<h2 id="grafica-estatica">Gráfica estática</h2>
+<h2 id="grafica-estatica">Gráfica estática<a class="headerlink" href="#grafica-estatica" title="Permanent link"> #</a></h2>
 <p>Para graficar con <code>ggplot2</code>, es conveniente entender que esta biblioteca añade
 sus componentes en layers (capas), estos layers son objetos a los cuales se le
 puede modificar su apariencia y especificar de donde extraer sus valores.</p>
@@ -736,7 +736,7 @@ p1
 </li>
 </ul>
 <p><img alt="Importaciones de Bolivia 1991-2021" src="../../../images/blog/visualiza-tus-datos-en-r-con-ggplot-y-gganimate/Rplot.png" /></p>
-<h2 id="grafica-animada">Gráfica Animada</h2>
+<h2 id="grafica-animada">Gráfica Animada<a class="headerlink" href="#grafica-animada" title="Permanent link"> #</a></h2>
 <p>Ya teniendo nuestra nuestra gráfica estática, vamos a realizar algunas
 modificaciones para que se resalten los datos de nuestro interés.</p>
 <p>Filtrando datos con fecha mayor al año 2019.</p>
@@ -872,7 +872,7 @@ anim_save(filename = &quot;datosimportpandemia.gif&quot;,
 </code></pre>
 <p><strong><code>anim_save(filename, animation, path)</code></strong>: guarda el renderizado de <code>animation</code>
 con el nombre <code>filename</code> en la ruta <code>path</code>.</p>
-<h2 id="referencias">Referencias</h2>
+<h2 id="referencias">Referencias<a class="headerlink" href="#referencias" title="Permanent link"> #</a></h2>
 <ul>
 <li><a href="https://www.ine.gob.bo">Instituto Nacional de Estadística Bolivia</a></li>
 <li><a href="https://www.rdocumentation.org">Documentacion de R</a></li>

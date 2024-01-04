@@ -568,12 +568,12 @@
   en las clases de McCabe-Thiele, y SteamTable.</p>
 <!-- TEASER_END -->
 
-<h1 id="explorando-fqlearn-potenciando-el-analisis-y-diseno-de-procesos-termodinamicos">Explorando fqlearn: Potenciando el Análisis y Diseño de Procesos Termodinámicos</h1>
+<h1 id="explorando-fqlearn-potenciando-el-analisis-y-diseno-de-procesos-termodinamicos">Explorando fqlearn: Potenciando el Análisis y Diseño de Procesos Termodinámicos<a class="headerlink" href="#explorando-fqlearn-potenciando-el-analisis-y-diseno-de-procesos-termodinamicos" title="Permanent link"> #</a></h1>
 <p>En el apasionante mundo de la ingeniería química, la biblioteca <code>fqlearn</code> emerge como una herramienta valiosa, ofreciendo capacidades significativas para el análisis y diseño de procesos. Diseñada para mejorar la visualización de datos y servir como una herramienta educativa, <code>fqlearn</code> se posiciona como un recurso versátil para ingenieros y científicos en la industria química.</p>
-<h2 id="implementacion-de-la-clase-mccabe-thiele-para-analisis-grafico-de-destilacion-binaria-en-python">Implementación de la Clase McCabe-Thiele para Análisis Gráfico de Destilación Binaria en Python</h2>
+<h2 id="implementacion-de-la-clase-mccabe-thiele-para-analisis-grafico-de-destilacion-binaria-en-python">Implementación de la Clase McCabe-Thiele para Análisis Gráfico de Destilación Binaria en Python<a class="headerlink" href="#implementacion-de-la-clase-mccabe-thiele-para-analisis-grafico-de-destilacion-binaria-en-python" title="Permanent link"> #</a></h2>
 <p>La clase <code>McCabeThiele</code> dentro de <code>fqlearn</code> brinda funcionalidades especializadas para llevar a cabo cálculos de equilibrio líquido-vapor utilizando el método de McCabe-Thiele. Este método es esencial en el diseño de columnas de destilación, permitiendo determinar el número óptimo de etapas necesarias para separar componentes en una mezcla.</p>
 <p>La clase McCabeThiele es una implementación en Python del método de McCabe-Thiele, una técnica gráfica fundamental en el diseño de columnas de destilación para procesos químicos. Este método proporciona una manera visual de analizar y dimensionar sistemas de destilación binaria. A continuación, se presenta una descripción detallada de la clase y sus principales componentes.</p>
-<h1 id="ejemplo-de-uso-de-mccabethiele-en-fqlearn">Ejemplo de uso de McCabeThiele en fqlearn</h1>
+<h1 id="ejemplo-de-uso-de-mccabethiele-en-fqlearn">Ejemplo de uso de McCabeThiele en fqlearn<a class="headerlink" href="#ejemplo-de-uso-de-mccabethiele-en-fqlearn" title="Permanent link"> #</a></h1>
 <pre><code class="language-python"># Importar la clase McCabeThiele de la biblioteca fqlearn
 from fqlearn.McCabeThiele import McCabeThiele
 
@@ -596,13 +596,13 @@ model.solve()
 # Imprimir información relevante sobre el reflujo mínimo y la composición líquida de salida
 model.describe()
 </code></pre>
-<h2 id="funcion-describe">Función describe</h2>
+<h2 id="funcion-describe">Función describe<a class="headerlink" href="#funcion-describe" title="Permanent link"> #</a></h2>
 <p>La función 'describe' imprime en pantalla información sobre cada etapa en el proceso de McCabe-Thiele.</p>
 <ul>
 <li>El reflujo mínimo es de: 0.7480780119884876</li>
 <li>La composición líquida de salida: 0.05</li>
 </ul>
-<h3 id="composicion-de-entrada-y-salida-en-cada-etapa">Composición de entrada y salida en cada etapa:</h3>
+<h3 id="composicion-de-entrada-y-salida-en-cada-etapa">Composición de entrada y salida en cada etapa:<a class="headerlink" href="#composicion-de-entrada-y-salida-en-cada-etapa" title="Permanent link"> #</a></h3>
 <ul>
 <li>Etapa 1: Entrada = 0.9400, Salida = 0.9400</li>
 <li>Etapa 2: Entrada = 0.8783, Salida = 0.9400</li>
@@ -619,7 +619,7 @@ model.describe()
 <pre><code class="language-python"># Generar un gráfico que muestra las curvas de equilibrio, la línea de alimentación y las etapas del proceso
 model.plot()
 </code></pre>
-<h2 id="funcion-plot">Función plot</h2>
+<h2 id="funcion-plot">Función plot<a class="headerlink" href="#funcion-plot" title="Permanent link"> #</a></h2>
 <p>La función plot de McCabe-Thiele le muestra al usuario la gráfica de destilación binaria, con todas las etapas y demás información que el usuario pueda solicitar</p>
 <p><img alt="ejemplo de mcabethiele" src="mccabethiele.png" /></p>
 <p><strong>Ejes:</strong>
@@ -662,10 +662,10 @@ Los ejes X e Y representan la composición molar x y y respectivamente, variando
 - Es una herramienta valiosa para la investigación y desarrollo de procesos de destilación más eficientes y sostenibles.</p>
 <p><strong>Análisis de Sistemas de Ingeniería de Procesos:</strong>
 - Facilita el análisis de sistemas de ingeniería de procesos que involucran la destilación de mezclas binarias, contribuyendo a la mejora continua y la optimización de operaciones.</p>
-<h2 id="implementacion-de-la-clase-steamtable-para-una-consulta-eficaz-de-las-tablas-de-vapor">Implementación de la Clase SteamTable para una consulta eficáz de las tablas de vapor</h2>
+<h2 id="implementacion-de-la-clase-steamtable-para-una-consulta-eficaz-de-las-tablas-de-vapor">Implementación de la Clase SteamTable para una consulta eficáz de las tablas de vapor<a class="headerlink" href="#implementacion-de-la-clase-steamtable-para-una-consulta-eficaz-de-las-tablas-de-vapor" title="Permanent link"> #</a></h2>
 <p>La clase SteamTable ofrece capacidades para gestionar y representar datos termodinámicos asociados con las fases de vapor y líquido, centrándose especialmente en tablas vapor.</p>
 <p>Esta función es valiosa en aplicaciones donde se requiere conocer propiedades termodinámicas precisas para una temperatura específica, por ejemplo, en el diseño y análisis de sistemas termodinámicos, procesos de ingeniería, o cualquier escenario donde la temperatura es un parámetro crítico. Proporciona una herramienta flexible y útil para obtener datos detallados en puntos específicos de interés en la tabla termodinámica de vapor.</p>
-<h1 id="ejemplo-de-uso-de-steamtable-en-fqlearn">Ejemplo de uso de SteamTable en fqlearn</h1>
+<h1 id="ejemplo-de-uso-de-steamtable-en-fqlearn">Ejemplo de uso de SteamTable en fqlearn<a class="headerlink" href="#ejemplo-de-uso-de-steamtable-en-fqlearn" title="Permanent link"> #</a></h1>
 <pre><code class="language-python">from fqlearn.SteamTable import SteamTable
 
 # Crea una instancia llamada sistema con SteamTable, y carga las tablas en la base de datos
@@ -683,7 +683,7 @@ sistema.plot3d()
 # Le da al usuario información disponible en las tablas con la temperatura proporcionada
 sistema.point(t = 100)
 </code></pre>
-<h2 id="funcion-data">Función data</h2>
+<h2 id="funcion-data">Función data<a class="headerlink" href="#funcion-data" title="Permanent link"> #</a></h2>
 <p>La función 'data' tiene la capacidad de imprimir las tablas de vapor que están cargadas en la base de datos, mostrándolas con incrementos de 20 en 20. Este enfoque permite al usuario visualizar de manera rápida y eficiente la tabla, facilitando así la realización de consultas de forma ágil.</p>
 <table>
 <thead>
@@ -901,8 +901,8 @@ sistema.point(t = 100)
 </tr>
 </tbody>
 </table>
-<h2 id="funcion-plot_1">Función plot</h2>
-<h3 id="diagrama-presion-volumen-p-v">Diagrama Presión-Volumen (P-V):</h3>
+<h2 id="funcion-plot_1">Función plot<a class="headerlink" href="#funcion-plot_1" title="Permanent link"> #</a></h2>
+<h3 id="diagrama-presion-volumen-p-v">Diagrama Presión-Volumen (P-V):<a class="headerlink" href="#diagrama-presion-volumen-p-v" title="Permanent link"> #</a></h3>
 <ul>
 <li><strong>Concepto:</strong> Muestra la relación entre la presión y el volumen de un sistema termodinámico.</li>
 <li><strong>Eje X:</strong> Volumen.</li>
@@ -910,7 +910,7 @@ sistema.point(t = 100)
 <li><strong>Características:</strong> En un diagrama P-V, las curvas representan los procesos termodinámicos del sistema. Puede mostrar procesos adiabáticos, isotérmicos, isobáricos, etc. La pendiente de las curvas indica propiedades como la compresibilidad del fluido.</li>
 </ul>
 <p><img alt="diagrama pv" src="pvdiagram.png" /></p>
-<h3 id="diagrama-presion-temperatura-p-t">Diagrama Presión-Temperatura (P-T):</h3>
+<h3 id="diagrama-presion-temperatura-p-t">Diagrama Presión-Temperatura (P-T):<a class="headerlink" href="#diagrama-presion-temperatura-p-t" title="Permanent link"> #</a></h3>
 <ul>
 <li><strong>Concepto:</strong> Muestra la relación entre la presión y la temperatura de un sistema termodinámico.</li>
 <li><strong>Eje X:</strong> Temperatura.</li>
@@ -918,7 +918,7 @@ sistema.point(t = 100)
 <li><strong>Características:</strong> Este diagrama revela cómo cambia la presión con la temperatura bajo diversas condiciones. Puede mostrar regiones de fases (por ejemplo, líquido, vapor, o ambos) y proporciona información sobre las transiciones de fase.</li>
 </ul>
 <p><img alt="diagrama pt" src="ptdiagram.png" /></p>
-<h3 id="diagrama-temperatura-volumen-t-v">Diagrama Temperatura-Volumen (T-V):</h3>
+<h3 id="diagrama-temperatura-volumen-t-v">Diagrama Temperatura-Volumen (T-V):<a class="headerlink" href="#diagrama-temperatura-volumen-t-v" title="Permanent link"> #</a></h3>
 <ul>
 <li><strong>Concepto:</strong> Muestra la relación entre la temperatura y el volumen de un sistema termodinámico.</li>
 <li><strong>Eje X:</strong> Volumen.</li>
@@ -927,8 +927,8 @@ sistema.point(t = 100)
 </ul>
 <p><img alt="diagrama tv" src="tvdiagram.png" /></p>
 <p>Estos diagramas son herramientas esenciales en termodinámica y se utilizan comúnmente para representar y analizar los ciclos termodinámicos, como el ciclo de Carnot en máquinas térmicas. Además, en el caso de sustancias puras, los diagramas P-V, P-T y T-V son útiles para entender las propiedades y comportamientos de la sustancia en diferentes estados termodinámicos. Por ejemplo, el diagrama P-V de una sustancia pura puede revelar información sobre la expansión y la compresión durante un proceso termodinámico.</p>
-<h2 id="funcion-plot3d">Función plot3d</h2>
-<h3 id="diagrama-tridimensional-pvt">Diagrama Tridimensional PVT:</h3>
+<h2 id="funcion-plot3d">Función plot3d<a class="headerlink" href="#funcion-plot3d" title="Permanent link"> #</a></h2>
+<h3 id="diagrama-tridimensional-pvt">Diagrama Tridimensional PVT:<a class="headerlink" href="#diagrama-tridimensional-pvt" title="Permanent link"> #</a></h3>
 <ul>
 <li><strong>Ejes:</strong></li>
 <li><strong>Eje X:</strong> Volumen (V)</li>
@@ -975,9 +975,9 @@ sistema.point(t = 100)
 </ul>
 <p>Este tipo de diagrama es una herramienta valiosa para los ingenieros y científicos que trabajan en el estudio y diseño de sistemas termodinámicos, especialmente en áreas como la química, la ingeniería de procesos y la industria del petróleo y gas.</p>
 <p><img alt="diagrama 3d" src="3ddiagram.png" /></p>
-<h2 id="funcion-point">Función point</h2>
+<h2 id="funcion-point">Función point<a class="headerlink" href="#funcion-point" title="Permanent link"> #</a></h2>
 <p>La función 'point' permite al usuario buscar valores en la tabla de vapor introduciendo la temperatura deseada, esta regresa el valor correspondiende de presión, densidad, entalpía, entropía y volumen</p>
-<h3 id="datos-del-punto-buscado">Datos del punto buscado</h3>
+<h3 id="datos-del-punto-buscado">Datos del punto buscado<a class="headerlink" href="#datos-del-punto-buscado" title="Permanent link"> #</a></h3>
 <ul>
 <li>Temperatura: 100ºC</li>
 <li>Presión: 0.10142 MPa</li>
@@ -1040,11 +1040,11 @@ sistema.point(t = 100)
 <li>Para sustancias puras, las tablas de vapor son fundamentales para entender cómo las propiedades termodinámicas varían en diferentes estados, lo que es esencial para la investigación y el desarrollo de nuevos materiales y procesos.</li>
 </ul>
 <p>En resumen, las tablas de vapor son una herramienta invaluable en la termodinámica aplicada, proporcionando datos cruciales que permiten comprender, diseñar y optimizar una amplia variedad de sistemas y procesos en ingeniería y ciencia.</p>
-<h1 id="conclusiones">Conclusiones</h1>
+<h1 id="conclusiones">Conclusiones<a class="headerlink" href="#conclusiones" title="Permanent link"> #</a></h1>
 <p>En este artículo, hemos explorado la utilidad y aplicaciones prácticas de las funciones disponibles en las clases de McCabe-Thiele y SteamTable de fqlearn. La capacidad de visualizar de manera sencilla cálculos termodinámicos demuestra ser invaluable, especialmente para docentes que buscan simplificar la enseñanza y para alumnos que desean comprender de manera efectiva los conceptos termodinámicos. La combinación de estas herramientas en fqlearn proporciona una plataforma integral que facilita tanto la instrucción como el aprendizaje en el fascinante campo de la termodinámica.</p>
-<h2 id="repositorio-en-github">Repositorio en GitHub</h2>
+<h2 id="repositorio-en-github">Repositorio en GitHub<a class="headerlink" href="#repositorio-en-github" title="Permanent link"> #</a></h2>
 <p>No olvides que puedes consultar fqlearn en <a href="https://github.com/osl-pocs/fqlearn">Github</a></p>
-<h2 id="contacto">Contácto</h2>
+<h2 id="contacto">Contácto<a class="headerlink" href="#contacto" title="Permanent link"> #</a></h2>
 <p>El autor de este artículo se encuentra disponible en <a href="https://www.linkedin.com/in/josé-maría-garcía-márquez-556a75199/">LinkedIn</a>, en <a href="https://github.com/JoseMariaGarciaMarquez">Github</a>, y en su <a href="https://www.josemaria.me">página</a></p>
   </div>
 </div>

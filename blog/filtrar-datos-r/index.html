@@ -568,7 +568,7 @@ biblioteca de <code>dplyr</code>, específicamente veremos como usar las funcion
 ejemplo práctico.</p>
 <!-- TEASER_END -->
 
-<h2 id="requisitos">Requisitos</h2>
+<h2 id="requisitos">Requisitos<a class="headerlink" href="#requisitos" title="Permanent link"> #</a></h2>
 <p>Por comodidad usamos la biblioteca <code>pacman</code> como gestor de paquetes.</p>
 <pre><code class="language-r"># install.packages(&quot;pacman&quot;) Para instalar la biblioteca pacman
 library(pacman) # Gestor de paquetes en R
@@ -580,7 +580,7 @@ p_load(&quot;ggplot2&quot;)   # Biblioteca para graficar datos
 <p>Recuerde, que tambien puede instalar y abrir las bibliotecas de manera
 tradicional, por ejemplo con: <code>install.packages("readr")</code>, luego abrir la misma
 biblioteca con <code>library(readr)</code>.</p>
-<h2 id="importando-nuestros-datos">Importando nuestros datos</h2>
+<h2 id="importando-nuestros-datos">Importando nuestros datos<a class="headerlink" href="#importando-nuestros-datos" title="Permanent link"> #</a></h2>
 <p>La base de datos usada ha sido descargada de
 <a href="https://github.com/owid/covid-19-data">Our World In Data</a>, la cual muestra los
 datos recolectados de la reciente pandemia. Una vez descargada nuestra base de
@@ -606,7 +606,7 @@ date  (1): date
 por lo que se recomienda reducir las variables o extraer información relevante
 para nosotros. Si quiere explorar los datos manualmente puede ejecutar la
 función <code>(View(datos_covid))</code> en la consola.</p>
-<h2 id="como-usar-la-funcion-filter-y-select">Cómo usar la función filter() y select()</h2>
+<h2 id="como-usar-la-funcion-filter-y-select">Cómo usar la función filter() y select()<a class="headerlink" href="#como-usar-la-funcion-filter-y-select" title="Permanent link"> #</a></h2>
 <p>Queremos ver los datos de la región de Sudamérica (continent = "South America")
 y sólo las variables de país, fecha y nuevos casos que corresponderían a las
 columnas de location, date, new_cases respectivamente en el dataframe
@@ -655,7 +655,7 @@ columna para un nueva tabla.</p>
 <li><strong><code>nombre_col</code></strong> : Nombre de la columna o variable que va a componer la nueva
   tabla.</li>
 </ul>
-<h2 id="operador-pipe">Operador Pipe <code>%&gt;%</code></h2>
+<h2 id="operador-pipe">Operador Pipe <code>%&gt;%</code><a class="headerlink" href="#operador-pipe" title="Permanent link"> #</a></h2>
 <p>Este operador nos permite combinar muchas operaciones en una sóla línea, una
 simple cadena de comandos. Considere lo siguiente para entender el flujo de
 datos del operador Pipe <code>%&gt;%</code>.</p>
@@ -698,7 +698,7 @@ geom_line(aes(x = date, y = new_cases_smoothed, color = location), size = 0.5) +
 
 </code></pre>
 <p><img alt="Nuevos casos covid en Bolivia, Perú, Chile y Ecuador" src="covid_region.png" /></p>
-<h2 id="como-usar-summarise-y-group_by">Cómo usar summarise() y group_by()</h2>
+<h2 id="como-usar-summarise-y-group_by">Cómo usar summarise() y group_by()<a class="headerlink" href="#como-usar-summarise-y-group_by" title="Permanent link"> #</a></h2>
 <p>Si, queremos saber el total de contagiados y el total de días desde que se
 registraron los contagios podemos usar <code>summarize()</code></p>
 <pre><code class="language-r">summarise(
@@ -792,7 +792,7 @@ COVID-19 por continentes.</p>
   )
 </code></pre>
 <p><img alt="Nuevos casos covid por Continente" src="covid_continentes.png" /></p>
-<h2 id="para-que-sirve-la-funcion-mutate">Para que sirve la función mutate()</h2>
+<h2 id="para-que-sirve-la-funcion-mutate">Para que sirve la función mutate()<a class="headerlink" href="#para-que-sirve-la-funcion-mutate" title="Permanent link"> #</a></h2>
 <p>Una buen indicador, para saber si hemos mejorado el tratamiento y prevención
 contra la COVID-19 es hallar la relación entre el muertes por cada 1000
 contagiados (mientras menor valor tenga la variable, mejor estamos preparados
@@ -840,14 +840,14 @@ Crea una nuevas columnas las modifica a partir de los datos de otras columnas.</
   )
 </code></pre>
 <p><img alt="Relación muertes diarias por 1000 contagiados por Continente" src="covid_continentes_indicador.png" /></p>
-<h2 id="conclusiones">Conclusiones</h2>
+<h2 id="conclusiones">Conclusiones<a class="headerlink" href="#conclusiones" title="Permanent link"> #</a></h2>
 <p>Las funciones mostradas en el árticulo son las más usadas y permiten una mejor
 manipulación de datos en R. Como siempre es bueno revisar la
 <a href="https://www.rdocumentation.org">documentación oficial</a> de los correspondientes
 paquetes si se quiere aprender más.</p>
 <p>Puede descargar el
 <a href="https://github.com/EverVino/Example_data_covid_r">repositorio de este artículo aquí</a>.</p>
-<h2 id="referencias">Referencias</h2>
+<h2 id="referencias">Referencias<a class="headerlink" href="#referencias" title="Permanent link"> #</a></h2>
 <p><a href="https://github.com/owid/covid-19-data">Our World In Data</a></p>
 <p><a href="https://www.rdocumentation.org">Documentacion de R</a></p>
   </div>
