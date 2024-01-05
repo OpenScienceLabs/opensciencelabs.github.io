@@ -1512,7 +1512,7 @@ code{
   word-break:break-all
 }
 code.noClass{
-  --inlineColor: rgb(194, 29, 0);
+  --inlineColor: #d63384;
   color:var(--inlineColor);
   display:inline;
   line-break:anywhere
@@ -1563,11 +1563,12 @@ code.noClass{
   margin:0
 }
 .highlight pre{
-  color:var(--light) !important;
+  /* color:var(--light) !important; */
   border-radius:4px;
   font-family:'Monaco', monospace;
   padding-top:1.5rem;
-  padding-bottom:2rem
+  padding-bottom:2rem;
+  padding-left: 10px;
 }
 .highlight table{
   display:grid;
@@ -1755,5 +1756,49 @@ a.page-number.active {
 
 
 .highlight *{
-  color: white!important;
+  background: #44002e!important;
+}
+
+.highlight span.n,
+.highlight span.o {
+  color: #ff7b72;
+}
+
+.highlight span.fm {
+  color: #447fcf;
+}
+
+.highlight span.p {
+  color: white;
+}
+
+.highlight span.bp {
+  color: #ffa657;
+}
+
+.language-text.highlight *{
+  background-color: #333!important;
+}
+
+.language-text.highlight code.noClass{
+  --inlineColor: white!important;
+  color: var(--inlineColor)!important;
+}
+
+.language-text.highlight .output {
+  padding-bottom: 0px;
+}
+
+.code-output {
+  border-top: 10px solid #383838;
+}
+
+
+.code-label {
+  font-size: 18px;
+  border-bottom: 1px solid #fafafa;
+  line-height: 23.4px;
+  position: absolute;
+  right: 25px;
+  margin-top: 15px;
 }

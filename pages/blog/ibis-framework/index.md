@@ -63,153 +63,155 @@ df.head()
 
 
 
+
 <div>
 <style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+.dataframe tbody tr th:only-of-type {
+vertical-align: middle;
+}
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
+.dataframe tbody tr th {
+vertical-align: top;
+}
 
-    .dataframe thead th {
-        text-align: right;
-    }
+.dataframe thead th {
+text-align: right;
+}
 </style>
 <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>city</th>
-      <th>city_ibge_code</th>
-      <th>date</th>
-      <th>epidemiological_week</th>
-      <th>estimated_population</th>
-      <th>estimated_population_2019</th>
-      <th>is_last</th>
-      <th>is_repeated</th>
-      <th>last_available_confirmed</th>
-      <th>last_available_confirmed_per_100k_inhabitants</th>
-      <th>last_available_date</th>
-      <th>last_available_death_rate</th>
-      <th>last_available_deaths</th>
-      <th>order_for_place</th>
-      <th>place_type</th>
-      <th>state</th>
-      <th>new_confirmed</th>
-      <th>new_deaths</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Rio Branco</td>
-      <td>1200401.0</td>
-      <td>2020-03-17</td>
-      <td>202012</td>
-      <td>413418.0</td>
-      <td>407319.0</td>
-      <td>False</td>
-      <td>False</td>
-      <td>3</td>
-      <td>0.72566</td>
-      <td>2020-03-17</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>city</td>
-      <td>AC</td>
-      <td>3</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>NaN</td>
-      <td>12.0</td>
-      <td>2020-03-17</td>
-      <td>202012</td>
-      <td>894470.0</td>
-      <td>881935.0</td>
-      <td>False</td>
-      <td>False</td>
-      <td>3</td>
-      <td>0.33539</td>
-      <td>2020-03-17</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>state</td>
-      <td>AC</td>
-      <td>3</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Rio Branco</td>
-      <td>1200401.0</td>
-      <td>2020-03-18</td>
-      <td>202012</td>
-      <td>413418.0</td>
-      <td>407319.0</td>
-      <td>False</td>
-      <td>False</td>
-      <td>3</td>
-      <td>0.72566</td>
-      <td>2020-03-18</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>2</td>
-      <td>city</td>
-      <td>AC</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>NaN</td>
-      <td>12.0</td>
-      <td>2020-03-18</td>
-      <td>202012</td>
-      <td>894470.0</td>
-      <td>881935.0</td>
-      <td>False</td>
-      <td>False</td>
-      <td>3</td>
-      <td>0.33539</td>
-      <td>2020-03-18</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>2</td>
-      <td>state</td>
-      <td>AC</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Rio Branco</td>
-      <td>1200401.0</td>
-      <td>2020-03-19</td>
-      <td>202012</td>
-      <td>413418.0</td>
-      <td>407319.0</td>
-      <td>False</td>
-      <td>False</td>
-      <td>4</td>
-      <td>0.96754</td>
-      <td>2020-03-19</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>3</td>
-      <td>city</td>
-      <td>AC</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-  </tbody>
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>city</th>
+<th>city_ibge_code</th>
+<th>date</th>
+<th>epidemiological_week</th>
+<th>estimated_population</th>
+<th>estimated_population_2019</th>
+<th>is_last</th>
+<th>is_repeated</th>
+<th>last_available_confirmed</th>
+<th>last_available_confirmed_per_100k_inhabitants</th>
+<th>last_available_date</th>
+<th>last_available_death_rate</th>
+<th>last_available_deaths</th>
+<th>order_for_place</th>
+<th>place_type</th>
+<th>state</th>
+<th>new_confirmed</th>
+<th>new_deaths</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>Rio Branco</td>
+<td>1200401.0</td>
+<td>2020-03-17</td>
+<td>202012</td>
+<td>413418.0</td>
+<td>407319.0</td>
+<td>False</td>
+<td>False</td>
+<td>3</td>
+<td>0.72566</td>
+<td>2020-03-17</td>
+<td>0.0</td>
+<td>0</td>
+<td>1</td>
+<td>city</td>
+<td>AC</td>
+<td>3</td>
+<td>0</td>
+</tr>
+<tr>
+<th>1</th>
+<td>NaN</td>
+<td>12.0</td>
+<td>2020-03-17</td>
+<td>202012</td>
+<td>894470.0</td>
+<td>881935.0</td>
+<td>False</td>
+<td>False</td>
+<td>3</td>
+<td>0.33539</td>
+<td>2020-03-17</td>
+<td>0.0</td>
+<td>0</td>
+<td>1</td>
+<td>state</td>
+<td>AC</td>
+<td>3</td>
+<td>0</td>
+</tr>
+<tr>
+<th>2</th>
+<td>Rio Branco</td>
+<td>1200401.0</td>
+<td>2020-03-18</td>
+<td>202012</td>
+<td>413418.0</td>
+<td>407319.0</td>
+<td>False</td>
+<td>False</td>
+<td>3</td>
+<td>0.72566</td>
+<td>2020-03-18</td>
+<td>0.0</td>
+<td>0</td>
+<td>2</td>
+<td>city</td>
+<td>AC</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<th>3</th>
+<td>NaN</td>
+<td>12.0</td>
+<td>2020-03-18</td>
+<td>202012</td>
+<td>894470.0</td>
+<td>881935.0</td>
+<td>False</td>
+<td>False</td>
+<td>3</td>
+<td>0.33539</td>
+<td>2020-03-18</td>
+<td>0.0</td>
+<td>0</td>
+<td>2</td>
+<td>state</td>
+<td>AC</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<th>4</th>
+<td>Rio Branco</td>
+<td>1200401.0</td>
+<td>2020-03-19</td>
+<td>202012</td>
+<td>413418.0</td>
+<td>407319.0</td>
+<td>False</td>
+<td>False</td>
+<td>4</td>
+<td>0.96754</td>
+<td>2020-03-19</td>
+<td>0.0</td>
+<td>0</td>
+<td>3</td>
+<td>city</td>
+<td>AC</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
 </table>
 </div>
+
 
 
 
@@ -218,32 +220,42 @@ df.head()
 df.info()
 ```
 
-    <class 'pandas.core.frame.DataFrame'>
-    RangeIndex: 3853648 entries, 0 to 3853647
-    Data columns (total 18 columns):
-     #   Column                                         Dtype  
-    ---  ------                                         -----  
-     0   city                                           object 
-     1   city_ibge_code                                 float64
-     2   date                                           object 
-     3   epidemiological_week                           int64  
-     4   estimated_population                           float64
-     5   estimated_population_2019                      float64
-     6   is_last                                        bool   
-     7   is_repeated                                    bool   
-     8   last_available_confirmed                       int64  
-     9   last_available_confirmed_per_100k_inhabitants  float64
-     10  last_available_date                            object 
-     11  last_available_death_rate                      float64
-     12  last_available_deaths                          int64  
-     13  order_for_place                                int64  
-     14  place_type                                     object 
-     15  state                                          object 
-     16  new_confirmed                                  int64  
-     17  new_deaths                                     int64  
-    dtypes: bool(2), float64(5), int64(6), object(5)
-    memory usage: 477.8+ MB
+<div class="language-text highlight">
+<h3 class="code-label">
+  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
+  <i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output">
+  <code><span>
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 3853648 entries, 0 to 3853647
+Data columns (total 18 columns):
+#   Column                                         Dtype
+---  ------                                         -----
+0   city                                           object
+1   city_ibge_code                                 float64
+2   date                                           object
+3   epidemiological_week                           int64
+4   estimated_population                           float64
+5   estimated_population_2019                      float64
+6   is_last                                        bool
+7   is_repeated                                    bool
+8   last_available_confirmed                       int64
+9   last_available_confirmed_per_100k_inhabitants  float64
+10  last_available_date                            object
+11  last_available_death_rate                      float64
+12  last_available_deaths                          int64
+13  order_for_place                                int64
+14  place_type                                     object
+15  state                                          object
+16  new_confirmed                                  int64
+17  new_deaths                                     int64
+dtypes: bool(2), float64(5), int64(6), object(5)
+memory usage: 477.8+ MB
 
+</span></code>
+</pre>
+</div>
 
 E para demonstrar o verdadeiro poder do Ibis, iremos transformar nosso arquivo CSV em uma Base de Dados SQL. Na instalação padrão do Ibis, o backend SQL é o `sqlite3`, então nos exemplos a seguir utilizaremos SQLite para realizar buscas na base de dados. Caso queira utilizar outra Engine SQL, como [BigQuery](https://github.com/ibis-project/ibis-bigquery/) ou [Postgres](https://ibis-project.org/docs/3.1.0/backends/PostgreSQL/), acesse a [documentação oficial](https://ibis-project.org/docs/3.1.0/backends/PostgreSQL/) e siga instruções de instalação.
 
@@ -255,7 +267,17 @@ df.to_sql('casos_covid19_BR', sqlite3.connect('data/casof.db'))
 
 
 
-    3853648
+<div class="language-text highlight">
+<h3 class="code-label">
+  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
+  <i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output">
+  <code><span>
+3853648
+</span></code>
+</pre>
+</div>
 
 
 
@@ -294,9 +316,19 @@ print(data_min.execute()) # Dia da primeira entrada registrada na base de dados
 print(data_max.execute()) # Dia da última entrada registrada na base de dados
 ```
 
-    2020-02-25
-    2022-03-27
+<div class="language-text highlight">
+<h3 class="code-label">
+  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
+  <i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output">
+  <code><span>
+2020-02-25
+2022-03-27
 
+</span></code>
+</pre>
+</div>
 
 ## E por que usar Ibis ao invés das ferramentas SQL diretamente?
 
@@ -312,9 +344,19 @@ Por exemplo: já vimos que é possível criar buscas SQL através de expressões
 print(data_min.compile())
 ```
 
-    SELECT min(t0.date) AS first_entry 
-    FROM main."casos_covid19_BR" AS t0
+<div class="language-text highlight">
+<h3 class="code-label">
+  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
+  <i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output">
+  <code><span>
+SELECT min(t0.date) AS first_entry
+FROM main."casos_covid19_BR" AS t0
 
+</span></code>
+</pre>
+</div>
 
 Um dos pontos chave do Ibis, é a possibilidade de criar Expressões com o resultado de interesse, renomeá-las, e utilizá-las para outras buscas sem precisar repetir código:
 
@@ -348,9 +390,19 @@ epiweek_covid = casos.group_by('epidemiological_week').aggregate((
 print(epiweek_covid.compile())
 ```
 
-    SELECT t0.epidemiological_week, sum(t0.new_confirmed) AS total_new_cases, sum(t0.new_deaths) AS total_new_deaths 
-    FROM main."casos_covid19_BR" AS t0 GROUP BY t0.epidemiological_week
+<div class="language-text highlight">
+<h3 class="code-label">
+  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
+  <i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output">
+  <code><span>
+SELECT t0.epidemiological_week, sum(t0.new_confirmed) AS total_new_cases, sum(t0.new_deaths) AS total_new_deaths
+FROM main."casos_covid19_BR" AS t0 GROUP BY t0.epidemiological_week
 
+</span></code>
+</pre>
+</div>
 
 Lembra que o Ibis utiliza o Pandas como Backend de execução? Podemos agora salvar o Pandas DataFrame gerado na execução em uma variável para termos acesso às funções do Pandas:
 
@@ -363,63 +415,65 @@ df.head()
 
 
 
+
 <div>
 <style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+.dataframe tbody tr th:only-of-type {
+vertical-align: middle;
+}
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
+.dataframe tbody tr th {
+vertical-align: top;
+}
 
-    .dataframe thead th {
-        text-align: right;
-    }
+.dataframe thead th {
+text-align: right;
+}
 </style>
 <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>epidemiological_week</th>
-      <th>total_new_cases</th>
-      <th>total_new_deaths</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>202009</td>
-      <td>4</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>202010</td>
-      <td>33</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>202011</td>
-      <td>231</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>202012</td>
-      <td>1935</td>
-      <td>30</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>202013</td>
-      <td>5476</td>
-      <td>183</td>
-    </tr>
-  </tbody>
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>epidemiological_week</th>
+<th>total_new_cases</th>
+<th>total_new_deaths</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>202009</td>
+<td>4</td>
+<td>0</td>
+</tr>
+<tr>
+<th>1</th>
+<td>202010</td>
+<td>33</td>
+<td>0</td>
+</tr>
+<tr>
+<th>2</th>
+<td>202011</td>
+<td>231</td>
+<td>0</td>
+</tr>
+<tr>
+<th>3</th>
+<td>202012</td>
+<td>1935</td>
+<td>30</td>
+</tr>
+<tr>
+<th>4</th>
+<td>202013</td>
+<td>5476</td>
+<td>183</td>
+</tr>
+</tbody>
 </table>
 </div>
+
 
 
 
@@ -437,69 +491,71 @@ df.head()
 
 
 
+
 <div>
 <style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+.dataframe tbody tr th:only-of-type {
+vertical-align: middle;
+}
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
+.dataframe tbody tr th {
+vertical-align: top;
+}
 
-    .dataframe thead th {
-        text-align: right;
-    }
+.dataframe thead th {
+text-align: right;
+}
 </style>
 <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>year</th>
-      <th>week</th>
-      <th>total_new_cases</th>
-      <th>total_new_deaths</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>2020</td>
-      <td>09</td>
-      <td>4</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2020</td>
-      <td>10</td>
-      <td>33</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2020</td>
-      <td>11</td>
-      <td>231</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2020</td>
-      <td>12</td>
-      <td>1935</td>
-      <td>30</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2020</td>
-      <td>13</td>
-      <td>5476</td>
-      <td>183</td>
-    </tr>
-  </tbody>
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>year</th>
+<th>week</th>
+<th>total_new_cases</th>
+<th>total_new_deaths</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>2020</td>
+<td>09</td>
+<td>4</td>
+<td>0</td>
+</tr>
+<tr>
+<th>1</th>
+<td>2020</td>
+<td>10</td>
+<td>33</td>
+<td>0</td>
+</tr>
+<tr>
+<th>2</th>
+<td>2020</td>
+<td>11</td>
+<td>231</td>
+<td>0</td>
+</tr>
+<tr>
+<th>3</th>
+<td>2020</td>
+<td>12</td>
+<td>1935</td>
+<td>30</td>
+</tr>
+<tr>
+<th>4</th>
+<td>2020</td>
+<td>13</td>
+<td>5476</td>
+<td>183</td>
+</tr>
+</tbody>
 </table>
 </div>
+
 
 
 
@@ -565,9 +621,19 @@ print(percentage_cases.compile().compile(
                                 compile_kwargs={"literal_binds": True}))
 ```
 
-    SELECT (t0.new_confirmed / t0.estimated_population) * 100 AS porc_cases 
-    FROM main."casos_covid19_BR" AS t0
+<div class="language-text highlight">
+<h3 class="code-label">
+  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
+  <i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output">
+  <code><span>
+SELECT (t0.new_confirmed / t0.estimated_population) * 100 AS porc_cases
+FROM main."casos_covid19_BR" AS t0
 
+</span></code>
+</pre>
+</div>
 
 
 ```python
@@ -576,9 +642,19 @@ print(south_br.compile().compile(
                                 compile_kwargs={"literal_binds": True}))
 ```
 
-    SELECT CASE WHEN (t0.state = 'SC') THEN 'Santa Catarina' WHEN (t0.state = 'RS') THEN 'Rio Grande do Sul' WHEN (t0.state = 'PR') THEN 'Parana' ELSE CAST(NULL AS TEXT) END AS "Regiao Sul" 
-    FROM main."casos_covid19_BR" AS t0
+<div class="language-text highlight">
+<h3 class="code-label">
+  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
+  <i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output">
+  <code><span>
+SELECT CASE WHEN (t0.state = 'SC') THEN 'Santa Catarina' WHEN (t0.state = 'RS') THEN 'Rio Grande do Sul' WHEN (t0.state = 'PR') THEN 'Parana' ELSE CAST(NULL AS TEXT) END AS "Regiao Sul"
+FROM main."casos_covid19_BR" AS t0
 
+</span></code>
+</pre>
+</div>
 
 Agora que temos a porcentagem de casos e a região separadas em duas variáveis, podemos agregar as buscas e encontrar as porcentagem de casos nos estados em questão e retorná-lo em Dataframe:
 
@@ -589,11 +665,21 @@ sul = casos.group_by(south_br).aggregate(percentage_cases.mean().name('Media Cas
 print(sul.compile().compile(compile_kwargs={"literal_binds": True}))
 ```
 
-    SELECT t0."Regiao Sul", t0."Media Casos" 
-    FROM (SELECT CASE WHEN (t1.state = 'SC') THEN 'Santa Catarina' WHEN (t1.state = 'RS') THEN 'Rio Grande do Sul' WHEN (t1.state = 'PR') THEN 'Parana' ELSE CAST(NULL AS TEXT) END AS "Regiao Sul", avg((t1.new_confirmed / t1.estimated_population) * 100) AS "Media Casos" 
-    FROM main."casos_covid19_BR" AS t1 GROUP BY CASE WHEN (t1.state = 'SC') THEN 'Santa Catarina' WHEN (t1.state = 'RS') THEN 'Rio Grande do Sul' WHEN (t1.state = 'PR') THEN 'Parana' ELSE CAST(NULL AS TEXT) END) AS t0 
-    WHERE t0."Regiao Sul" IS NOT NULL AND t0."Media Casos" IS NOT NULL
+<div class="language-text highlight">
+<h3 class="code-label">
+  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
+  <i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output">
+  <code><span>
+SELECT t0."Regiao Sul", t0."Media Casos"
+FROM (SELECT CASE WHEN (t1.state = 'SC') THEN 'Santa Catarina' WHEN (t1.state = 'RS') THEN 'Rio Grande do Sul' WHEN (t1.state = 'PR') THEN 'Parana' ELSE CAST(NULL AS TEXT) END AS "Regiao Sul", avg((t1.new_confirmed / t1.estimated_population) * 100) AS "Media Casos"
+FROM main."casos_covid19_BR" AS t1 GROUP BY CASE WHEN (t1.state = 'SC') THEN 'Santa Catarina' WHEN (t1.state = 'RS') THEN 'Rio Grande do Sul' WHEN (t1.state = 'PR') THEN 'Parana' ELSE CAST(NULL AS TEXT) END) AS t0
+WHERE t0."Regiao Sul" IS NOT NULL AND t0."Media Casos" IS NOT NULL
 
+</span></code>
+</pre>
+</div>
 
 
 ```python
@@ -604,47 +690,49 @@ sul.execute()
 
 
 
+
 <div>
 <style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+.dataframe tbody tr th:only-of-type {
+vertical-align: middle;
+}
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
+.dataframe tbody tr th {
+vertical-align: top;
+}
 
-    .dataframe thead th {
-        text-align: right;
-    }
+.dataframe thead th {
+text-align: right;
+}
 </style>
 <table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Regiao Sul</th>
-      <th>Media Casos</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Parana</td>
-      <td>0.018670</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Rio Grande do Sul</td>
-      <td>0.028637</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Santa Catarina</td>
-      <td>0.029332</td>
-    </tr>
-  </tbody>
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Regiao Sul</th>
+<th>Media Casos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>Parana</td>
+<td>0.018670</td>
+</tr>
+<tr>
+<th>1</th>
+<td>Rio Grande do Sul</td>
+<td>0.028637</td>
+</tr>
+<tr>
+<th>2</th>
+<td>Santa Catarina</td>
+<td>0.029332</td>
+</tr>
+</tbody>
 </table>
 </div>
+
 
 
 
