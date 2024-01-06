@@ -603,8 +603,8 @@ instalar Git en tu computadora. Simplemente descárgalo desde
 https://git-scm.com/, o, si estás usando Linux, instálalo mediante el gestor de
 paquetes de tu distribución buscando el paquete git. Después podrás usarlo en la
 línea de comandos. Verifica si se instaló correctamente ejecutando</p>
-<pre><code>git –-help
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git –-help
+</span></code></pre></div>
 <h2 id="4-clona-un-repositorio">4. Clona un repositorio<a class="headerlink" href="#4-clona-un-repositorio" title="Permanent link"> #</a></h2>
 <p>Cuando creas un repositorio Git, automáticamente se crea una carpeta oculta
 <code>.git</code> con información de los archivos y ramas de tu repositorio, los cambios a
@@ -612,27 +612,26 @@ estos y el último commit. Tu repositorio en Github también contiene esta
 carpeta, así que, para ahorrarte un dolor de cabeza, deberías clonarlo (copiarlo
 en tu ordenador), ya sea descargándolo desde su página o en la línea de comandos
 escribiendo:</p>
-<pre><code>git clone https://github.com/(tu usuario)/(nombre del repositorio).git
-
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git clone https://github.com/(tu usuario)/(nombre del repositorio).git
+</span></code></pre></div>
 <p>También puedes copiar la URL del repositorio desde la página.</p>
 <h2 id="5-agrega-archivos-a-tu-repositorio-y-haz-tu-primer-commit">5. Agrega archivos a tu repositorio y haz tu primer commit<a class="headerlink" href="#5-agrega-archivos-a-tu-repositorio-y-haz-tu-primer-commit" title="Permanent link"> #</a></h2>
 <p>Cada vez que realizas cambios en tu repositorio (ya sea modificando, agregando o
 borrando archivos), deberás sincronizarlos haciendo lo que se conoce como un
 commit. Puedes utilizar los comandos:</p>
-<pre><code>git add {nombre de tu archivo}
-</code></pre>
-<pre><code>git rm {nombre de tu archivo}
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git add {nombre de tu archivo}
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git rm {nombre de tu archivo}
+</span></code></pre></div>
 <p>para hacer cambios en la copia local de tu repositorio, ya sea añadir y
 modificar o eliminar archivos, respectivamente. Antes de sincronizar los
 cambios, debes ‘empaquetarlos’ en un commit, mediante el comando</p>
-<pre><code>git commit -m “{descripción de los cambios}”
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git commit -m “{descripción de los cambios}”
+</span></code></pre></div>
 <p>Después podrás sincronizar ese commit con el servidor de Github utilizando el
 comando</p>
-<pre><code>git push origin master
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git push origin master
+</span></code></pre></div>
 <p>Con aplicaciones gráficas como Github Desktop u otra similar, podrás realizar
 estos cambios de una forma mucho más intuitiva.</p>
 <h2 id="6-maneja-distintas-ramas-de-tu-repositorio">6. Maneja distintas ramas de tu repositorio<a class="headerlink" href="#6-maneja-distintas-ramas-de-tu-repositorio" title="Permanent link"> #</a></h2>
@@ -643,41 +642,41 @@ cambios en tus archivos, para realizar pruebas sin afectar el funcionamiento del
 código alojado en la nube que ya sabes que funciona, puedes crear otra rama. Si
 los resultados son de tu agrado, podrás sincronizar ambas ramas más tarde.</p>
 <p>Para crear otra rama, simplemente ejecuta:</p>
-<pre><code>git checkout -b {nombre de tu rama}
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git checkout -b {nombre de tu rama}
+</span></code></pre></div>
 <p>Esto hará que, a partir de ahora, todos los cambios que realices a tus archivos
 sean parte de la rama que has creado.</p>
 <p>Si deseas sincronizar tu nueva rama con el servidor de Github, ejecutas:</p>
-<pre><code>git push origin {nombre de tu rama}
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>git push origin {nombre de tu rama}
+</span></code></pre></div>
 <p>Igual que para hacer cambios en master, deberás hacer un commit para sincronizar
 los cambios locales con el repositorio de Github.</p>
 <h2 id="7-realiza-un-merge">7. Realiza un merge<a class="headerlink" href="#7-realiza-un-merge" title="Permanent link"> #</a></h2>
 <p>El comando <code>git checkout</code> nos permite cambiar de rama dentro del repositorio.
 Puedes usarlo para volver a hacer cambios en la rama master con el siguiente
 comando:</p>
-<pre><code>git checkout master
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>git checkout master
+</span></code></pre></div>
 <p>Si estás satisfecho con los cambios que has hecho en la rama, puedes hacer un
 merge, lo que quiere decir que se fusionan los cambios hechos en la rama
 secundaria con los de la rama en la que estás ubicado actualmente (en este caso,
 master) de la siguiente manera:</p>
-<pre><code>git merge {rama con cambios}
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>git merge {rama con cambios}
+</span></code></pre></div>
 <p>Git intentará hacer este proceso automáticamente, pero puede ser que hayan
 conflictos entre ramas con los cambios hechos. En este caso, tendrás que editar
 los archivos que te muestra Git, y agregarlos manualmente ejecutando</p>
-<pre><code>git add {nombre de archivo}
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>git add {nombre de archivo}
+</span></code></pre></div>
 <h2 id="8-verifica-cambios-con-tu-copia-local">8. Verifica cambios con tu copia local<a class="headerlink" href="#8-verifica-cambios-con-tu-copia-local" title="Permanent link"> #</a></h2>
 <p>En caso de que tu copia local del repositorio no tenga los cambios hechos hasta
 el último commit en la rama que estás trabajando, puedes actualizarla ejecutando</p>
-<pre><code>git pull
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>git pull
+</span></code></pre></div>
 <p>Para ver los cambios que se han realizado entre las distintas ramas del
 repositorio, ejecuta el comando</p>
-<pre><code>git diff {rama fuente} {rama a comparar}
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>git diff {rama fuente} {rama a comparar}
+</span></code></pre></div>
 <p>También puedes ver la historia del repositorio (los commits hechos a lo largo
 del tiempo) usando el comando <code>git log</code>. Recomendamos que primero ejecutes
 <code>git log –help</code> para ver como puedes aprovechar mejor esta herramienta.</p>

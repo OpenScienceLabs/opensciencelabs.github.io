@@ -570,17 +570,15 @@ utilizaremos la biblioteca <code>tidyr</code> con sus funciones <code>gather()</
 
 <h2 id="requisitos">Requisitos<a class="headerlink" href="#requisitos" title="Permanent link"> #</a></h2>
 <p>Por comodidad usamos la biblioteca <code>pacman</code> como gestor de paquetes.</p>
-<pre><code class="language-r">
-# install.packages(&quot;pacman&quot;) Para instalar la biblioteca pacman
-library(pacman) # Gestor de paquetes en R
-p_load(&quot;readr&quot;) # Biblioteca para importar archivos csv
-p_load(&quot;tidyr&quot;) # Biblioteca para manipular datos
-p_load(&quot;ggplot2&quot;)   # Biblioteca para graficar datos
-p_load(&quot;dplyr&quot;)  # Biblioteca para filtrar datos de la tabla
-p_load(&quot;zoo&quot;) # Biblioteca para transformar fechas a trimestres
-p_load(&quot;scales&quot;) # Biblioteca para dar formato de miles en el eje &quot;y&quot;
-
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># install.packages(&quot;pacman&quot;) Para instalar la biblioteca pacman</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nf">library</span><span class="p">(</span><span class="n">pacman</span><span class="p">)</span><span class="w"> </span><span class="c1"># Gestor de paquetes en R</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nf">p_load</span><span class="p">(</span><span class="s">&quot;readr&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1"># Biblioteca para importar archivos csv</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nf">p_load</span><span class="p">(</span><span class="s">&quot;tidyr&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1"># Biblioteca para manipular datos</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nf">p_load</span><span class="p">(</span><span class="s">&quot;ggplot2&quot;</span><span class="p">)</span><span class="w">   </span><span class="c1"># Biblioteca para graficar datos</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nf">p_load</span><span class="p">(</span><span class="s">&quot;dplyr&quot;</span><span class="p">)</span><span class="w">  </span><span class="c1"># Biblioteca para filtrar datos de la tabla</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nf">p_load</span><span class="p">(</span><span class="s">&quot;zoo&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1"># Biblioteca para transformar fechas a trimestres</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nf">p_load</span><span class="p">(</span><span class="s">&quot;scales&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1"># Biblioteca para dar formato de miles en el eje &quot;y&quot;</span>
+</span></code></pre></div>
 <p>Recuerda, también puedes instalar y abrir las bibliotecas de manera tradicional,
 por ejemplo con: <code>install.packages("tidyr")</code>, luego abrir la misma biblioteca
 con <code>library(tidyr)</code>.</p>
@@ -592,22 +590,18 @@ encuentren en formato <code>.csv</code> y los importamos a nuestro entorno de R.
 <p>Puedes descargar los archivos usados en este artículo
 <a href="https://github.com/EverVino/Example_data_tidyr">aquí</a>.</p>
 <p>Importamos el archivo <code>.csv</code> a la variable <code>datos_turistas</code>.</p>
-<pre><code class="language-r">
-covid_data &lt;- read_csv(&quot;turistas.csv&quot;)
-
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">covid_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;turistas.csv&quot;</span><span class="p">)</span>
+</span></code></pre></div>
 <p>En la consola observamos lo siguiente:</p>
-<pre><code class="language-r">
-Rows: 44 Columns: 169
-── Column specification ───────────────────────────────────────────────────────────────
-Delimiter: &quot;,&quot;
-chr   (1): Nacionalidad
-dbl (168): 31/01/08, 28/02/08, 31/03/08, 30/04/08, 31/05/08, 30/06/08, 31/07/08, 31...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">Rows</span><span class="o">:</span><span class="w"> </span><span class="m">44</span><span class="w"> </span><span class="n">Columns</span><span class="o">:</span><span class="w"> </span><span class="m">169</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>──<span class="w"> </span><span class="n">Column</span><span class="w"> </span><span class="n">specification</span><span class="w"> </span>───────────────────────────────────────────────────────────────
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">Delimiter</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;,&quot;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nf">chr   </span><span class="p">(</span><span class="m">1</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="n">Nacionalidad</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nf">dbl </span><span class="p">(</span><span class="m">168</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="m">31</span><span class="o">/</span><span class="m">01</span><span class="o">/</span><span class="m">08</span><span class="p">,</span><span class="w"> </span><span class="m">28</span><span class="o">/</span><span class="m">02</span><span class="o">/</span><span class="m">08</span><span class="p">,</span><span class="w"> </span><span class="m">31</span><span class="o">/</span><span class="m">03</span><span class="o">/</span><span class="m">08</span><span class="p">,</span><span class="w"> </span><span class="m">30</span><span class="o">/</span><span class="m">04</span><span class="o">/</span><span class="m">08</span><span class="p">,</span><span class="w"> </span><span class="m">31</span><span class="o">/</span><span class="m">05</span><span class="o">/</span><span class="m">08</span><span class="p">,</span><span class="w"> </span><span class="m">30</span><span class="o">/</span><span class="m">06</span><span class="o">/</span><span class="m">08</span><span class="p">,</span><span class="w"> </span><span class="m">31</span><span class="o">/</span><span class="m">07</span><span class="o">/</span><span class="m">08</span><span class="p">,</span><span class="w"> </span><span class="m">31</span><span class="kc">...</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>ℹ<span class="w"> </span><span class="n">Use</span><span class="w"> </span><span class="n">`spec()`</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">retrieve</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">full</span><span class="w"> </span><span class="n">column</span><span class="w"> </span><span class="n">specification</span><span class="w"> </span><span class="n">for</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">data.</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>ℹ<span class="w"> </span><span class="n">Specify</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">column</span><span class="w"> </span><span class="n">types</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="n">`show_col_types = FALSE`</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">quiet</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">message.</span>
+</span></code></pre></div>
 <p>Nuestra tabla tiene varias columnas correspondientes al acumulativo por mes, si
 queremos graficar estos datos, <code>ggplot()</code> no nos será de mucha utilidad. Por
 ello vamos a usar <code>gather()</code> para convertir las fechas de las columnas en datos
@@ -620,43 +614,37 @@ como se muestra en la siguiente animación.</p>
 <p><img alt="Fucionamiento de gather de tidyr()" src="https://user-images.githubusercontent.com/209714/48026738-e9a06a80-e114-11e8-9a24-ecc8b37b8a53.gif" /></p>
 <p>En nuestro caso queremos hacer algo similar, agrupar las fechas en una columna
 llamada <code>Fecha</code>.</p>
-<pre><code class="language-r">
-# A tibble: 6 × 169
-  Nacionalidad   `31/01/08` `28/02/08` `31/03/08` `30/04/08` `31/05/08` `30/06/08`
-  &lt;chr&gt;               &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;
-1 Estados Unidos       2795       2365       2055       2258       2058       4141
-2 Argentina            2304       1603       1780        869       2534       1293
-3 Brasil               2996       3041       1499       3215        964       1128
-4 Chile                1323       1195       1021       1115        754       1076
-5 España               1050        875        721        727        744        670
-6 Perú                 1141        909        841        806        661       1438
-# … with 162 more variables …
-
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># A tibble: 6 × 169</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="n">Nacionalidad</span><span class="w">   </span><span class="n">`31/01/08`</span><span class="w"> </span><span class="n">`28/02/08`</span><span class="w"> </span><span class="n">`31/03/08`</span><span class="w"> </span><span class="n">`30/04/08`</span><span class="w"> </span><span class="n">`31/05/08`</span><span class="w"> </span><span class="n">`30/06/08`</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="o">&lt;</span><span class="n">chr</span><span class="o">&gt;</span><span class="w">               </span><span class="o">&lt;</span><span class="n">dbl</span><span class="o">&gt;</span><span class="w">      </span><span class="o">&lt;</span><span class="n">dbl</span><span class="o">&gt;</span><span class="w">      </span><span class="o">&lt;</span><span class="n">dbl</span><span class="o">&gt;</span><span class="w">      </span><span class="o">&lt;</span><span class="n">dbl</span><span class="o">&gt;</span><span class="w">      </span><span class="o">&lt;</span><span class="n">dbl</span><span class="o">&gt;</span><span class="w">      </span><span class="o">&lt;</span><span class="n">dbl</span><span class="o">&gt;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="m">1</span><span class="w"> </span><span class="n">Estados</span><span class="w"> </span><span class="n">Unidos</span><span class="w">       </span><span class="m">2795</span><span class="w">       </span><span class="m">2365</span><span class="w">       </span><span class="m">2055</span><span class="w">       </span><span class="m">2258</span><span class="w">       </span><span class="m">2058</span><span class="w">       </span><span class="m">4141</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="m">2</span><span class="w"> </span><span class="n">Argentina</span><span class="w">            </span><span class="m">2304</span><span class="w">       </span><span class="m">1603</span><span class="w">       </span><span class="m">1780</span><span class="w">        </span><span class="m">869</span><span class="w">       </span><span class="m">2534</span><span class="w">       </span><span class="m">1293</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="m">3</span><span class="w"> </span><span class="n">Brasil</span><span class="w">               </span><span class="m">2996</span><span class="w">       </span><span class="m">3041</span><span class="w">       </span><span class="m">1499</span><span class="w">       </span><span class="m">3215</span><span class="w">        </span><span class="m">964</span><span class="w">       </span><span class="m">1128</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="m">4</span><span class="w"> </span><span class="n">Chile</span><span class="w">                </span><span class="m">1323</span><span class="w">       </span><span class="m">1195</span><span class="w">       </span><span class="m">1021</span><span class="w">       </span><span class="m">1115</span><span class="w">        </span><span class="m">754</span><span class="w">       </span><span class="m">1076</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="m">5</span><span class="w"> </span><span class="n">España</span><span class="w">               </span><span class="m">1050</span><span class="w">        </span><span class="m">875</span><span class="w">        </span><span class="m">721</span><span class="w">        </span><span class="m">727</span><span class="w">        </span><span class="m">744</span><span class="w">        </span><span class="m">670</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="m">6</span><span class="w"> </span><span class="n">Perú</span><span class="w">                 </span><span class="m">1141</span><span class="w">        </span><span class="m">909</span><span class="w">        </span><span class="m">841</span><span class="w">        </span><span class="m">806</span><span class="w">        </span><span class="m">661</span><span class="w">       </span><span class="m">1438</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="c1"># … with 162 more variables …</span>
+</span></code></pre></div>
 <p>Usando la función <code>gather()</code> tenemos:</p>
-<pre><code class="language-r">
-datos_turistas &lt;-
-  gather(data = datos_turistas,
-         key = Fecha,
-         value = Turistas,
-         2:ncol(datos_turistas))
-
-# ncol(tabla) Devuelve el número de columnas de tabla
-
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">datos_turistas</span><span class="w"> </span><span class="o">&lt;-</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nf">gather</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">datos_turistas</span><span class="p">,</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">         </span><span class="n">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Fecha</span><span class="p">,</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">         </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Turistas</span><span class="p">,</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">         </span><span class="m">2</span><span class="o">:</span><span class="nf">ncol</span><span class="p">(</span><span class="n">datos_turistas</span><span class="p">))</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># ncol(tabla) Devuelve el número de columnas de tabla</span>
+</span></code></pre></div>
 <p>Ejecutando <code>head(datos_turistas)</code>, notamos que hemos obtenido lo deseado.</p>
-<pre><code class="language-r">
-# A tibble: 6 × 3
-  Nacionalidad   Fecha    Turistas
-  &lt;chr&gt;          &lt;chr&gt;       &lt;dbl&gt;
-1 Estados Unidos 31/01/08     2795
-2 Argentina      31/01/08     2304
-3 Brasil         31/01/08     2996
-4 Chile          31/01/08     1323
-5 España         31/01/08     1050
-6 Perú           31/01/08     1141
-
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># A tibble: 6 × 3</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="n">Nacionalidad</span><span class="w">   </span><span class="n">Fecha</span><span class="w">    </span><span class="n">Turistas</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="o">&lt;</span><span class="n">chr</span><span class="o">&gt;</span><span class="w">          </span><span class="o">&lt;</span><span class="n">chr</span><span class="o">&gt;</span><span class="w">       </span><span class="o">&lt;</span><span class="n">dbl</span><span class="o">&gt;</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="m">1</span><span class="w"> </span><span class="n">Estados</span><span class="w"> </span><span class="n">Unidos</span><span class="w"> </span><span class="m">31</span><span class="o">/</span><span class="m">01</span><span class="o">/</span><span class="m">08</span><span class="w">     </span><span class="m">2795</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="m">2</span><span class="w"> </span><span class="n">Argentina</span><span class="w">      </span><span class="m">31</span><span class="o">/</span><span class="m">01</span><span class="o">/</span><span class="m">08</span><span class="w">     </span><span class="m">2304</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="m">3</span><span class="w"> </span><span class="n">Brasil</span><span class="w">         </span><span class="m">31</span><span class="o">/</span><span class="m">01</span><span class="o">/</span><span class="m">08</span><span class="w">     </span><span class="m">2996</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="m">4</span><span class="w"> </span><span class="n">Chile</span><span class="w">          </span><span class="m">31</span><span class="o">/</span><span class="m">01</span><span class="o">/</span><span class="m">08</span><span class="w">     </span><span class="m">1323</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="m">5</span><span class="w"> </span><span class="n">España</span><span class="w">         </span><span class="m">31</span><span class="o">/</span><span class="m">01</span><span class="o">/</span><span class="m">08</span><span class="w">     </span><span class="m">1050</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="m">6</span><span class="w"> </span><span class="n">Perú</span><span class="w">           </span><span class="m">31</span><span class="o">/</span><span class="m">01</span><span class="o">/</span><span class="m">08</span><span class="w">     </span><span class="m">1141</span>
+</span></code></pre></div>
 <p><strong><code>gather(data, key, value, ...)</code></strong></p>
 <p>Función que es usada para agrupar columnas en dos nuevas columnas.</p>
 <ul>
@@ -674,30 +662,26 @@ datos_turistas &lt;-
 <h2 id="separa-una-columna-con-separate">Separa una columna con <code>separate()</code><a class="headerlink" href="#separa-una-columna-con-separate" title="Permanent link"> #</a></h2>
 <p>Para ejemplificar el operador <code>separate()</code> vamos a separar la columna <code>Fecha</code> en
 las columnas <code>día</code>, <code>mes</code> y <code>año</code>.</p>
-<pre><code class="language-r">
-datos_turistas &lt;-
-  separate(datos_turistas,
-    col = Fecha,
-    into = c(&quot;día&quot;, &quot;mes&quot;, &quot;año&quot;),
-    sep = &quot;/&quot;,
-    remove = FALSE
-  )
-
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">datos_turistas</span><span class="w"> </span><span class="o">&lt;-</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nf">separate</span><span class="p">(</span><span class="n">datos_turistas</span><span class="p">,</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Fecha</span><span class="p">,</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="n">into</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;día&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;mes&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;año&quot;</span><span class="p">),</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;/&quot;</span><span class="p">,</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="n">remove</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">  </span><span class="p">)</span>
+</span></code></pre></div>
 <p>Podemos observar en la consola.</p>
-<pre><code class="language-r">
-&gt; head(datos_turistas)
-# A tibble: 6 × 6
-  Nacionalidad   Fecha    día   mes   año   Turistas
-  &lt;chr&gt;          &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;    &lt;dbl&gt;
-1 Estados Unidos 31/01/08 31    01    08        2795
-2 Argentina      31/01/08 31    01    08        2304
-3 Brasil         31/01/08 31    01    08        2996
-4 Chile          31/01/08 31    01    08        1323
-5 España         31/01/08 31    01    08        1050
-6 Perú           31/01/08 31    01    08        1141
-
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="o">&gt;</span><span class="w"> </span><span class="nf">head</span><span class="p">(</span><span class="n">datos_turistas</span><span class="p">)</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="c1"># A tibble: 6 × 6</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="n">Nacionalidad</span><span class="w">   </span><span class="n">Fecha</span><span class="w">    </span><span class="n">día</span><span class="w">   </span><span class="n">mes</span><span class="w">   </span><span class="n">año</span><span class="w">   </span><span class="n">Turistas</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="o">&lt;</span><span class="n">chr</span><span class="o">&gt;</span><span class="w">          </span><span class="o">&lt;</span><span class="n">chr</span><span class="o">&gt;</span><span class="w">    </span><span class="o">&lt;</span><span class="n">chr</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">chr</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">chr</span><span class="o">&gt;</span><span class="w">    </span><span class="o">&lt;</span><span class="n">dbl</span><span class="o">&gt;</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="m">1</span><span class="w"> </span><span class="n">Estados</span><span class="w"> </span><span class="n">Unidos</span><span class="w"> </span><span class="m">31</span><span class="o">/</span><span class="m">01</span><span class="o">/</span><span class="m">08</span><span class="w"> </span><span class="m">31</span><span class="w">    </span><span class="m">01</span><span class="w">    </span><span class="m">08</span><span class="w">        </span><span class="m">2795</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="m">2</span><span class="w"> </span><span class="n">Argentina</span><span class="w">      </span><span class="m">31</span><span class="o">/</span><span class="m">01</span><span class="o">/</span><span class="m">08</span><span class="w"> </span><span class="m">31</span><span class="w">    </span><span class="m">01</span><span class="w">    </span><span class="m">08</span><span class="w">        </span><span class="m">2304</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="m">3</span><span class="w"> </span><span class="n">Brasil</span><span class="w">         </span><span class="m">31</span><span class="o">/</span><span class="m">01</span><span class="o">/</span><span class="m">08</span><span class="w"> </span><span class="m">31</span><span class="w">    </span><span class="m">01</span><span class="w">    </span><span class="m">08</span><span class="w">        </span><span class="m">2996</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="m">4</span><span class="w"> </span><span class="n">Chile</span><span class="w">          </span><span class="m">31</span><span class="o">/</span><span class="m">01</span><span class="o">/</span><span class="m">08</span><span class="w"> </span><span class="m">31</span><span class="w">    </span><span class="m">01</span><span class="w">    </span><span class="m">08</span><span class="w">        </span><span class="m">1323</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="m">5</span><span class="w"> </span><span class="n">España</span><span class="w">         </span><span class="m">31</span><span class="o">/</span><span class="m">01</span><span class="o">/</span><span class="m">08</span><span class="w"> </span><span class="m">31</span><span class="w">    </span><span class="m">01</span><span class="w">    </span><span class="m">08</span><span class="w">        </span><span class="m">1050</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="m">6</span><span class="w"> </span><span class="n">Perú</span><span class="w">           </span><span class="m">31</span><span class="o">/</span><span class="m">01</span><span class="o">/</span><span class="m">08</span><span class="w"> </span><span class="m">31</span><span class="w">    </span><span class="m">01</span><span class="w">    </span><span class="m">08</span><span class="w">        </span><span class="m">1141</span>
+</span></code></pre></div>
 <p><strong><code>separate(data, col, into, sep, remove)</code></strong></p>
 <p>Función que es usada para separar una columna en varias.</p>
 <ul>
@@ -716,72 +700,66 @@ que han visitado Bolivia en los años 2016-2021.</p>
 <p>En el código abajo usamos muchas funciones de la biblioteca <code>dplyr</code> si quieres
 aprender más sobre esa biblioteca lee
 <a href="/blog/filtrar-datos-r/filtrar-datos-r/">este artículo</a>.</p>
-<pre><code class="language-r">
-# Añadimos &quot;20&quot; al año y lo convertimos a variable entera.
-datos_turistas$año &lt;-
-  as.integer(paste(&quot;20&quot;, datos_turistas$año, sep = &quot;&quot;))
-
-# Filtramos por año
-datos_turistas_2016_2021 &lt;-
-  datos_turistas %&gt;%
-  filter(as.integer(año) &gt;= 2016, na.rm =TRUE)
-
-# Agrupando por Nacionalidad y año
-datos_turistas_2016_2021 &lt;-
-  datos_turistas_2016_2021 %&gt;%
-  group_by(Nacionalidad, año) %&gt;%
-  summarise(turistas_anuales = sum(Turistas))
-
-# Extrayendo los top turistas visitantes de Bolivia
-top_turistas_2016_2021 &lt;-
-  datos_turistas_2016_2021 %&gt;%
-  arrange(desc(turistas_anuales)) %&gt;%
-  group_by(año) %&gt;%
-  slice(1:7)
-
-# Graficando con ggplot2
-ggplot(data = top_turistas_2016_2021) +
-  geom_bar(
-    aes(x = año, y = turistas_anuales, fill = Nacionalidad),
-    stat = &quot;identity&quot;,
-    alpha = 0.8
-  ) +
-  theme_minimal() + scale_fill_brewer(palette = &quot;Paired&quot;) +
-  scale_x_continuous(breaks = c(2016:2021)) +
-  scale_y_continuous(labels = comma_format(big.mark = &quot; &quot;)) +
-  labs(
-    x = &quot;&quot;,
-    y = &quot;&quot;,
-    fill = &quot;Nacionalidad&quot;,
-    title = &quot;Viajeros llegados por avión a Bolivia 2016-2021&quot;,
-    subtitle = &quot;Top 7 nacionalidades por año&quot;,
-    caption = &quot;Fuente: INE Bolivia&quot;
-  )
-
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Añadimos &quot;20&quot; al año y lo convertimos a variable entera.</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">datos_turistas</span><span class="o">$</span><span class="n">año</span><span class="w"> </span><span class="o">&lt;-</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span><span class="nf">as.integer</span><span class="p">(</span><span class="nf">paste</span><span class="p">(</span><span class="s">&quot;20&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">datos_turistas</span><span class="o">$</span><span class="n">año</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">))</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="c1"># Filtramos por año</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="n">datos_turistas_2016_2021</span><span class="w"> </span><span class="o">&lt;-</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">  </span><span class="n">datos_turistas</span><span class="w"> </span><span class="o">%&gt;%</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="nf">as.integer</span><span class="p">(</span><span class="n">año</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="m">2016</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="c1"># Agrupando por Nacionalidad y año</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="n">datos_turistas_2016_2021</span><span class="w"> </span><span class="o">&lt;-</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">  </span><span class="n">datos_turistas_2016_2021</span><span class="w"> </span><span class="o">%&gt;%</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">Nacionalidad</span><span class="p">,</span><span class="w"> </span><span class="n">año</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">  </span><span class="nf">summarise</span><span class="p">(</span><span class="n">turistas_anuales</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">Turistas</span><span class="p">))</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="c1"># Extrayendo los top turistas visitantes de Bolivia</span>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="n">top_turistas_2016_2021</span><span class="w"> </span><span class="o">&lt;-</span>
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">  </span><span class="n">datos_turistas_2016_2021</span><span class="w"> </span><span class="o">%&gt;%</span>
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="w">  </span><span class="nf">arrange</span><span class="p">(</span><span class="nf">desc</span><span class="p">(</span><span class="n">turistas_anuales</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span>
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">año</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="w">  </span><span class="nf">slice</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">7</span><span class="p">)</span>
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>
+</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="c1"># Graficando con ggplot2</span>
+</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">top_turistas_2016_2021</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="w">  </span><span class="nf">geom_bar</span><span class="p">(</span>
+</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="w">    </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">año</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">turistas_anuales</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Nacionalidad</span><span class="p">),</span>
+</span><span id="__span-8-27"><a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="w">    </span><span class="n">stat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;identity&quot;</span><span class="p">,</span>
+</span><span id="__span-8-28"><a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a><span class="w">    </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.8</span>
+</span><span id="__span-8-29"><a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a><span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-8-30"><a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a><span class="w">  </span><span class="nf">theme_minimal</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">scale_fill_brewer</span><span class="p">(</span><span class="n">palette</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Paired&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-8-31"><a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a><span class="w">  </span><span class="nf">scale_x_continuous</span><span class="p">(</span><span class="n">breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">2016</span><span class="o">:</span><span class="m">2021</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-8-32"><a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a><span class="w">  </span><span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">comma_format</span><span class="p">(</span><span class="n">big.mark</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-8-33"><a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a><span class="w">  </span><span class="nf">labs</span><span class="p">(</span>
+</span><span id="__span-8-34"><a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span>
+</span><span id="__span-8-35"><a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a><span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span>
+</span><span id="__span-8-36"><a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a><span class="w">    </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Nacionalidad&quot;</span><span class="p">,</span>
+</span><span id="__span-8-37"><a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a><span class="w">    </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Viajeros llegados por avión a Bolivia 2016-2021&quot;</span><span class="p">,</span>
+</span><span id="__span-8-38"><a id="__codelineno-8-38" name="__codelineno-8-38" href="#__codelineno-8-38"></a><span class="w">    </span><span class="n">subtitle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Top 7 nacionalidades por año&quot;</span><span class="p">,</span>
+</span><span id="__span-8-39"><a id="__codelineno-8-39" name="__codelineno-8-39" href="#__codelineno-8-39"></a><span class="w">    </span><span class="n">caption</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Fuente: INE Bolivia&quot;</span>
+</span><span id="__span-8-40"><a id="__codelineno-8-40" name="__codelineno-8-40" href="#__codelineno-8-40"></a><span class="w">  </span><span class="p">)</span>
+</span></code></pre></div>
 <p><img alt="Cantidad de viajeros llegados por avión a Bolivia 2016-2021" src="Viajeros_2016_2021.jpeg" /></p>
 <h2 id="funcion-unite">Función <code>unite()</code><a class="headerlink" href="#funcion-unite" title="Permanent link"> #</a></h2>
 <p>Unite es una función complementaria a <code>separate()</code> y hace lo contrario, une las
 columnas en un sola. Vamos a usarlo para juntar las columnas de <code>mes</code> y <code>año</code>.</p>
-<pre><code class="language-r">
-datos_turistas_trimestre &lt;-
-  unite(datos_turistas, mes_año, c(&quot;mes&quot;,&quot;año&quot;), sep = &quot;-&quot;)
-
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">datos_turistas_trimestre</span><span class="w"> </span><span class="o">&lt;-</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="nf">unite</span><span class="p">(</span><span class="n">datos_turistas</span><span class="p">,</span><span class="w"> </span><span class="n">mes_año</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;mes&quot;</span><span class="p">,</span><span class="s">&quot;año&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;-&quot;</span><span class="p">)</span>
+</span></code></pre></div>
 <p>Observando en la consola:</p>
-<pre><code class="language-r">
-&gt; head(datos_turistas_trimestre)
-# A tibble: 6 × 5
-  Nacionalidad   Fecha    día   mes_año Turistas
-  &lt;chr&gt;          &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt;      &lt;dbl&gt;
-1 Estados Unidos 31/01/08 31    01-2008     2795
-2 Argentina      31/01/08 31    01-2008     2304
-3 Brasil         31/01/08 31    01-2008     2996
-4 Chile          31/01/08 31    01-2008     1323
-5 España         31/01/08 31    01-2008     1050
-6 Perú           31/01/08 31    01-2008     1141
-
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="o">&gt;</span><span class="w"> </span><span class="nf">head</span><span class="p">(</span><span class="n">datos_turistas_trimestre</span><span class="p">)</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="c1"># A tibble: 6 × 5</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span><span class="n">Nacionalidad</span><span class="w">   </span><span class="n">Fecha</span><span class="w">    </span><span class="n">día</span><span class="w">   </span><span class="n">mes_año</span><span class="w"> </span><span class="n">Turistas</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">  </span><span class="o">&lt;</span><span class="n">chr</span><span class="o">&gt;</span><span class="w">          </span><span class="o">&lt;</span><span class="n">chr</span><span class="o">&gt;</span><span class="w">    </span><span class="o">&lt;</span><span class="n">chr</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">chr</span><span class="o">&gt;</span><span class="w">      </span><span class="o">&lt;</span><span class="n">dbl</span><span class="o">&gt;</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="m">1</span><span class="w"> </span><span class="n">Estados</span><span class="w"> </span><span class="n">Unidos</span><span class="w"> </span><span class="m">31</span><span class="o">/</span><span class="m">01</span><span class="o">/</span><span class="m">08</span><span class="w"> </span><span class="m">31</span><span class="w">    </span><span class="m">01-2008</span><span class="w">     </span><span class="m">2795</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="m">2</span><span class="w"> </span><span class="n">Argentina</span><span class="w">      </span><span class="m">31</span><span class="o">/</span><span class="m">01</span><span class="o">/</span><span class="m">08</span><span class="w"> </span><span class="m">31</span><span class="w">    </span><span class="m">01-2008</span><span class="w">     </span><span class="m">2304</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="m">3</span><span class="w"> </span><span class="n">Brasil</span><span class="w">         </span><span class="m">31</span><span class="o">/</span><span class="m">01</span><span class="o">/</span><span class="m">08</span><span class="w"> </span><span class="m">31</span><span class="w">    </span><span class="m">01-2008</span><span class="w">     </span><span class="m">2996</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="m">4</span><span class="w"> </span><span class="n">Chile</span><span class="w">          </span><span class="m">31</span><span class="o">/</span><span class="m">01</span><span class="o">/</span><span class="m">08</span><span class="w"> </span><span class="m">31</span><span class="w">    </span><span class="m">01-2008</span><span class="w">     </span><span class="m">1323</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="m">5</span><span class="w"> </span><span class="n">España</span><span class="w">         </span><span class="m">31</span><span class="o">/</span><span class="m">01</span><span class="o">/</span><span class="m">08</span><span class="w"> </span><span class="m">31</span><span class="w">    </span><span class="m">01-2008</span><span class="w">     </span><span class="m">1050</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="m">6</span><span class="w"> </span><span class="n">Perú</span><span class="w">           </span><span class="m">31</span><span class="o">/</span><span class="m">01</span><span class="o">/</span><span class="m">08</span><span class="w"> </span><span class="m">31</span><span class="w">    </span><span class="m">01-2008</span><span class="w">     </span><span class="m">1141</span>
+</span></code></pre></div>
 <p><strong><code>unite(data, col, ..., sep, remove)</code></strong></p>
 <p>Función que une varias columnas en una.</p>
 <ul>
@@ -799,59 +777,51 @@ datos_turistas_trimestre &lt;-
 <p>Esta función es la que complementa a la función <code>gather()</code>, y hace exactamente
 lo contrario. Esparcir una columna en varias.</p>
 <p>Antes de utilizar <code>spread()</code> vamos a agrupar nuestro datos en trimestres.</p>
-<pre><code class="language-r">
-# Agrupamos los datos por trimestres
-datos_turistas_trimestre &lt;- datos_turistas_trimestre %&gt;%
-  mutate(trimestre = as.yearqtr(mes_año, format =&quot;%m-%Y&quot;)) %&gt;%
-  group_by(Nacionalidad, trimestre) %&gt;%
-  summarise(turistas_trimestre = sum(Turistas))
-
-# También podemos utilizar la columna `Fecha` para transformar a trimestres, con el argumento `format=%d/%m/%y`
-
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># Agrupamos los datos por trimestres</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">datos_turistas_trimestre</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">datos_turistas_trimestre</span><span class="w"> </span><span class="o">%&gt;%</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">  </span><span class="nf">mutate</span><span class="p">(</span><span class="n">trimestre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">as.yearqtr</span><span class="p">(</span><span class="n">mes_año</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="s">&quot;%m-%Y&quot;</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">Nacionalidad</span><span class="p">,</span><span class="w"> </span><span class="n">trimestre</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">  </span><span class="nf">summarise</span><span class="p">(</span><span class="n">turistas_trimestre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">Turistas</span><span class="p">))</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="c1"># También podemos utilizar la columna `Fecha` para transformar a trimestres, con el argumento `format=%d/%m/%y`</span>
+</span></code></pre></div>
 <p>En la consola podemos ver</p>
-<pre><code class="language-r">
-&gt; head(datos_turistas_trimestre)
-# A tibble: 6 × 3
-# Groups:   Nacionalidad [1]
-  Nacionalidad trimestre turistas_trimestre
-  &lt;chr&gt;        &lt;yearqtr&gt;              &lt;dbl&gt;
-1 Alemania     2008 Q1                 3318
-2 Alemania     2008 Q2                 1392
-3 Alemania     2008 Q3                 1458
-4 Alemania     2008 Q4                 1516
-5 Alemania     2009 Q1                 4008
-6 Alemania     2009 Q2                 1646
-
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="o">&gt;</span><span class="w"> </span><span class="nf">head</span><span class="p">(</span><span class="n">datos_turistas_trimestre</span><span class="p">)</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="c1"># A tibble: 6 × 3</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="c1"># Groups:   Nacionalidad [1]</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">  </span><span class="n">Nacionalidad</span><span class="w"> </span><span class="n">trimestre</span><span class="w"> </span><span class="n">turistas_trimestre</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">  </span><span class="o">&lt;</span><span class="n">chr</span><span class="o">&gt;</span><span class="w">        </span><span class="o">&lt;</span><span class="n">yearqtr</span><span class="o">&gt;</span><span class="w">              </span><span class="o">&lt;</span><span class="n">dbl</span><span class="o">&gt;</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="m">1</span><span class="w"> </span><span class="n">Alemania</span><span class="w">     </span><span class="m">2008</span><span class="w"> </span><span class="n">Q1</span><span class="w">                 </span><span class="m">3318</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="m">2</span><span class="w"> </span><span class="n">Alemania</span><span class="w">     </span><span class="m">2008</span><span class="w"> </span><span class="n">Q2</span><span class="w">                 </span><span class="m">1392</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="m">3</span><span class="w"> </span><span class="n">Alemania</span><span class="w">     </span><span class="m">2008</span><span class="w"> </span><span class="n">Q3</span><span class="w">                 </span><span class="m">1458</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="m">4</span><span class="w"> </span><span class="n">Alemania</span><span class="w">     </span><span class="m">2008</span><span class="w"> </span><span class="n">Q4</span><span class="w">                 </span><span class="m">1516</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="m">5</span><span class="w"> </span><span class="n">Alemania</span><span class="w">     </span><span class="m">2009</span><span class="w"> </span><span class="n">Q1</span><span class="w">                 </span><span class="m">4008</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="m">6</span><span class="w"> </span><span class="n">Alemania</span><span class="w">     </span><span class="m">2009</span><span class="w"> </span><span class="n">Q2</span><span class="w">                 </span><span class="m">1646</span>
+</span></code></pre></div>
 <p>Ahora podemos usar <code>spread()</code>, para expandir los datos de la columna trimestre
 en columnas independientes.</p>
-<pre><code class="language-r">
-# Mostar en columnas los valores de trimestre
-datos_turistas_trimestre &lt;-
-  spread(
-    data = datos_turistas_trimestre,
-    key = trimestre,
-    value = turistas_trimestre)
-
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># Mostar en columnas los valores de trimestre</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">datos_turistas_trimestre</span><span class="w"> </span><span class="o">&lt;-</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">  </span><span class="nf">spread</span><span class="p">(</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">datos_turistas_trimestre</span><span class="p">,</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span><span class="n">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">trimestre</span><span class="p">,</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">    </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">turistas_trimestre</span><span class="p">)</span>
+</span></code></pre></div>
 <p>Ahora observamos que nuestros datos se han esparcido, este formato es útil para
 visualización de datos en otros frameworks.</p>
-<pre><code class="language-r">
-&gt; head(datos_turistas_trimestre)
-# A tibble: 6 × 57
-# Groups:   Nacionalidad [6]
-  Nacionalidad `2008 Q1` `2008 Q2` `2008 Q3` `2008 Q4` `2009 Q1` `2009 Q2` `2009 Q3`
-  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
-1 Alemania          3318      1392      1458      1516      4008      1646      1924
-2 Argentina         5687      4696      8537      6884      4734      4667      5810
-3 Australia          988      1269       944      1384       980       771      1253
-4 Austria            587       176       221       300       632       206       293
-5 Bélgica           1029       246       784       602      1504       556       531
-6 Brasil            7536      5307      7199      5693      4178      5941      9843
-# … with 49 more variables …
-
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="o">&gt;</span><span class="w"> </span><span class="nf">head</span><span class="p">(</span><span class="n">datos_turistas_trimestre</span><span class="p">)</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="c1"># A tibble: 6 × 57</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="c1"># Groups:   Nacionalidad [6]</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">  </span><span class="n">Nacionalidad</span><span class="w"> </span><span class="n">`2008 Q1`</span><span class="w"> </span><span class="n">`2008 Q2`</span><span class="w"> </span><span class="n">`2008 Q3`</span><span class="w"> </span><span class="n">`2008 Q4`</span><span class="w"> </span><span class="n">`2009 Q1`</span><span class="w"> </span><span class="n">`2009 Q2`</span><span class="w"> </span><span class="n">`2009 Q3`</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">  </span><span class="o">&lt;</span><span class="n">chr</span><span class="o">&gt;</span><span class="w">            </span><span class="o">&lt;</span><span class="n">dbl</span><span class="o">&gt;</span><span class="w">     </span><span class="o">&lt;</span><span class="n">dbl</span><span class="o">&gt;</span><span class="w">     </span><span class="o">&lt;</span><span class="n">dbl</span><span class="o">&gt;</span><span class="w">     </span><span class="o">&lt;</span><span class="n">dbl</span><span class="o">&gt;</span><span class="w">     </span><span class="o">&lt;</span><span class="n">dbl</span><span class="o">&gt;</span><span class="w">     </span><span class="o">&lt;</span><span class="n">dbl</span><span class="o">&gt;</span><span class="w">     </span><span class="o">&lt;</span><span class="n">dbl</span><span class="o">&gt;</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="m">1</span><span class="w"> </span><span class="n">Alemania</span><span class="w">          </span><span class="m">3318</span><span class="w">      </span><span class="m">1392</span><span class="w">      </span><span class="m">1458</span><span class="w">      </span><span class="m">1516</span><span class="w">      </span><span class="m">4008</span><span class="w">      </span><span class="m">1646</span><span class="w">      </span><span class="m">1924</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="m">2</span><span class="w"> </span><span class="n">Argentina</span><span class="w">         </span><span class="m">5687</span><span class="w">      </span><span class="m">4696</span><span class="w">      </span><span class="m">8537</span><span class="w">      </span><span class="m">6884</span><span class="w">      </span><span class="m">4734</span><span class="w">      </span><span class="m">4667</span><span class="w">      </span><span class="m">5810</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="m">3</span><span class="w"> </span><span class="n">Australia</span><span class="w">          </span><span class="m">988</span><span class="w">      </span><span class="m">1269</span><span class="w">       </span><span class="m">944</span><span class="w">      </span><span class="m">1384</span><span class="w">       </span><span class="m">980</span><span class="w">       </span><span class="m">771</span><span class="w">      </span><span class="m">1253</span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="m">4</span><span class="w"> </span><span class="n">Austria</span><span class="w">            </span><span class="m">587</span><span class="w">       </span><span class="m">176</span><span class="w">       </span><span class="m">221</span><span class="w">       </span><span class="m">300</span><span class="w">       </span><span class="m">632</span><span class="w">       </span><span class="m">206</span><span class="w">       </span><span class="m">293</span>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="m">5</span><span class="w"> </span><span class="n">Bélgica</span><span class="w">           </span><span class="m">1029</span><span class="w">       </span><span class="m">246</span><span class="w">       </span><span class="m">784</span><span class="w">       </span><span class="m">602</span><span class="w">      </span><span class="m">1504</span><span class="w">       </span><span class="m">556</span><span class="w">       </span><span class="m">531</span>
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="m">6</span><span class="w"> </span><span class="n">Brasil</span><span class="w">            </span><span class="m">7536</span><span class="w">      </span><span class="m">5307</span><span class="w">      </span><span class="m">7199</span><span class="w">      </span><span class="m">5693</span><span class="w">      </span><span class="m">4178</span><span class="w">      </span><span class="m">5941</span><span class="w">      </span><span class="m">9843</span>
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="c1"># … with 49 more variables …</span>
+</span></code></pre></div>
 <p><strong><code>spread(data, key, value)</code></strong></p>
 <p>Función que es usada para esparcir los datos de una columna como nombres de
 columnas.</p>
@@ -864,32 +834,28 @@ columnas.</p>
 </ul>
 <p>Aprovechemos estos datos para graficar el top de países que han visitado Bolivia
 en el primer trimestre del 2019.</p>
-<pre><code class="language-r">
-top_turistas_trimestre_1_2019 &lt;-
-  datos_turistas_trimestre %&gt;%
-  select(Nacionalidad, `2019 Q1`) %&gt;%
-  rename(trimestre1_2019= `2019 Q1`) %&gt;%
-  arrange(desc(trimestre1_2019)) %&gt;% as.data.frame() %&gt;%
-  slice_head(n = 10)
-
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">top_turistas_trimestre_1_2019</span><span class="w"> </span><span class="o">&lt;-</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span><span class="n">datos_turistas_trimestre</span><span class="w"> </span><span class="o">%&gt;%</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">  </span><span class="nf">select</span><span class="p">(</span><span class="n">Nacionalidad</span><span class="p">,</span><span class="w"> </span><span class="n">`2019 Q1`</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">  </span><span class="nf">rename</span><span class="p">(</span><span class="n">trimestre1_2019</span><span class="o">=</span><span class="w"> </span><span class="n">`2019 Q1`</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">  </span><span class="nf">arrange</span><span class="p">(</span><span class="nf">desc</span><span class="p">(</span><span class="n">trimestre1_2019</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">as.data.frame</span><span class="p">()</span><span class="w"> </span><span class="o">%&gt;%</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">  </span><span class="nf">slice_head</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">)</span>
+</span></code></pre></div>
 <p>Graficando</p>
-<pre><code class="language-r">
-ggplot(data = top_turistas_trimestre_1_2019) +
-  geom_bar(aes(x=Nacionalidad, y=trimestre1_2019, fill=Nacionalidad), stat=&quot;identity&quot;, alpha = 0.8)+
-  theme_minimal() + scale_fill_brewer(palette = &quot;Paired&quot;)+
-  scale_y_continuous(labels = comma_format(big.mark=&quot; &quot;)) +
-  labs(
-    x = &quot;&quot;,
-    y = &quot;&quot;,
-    fill = &quot;Nacionalidad&quot;,
-    title = &quot;Viajeros llegados por avión a Bolivia Primer Trimestre 2019&quot;,
-    subtitle = &quot;Top 10 nacionalidades&quot;,
-    caption = &quot;Fuente: INE Bolivia&quot;
-  )
-#p_unload(all) #Ejecute esta línea de comando para cerrar las bibliotecas abiertas con &quot;pacman&quot;
-
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">top_turistas_trimestre_1_2019</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">  </span><span class="nf">geom_bar</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Nacionalidad</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">trimestre1_2019</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="o">=</span><span class="n">Nacionalidad</span><span class="p">),</span><span class="w"> </span><span class="n">stat</span><span class="o">=</span><span class="s">&quot;identity&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.8</span><span class="p">)</span><span class="o">+</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">  </span><span class="nf">theme_minimal</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">scale_fill_brewer</span><span class="p">(</span><span class="n">palette</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Paired&quot;</span><span class="p">)</span><span class="o">+</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">  </span><span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">comma_format</span><span class="p">(</span><span class="n">big.mark</span><span class="o">=</span><span class="s">&quot; &quot;</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">  </span><span class="nf">labs</span><span class="p">(</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="w">    </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Nacionalidad&quot;</span><span class="p">,</span>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="w">    </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Viajeros llegados por avión a Bolivia Primer Trimestre 2019&quot;</span><span class="p">,</span>
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="w">    </span><span class="n">subtitle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Top 10 nacionalidades&quot;</span><span class="p">,</span>
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="w">    </span><span class="n">caption</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Fuente: INE Bolivia&quot;</span>
+</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="w">  </span><span class="p">)</span>
+</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="c1">#p_unload(all) #Ejecute esta línea de comando para cerrar las bibliotecas abiertas con &quot;pacman&quot;</span>
+</span></code></pre></div>
 <p><img alt="Viajeros que llegaron por avión a Bolivia 2016-2021" src="Viajeros_trimestre_1_2019.jpeg" /></p>
 <h2 id="otros-detalles">Otros detalles<a class="headerlink" href="#otros-detalles" title="Permanent link"> #</a></h2>
 <p>Las funciones mostradas en el artículo son las más usadas, y permiten un mejor

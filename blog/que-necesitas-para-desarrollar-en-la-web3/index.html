@@ -529,8 +529,8 @@ en diferentes versiones.</p>
 <p>Se corre como un paquete global de Node.js que se instala con NPM <br> <br></p>
 <p><br  clear="left"/></p>
 <p><br  /></p>
-<pre><code>npm install --save-dev hardhat
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>npm install --save-dev hardhat
+</span></code></pre></div>
 <p><br></p>
 <h3 id="ganache-truffle-suite">Ganache (Truffle Suite)<a class="headerlink" href="#ganache-truffle-suite" title="Permanent link"> #</a></h3>
 <p><img  alt="Ganache logo"  src="./ganache.png"  width="200"  align="left"  style="margin-right: 25px;"/>
@@ -548,21 +548,20 @@ para programar en el blockchain de <a href="https://solana.com/">solana</a>.</p>
 familiar la sintaxis de Solidity. Es un lenguaje de tipado estático, con llaves,
 diseñado para desarrollar smart contracts que corren en Ethereum.</p>
 <p>Aquí un ejemplo de un contrato en Solidity, un sencillo Hello World</p>
-<pre><code>// SPDX-License-Identifier: MIT
-
-pragma solidity ^0.8.0;
-
-contract MyContract {
-
-function helloWorld() public pure returns (string memory) {
-
-return &quot;Hello, World!&quot;;
-
-}
-
-}
-
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>// SPDX-License-Identifier: MIT
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>pragma solidity ^0.8.0;
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>contract MyContract {
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>function helloWorld() public pure returns (string memory) {
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>return &quot;Hello, World!&quot;;
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>}
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>}
+</span></code></pre></div>
 <p>Si ya has programado antes podrás encontrar las similitudes.</p>
 <ol>
 <li>
@@ -591,20 +590,15 @@ aprendas en su <a href="https://ethereum.org/en/developers/">documentación</a><
 <p>Listo, cada herramienta tiene su modo de publicar o desplegar tus contratos a tu
 red local.</p>
 <p>Por ejemplo, con <code>Hardhat</code>:</p>
-<pre><code>npx hardhat compile
-
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>npx hardhat compile
+</span></code></pre></div>
 <p>Con <code>Ganache</code>, se debe usar otra herramienta de la misma familia llamada
 <code>truffle</code>, y se ejecuta de la misma manera que <code>hardhat</code></p>
-<pre><code>
-npm install truffle -g
-
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>npm install truffle -g
+</span></code></pre></div>
 <p>y luego para compilar</p>
-<pre><code>
-truffle compile
-
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>truffle compile
+</span></code></pre></div>
 <p><br  /></p>
 <p>Al tener tu contrato desplegado ya podrás interactuar con él, usando web3.js o
 ether.js. En otras palabras, ya se trata del frontend.</p>
@@ -634,32 +628,30 @@ manera exitosa con tus contratos.</p>
    tus métodos</p>
 </li>
 </ol>
-<pre><code>
-// Importamos el abi del contrato
-
-import abi from &quot;./utils/EtherFavoriteSongs.json&quot;;
-
-this.contractABI = abi.abi;
-
-...
-
-// Obtenemos la referencia a la billetera del usuario
-
-const provider = new ethers.providers.Web3Provider(ethereum);
-
-const signer = provider.getSigner();
-
-
-// Creamos una nueva instancia del contrato
-
-const favoriteSongsPortalContract = new ethers.Contract(this.contractAddress, this.contractABI, signer);
-
-
-// El método getTotalSongs esta definido en nuestro contrato de solidity
-
-let count = await favoriteSongsPortalContract.getTotalSongs();
-
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>// Importamos el abi del contrato
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>import abi from &quot;./utils/EtherFavoriteSongs.json&quot;;
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>this.contractABI = abi.abi;
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>...
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>// Obtenemos la referencia a la billetera del usuario
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>const provider = new ethers.providers.Web3Provider(ethereum);
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>const signer = provider.getSigner();
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>// Creamos una nueva instancia del contrato
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>const favoriteSongsPortalContract = new ethers.Contract(this.contractAddress, this.contractABI, signer);
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>// El método getTotalSongs esta definido en nuestro contrato de solidity
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>let count = await favoriteSongsPortalContract.getTotalSongs();
+</span></code></pre></div>
 <p>Así de fácil podemos conectar nuestros nuevos contratos con nuestro conocido y
 confiable frontend.</p>
 <p>El código completo de este ejemplo está en este

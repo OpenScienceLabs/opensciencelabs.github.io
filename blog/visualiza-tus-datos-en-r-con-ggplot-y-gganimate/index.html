@@ -582,54 +582,53 @@ actualizadas de R y su IDE RStudio.</p>
 <code>gganimate</code>. Las instalamos con los siguientes comandos en R <em>(Recuerde que para
 ejecutar una linea de Comando en el Editor de RStudio Es con Ctrl+Enter o puede
 escribirlo directamento en la Consola)</em></p>
-<pre><code class="language-r">install.package(rio)        # Biblioteca para importar archivos csv o xlsx
-install.package(dplyr)      # Biblioteca para filtrar datos
-install.package(ggplot2)    # Biblioteca para realizar las gráficas
-install.package(gganimate)  # Biblioteca para realizar la animación
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">install.package</span><span class="p">(</span><span class="n">rio</span><span class="p">)</span><span class="w">        </span><span class="c1"># Biblioteca para importar archivos csv o xlsx</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nf">install.package</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span><span class="w">      </span><span class="c1"># Biblioteca para filtrar datos</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nf">install.package</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span><span class="w">    </span><span class="c1"># Biblioteca para realizar las gráficas</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nf">install.package</span><span class="p">(</span><span class="n">gganimate</span><span class="p">)</span><span class="w">  </span><span class="c1"># Biblioteca para realizar la animación</span>
+</span></code></pre></div>
 <h2 id="preparacion-de-los-datos-para-graficar">Preparación de los datos para graficar<a class="headerlink" href="#preparacion-de-los-datos-para-graficar" title="Permanent link"> #</a></h2>
 <p>Los datos usados pertenecen a la base de datos del INE
 <a href="https://www.ine.gob.bo">(Instituto Nacional de Estadística Bolivia)</a>, el
 archivo usado tiene el nombre de "Importaciones de Productos y Artículos de
 Bolivia 1992-2021p"</p>
 <p>Abrimos nuestras bibliotecas:</p>
-<pre><code class="language-r">library(rio)
-library(ggplot2)
-library(gganimate)
-library(dplyr)
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nf">library</span><span class="p">(</span><span class="n">rio</span><span class="p">)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nf">library</span><span class="p">(</span><span class="n">gganimate</span><span class="p">)</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
+</span></code></pre></div>
 <p>Importamos los datos a un objeto llamado <code>libro</code> con:</p>
-<pre><code class="language-r">libro &lt;- import(&quot;.my/path/DatosImportacionBolivia1992-2021.csv&quot;)
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">libro</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">import</span><span class="p">(</span><span class="s">&quot;.my/path/DatosImportacionBolivia1992-2021.csv&quot;</span><span class="p">)</span>
+</span></code></pre></div>
 <p>Para ver la cabecera del libro, y para ver la estructura del <code>libro</code> ejecutamos
 respectivamente <code>head(libro)</code> y <code>str(libro)</code>.</p>
-<pre><code class="language-r">&gt; head(libro)
-       Fecha ALIMENTOS Y BEBIDAS SUMINISTROS INDUSTRIALES COMBUSTIBLES Y LUBRICANTES
-1 1992-01-01           12.686477                 30.38827                   1.738607
-2 1992-02-01            9.139570                 32.57593                   1.822906
-3 1992-03-01            6.150201                 21.37546                   2.000110
-4 1992-04-01            9.225652                 28.34524                   1.455245
-5 1992-05-01           14.503611                 22.06801                   2.168646
-6 1992-06-01            5.875804                 25.43617                   3.084602
-  BIENES DE CAPITAL EQUIPO DE TRANSPORTE Y SUS PIEZAS Y ACCESORIOS ARTÍCULOS DE CONSUMO
-1          25.66374                                       22.20454             5.585219
-2          22.00027                                       18.68626             6.528652
-3          22.92478                                       17.40578             6.196415
-4          31.14429                                       16.77957             5.422824
-5          26.82719                                       22.79343             5.458318
-6          23.47011                                       16.00698             5.647866_
-
-</code></pre>
-<pre><code class="language-r">&gt; str(libro)
-'data.frame':   358 obs. of  7 variables:
- $ Fecha                                         : IDate, format: &quot;1992-01-01&quot; &quot;1992-02-01&quot; ...
- $ ALIMENTOS Y BEBIDAS                           : num  12.69 9.14 6.15 9.23 14.5 ...
- $ SUMINISTROS INDUSTRIALES                      : num  30.4 32.6 21.4 28.3 22.1 ...
- $ COMBUSTIBLES Y LUBRICANTES                    : num  1.74 1.82 2 1.46 2.17 ...
- $ BIENES DE CAPITAL                             : num  25.7 22 22.9 31.1 26.8 ...
- $ EQUIPO DE TRANSPORTE Y SUS PIEZAS Y ACCESORIOS: num  22.2 18.7 17.4 16.8 22.8 ...
- $ ARTÍCULOS DE CONSUMO                          : num  5.59 6.53 6.2 5.42 5.46 ...
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="o">&gt;</span><span class="w"> </span><span class="nf">head</span><span class="p">(</span><span class="n">libro</span><span class="p">)</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">       </span><span class="n">Fecha</span><span class="w"> </span><span class="n">ALIMENTOS</span><span class="w"> </span><span class="n">Y</span><span class="w"> </span><span class="n">BEBIDAS</span><span class="w"> </span><span class="n">SUMINISTROS</span><span class="w"> </span><span class="n">INDUSTRIALES</span><span class="w"> </span><span class="n">COMBUSTIBLES</span><span class="w"> </span><span class="n">Y</span><span class="w"> </span><span class="n">LUBRICANTES</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="m">1</span><span class="w"> </span><span class="m">1992-01-01</span><span class="w">           </span><span class="m">12.686477</span><span class="w">                 </span><span class="m">30.38827</span><span class="w">                   </span><span class="m">1.738607</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="m">2</span><span class="w"> </span><span class="m">1992-02-01</span><span class="w">            </span><span class="m">9.139570</span><span class="w">                 </span><span class="m">32.57593</span><span class="w">                   </span><span class="m">1.822906</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="m">3</span><span class="w"> </span><span class="m">1992-03-01</span><span class="w">            </span><span class="m">6.150201</span><span class="w">                 </span><span class="m">21.37546</span><span class="w">                   </span><span class="m">2.000110</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="m">4</span><span class="w"> </span><span class="m">1992-04-01</span><span class="w">            </span><span class="m">9.225652</span><span class="w">                 </span><span class="m">28.34524</span><span class="w">                   </span><span class="m">1.455245</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="m">5</span><span class="w"> </span><span class="m">1992-05-01</span><span class="w">           </span><span class="m">14.503611</span><span class="w">                 </span><span class="m">22.06801</span><span class="w">                   </span><span class="m">2.168646</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="m">6</span><span class="w"> </span><span class="m">1992-06-01</span><span class="w">            </span><span class="m">5.875804</span><span class="w">                 </span><span class="m">25.43617</span><span class="w">                   </span><span class="m">3.084602</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">  </span><span class="n">BIENES</span><span class="w"> </span><span class="n">DE</span><span class="w"> </span><span class="n">CAPITAL</span><span class="w"> </span><span class="n">EQUIPO</span><span class="w"> </span><span class="n">DE</span><span class="w"> </span><span class="n">TRANSPORTE</span><span class="w"> </span><span class="n">Y</span><span class="w"> </span><span class="n">SUS</span><span class="w"> </span><span class="n">PIEZAS</span><span class="w"> </span><span class="n">Y</span><span class="w"> </span><span class="n">ACCESORIOS</span><span class="w"> </span><span class="n">ARTÍCULOS</span><span class="w"> </span><span class="n">DE</span><span class="w"> </span><span class="n">CONSUMO</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="m">1</span><span class="w">          </span><span class="m">25.66374</span><span class="w">                                       </span><span class="m">22.20454</span><span class="w">             </span><span class="m">5.585219</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="m">2</span><span class="w">          </span><span class="m">22.00027</span><span class="w">                                       </span><span class="m">18.68626</span><span class="w">             </span><span class="m">6.528652</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="m">3</span><span class="w">          </span><span class="m">22.92478</span><span class="w">                                       </span><span class="m">17.40578</span><span class="w">             </span><span class="m">6.196415</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="m">4</span><span class="w">          </span><span class="m">31.14429</span><span class="w">                                       </span><span class="m">16.77957</span><span class="w">             </span><span class="m">5.422824</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="m">5</span><span class="w">          </span><span class="m">26.82719</span><span class="w">                                       </span><span class="m">22.79343</span><span class="w">             </span><span class="m">5.458318</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="m">6</span><span class="w">          </span><span class="m">23.47011</span><span class="w">                                       </span><span class="m">16.00698</span><span class="w">             </span><span class="m">5.647866</span>_
+</span></code></pre></div>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="o">&gt;</span><span class="w"> </span><span class="nf">str</span><span class="p">(</span><span class="n">libro</span><span class="p">)</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="s">&#39;data.frame&#39;</span><span class="o">:</span><span class="w">   </span><span class="m">358</span><span class="w"> </span><span class="n">obs.</span><span class="w"> </span><span class="n">of</span><span class="w">  </span><span class="m">7</span><span class="w"> </span><span class="n">variables</span><span class="o">:</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w"> </span><span class="o">$</span><span class="w"> </span><span class="n">Fecha</span><span class="w">                                         </span><span class="o">:</span><span class="w"> </span><span class="n">IDate</span><span class="p">,</span><span class="w"> </span><span class="n">format</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;1992-01-01&quot;</span><span class="w"> </span><span class="s">&quot;1992-02-01&quot;</span><span class="w"> </span><span class="kc">...</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w"> </span><span class="o">$</span><span class="w"> </span><span class="n">ALIMENTOS</span><span class="w"> </span><span class="n">Y</span><span class="w"> </span><span class="n">BEBIDAS</span><span class="w">                           </span><span class="o">:</span><span class="w"> </span><span class="n">num</span><span class="w">  </span><span class="m">12.69</span><span class="w"> </span><span class="m">9.14</span><span class="w"> </span><span class="m">6.15</span><span class="w"> </span><span class="m">9.23</span><span class="w"> </span><span class="m">14.5</span><span class="w"> </span><span class="kc">...</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w"> </span><span class="o">$</span><span class="w"> </span><span class="n">SUMINISTROS</span><span class="w"> </span><span class="n">INDUSTRIALES</span><span class="w">                      </span><span class="o">:</span><span class="w"> </span><span class="n">num</span><span class="w">  </span><span class="m">30.4</span><span class="w"> </span><span class="m">32.6</span><span class="w"> </span><span class="m">21.4</span><span class="w"> </span><span class="m">28.3</span><span class="w"> </span><span class="m">22.1</span><span class="w"> </span><span class="kc">...</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w"> </span><span class="o">$</span><span class="w"> </span><span class="n">COMBUSTIBLES</span><span class="w"> </span><span class="n">Y</span><span class="w"> </span><span class="n">LUBRICANTES</span><span class="w">                    </span><span class="o">:</span><span class="w"> </span><span class="n">num</span><span class="w">  </span><span class="m">1.74</span><span class="w"> </span><span class="m">1.82</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">1.46</span><span class="w"> </span><span class="m">2.17</span><span class="w"> </span><span class="kc">...</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w"> </span><span class="o">$</span><span class="w"> </span><span class="n">BIENES</span><span class="w"> </span><span class="n">DE</span><span class="w"> </span><span class="n">CAPITAL</span><span class="w">                             </span><span class="o">:</span><span class="w"> </span><span class="n">num</span><span class="w">  </span><span class="m">25.7</span><span class="w"> </span><span class="m">22</span><span class="w"> </span><span class="m">22.9</span><span class="w"> </span><span class="m">31.1</span><span class="w"> </span><span class="m">26.8</span><span class="w"> </span><span class="kc">...</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w"> </span><span class="o">$</span><span class="w"> </span><span class="n">EQUIPO</span><span class="w"> </span><span class="n">DE</span><span class="w"> </span><span class="n">TRANSPORTE</span><span class="w"> </span><span class="n">Y</span><span class="w"> </span><span class="n">SUS</span><span class="w"> </span><span class="n">PIEZAS</span><span class="w"> </span><span class="n">Y</span><span class="w"> </span><span class="n">ACCESORIOS</span><span class="o">:</span><span class="w"> </span><span class="n">num</span><span class="w">  </span><span class="m">22.2</span><span class="w"> </span><span class="m">18.7</span><span class="w"> </span><span class="m">17.4</span><span class="w"> </span><span class="m">16.8</span><span class="w"> </span><span class="m">22.8</span><span class="w"> </span><span class="kc">...</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w"> </span><span class="o">$</span><span class="w"> </span><span class="n">ARTÍCULOS</span><span class="w"> </span><span class="n">DE</span><span class="w"> </span><span class="n">CONSUMO</span><span class="w">                          </span><span class="o">:</span><span class="w"> </span><span class="n">num</span><span class="w">  </span><span class="m">5.59</span><span class="w"> </span><span class="m">6.53</span><span class="w"> </span><span class="m">6.2</span><span class="w"> </span><span class="m">5.42</span><span class="w"> </span><span class="m">5.46</span><span class="w"> </span><span class="kc">...</span>
+</span></code></pre></div>
 <p>Es importante verificar el tipo de dato, antes de graficar, en este caso nos
 importa que la fecha tenga formato de <code>IDate</code> y los demás sean tengan formato de
 <code>num</code>. En caso de que la fecha no tenga formato <code>IDate</code> puedo tranformar la
@@ -639,24 +638,24 @@ nuestro <code>libro</code> en un nuevo objeto llamado <code>datos</code>. <em>(N
 utilizaremos las primeras 4 columnas del objeto libro).</em> Es decir una columna
 para la fecha, una columna para su valor y otra columna que muestre su
 clasificación.</p>
-<pre><code class="language-r"># Simplificando nuestra tabla para realizar las gráficas
-# Cuando se escribe el nombre del objeto libro$.. en RStudio el autocomplado con los nombres de la columnas del libro
-datos &lt;-
-  data.frame(
-    Fecha = c(libro$Fecha, libro$Fecha, libro$Fecha, libro$Fecha),
-    Valor = c(
-      libro$`ALIMENTOS Y BEBIDAS`,
-      libro$`SUMINISTROS INDUSTRIALES`,
-      libro$`COMBUSTIBLES Y LUBRICANTES`,
-      libro$`EQUIPO DE TRANSPORTE Y SUS PIEZAS Y ACCESORIOS`
-    ),
-    Clasificacion = c(
-      rep(&quot;Alimentos y Bebidas&quot;, nrow(libro)),
-      rep(&quot;Suministros Industriales&quot;, nrow(libro)),
-      rep(&quot;Combustibles y Lubricantes&quot;, nrow(libro)),
-      rep(&quot;Equipo de Transporte&quot;, nrow(libro)
-      )
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Simplificando nuestra tabla para realizar las gráficas</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c1"># Cuando se escribe el nombre del objeto libro$.. en RStudio el autocomplado con los nombres de la columnas del libro</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">datos</span><span class="w"> </span><span class="o">&lt;-</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="nf">data.frame</span><span class="p">(</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="n">Fecha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">libro</span><span class="o">$</span><span class="n">Fecha</span><span class="p">,</span><span class="w"> </span><span class="n">libro</span><span class="o">$</span><span class="n">Fecha</span><span class="p">,</span><span class="w"> </span><span class="n">libro</span><span class="o">$</span><span class="n">Fecha</span><span class="p">,</span><span class="w"> </span><span class="n">libro</span><span class="o">$</span><span class="n">Fecha</span><span class="p">),</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="n">Valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">      </span><span class="n">libro</span><span class="o">$</span><span class="n">`ALIMENTOS Y BEBIDAS`</span><span class="p">,</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">      </span><span class="n">libro</span><span class="o">$</span><span class="n">`SUMINISTROS INDUSTRIALES`</span><span class="p">,</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">      </span><span class="n">libro</span><span class="o">$</span><span class="n">`COMBUSTIBLES Y LUBRICANTES`</span><span class="p">,</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">      </span><span class="n">libro</span><span class="o">$</span><span class="n">`EQUIPO DE TRANSPORTE Y SUS PIEZAS Y ACCESORIOS`</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="p">),</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">    </span><span class="n">Clasificacion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">      </span><span class="nf">rep</span><span class="p">(</span><span class="s">&quot;Alimentos y Bebidas&quot;</span><span class="p">,</span><span class="w"> </span><span class="nf">nrow</span><span class="p">(</span><span class="n">libro</span><span class="p">)),</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">      </span><span class="nf">rep</span><span class="p">(</span><span class="s">&quot;Suministros Industriales&quot;</span><span class="p">,</span><span class="w"> </span><span class="nf">nrow</span><span class="p">(</span><span class="n">libro</span><span class="p">)),</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">      </span><span class="nf">rep</span><span class="p">(</span><span class="s">&quot;Combustibles y Lubricantes&quot;</span><span class="p">,</span><span class="w"> </span><span class="nf">nrow</span><span class="p">(</span><span class="n">libro</span><span class="p">)),</span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">      </span><span class="nf">rep</span><span class="p">(</span><span class="s">&quot;Equipo de Transporte&quot;</span><span class="p">,</span><span class="w"> </span><span class="nf">nrow</span><span class="p">(</span><span class="n">libro</span><span class="p">)</span>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">      </span><span class="p">)</span>
+</span></code></pre></div>
 <p>Funciones auxiliares usadas:</p>
 <ul>
 <li>
@@ -678,35 +677,35 @@ datos &lt;-
 </li>
 </ul>
 <p>Observemos la cabecera de <code>datos</code> para verificar, con <code>head(datos)</code> :</p>
-<pre><code class="language-r">&gt; head(datos)
-       Fecha    Valor       Clasificacion
-1 2018-01-01 56.34888 Alimentos y Bebidas
-2 2018-02-01 47.42231 Alimentos y Bebidas
-3 2018-03-01 59.54501 Alimentos y Bebidas
-4 2018-04-01 56.08808 Alimentos y Bebidas
-5 2018-05-01 51.86330 Alimentos y Bebidas
-6 2018-06-01 43.84668 Alimentos y Bebidas
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="o">&gt;</span><span class="w"> </span><span class="nf">head</span><span class="p">(</span><span class="n">datos</span><span class="p">)</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">       </span><span class="n">Fecha</span><span class="w">    </span><span class="n">Valor</span><span class="w">       </span><span class="n">Clasificacion</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="m">1</span><span class="w"> </span><span class="m">2018-01-01</span><span class="w"> </span><span class="m">56.34888</span><span class="w"> </span><span class="n">Alimentos</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="n">Bebidas</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="m">2</span><span class="w"> </span><span class="m">2018-02-01</span><span class="w"> </span><span class="m">47.42231</span><span class="w"> </span><span class="n">Alimentos</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="n">Bebidas</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="m">3</span><span class="w"> </span><span class="m">2018-03-01</span><span class="w"> </span><span class="m">59.54501</span><span class="w"> </span><span class="n">Alimentos</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="n">Bebidas</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="m">4</span><span class="w"> </span><span class="m">2018-04-01</span><span class="w"> </span><span class="m">56.08808</span><span class="w"> </span><span class="n">Alimentos</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="n">Bebidas</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="m">5</span><span class="w"> </span><span class="m">2018-05-01</span><span class="w"> </span><span class="m">51.86330</span><span class="w"> </span><span class="n">Alimentos</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="n">Bebidas</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="m">6</span><span class="w"> </span><span class="m">2018-06-01</span><span class="w"> </span><span class="m">43.84668</span><span class="w"> </span><span class="n">Alimentos</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="n">Bebidas</span>
+</span></code></pre></div>
 <h2 id="grafica-estatica">Gráfica estática<a class="headerlink" href="#grafica-estatica" title="Permanent link"> #</a></h2>
 <p>Para graficar con <code>ggplot2</code>, es conveniente entender que esta biblioteca añade
 sus componentes en layers (capas), estos layers son objetos a los cuales se le
 puede modificar su apariencia y especificar de donde extraer sus valores.</p>
 <p>Asignamos a un objeto ggplot llamado p1 lo que vamos a graficar:</p>
-<pre><code class="language-r"># Modificando el theme a uno con el fondo blanco
-theme_set(theme_bw())
-
-p1 &lt;- ggplot(data = datos) +
-  geom_line(aes(x = Fecha, y = Valor, color = Clasificacion), size = 0.5) +
-  theme(legend.position = &quot;right&quot;) +
-  labs(
-    x = &quot;Fecha&quot;,
-    y = &quot;Valor en MM Bs&quot;,
-    color = &quot;&quot;,
-    title = &quot;Datos de Importación de Bolivia 1991-2021p&quot;,
-    subtitle = &quot;Expresado en Millones de Bolivianos&quot;
-  )
-p1
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Modificando el theme a uno con el fondo blanco</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nf">theme_set</span><span class="p">(</span><span class="nf">theme_bw</span><span class="p">())</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">p1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">datos</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">  </span><span class="nf">geom_line</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Fecha</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Valor</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Clasificacion</span><span class="p">),</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">  </span><span class="nf">theme</span><span class="p">(</span><span class="n">legend.position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;right&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">  </span><span class="nf">labs</span><span class="p">(</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Fecha&quot;</span><span class="p">,</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Valor en MM Bs&quot;</span><span class="p">,</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">    </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Datos de Importación de Bolivia 1991-2021p&quot;</span><span class="p">,</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">    </span><span class="n">subtitle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Expresado en Millones de Bolivianos&quot;</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">  </span><span class="p">)</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="n">p1</span>
+</span></code></pre></div>
 <p>Funciones utilizadas</p>
 <ul>
 <li>
@@ -740,8 +739,8 @@ p1
 <p>Ya teniendo nuestra nuestra gráfica estática, vamos a realizar algunas
 modificaciones para que se resalten los datos de nuestro interés.</p>
 <p>Filtrando datos con fecha mayor al año 2019.</p>
-<pre><code class="language-r">datos &lt;- filter(datos, datos$Fecha &gt;= as.Date(&quot;2019-01-01&quot;))
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">datos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">datos</span><span class="p">,</span><span class="w"> </span><span class="n">datos</span><span class="o">$</span><span class="n">Fecha</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="nf">as.Date</span><span class="p">(</span><span class="s">&quot;2019-01-01&quot;</span><span class="p">))</span>
+</span></code></pre></div>
 <ul>
 <li>
 <p><strong><code>filter(datos, condicion)</code></strong>: evalua cada fila de <code>datos</code> y filtra de
@@ -753,40 +752,40 @@ modificaciones para que se resalten los datos de nuestro interés.</p>
 </ul>
 <p>Agregando un nuevo data frame periodos para resaltar las fechas de confinamiento
 por Covid19.</p>
-<pre><code class="language-r">periodos &lt;-
-  data.frame(
-    xmin = as.Date(&quot;2020-03-22&quot;),
-    xmax = as.Date(&quot;2020-08-31&quot;),
-    ymin = -Inf,
-    ymax = Inf,
-    Periodo = &quot;Confinamiento por COVID19&quot;
-  )
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">periodos</span><span class="w"> </span><span class="o">&lt;-</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="nf">data.frame</span><span class="p">(</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="n">xmin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">as.Date</span><span class="p">(</span><span class="s">&quot;2020-03-22&quot;</span><span class="p">),</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="n">xmax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">as.Date</span><span class="p">(</span><span class="s">&quot;2020-08-31&quot;</span><span class="p">),</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span><span class="n">ymin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="kc">Inf</span><span class="p">,</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span><span class="n">ymax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">Inf</span><span class="p">,</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="n">Periodo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Confinamiento por COVID19&quot;</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">  </span><span class="p">)</span>
+</span></code></pre></div>
 <p>Creando un nuevo objeto <code>ggplot2</code> p2 para incluir las nuevas modificaciones.</p>
-<pre><code class="language-r">p2 &lt;- ggplot(data = datos) +
-  geom_line(aes(x = Fecha, y = Valor, color = Clasificacion), size = 1) +
-  geom_rect(
-    data = periodos,
-    alpha = 0.2,
-    aes(
-      xmin = xmin,
-      xmax = xmax,
-      ymin = ymin,
-      ymax = ymax,
-      fill = Periodo
-    )
-  ) +
-  theme(legend.position = &quot;right&quot;) +
-  labs(
-    x = &quot;Fecha&quot;,
-    y = &quot;Valor en MM Bs&quot;,
-    color = &quot;&quot; ,
-    fill = &quot;&quot;,
-    title = &quot;Datos de Importación Bolivia 2019-2021p&quot;,
-    subtitle = &quot;Expresado en Millones de Bolivianos&quot;
-  )
-p2
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">p2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">datos</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="nf">geom_line</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Fecha</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Valor</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Clasificacion</span><span class="p">),</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span><span class="nf">geom_rect</span><span class="p">(</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">periodos</span><span class="p">,</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.2</span><span class="p">,</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="nf">aes</span><span class="p">(</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">      </span><span class="n">xmin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xmin</span><span class="p">,</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">      </span><span class="n">xmax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xmax</span><span class="p">,</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">      </span><span class="n">ymin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ymin</span><span class="p">,</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">      </span><span class="n">ymax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ymax</span><span class="p">,</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">      </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Periodo</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">    </span><span class="p">)</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">  </span><span class="nf">theme</span><span class="p">(</span><span class="n">legend.position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;right&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">  </span><span class="nf">labs</span><span class="p">(</span>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Fecha&quot;</span><span class="p">,</span>
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Valor en MM Bs&quot;</span><span class="p">,</span>
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">    </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="p">,</span>
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">    </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span>
+</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="w">    </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Datos de Importación Bolivia 2019-2021p&quot;</span><span class="p">,</span>
+</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="w">    </span><span class="n">subtitle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Expresado en Millones de Bolivianos&quot;</span>
+</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="w">  </span><span class="p">)</span>
+</span><span id="__span-10-23"><a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="n">p2</span>
+</span></code></pre></div>
 <ul>
 <li>
 <p><strong><code>geom_rect(data, alpha, aes(xmin, xmax, ymin, ymax, fill))</code></strong>: dibuja un
@@ -801,15 +800,15 @@ p2
 </ul>
 <p>Con las modificaciones ya hechas en p2, creamos el objeto <code>gganimate</code> llamado
 <code>anim</code> el cuál contendrá nuestra grafico a animar.</p>
-<pre><code class="language-r">anim &lt;- p2 + transition_reveal(Fecha) +
-  geom_label(aes(
-    x = as.Date(&quot;2019-06-01&quot;),
-    y = 280,
-    label = format(datos$Fecha, &quot;%Y&quot;)
-  ),
-  col = &quot;gray&quot;,
-  size = 15)
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">anim</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">transition_reveal</span><span class="p">(</span><span class="n">Fecha</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="nf">geom_label</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">as.Date</span><span class="p">(</span><span class="s">&quot;2019-06-01&quot;</span><span class="p">),</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">280</span><span class="p">,</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">format</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">Fecha</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%Y&quot;</span><span class="p">)</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">  </span><span class="p">),</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">  </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;gray&quot;</span><span class="p">,</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">  </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">15</span><span class="p">)</span>
+</span></code></pre></div>
 <ul>
 <li>
 <p><strong><code>transition_reveal(var)</code></strong>: añade la capa de animacion del tipo transición
@@ -829,15 +828,15 @@ que genera un buen impacto visual.</em></p>
 <p>Con el objeto <code>anim</code> creado podemos invocar la función <code>animate()</code> de
 <code>gganimate</code>. Una vez ejecutada la función se abrirá una ventana con el resultado
 en formato .gif.</p>
-<pre><code class="language-r">animate(
-  anim,
-  fps = 25,
-  duration = 15,
-  width = 800,
-  height = 500,
-  end_pause = 30
-)
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nf">animate</span><span class="p">(</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="n">anim</span><span class="p">,</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">  </span><span class="n">fps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">25</span><span class="p">,</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">  </span><span class="n">duration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">15</span><span class="p">,</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">  </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">800</span><span class="p">,</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">  </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">500</span><span class="p">,</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">  </span><span class="n">end_pause</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">30</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="p">)</span>
+</span></code></pre></div>
 <ul>
 <li><strong><code>animate(anim, fps, duration, width, height, end_pause)</code></strong>: <code>animate()</code>
   funcion para generar la animación, <code>anim</code> objeto a animarse, <code>fps</code> cantidad de
@@ -856,20 +855,20 @@ que opciones tiene el render magick ejecute <code>help("magick_renderer")</code>
 mostrara su breve manual.</p>
 <p><img alt="Importaciones de Bolivia durante la pandemia" src="datosimportpandemia.gif" /></p>
 <p>Despues de ver la animación podemos guardarla haciendo:</p>
-<pre><code class="language-r">archivo &lt;-
-  animate(
-    anim,
-    fps = 25,
-    duration = 15,
-    width = 800,
-    height = 500,
-    end_pause = 30
-  )
-
-anim_save(filename = &quot;datosimportpandemia.gif&quot;,
-          animation = archivo,
-          path = &quot;.my/path/save/&quot;)
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">archivo</span><span class="w"> </span><span class="o">&lt;-</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span><span class="nf">animate</span><span class="p">(</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="n">anim</span><span class="p">,</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span><span class="n">fps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">25</span><span class="p">,</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span><span class="n">duration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">15</span><span class="p">,</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">    </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">800</span><span class="p">,</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">    </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">500</span><span class="p">,</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">    </span><span class="n">end_pause</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">30</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">  </span><span class="p">)</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="nf">anim_save</span><span class="p">(</span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;datosimportpandemia.gif&quot;</span><span class="p">,</span>
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="w">          </span><span class="n">animation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">archivo</span><span class="p">,</span>
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="w">          </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;.my/path/save/&quot;</span><span class="p">)</span>
+</span></code></pre></div>
 <p><strong><code>anim_save(filename, animation, path)</code></strong>: guarda el renderizado de <code>animation</code>
 con el nombre <code>filename</code> en la ruta <code>path</code>.</p>
 <h2 id="referencias">Referencias<a class="headerlink" href="#referencias" title="Permanent link"> #</a></h2>

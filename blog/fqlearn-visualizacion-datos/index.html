@@ -574,28 +574,28 @@
 <p>La clase <code>McCabeThiele</code> dentro de <code>fqlearn</code> brinda funcionalidades especializadas para llevar a cabo cálculos de equilibrio líquido-vapor utilizando el método de McCabe-Thiele. Este método es esencial en el diseño de columnas de destilación, permitiendo determinar el número óptimo de etapas necesarias para separar componentes en una mezcla.</p>
 <p>La clase McCabeThiele es una implementación en Python del método de McCabe-Thiele, una técnica gráfica fundamental en el diseño de columnas de destilación para procesos químicos. Este método proporciona una manera visual de analizar y dimensionar sistemas de destilación binaria. A continuación, se presenta una descripción detallada de la clase y sus principales componentes.</p>
 <h1 id="ejemplo-de-uso-de-mccabethiele-en-fqlearn">Ejemplo de uso de McCabeThiele en fqlearn<a class="headerlink" href="#ejemplo-de-uso-de-mccabethiele-en-fqlearn" title="Permanent link"> #</a></h1>
-<pre><code class="language-python"># Importar la clase McCabeThiele de la biblioteca fqlearn
-from fqlearn.McCabeThiele import McCabeThiele
-
-
-# Crear una instancia del modelo McCabeThiele
-model = McCabeThiele()
-
-# Establecer los compuestos para el análisis (metanol y agua)
-model.set_data(compound_a=&quot;methanol&quot;, compound_b=&quot;water&quot;)
-
-# Establecer las composiciones del destilado (xD) y del líquido (xW)
-model.set_compositions(xD=0.94, xW=0.05)
-
-# Establecer los parámetros de alimentación (relación de calor q y composición xF)
-model.set_feed(q=0.5, xF=0.5)
-
-# Resolver el sistema y calcular el número de etapas necesarias
-model.solve()
-
-# Imprimir información relevante sobre el reflujo mínimo y la composición líquida de salida
-model.describe()
-</code></pre>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Importar la clase McCabeThiele de la biblioteca fqlearn</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">fqlearn.McCabeThiele</span> <span class="kn">import</span> <span class="n">McCabeThiele</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># Crear una instancia del modelo McCabeThiele</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">model</span> <span class="o">=</span> <span class="n">McCabeThiele</span><span class="p">()</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1"># Establecer los compuestos para el análisis (metanol y agua)</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">model</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">compound_a</span><span class="o">=</span><span class="s2">&quot;methanol&quot;</span><span class="p">,</span> <span class="n">compound_b</span><span class="o">=</span><span class="s2">&quot;water&quot;</span><span class="p">)</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1"># Establecer las composiciones del destilado (xD) y del líquido (xW)</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">model</span><span class="o">.</span><span class="n">set_compositions</span><span class="p">(</span><span class="n">xD</span><span class="o">=</span><span class="mf">0.94</span><span class="p">,</span> <span class="n">xW</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1"># Establecer los parámetros de alimentación (relación de calor q y composición xF)</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="n">model</span><span class="o">.</span><span class="n">set_feed</span><span class="p">(</span><span class="n">q</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">xF</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="c1"># Resolver el sistema y calcular el número de etapas necesarias</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="n">model</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="c1"># Imprimir información relevante sobre el reflujo mínimo y la composición líquida de salida</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="n">model</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</span></code></pre></div>
 <h2 id="funcion-describe">Función describe<a class="headerlink" href="#funcion-describe" title="Permanent link"> #</a></h2>
 <p>La función 'describe' imprime en pantalla información sobre cada etapa en el proceso de McCabe-Thiele.</p>
 <ul>
@@ -616,9 +616,9 @@ model.describe()
 <li>Etapa 10: Entrada = 0.4316, Salida = 0.7396</li>
 </ul>
 <p>Número total de etapas: 9</p>
-<pre><code class="language-python"># Generar un gráfico que muestra las curvas de equilibrio, la línea de alimentación y las etapas del proceso
-model.plot()
-</code></pre>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Generar un gráfico que muestra las curvas de equilibrio, la línea de alimentación y las etapas del proceso</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">model</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</span></code></pre></div>
 <h2 id="funcion-plot">Función plot<a class="headerlink" href="#funcion-plot" title="Permanent link"> #</a></h2>
 <p>La función plot de McCabe-Thiele le muestra al usuario la gráfica de destilación binaria, con todas las etapas y demás información que el usuario pueda solicitar</p>
 <p><img alt="ejemplo de mcabethiele" src="mccabethiele.png" /></p>
@@ -666,23 +666,23 @@ Los ejes X e Y representan la composición molar x y y respectivamente, variando
 <p>La clase SteamTable ofrece capacidades para gestionar y representar datos termodinámicos asociados con las fases de vapor y líquido, centrándose especialmente en tablas vapor.</p>
 <p>Esta función es valiosa en aplicaciones donde se requiere conocer propiedades termodinámicas precisas para una temperatura específica, por ejemplo, en el diseño y análisis de sistemas termodinámicos, procesos de ingeniería, o cualquier escenario donde la temperatura es un parámetro crítico. Proporciona una herramienta flexible y útil para obtener datos detallados en puntos específicos de interés en la tabla termodinámica de vapor.</p>
 <h1 id="ejemplo-de-uso-de-steamtable-en-fqlearn">Ejemplo de uso de SteamTable en fqlearn<a class="headerlink" href="#ejemplo-de-uso-de-steamtable-en-fqlearn" title="Permanent link"> #</a></h1>
-<pre><code class="language-python">from fqlearn.SteamTable import SteamTable
-
-# Crea una instancia llamada sistema con SteamTable, y carga las tablas en la base de datos
-sistema = SteamTable()
-
-# Imprime al usuario las tablas pre-cargadas en la base de datos
-sistema.data()
-
-# Le muestra al usuario el gráfico solicitado
-sistema.plot('PV')
-sistema.plot('PT')
-sistema.plot('TV')
-sistema.plot3d()
-
-# Le da al usuario información disponible en las tablas con la temperatura proporcionada
-sistema.point(t = 100)
-</code></pre>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">fqlearn.SteamTable</span> <span class="kn">import</span> <span class="n">SteamTable</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># Crea una instancia llamada sistema con SteamTable, y carga las tablas en la base de datos</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">sistema</span> <span class="o">=</span> <span class="n">SteamTable</span><span class="p">()</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1"># Imprime al usuario las tablas pre-cargadas en la base de datos</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">sistema</span><span class="o">.</span><span class="n">data</span><span class="p">()</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c1"># Le muestra al usuario el gráfico solicitado</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">sistema</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s1">&#39;PV&#39;</span><span class="p">)</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="n">sistema</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s1">&#39;PT&#39;</span><span class="p">)</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="n">sistema</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s1">&#39;TV&#39;</span><span class="p">)</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="n">sistema</span><span class="o">.</span><span class="n">plot3d</span><span class="p">()</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="c1"># Le da al usuario información disponible en las tablas con la temperatura proporcionada</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="n">sistema</span><span class="o">.</span><span class="n">point</span><span class="p">(</span><span class="n">t</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
+</span></code></pre></div>
 <h2 id="funcion-data">Función data<a class="headerlink" href="#funcion-data" title="Permanent link"> #</a></h2>
 <p>La función 'data' tiene la capacidad de imprimir las tablas de vapor que están cargadas en la base de datos, mostrándolas con incrementos de 20 en 20. Este enfoque permite al usuario visualizar de manera rápida y eficiente la tabla, facilitando así la realización de consultas de forma ágil.</p>
 <table>

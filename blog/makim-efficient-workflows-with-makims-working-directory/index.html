@@ -568,40 +568,38 @@
 <h2 id="syntax-and-scopes">Syntax and Scopes<a class="headerlink" href="#syntax-and-scopes" title="Permanent link"> #</a></h2>
 <p>The Working Directory feature in Makim operates across three distinct scopes: Global, Group, and Target.
 1. <strong>Global Scope</strong></p>
-<p>At the global scope, setting the working directory impacts all targets and groups within the Makim configuration. It provides a top-level directive to establish a standardized execution environment.</p>
-<pre><code class="language-yaml">version: 1.0
-working-directory: /path/to/global/directory
-
-# ... other configuration ...
-</code></pre>
+<p>At the global scope, setting the working directory impacts all targets and groups within the Makim configuration. It provides a top-level directive to establish a standardized execution environment.
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">working-directory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/path/to/global/directory</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># ... other configuration ...</span>
+</span></code></pre></div></p>
 <ol>
 <li><strong>Group Scope</strong></li>
 </ol>
-<p>Moving a level deeper, the group scope allows you to tailor the working directory for all targets within a specific group.</p>
-<pre><code class="language-yaml">version: 1.0
-
-groups:
-  my-group:
-    working-directory: /path/to/group/directory
-    targets:
-      target-1:
-        run: |
-          # This target operates within the /path/to/group/directory
-</code></pre>
-<ol>
-<li><strong>Target Scope</strong></li>
-</ol>
-<p>For fine-grained control over individual targets, the working directory can be specified at the target scope.</p>
-<pre><code class="language-yaml">version: 1.0
-
-groups:
-  my-group:
-    targets:
-      my-target:
-        working-directory: /path/to/target/directory
-        run: |
-          # This target operates within the /path/to/target/directory
-</code></pre>
+<p>Moving a level deeper, the group scope allows you to tailor the working directory for all targets within a specific group.
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">groups</span><span class="p">:</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">my-group</span><span class="p">:</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nt">working-directory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/path/to/group/directory</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nt">targets</span><span class="p">:</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">      </span><span class="nt">target-1</span><span class="p">:</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">          </span><span class="no"># This target operates within the /path/to/group/directory</span>
+</span></code></pre></div>
+3. <strong>Target Scope</strong></p>
+<p>For fine-grained control over individual targets, the working directory can be specified at the target scope.
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nt">groups</span><span class="p">:</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">my-group</span><span class="p">:</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nt">targets</span><span class="p">:</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">      </span><span class="nt">my-target</span><span class="p">:</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">        </span><span class="nt">working-directory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/path/to/target/directory</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">          </span><span class="no"># This target operates within the /path/to/target/directory</span>
+</span></code></pre></div></p>
 <p>The flexibility provided by these scopes ensures that your commands are executed in precisely the right context, maintaining a clean and organized project structure.</p>
 <h2 id="why-is-it-helpful">Why is it helpful?<a class="headerlink" href="#why-is-it-helpful" title="Permanent link"> #</a></h2>
 <p>Embracing the Working Directory feature in Makim brings forth a multitude of advantages, enhancing the overall project management experience. Let's delve into why this feature is a game-changer for your Makim configurations:
@@ -623,88 +621,110 @@ groups:
 </ol>
 <h2 id="real-life-example">Real-Life Example<a class="headerlink" href="#real-life-example" title="Permanent link"> #</a></h2>
 <p>Consider a scenario where a development team is working on a project that involves multiple programming languages and technologies. The project structure looks like this:</p>
-<pre><code>multi_language_project/
-│
-├── backend/
-│   ├── python/
-│   │   └── src/
-│   └── java/
-│       └── src/
-│
-└── frontend/
-    ├── react/
-    │   └── src/
-    └── vue/
-        └── src/
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>multi_language_project/
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>│
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>├── backend/
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>│   ├── python/
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>│   │   └── src/
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>│   └── java/
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>│       └── src/
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>│
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>└── frontend/
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    ├── react/
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    │   └── src/
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    └── vue/
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>        └── src/
+</span></code></pre></div>
 <p>The project consists of a backend with components implemented in both Python and Java, and a frontend with components using React and Vue.js. To efficiently manage and run tasks for each language or framework, the Working Directory feature proves invaluable.</p>
 <p>Let's create a Makim configuration file <em>(.makim.yaml)</em> that showcases the flexibility of the Working Directory feature in managing tasks for different languages.</p>
-<pre><code class="language-python">%%writefile .makim.yaml
-version: 1.0
-working-directory: &quot;/tmp/multi_language_project&quot;
-groups:
-  backend_python:
-    working-directory: &quot;backend/python&quot;
-    targets:
-      test:
-        run: |
-          echo &quot;Running Python backend tests...&quot;
-          # Add commands to run Python backend tests
-      lint:
-        run: |
-          echo &quot;Linting Python code...&quot;
-          # Add commands for linting Python code
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="o">%%</span><span class="n">writefile</span> <span class="o">.</span><span class="n">makim</span><span class="o">.</span><span class="n">yaml</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">version</span><span class="p">:</span> <span class="mf">1.0</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">working</span><span class="o">-</span><span class="n">directory</span><span class="p">:</span> <span class="s2">&quot;/tmp/multi_language_project&quot;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">groups</span><span class="p">:</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>  <span class="n">backend_python</span><span class="p">:</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="n">working</span><span class="o">-</span><span class="n">directory</span><span class="p">:</span> <span class="s2">&quot;backend/python&quot;</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="n">targets</span><span class="p">:</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>      <span class="n">test</span><span class="p">:</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>        <span class="n">run</span><span class="p">:</span> <span class="o">|</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>          <span class="n">echo</span> <span class="s2">&quot;Running Python backend tests...&quot;</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>          <span class="c1"># Add commands to run Python backend tests</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>      <span class="n">lint</span><span class="p">:</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>        <span class="n">run</span><span class="p">:</span> <span class="o">|</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>          <span class="n">echo</span> <span class="s2">&quot;Linting Python code...&quot;</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>          <span class="c1"># Add commands for linting Python code</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>  <span class="n">backend_java</span><span class="p">:</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>    <span class="n">working</span><span class="o">-</span><span class="n">directory</span><span class="p">:</span> <span class="s2">&quot;backend/java&quot;</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>    <span class="n">targets</span><span class="p">:</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>      <span class="n">test</span><span class="p">:</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>        <span class="n">working</span><span class="o">-</span><span class="n">directory</span><span class="p">:</span> <span class="s2">&quot;src&quot;</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>        <span class="n">run</span><span class="p">:</span> <span class="o">|</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>          <span class="n">echo</span> <span class="s2">&quot;Running Java backend tests...&quot;</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>          <span class="c1"># Add commands to run Java backend tests</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>      <span class="n">build</span><span class="p">:</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>        <span class="n">run</span><span class="p">:</span> <span class="o">|</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>          <span class="n">echo</span> <span class="s2">&quot;Building Java artifacts...&quot;</span>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>          <span class="c1"># Add commands for building Java artifacts</span>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>  <span class="n">frontend_react</span><span class="p">:</span>
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>    <span class="n">working</span><span class="o">-</span><span class="n">directory</span><span class="p">:</span> <span class="s2">&quot;frontend/react&quot;</span>
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>    <span class="n">targets</span><span class="p">:</span>
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>      <span class="n">test</span><span class="p">:</span>
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>        <span class="n">run</span><span class="p">:</span> <span class="o">|</span>
+</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>          <span class="n">echo</span> <span class="s2">&quot;Running React frontend tests...&quot;</span>
+</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>          <span class="c1"># Add commands to run React frontend tests</span>
+</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>      <span class="n">build</span><span class="p">:</span>
+</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>        <span class="n">run</span><span class="p">:</span> <span class="o">|</span>
+</span><span id="__span-4-39"><a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>          <span class="n">echo</span> <span class="s2">&quot;Building React frontend...&quot;</span>
+</span><span id="__span-4-40"><a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>          <span class="c1"># Add commands for building React frontend</span>
+</span><span id="__span-4-41"><a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>
+</span><span id="__span-4-42"><a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a>  <span class="n">frontend_vue</span><span class="p">:</span>
+</span><span id="__span-4-43"><a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a>    <span class="n">working</span><span class="o">-</span><span class="n">directory</span><span class="p">:</span> <span class="s2">&quot;frontend/vue&quot;</span>
+</span><span id="__span-4-44"><a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a>    <span class="n">targets</span><span class="p">:</span>
+</span><span id="__span-4-45"><a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a>      <span class="n">test</span><span class="p">:</span>
+</span><span id="__span-4-46"><a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a>        <span class="n">run</span><span class="p">:</span> <span class="o">|</span>
+</span><span id="__span-4-47"><a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a>          <span class="n">echo</span> <span class="s2">&quot;Running Vue.js frontend tests...&quot;</span>
+</span><span id="__span-4-48"><a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a>          <span class="c1"># Add commands to run Vue.js frontend tests</span>
+</span><span id="__span-4-49"><a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a>      <span class="n">build</span><span class="p">:</span>
+</span><span id="__span-4-50"><a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a>        <span class="n">working</span><span class="o">-</span><span class="n">directory</span><span class="p">:</span> <span class="s2">&quot;src&quot;</span>
+</span><span id="__span-4-51"><a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a>        <span class="n">run</span><span class="p">:</span> <span class="o">|</span>
+</span><span id="__span-4-52"><a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a>          <span class="n">echo</span> <span class="s2">&quot;Building Vue.js frontend...&quot;</span>
+</span><span id="__span-4-53"><a id="__codelineno-4-53" name="__codelineno-4-53" href="#__codelineno-4-53"></a>          <span class="c1"># Add commands for building Vue.js frontend</span>
+</span></code></pre></div>
+<div class="language-text highlight">
+<h3 class="code-label">
+  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
+  <i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output">
+  <code><span>
+Overwriting .makim.yaml
 
-  backend_java:
-    working-directory: &quot;backend/java&quot;
-    targets:
-      test:
-        working-directory: &quot;src&quot;
-        run: |
-          echo &quot;Running Java backend tests...&quot;
-          # Add commands to run Java backend tests
-      build:
-        run: |
-          echo &quot;Building Java artifacts...&quot;
-          # Add commands for building Java artifacts
+</span></code>
+</pre>
+</div>
 
-  frontend_react:
-    working-directory: &quot;frontend/react&quot;
-    targets:
-      test:
-        run: |
-          echo &quot;Running React frontend tests...&quot;
-          # Add commands to run React frontend tests
-      build:
-        run: |
-          echo &quot;Building React frontend...&quot;
-          # Add commands for building React frontend
-
-  frontend_vue:
-    working-directory: &quot;frontend/vue&quot;
-    targets:
-      test:
-        run: |
-          echo &quot;Running Vue.js frontend tests...&quot;
-          # Add commands to run Vue.js frontend tests
-      build:
-        working-directory: &quot;src&quot;
-        run: |
-          echo &quot;Building Vue.js frontend...&quot;
-          # Add commands for building Vue.js frontend
-</code></pre>
-<pre><code>Overwriting .makim.yaml
-</code></pre>
-<pre><code class="language-python">!makim --makim-file ./.makim.yaml backend_python.lint
-!makim --makim-file ./.makim.yaml backend_java.test
-!makim --makim-file ./.makim.yaml frontend_react.test
-!makim --makim-file ./.makim.yaml frontend_vue.build
-</code></pre>
-<pre><code>Linting Python code...
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="err">!</span><span class="n">makim</span> <span class="o">--</span><span class="n">makim</span><span class="o">-</span><span class="n">file</span> <span class="o">./.</span><span class="n">makim</span><span class="o">.</span><span class="n">yaml</span> <span class="n">backend_python</span><span class="o">.</span><span class="n">lint</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="err">!</span><span class="n">makim</span> <span class="o">--</span><span class="n">makim</span><span class="o">-</span><span class="n">file</span> <span class="o">./.</span><span class="n">makim</span><span class="o">.</span><span class="n">yaml</span> <span class="n">backend_java</span><span class="o">.</span><span class="n">test</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="err">!</span><span class="n">makim</span> <span class="o">--</span><span class="n">makim</span><span class="o">-</span><span class="n">file</span> <span class="o">./.</span><span class="n">makim</span><span class="o">.</span><span class="n">yaml</span> <span class="n">frontend_react</span><span class="o">.</span><span class="n">test</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="err">!</span><span class="n">makim</span> <span class="o">--</span><span class="n">makim</span><span class="o">-</span><span class="n">file</span> <span class="o">./.</span><span class="n">makim</span><span class="o">.</span><span class="n">yaml</span> <span class="n">frontend_vue</span><span class="o">.</span><span class="n">build</span>
+</span></code></pre></div>
+<div class="language-text highlight">
+<h3 class="code-label">
+  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
+  <i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output">
+  <code><span>
+Linting Python code...
 Running Java backend tests...
 Running React frontend tests...
 Building Vue.js frontend...
-</code></pre>
+
+</span></code>
+</pre>
+</div>
+
 <h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link"> #</a></h2>
 <p>In conclusion, Makim's working-directory feature empowers users with a flexible and efficient approach to project management. Throughout this blog, we explored how this feature, applied at the global, group, and target scopes, provides unparalleled customization and control over the execution environment.</p>
 <p>By isolating commands, offering flexibility in configuration, and ensuring ease of use, Makim's working-directory feature becomes an invaluable asset in your toolkit. It not only streamlines the execution of commands but also enhances the overall organization and maintainability of your projects.</p>

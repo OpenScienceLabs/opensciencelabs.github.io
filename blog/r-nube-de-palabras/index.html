@@ -566,28 +566,28 @@ En este tutorial, usaremos el artículo de <a href="https://es.wikipedia.org/wik
 
 <h2 id="instalacion-de-pre-requisitos">Instalación de pre-requisitos<a class="headerlink" href="#instalacion-de-pre-requisitos" title="Permanent link"> #</a></h2>
 <p>Para un mejor manejo de los paquetes, aquí vamos a utilizar la biblioteca <code>pacman</code>, esta nos permitirá hacer una instalación y activación de las bibliotecas de manera rápida. Recuerde instalar <strong>Rtools</strong> y la versión más reciente de <strong>R</strong> si está usando <strong>Windows</strong>.</p>
-<pre><code class="language-python"># install.packages(&quot;pacman&quot;) # Si no tiene instalada la Biblioteca Pacman ejecutar esta línea de código
-library(&quot;pacman&quot;)
-</code></pre>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># install.packages(&quot;pacman&quot;) # Si no tiene instalada la Biblioteca Pacman ejecutar esta línea de código</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">library</span><span class="p">(</span><span class="s2">&quot;pacman&quot;</span><span class="p">)</span>
+</span></code></pre></div>
 <p>Bibliotecas adicionales requeridas, instaladas y abiertas con <code>pacman</code>.</p>
-<pre><code class="language-python">p_load(&quot;tm&quot;) # Biblioteca para realizar el preprocesado del texto,
-p_load(&quot;tidyverse&quot;) # Biblioteca con funciones para manipular datos.
-p_load(&quot;wordcloud&quot;) # Biblioteca para graficar nuestra nube de palabras.
-p_load(&quot;RColorBrewer&quot;) # Biblioteca para seleccionar una paleta de colores de nuestra nube de palabras.
-</code></pre>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">p_load</span><span class="p">(</span><span class="s2">&quot;tm&quot;</span><span class="p">)</span> <span class="c1"># Biblioteca para realizar el preprocesado del texto,</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">p_load</span><span class="p">(</span><span class="s2">&quot;tidyverse&quot;</span><span class="p">)</span> <span class="c1"># Biblioteca con funciones para manipular datos.</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">p_load</span><span class="p">(</span><span class="s2">&quot;wordcloud&quot;</span><span class="p">)</span> <span class="c1"># Biblioteca para graficar nuestra nube de palabras.</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">p_load</span><span class="p">(</span><span class="s2">&quot;RColorBrewer&quot;</span><span class="p">)</span> <span class="c1"># Biblioteca para seleccionar una paleta de colores de nuestra nube de palabras.</span>
+</span></code></pre></div>
 <h2 id="importacion-del-texto">Importación del texto<a class="headerlink" href="#importacion-del-texto" title="Permanent link"> #</a></h2>
 <p>Para este ejemplo, descargamos nuestro artículo de formato texto de un repositorio, guardamos la dirección web en <code>articulo_IA</code> y lo descargamos usando la función <code>read_file()</code>. También puede usar los directorios locales para importar un texto de su preferencia. Si desea descargar el archivo que usamos en este ejemplo puede hacer hacerlo ejecutando <code>download.file("https://gist.github.com/EverVino/7bdbbe7ebdff5987970036f52f0e384f/raw/3a1997b6f9e3471555a941f8812ada0cef84977d/gistfile1.txt", paste(getwd(),"/texto.txt", sep=""))</code> en la línea de comando de R, esto descargará el archivo y lo guardara en la carpeta de trabajo de R con el nombre de <strong>texto.txt</strong>.</p>
 <p><em>Para saber la carpeta de trabajo puede ejecutar <code>getwd()</code>. puede cambiar la carpeta de trabajo con la función <code>setwd("/nuevo_directorio_trabajo/")</code>.</em></p>
 <p>Luego de importar el texto, vamos a convertirlo en un objeto tipo <code>Source</code>, esto facilitará la minería del texto y su posterior modificación.</p>
-<pre><code class="language-python">articulo_IA &lt;- &quot;https://gist.github.com/EverVino/7bdbbe7ebdff5987970036f52f0e384f/raw/3a1997b6f9e3471555a941f8812ada0cef84977d/gistfile1.txt&quot;
-texto &lt;- read_file(articulo_IA)
-</code></pre>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">articulo_IA</span> <span class="o">&lt;-</span> <span class="s2">&quot;https://gist.github.com/EverVino/7bdbbe7ebdff5987970036f52f0e384f/raw/3a1997b6f9e3471555a941f8812ada0cef84977d/gistfile1.txt&quot;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">texto</span> <span class="o">&lt;-</span> <span class="n">read_file</span><span class="p">(</span><span class="n">articulo_IA</span><span class="p">)</span>
+</span></code></pre></div>
 <ul>
 <li><code>read_file(dir)</code>: Función de la biblioteca <code>tidyverse</code> que nos permite importar archivos de texto. El resultado de la función es un vector de un sólo elemento. <code>dir</code> es la <strong>direción local</strong> o <strong>url</strong> con el nombre del archivo de formato <strong>txt</strong> a importar.</li>
 </ul>
-<pre><code class="language-python">texto &lt;- VCorpus(VectorSource(texto), 
-                 readerControl = list(reader = readPlain, language = &quot;es&quot;))
-</code></pre>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">texto</span> <span class="o">&lt;-</span> <span class="n">VCorpus</span><span class="p">(</span><span class="n">VectorSource</span><span class="p">(</span><span class="n">texto</span><span class="p">),</span> 
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>                 <span class="n">readerControl</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">reader</span> <span class="o">=</span> <span class="n">readPlain</span><span class="p">,</span> <span class="n">language</span> <span class="o">=</span> <span class="s2">&quot;es&quot;</span><span class="p">))</span>
+</span></code></pre></div>
 <ul>
 <li>
 <p><code>VCorpus (x, readerControl(y))</code>: Donde <code>x</code> es un objeto del tipo <code>Source</code>, se recomienda que sea un objeto del tipo <code>VectorSource</code>. Para <code>readerControl(y)</code> <code>y</code> es una lista de parámetros para leer <code>x</code>.</p>
@@ -598,14 +598,14 @@ texto &lt;- read_file(articulo_IA)
 </ul>
 <h2 id="preprocesado-de-texto">Preprocesado de texto<a class="headerlink" href="#preprocesado-de-texto" title="Permanent link"> #</a></h2>
 <p>Una vez importado el texto, tenemos que eliminar la palabras que actúan como conectores, separadores de palabras , de oraciones, y números que no aportarán al análisis del texto, para ello usamos la función <code>tm_map()</code> que nos permite aplicar funciones al texto del <code>Corpus</code>.</p>
-<pre><code class="language-python">texto &lt;- tm_map(texto, tolower)
-texto &lt;- texto %&gt;% 
-            tm_map(removePunctuation) %&gt;% 
-            tm_map(removeNumbers) %&gt;% 
-            tm_map(removeWords, stopwords(&quot;spanish&quot;))
-texto &lt;- tm_map(texto, removeWords, c(&quot;puede&quot;, &quot;ser&quot;, &quot;pues&quot;, &quot;si&quot;, &quot;aún&quot;, &quot;cómo&quot;))
-texto &lt;- tm_map(texto, stripWhitespace)
-</code></pre>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">texto</span> <span class="o">&lt;-</span> <span class="n">tm_map</span><span class="p">(</span><span class="n">texto</span><span class="p">,</span> <span class="n">tolower</span><span class="p">)</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">texto</span> <span class="o">&lt;-</span> <span class="n">texto</span> <span class="o">%&gt;%</span> 
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>            <span class="n">tm_map</span><span class="p">(</span><span class="n">removePunctuation</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>            <span class="n">tm_map</span><span class="p">(</span><span class="n">removeNumbers</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>            <span class="n">tm_map</span><span class="p">(</span><span class="n">removeWords</span><span class="p">,</span> <span class="n">stopwords</span><span class="p">(</span><span class="s2">&quot;spanish&quot;</span><span class="p">))</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">texto</span> <span class="o">&lt;-</span> <span class="n">tm_map</span><span class="p">(</span><span class="n">texto</span><span class="p">,</span> <span class="n">removeWords</span><span class="p">,</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;puede&quot;</span><span class="p">,</span> <span class="s2">&quot;ser&quot;</span><span class="p">,</span> <span class="s2">&quot;pues&quot;</span><span class="p">,</span> <span class="s2">&quot;si&quot;</span><span class="p">,</span> <span class="s2">&quot;aún&quot;</span><span class="p">,</span> <span class="s2">&quot;cómo&quot;</span><span class="p">))</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">texto</span> <span class="o">&lt;-</span> <span class="n">tm_map</span><span class="p">(</span><span class="n">texto</span><span class="p">,</span> <span class="n">stripWhitespace</span><span class="p">)</span>
+</span></code></pre></div>
 <ul>
 <li>
 <p><code>tm_map(text, funcion_de_transformacion, parametros_de_funcion)</code>: Transforma el contenido de texto de un objeto <code>Corpus</code> o <code>VCorpus</code>, aplicando las funciones de transformación de texto.</p>
@@ -629,39 +629,39 @@ texto &lt;- tm_map(texto, stripWhitespace)
 <p>Nótese que usamos ambas notaciones para transformar el texto del <code>Corpus</code>, la notación normal <code>tm_map(x, FUN)</code> y también la notación de la biblioteca de <code>tydiverse</code> <code>pipeoperator</code> <code>&gt;%&gt;</code>, que toma como argumento inicial el resultado de la anterior función.</p>
 <p><em>Si quiere observar los cambios del texto puede ejecutar en la consola <code>writeLines(as.character(texto[[1]]))</code>, esto imprimirá el resultado en la consola.</em></p>
 <h2 id="construyendo-la-tabla-de-frecuencia">Construyendo la tabla de frecuencia<a class="headerlink" href="#construyendo-la-tabla-de-frecuencia" title="Permanent link"> #</a></h2>
-<pre><code class="language-python">texto &lt;- tm_map(texto, PlainTextDocument)
-</code></pre>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">texto</span> <span class="o">&lt;-</span> <span class="n">tm_map</span><span class="p">(</span><span class="n">texto</span><span class="p">,</span> <span class="n">PlainTextDocument</span><span class="p">)</span>
+</span></code></pre></div>
 <ul>
 <li><code>PlainTextDocument</code>: Convierte texto a un objeto tipo PlainTextDocument. Para el ejemplo, convierte un <code>VCorpus</code> a <code>PlainTextDocument</code> el cuál contiene metadatos y nombres de las filas, haciendo factible la conversión a un matriz.</li>
 </ul>
-<pre><code class="language-python">tabla_frecuencia &lt;- DocumentTermMatrix(texto)
-</code></pre>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">tabla_frecuencia</span> <span class="o">&lt;-</span> <span class="n">DocumentTermMatrix</span><span class="p">(</span><span class="n">texto</span><span class="p">)</span>
+</span></code></pre></div>
 <ul>
 <li><code>DocumentTermMatrix(texto)</code>: Convierte texto a un objeto tipo term-document matrix. Es un objeto que va a contener la frecuencia de palabras.</li>
 </ul>
-<pre><code class="language-python">tabla_frecuencia &lt;- cbind(palabras = tabla_frecuencia$dimnames$Terms, 
-                          frecuencia = tabla_frecuencia$v)
-</code></pre>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">tabla_frecuencia</span> <span class="o">&lt;-</span> <span class="n">cbind</span><span class="p">(</span><span class="n">palabras</span> <span class="o">=</span> <span class="n">tabla_frecuencia</span><span class="err">$</span><span class="n">dimnames</span><span class="err">$</span><span class="n">Terms</span><span class="p">,</span> 
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>                          <span class="n">frecuencia</span> <span class="o">=</span> <span class="n">tabla_frecuencia</span><span class="err">$</span><span class="n">v</span><span class="p">)</span>
+</span></code></pre></div>
 <p>Extraemos los datos que nos interesan del objeto <code>tabla_frecuencia</code> y los juntamos con <code>cbind()</code>.</p>
 <p><em>Ejecutando en la consola <code>View(tabla_frecuencia)</code> notamos que es un objeto, para acceder a sus valores usamos el símbolo <code>$</code> dicho de otra manera: para acceder a las <code>palabras</code> usamos <code>tabla_frecuencia$dimnames$Terms</code> y para su correspondientes frecuencia en el texto <code>tabla_frecuencia$v</code>.</em></p>
-<pre><code class="language-python"># Convertimos los valores enlazados con cbind a un objeto dataframe.
-tabla_frecuencia&lt;-as.data.frame(tabla_frecuencia) 
-# Forzamos a que la columna de frecuencia contenga valores numéricos.
-tabla_frecuencia$frecuencia&lt;-as.numeric(tabla_frecuencia$frecuencia)
-# Ordenamos muestra tabla de frecuencias de acuerdo a sus valores numéricos.
-tabla_frecuencia&lt;-tabla_frecuencia[order(tabla_frecuencia$frecuencia, decreasing=TRUE),]
-</code></pre>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Convertimos los valores enlazados con cbind a un objeto dataframe.</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">tabla_frecuencia</span><span class="o">&lt;-</span><span class="k">as</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">tabla_frecuencia</span><span class="p">)</span> 
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c1"># Forzamos a que la columna de frecuencia contenga valores numéricos.</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="n">tabla_frecuencia</span><span class="err">$</span><span class="n">frecuencia</span><span class="o">&lt;-</span><span class="k">as</span><span class="o">.</span><span class="n">numeric</span><span class="p">(</span><span class="n">tabla_frecuencia</span><span class="err">$</span><span class="n">frecuencia</span><span class="p">)</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="c1"># Ordenamos muestra tabla de frecuencias de acuerdo a sus valores numéricos.</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="n">tabla_frecuencia</span><span class="o">&lt;-</span><span class="n">tabla_frecuencia</span><span class="p">[</span><span class="n">order</span><span class="p">(</span><span class="n">tabla_frecuencia</span><span class="err">$</span><span class="n">frecuencia</span><span class="p">,</span> <span class="n">decreasing</span><span class="o">=</span><span class="n">TRUE</span><span class="p">),]</span>
+</span></code></pre></div>
 <p><em>Con estos últimos ajustes ya tenemos nuestra tabla de frecuencias para graficarla.</em>
 <em>Puede verificar los resultados ejecutando en la consola <code>head(tabla_frecuencia)</code></em></p>
 <h2 id="graficando-nuestra-nube-de-palabras">Graficando nuestra nube de palabras<a class="headerlink" href="#graficando-nuestra-nube-de-palabras" title="Permanent link"> #</a></h2>
 <p>Una vez obtenida nuestra tabla de frecuencia sólo es necesario aplicar la función <code>wordcloud()</code>.</p>
-<pre><code class="language-python">wordcloud(words = tabla_frecuencia$palabras, 
-          freq = tabla_frecuencia$frecuencia, 
-          min.freq = 5, 
-          max.words = 100, 
-          random.order = FALSE, 
-          colors = brewer.pal(8,&quot;Paired&quot;))
-</code></pre>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">wordcloud</span><span class="p">(</span><span class="n">words</span> <span class="o">=</span> <span class="n">tabla_frecuencia</span><span class="err">$</span><span class="n">palabras</span><span class="p">,</span> 
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>          <span class="n">freq</span> <span class="o">=</span> <span class="n">tabla_frecuencia</span><span class="err">$</span><span class="n">frecuencia</span><span class="p">,</span> 
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>          <span class="nb">min</span><span class="o">.</span><span class="n">freq</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> 
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>          <span class="nb">max</span><span class="o">.</span><span class="n">words</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> 
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>          <span class="n">random</span><span class="o">.</span><span class="n">order</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">,</span> 
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>          <span class="n">colors</span> <span class="o">=</span> <span class="n">brewer</span><span class="o">.</span><span class="n">pal</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="s2">&quot;Paired&quot;</span><span class="p">))</span>
+</span></code></pre></div>
 <p><img alt="png" src="index_files/index_24_0.png" /></p>
 <ul>
 <li><code>wordcloud(word, freq, min.freq, max.words, random.order, color)</code>: Función para graficar la frecuencia de palabras, el tamaño de la palabra graficada será proporcional a la frecuencia de la misma. Esta función grafica las palabras en <code>word</code> con sus respectivas frecuencias <code>freq</code>, sólo usará las palabras que como mínimo tenga una frecuencia mínima <code>min.freq</code>, la cantidad de palabras en graficadas es igual a <code>maxwords</code>, las posiciones podrán ser aleatorias o no, dependiendo del valor de <code>random.order</code>, los colores estan dados en forma de lista en <code>colors</code>.</li>
@@ -670,19 +670,19 @@ tabla_frecuencia&lt;-tabla_frecuencia[order(tabla_frecuencia$frecuencia, decreas
 <p><em>Cada vez que ejecute la función le mostrará diferentes resultados, para evitarlo si así se desea, puede fijar un estado inicial para generar números aleatorios que utiliza la función wordcloud. Use: <code>set.seed(1234)</code> para este propósito (puede alterar el valor del argumento numeral para diferentes resultados).</em></p>
 <h2 id="guardando-nuestra-nube-de-palabras">Guardando nuestra nube de palabras<a class="headerlink" href="#guardando-nuestra-nube-de-palabras" title="Permanent link"> #</a></h2>
 <p>Usamos la función <code>png()</code> para guardar la gráfica que se genera usando wordcloud. También puede usar otras funciones como <code>jpeg</code>, <code>svg</code> y otros.
-Nótese que usamos la función <code>png()</code> y <code>dev.off()</code> antes y despues de la función generadora de la grafica <code>wordcloud()</code></p>
-<pre><code class="language-r">png(&quot;nube.png&quot;, width = 800,height = 800, res = 100)
-    wordcloud(...)
-dev.off()
-</code></pre>
+Nótese que usamos la función <code>png()</code> y <code>dev.off()</code> antes y despues de la función generadora de la grafica <code>wordcloud()</code>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nf">png</span><span class="p">(</span><span class="s">&quot;nube.png&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">800</span><span class="p">,</span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">800</span><span class="p">,</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">100</span><span class="p">)</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="nf">wordcloud</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="nf">dev.off</span><span class="p">()</span>
+</span></code></pre></div></p>
 <ul>
 <li><code>png("nombre.png", with, height, res) ... dev.off()</code>: Guarda el gráfico generado en formato <code>png</code>, dentro del directorio actual de trabajo. Lo guarda con el nombre <code>"nombre.png"</code> con el ancho y alto  en pixeles de <code>with</code> y <code>height</code> respectivamente; y con la resolución <code>res</code> en ppi. Con <code>dev.off()</code> concluimos la obtención de datos de <code>png()</code>.</li>
 </ul>
 <p><em>Otra biblioteca muy utilizada para generar una nube de palabras es <code>wordcloud2</code>, esta posee muchos más parámetros para modificar la apariencia de la nube, pero teniendo en cuenta que R está optimizado para realizar tratamiento de datos y no tanto para dibujar palabras, es recomendable usar otras opciones online o programas de diseño gráfico, si queremos mejores resultados. Y usar R para la obtención de la tabla de frecuencia de las palabras.</em>
 <em>Nota: Existen palabras que pueden derivar de una misma palabra y expresan el mismo significado, como ser nube, nubes, nubarrón, que estan diferenciadas aquí en este ejemplo, estos requieren la aplicación adicional de una función que contemple estas variaciones linguisticas, lamentablemente a la fecha no hay una función equivalente para el español para R. Sin embargo si realiza el análisis de palabras en inglés puede usar <code>tm_map(Corpus_en_ingles, stemDocument, language="english")</code>.</em></p>
 <p>Finalmente antes de concluir cerramos las bibliotecas abiertas con <code>pacman</code>. La ventaja de hacer esto se ve cuando manejamos diferentes bibliotecas que tienen funciones con el mismo nombre, al cerrar las bibliotecas con conflictos, nos evitamos de especificar en el código a que biblioteca de R nos referimos.</p>
-<pre><code class="language-python">p_unload(all)
-</code></pre>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">p_unload</span><span class="p">(</span><span class="nb">all</span><span class="p">)</span>
+</span></code></pre></div>
 <h2 id="referencias">Referencias<a class="headerlink" href="#referencias" title="Permanent link"> #</a></h2>
 <ul>
 <li><a href="https://es.wikipedia.org/wiki/Inteligencia_artificial">Wikipedia-Inteligencia Artificial</a></li>

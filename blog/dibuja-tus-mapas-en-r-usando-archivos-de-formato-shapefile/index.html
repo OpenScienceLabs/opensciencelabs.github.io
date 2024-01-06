@@ -603,14 +603,14 @@ del mundo (algunos están desactualizados).</p>
 shapefiles de Bolivia.</p>
 <h3 id="instalacion-de-pre-requisitos">Instalación de pre-requisitos<a class="headerlink" href="#instalacion-de-pre-requisitos" title="Permanent link"> #</a></h3>
 <p>Las siguientes bibliotecas de R son necesarias, para realizar nuestro ejemplo.</p>
-<pre><code class="language-r">install.packages(&quot;ggplot2&quot;)    # biblioteca para graficar.
-install.packages(&quot;rgdal&quot;)      # biblioteca para abrir archivo de formato shapefiles (datos geográficos)
-install.packages(&quot;broom&quot;)      # biblioteca usada para extraer datos del archivo importado de shapefiles
-install.packages(&quot;tidyverse&quot;)  # biblioteca usada para unir tablas
-install.packages(&quot;rio&quot;)        # biblioteca para importar datos de archivos csv
-install.packages(&quot;dplyr&quot;)     # biblioteca usada para agrupar por valores de columnas
-install.packages(&quot;extrafont&quot;) # biblioteca para importar los tipos de letra de windows.
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;ggplot2&quot;</span><span class="p">)</span><span class="w">    </span><span class="c1"># biblioteca para graficar.</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;rgdal&quot;</span><span class="p">)</span><span class="w">      </span><span class="c1"># biblioteca para abrir archivo de formato shapefiles (datos geográficos)</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;broom&quot;</span><span class="p">)</span><span class="w">      </span><span class="c1"># biblioteca usada para extraer datos del archivo importado de shapefiles</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;tidyverse&quot;</span><span class="p">)</span><span class="w">  </span><span class="c1"># biblioteca usada para unir tablas</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;rio&quot;</span><span class="p">)</span><span class="w">        </span><span class="c1"># biblioteca para importar datos de archivos csv</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;dplyr&quot;</span><span class="p">)</span><span class="w">     </span><span class="c1"># biblioteca usada para agrupar por valores de columnas</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;extrafont&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1"># biblioteca para importar los tipos de letra de windows.</span>
+</span></code></pre></div>
 <p><em>(Recuerde que para ejecutar una línea de comando en el Editor de RStudio se usa
 Ctrl+Enter)</em></p>
 <h2 id="preparacion-de-los-datos-para-graficar">Preparación de los datos para graficar<a class="headerlink" href="#preparacion-de-los-datos-para-graficar" title="Permanent link"> #</a></h2>
@@ -619,25 +619,25 @@ Ctrl+Enter)</em></p>
 <a href="https://www.geodatos.net/coordenadas/bolivia">geodatos.net</a>. Una vez
 descargados los datos, fueron depurados para el ejemplo.</p>
 <p>Abrimos nuestras bibliotecas requeridas:</p>
-<pre><code class="language-r">library(ggplot2)
-library(rgdal)
-library(broom)
-library(tidyverse)
-library(rio)
-library(dplyr)
-library(extrafont)
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nf">library</span><span class="p">(</span><span class="n">rgdal</span><span class="p">)</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nf">library</span><span class="p">(</span><span class="n">broom</span><span class="p">)</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nf">library</span><span class="p">(</span><span class="n">rio</span><span class="p">)</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nf">library</span><span class="p">(</span><span class="n">extrafont</span><span class="p">)</span>
+</span></code></pre></div>
 <p>Redireccionamos el directorio actual a nuestro directorio de trabajo e
 importamos nuestros archivos shapefiles:</p>
-<pre><code class="language-r">setwd(&quot;../mypath/&quot;) # redirecciona el directo actual a nuestro directorio de trabajo
-# importamos los datos geográficos a nuestra variable shapefile
-shapefile = readOGR(
-  dsn = &quot;.&quot;,
-  layer = &quot;departamentos_geo&quot;,
-  encoding = 'utf-8',
-  use_iconv = TRUE
-)
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nf">setwd</span><span class="p">(</span><span class="s">&quot;../mypath/&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1"># redirecciona el directo actual a nuestro directorio de trabajo</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1"># importamos los datos geográficos a nuestra variable shapefile</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">shapefile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">readOGR</span><span class="p">(</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="n">dsn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;.&quot;</span><span class="p">,</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="n">layer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;departamentos_geo&quot;</span><span class="p">,</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="n">encoding</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;utf-8&#39;</span><span class="p">,</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="n">use_iconv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">)</span>
+</span></code></pre></div>
 <ul>
 <li>
 <p><strong><code>dsn</code></strong>: carpeta dentro del directorio actual, donde se encuentran ficheros
@@ -653,28 +653,28 @@ shapefile = readOGR(
 </ul>
 <p>Para observar el contenido de <code>shapefile</code>, use <code>View(shapefile)</code>.</p>
 <p>Extraemos datos en <code>geotable</code> y a continuación mostramos su cabecera:</p>
-<pre><code class="language-r">geotable = tidy(shapefile)
-head(geotable)
-</code></pre>
-<pre><code class="language-r">&gt; head(geotable)
-# A tibble: 6 x 7
-   long   lat order hole  piece group id
-  &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;lgl&gt; &lt;fct&gt; &lt;fct&gt; &lt;chr&gt;
-1 -65.8 -18.0     1 FALSE 1     0.1   0
-2 -65.8 -18.0     2 FALSE 1     0.1   0
-3 -65.8 -18.0     3 FALSE 1     0.1   0
-4 -65.8 -18.0     4 FALSE 1     0.1   0
-5 -65.8 -18.0     5 FALSE 1     0.1   0
-6 -65.8 -18.0     6 FALSE 1     0.1   0
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">geotable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">tidy</span><span class="p">(</span><span class="n">shapefile</span><span class="p">)</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nf">head</span><span class="p">(</span><span class="n">geotable</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="o">&gt;</span><span class="w"> </span><span class="nf">head</span><span class="p">(</span><span class="n">geotable</span><span class="p">)</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1"># A tibble: 6 x 7</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">   </span><span class="n">long</span><span class="w">   </span><span class="n">lat</span><span class="w"> </span><span class="n">order</span><span class="w"> </span><span class="n">hole</span><span class="w">  </span><span class="n">piece</span><span class="w"> </span><span class="n">group</span><span class="w"> </span><span class="n">id</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="o">&lt;</span><span class="n">dbl</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dbl</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">int</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">lgl</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">fct</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">fct</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">chr</span><span class="o">&gt;</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="m">1</span><span class="w"> </span><span class="m">-65.8</span><span class="w"> </span><span class="m">-18.0</span><span class="w">     </span><span class="m">1</span><span class="w"> </span><span class="kc">FALSE</span><span class="w"> </span><span class="m">1</span><span class="w">     </span><span class="m">0.1</span><span class="w">   </span><span class="m">0</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="m">2</span><span class="w"> </span><span class="m">-65.8</span><span class="w"> </span><span class="m">-18.0</span><span class="w">     </span><span class="m">2</span><span class="w"> </span><span class="kc">FALSE</span><span class="w"> </span><span class="m">1</span><span class="w">     </span><span class="m">0.1</span><span class="w">   </span><span class="m">0</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="m">3</span><span class="w"> </span><span class="m">-65.8</span><span class="w"> </span><span class="m">-18.0</span><span class="w">     </span><span class="m">3</span><span class="w"> </span><span class="kc">FALSE</span><span class="w"> </span><span class="m">1</span><span class="w">     </span><span class="m">0.1</span><span class="w">   </span><span class="m">0</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="m">4</span><span class="w"> </span><span class="m">-65.8</span><span class="w"> </span><span class="m">-18.0</span><span class="w">     </span><span class="m">4</span><span class="w"> </span><span class="kc">FALSE</span><span class="w"> </span><span class="m">1</span><span class="w">     </span><span class="m">0.1</span><span class="w">   </span><span class="m">0</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="m">5</span><span class="w"> </span><span class="m">-65.8</span><span class="w"> </span><span class="m">-18.0</span><span class="w">     </span><span class="m">5</span><span class="w"> </span><span class="kc">FALSE</span><span class="w"> </span><span class="m">1</span><span class="w">     </span><span class="m">0.1</span><span class="w">   </span><span class="m">0</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="m">6</span><span class="w"> </span><span class="m">-65.8</span><span class="w"> </span><span class="m">-18.0</span><span class="w">     </span><span class="m">6</span><span class="w"> </span><span class="kc">FALSE</span><span class="w"> </span><span class="m">1</span><span class="w">     </span><span class="m">0.1</span><span class="w">   </span><span class="m">0</span>
+</span></code></pre></div>
 <p>Nótese que geotable, no posee las etiquetas de los nombres de las regiones a
 graficar, esto lo arreglamos con:</p>
-<pre><code class="language-r"># añadiendo una columna id para poder juntar las columnas de nuestro geotable
-shapefile$id &lt;- row.names(shapefile)
-
-# añadiendo a geotable los datos que faltan desde shapefile y lo juntamos por el id
-geotable &lt;- left_join(geotable, shapefile@data, by = &quot;id&quot;)
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># añadiendo una columna id para poder juntar las columnas de nuestro geotable</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">shapefile</span><span class="o">$</span><span class="n">id</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">row.names</span><span class="p">(</span><span class="n">shapefile</span><span class="p">)</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># añadiendo a geotable los datos que faltan desde shapefile y lo juntamos por el id</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">geotable</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">left_join</span><span class="p">(</span><span class="n">geotable</span><span class="p">,</span><span class="w"> </span><span class="n">shapefile</span><span class="o">@</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;id&quot;</span><span class="p">)</span>
+</span></code></pre></div>
 <p>Para verificar que se han añadido los correspondientes nombres de regiones, use
 <code>head(geotable)</code></p>
 <p>Funciones auxiliares:</p>
@@ -693,27 +693,27 @@ geotable &lt;- left_join(geotable, shapefile@data, by = &quot;id&quot;)
 <p>Ahora importamos nuestra tabla con los datos de población por departamento:
 (haciendo <code>header = TRUE</code> nos aseguramos que la primera fila se convierta en los
 nombres de las columnas)</p>
-<pre><code class="language-r"># importando la tabla de datos de población
-poblacion &lt;- import(&quot;departamentospoblacion.csv&quot;, header = TRUE)
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># importando la tabla de datos de población</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">poblacion</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">import</span><span class="p">(</span><span class="s">&quot;departamentospoblacion.csv&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
+</span></code></pre></div>
 <p>Nótese que cambiamos el nombre de nuestra columna en población <code>DEPARTAMENTO</code>
 por <code>DEPARTAMEN</code>, para que coincidan y luego juntarlas con <code>left_join()</code>.</p>
-<pre><code class="language-r"># cambiando el nombre de la columna de DEPARTAMENTO POR DEPARTAMEN
-colnames(poblacion)[colnames(poblacion) == &quot;DEPARTAMENTO&quot;] &lt;- &quot;DEPARTAMEN&quot;
-# juntamos en datos ambas tablas
-datos&lt;-left_join(geotable, poblacion, by = &quot;DEPARTAMEN&quot;)
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># cambiando el nombre de la columna de DEPARTAMENTO POR DEPARTAMEN</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nf">colnames</span><span class="p">(</span><span class="n">poblacion</span><span class="p">)[</span><span class="nf">colnames</span><span class="p">(</span><span class="n">poblacion</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;DEPARTAMENTO&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;DEPARTAMEN&quot;</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="c1"># juntamos en datos ambas tablas</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">datos</span><span class="o">&lt;-</span><span class="nf">left_join</span><span class="p">(</span><span class="n">geotable</span><span class="p">,</span><span class="w"> </span><span class="n">poblacion</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;DEPARTAMEN&quot;</span><span class="p">)</span>
+</span></code></pre></div>
 <h2 id="graficando-el-mapa-con-ggplot2">Graficando el mapa con ggplot2<a class="headerlink" href="#graficando-el-mapa-con-ggplot2" title="Permanent link"> #</a></h2>
 <p>Ahora, graficamos con <code>ggplot2</code>:</p>
-<pre><code class="language-r">ggplot() +
-  geom_polygon(data = datos, aes(
-    x = long,
-    y = lat,
-    group = group,
-    fill = Poblacion2022
-  )) +
-  coord_equal() + labs(fill = &quot;POBLACION&quot;)
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nf">ggplot</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="nf">geom_polygon</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">datos</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">long</span><span class="p">,</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lat</span><span class="p">,</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="n">group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">group</span><span class="p">,</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Poblacion2022</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">  </span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">  </span><span class="nf">coord_equal</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">labs</span><span class="p">(</span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;POBLACION&quot;</span><span class="p">)</span>
+</span></code></pre></div>
 <ul>
 <li><strong><code>geom_polygon(data, aes(x, y, group, fill))</code></strong>: dibuja polígonos con la
   tabla <code>data</code> y muestra la estética con <code>aes()</code>. <code>x</code>, <code>y</code> son los valores en
@@ -731,13 +731,13 @@ leyenda. A continuación mostramos como hacerlo.</p>
 <p>Extraemos los valores de la población para ponerlas como etiquetas dentro de
 nuestro mapa, para ello utilizamos las funciones <code>group_by()</code> y <code>summarise()</code> de
 la biblioteca <code>dplyr</code>.</p>
-<pre><code class="language-r">etiquetas_poblacion &lt;- datos %&gt;% group_by(DEPARTAMEN) %&gt;%
-  summarise(
-    label_long = mean(range(long)),
-    label_lat = mean(range(lat)),
-    pob = mean(Poblacion2022)
-  )
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">etiquetas_poblacion</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">datos</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">group_by</span><span class="p">(</span><span class="n">DEPARTAMEN</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="nf">summarise</span><span class="p">(</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="n">label_long</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="nf">range</span><span class="p">(</span><span class="n">long</span><span class="p">)),</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="n">label_lat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="nf">range</span><span class="p">(</span><span class="n">lat</span><span class="p">)),</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span><span class="n">pob</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">Poblacion2022</span><span class="p">)</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">  </span><span class="p">)</span>
+</span></code></pre></div>
 <ul>
 <li><strong><code>tabla0 %&gt;% funcion0 %&gt;% funcion1 ...</code></strong>: Esta notación indica que se debe
   tomar la <code>tabla0</code> como argumento de la <code>funcion0</code>, luego los resultados de la
@@ -754,53 +754,53 @@ la biblioteca <code>dplyr</code>.</p>
 <p>Si queremos incluir nuevas fuentes para el tipo de letra para nuestro mapa,
 empleamos los siguientes comandos: (Nota: nos pedirá confirmación para realizar
 la importación de fuentes y tardará unos minutos):</p>
-<pre><code class="language-r">extrafont::font_import(&quot;C:/Windows/Fonts&quot;)
-loadfonts(device = &quot;win&quot;)
-fonts() # Nos muestra las fuentes disponibles.
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">extrafont</span><span class="o">::</span><span class="nf">font_import</span><span class="p">(</span><span class="s">&quot;C:/Windows/Fonts&quot;</span><span class="p">)</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nf">loadfonts</span><span class="p">(</span><span class="n">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;win&quot;</span><span class="p">)</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="nf">fonts</span><span class="p">()</span><span class="w"> </span><span class="c1"># Nos muestra las fuentes disponibles.</span>
+</span></code></pre></div>
 <p>Incluimos los datos de <code>etiquetas_población</code> en nuestra gráfica.</p>
-<pre><code class="language-r">ggplot() +
-  geom_polygon(data = datos, aes(
-    x = long,
-    y = lat,
-    group = group,
-    fill = Poblacion2022
-  )) +
-  coord_equal() + theme_void() +
-  geom_text(
-    size = 4.5,
-    alpha = 0.9,
-    fontface = &quot;bold&quot;,
-    data = etiquetas_poblacion,
-    mapping = aes(
-      x = label_long,
-      y = label_lat,
-      label = format(pob, big.mark = &quot; &quot;),
-      color = pob
-    )
-  ) +
-  labs(title = &quot;Población estimada de Bolivia por departamentos para el año 2022&quot;,
-       fill = &quot;Habitantes&quot;,
-       caption = &quot;Datos:INE Boliva; GeoDatos: GeoBolivia&quot;) +
-  scale_colour_gradientn(colours = c(&quot;black&quot;, &quot;black&quot;, &quot;white&quot;, &quot;white&quot;, &quot;white&quot;),
-                         guide = &quot;none&quot;) +
-  scale_fill_continuous(
-    low = &quot;#C4FFD1&quot;,
-    high = &quot;#05693E&quot;,
-    guide = &quot;colorbar&quot;,
-    labels = scales::label_number(big.mark = &quot; &quot;)
-  ) +
-  theme(
-    plot.title = element_text(
-      size = 14,
-      face = &quot;bold&quot;,
-      family = &quot;Helvetica&quot;,
-      hjust = 0.5
-    ),
-    legend.title = element_text(size = 12, family = &quot;Rubik&quot;),
-    plot.caption = element_text(family = &quot;Helvetica&quot;)
-  )
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nf">ggplot</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="nf">geom_polygon</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">datos</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">long</span><span class="p">,</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lat</span><span class="p">,</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="n">group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">group</span><span class="p">,</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">    </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Poblacion2022</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">  </span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">  </span><span class="nf">coord_equal</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">theme_void</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">  </span><span class="nf">geom_text</span><span class="p">(</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">    </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4.5</span><span class="p">,</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="w">    </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.9</span><span class="p">,</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="w">    </span><span class="n">fontface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bold&quot;</span><span class="p">,</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="w">    </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">etiquetas_poblacion</span><span class="p">,</span>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="w">    </span><span class="n">mapping</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="w">      </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">label_long</span><span class="p">,</span>
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="w">      </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">label_lat</span><span class="p">,</span>
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="w">      </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">format</span><span class="p">(</span><span class="n">pob</span><span class="p">,</span><span class="w"> </span><span class="n">big.mark</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">),</span>
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="w">      </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pob</span>
+</span><span id="__span-11-19"><a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="w">    </span><span class="p">)</span>
+</span><span id="__span-11-20"><a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a><span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-11-21"><a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a><span class="w">  </span><span class="nf">labs</span><span class="p">(</span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Población estimada de Bolivia por departamentos para el año 2022&quot;</span><span class="p">,</span>
+</span><span id="__span-11-22"><a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a><span class="w">       </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Habitantes&quot;</span><span class="p">,</span>
+</span><span id="__span-11-23"><a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a><span class="w">       </span><span class="n">caption</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Datos:INE Boliva; GeoDatos: GeoBolivia&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-11-24"><a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a><span class="w">  </span><span class="nf">scale_colour_gradientn</span><span class="p">(</span><span class="n">colours</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;black&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;black&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;white&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;white&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;white&quot;</span><span class="p">),</span>
+</span><span id="__span-11-25"><a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a><span class="w">                         </span><span class="n">guide</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;none&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-11-26"><a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a><span class="w">  </span><span class="nf">scale_fill_continuous</span><span class="p">(</span>
+</span><span id="__span-11-27"><a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a><span class="w">    </span><span class="n">low</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;#C4FFD1&quot;</span><span class="p">,</span>
+</span><span id="__span-11-28"><a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a><span class="w">    </span><span class="n">high</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;#05693E&quot;</span><span class="p">,</span>
+</span><span id="__span-11-29"><a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a><span class="w">    </span><span class="n">guide</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;colorbar&quot;</span><span class="p">,</span>
+</span><span id="__span-11-30"><a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a><span class="w">    </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scales</span><span class="o">::</span><span class="nf">label_number</span><span class="p">(</span><span class="n">big.mark</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">)</span>
+</span><span id="__span-11-31"><a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a><span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-11-32"><a id="__codelineno-11-32" name="__codelineno-11-32" href="#__codelineno-11-32"></a><span class="w">  </span><span class="nf">theme</span><span class="p">(</span>
+</span><span id="__span-11-33"><a id="__codelineno-11-33" name="__codelineno-11-33" href="#__codelineno-11-33"></a><span class="w">    </span><span class="n">plot.title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span>
+</span><span id="__span-11-34"><a id="__codelineno-11-34" name="__codelineno-11-34" href="#__codelineno-11-34"></a><span class="w">      </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">14</span><span class="p">,</span>
+</span><span id="__span-11-35"><a id="__codelineno-11-35" name="__codelineno-11-35" href="#__codelineno-11-35"></a><span class="w">      </span><span class="n">face</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bold&quot;</span><span class="p">,</span>
+</span><span id="__span-11-36"><a id="__codelineno-11-36" name="__codelineno-11-36" href="#__codelineno-11-36"></a><span class="w">      </span><span class="n">family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Helvetica&quot;</span><span class="p">,</span>
+</span><span id="__span-11-37"><a id="__codelineno-11-37" name="__codelineno-11-37" href="#__codelineno-11-37"></a><span class="w">      </span><span class="n">hjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span>
+</span><span id="__span-11-38"><a id="__codelineno-11-38" name="__codelineno-11-38" href="#__codelineno-11-38"></a><span class="w">    </span><span class="p">),</span>
+</span><span id="__span-11-39"><a id="__codelineno-11-39" name="__codelineno-11-39" href="#__codelineno-11-39"></a><span class="w">    </span><span class="n">legend.title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="n">family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Rubik&quot;</span><span class="p">),</span>
+</span><span id="__span-11-40"><a id="__codelineno-11-40" name="__codelineno-11-40" href="#__codelineno-11-40"></a><span class="w">    </span><span class="n">plot.caption</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Helvetica&quot;</span><span class="p">)</span>
+</span><span id="__span-11-41"><a id="__codelineno-11-41" name="__codelineno-11-41" href="#__codelineno-11-41"></a><span class="w">  </span><span class="p">)</span>
+</span></code></pre></div>
 <ul>
 <li><strong><code>theme_void()</code></strong>: elimina el fondo y los ejes de nuestra gráfica.</li>
 <li><strong><code>geom_text(size, alpha, fontface, data, mapping = aes(x, y, label), color)</code></strong>:
@@ -843,43 +843,43 @@ fonts() # Nos muestra las fuentes disponibles.
 <h2 id="anadiendo-ubicaciones-a-nuestro-mapa">Añadiendo ubicaciones a nuestro mapa<a class="headerlink" href="#anadiendo-ubicaciones-a-nuestro-mapa" title="Permanent link"> #</a></h2>
 <p>Incluyendo las ubicaciones de ciudades capitales de departamentos a nuestro
 mapa:</p>
-<pre><code class="language-r">ciudades = import(&quot;ciudades.csv&quot;) # importamos la localización de las ciudades capitales
-
-ggplot() +
-  geom_polygon(
-    data = datos,
-    aes(
-      x = long,
-      y = lat,
-      group = group,
-      fill = DEPARTAMEN
-    ),
-    color = &quot;gray&quot;,
-    size = 0.5
-  ) +
-  geom_point(
-    alpha = 0.7,
-    data = ciudades,
-    mapping = aes(x = lat, y = long, colour = Ciudad),
-    size = 5
-  ) +
-  coord_equal() + labs(title = &quot;Capitales de Departamento en Bolivia&quot;,
-                       color = &quot;Ciudades Capitales&quot;,
-                       caption = &quot;Fuente: geodatos.net, GeoBolivia&quot;) +
-  scale_fill_brewer(palette = 'PuBuGn', guide = &quot;none&quot;) +
-  scale_color_manual(values = rainbow(9)) +
-  theme_void() +
-  theme(
-    plot.title = element_text(
-      size = 14,
-      face = &quot;bold&quot;,
-      family = &quot;Helvetica&quot;,
-      hjust = 0.5
-    ),
-    legend.title = element_text(size = 12, family = &quot;Rubik&quot;),
-    plot.caption = element_text(family = &quot;Helvetica&quot;)
-  )
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">ciudades</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">import</span><span class="p">(</span><span class="s">&quot;ciudades.csv&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1"># importamos la localización de las ciudades capitales</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="nf">ggplot</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">  </span><span class="nf">geom_polygon</span><span class="p">(</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">datos</span><span class="p">,</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">    </span><span class="nf">aes</span><span class="p">(</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">      </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">long</span><span class="p">,</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">      </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lat</span><span class="p">,</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">      </span><span class="n">group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">group</span><span class="p">,</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">      </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DEPARTAMEN</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">    </span><span class="p">),</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="w">    </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;gray&quot;</span><span class="p">,</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="w">    </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="w">    </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.7</span><span class="p">,</span>
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="w">    </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ciudades</span><span class="p">,</span>
+</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="w">    </span><span class="n">mapping</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lat</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">long</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Ciudad</span><span class="p">),</span>
+</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="w">    </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span>
+</span><span id="__span-12-20"><a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-12-21"><a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a><span class="w">  </span><span class="nf">coord_equal</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">labs</span><span class="p">(</span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Capitales de Departamento en Bolivia&quot;</span><span class="p">,</span>
+</span><span id="__span-12-22"><a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a><span class="w">                       </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Ciudades Capitales&quot;</span><span class="p">,</span>
+</span><span id="__span-12-23"><a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a><span class="w">                       </span><span class="n">caption</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Fuente: geodatos.net, GeoBolivia&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-12-24"><a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a><span class="w">  </span><span class="nf">scale_fill_brewer</span><span class="p">(</span><span class="n">palette</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;PuBuGn&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">guide</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;none&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-12-25"><a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a><span class="w">  </span><span class="nf">scale_color_manual</span><span class="p">(</span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">rainbow</span><span class="p">(</span><span class="m">9</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-12-26"><a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a><span class="w">  </span><span class="nf">theme_void</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-12-27"><a id="__codelineno-12-27" name="__codelineno-12-27" href="#__codelineno-12-27"></a><span class="w">  </span><span class="nf">theme</span><span class="p">(</span>
+</span><span id="__span-12-28"><a id="__codelineno-12-28" name="__codelineno-12-28" href="#__codelineno-12-28"></a><span class="w">    </span><span class="n">plot.title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span>
+</span><span id="__span-12-29"><a id="__codelineno-12-29" name="__codelineno-12-29" href="#__codelineno-12-29"></a><span class="w">      </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">14</span><span class="p">,</span>
+</span><span id="__span-12-30"><a id="__codelineno-12-30" name="__codelineno-12-30" href="#__codelineno-12-30"></a><span class="w">      </span><span class="n">face</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bold&quot;</span><span class="p">,</span>
+</span><span id="__span-12-31"><a id="__codelineno-12-31" name="__codelineno-12-31" href="#__codelineno-12-31"></a><span class="w">      </span><span class="n">family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Helvetica&quot;</span><span class="p">,</span>
+</span><span id="__span-12-32"><a id="__codelineno-12-32" name="__codelineno-12-32" href="#__codelineno-12-32"></a><span class="w">      </span><span class="n">hjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span>
+</span><span id="__span-12-33"><a id="__codelineno-12-33" name="__codelineno-12-33" href="#__codelineno-12-33"></a><span class="w">    </span><span class="p">),</span>
+</span><span id="__span-12-34"><a id="__codelineno-12-34" name="__codelineno-12-34" href="#__codelineno-12-34"></a><span class="w">    </span><span class="n">legend.title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="n">family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Rubik&quot;</span><span class="p">),</span>
+</span><span id="__span-12-35"><a id="__codelineno-12-35" name="__codelineno-12-35" href="#__codelineno-12-35"></a><span class="w">    </span><span class="n">plot.caption</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Helvetica&quot;</span><span class="p">)</span>
+</span><span id="__span-12-36"><a id="__codelineno-12-36" name="__codelineno-12-36" href="#__codelineno-12-36"></a><span class="w">  </span><span class="p">)</span>
+</span></code></pre></div>
 <ul>
 <li><strong><code>geom_point(alpha, data, mapping = aes(x, y, colour), size)</code></strong>: dibuja
   puntos dentro del gráfico, comparte similares argumentos con <code>geom_poligon()</code>
@@ -909,14 +909,14 @@ que podrían mejorar el impacto visual.</p>
 encima de la vista previa del gráfico "Export". Podemos optar por guardar
 nuestro mapa con mayor calidad o cierto formato y, para ello, podemos usar
 <code>ggsave()</code>, que nos permite exportar o guardar nuestro último gráfico ejecutado.</p>
-<pre><code class="language-r">ggsave(
-  filename = &quot;grafica.png&quot;,
-  path = &quot;.../mypath/&quot;,
-  scale = 1,
-  device = &quot;png&quot;,
-  dpi = 320
-)
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nf">ggsave</span><span class="p">(</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;grafica.png&quot;</span><span class="p">,</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">  </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;.../mypath/&quot;</span><span class="p">,</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">  </span><span class="n">scale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">  </span><span class="n">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;png&quot;</span><span class="p">,</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">  </span><span class="n">dpi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">320</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="p">)</span>
+</span></code></pre></div>
 <p>Guarda el mapa con el nombre <code>filename</code> en la ruta <code>path</code>, con la escala y
 formato de <code>scale</code> y <code>device</code>. Con <code>dpi</code> indicamos la cantidad de píxeles por
 pulgada, que es la calidad de nuestro archivo a exportar.</p>

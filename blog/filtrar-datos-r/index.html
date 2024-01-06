@@ -570,13 +570,12 @@ ejemplo práctico.</p>
 
 <h2 id="requisitos">Requisitos<a class="headerlink" href="#requisitos" title="Permanent link"> #</a></h2>
 <p>Por comodidad usamos la biblioteca <code>pacman</code> como gestor de paquetes.</p>
-<pre><code class="language-r"># install.packages(&quot;pacman&quot;) Para instalar la biblioteca pacman
-library(pacman) # Gestor de paquetes en R
-p_load(&quot;readr&quot;) # Biblioteca para importar archivos csv
-p_load(&quot;dplyr&quot;) # Biblioteca para manipular datos
-p_load(&quot;ggplot2&quot;)   # Biblioteca para graficar datos
-
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># install.packages(&quot;pacman&quot;) Para instalar la biblioteca pacman</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nf">library</span><span class="p">(</span><span class="n">pacman</span><span class="p">)</span><span class="w"> </span><span class="c1"># Gestor de paquetes en R</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nf">p_load</span><span class="p">(</span><span class="s">&quot;readr&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1"># Biblioteca para importar archivos csv</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nf">p_load</span><span class="p">(</span><span class="s">&quot;dplyr&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1"># Biblioteca para manipular datos</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nf">p_load</span><span class="p">(</span><span class="s">&quot;ggplot2&quot;</span><span class="p">)</span><span class="w">   </span><span class="c1"># Biblioteca para graficar datos</span>
+</span></code></pre></div>
 <p>Recuerde, que tambien puede instalar y abrir las bibliotecas de manera
 tradicional, por ejemplo con: <code>install.packages("readr")</code>, luego abrir la misma
 biblioteca con <code>library(readr)</code>.</p>
@@ -588,19 +587,19 @@ datos en formato <code>.csv</code>, la importamos a nuestro entorno de R. Puede 
 los archivos usados en este artículo
 <a href="https://github.com/EverVino/Example_data_covid_r">Repositorio de este artículo aquí</a>.</p>
 <p>Importamos los el archivo <code>.csv</code> a la variable <code>covid_data</code>.</p>
-<pre><code class="language-r">covid_data &lt;- read_csv(&quot;owid-covid-data.csv&quot;)
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">covid_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;owid-covid-data.csv&quot;</span><span class="p">)</span>
+</span></code></pre></div>
 <p>En la consola observamos lo siguiente:</p>
-<pre><code class="language-r">Rows: 193573 Columns: 67
-── Column specification ────────────────────────────────────────────────────────────────────────────
-Delimiter: &quot;,&quot;
-chr   (4): iso_code, continent, location, tests_units
-dbl  (62): total_cases, new_cases, new_cases_smoothed, total_deaths, new_deaths, new_deaths_smoo...
-date  (1): date
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">Rows</span><span class="o">:</span><span class="w"> </span><span class="m">193573</span><span class="w"> </span><span class="n">Columns</span><span class="o">:</span><span class="w"> </span><span class="m">67</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>──<span class="w"> </span><span class="n">Column</span><span class="w"> </span><span class="n">specification</span><span class="w"> </span>────────────────────────────────────────────────────────────────────────────
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">Delimiter</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;,&quot;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nf">chr   </span><span class="p">(</span><span class="m">4</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="n">iso_code</span><span class="p">,</span><span class="w"> </span><span class="n">continent</span><span class="p">,</span><span class="w"> </span><span class="n">location</span><span class="p">,</span><span class="w"> </span><span class="n">tests_units</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nf">dbl  </span><span class="p">(</span><span class="m">62</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="n">total_cases</span><span class="p">,</span><span class="w"> </span><span class="n">new_cases</span><span class="p">,</span><span class="w"> </span><span class="n">new_cases_smoothed</span><span class="p">,</span><span class="w"> </span><span class="n">total_deaths</span><span class="p">,</span><span class="w"> </span><span class="n">new_deaths</span><span class="p">,</span><span class="w"> </span><span class="n">new_deaths_smoo...</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="nf">date  </span><span class="p">(</span><span class="m">1</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="n">date</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>ℹ<span class="w"> </span><span class="n">Use</span><span class="w"> </span><span class="n">`spec()`</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">retrieve</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">full</span><span class="w"> </span><span class="n">column</span><span class="w"> </span><span class="n">specification</span><span class="w"> </span><span class="n">for</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">data.</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>ℹ<span class="w"> </span><span class="n">Specify</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">column</span><span class="w"> </span><span class="n">types</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="n">`show_col_types = FALSE`</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">quiet</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">message.</span>
+</span></code></pre></div>
 <p>Como puede ver esta tabla es muy extensa, contiene 67 columnas (variables) y
 193573 filas, manejar los datos directamente de esta tabla puede ser complicado,
 por lo que se recomienda reducir las variables o extraer información relevante
@@ -613,14 +612,14 @@ columnas de location, date, new_cases respectivamente en el dataframe
 <code>datos_covid</code> (para graficar curvas suaves usamos la columna new_cases_smoothed
 en vez de new_cases).</p>
 <p>Usando la función <code>filter()</code> y tenemos:</p>
-<pre><code class="language-r"># Filtramos los las filas que cumplan con la condición de que en su columna continent sea igual a &quot;South America&quot;.
-# Almacenamos lo deseado en la variable covid_sudamerica
-covid_sudamerica &lt;- filter(covid_data, continent == &quot;South America&quot;)
-# Filtramos las filas que no contengan valores en la columna de new_cases_smoothed, es decir valores iguales a NA.
-covid_sudamerica &lt;- filter(covid_sudamerica, !is.na(new_cases_smoothed))
-# Seleccionamos sólo  las columnas que nos importan
-covid_sudamerica &lt;- select(covid_sudamerica, location, date, new_cases_smoothed)
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Filtramos los las filas que cumplan con la condición de que en su columna continent sea igual a &quot;South America&quot;.</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1"># Almacenamos lo deseado en la variable covid_sudamerica</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">covid_sudamerica</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">covid_data</span><span class="p">,</span><span class="w"> </span><span class="n">continent</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;South America&quot;</span><span class="p">)</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># Filtramos las filas que no contengan valores en la columna de new_cases_smoothed, es decir valores iguales a NA.</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">covid_sudamerica</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">covid_sudamerica</span><span class="p">,</span><span class="w"> </span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">new_cases_smoothed</span><span class="p">))</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c1"># Seleccionamos sólo  las columnas que nos importan</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="n">covid_sudamerica</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">select</span><span class="p">(</span><span class="n">covid_sudamerica</span><span class="p">,</span><span class="w"> </span><span class="n">location</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="n">new_cases_smoothed</span><span class="p">)</span>
+</span></code></pre></div>
 <p><strong><code>filter(tabla, condicion)</code></strong></p>
 <p>Función que es usada para filtrar en filas, selecciona un subconjunto de filas
 que cumplan con la condicion</p>
@@ -670,49 +669,48 @@ escribirla, su equivalente usando el operador Pipe (%&gt;%) es: <em>x %&gt;% f()
 %&gt;% h()</em> que es mucho más entendible y fácil de escribir.</p>
 <p>Usando el operador <code>%&gt;%</code> podemos simplificar a una línea de comando encadenada,
 la obtención de nuestra variable <code>covid_sudamerica</code> de la sección anterior</p>
-<pre><code class="language-r">covid_sudamerica &lt;-
-  covid_data %&gt;%
-  filter(continent == &quot;South America&quot; &amp; !is.na(new_cases_smoothed)) %&gt;%
-  select(location, date, new_cases_smoothed)
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">covid_sudamerica</span><span class="w"> </span><span class="o">&lt;-</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="n">covid_data</span><span class="w"> </span><span class="o">%&gt;%</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">continent</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;South America&quot;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">new_cases_smoothed</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="nf">select</span><span class="p">(</span><span class="n">location</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="n">new_cases_smoothed</span><span class="p">)</span>
+</span></code></pre></div>
 <p>Para poder graficar este ejemplo lo vamos a reducir un poco más, obteniendo una
 tabla que sólo contenga países de la región.</p>
-<pre><code class="language-r">paises_andinos = c(&quot;Bolivia&quot;, &quot;Peru&quot;, &quot;Chile&quot;, &quot;Ecuador&quot;)
-covid_paises_region &lt;-
-  covid_data %&gt;%
-  filter(location %in% paises_andinos) %&gt;%
-  select(location, date, new_cases_smoothed)
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">paises_andinos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;Bolivia&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Peru&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Chile&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Ecuador&quot;</span><span class="p">)</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">covid_paises_region</span><span class="w"> </span><span class="o">&lt;-</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="n">covid_data</span><span class="w"> </span><span class="o">%&gt;%</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">location</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">paises_andinos</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="nf">select</span><span class="p">(</span><span class="n">location</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="n">new_cases_smoothed</span><span class="p">)</span>
+</span></code></pre></div>
 <p>Para observar nuestros datos obtenidos graficamos</p>
-<pre><code class="language-r">ggplot(covid_paises_region) +
-geom_line(aes(x = date, y = new_cases_smoothed, color = location), size = 0.5) +
-  scale_color_brewer(palette = &quot;Set1&quot;) + theme_bw() +
-  labs(
-    x = &quot;&quot;,
-    y = &quot;&quot;,
-    title = &quot;Registro de contagios diario en países de la región por COVID-19&quot;,
-    subtitle = &quot;(Datos suavizados)&quot;,
-    caption = &quot;Fuente: Our World In Data&quot;,
-    color = &quot;Países&quot;
-  )
-
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nf">ggplot</span><span class="p">(</span><span class="n">covid_paises_region</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nf">geom_line</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new_cases_smoothed</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">location</span><span class="p">),</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="nf">scale_color_brewer</span><span class="p">(</span><span class="n">palette</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Set1&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">theme_bw</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="nf">labs</span><span class="p">(</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Registro de contagios diario en países de la región por COVID-19&quot;</span><span class="p">,</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="n">subtitle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;(Datos suavizados)&quot;</span><span class="p">,</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">    </span><span class="n">caption</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Fuente: Our World In Data&quot;</span><span class="p">,</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Países&quot;</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">  </span><span class="p">)</span>
+</span></code></pre></div>
 <p><img alt="Nuevos casos covid en Bolivia, Perú, Chile y Ecuador" src="covid_region.png" /></p>
 <h2 id="como-usar-summarise-y-group_by">Cómo usar summarise() y group_by()<a class="headerlink" href="#como-usar-summarise-y-group_by" title="Permanent link"> #</a></h2>
 <p>Si, queremos saber el total de contagiados y el total de días desde que se
 registraron los contagios podemos usar <code>summarize()</code></p>
-<pre><code class="language-r">summarise(
-  covid_paises_region,
-  total = sum(new_cases_smoothed, na.rm = TRUE),
-  dias = n_distinct(date)
-)
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nf">summarise</span><span class="p">(</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="n">covid_paises_region</span><span class="p">,</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">new_cases_smoothed</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">),</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="n">dias</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">n_distinct</span><span class="p">(</span><span class="n">date</span><span class="p">)</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="p">)</span>
+</span></code></pre></div>
 <p>Ejecutanto obtenemos en la consola:</p>
-<pre><code># A tibble: 1 × 2
-     total  dias
-     &lt;dbl&gt; &lt;int&gt;
-1 9174748.   841
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a># A tibble: 1 × 2
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>     total  dias
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>     &lt;dbl&gt; &lt;int&gt;
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>1 9174748.   841
+</span></code></pre></div>
 <p><strong><code>summarise(tabla, nueva_columa = funcion_vector(columna_tabla), ...)</code></strong>
 Función que crea una nueva tabla a partir de la agrupación de columnas de una
 tabla anterior, los valores de la nueva columna dependen también del tipo de
@@ -744,21 +742,21 @@ ejemplo puede usar <code>mean(vector, na.rm = TRUE)</code> para calcular el prom
 valor por columna.</p>
 <p>Para el ejemplo, si quisieramos no obtener el total sino el total por países
 usamos la función <code>group_by()</code>.</p>
-<pre><code class="language-r">total_covid_paises_region &lt;-
-    covid_paises_region %&gt;% group_by(location) %&gt;%
-    summarise(total_contagios = sum(new_cases_smoothed, na.rm = TRUE))
-
-total_covid_paises_region
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">total_covid_paises_region</span><span class="w"> </span><span class="o">&lt;-</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="n">covid_paises_region</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">group_by</span><span class="p">(</span><span class="n">location</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="nf">summarise</span><span class="p">(</span><span class="n">total_contagios</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">new_cases_smoothed</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">))</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="n">total_covid_paises_region</span>
+</span></code></pre></div>
 <p>Ejecutando, observamos en la consola:</p>
-<pre><code class="language-r"># A tibble: 4 × 2
-  location total_contagios
-  &lt;chr&gt;              &lt;dbl&gt;
-1 Bolivia          911503.
-2 Chile           3785492.
-3 Ecuador          889635.
-4 Peru            3588117.
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># A tibble: 4 × 2</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="n">location</span><span class="w"> </span><span class="n">total_contagios</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span><span class="o">&lt;</span><span class="n">chr</span><span class="o">&gt;</span><span class="w">              </span><span class="o">&lt;</span><span class="n">dbl</span><span class="o">&gt;</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="m">1</span><span class="w"> </span><span class="n">Bolivia</span><span class="w">          </span><span class="m">911503</span><span class="n">.</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="m">2</span><span class="w"> </span><span class="n">Chile</span><span class="w">           </span><span class="m">3785492</span><span class="n">.</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="m">3</span><span class="w"> </span><span class="n">Ecuador</span><span class="w">          </span><span class="m">889635</span><span class="n">.</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="m">4</span><span class="w"> </span><span class="n">Peru</span><span class="w">            </span><span class="m">3588117</span><span class="n">.</span>
+</span></code></pre></div>
 <p><em>Nota: estos son resultados de datos suavizados</em></p>
 <p><strong><code>group_by(tabla, columna_1, columna_2 ...)</code></strong> Agrupa varias filas en una sola,
 las agrupa si y sólo si tienen el mismo valor en columna_1, luego las agrupa por
@@ -772,25 +770,25 @@ de la función <code>summarise()</code></p>
 </ul>
 <p>Hagamos algo más interesante, queremos ver la evolución del contagios de
 COVID-19 por continentes.</p>
-<pre><code class="language-r">covid_continentes &lt;-
-  covid_data %&gt;%
-  group_by(continent, date) %&gt;%
-  summarise(total_contagios = sum(new_cases_smoothed, na.rm = TRUE)) %&gt;%
-  filter(!is.na(continent))
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">covid_continentes</span><span class="w"> </span><span class="o">&lt;-</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="n">covid_data</span><span class="w"> </span><span class="o">%&gt;%</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">continent</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">  </span><span class="nf">summarise</span><span class="p">(</span><span class="n">total_contagios</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">new_cases_smoothed</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">continent</span><span class="p">))</span>
+</span></code></pre></div>
 <p>Graficando los resultados</p>
-<pre><code class="language-r">ggplot(covid_continentes) +
-  geom_line(aes(x = date, y = total_contagios, color = continent), size = 0.8) +
-  scale_color_brewer(palette = &quot;Set1&quot;) + theme_bw() +
-  labs(
-    x = &quot;&quot;,
-    y = &quot;&quot;,
-    title = &quot;Registro de contagios COVID-19 por Continente&quot;,
-    subtitle = &quot;(Datos suavizados)&quot;,
-    caption = &quot;Fuente: Our World In Data&quot;,
-    color = &quot;Continente&quot;
-  )
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nf">ggplot</span><span class="p">(</span><span class="n">covid_continentes</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="nf">geom_line</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">total_contagios</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">continent</span><span class="p">),</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.8</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">  </span><span class="nf">scale_color_brewer</span><span class="p">(</span><span class="n">palette</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Set1&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">theme_bw</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">  </span><span class="nf">labs</span><span class="p">(</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">    </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Registro de contagios COVID-19 por Continente&quot;</span><span class="p">,</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">    </span><span class="n">subtitle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;(Datos suavizados)&quot;</span><span class="p">,</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">    </span><span class="n">caption</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Fuente: Our World In Data&quot;</span><span class="p">,</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">    </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Continente&quot;</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">  </span><span class="p">)</span>
+</span></code></pre></div>
 <p><img alt="Nuevos casos covid por Continente" src="covid_continentes.png" /></p>
 <h2 id="para-que-sirve-la-funcion-mutate">Para que sirve la función mutate()<a class="headerlink" href="#para-que-sirve-la-funcion-mutate" title="Permanent link"> #</a></h2>
 <p>Una buen indicador, para saber si hemos mejorado el tratamiento y prevención
@@ -801,19 +799,19 @@ dependera de otras para su cálculo, la función <code>mutate()</code> no ayudar
 calcularla.</p>
 <p><em>Puede que no sea excelente indicador y que no refleje muy bien lo que se
 quiere, pero para propositos de este ejemplo nos servirá</em></p>
-<pre><code class="language-r"># Obtenemos nuestros datos que nos van a ayudar a calcular el indicador
-# Filtramos los valores que sean iguales a 0 y los datos NA con filter()
-covid_continentes_indicador &lt;-
-  covid_data %&gt;%
-  group_by(continent, date) %&gt;%
-  summarise(nuevos_casos = sum(new_cases_smoothed, na.rm = TRUE), nuevas_muertes = sum(new_deaths_smoothed, na.rm = TRUE)) %&gt;%
-  filter(!is.na(continent) &amp; nuevos_casos != 0 &amp; nuevas_muertes != 0)
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># Obtenemos nuestros datos que nos van a ayudar a calcular el indicador</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="c1"># Filtramos los valores que sean iguales a 0 y los datos NA con filter()</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="n">covid_continentes_indicador</span><span class="w"> </span><span class="o">&lt;-</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">  </span><span class="n">covid_data</span><span class="w"> </span><span class="o">%&gt;%</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">continent</span><span class="p">,</span><span class="w"> </span><span class="n">date</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">  </span><span class="nf">summarise</span><span class="p">(</span><span class="n">nuevos_casos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">new_cases_smoothed</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">),</span><span class="w"> </span><span class="n">nuevas_muertes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">new_deaths_smoothed</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">continent</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">nuevos_casos</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">nuevas_muertes</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+</span></code></pre></div>
 <p>Usamos la función mutate para obtener nuestro indicador</p>
-<pre><code class="language-r">covid_continentes_indicador &lt;-
-  covid_continentes_indicador %&gt;%
-  mutate(indicador = nuevas_muertes/nuevos_casos*1000)
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">covid_continentes_indicador</span><span class="w"> </span><span class="o">&lt;-</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span><span class="n">covid_continentes_indicador</span><span class="w"> </span><span class="o">%&gt;%</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">  </span><span class="nf">mutate</span><span class="p">(</span><span class="n">indicador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nuevas_muertes</span><span class="o">/</span><span class="n">nuevos_casos</span><span class="o">*</span><span class="m">1000</span><span class="p">)</span>
+</span></code></pre></div>
 <p><strong><code>mutate(tabla, nueva_columna_1 = f(columna_1, columna_2...), nueva_columna_2 = f(columna_n, ...)... )</code></strong>
 Crea una nuevas columnas las modifica a partir de los datos de otras columnas.</p>
 <ul>
@@ -827,18 +825,18 @@ Crea una nuevas columnas las modifica a partir de los datos de otras columnas.</
   (Observe que usamos nombre de la columna y variable como sinónimos)</li>
 </ul>
 <p>Mostrando los resultados en una gráfica</p>
-<pre><code class="language-r">ggplot(covid_continentes_indicador) +
-  geom_line(aes(x = date, y = indicador, color = continent), size = 0.8) +
-  scale_color_brewer(palette = &quot;Dark2&quot;) + theme_bw() +
-  labs(
-    x = &quot;&quot;,
-    y = &quot;&quot;,
-    title = &quot;Relación diaria de (muertes)/(1000 contagiados) COVID-19&quot;,
-    subtitle = &quot;(Datos suavizados)&quot;,
-    caption = &quot;Fuente: Our World In Data&quot;,
-    color = &quot;Continente&quot;
-  )
-</code></pre>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nf">ggplot</span><span class="p">(</span><span class="n">covid_continentes_indicador</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span><span class="nf">geom_line</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">indicador</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">continent</span><span class="p">),</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.8</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">  </span><span class="nf">scale_color_brewer</span><span class="p">(</span><span class="n">palette</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Dark2&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">theme_bw</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">  </span><span class="nf">labs</span><span class="p">(</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">    </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Relación diaria de (muertes)/(1000 contagiados) COVID-19&quot;</span><span class="p">,</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="w">    </span><span class="n">subtitle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;(Datos suavizados)&quot;</span><span class="p">,</span>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w">    </span><span class="n">caption</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Fuente: Our World In Data&quot;</span><span class="p">,</span>
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="w">    </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Continente&quot;</span>
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="w">  </span><span class="p">)</span>
+</span></code></pre></div>
 <p><img alt="Relación muertes diarias por 1000 contagiados por Continente" src="covid_continentes_indicador.png" /></p>
 <h2 id="conclusiones">Conclusiones<a class="headerlink" href="#conclusiones" title="Permanent link"> #</a></h2>
 <p>Las funciones mostradas en el árticulo son las más usadas y permiten una mejor
