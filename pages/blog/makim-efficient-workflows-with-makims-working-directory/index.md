@@ -165,8 +165,18 @@ groups:
           # Add commands for building Vue.js frontend
 ```
 
-    Overwriting .makim.yaml
+<div class="language-text highlight">
+<h3 class="code-label">
+  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
+  <i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output">
+  <code><span>
+Overwriting .makim.yaml
 
+</span></code>
+</pre>
+</div>
 
 
 ```python
@@ -176,11 +186,21 @@ groups:
 !makim --makim-file ./.makim.yaml frontend_vue.build
 ```
 
-    Linting Python code...
-    Running Java backend tests...
-    Running React frontend tests...
-    Building Vue.js frontend...
+<div class="language-text highlight">
+<h3 class="code-label">
+  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
+  <i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output">
+  <code><span>
+Linting Python code...
+Running Java backend tests...
+Running React frontend tests...
+Building Vue.js frontend...
 
+</span></code>
+</pre>
+</div>
 
 ## Conclusion
 
