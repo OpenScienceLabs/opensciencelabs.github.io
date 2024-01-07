@@ -6,7 +6,11 @@ authors: ["Ivan Ogasawara"]
 tags: [open-source, multiple-dispatch, python]
 categories: [python]
 description: |
-  ...
+  Python, known for its simplicity and readability, sometimes requires a bit of
+  creativity when it comes to implementing certain programming paradigms. One such
+  paradigm is multiple dispatch (or multimethods), which allows functions to behave
+  differently based on the type of their arguments. This is where plum-dispatch
+  comes into play.
 thumbnail: "/header.png"
 template: "blog-post.html"
 ---
