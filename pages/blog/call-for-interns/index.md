@@ -1,22 +1,30 @@
 ---
-title: "Call for interns"
+title: Call for interns
 slug: call-for-interns
-date: 2024-01-01
-authors: ["Daniela Iglesias Rocabado"]
-tags: [community, internship, OpenScienceLabs, Technology Stydents]
+date: 2024-01-09
+authors:
+  - Daniela Iglesias Rocabado
+tags:
+  - community
+  - internship
+  - OpenScienceLabs
+  - Technology Stydents
 categories:
-  [
-    internship,
-    community,
-    Technological Collaboration,
-    Open Source,
-    Mentors,
-    Technology Students,
-  ]
-  description: |
-  The Open Science Labs (OSL) has announced its Internship and Learning Program for the first cycle of 2024, in collaboration with The GRAPH Network. The program offers opportunities for mentors and student/collaborators, although it is unpaid. Project proposals must be open source, have a Code of Conduct, define clear tasks for interns, and have at least one mentor.
+  - internship
+  - community
+  - Technological Collaboration
+  - Open Source
+  - Mentors
+  - Technology Students
+description: >
+  The Open Science Labs (OSL) has announced its Internship and
+  Learning Program for the first cycle of 2024, in collaboration with The GRAPH
+  Network. The program offers opportunities for mentors and
+  student/collaborators, although it is unpaid. Project proposals must be open
+  source, have a Code of Conduct, define clear tasks for interns, and have at
+  least one mentor.
 thumbnail: "/header.jpg"
-template: "blog-post.html"
+template: blog-post.html
 ---
 
 <style>
