@@ -83,6 +83,7 @@ The Open Science Labs (OSL) has announced its Internship and Learning Program fo
 Candidates are encouraged to thoroughly explore project options aligning with their skills and interests. This involves a careful review of project ideas and documentation.
 
 Once a candidate identifies a preferred project, they should initiate contact with the mentor via email. The email should include:
+
 * Personal Introduction
 * Curriculum Vitae
 * The project name
