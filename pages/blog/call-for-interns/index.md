@@ -1,5 +1,5 @@
 ---
-title: Call for interns
+title: Call for interns 2024/01
 slug: call-for-interns
 date: 2024-01-09
 authors:
@@ -19,10 +19,7 @@ categories:
 description: >
   The Open Science Labs (OSL) has announced its Internship and
   Learning Program for the first cycle of 2024, in collaboration with The GRAPH
-  Network. The program offers opportunities for mentors and
-  student/collaborators, although it is unpaid. Project proposals must be open
-  source, have a Code of Conduct, define clear tasks for interns, and have at
-  least one mentor.
+  Network.
 thumbnail: "/header.jpg"
 template: blog-post.html
 ---
@@ -41,15 +38,16 @@ template: blog-post.html
     padding: 12px;
     text-align: left;
     transition: background-color 0.3s;
+    color: #000; /* Cambio del color del texto a negro */
   }
 
   th {
     background-color: #74c69d; /* Color del título */
-    color: #fff;
+    color: #d8f3dc;
   }
 
   td {
-    background-color: #d8f3dc; /* Color del resto de las filas */
+    background-color: #d8f3dc;
   }
 
   tr:hover td {
@@ -75,7 +73,7 @@ template: blog-post.html
 
 <!-- # Intro -->
 
-The Open Science Labs (OSL) has announced its Internship and Learning Program for the first cycle of 2024, in collaboration with The GRAPH Network. The program offers opportunities for mentors and student/collaborators, although it is unpaid. Project proposals must be open source, have a Code of Conduct, define clear tasks for interns, and have at least one mentor.
+The Open Science Labs (OSL) has announced its Internship for the first cycle of 2024, in collaboration with The GRAPH Network. The program offers opportunities for mentors and student/collaborators, although it is unpaid.
 
 ## Initial Guidelines for Internship Program Candidates:
 ---
@@ -87,7 +85,7 @@ Once a candidate identifies a preferred project, they should initiate contact wi
 * Personal Introduction
 * Curriculum Vitae
 * The project name
-* Detailed explanation of the project idea
+* Project idea name
 * Motivation for wanting to collaborate on that specific project.
 
 Additionally, candidates must confirm their availability for the entire 3-month duration of the project.
@@ -96,7 +94,7 @@ Upon mentor acceptance, candidates will be assigned preliminary tasks, such as d
 
 Successful completion of these initial assignments will prompt the mentor to guide the candidate in applying for the Open Science Labs Internship Program through the provided LINK.
 
-Candidates are reminded of the importance of having prior knowledge of Git. Additionally, candidates should join the OSL Discord to stay updated on announcements related to the Internship Program.
+Candidates are reminded of the importance of having prior knowledge of Git. Additionally, candidates should join the [OSL Discord](https://opensciencelabs.org/discord) to stay updated on announcements related to the Internship Program.
 
 Recognizing the value of skill enhancement, Open Science Labs organizes study groups that candidates are encouraged to participate in, further refining their abilities.
 
