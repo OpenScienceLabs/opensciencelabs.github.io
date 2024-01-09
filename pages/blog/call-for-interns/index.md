@@ -77,11 +77,6 @@ template: blog-post.html
 
 The Open Science Labs (OSL) has announced its Internship and Learning Program for the first cycle of 2024, in collaboration with The GRAPH Network. The program offers opportunities for mentors and student/collaborators, although it is unpaid. Project proposals must be open source, have a Code of Conduct, define clear tasks for interns, and have at least one mentor.
 
-## Collaboration:
----
-
-Open to all individuals eager to contribute to open source projects, applicants must be at least 18 years old. Each project defines specific criteria and establishes a minimum time commitment for participants. The internship cycle spans three months and can be extended through mutual agreement.
-
 ## Initial Guidelines for Internship Program Candidates:
 ---
 
@@ -103,12 +98,6 @@ Successful completion of these initial assignments will prompt the mentor to gui
 Candidates are reminded of the importance of having prior knowledge of Git. Additionally, candidates should join the OSL Discord to stay updated on announcements related to the Internship Program.
 
 Recognizing the value of skill enhancement, Open Science Labs organizes study groups that candidates are encouraged to participate in, further refining their abilities.
-
-### Additional Information for Candidates:
-
-* **First Contact Information:** In their initial contact, candidates should provide the following information:
-    * Curriculum Vitae
-    * The name of the project and the desired project idea
 
 ## Guidelines for Approved Interns:
 ---
