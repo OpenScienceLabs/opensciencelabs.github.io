@@ -1,6 +1,6 @@
 ---
-title: Call for interns 2024/01
-slug: call-for-interns
+title: Call for Interns 2024-01
+slug: call-for-interns-2024-01
 date: 2024-01-09
 authors:
   - Daniela Iglesias Rocabado
@@ -73,7 +73,7 @@ template: blog-post.html
 
 <!-- # Intro -->
 
-The Open Science Labs (OSL) has announced its Internship for the first cycle of 2024, in collaboration with The GRAPH Network. The program offers opportunities for mentors and student/collaborators, although it is unpaid.
+This program presents valuable opportunities for both mentors and student/collaborators to engage and grow, despite being an unpaid initiative.
 
 ## Initial Guidelines for Internship Program Candidates:
 ---
@@ -156,7 +156,7 @@ Below is the list of projects participating in the current internship cycle. Eac
 ### fqlearn
 
 - **Description:** This Project aims to facilitate the teaching of unit operations and thermodynamics.
-- **Category:** Education/Chemical Engineering
+- **Categories:** Mathematical Modeling, Educational
 - **Organization/Project Webpage URL:** [https://osl-pocs.github.io/fqlearn/](https://osl-pocs.github.io/fqlearn/)
 - **Contact:** John Ever Vino Duran [evervino00@gmail.com](mailto:evervino00@gmail.com)
 - **Project Ideas URL:** [https://github.com/osl-pocs/fqlearn/issues/30](https://github.com/osl-pocs/fqlearn/issues/30)
