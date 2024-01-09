@@ -77,29 +77,38 @@ template: blog-post.html
 
 The Open Science Labs (OSL) has announced its Internship and Learning Program for the first cycle of 2024, in collaboration with The GRAPH Network. The program offers opportunities for mentors and student/collaborators, although it is unpaid. Project proposals must be open source, have a Code of Conduct, define clear tasks for interns, and have at least one mentor.
 
-## Roles and Collaboration:
+## Collaboration:
 ---
 
-* **Mentors:** To submit a project, individuals need to be core contributors or obtain approval from project core members. Project proposals must adhere to open source principles, include a Code of Conduct, and outline tasks for interns. The application process involves submitting a list of proposal plans, detailing minimum requirements and utilizing a template for clarity.
+Open to all individuals eager to contribute to open source projects, applicants must be at least 18 years old. Each project defines specific criteria and establishes a minimum time commitment for participants. The internship cycle spans three months and can be extended through mutual agreement.
 
-* **Students/Collaborators:** Open to all interested in contributing to open source projects,  *applicants must be at least 18 years old.* Each project sets specific criteria, and a minimum weekly commitment of 20 hours is required. The internship cycle spans three months and may be extended by mutual agreement. Applications open on January 5, 2024, with the project list shared on OSL Discord, LinkedIn, and Twitter.
-
-## Recommendations for Internship Program Candidates:
+## Initial Guidelines for Internship Program Candidates:
 ---
 
-* **Project Engagement:** Candidates are advised to explore project options, contact mentors, and contribute before applying. Familiarity with Git, joining the OSL Discord, and participating in study groups are emphasized.
-* **Technical Preparation:** Candidates should focus on accessible issues, such as documentation updates and bug fixes, before applying.
+Candidates are encouraged to thoroughly explore project options aligning with their skills and interests. This involves a careful review of project ideas and documentation.
+
+Once a candidate identifies a preferred project, they should initiate contact with the mentor via email. The email should include:
+* Personal Introduction
+* Curriculum Vitae
+* The project name
+* Detailed explanation of the project idea
+* Motivation for wanting to collaborate on that specific project.
+
+Additionally, candidates must confirm their availability for the entire 3-month duration of the project.
+
+Upon mentor acceptance, candidates will be assigned preliminary tasks, such as documentation updates and bug fixes. This step enables the mentor to assess the candidate's capability to handle the project tasks effectively.
+
+Successful completion of these initial assignments will prompt the mentor to guide the candidate in applying for the Open Science Labs Internship Program through the provided LINK.
+
+Candidates are reminded of the importance of having prior knowledge of Git. Additionally, candidates should join the OSL Discord to stay updated on announcements related to the Internship Program.
+
+Recognizing the value of skill enhancement, Open Science Labs organizes study groups that candidates are encouraged to participate in, further refining their abilities.
 
 ### Additional Information for Candidates:
 
 * **First Contact Information:** In their initial contact, candidates should provide the following information:
     * Curriculum Vitae
     * The name of the project and the desired project idea
-
-## Applicaction Process:
----
-
-* **How to Apply:** After gaining mentor approval, candidates can apply through the provided link. Communication channels vary between mentors and students, with official OSL communication through Discord.
 
 ## Guidelines for Approved Interns:
 ---
@@ -116,9 +125,6 @@ For more details about internships, you can [click here](https://opensciencelabs
 
 | Date| Activity |
 | ------------------------ | --------------------------------------------------------------------------------------------|
-| **December 1, 2023**     | Call for Mentoring Organizations and Projects.                                               |
-| **January 3, 2024**      | Deadline for Mentoring Organizations to apply.                                               |
-| **January 5, 2024**      | Announcement of selected Mentoring Organizations.                                            |
 | **January 9, 2024**      | Call for Interns/Apprentices opens.                                                          |
 | **February 2, 2024**     | Deadline for Interns/Apprentices applications.                                               |
 | **February 14, 2024**    | Announcement of approved Interns/Apprentices.                                                |
@@ -141,28 +147,23 @@ Below is the list of projects participating in the current internship cycle. Eac
 - **Organization/Project Webpage URL:** [https://osl-incubator.github.io/artbox/](https://osl-incubator.github.io/artbox/)
 - **Contact:** Ivan Ogasawara [ivan.ogasawara@gmail.com](mailto:ivan.ogasawara@gmail.com)
 - **Project Ideas URL:** [https://github.com/osl-incubator/artbox/issues/10](https://github.com/osl-incubator/artbox/issues/10)
-- **Application Record:** [https://github.com/OpenScienceLabs/request-forms/issues/48](https://github.com/OpenScienceLabs/request-forms/issues/48)
 
 
 ### ArxLang/ASTx
 
 - **Description:** ASTx is an agnostic expression structure for AST. It is agnostic because it is not specific to any language, neither to the ArxLang project, although its main focus is to provide all needed feature for ArxLang.
-- **Category:** Language Agnostic AST (Abstract Syntax Tree)
+- **Categories:** AST, Compiler
 - **Organization/Project Webpage URL:** [https://arxlang.github.io/astx/](https://arxlang.github.io/astx/)
 - **Contact:** Ivan Ogasawara [ivan.ogasawara@gmail.com](mailto:ivan.ogasawara@gmail.com)
 - **Project Ideas URL:** [https://github.com/arxlang/astx/issues/21](https://github.com/arxlang/astx/issues/21)
-- **Application Record:** [https://github.com/OpenScienceLabs/request-forms/issues/49](https://github.com/OpenScienceLabs/request-forms/issues/49)
-
 
 ### Envers
 
 - **Description:** Envers is a command-line tool (CLI) designed to manage and version environment variables for different deployment stages such as staging, development, and production. It provides a secure and organized way to handle environment-specific configurations.
-- **Category:** DevOps/Configuration Management
+- **Categories:** DevOps, Environment Management
 - **Organization/Project Webpage URL:** [https://osl-incubator.github.io/envers/](https://osl-incubator.github.io/envers/)
 - **Contact:** Ivan Ogasawara [ivan.ogasawara@gmail.com](mailto:ivan.ogasawara@gmail.com)
 - **Project Ideas URL:** [https://github.com/osl-incubator/envers/issues/18](https://github.com/osl-incubator/envers/issues/18)
-- **Application Record:** [https://github.com/OpenScienceLabs/request-forms/issues/46](https://github.com/OpenScienceLabs/request-forms/issues/46)
-
 
 ### fqlearn
 
@@ -171,63 +172,56 @@ Below is the list of projects participating in the current internship cycle. Eac
 - **Organization/Project Webpage URL:** [https://osl-pocs.github.io/fqlearn/](https://osl-pocs.github.io/fqlearn/)
 - **Contact:** John Ever Vino Duran [evervino00@gmail.com](mailto:evervino00@gmail.com)
 - **Project Ideas URL:** [https://github.com/osl-pocs/fqlearn/issues/30](https://github.com/osl-pocs/fqlearn/issues/30)
-- **Application Record:** [https://github.com/OpenScienceLabs/request-forms/issues/52](https://github.com/OpenScienceLabs/request-forms/issues/52)
 
 
 ### Makim
 
 - **Description:** Makim (or makim) is based on make and focus on improve the way to define targets and dependencies. Instead of using the Makefile format, it uses yaml format.
-- **Category:** Build Automation/Configuration Management
+- **Categories:** DevOps, Automation
 - **Organization/Project Webpage URL:** [https://osl-incubator.github.io/makim/](https://osl-incubator.github.io/makim/)
 - **Contact:** Ivan Ogasawara [ivan.ogasawara@gmail.com](mailto:ivan.ogasawara@gmail.com)
 - **Project Ideas URL:** [https://github.com/osl-incubator/makim/issues/74](https://github.com/osl-incubator/makim/issues/74)
-- **Application Record:** [https://github.com/OpenScienceLabs/request-forms/issues/44](https://github.com/OpenScienceLabs/request-forms/issues/44)
 
 
 ### noWorkflow
 
 - **Description:** The noWorkflow project aims at allowing scientists to benefit from provenance data analysis even when they don't use a workflow system. It transparently collects provenance from Python scripts and notebooks and provide tools to support the analysis and management of the provenance.
-- **Category:** Research Provenance/Scientific Data Analysis
+- **Categories:** Provenance, Software Engineering
 - **Organization/Project Webpage URL:** [https://gems-uff.github.io/noworkflow/](https://gems-uff.github.io/noworkflow/)
 - **Contact:** João Felipe Nicolaci Pimentel [joaofelipenp@gmail.com](mailto:joaofelipenp@gmail.com)
 - **Project Ideas URL:** [https://gist.github.com/JoaoFelipe/ce4cb232deb2c71d4f39afc5cbeefe2b](https://gist.github.com/JoaoFelipe/ce4cb232deb2c71d4f39afc5cbeefe2b)
-- **Application Record:** [https://github.com/OpenScienceLabs/request-forms/issues/51](https://github.com/OpenScienceLabs/request-forms/issues/51)
 
 ### OSL Web Page
 
 - **Description:** OpenScienceLabs web page, is a project that serves as a way to present OSL to the world through a web page.
-- **Category:** Web Development/Online Presence
+- **Category:** Web Development
 - **Organization/Project Webpage URL:** [https://opensciencelabs.org//](https://opensciencelabs.org/)
 - **Contact:** John Ever Vino Duran [evervino00@gmail.com](mailto:evervino00@gmail.com)
 - **Project Ideas URL:** [https://github.com/osl-pocs/fqlearn/issues/84](https://github.com/osl-pocs/fqlearn/issues/84)
-- **Application Record:** [https://github.com/OpenScienceLabs/request-forms/issues/50](https://github.com/OpenScienceLabs/request-forms/issues/50)
 
 ### PyDataStructs
 
 - **Description:** PyDataStructs project aims to be a Python package for various data structures and algorithms (including their parallel implementations).
-- **Category:** Data Structures and Algorithms
+- **Categories:** Data Structures, Algorithms
 - **Organization/Project Webpage URL:** [https://pydatastructs.readthedocs.io/en/latest/](https://pydatastructs.readthedocs.io/en/latest/)
 - **Contact:** Gagandeep Singh [gdp.1807@gmail.com](mailto:gdp.1807@gmail.com)
 - **Project Ideas URL:** [https://github.com/codezonediitj/pydatastructs/wiki/Planned-Features-for-v1.0.1](https://github.com/codezonediitj/pydatastructs/wiki/Planned-Features-for-v1.0.1)
-- **Application Record:** [https://github.com/OpenScienceLabs/request-forms/issues/43](https://github.com/OpenScienceLabs/request-forms/issues/43)
 
 ### SciCookie
 
 - **Description:** SciCookie is a template developed by [OpenScienceLabs](https://opensciencelabs.org/) that creates projects from project templates.
-- **Category:** Project Templates/Development Automation
+- **Category:** Project Templates, Scientific Software
 - **Organization/Project Webpage URL:** [https://osl-incubator.github.io/scicookie](https://osl-incubator.github.io/scicookie)
 - **Contact:** Ivan Ogasawara [ivan.ogasawara@gmail.com](mailto:ivan.ogasawara@gmail.com)
 - **Project Ideas URL:** [https://github.com/osl-incubator/scicookie/issues/192](https://github.com/osl-incubator/scicookie/issues/192)
-- **Application Record:** [https://github.com/OpenScienceLabs/request-forms/issues/47](https://github.com/OpenScienceLabs/request-forms/issues/47)
 
 ### Sugar
 
 - **Description:** Sugar aims to organize your stack of containers, gathering some useful scripts and keeping this information centralized in a configuration file. So the command line would be very simple.
-- **Category:** Container Management/Configuration
+- **Categories:** DevOps, Container Management
 - **Organization/Project Webpage URL:** [https://osl-incubator.github.io/sugar/e](https://osl-incubator.github.io/sugar/)
 - **Contact:** Ivan Ogasawara [ivan.ogasawara@gmail.com](mailto:ivan.ogasawara@gmail.com)
 - **Project Ideas URL:** [https://github.com/osl-incubator/sugar/issues/105](https://github.com/osl-incubator/sugar/issues/105)
-- **Application Record:** [https://github.com/OpenScienceLabs/request-forms/issues/45](https://github.com/OpenScienceLabs/request-forms/issues/45)
 
 ### Useful Materials and Courses
 ---
