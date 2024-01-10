@@ -1,3 +1,11 @@
+---
+title: "TEMPLATE: Projects Ideas"
+description: "TEMPLATE: Projects Ideas"
+date: "2023-11-01"
+authors: ["OSL Team"]
+template: single-sidebar.html
+---
+
 ```
 Instructions:
 
