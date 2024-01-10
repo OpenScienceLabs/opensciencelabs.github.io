@@ -92,7 +92,7 @@ Additionally, candidates must confirm their availability for the entire 3-month 
 
 Upon mentor acceptance, candidates will be assigned preliminary tasks, such as documentation updates and bug fixes. This step enables the mentor to assess the candidate's capability to handle the project tasks effectively.
 
-Successful completion of these initial assignments will prompt the mentor to guide the candidate in applying for the Open Science Labs Internship Program through the provided LINK.
+Successful completion of these initial assignments will prompt the mentor to guide the candidate in applying for the Open Science Labs Internship Program through <http://tinyurl.com/osl-internship-intern-proposal>.
 
 Candidates are reminded of the importance of having prior knowledge of Git. Additionally, candidates should join the [OSL Discord](https://opensciencelabs.org/discord) to stay updated on announcements related to the Internship Program.
 
