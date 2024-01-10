@@ -9,90 +9,88 @@ Instructions:
   the square brackets [ and ] themselves.
 ```
 
-
 # [Project Proposal Name]
 
 ## Candidate Info
 
-* Name: [Candidate's Name]
-* GitHub: [Candidate's GitHub URL]
-* Email: [Candidate's email]
-* Twitter/X: [Candidate's Twitter/X URL]
-* University Course: [Current or last University Course name]
-* University: [Current or last University name]
-* Time Zone:  [Current Candidate's  timezone]
+- **Name:** [Candidate's Name]
+- **GitHub:** [Candidate's GitHub URL]
+- **Email:** [Candidate's Email]
+- **Twitter/X:** [Candidate's Twitter/X URL]
+- **University Course:** [Current or Last University Course Name]
+- **University:** [Current or Last University Name]
+- **Time Zone:** [Candidate's Current Timezone]
 
-Bio:
+**Bio:**
 
-[One or two paragraph with the Candidate's bio]
+[Provide a one or two-paragraph bio of the candidate.]
 
 ## Project Overview
 
-* Project: [Desired project name]
-* Project Idea/Plan: [Desired project idea]
-* Expected Time (hours): [Total amount of time to be dedicated for the 3 months]
+- **Project:** [Desired Project Name]
+- **Project Idea/Plan:** [Desired Project Idea]
+- **Expected Time (hours):** [Total Time Dedicated Over 3 Months]
 
 ### Abstract
 
-[Abstract of the Project Idea/Plan]
+[Provide a brief abstract of the project idea/plan.]
 
 ### Mentors
 
-[List of mentors for the internship]
+[List the mentors for this internship project.]
 
 ### Implementation Plan
 
-[According to the project plan/idea, describe the tasks.]
+[Describe the tasks according to the project plan/idea.]
 
 ### Benefits to the Community
 
-[Describe the benefits for the community/user]
+[Explain how the project will benefit the community or users.]
 
 ## Planned Workflow
 
-[Outline your planned workflow by specifying the project management methodology (e.g., Agile, Scrum) and detailing the frequency and focus of meetings with your mentor. Also, describe how you intend to track progress and manage tasks, ensuring consistent communication and meeting set milestones.]
+[Detail your planned workflow, including the project management methodology, frequency and focus of mentor meetings, progress tracking, and task management strategies.]
 
 ## Deliverables
 
-[List all the expected deliverables for your proposal, such as new features, documentation updates, tutorials, and blog posts. It's advisable to consider writing a blog post for each significant feature implementation or bug fix you plan to accomplish during the internship.]
+[List all expected deliverables, such as new features, documentation updates, tutorials, and blog posts. Consider writing a blog post for each major feature or bug fix.]
 
 ## Timeline
 
-[Detail a comprehensive timeline of your internship, including key dates and associated tasks. This should cover the Community Bonding Period activities, the specific periods allocated to different tasks, scheduled dates for blog post submissions, and the timelines for both the Midterm and Final evaluations.]
+[Provide a detailed timeline of the internship, including key dates and tasks. This should include Community Bonding Period activities, task periods, blog post submission dates, and Midterm and Final evaluation schedules.]
 
-|Dates       |Tasks                        |
-|:-----------|:----------------------------|
-|            |                             |
+| Dates       | Tasks                        |
+|:------------|:-----------------------------|
+|             |                              |
 
-## Previous contributions to the project
+## Previous Contributions to the Project
 
-[Describe briefly the contributions to the project. It could be just a summary like the number of PRs merged, or the number of issues resolved, or the type of the contribution such as a bug fix or a documentation update.]
+[Summarize your contributions to the project, including the number of merged PRs, resolved issues, or types of contributions.]
 
 ### Pull Requests
 
-[List all the PRs (the title, and its number with a link to the github PR) contributed and the status of each one (such as Merged or In-Progress)]
+[List all contributed PRs with titles, numbers, links, and their status.]
 
-|Pull Request Title/Number       |Status   |
-|:-------------------------------|:--------|
-|                                |         |
-
+| Pull Request Title/Number       | Status   |
+|:--------------------------------|:---------|
+|                                 |          |
 
 ### Issues
 
-[List all the Issues (the title, and its number with a link to the github issue) resolved and the status of each one (such as Resolved or In-Progress)]
+[List all resolved issues with titles, numbers, links, and their status.]
 
-|Issue Title/Number              |Status   |
-|:-------------------------------|:--------|
-|                                |         |
+| Issue Title/Number              | Status   |
+|:--------------------------------|:---------|
+|                                 |          |
 
-##  Why this project?
+## Why This Project?
 
-[Explain why you decided to contribute to this project.]
+[Explain your motivation for choosing this project.]
 
 ## Availability
 
-[Confirm that you will have the availability to work on the project during all the internship period, mention how much hours you will be available weekly, comment if you will have any other commitment during this internship period. And mention what would be your plan in the case you are behind your proposed timeline.]
+[Confirm your availability during the internship, including weekly hours, other commitments, and a plan for catching up if behind schedule.]
 
-## Post OSL Internship Program
+## Post-OSL Internship Program
 
-[Describe what would be your plan (if any) for contribute to the project after the end of your internship program activities.]
+[Outline any plans for continuing contributions to the project post-internship.]
