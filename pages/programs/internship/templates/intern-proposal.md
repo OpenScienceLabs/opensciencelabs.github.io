@@ -1,3 +1,10 @@
+---
+title: "TEMPLATE: Intern Project Proposal"
+description: "TEMPLATE: Intern Project Proposal"
+date: "2024-01-09"
+authors: ["OSL Team"]
+template: single-sidebar.html
+---
 ```
 Instructions:
 
