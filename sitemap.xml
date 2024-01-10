@@ -601,6 +601,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://opensciencelabs.org/programs/internship/templates/intern-proposal/</loc>
+         <lastmod>2024-01-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://opensciencelabs.org/programs/internship/templates/projects-ideas/</loc>
          <lastmod>2024-01-10</lastmod>
          <changefreq>daily</changefreq>
