@@ -67,6 +67,13 @@ teams:
         github_url: https://github.com/YurelyCamacho
         # github_sponsor:
 
+      - name: Daniela Iglesias Rocabado
+        bio: |
+          Graduate in Systems Engineering with a passion for Python and Web Development.
+        image_url: https://avatars.githubusercontent.com/u/107383061?v=4
+        github_url: https://github.com/DanielaIgRo
+        # github_sponsor:
+
   - name: Steering Council Emeritus
     members:
       - name: Fracisco Palm
