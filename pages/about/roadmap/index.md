@@ -39,10 +39,6 @@ open science and technology community.
   co-creating new content alongside our partners, community members, and
   affiliates, fostering a collaborative and innovative learning environment.
 
-Thank you for the clarification. Considering the ongoing nature of your
-internship program and the focus on continuous improvement, here's an updated
-version of the section:
-
 ### Participation in Google Summer of Code
 
 - **Objective:** Apply to become a mentoring organization in Google Summer of
