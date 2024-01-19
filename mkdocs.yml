@@ -51,7 +51,6 @@ nav:
     - Fund Raiser: guidelines/fund-raiser/index.md
     - Governance: guidelines/governance/index.md
     - Mentoring: guidelines/mentoring/index.md
-    - Roadmap: guidelines/roadmap/index.md
   - About:
     - index: 'about/index.md'
     - About OSL: 'about/index.md'
@@ -60,6 +59,7 @@ nav:
     - Partners: about/partners/index.md
     - Activities: about/archives/index.md
     - FAQ: faq/index.md
+    - Roadmap: about/roadmap/index.md
     - Acknowledges: about/acknowledges/index.md
 
 markdown_extensions:
