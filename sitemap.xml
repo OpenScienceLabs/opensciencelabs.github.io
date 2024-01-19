@@ -2,652 +2,647 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://opensciencelabs.org/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/search/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/about/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/about/health-safety-policy/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/about/acknowledges/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/about/acknowledges/index-es/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/about/archives/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/about/partners/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/about/partners/index-es/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://opensciencelabs.org/about/roadmap/</loc>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/about/team/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/about/team/index-es/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/algunos-proyectos-de-ciencia-e-inteligencia-ciudadana-para-atender-la-pandemia-del-covid-19/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/algunos-proyectos-entretenidos-de-codigo-abierto/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/apache-superset/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/aspectos-clave-en-el-manejo-de-equipos-de-ciencia-abierta/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/automatizacion-de-tareas-via-bash/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/call-for-interns-2024-01/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/caracteristicas-y-tips-utiles-que-te-ayudaran-sacar-el-maximo-provecho-de-conda/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/ciencia-abierta/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/cinco-cosas-que-no-debes-olvidar-al-trabajar-con-datos-abiertos/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/cinco-cosas-que-no-debes-olvidar-al-trabajar-con-markdown/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/cinco-cosas-que-te-ayudaran-gestionar-mejor-los-datos-de-tus-proximos-proyectos/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/cinco-tips-para-aumentar-tu-productividad-con-git/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/code-abbey-una-plataforma-mejorar-tu-habilidad-en-programacion/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/como-aplicar-la-investigacion-reproducible-proyectos-de-codigo-abierto/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/como-aplicar-los-principios-de-acceso-abierto-en-tus-investigaciones/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/como-documentar-tu-proyecto-de-ciencia-abierta/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/como-instalar-y-comenzar-utilizar-conda/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/como-instalar-y-comenzar-utilizar-tensorflow/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/como-presentar-tu-codigo-como-un-articulo-cientifico/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/cuales-son-los-principios-de-la-investigacion-reproducible/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/dataverse-y-su-potencial-para-proyectos-de-ciencia-abierta/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/dibuja-tus-mapas-en-r-usando-archivos-de-formato-shapefile/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/epigraphhub-un-proyecto-de-c%C3%B3digo-abierto-para-el-analisis-de-datos-de-calidad/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/ethereum-merge-is-coming-pero-que-significa/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/filtrar-datos-r/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/fqlearn-visualizacion-datos/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/git-de-en-diez-sencillos-pasos/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/google-summer-of-code-week-4th-and-7th-midterm-evaluation/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/herramientas-de-visualizacion-en-python/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/herramientas-de-visualizacion-en-r/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/ibis-framework/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/investigacion-colaborativa-con-git/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/la-importancia-de-la-integridad-en-los-datos-manejados-en-los-dashboards/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/la-investigacion-abierta-el-manejo-de-repositorios-y-control-de-versiones/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/la-investigacion-abierta-podria-cambiar-el-futuro-de-la-investigacion-en-ciencias-puras-te-contamos-por-que/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/los-laboratorios-sociales-y-el-manejo-del-covid-19/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/makim-efficient-workflows-with-makims-working-directory/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/nft-mas-que-un-jpg/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/plataformas-que-te-ayudaran-en-la-gestion-de-tu-grupo-de-trabajo/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/por-que-deberias-considerar-carpentries-como-una-referencia-para-aprender-ciencia-de-datos/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/primeros-pasos-con-rstudio/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/primeros-pasos-con-spyder/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/psf-funding-open-source-projects-development-scicookie/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/psf-funding-open-source-projects-development-scicookie/index-en/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/pyopensci-un-promotor-de-la-ciencia-abierta/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/que-es-ciencia-ciudadana/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/que-es-el-acceso-abierto-y-por-que-debes-tenerlo-en-cuenta-para-tus-investigaciones/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/que-es-el-codigo-abierto-y-como-puede-ayudarte/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/que-es-el-data-version-control-dvc-y-por-que-es-necesario-que-tu-equipo-sepa-como-utilizarlo/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/que-es-el-lenguaje-r-y-como-puede-ayudarte-en-tus-proyectos/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/que-es-el-open-science-framework/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/que-es-la-ciencia-abierta/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/que-hemos-aprendido-gracias-la-ciencia-abierta-del-manejo-de-pandemias/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/que-necesitas-para-desarrollar-en-la-web3/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/que-son-las-mentorias-y-como-potencian-los-proyectos-de-ciencia-abierta/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/que-son-los-datos-abiertos/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/que-son-los-laboratorios-sociales-y-como-pueden-ayudar-los-equipos-de-investigacion/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/r-nube-de-palabras/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/razones-para-usar-python-en-tu-proximo-proyecto-de-investigacion/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/reorganiza-tus-tablas-con-tidyr/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/si-pensado-en-como-automatizar-la-construccion-de-citas-en-tu-proyecto-te-contamos-como-hacerlo-posible/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/si-ya-usas-codigo-abierto-te-contamos-como-puedes-sacarle-mayor-provecho-tu-documentacion-para-tus-articulos-y-publicaciones/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/te-contamos-sobre-la-comunidad-ropensci/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/te-ensenamos-lugares-para-aprender-los-fundamentos-de-la-ciencia-abierta/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/te-hablamos-de-cinco-repositorios-con-datos-abiertos-sobre-paises/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/te-hablamos-de-las-licencias-mas-utilizadas-en-proyectos-de-ciencia-abierta/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/te-hablamos-del-uso-de-dashboards-para-visualizacion-de-datos-de-tu-proximo-proyecto/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/te-mostramos-algunos-repositorios-con-datos-sobre-el-covid-19/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/te-mostramos-cinco-librerias-en-python-para-tu-proximo-proyecto-de-ciencia-abierta/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/todas-las-posibilidades-que-te-ofrece-utilizar-figshare-en-tus-proyectos/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/todo-lo-que-debes-saber-sobre-la-investigacion-colaborativa/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/tres-proyectos-de-ciencia-ciudadana-que-te-sorprenderan/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/typer-a-python-library-for-building-cli-applications/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/unlocking-the-power-of-multiple-dispatch-in-python-with-plum-dispatch/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/visualiza-tus-datos-en-r-con-ggplot-y-gganimate/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/blog/ya-probado-los-cuadernos-de-jupyter-te-explicamos-que-son-y-como-te-ayudaran-en-tu-proxima-investigacion/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/calendar/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/discord/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/facebook/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/faq/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/faq/index.es/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/guidelines/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/guidelines/articles/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/guidelines/articles/index.es/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/guidelines/coc/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/guidelines/coc-mentoring/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/guidelines/coc-mentoring/index.es/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/guidelines/dei/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/guidelines/dei/index.es/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/guidelines/devops/discord.es/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/guidelines/devops/discord/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/guidelines/fund-raiser/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/guidelines/governance/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/guidelines/governance/index.es/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/guidelines/mentoring/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/guidelines/mentoring/index.es/</loc>
-         <lastmod>2024-01-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://opensciencelabs.org/guidelines/roadmap/</loc>
-         <lastmod>2024-01-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://opensciencelabs.org/guidelines/roadmap/index.es/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/linkedin/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/programs/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/programs/affiliation/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/programs/ambassadors/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/programs/incubator/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/programs/internship/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/programs/internship/cycles/2023-01/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/programs/internship/cycles/2024-01/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/programs/internship/guides/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/programs/internship/guides/interns/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/programs/internship/guides/mentors/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/programs/internship/templates/intern-proposal/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/programs/internship/templates/projects-ideas/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/programs/mentoring/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/programs/mentoring/mentors/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/programs/packaging-support/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/programs/partners/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/programs/virtual-labs/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/twitter/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opensciencelabs.org/youtube/</loc>
-         <lastmod>2024-01-12</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
