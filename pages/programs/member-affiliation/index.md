@@ -1,11 +1,11 @@
 ---
-title: "Affiliation Program"
-description: "Affiliation Program"
+title: "Member Affiliation Program"
+description: "Member Affiliation Program"
 date: "2023-08-27"
 authors: ["OSL Team"]
 ---
 
-# Open Science Labs (OSL) Affiliation Program
+# Open Science Labs Member Affiliation Program
 
 ## Connect, Collaborate, and Contribute to the Future of Open Science and Open Source Projects
 

@@ -26,8 +26,9 @@ nav:
   - Blog: 'blog/index.md'
   - Programs:
     - index: 'programs/index.md'
-    - Affiliation: 'programs/affiliation/index.md'
-    - Ambassadors: 'programs/ambassadors/index.md'
+    - Member Affiliation: 'programs/member-affiliation/index.md'
+    - Project Affiliation: 'programs/project-affiliation/index.md'
+    # - Ambassadors: 'programs/ambassadors/index.md'
     - Incubator: 'programs/incubator/index.md'
     - Internship:
       - index: 'programs/internship/index.md'
@@ -38,14 +39,13 @@ nav:
       - "TEMPLATE: Projects Ideas": 'programs/internship/templates/projects-ideas.md'
       - "TEMPLATE: Intern Project Proposal": 'programs/internship/templates/intern-proposal.md'
     - Mentoring: 'programs/mentoring/index.md'
-    - Packaging Support: 'programs/packaging-support/index.md'
     - Partners: 'programs/partners/index.md'
-    - Virtual-Labs: 'programs/virtual-labs/index.md'
+    # note: let's keep these programs hidden for now
+    # - Packaging Support: 'programs/packaging-support/index.md'
+    # - Virtual-Labs: 'programs/virtual-labs/index.md'
   - Guidelines:
     - index: guidelines/index.md
     - Articles: guidelines/articles/index.md
-    - CoC: guidelines/coc/index.md
-    - CoC for Mentoring: guidelines/coc-mentoring/index.md
     - DEI: guidelines/dei/index.md
     - DevOps/Discord: guidelines/devops/discord.md
     - Fund Raiser: guidelines/fund-raiser/index.md
@@ -57,9 +57,11 @@ nav:
     - Team: about/team/index.md
     - Mentors: 'programs/mentoring/mentors.md'
     - Partners: about/partners/index.md
-    - Activities: about/archives/index.md
+    # - Activities: about/archives/index.md
     - FAQ: faq/index.md
     - Roadmap: about/roadmap/index.md
+    - CoC: about/coc/index.md
+    - CoC for Mentoring: about/coc-mentoring/index.md
     - Acknowledges: about/acknowledges/index.md
 
 markdown_extensions:
