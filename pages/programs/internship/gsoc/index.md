@@ -35,6 +35,13 @@ excellent opportunity for students to contribute to significant open source
 initiatives while enhancing their skills and knowledge under the guidance of
 experienced mentors.
 
+### ArtBox
+
+- **Description**: ArtBox is a tool set for handling multimedia files with a
+  bunch of useful functions.
+- **Project WEB Page**:  <https://osl-incubator.github.io/artbox/>
+- **Project Ideas**: [link](/programs/internship/gsoc/artbox)
+
 ### ArxLang/ASTx
 
 - **Description**: ASTx is an agnostic expression structure for AST. It is

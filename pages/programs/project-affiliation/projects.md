@@ -17,6 +17,13 @@ and scientific research. Below, you'll find information about each project.
 
 ---
 
+## [ArtBox](https://osl-incubator.github.io/artbox/)
+
+ArtBox is a tool set for handling multimedia files with a bunch of useful
+functions.
+
+---
+
 ## [ArxLang](https://arxlang.github.io/)
 
 ArxLang Project is compounded mainly by three sub-projects: ASTx, IRx, and Arx.
