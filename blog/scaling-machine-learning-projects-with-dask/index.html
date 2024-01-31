@@ -1,0 +1,845 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Scaling Machine Learning Projects with Dask - Open Science Labs
+    </title>
+    <link href=https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65 crossorigin=anonymous>
+    <script src=https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js integrity=sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4 crossorigin=anonymous></script>
+    <link rel=stylesheet href=https://use.fontawesome.com/aa402b3835.css>
+    <link rel=stylesheet href=/css/index.css>
+    <link rel=stylesheet href=/css/styles.css>
+    <title>Open Science Labs</title>
+    <meta charset=utf-8>
+    <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv=x-ua-compatible content="IE=edge">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-213158050-1"></script>
+    <script>
+      window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","UA-213158050-1")
+    </script>
+    <meta property="og:locale" content="es">
+    <meta property="og:locale:alternate" content="pt">
+    <meta property="og:type" content="website">
+    <meta name=description content="A Open Source community for sharing knowledge">
+    <meta name=twitter:card content="summary">
+    <meta name=twitter:creator content>
+    <meta name=twitter:title content>
+    <meta name=twitter:image content="/images/thumbnail.png">
+    <meta property="og:url" content="/">
+    <meta property="og:title" content>
+    <meta property="og:description" content="A Open Source community for sharing knowledge">
+    <meta property="og:image" content="/images/thumbnail.png">
+    <meta name=keywords content="open science,data science,latam">
+    <link rel=apple-touch-icon sizes=180x180 href=/icons/apple-touch-icon.png>
+    <link rel=icon type=image/png sizes=32x32 href=/icons/favicon-32x32.png>
+    <link rel=manifest href=/icons/site.webmanifest>
+    <link rel=canonical href=/>
+    <link rel=alternate type=application/rss+xml href=/index.xml title="Open Science Labs">
+    <link rel=alternate type=application/json href=/js/index.json title="Open Science Labs">
+    <link rel=stylesheet type=text/css></head>
+    
+<style>
+.main-nav>li>a {
+  color: #000000 !important;
+}
+</style>
+
+  </head>
+  <body data-code="100" data-lines="false" id="documentTop">
+    <header class="nav_header">
+      <nav class="nav">
+        <a href="/" class="nav_brand nav_item" title="Open Science Labs">
+          <img src="/images/logos/osl-color-horizontal.png" class=logo alt="Open Science Labs">
+          <div class=nav_close>
+            <div>
+              <svg class="icon">
+                <title>open-menu</title>
+                <use xlink:href="#open-menu"/>
+              </svg>
+              <svg class="icon">
+                <title>closeme</title>
+                <use xlink:href="#closeme"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <div class='nav_body nav_body_left'>
+          <!-- MENU -->
+          
+          
+          
+          <div class="nav_parent ">
+            <a href="../.." class="nav_item" title="Home">
+              Home
+            </a>
+          </div>
+          
+          
+          
+          <div class="nav_parent ">
+            <a href="../" class="nav_item" title="Blog">
+              Blog
+            </a>
+          </div>
+          
+          
+          
+          
+            
+            <div class="nav_parent ">
+              <a href="../../programs/" class="nav_item" title="Programs">
+                Programs
+              </a>
+            </div>
+            <div class="d-block d-sm-block d-md-none">
+              
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../programs/member-affiliation/" class="nav_item" title="Member Affiliation">
+                  Member Affiliation
+                </a>
+              </div>
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../.." class="nav_item" title="Project Affiliation">
+                  Project Affiliation
+                </a>
+              </div>
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../programs/incubator/" class="nav_item" title="Incubator">
+                  Incubator
+                </a>
+              </div>
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../.." class="nav_item" title="Internship">
+                  Internship
+                </a>
+              </div>
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../programs/mentoring/" class="nav_item" title="Mentoring">
+                  Mentoring
+                </a>
+              </div>
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../programs/partners/" class="nav_item" title="Partners">
+                  Partners
+                </a>
+              </div>
+              
+              
+            </div>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          
+          
+          
+          
+            
+            <div class="nav_parent ">
+              <a href="../../guidelines/" class="nav_item" title="Guidelines">
+                Guidelines
+              </a>
+            </div>
+            <div class="d-block d-sm-block d-md-none">
+              
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../guidelines/articles/" class="nav_item" title="Articles">
+                  Articles
+                </a>
+              </div>
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../guidelines/dei/" class="nav_item" title="DEI">
+                  DEI
+                </a>
+              </div>
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../guidelines/devops/discord/" class="nav_item" title="DevOps/Discord">
+                  DevOps/Discord
+                </a>
+              </div>
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../guidelines/fund-raiser/" class="nav_item" title="Fund Raiser">
+                  Fund Raiser
+                </a>
+              </div>
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../guidelines/governance/" class="nav_item" title="Governance">
+                  Governance
+                </a>
+              </div>
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../guidelines/mentoring/" class="nav_item" title="Mentoring">
+                  Mentoring
+                </a>
+              </div>
+              
+              
+            </div>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          
+          
+          
+          
+            
+            <div class="nav_parent ">
+              <a href="../../about/" class="nav_item" title="About">
+                About
+              </a>
+            </div>
+            <div class="d-block d-sm-block d-md-none">
+              
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../about/" class="nav_item" title="About OSL">
+                  About OSL
+                </a>
+              </div>
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../about/team/" class="nav_item" title="Team">
+                  Team
+                </a>
+              </div>
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../programs/mentoring/mentors/" class="nav_item" title="Mentors">
+                  Mentors
+                </a>
+              </div>
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../about/partners/" class="nav_item" title="Partners">
+                  Partners
+                </a>
+              </div>
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../faq/" class="nav_item" title="FAQ">
+                  FAQ
+                </a>
+              </div>
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../about/roadmap/" class="nav_item" title="Roadmap">
+                  Roadmap
+                </a>
+              </div>
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../about/coc/" class="nav_item" title="CoC">
+                  CoC
+                </a>
+              </div>
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../about/coc-mentoring/" class="nav_item" title="CoC for Mentoring">
+                  CoC for Mentoring
+                </a>
+              </div>
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../about/acknowledges/" class="nav_item" title="Acknowledges">
+                  Acknowledges
+                </a>
+              </div>
+              
+              
+            </div>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          
+          
+          
+        </div>
+        <div class=follow>
+          <a href=https://github.com/OpenScienceLabs target="_blank">
+            <svg class="icon">
+              <title>github</title>
+              <use xlink:href="#github"/>
+            </svg>
+          </a>
+          <a href=/linkedin target="_blank">
+            <svg class="icon">
+              <title>linkedin</title>
+              <use xlink:href="#linkedin"/>
+            </svg>
+          </a>
+          <a href=https://twitter.com/opensciencelabs target="_blank">
+            <svg class="icon">
+              <title>twitter</title>
+              <use xlink:href="#twitter"/>
+            </svg>
+          </a>
+          <a href=/facebook target="_blank">
+            <svg class="icon">
+              <title>facebook</title>
+              <use xlink:href="#facebook"/>
+            </svg>
+          </a>
+          <a href=/discord target="_blank">
+            <svg class="icon">
+              <title>discord</title>
+              <use xlink:href="#discord"/>
+            </svg>
+          </a>
+          <a href="/feed_rss_created.xml" target="_blank">
+            <svg class="icon">
+              <title>rss</title>
+              <use xlink:href="#rss"/>
+            </svg>
+          </a>
+          <a href=/youtube target="_blank">
+            <svg class="icon">
+              <title>youtube</title>
+              <use xlink:href="#youtube"/>
+            </svg>
+          </a>
+          <div class=color_mode><input type=checkbox class=color_choice id=mode></div>
+        </div>
+      </nav>
+      <nav class="nav d-none d-sm-none d-md-block">
+        <div class='nav_body nav_extra extra'>
+          <!-- SUB-MENU -->
+          
+        </div>
+      </nav>
+    </header>
+    <main>
+      <style>
+        .card-columns div{height:200px}
+        .card-columns img{height:160px}
+        .card-columns a{text-decoration:none}
+        footer.citation *{margin-top:20px;font-size:10px!important;font-style:italic!important}
+      </style>
+      <div class=container>
+        <section class="wrap content">
+          
+          
+<section>
+  <div class="row pt-5">
+    <div class="col-md-9 mx-auto pt-3">
+      
+
+<div>
+  <h3><a href="" title="" target="_self">Scaling Machine Learning Projects with Dask</a></h3>
+  <div class=>
+    <span>
+      <svg class="icon">
+        <title>author</title>
+        <use xlink:href="#author"/>
+      </svg>
+    </span>
+    <span class=author_name>
+      Satarupa Deb · 
+    </span>
+    <span>
+      <svg class="icon">
+        <title>calendar</title>
+        <use xlink:href="#calendar"/>
+      </svg>
+    </span>
+    <span class=post_date>Jan 30, 2024</span>
+
+    <span class=page_only>
+      ·
+      <div class=post_share>
+        Share it:
+        <a href="https://twitter.com/intent/tweet?text=&url=&tw_p=tweetbutton" class=twitter title="Compartir en Twitter" target=_blank rel=nofollow>
+          <svg class="icon">
+            <title>twitter</title>
+            <use xlink:href="#twitter"/>
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/sharer.php?u=&t=" class=facebook title="Compartir en Facebook" target=_blank rel=nofollow>
+          <svg class="icon">
+            <title>facebook</title>
+            <use xlink:href="#facebook"/>
+          </svg>
+        </a>
+        <a href=#linkedinshare id=linkedinshare class=linkedin title="Compartir en LinkedIn" rel=nofollow>
+          <svg class="icon">
+            <title>linkedin</title>
+            <use xlink:href="#linkedin"/>
+          </svg>
+        </a>
+        <a href="" title="Copy Link" class="link link_yank">
+          <svg class="icon">
+            <title>copy</title>
+            <use xlink:href="#copy"/>
+          </svg>
+        </a>
+      </div>
+    </span>
+
+    
+  </div>
+
+</div>
+<div>
+  <div class=excerpt_thumbnail>
+    <figure>
+      <picture>
+        <img loading=lazy decoding=async alt=""
+          class="image_figure image_thumbnail image_internal image_unprocessed"
+          src="/blog/scaling-machine-learning-projects-with-dask/image.png" alt=""></picture>
+    </figure>
+  </div>
+  <div>
+    <h1 id="scaling-python-data-analysis-with-dask">Scaling Python Data Analysis with Dask<a class="headerlink" href="#scaling-python-data-analysis-with-dask" title="Permanent link"> #</a></h1>
+<p>As the volume of digital data continues to expand, coupled with the emergence of new machine learning models each day, companies are increasingly dependent on data analysis to inform business decisions. To effectively test and train these models with large datasets, scaling becomes a significant challenge, particularly in connecting Python analysts to distributed hardware. This challenge is particularly pronounced in the realm of data science and machine learning workloads. The complexities in this process often result in discrepancies that can lead to flawed training of data and consequently, inaccurate results.</p>
+<p>In this blog, we will suggest an effective solution to address the challenges discussed above. Imagine how much easier the scaling process would be with a Python library that could perform on both parallel and distributed computing. This is precisely what <strong>Dask</strong> does!</p>
+<h2 id="what-is-dask">What is Dask?<a class="headerlink" href="#what-is-dask" title="Permanent link"> #</a></h2>
+<p><strong>Dask</strong> is an open-source, parallel and distributed computing library in Python that facilitates efficient and scalable processing of large datasets. It is designed to seamlessly integrate with existing Python libraries and tools, providing a familiar interface for users already comfortable with Python and its libraries like NumPy, Pandas, Jupyter, Scikit-Learn, and others but want to scale those workloads across a cluster. Dask is particularly useful for working with larger-than-memory datasets, parallelizing computations, and handling distributed computing.</p>
+<h2 id="setting-up-dask">Setting Up Dask<a class="headerlink" href="#setting-up-dask" title="Permanent link"> #</a></h2>
+<p>Installing Dask is straightforward and can be done using Conda or Pip. For Anaconda users, Dask comes pre-installed, highlighting its popularity in the data science community. Alternatively, you can install Dask via Pip, ensuring to include the complete extension to install all required dependencies automatically.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">#install using conda</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>conda<span class="w"> </span>install<span class="w"> </span>dask
+</span></code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">#install using conda</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="s2">&quot;dask[complete]&quot;</span> <span class="o">-</span><span class="n">q</span>
+</span></code></pre></div>
+<h2 id="basic-concepts-of-dask">Basic Concepts of Dask<a class="headerlink" href="#basic-concepts-of-dask" title="Permanent link"> #</a></h2>
+<p>At its core, Dask extends the capabilities of traditional tools like pandas, NumPy, and Spark to handle larger-than-memory datasets. It achieves this by breaking large objects like arrays and dataframes into smaller, manageable chunks or partitions. This approach allows Dask to distribute computations efficiently across all available cores on your machine.</p>
+<h2 id="dask-dataframes">Dask DataFrames<a class="headerlink" href="#dask-dataframes" title="Permanent link"> #</a></h2>
+<p>One of the standout features of Dask is its ability to handle large datasets effortlessly. With Dask DataFrames, you can seamlessly work with datasets exceeding 1 GB in size. By breaking the dataset into smaller chunks, Dask ensures efficient processing while maintaining the familiar interface of pandas DataFrames.</p>
+<h2 id="features-of-dask">Features of Dask:<a class="headerlink" href="#features-of-dask" title="Permanent link"> #</a></h2>
+<ol>
+<li><strong>Parallel and Distributed Computing:</strong>
+   Dask enables parallel and distributed computing, making it a go-to solution for handling datasets that exceed the available memory of a single machine. It breaks down computations into smaller tasks, allowing for concurrent execution and optimal resource utilization.</li>
+</ol>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">#demonstrating parallel and distributed computing using Dask</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">import</span> <span class="nn">dask.array</span> <span class="k">as</span> <span class="nn">da</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># Create a large random array</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">x</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">10000</span><span class="p">),</span> <span class="n">chunks</span><span class="o">=</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">))</span>  <span class="c1"># 10,000 x 10,000 array</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1"># Perform element-wise computation</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="c1"># Compute the sum along one axis</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="n">z</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="c1"># Compute the result in parallel across multiple cores or distributed across a cluster</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="n">result</span> <span class="o">=</span> <span class="n">z</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-text highlight">
+<h3 class="code-label">
+  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
+  <i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output">
+  <code><span>
+[ 9986.14978723 10073.19700192  9985.6576724  ...  9923.550924
+9978.70237439  9990.8504103 ]
+
+</span></code>
+</pre>
+</div>
+
+<ol>
+<li><strong>Dask Collections:</strong>
+   Dask provides high-level abstractions known as Dask collections, which are parallel and distributed counterparts to familiar Python data structures. These include <code>dask.array</code> for parallel arrays, <code>dask.bag</code> for parallel bags, and <code>dask.dataframe</code> for parallel dataframes, seamlessly integrating with existing Python libraries.</li>
+</ol>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">#Using dask collections</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">import</span> <span class="nn">dask.array</span> <span class="k">as</span> <span class="nn">da</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># Creating a dummy dataset using Dask</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">x</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">chunks</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>  <span class="c1"># Creating a 100x100 array of ones with chunks of 10x10</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">x</span><span class="o">.</span><span class="n">T</span>  <span class="c1"># Adding the transpose of x to itself</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="n">result</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>  <span class="c1"># Calculating the mean of y</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="c1"># Computing the result</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">compute</span><span class="p">())</span>  <span class="c1"># Outputting the computed result</span>
+</span></code></pre></div>
+<div class="language-text highlight">
+<h3 class="code-label">
+  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
+  <i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output">
+  <code><span>
+2.0
+
+</span></code>
+</pre>
+</div>
+
+<ol>
+<li><strong>Lazy Evaluation:</strong>
+   One of Dask's core principles is lazy evaluation. Instead of immediately computing results, Dask builds a task graph representing the computation. The actual computation occurs only when the results are explicitly requested. This approach enhances efficiency and allows for optimizations in resource usage.</li>
+</ol>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">#Lazy Evalution with dask</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kn">import</span> <span class="nn">dask.dataframe</span> <span class="k">as</span> <span class="nn">dd</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="c1"># Creating a dummy dataset</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">num_rows</span> <span class="o">=</span> <span class="mi">100</span>  <span class="c1"># Number of rows</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    <span class="s1">&#39;column&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">num_rows</span><span class="p">),</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">num_rows</span><span class="p">)</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="p">}</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="c1"># Creating a Pandas DataFrame</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="n">df_pandas</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="c1"># Saving the Pandas DataFrame to a CSV file</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="n">df_pandas</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;your_dataset.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="c1"># Reading the CSV file into a Dask DataFrame</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="n">df</span> <span class="o">=</span> <span class="n">dd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;your_dataset.csv&#39;</span><span class="p">)</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="c1"># Filtering the Dask DataFrame</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="n">filtered_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;column&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">]</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="c1"># Calculating the mean of the filtered DataFrame</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="n">mean_result</span> <span class="o">=</span> <span class="n">filtered_df</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="c1"># No computation happens until explicitly requested</span>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="nb">print</span><span class="p">(</span><span class="n">mean_result</span><span class="o">.</span><span class="n">compute</span><span class="p">())</span>  <span class="c1"># Outputting the computed result</span>
+</span></code></pre></div>
+<div class="language-text highlight">
+<h3 class="code-label">
+  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
+  <i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output">
+  <code><span>
+0.5112260135512784
+
+</span></code>
+</pre>
+</div>
+
+<ol>
+<li><strong>Integration with Existing Libraries:</strong>
+   Dask is designed to integrate seamlessly with popular Python libraries, such as NumPy, Pandas, and scikit-learn. This means that you can often replace existing code with Dask equivalents without significant modifications.</li>
+</ol>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Integration with NumPy</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kn">import</span> <span class="nn">dask.array</span> <span class="k">as</span> <span class="nn">da</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1"># Generating a random NumPy array</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="n">x_np</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="c1"># Converting the NumPy array to a Dask array</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="n">x_dask</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">from_array</span><span class="p">(</span><span class="n">x_np</span><span class="p">,</span> <span class="n">chunks</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="c1"># Performing operations on the Dask array</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="n">y_dask</span> <span class="o">=</span> <span class="n">x_dask</span> <span class="o">+</span> <span class="n">x_dask</span><span class="o">.</span><span class="n">T</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="c1"># Computing the result</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="nb">print</span><span class="p">(</span><span class="n">y_dask</span><span class="o">.</span><span class="n">compute</span><span class="p">())</span>
+</span></code></pre></div>
+<div class="language-text highlight">
+<h3 class="code-label">
+  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
+  <i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output">
+  <code><span>
+[[1.40940907 1.32044698 1.48172367 ... 1.4266846  0.84142743 0.33577001]
+[1.32044698 1.02252065 1.17250384 ... 0.40216939 1.58544767 1.12049071]
+[1.48172367 1.17250384 1.98886224 ... 0.86271956 1.27977778 0.95136532]
+...
+[1.4266846  0.40216939 0.86271956 ... 1.44980096 1.38712404 0.75331149]
+[0.84142743 1.58544767 1.27977778 ... 1.38712404 1.50814693 1.01719649]
+[0.33577001 1.12049071 0.95136532 ... 0.75331149 1.01719649 1.47050452]]
+
+</span></code>
+</pre>
+</div>
+
+<ol>
+<li><strong>Task Scheduling:</strong>
+   Dask dynamically schedules the execution of tasks, optimizing the computation based on available resources. This makes it well-suited for handling larger-than-memory datasets efficiently. Dask is a powerful tool for data scientists and engineers working with large-scale data processing tasks, providing a convenient way to scale computations without requiring a complete rewrite of existing code.</li>
+</ol>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Dynamic task scheduling with Dask</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">import</span> <span class="nn">dask</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="nd">@dask</span><span class="o">.</span><span class="n">delayed</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">square</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>    <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="n">final_result</span> <span class="o">=</span> <span class="n">dask</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="o">*</span><span class="n">results</span><span class="p">)</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="nb">print</span><span class="p">(</span><span class="n">final_result</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-text highlight">
+<h3 class="code-label">
+  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
+  <i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output">
+  <code><span>
+(1, 4, 9, 16, 25, 36, 49, 64, 81)
+
+</span></code>
+</pre>
+</div>
+
+<h2 id="conclusion">Conclusion:<a class="headerlink" href="#conclusion" title="Permanent link"> #</a></h2>
+<p><strong>Dask</strong> stands as a powerful tool in the Python ecosystem, addressing the challenges posed by the ever-increasing scale of data. Its ability to seamlessly integrate with existing libraries, support lazy evaluation, and provide parallel and distributed computing makes it a valuable asset for data scientists and engineers tackling large-scale data processing tasks. Whether you're working on a single machine with moderately sized datasets or dealing with big data challenges that require distributed computing, Dask offers a flexible and efficient solution. As we continue to navigate the era of big data, Dask proves to be a key player in unlocking the full potential of Python for scalable and parallelized data processing. Start harnessing the power of Dask today and supercharge your data processing workflows!</p>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</section>
+
+        </section>
+      </div>
+    </main>
+    <svg width="0" height="0" class="hidden">
+      <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="facebook">
+        <path d="M437 0H75C33.648.0.0 33.648.0 75v362c0 41.352 33.648 75 75 75h151V331h-60v-90h60v-61c0-49.629 40.371-90 90-90h91v90h-91v61h91l-15 90h-76v181h121c41.352.0 75-33.648 75-75V75c0-41.352-33.648-75-75-75zm0 0"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.001 18.001" id="twitter">
+        <path d="M15.891 4.013c.808-.496 1.343-1.173 1.605-2.034a8.68 8.68.0 01-2.351.861c-.703-.756-1.593-1.14-2.66-1.14-1.043.0-1.924.366-2.643 1.078A3.56 3.56.0 008.766 5.383c0 .309.039.585.117.819-3.076-.105-5.622-1.381-7.628-3.837-.34.601-.51 1.213-.51 1.846.0 1.301.549 2.332 1.645 3.089-.625-.053-1.176-.211-1.645-.47.0.929.273 1.705.82 2.388a3.623 3.623.0 002.115 1.291c-.312.08-.641.118-.979.118-.312.0-.533-.026-.664-.083.23.757.664 1.371 1.291 1.841a3.652 3.652.0 002.152.743C4.148 14.173 2.625 14.69.902 14.69c-.422.0-.721-.006-.902-.038 1.697 1.102 3.586 1.649 5.676 1.649 2.139.0 4.029-.542 5.674-1.626 1.645-1.078 2.859-2.408 3.639-3.974a10.77 10.77.0 001.172-4.892v-.468a7.788 7.788.0 001.84-1.921 8.142 8.142.0 01-2.11.593z"/>
+      </symbol>
+      <symbol aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="mail">
+        <path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V4e2c0 26.5-21.5 48-48 48H48c-26.5.0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5.0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="calendar">
+        <path d="M452 40h-24V0h-40v40H124V0H84v40H60C26.916 40 0 66.916.0 1e2v352c0 33.084 26.916 60 60 60h392c33.084.0 60-26.916 60-60V1e2c0-33.084-26.916-60-60-60zm20 412c0 11.028-8.972 20-20 20H60c-11.028.0-20-8.972-20-20V188h432v264zm0-304H40v-48c0-11.028 8.972-20 20-20h24v40h40V80h264v40h40V80h24c11.028.0 20 8.972 20 20v48z"/>
+        <path d="M76 230h40v40H76zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zM76 310h40v40H76zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zM76 390h40v40H76zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zm80-80h40v40h-40z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="github">
+        <path d="M255.968 5.329C114.624 5.329.0 120.401.0 262.353c0 113.536 73.344 209.856 175.104 243.872 12.8 2.368 17.472-5.568 17.472-12.384.0-6.112-.224-22.272-.352-43.712-71.2 15.52-86.24-34.464-86.24-34.464-11.616-29.696-28.416-37.6-28.416-37.6-23.264-15.936 1.728-15.616 1.728-15.616 25.696 1.824 39.2 26.496 39.2 26.496 22.848 39.264 59.936 27.936 74.528 21.344 2.304-16.608 8.928-27.936 16.256-34.368-56.832-6.496-116.608-28.544-116.608-127.008.0-28.064 9.984-51.008 26.368-68.992-2.656-6.496-11.424-32.64 2.496-68 0 0 21.504-6.912 70.4 26.336 20.416-5.696 42.304-8.544 64.096-8.64 21.728.128 43.648 2.944 64.096 8.672 48.864-33.248 70.336-26.336 70.336-26.336 13.952 35.392 5.184 61.504 2.56 68 16.416 17.984 26.304 40.928 26.304 68.992.0 98.72-59.84 120.448-116.864 126.816 9.184 7.936 17.376 23.616 17.376 47.584.0 34.368-.32 62.08-.32 70.496.0 6.88 4.608 14.88 17.6 12.352C438.72 472.145 512 375.857 512 262.353 512 120.401 397.376 5.329 255.968 5.329z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212 212" id="gitlab">
+        <path d="M12.3 74.7h54L43.3 3c-1-3.6-6.4-3.6-7.6.0L12.3 74.8z"/>
+        <path d="M12.3 74.7.5 111c-1 3.2.0 6.8 3 8.8l101.6 74-92.5-119z"/>
+        <path d="M105 193.7l-38.6-119h-54l92.7 119z"/>
+        <path d="M105 193.7l38.7-119H66.4l38.7 119z"/>
+        <path d="M105 193.7l38.7-119H198l-93 119z"/>
+        <path d="M198 74.7l11.6 36.2c1 3 0 6.6-3 8.6l-101.5 74 93-119z"/>
+        <path d="M198 74.7h-54.3L167 3c1.2-3.6 6.4-3.6 7.6.0L198 74.8z"/>
+      </symbol>
+      <symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="rss">
+        <circle cx="3.429" cy="20.571" r="3.429"/>
+        <path d="M11.429 24h4.57C15.999 15.179 8.821 8.001.0 8v4.572c6.302.001 11.429 5.126 11.429 11.428z"/>
+        <path d="M24 24C24 10.766 13.234.0.0.0v4.571c10.714.0 19.43 8.714 19.43 19.429z"/>
+      </symbol>
+      <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="linkedin">
+        <path d="M437 0H75C33.648.0.0 33.648.0 75v362c0 41.352 33.648 75 75 75h362c41.352.0 75-33.648 75-75V75c0-41.352-33.648-75-75-75zM181 406h-60V196h60zm0-240h-60v-60h60zm210 240h-60V286c0-16.54-13.46-30-30-30s-30 13.46-30 30v120h-60V196h60v11.309C286.719 202.422 296.93 196 316 196c40.691.043 75 36.547 75 79.688zm0 0"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 612" id="to-top">
+        <path d="M604.501 440.509 325.398 134.956c-5.331-5.357-12.423-7.627-19.386-7.27-6.989-.357-14.056 1.913-19.387 7.27L7.499 440.509c-9.999 10.024-9.999 26.298.0 36.323s26.223 10.024 36.222.0l262.293-287.164L568.28 476.832c9.999 10.024 26.222 10.024 36.221.0 9.999-10.023 9.999-26.298.0-36.323z"/>
+      </symbol>
+      <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="carly">
+        <path d="M504.971 239.029 448 182.059V84c0-46.317-37.682-84-84-84h-44c-13.255.0-24 10.745-24 24s10.745 24 24 24h44c19.851.0 36 16.149 36 36v108c0 6.365 2.529 12.47 7.029 16.971L454.059 256l-47.029 47.029A24.002 24.002.0 004e2 320v108c0 19.851-16.149 36-36 36h-44c-13.255.0-24 10.745-24 24s10.745 24 24 24h44c46.318.0 84-37.683 84-84v-98.059l56.971-56.971c9.372-9.372 9.372-24.568.0-33.941zM112 192V84c0-19.851 16.149-36 36-36h44c13.255.0 24-10.745 24-24S205.255.0 192 0h-44c-46.318.0-84 37.683-84 84v98.059l-56.971 56.97c-9.373 9.373-9.373 24.568.0 33.941L64 329.941V428c0 46.317 37.682 84 84 84h44c13.255.0 24-10.745 24-24s-10.745-24-24-24h-44c-19.851.0-36-16.149-36-36V320c0-6.365-2.529-12.47-7.029-16.971L57.941 256l47.029-47.029A24.002 24.002.0 00112 192z"/>
+      </symbol>
+      <symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="copy">
+        <path d="M23 2.75A2.75 2.75.0 0020.25.0H8.75A2.75 2.75.0 006 2.75v13.5A2.75 2.75.0 008.75 19h11.5A2.75 2.75.0 0023 16.25zM18.25 14.5h-7.5a.75.75.0 010-1.5h7.5a.75.75.0 010 1.5zm0-3h-7.5a.75.75.0 010-1.5h7.5a.75.75.0 010 1.5zm0-3h-7.5a.75.75.0 010-1.5h7.5a.75.75.0 010 1.5z"/>
+        <path d="M8.75 20.5A4.255 4.255.0 014.5 16.25V2.75c0-.086.02-.166.025-.25H3.75A2.752 2.752.0 001 5.25v16A2.752 2.752.0 003.75 24h12a2.752 2.752.0 002.75-2.75v-.75z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.001 512.001" id="closeme">
+        <path d="M284.286 256.002 506.143 34.144c7.811-7.811 7.811-20.475.0-28.285-7.811-7.81-20.475-7.811-28.285.0L256 227.717 34.143 5.859c-7.811-7.811-20.475-7.811-28.285.0-7.81 7.811-7.811 20.475.0 28.285l221.857 221.857L5.858 477.859c-7.811 7.811-7.811 20.475.0 28.285a19.938 19.938.0 0014.143 5.857 19.94 19.94.0 0014.143-5.857L256 284.287l221.857 221.857c3.905 3.905 9.024 5.857 14.143 5.857s10.237-1.952 14.143-5.857c7.811-7.811 7.811-20.475.0-28.285L284.286 256.002z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="open-menu">
+        <path d="M492 236H20c-11.046.0-20 8.954-20 20s8.954 20 20 20h472c11.046.0 20-8.954 20-20s-8.954-20-20-20zm0-160H20C8.954 76 0 84.954.0 96s8.954 20 20 20h472c11.046.0 20-8.954 20-20s-8.954-20-20-20zm0 320H20c-11.046.0-20 8.954-20 20s8.954 20 20 20h472c11.046.0 20-8.954 20-20s-8.954-20-20-20z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="instagram">
+        <path d="M12 2.163c3.204.0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849.0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204.0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849.0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741.0 8.333.014 7.053.072c-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.668.072 4.948c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.668-.014 4.948-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403.0-6.162 2.759-6.162 6.162S8.597 18.163 12 18.163s6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zM12 16c-2.209.0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796.0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795.0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="youtube">
+        <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23.0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23.0C23.512 20.55 23.971 18.196 24 12c-.029-6.185-.484-8.549-4.385-8.816zM9 16V8l8 3.993L9 16z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="stackoverflow">
+        <path d="M21 27v-8h3v11H0V19h3v8h18z"/>
+        <path d="M17.1.2 15 1.8l7.9 10.6 2.1-1.6L17.1.2zm3.7 14.7L10.6 6.4l1.7-2 10.2 8.5-1.7 2zM7.2 12.3l12 5.6 1.1-2.4-12-5.6-1.1 2.4zm-1.8 6.8 13.56 1.96.17-2.38-13.26-2.55-.47 2.97zM19 25H5v-3h14v3z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="xing">
+        <path d="M18.188.0c-.517.0-.741.325-.927.66.0.0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211.0.375-.078.463-.22.089-.151.089-.346-.009-.536l-4.879-8.916c-.004-.006-.004-.016.0-.022L22.139.756c.095-.191.097-.387.006-.535C22.056.078 21.894.0 21.686.0h-3.498zM3.648 4.74c-.211.0-.385.074-.473.216-.09.149-.078.339.02.531l2.34 4.05c.004.01.004.016.0.021L1.86 16.051c-.099.188-.093.381.0.529.085.142.239.234.45.234h3.461c.518.0.766-.348.945-.667l3.734-6.609-2.378-4.155c-.172-.315-.434-.659-.962-.659H3.648v.016z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71 55" id="discord">
+        <path d="M60.1045 4.8978C55.5792 2.8214 50.7265 1.2916 45.6527.41542 45.5603.39851 45.468.440769 45.4204.525289 44.7963 1.6353 44.105 3.0834 43.6209 4.2216c-5.4572-.817-10.8864-.817-16.2317.0C26.905 3.0581 26.1886 1.6353 25.5617.525289 25.5141.443589 25.4218.40133 25.3294.41542c-5.071.87338-9.9237 2.40318-14.4518 4.48238C10.8384 4.9147 10.8048 4.9429 10.7825 4.9795 1.57795 18.7309-.943561 32.1443.293408 45.3914.299005 45.4562.335386 45.5182.385761 45.5576 6.45866 50.0174 12.3413 52.7249 18.1147 54.5195 18.2071 54.5477 18.305 54.5139 18.3638 54.4378 19.7295 52.5728 20.9469 50.6063 21.9907 48.5383 22.0523 48.4172 21.9935 48.2735 21.8676 48.2256 19.9366 47.4931 18.0979 46.6 16.3292 45.5858 16.1893 45.5041 16.1781 45.304 16.3068 45.2082 16.679 44.9293 17.0513 44.6391 17.4067 44.3461 17.471 44.2926 17.5606 44.2813 17.6362 44.3151c11.6196 5.3051 24.1992 5.3051 35.6817.0C53.3935 44.2785 53.4831 44.2898 53.5502 44.3433 53.9057 44.6363 54.2779 44.9293 54.6529 45.2082 54.7816 45.304 54.7732 45.5041 54.6333 45.5858c-1.7687 1.0339-3.6074 1.9073-5.5412 2.637C48.9662 48.2707 48.9102 48.4172 48.9718 48.5383c1.0662 2.0651 2.2836 4.0316 3.6241 5.8967C52.6519 54.5139 52.7526 54.5477 52.845 54.5195c5.8014-1.7946 11.684-4.5021 17.7569-8.9619C70.6551 45.5182 70.6887 45.459 70.6943 45.3942 72.1747 30.0791 68.2147 16.7757 60.1968 4.9823 60.1772 4.9429 60.1437 4.9147 60.1045 4.8978zM23.7259 37.3253c-3.4983.0-6.3808-3.2117-6.3808-7.156s2.8266-7.156 6.3808-7.156c3.5821.0 6.4367 3.2399 6.3807 7.156.0 3.9443-2.8266 7.156-6.3807 7.156zm23.5919.0c-3.4982.0-6.3807-3.2117-6.3807-7.156s2.8265-7.156 6.3807-7.156c3.5822.0 6.4367 3.2399 6.3808 7.156.0 3.9443-2.7986 7.156-6.3808 7.156z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17" id="author">
+        <path d="M11.667.0H3.016v1.984H2.5c-.827.0-1.5.673-1.5 1.5v8.588l2.521 4.956 2.464-4.959V3.484c0-.827-.673-1.5-1.5-1.5h-.469v-.984H11v5h5v10H4.5v1H17V5.308L11.667.0zM3.908 14.002h-.804L2 11.832V5.984h1v6.027h1V5.984h.984v5.851l-1.076 2.167zM4.984 3.484v1.5H2v-1.5c0-.275.225-.5.5-.5h1.984c.276.0.5.225.5.5zM12 1.742 15.273 5H12V1.742z" fill="#000"/>
+      </symbol>
+    </svg>
+    
+    <footer class=footer>
+      <div class="footer_inner wrap pale">
+        <img src=/icons/osl-logo-black.svg class="icon icon_2 transparent" alt="Open Science Labs">
+        <p>Copyright&nbsp;<span class=year></span>&nbsp;Open Science Labs.</p>
+        <a class=to_top href=#documentTop>
+          <svg class="icon">
+            <title>to-top</title>
+            <use xlink:href="#to-top"/>
+          </svg>
+        </a>
+      </div>
+    </footer>
+    <script type="text/javascript" src="/js/bundle.js"></script>
+    <script src="/js/search.min.js"></script>
+    
+  </body>
+</html>
