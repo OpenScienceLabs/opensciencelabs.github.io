@@ -7,7 +7,7 @@ defaults:
 groups:
   group1:
     project-name: project1  # optional
-    compose-path: tests/containers/group1/compose.yaml
+    compose-path: ./compose.yaml
     env-file: .env
     services:
       default: service1-1,service1-3
