@@ -101,20 +101,8 @@ internship/apprenticeship program.
 
 ### Cycle 1: Winter/Spring 2024
 
-- **December 1, 2023**: Call for Mentoring Organizations and Projects.
-- **January 3, 2024**: Deadline for Mentoring Organizations to apply.
-- **January 5, 2024**: Announcement of selected Mentoring Organizations.
-- **January 9, 2024**: Call for Interns/Apprentices opens.
-- **February 2, 2024**: Deadline for Interns/Apprentices applications.
-- **February 9, 2024**: Selection of Interns/Apprentices by mentors.
-- **February 14, 2024**: Announcement of approved Interns/Apprentices.
-- **February 21-25, 2024**: Integration Phase – interns engage with mentors and
-  familiarize themselves with the project.
-- **February 26, 2024**: Official Start Date.
-- **April 8, 2024**: Mid-term Evaluation.
-- **May 20, 2024**: Final Evaluation.
-- **May 27-31, 2024**: Interns present their work.
-- **June 3, 2024**: Official End Date; Certification process begins.
+For more information about the Cycle 2024-01 Timeline, check its official page:
+<https://opensciencelabs.org/programs/internship/cycles/2024-01/#timeline>
 
 ### Cycle 2: Summer 2024 (Estimated Timeline & GSoC Alignment)
 
