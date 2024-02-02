@@ -51,6 +51,18 @@ teams:
         github_url: https://github.com/aguspesce
         # github_sponsor:
 
+  - name: Coordinators
+    members:
+      - name: Saransh Chopra
+        bio: |
+          I am currently based at CERN, working as a Research Fellow with the Princeton
+          Research Computing Group and IRIS-HEP. I am broadly interested in Research
+          Software Engineering, Scientific Computing, DevOps, Theory of Computation,
+          and Type Theory. I am extremely passionate about Open-Source and Open-Science.
+        image_url: https://saransh-cpp.github.io/assets/img/SaranshChopra.jpeg
+        github_url: https://github.com/Saransh-cpp
+        # github_sponsor:
+
   - name: Interns
     members:
       - name: Anavelyz Pérez
