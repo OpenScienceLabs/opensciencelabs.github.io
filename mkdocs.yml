@@ -32,8 +32,7 @@ nav:
       - Affiliated Projects: 'programs/project-affiliation/projects.md'
     # - Ambassadors: 'programs/ambassadors/index.md'
     - Incubator: 'programs/incubator/index.md'
-    - Google Summer Of Code: 'programs/gsoc/index.md'
-      - 2024:
+    - GSoC: 'programs/gsoc/index.md'
     - Internship:
       - index: 'programs/internship/index.md'
       - Interns Guide: 'programs/internship/guides/interns/index.md'
