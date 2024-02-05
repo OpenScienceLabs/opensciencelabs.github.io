@@ -576,6 +576,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://opensciencelabs.org/programs/gsoc/guides/contributor/</loc>
+         <lastmod>2024-02-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://opensciencelabs.org/programs/gsoc/templates/contributor-proposal/</loc>
+         <lastmod>2024-02-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://opensciencelabs.org/programs/incubator/</loc>
          <lastmod>2024-02-05</lastmod>
          <changefreq>daily</changefreq>
