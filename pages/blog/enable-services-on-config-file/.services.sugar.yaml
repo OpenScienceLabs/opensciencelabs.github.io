@@ -1,9 +1,6 @@
 version: 1.0
 compose-app: docker compose
-env-file: .env
-defaults:
-  group: {{ env.KXGR_GROUP }}
-  project-name: sugar-{{ env.KXGR_PROJECT_NAME }}
+
 services:
   project-name: project1  # optional
   compose-path: ./compose.yaml
