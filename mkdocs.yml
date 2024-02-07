@@ -32,11 +32,14 @@ nav:
       - Affiliated Projects: 'programs/project-affiliation/projects.md'
     # - Ambassadors: 'programs/ambassadors/index.md'
     - Incubator: 'programs/incubator/index.md'
+    - GSoC:
+      - index: 'programs/gsoc/index.md'
+      - Contributor Guide: 'programs/gsoc/guides/contributor/index.md'
+      - "TEMPLATE: Contributor Project Proposal": 'programs/gsoc/templates/contributor-proposal.md'
     - Internship:
       - index: 'programs/internship/index.md'
       - Interns Guide: 'programs/internship/guides/interns/index.md'
       - Mentors Guide: 'programs/internship/guides/mentors/index.md'
-      - "Google Summer Of Code": 'programs/internship/gsoc/index.md'
       - "Cycle 2024-01 (OPEN)": 'programs/internship/cycles/2024-01.md'
       - "Cycle 2023-01 (CLOSED)": 'programs/internship/cycles/2023-01.md'
       - "TEMPLATE: Projects Ideas": 'programs/internship/templates/projects-ideas.md'
