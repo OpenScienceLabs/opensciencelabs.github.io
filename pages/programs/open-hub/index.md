@@ -3,7 +3,6 @@ title: "OSL Open Hub"
 description: "OSL Open Hub"
 date: "2024-02-07"
 authors: ["OSL Team"]
-template: single-sidebar.html
 ---
 
 # OSL OpenHub: Local and Regional Open Science Labs Communities
