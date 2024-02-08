@@ -46,6 +46,7 @@ nav:
       - "TEMPLATE: Intern Project Proposal": 'programs/internship/templates/intern-proposal.md'
     - Mentoring: 'programs/mentoring/index.md'
     - Partners: 'programs/partners/index.md'
+    - OpenHub: 'programs/open-hub/index.md'
     # note: let's keep these programs hidden for now
     # - Packaging Support: 'programs/packaging-support/index.md'
     # - Virtual-Labs: 'programs/virtual-labs/index.md'
