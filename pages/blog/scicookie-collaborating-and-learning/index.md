@@ -1,7 +1,7 @@
 ---
 title: "Collaborating and learning from Scicookie"
 slug: scicookie-collaborating-and-learning
-date: 2024-01-11
+date: 2024-02-03
 authors: ["Daniela Iglesias Rocabado"]
 tags: [open-source, open-science, python, proyects]
 categories: [python]
@@ -51,6 +51,11 @@ scicookie
     <source src="ScicookieDemo.mp4" type="video/mp4">
     Tu navegador no soporta la etiqueta de video.
 </video>
+
+[![Texto alternativo](https://img.youtube.com/vi/GozNb4i47Ds/0.jpg)](https://www.youtube.com/embed/GozNb4i47Ds?si=NEAwivz7uL_2J7cP)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GozNb4i47Ds" frameborder="0" allowfullscreen></iframe>
+
 
 ## Develpment
 
