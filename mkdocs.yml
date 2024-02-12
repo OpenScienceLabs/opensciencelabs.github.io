@@ -30,7 +30,6 @@ nav:
     - Project Affiliation:
       - index: 'programs/project-affiliation/index.md'
       - Affiliated Projects: 'programs/project-affiliation/projects.md'
-    # - Ambassadors: 'programs/ambassadors/index.md'
     - Incubator: 'programs/incubator/index.md'
     - GSoC:
       - index: 'programs/gsoc/index.md'
@@ -40,7 +39,7 @@ nav:
       - index: 'programs/internship/index.md'
       - Interns Guide: 'programs/internship/guides/interns/index.md'
       - Mentors Guide: 'programs/internship/guides/mentors/index.md'
-      - "Cycle 2024-01 (OPEN)": 'programs/internship/cycles/2024-01.md'
+      - "Cycle 2024-01 (CLOSED)": 'programs/internship/cycles/2024-01.md'
       - "Cycle 2023-01 (CLOSED)": 'programs/internship/cycles/2023-01.md'
       - "TEMPLATE: Projects Ideas": 'programs/internship/templates/projects-ideas.md'
       - "TEMPLATE: Intern Project Proposal": 'programs/internship/templates/intern-proposal.md'
