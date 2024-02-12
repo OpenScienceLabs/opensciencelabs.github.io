@@ -48,7 +48,7 @@ To become an affiliated project, applicants should:
 
 Interested projects can apply for affiliation by submitting a detailed proposal
 outlining their project's goals, current status, and how they align with OSL’s
-mission. Proposals should be sent to `teams@opensciencelabs.org`.
+mission. Proposals should be sent to `team@opensciencelabs.org`.
 
 ## Review Process
 
@@ -64,4 +64,4 @@ new projects into the OSL family and working together towards a future of open
 and collaborative innovation.
 
 For more information or inquiries, please contact us at
-`teams@opensciencelabs.org`.
+`team@opensciencelabs.org`.
