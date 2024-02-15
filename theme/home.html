@@ -1,5 +1,4 @@
-{% extends "base.html" %}
-{% block content %}
+{% extends "base.html" %} {% block content %}
 
 <style>
   .card-columns div {
@@ -19,166 +18,323 @@
     font-size: 10px !important;
     font-style: italic !important;
   }
+  .welcome-section {
+    background-image: url("/images/home/header.png");
+    background-size: cover;
+    color: white;
+    padding: 100px 0;
+  }
 
+  .welcome-section *,
+  .card-text,
+  .card-title {
+    color: #333333 !important;
+  }
+
+  .card-title {
+    font-weight: bold !important;
+  }
+  .overlay {
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.7
+    ); /* Black background with 50% opacity */
+    color: white;
+    padding: 100px 0;
+  }
 </style>
 
+<div class="container-fluid welcome-section">
+  <div class="overlay">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1>Welcome to Open Science Labs</h1>
+        <h2>
+          Fostering innovation and collaboration with open science and open
+          source.
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
+
 <section class="wrap content extra" id="home">
-
-  <div class="row align-items-center">
-
-    <div
-      class="col-md-11 col-xl-6 col-xxl-7 order-0 order-sm-1 align-text-top text-md-end">
-      <img src="images/home/Teacher-bro.png"
-        alt="https://storyset.com/people" />
+  <div class="container pb-3">
+    <div class="row my-2">
+      <div class="col-md-6">
+        <h2>Our Mission</h2>
+        <p>
+          At Open Science Labs (OSL), we are dedicated to advancing the
+          scientific research through collaboration, innovation, and education.
+          Our mission is to create a more inclusive, transparent, and accessible
+          scientific community.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <h2>Our Goals</h2>
+        <p>
+          To empower researchers, educators, and students by providing
+          resources, tools, and a collaborative platform for sharing knowledge
+          and advancing open science initiatives.
+        </p>
+      </div>
     </div>
 
-    <div class="col-md-75 col-xl-6 col-xxl-5 text-md-start text-center">
-      <h1 class="fw-bolder fs-2 fs-xxl-7 mb-2">Open Science Labs,</h1>
-      <p class="fs-1 mb-2">
-        La comunidad abierta para la ciencia y tecnología.
-      </p>
-      <p>
-        Open Science Labs, es una comunidad amigable, colaborativa y
-        apasionada
-        por la ciencia y la tecnología, con el principal objetivo de promover
-        la Ciencia Abierta y el Código Abierto, proporcionando herramientas
-        y diseminando las mejores prácticas para que podamos aprender, crecer
-        y contribuir activamente en este emocionante campo.
-      </p>
-      <a class="btn btn-primary me-2"
-        href="https://opensciencelabs.org/discord" role="button">¡Ingresa a
-        nuestro discord!
-      </a>
+    <div class="row my-4">
+      <div class="col-12">
+        <h2>Our Main Initiatives</h2>
+        <p>
+          Discover Our Main Initiatives at Open Science Labs, where we champion
+          the advancement of scientific research and technology through a
+          variety of comprehensive programs. Each initiative is designed to
+          foster collaboration, innovation, and learning within our community.
+          From incubating groundbreaking projects to facilitating meaningful
+          partnerships and empowering individuals through our internship and
+          OpenHub programs, we're dedicated to creating opportunities that
+          enrich both the scientific community and the broader world. Explore
+          these initiatives to see how you can engage, contribute, and grow with
+          us.
+        </p>
+      </div>
+
+      <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Community</h5>
+              <p class="card-text">
+                Whether you're here to learn, share, or contribute, you'll find
+                a supportive space to explore open science and technology.
+              </p>
+              <a
+                href="https://opensciencelabs.org/discord"
+                class="btn btn-success"
+                target="_blank"
+              >
+                Join us now
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Internship Program</h5>
+              <p class="card-text">
+                Offering hands-on experience in open source projects, fostering
+                learning, and contributing to the community.
+              </p>
+              <a href="/programs/internship" class="btn btn-primary"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Project Affiliation</h5>
+              <p class="card-text">
+                Supporting and promoting open source projects aligned with our
+                mission, providing visibility and resources.
+              </p>
+              <a href="/programs/project-affiliation" class="btn btn-primary"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Incubator Program</h5>
+              <p class="card-text">
+                Nurturing innovative open source projects, providing the support
+                and resources needed to evolve ideas into impactful solutions
+                for the global research community.
+              </p>
+              <a href="/programs/incubator" class="btn btn-primary"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">OpenHub</h5>
+              <p class="card-text">
+                OpenHub by Open Science Labs serves as a global network of local
+                communities, fostering collaboration and knowledge sharing in
+                open science and technology.
+              </p>
+              <a href="/programs/open-hub" class="btn btn-primary"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Blog</h5>
+              <p class="card-text">
+                Our blog features contributions from our vibrant community,
+                showcasing project updates, innovative research findings, and
+                expert opinions to inspire and inform.
+              </p>
+              <a href="/blog" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
 
-<section class="wrap content">
-  <div class="row align-items-center">
-    <div class="col-sm-12 col-md-5 col-lg-5 order-0">
-      <img src="images/home/Soft skills-bro.png" />
+    <div class="row my-4">
+      <div class="col-12">
+        <h2>Our Formula</h2>
+        <p>
+          At Open Science Labs, our formula for success is built on a foundation
+          of collaboration, innovation, and openness. We believe in empowering
+          our community by providing the tools, resources, and support needed to
+          advance science and technology in an open and accessible manner. Our
+          commitment to these principles guides our initiatives, programs, and
+          partnerships, ensuring that together, we can make a lasting impact on
+          the world. Join us in our mission to create a future where knowledge
+          is shared freely and collaboratively.
+        </p>
+        <a href="/about/formula" class="btn btn-primary">Learn More</a>
+      </div>
     </div>
 
-    <div
-      class="col-sm-12 col-md-7 col-lg-7 text-md-start text-center order-1 order-md-0">
-      <p class="fs-1 mb-2">
-        ¡Superando desafíos científicos y tecnológicos juntos!
-      </p>
-
-      <p>Creemos en la fortaleza de la colaboración y en la importancia de unir
-        fuerzas para abordar los desafíos científicos y tecnológicos que
-        enfrentamos en la actualidad. Sabemos que una comunidad diversa y
-        comprometida es clave para impulsar la investigación y encontrar
-        soluciones innovadoras a problemas globales y locales.</p>
-
-      <p>
-        En Open Science Labs, encontrarás un ambiente acogedor en el que
-        podrás compartir tus conocimientos, aprender de otros miembros de la
-        comunidad y trabajar en proyectos conjuntos. Además, podrás encontrar
-        recursos, información y apoyo para que puedas
-        desarrollar tus habilidades en ciencia abierta y tecnología de código
-        abierto.</p>
-    </div>
-  </div>
-</section>
-
-<section class="wrap content">
-  <div class="row align-items-center">
-    <div class="col-sm-12 col-md-5 col-lg-5 order-1">
-      <img src="images/home/Company-pana.png" />
+    <div class="row my-4">
+      <div class="col-12">
+        <h2>Project Affiliation</h2>
+        <p>
+          The Project Affiliation program at Open Science Labs is designed to
+          foster collaboration and growth among open science and open source
+          projects. By becoming an affiliated project, you gain access to a
+          wealth of resources, including participation in our Internship
+          Program, eligibility for future Grant opportunities, and enhanced
+          visibility through our social networks and events. Our goal is to
+          support your project's development and impact, aligning with our
+          mission to promote open, transparent, and ethical advancements in
+          science and technology. Discover how affiliating with OSL can elevate
+          your project and connect with a global community dedicated to open
+          innovation.
+        </p>
+        <a href="/programs/project-affiliation" class="btn btn-primary"
+          >Learn More</a
+        >
+      </div>
     </div>
 
-    <div
-      class="col-sm-12 col-md-7 col-lg-7 text-md-start text-center order-0">
-      <p class="fs-1 mb-2">
-        ¡Comunidad abierta a personas de todas las disciplinas y niveles de
-        experiencia!
-      </p>
-
-      <p>Nuestra comunidad está abierta a personas de todas las disciplinas y
-        niveles de experiencia. No importa si eres un investigador,
-        estudiante, desarrollador, entusiasta o simplemente alguien curioso
-        por la ciencia y
-        la tecnología; en Open Science Labs, todos son bienvenidos.</p>
-      <p>Únete a nosotros y forma parte de esta emocionante aventura en la que
-        juntos exploraremos nuevos horizontes, fomentaremos la colaboración y
-        contribuiremos al avance del conocimiento científico y tecnológico de
-        manera abierta y transparente.</p>
+    <div class="row my-2">
+      <div class="col-12">
+        <h2>Get Involved</h2>
+        <p>
+          Join our community of innovators, thinkers, and creators. Whether
+          you're a researcher, student, or open science enthusiast, there's a
+          place for you at OSL. Explore our programs, participate in our events,
+          and contribute to making science open and accessible to all.
+        </p>
+        <a
+          href="https://opensciencelabs.org/discord"
+          class="btn btn-success"
+          target="_blank"
+        >
+          Join us now
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
 <section>
-  <h2 class="text-center fs-2">Asociados</h2>
+  <div class="container pb-3">
+    <div class="row my-2">
+      <div class="col-12">
+        <h2>Partnership</h2>
 
-  <div class="card-columns partners">
-    <div class="card align-middle text-center">
-      <a href="https://thegraphnetwork.org/">
-        <img
-          src="https://thegraphnetwork.org/wp-content/uploads/2021/07/Research_GRAPH_logo-2-1-1-2-3-150x150.png"
-          alt="The GRAPH Network">
-      </a>
-    </div>
-    <div class="card align-middle text-center">
-      <a href="https://info.dengue.mat.br/">
-        <img src="/images/partners/info-dengue.png" alt="AlertaDengue">
-      </a>
-    </div>
-    <div class="card align-middle text-center">
-      <a href="https://epigraphhub.org/">
-        <img src="/images/partners/epigraphhub.png" alt="EpiGraphHub">
-      </a>
-    </div>
-    <div class="card align-middle text-center">
-      <a href="https://arxlang.org/">
-        <img src="/images/partners/arx.png" alt="ArxLang">
-      </a>
-    </div>
-    <div class="card align-middle text-center">
-      <a href="https://www.pyopensci.org/">
-        <img src="/images/partners/pyopensci.png" alt="pyOpenSci">
-      </a>
-    </div>
-    <div class="card align-middle text-center">
-      <a href="https://pydatastructs.readthedocs.io/en/stable">
-        <img src="/images/partners/pydatastructs.png" />
-      </a>
-    </div>
-    <div class="card align-middle text-center">
-      <a href="https://igdore.org/">
-        <img src="/images/partners/IGDORE-logo-200pxx200px.png" />
-      </a>
-    </div>
-    <div class="card align-middle text-center">
-      <a href="https://literev.unige.ch/">
-        <img src="/images/partners/literev.png" />
-      </a>
+        <div>
+          <p>
+            The Partner Program at Open Science Labs is designed to forge
+            meaningful collaborations with organizations and projects committed
+            to the advancement of open science. By joining us as a partner,
+            you'll have the opportunity to connect with a vibrant community,
+            share knowledge, and collaborate on projects that drive innovation
+            and accessibility in research and development. We invite
+            organizations passionate about making a difference to become part of
+            our mission. Together, we can work towards a more open, transparent,
+            and inclusive scientific ecosystem. Join us in our journey to
+            empower open science initiatives worldwide.
+          </p>
+
+          <p>
+            If you want to be our partner, please us an email to
+            <a href="mailto:team@opensciencelabs.org" target="_blank"
+              >team@opensciencelabs.org</a
+            >.
+          </p>
+        </div>
+
+        <h2>Our Partners</h2>
+
+        <div class="card-columns partners">
+          <div class="card align-middle text-center">
+            <a href="https://thegraphnetwork.org/">
+              <img
+                src="https://thegraphnetwork.org/wp-content/uploads/2021/07/Research_GRAPH_logo-2-1-1-2-3-150x150.png"
+                alt="The GRAPH Network"
+              />
+            </a>
+          </div>
+          <div class="card align-middle text-center">
+            <a href="https://info.dengue.mat.br/">
+              <img src="/images/partners/info-dengue.png" alt="AlertaDengue" />
+            </a>
+          </div>
+          <div class="card align-middle text-center">
+            <a href="https://epigraphhub.org/">
+              <img src="/images/partners/epigraphhub.png" alt="EpiGraphHub" />
+            </a>
+          </div>
+          <div class="card align-middle text-center">
+            <a href="https://arxlang.org/">
+              <img src="/images/partners/arx.png" alt="ArxLang" />
+            </a>
+          </div>
+          <div class="card align-middle text-center">
+            <a href="https://www.pyopensci.org/">
+              <img src="/images/partners/pyopensci.png" alt="pyOpenSci" />
+            </a>
+          </div>
+          <div class="card align-middle text-center">
+            <a href="https://pydatastructs.readthedocs.io/en/stable">
+              <img src="/images/partners/pydatastructs.png" />
+            </a>
+          </div>
+          <div class="card align-middle text-center">
+            <a href="https://igdore.org/">
+              <img src="/images/partners/IGDORE-logo-200pxx200px.png" />
+            </a>
+          </div>
+          <div class="card align-middle text-center">
+            <a href="https://literev.unige.ch/">
+              <img src="/images/partners/literev.png" />
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-<footer class="citation">
-  <p>
-    *Some images were obtained from
-    <a href="https://storyset.com/education">Education illustrations by
-      Storyset</a>
-  </p>
-
-  <div>
-    <p>
-      <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
-          <img
-            alt="Creative Commons License"
-            style="border-width:0"
-            src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
-      </a>
-      <br />
-      This work is licensed under a
-      <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
-          Creative Commons Attribution-ShareAlike 4.0 International License
-      </a>.
-    </p>
-  </div>
-</footer>
-
 
 {% endblock %}

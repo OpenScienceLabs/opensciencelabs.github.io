@@ -60,6 +60,7 @@ nav:
   - About:
     - index: 'about/index.md'
     - About OSL: 'about/index.md'
+    - Our Formula: 'about/formula/index.md'
     - Team: about/team/index.md
     - Mentors: 'programs/mentoring/mentors.md'
     - Partners: about/partners/index.md
@@ -68,7 +69,6 @@ nav:
     - Roadmap: about/roadmap/index.md
     - CoC: about/coc/index.md
     - CoC for Mentoring: about/coc-mentoring/index.md
-    - Acknowledges: about/acknowledges/index.md
 
 markdown_extensions:
   - toc:
