@@ -69,6 +69,15 @@ partners:
     thumbnail: /images/partners/IGDORE-logo.png
     url: https://igdore.org
     twitter: https://twitter.com/IGDOREinstitute
+
+  - name: LiteRev
+    summary: |
+      A tool that reduces searching times, showing the relationships between
+      searching topics. You can easily find the most relevant content from several
+      scientific databases. Whether you are a student, scientist, or professional,
+      LiteRev simplifies the process of finding the articles you need.
+    thumbnail: /images/partners/literev.png
+    url: https://literev.unige.ch
 ---
 
 # Partners
