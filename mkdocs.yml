@@ -69,6 +69,7 @@ nav:
     - Roadmap: about/roadmap/index.md
     - CoC: about/coc/index.md
     - CoC for Mentoring: about/coc-mentoring/index.md
+  - Donate: 'donate/index.md'
 
 markdown_extensions:
   - toc:
