@@ -17,13 +17,23 @@ break from school.
 
 ## Open Science Labs' Participation in GSoC
 
-At Open Science Labs (OSL), we are excited to announce our plans to participate
-in the upcoming Google Summer of Code. This represents a significant step for us
-in fostering open science and technology, as well as providing an exceptional
-learning and development platform for student developers around the world. Our
-participation in GSoC aligns perfectly with our mission to support and grow the
-open source community through meaningful and innovative projects.
+<div class="alert alert-danger">
+Unfortunately, Open Science Labs was not selected as a mentoring organization
+for Google Summer of Code (GSoC) 2024. We extend our heartfelt thanks to
+everyone who dedicated their time and effort in this endeavor.
+</div>
 
+<div class="alert alert-success">
+Despite this, we are excited to invite interested participants to join the
+next cycle of our Internship Program, which will run concurrently with GSoC's
+timeline. We look forward to your contributions and collaboration.
+
+For more information, please take a look into the
+<strong><a href="/programs/internship">Internship Program page</a>.</strong>
+
+</div>
+
+<!--
 ## Contributor Guide
 
 Candidates and contributors can find important information about GSoC in
@@ -126,3 +136,4 @@ experienced mentors.
 - **Project WEB Page**: <https://osl-incubator.github.io/sugar/>
 - **Project Ideas**:
   [link](<https://github.com/osl-incubator/sugar/wiki/Google-Summer-of-Code-(GSoc)-%E2%80%90-2024>)
+-->
