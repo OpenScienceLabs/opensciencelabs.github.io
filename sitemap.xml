@@ -481,6 +481,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://opensciencelabs.org/donate/</loc>
+         <lastmod>2024-02-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://opensciencelabs.org/facebook/</loc>
          <lastmod>2024-02-21</lastmod>
          <changefreq>daily</changefreq>
