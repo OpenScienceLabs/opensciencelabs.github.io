@@ -104,18 +104,17 @@ internship/apprenticeship program.
 For more information about the Cycle 2024-01 Timeline, check its official page:
 <https://opensciencelabs.org/programs/internship/cycles/2024-01/#timeline>
 
-### Cycle 2: Summer 2024 (Estimated Timeline & GSoC Alignment)
+### Cycle 2: 2024 (Estimated Timeline & GSoC Alignment)
 
-- **April**: Estimated Start Date; Call for Mentoring Organizations opens.
-- **May**: Deadline for Mentoring Organizations to apply.
-- **Early June**: Announcement of selected Mentoring Organizations.
-- **Mid-June**: Official Start Date of Internship Period; an alternative for
+- **April, 22**: Call for Interns/Apprentices opens.
+- **May, 13**: Deadline for Interns/Apprentices applications.
+- **May, 20**: Announcement of approved Interns/Apprentices and start of bounding period
+- **May, 27**: Official Start Date of Internship Period; an alternative for
   projects not selected by GSoC to run under the OSL Internship Program with The
   Graph Network support.
-- **Mid-July**: Mid-term Evaluation.
-- **Mid-August**: Final Evaluation.
-- **Late August**: Interns' presentation period.
-- **Early September**: Official End Date; Certification process begins.
+- **July, 8**: Mid-term Evaluation.
+- **August, 26**: Final Evaluation.
+- **September, 3**: Official End Date; Certification process begins.
 
 **Notes:**
 
