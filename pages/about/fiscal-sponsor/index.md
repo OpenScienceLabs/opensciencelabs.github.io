@@ -1,6 +1,6 @@
 ---
 title: "Fiscal Sponsor: The GRAPH Network"
-description: "Google Summer of Code with Open Science Labs"
+description: "Fiscal Sponsor: The GRAPH Network"
 date: "2024-02-24"
 authors: ["OSL Team"]
 ---
