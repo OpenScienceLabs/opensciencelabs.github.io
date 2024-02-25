@@ -24,17 +24,19 @@ extra_javascript:
 nav:
   - Home: 'index.md'
   - Blog: 'blog/index.md'
+  - Affiliations:
+    - index: affiliations/index.md
+    # - Member Affiliation: 'affiliations/membership/index.md'
+    - Project Affiliation:
+      - index: 'affiliations/projects/index.md'
+      - Affiliated Projects: 'affiliations/projects/projects.md'
+    - Partnership:
+      - index: 'affiliations/partnership/index.md'
+      - Partners: 'affiliations/partnership/partners/index.md'
+    - OpenHub: 'affiliations/open-hub/index.md'
   - Programs:
     - index: 'programs/index.md'
-    - Member Affiliation: 'programs/member-affiliation/index.md'
-    - Project Affiliation:
-      - index: 'programs/project-affiliation/index.md'
-      - Affiliated Projects: 'programs/project-affiliation/projects.md'
     - Incubator: 'programs/incubator/index.md'
-    - GSoC:
-      - index: 'programs/gsoc/index.md'
-      - Contributor Guide: 'programs/gsoc/guides/contributor/index.md'
-      - "TEMPLATE: Contributor Project Proposal": 'programs/gsoc/templates/contributor-proposal.md'
     - Internship:
       - index: 'programs/internship/index.md'
       - Interns Guide: 'programs/internship/guides/interns/index.md'
@@ -43,30 +45,35 @@ nav:
       - "Cycle 2023-01 (CLOSED)": 'programs/internship/cycles/2023-01.md'
       - "TEMPLATE: Projects Ideas": 'programs/internship/templates/projects-ideas.md'
       - "TEMPLATE: Intern Project Proposal": 'programs/internship/templates/intern-proposal.md'
-    - Mentoring: 'programs/mentoring/index.md'
-    - Partners: 'programs/partners/index.md'
-    - OpenHub: 'programs/open-hub/index.md'
+    - GSoC:
+      - index: 'programs/gsoc/index.md'
+      - Contributor Guide: 'programs/gsoc/guides/contributor/index.md'
+      - "TEMPLATE: Contributor Project Proposal": 'programs/gsoc/templates/contributor-proposal.md'
+    # - Mentoring: 'programs/mentoring/index.md'
     # note: let's keep these programs hidden for now
     # - Packaging Support: 'programs/packaging-support/index.md'
     # - Virtual-Labs: 'programs/virtual-labs/index.md'
+  - Events:
+    - index: events/index.md
+    - "OpenVerse'24": events/openverse24/index.md
   - Guidelines:
     - index: guidelines/index.md
     - Articles: guidelines/articles/index.md
     - DEI: guidelines/dei/index.md
-    - DevOps/Discord: guidelines/devops/discord.md
-    - Fund Raiser: guidelines/fund-raiser/index.md
-    - Governance: guidelines/governance/index.md
+    # - DevOps/Discord: guidelines/devops/discord.md
+    # - Fund Raiser: guidelines/fund-raiser/index.md
     - Mentoring: guidelines/mentoring/index.md
   - About:
     - index: 'about/index.md'
     - About OSL: 'about/index.md'
     - Our Formula: 'about/formula/index.md'
     - Team: about/team/index.md
-    - Mentors: 'programs/mentoring/mentors.md'
-    - Partners: about/partners/index.md
+    # Mentors: 'programs/mentoring/mentors.md'
     # - Activities: about/archives/index.md
-    - FAQ: faq/index.md
+    # note> faq is out-of-date
+    # - FAQ: faq/index.md
     - Roadmap: about/roadmap/index.md
+    - Governance: about/governance/index.md
     - CoC: about/coc/index.md
     - CoC for Mentoring: about/coc-mentoring/index.md
   - Donate: 'donate/index.md'

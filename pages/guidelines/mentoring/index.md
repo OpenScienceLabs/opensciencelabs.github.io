@@ -205,10 +205,6 @@ Mentors may be required to take:
    an encouraging word or piece of new information.
 1. Avoid controlling the mentoring relationship.
 
-## OpenScienceLabs Mentoring workflow
-
-TBD
-
 ## Mentoring Code of Conduct (MCOC)
 
 As an organization we joined the
