@@ -36,7 +36,7 @@
 
 ## Who Can Participate
 
-- Open to individuals aged 15 and above.
+- Open to individuals aged 18 and above.
 - Participation is on an individual basis.
 
 ## Official Rules
@@ -47,7 +47,8 @@
 
 ## Dates and Timing
 
-- Stage 1: February 29th, 2024 (10:00 am IST) to March 1st, 2024 (10:00 am IST)
+- Stage 1: February 29th, 2024 (10:00 AM IST / 4:30 AM UTC) to March 1st, 2024
+  (10:00 AM IST/ 4:30 AM UTC)
 
 ## Sponsor and Administration
 
@@ -56,10 +57,10 @@
 
 ## Eligibility
 
-- Open to individuals of majority age in their jurisdiction or at least 15 years
+- Open to individuals of majority age in their jurisdiction or at least 18 years
   old.
 - Not open to residents of countries where participation is prohibited by law,
-  individuals under 15, and employees or agents of promotion entities involved
+  individuals under 18, and employees or agents of promotion entities involved
   in the hackathon.
 
 Participants completing Stage 1 within the specified duration are eligible for
