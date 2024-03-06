@@ -53,7 +53,7 @@ $ scicookie --profile osl
 
 ### Demo Video
 
-For a better explanation, please watch a demonstrative video of the installation of SciCookie and the creation of an OSL profile.
+For a better explanation, please watch a demonstrative video of the installation of SciCookie and the creation of a project using the OSL profile.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/GozNb4i47Ds" frameborder="0" allowfullscreen></iframe>
 
