@@ -1,0 +1,30 @@
+version: '3.4'
+
+services:
+  service1-1:
+    hostname: service1-1
+    image: python:latest
+    ports:
+      - 18000:8000
+    command: python -m http.server
+
+  service1-2:
+    hostname: service1-2
+    image: python:latest
+    ports:
+      - 18001:8000
+    command: python -m http.server
+
+  service1-3:
+    hostname: service1-3
+    image: python:latest
+    ports:
+      - 18002:8000
+    command: python -m http.server
+
+  service1-4:
+    hostname: service1-4
+    image: python:latest
+    ports:
+      - 18003:8000
+    command: python -m http.server

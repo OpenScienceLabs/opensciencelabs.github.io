@@ -1,0 +1,17 @@
+version: 1.0
+compose-app: docker compose
+
+defaults:
+  group: default
+  project-name: sugar-group
+groups:
+  group1:
+    project-name: project1  # optional
+    compose-path: ./compose.yaml
+    env-file: .env
+    services:
+      default: service1-1,service1-3
+      available:
+        - name: service1-1
+        - name: service1-2
+        - name: service1-3
