@@ -6,7 +6,7 @@ authors: ["OSL Team"]
 template: single-sidebar.html
 ---
 
-# Google Summer of Code (GSoC) with Open Science Labs: Participation Plan
+# Google Summer of Code (GSoC) with Open Science Labs, under NumFOCUS umbrella
 
 ## Google Summer of Code (GSoC)
 
@@ -15,30 +15,33 @@ developers into open source software development. GSoC invites students to work
 with an open source organization on a 3-month programming project during their
 break from school.
 
-## Open Science Labs' Participation in GSoC
+## Open Science Labs' Participation in GSoC under NumFOCUS umbrella
 
-<div class="alert alert-danger">
-Unfortunately, Open Science Labs was not selected as a mentoring organization
-for Google Summer of Code (GSoC) 2024. We extend our heartfelt thanks to
-everyone who dedicated their time and effort in this endeavor.
-</div>
+Open Science Labs is excited to announce that we've been accepted under
+[NumFOCUS](https://github.com/numfocus/gsoc) umbrella as a participating
+organization in GSoC 2024! Please, check out our
+[list of projects](https://github.com/OpenScienceLabs/gsoc/blob/main/project-ideas/gsoc2024.md)
+for more details.
 
-<div class="alert alert-success">
-Despite this, we are excited to invite interested participants to join the
-next cycle of our Internship Program, which will run concurrently with GSoC's
-timeline. We look forward to your contributions and collaboration.
-
-For more information, please take a look into the
-<strong><a href="/programs/internship">Internship Program page</a>.</strong>
-
-</div>
-
-<!--
 ## Contributor Guide
 
-Candidates and contributors can find important information about GSoC in
-the [Contributor Guide](/programs/gsoc/guides/contributor).
+Candidates and contributors can find important information about GSoC in the
+[Contributor Guide](/programs/gsoc/guides/contributor).
 
+## Our Project Ideas for GSoC
+
+We have carefully curated a list of project ideas that not only align with our
+vision at OSL but also offer challenging and rewarding experiences for student
+developers. These projects span a range of topics and technologies, ensuring
+there's something to engage every interested student. We believe these projects
+offer an excellent opportunity for students to contribute to significant open
+source initiatives while enhancing their skills and knowledge under the guidance
+of experienced mentors.
+
+This year, we are participating in GSoC with the following project ideas:
+<https://github.com/OpenScienceLabs/gsoc/blob/main/project-ideas/gsoc2024.md>.
+
+<!--
 ## Our Project Ideas for GSoC
 
 We have carefully curated a list of project ideas that not only align with our
