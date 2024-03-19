@@ -10,16 +10,16 @@ groups:
           # Directory to search for .ipynb files
           export SEARCH_DIR="pages/blog"
 
-          # Find all .ipynb files, excluding .ipynb_checkpoints,
-          # and convert them to Markdown named 'index.md'
+          Find all .ipynb files, excluding .ipynb_checkpoints,
+          and convert them to Markdown named 'index.md'
           find "$SEARCH_DIR" -path "*/.ipynb_checkpoints/*" -prune -o -name \
             "*.ipynb" -exec sh -c \
             'jupyter nbconvert --to markdown --template=theme/custom-markdown.tpl --output-dir "$(dirname "$0")" --output "index" "$0"' {} \;
 
           # remove console colors from md files
-          find "$SEARCH_DIR" -path "*" -prune -o -name \
-            "*.md" -exec sh -c \
-            'cat index.md | python scripts/clean-output.py > temp_index.md && mv temp_index.md index.md' {} \;
+          find "$SEARCH_DIR" -name \
+            "index.md" -exec sh -c \
+            'cat "$(dirname "$0")/index.md" | python scripts/clean-output.py > "$(dirname "$0")/temp_index.md" && mv "$(dirname "$0")/temp_index.md" "$(dirname "$0")/index.md"' {} \;
 
       build:
         help: build the static page

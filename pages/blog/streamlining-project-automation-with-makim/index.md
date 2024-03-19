@@ -131,27 +131,27 @@ Makim's CLI provides insights into available commands, arguments, and configurat
 </h3>
 <pre class="output">
   <code><span>
-[1m                                                                                [0m
-[1m [0m[1mUsage: [0m[1mmakim [OPTIONS] COMMAND [ARGS]...[0m[1m                                      [0m[1m [0m
-[1m                                                                                [0m
+                                                                                
+ Usage: makim [OPTIONS] COMMAND [ARGS]...                                       
+                                                                                
 Makim is a tool that helps you to organize and simplify your helper commands.
 
-[2m╭─[0m[2m Options [0m[2m───────────────────────────────────────────────────────────────────[0m[2m─╮[0m
-[2m│[0m [1m-[0m[1m-version[0m             [1m-v[0m      [1m    [0m  Show the version and exit                [2m│[0m
-[2m│[0m [1m-[0m[1m-file[0m                        [1mTEXT[0m  Makim config file [2m[default: .makim.yaml][0m [2m│[0m
-[2m│[0m [1m-[0m[1m-dry[0m[1m-run[0m                     [1m    [0m  Execute the command in dry mode          [2m│[0m
-[2m│[0m [1m-[0m[1m-verbose[0m                     [1m    [0m  Execute the command in verbose mode      [2m│[0m
-[2m│[0m [1m-[0m[1m-install[0m[1m-completion[0m          [1m    [0m  Install completion for the current       [2m│[0m
-[2m│[0m                                     shell.                                   [2m│[0m
-[2m│[0m [1m-[0m[1m-show[0m[1m-completion[0m             [1m    [0m  Show completion for the current shell,   [2m│[0m
-[2m│[0m                                     to copy it or customize the              [2m│[0m
-[2m│[0m                                     installation.                            [2m│[0m
-[2m│[0m [1m-[0m[1m-help[0m                        [1m    [0m  Show this message and exit.              [2m│[0m
-[2m╰──────────────────────────────────────────────────────────────────────────────╯[0m
-[2m╭─[0m[2m Commands [0m[2m──────────────────────────────────────────────────────────────────[0m[2m─╮[0m
-[2m│[0m [1mclean.tmp      [0m[1m [0m Use this target to clean up temporary files                 [2m│[0m
-[2m│[0m [1mtests.unit     [0m[1m [0m Build the program                                           [2m│[0m
-[2m╰──────────────────────────────────────────────────────────────────────────────╯[0m
+╭─ Options ────────────────────────────────────────────────────────────────────╮
+│ --version             -v            Show the version and exit                │
+│ --file                        TEXT  Makim config file [default: .makim.yaml] │
+│ --dry-run                           Execute the command in dry mode          │
+│ --verbose                           Execute the command in verbose mode      │
+│ --install-completion                Install completion for the current       │
+│                                     shell.                                   │
+│ --show-completion                   Show completion for the current shell,   │
+│                                     to copy it or customize the              │
+│                                     installation.                            │
+│ --help                              Show this message and exit.              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Commands ───────────────────────────────────────────────────────────────────╮
+│ clean.tmp        Use this target to clean up temporary files                 │
+│ tests.unit       Build the program                                           │
+╰──────────────────────────────────────────────────────────────────────────────╯
 
 If you have any problem, open an issue at:
 https://github.com/osl-incubator/makim
@@ -221,11 +221,11 @@ In the case you type your command wrong, **Makim** will suggest you some alterna
 <pre class="output">
   <code><span>
 Usage: makim [OPTIONS] COMMAND [ARGS]...
-[2mTry [0m[2m'makim [0m[1;2m-[0m[1;2m-help[0m[2m'[0m[2m for help.[0m
+Try 'makim --help' for help.
 ╭─ Error ──────────────────────────────────────────────────────────────────────╮
 │ No such command 'tests.unittest'.                                            │
 ╰──────────────────────────────────────────────────────────────────────────────╯
-[31mCommand tests.unittest not found. Did you mean tests.unit'?[0m
+Command tests.unittest not found. Did you mean tests.unit'?
 
 </span></code>
 </pre>
@@ -245,7 +245,7 @@ Usage: makim [OPTIONS] COMMAND [ARGS]...
 </h3>
 <pre class="output">
   <code><span>
-[32mbash completion installed in /home/xmn/.bash_completions/makim.sh[0m
+bash completion installed in /home/xmn/.bash_completions/makim.sh
 Completion will take effect once you restart the terminal
 
 </span></code>
@@ -359,31 +359,31 @@ Overwriting .makim.yaml
 </h3>
 <pre class="output">
   <code><span>
-[1m                                                                                [0m
-[1m [0m[1mUsage: [0m[1mmakim [OPTIONS] COMMAND [ARGS]...[0m[1m                                      [0m[1m [0m
-[1m                                                                                [0m
+                                                                                
+ Usage: makim [OPTIONS] COMMAND [ARGS]...                                       
+                                                                                
 Makim is a tool that helps you to organize and simplify your helper commands.
 
-[2m╭─[0m[2m Options [0m[2m───────────────────────────────────────────────────────────────────[0m[2m─╮[0m
-[2m│[0m [1m-[0m[1m-version[0m             [1m-v[0m      [1m    [0m  Show the version and exit                [2m│[0m
-[2m│[0m [1m-[0m[1m-file[0m                        [1mTEXT[0m  Makim config file [2m[default: .makim.yaml][0m [2m│[0m
-[2m│[0m [1m-[0m[1m-dry[0m[1m-run[0m                     [1m    [0m  Execute the command in dry mode          [2m│[0m
-[2m│[0m [1m-[0m[1m-verbose[0m                     [1m    [0m  Execute the command in verbose mode      [2m│[0m
-[2m│[0m [1m-[0m[1m-install[0m[1m-completion[0m          [1m    [0m  Install completion for the current       [2m│[0m
-[2m│[0m                                     shell.                                   [2m│[0m
-[2m│[0m [1m-[0m[1m-show[0m[1m-completion[0m             [1m    [0m  Show completion for the current shell,   [2m│[0m
-[2m│[0m                                     to copy it or customize the              [2m│[0m
-[2m│[0m                                     installation.                            [2m│[0m
-[2m│[0m [1m-[0m[1m-help[0m                        [1m    [0m  Show this message and exit.              [2m│[0m
-[2m╰──────────────────────────────────────────────────────────────────────────────╯[0m
-[2m╭─[0m[2m Commands [0m[2m──────────────────────────────────────────────────────────────────[0m[2m─╮[0m
-[2m│[0m [1mtests.node           [0m[1m [0m Test using nodejs                                     [2m│[0m
-[2m│[0m [1mtests.perl           [0m[1m [0m Test using perl                                       [2m│[0m
-[2m│[0m [1mtests.python         [0m[1m [0m Test using php                                        [2m│[0m
-[2m│[0m [1mtests.r              [0m[1m [0m Test using R                                          [2m│[0m
-[2m│[0m [1mtests.run-all        [0m[1m [0m Run tests for all the other targets                   [2m│[0m
-[2m│[0m [1mtests.sh             [0m[1m [0m Test using sh                                         [2m│[0m
-[2m╰──────────────────────────────────────────────────────────────────────────────╯[0m
+╭─ Options ────────────────────────────────────────────────────────────────────╮
+│ --version             -v            Show the version and exit                │
+│ --file                        TEXT  Makim config file [default: .makim.yaml] │
+│ --dry-run                           Execute the command in dry mode          │
+│ --verbose                           Execute the command in verbose mode      │
+│ --install-completion                Install completion for the current       │
+│                                     shell.                                   │
+│ --show-completion                   Show completion for the current shell,   │
+│                                     to copy it or customize the              │
+│                                     installation.                            │
+│ --help                              Show this message and exit.              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Commands ───────────────────────────────────────────────────────────────────╮
+│ tests.node             Test using nodejs                                     │
+│ tests.perl             Test using perl                                       │
+│ tests.python           Test using php                                        │
+│ tests.r                Test using R                                          │
+│ tests.run-all          Run tests for all the other targets                   │
+│ tests.sh               Test using sh                                         │
+╰──────────────────────────────────────────────────────────────────────────────╯
 
 If you have any problem, open an issue at:
 https://github.com/osl-incubator/makim
