@@ -10,8 +10,8 @@ groups:
           # Directory to search for .ipynb files
           export SEARCH_DIR="pages/blog"
 
-          Find all .ipynb files, excluding .ipynb_checkpoints,
-          and convert them to Markdown named 'index.md'
+          # Find all .ipynb files, excluding .ipynb_checkpoints,
+          # and convert them to Markdown named 'index.md'
           find "$SEARCH_DIR" -path "*/.ipynb_checkpoints/*" -prune -o -name \
             "*.ipynb" -exec sh -c \
             'jupyter nbconvert --to markdown --template=theme/custom-markdown.tpl --output-dir "$(dirname "$0")" --output "index" "$0"' {} \;
