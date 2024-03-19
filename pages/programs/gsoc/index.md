@@ -17,7 +17,11 @@ break from school.
 
 ## Open Science Labs' Participation in GSoC under NumFOCUS umbrella
 
-Open Science Labs is proud to announce our participation in Google Summer of Code (GSoC) 2024 under the NumFOCUS umbrella. For more details, please visit [NumFOCUS GSoC page](https://github.com/numfocus/gsoc).
+Open Science Labs is excited to announce that we've been accepted under
+[NumFOCUS](https://github.com/numfocus/gsoc) umbrella as a participating
+organization in GSoC 2024! Please, check out our
+[list of projects](https://github.com/OpenScienceLabs/gsoc/blob/main/project-ideas/gsoc2024.md)
+for more details.
 
 ## Contributor Guide
 
