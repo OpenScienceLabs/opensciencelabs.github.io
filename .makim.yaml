@@ -19,7 +19,7 @@ groups:
           # remove console colors from md files
           find "$SEARCH_DIR" -path "*" -prune -o -name \
             "*.md" -exec sh -c \
-            'cat index.md | python clean-output.py > temp_index.md && mv temp_index.md index.md' {} \;
+            'cat index.md | python scripts/clean-output.py > temp_index.md && mv temp_index.md index.md' {} \;
 
       build:
         help: build the static page
