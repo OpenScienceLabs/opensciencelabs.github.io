@@ -16,6 +16,11 @@ groups:
             "*.ipynb" -exec sh -c \
             'jupyter nbconvert --to markdown --template=theme/custom-markdown.tpl --output-dir "$(dirname "$0")" --output "index" "$0"' {} \;
 
+          # remove console colors from md files
+          find "$SEARCH_DIR" -path "*" -prune -o -name \
+            "*.md" -exec sh -c \
+            'cat index.md | python clean-output.py > temp_index.md && mv temp_index.md index.md' {} \;
+
       build:
         help: build the static page
         dependencies:
