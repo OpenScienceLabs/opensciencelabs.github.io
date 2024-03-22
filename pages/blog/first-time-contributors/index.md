@@ -119,16 +119,23 @@ Rebasing is an alternative method for integrating changes, involving rewriting c
 
 While both merge commit and rebase have their merits, the choice often depends on the team's workflow and preferences. Here are some considerations:
 
-- **Merge Commit**: 
-  - Suitable for preserving a detailed history of parallel development.
-  - Preferred when collaboration involves multiple contributors or when maintaining a clear record of individual contributions is essential.
+**Merge Commit**:
 
-- **Rebase**:
+* Suitable for preserving a detailed history of parallel development.
+* Preferred when collaboration involves multiple contributors or when maintaining a clear record of individual contributions is essential.
+
+**Rebase**:
+
   - Promotes a cleaner, linear project history.
   - Recommended for feature branches with short-lived changes or when maintaining a tidy commit history is a priority.
 
 It's worth noting that some organizations, such as the Open Source Initiative (OSI), recommend the usage of git rebase to maintain a clean and linear project history. You can configure Git to use rebase by default for pull operations with the command:
-$ git config --global pull.rebase true
+
+```bash
+$ git config --global --pull.rebase true
+```
+
+
 ### Pre-commit
 
 Pre-commit is a tool used in software development to automatically run various checks and tests on files before they are committed to a version control system, such as Git. These checks can include code formatting, linting, static analysis, and other quality assurance tasks. The goal is to catch potential issues early in the development process, ensuring that only high-quality code is committed to the repository.
@@ -137,11 +144,17 @@ Here's how to install and use pre-commit:
 
 1. Installation:
 You can install pre-commit using pip, the Python package manager. Open your terminal or command prompt and run:
+
+``` bash
 $ pip install pre-commit
+```
+
 2. Configuration:
 Once pre-commit is installed, you need to set up a configuration file named .pre-commit-config.yaml in the root directory of your project. This file specifies the hooks (checks) that pre-commit should run.
 
 Here's a basic example of a `.pre-commit-config.yaml` file:
+
+``` yaml
 $ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v3.3.0
@@ -149,12 +162,81 @@ $ repos:
       - id: trailing-whitespace
       - id: end-of-file-fixer
       - id: check-yaml
+```
+
 3. Installation of Git Hooks:
 After configuring `.pre-commit-config.yaml`, you need to install pre-commit hooks into your Git repository. Navigate to your project directory in the terminal and run:
+
+``` bash
 $ pre-commit install
+```
+
 4. Running Pre-commit:
 Once the pre-commit hooks are installed, you can run them manually using the following command:
+
+```bash
 $ pre-commit run --all-files
+```
+This command tells pre-commit to run all configured hooks on all files in the repository. It will check for issues according to the configuration specified in `.pre-commit-config.yaml` and provide feedback on any problems found.
+
+## Navigating Git Workflows: A Dive into GitHub Flow and GitFlow
+
+In the ever-evolving world of software development, efficient collaboration and streamlined workflows are paramount. Git, the popular version control system, offers a plethora of options for managing code changes, each tailored to different team structures and project requirements. Two widely used workflows, GitHub Flow and GitFlow, stand out for their simplicity and effectiveness. Let's explore these options in detail.
+
+### GitHub Flow:
+
+GitHub Flow is a lightweight, branch-based workflow specifically designed for teams using GitHub for version control. It emphasizes simplicity and continuous delivery, making it an ideal choice for projects with frequent releases and rapid iteration cycles. Here's a breakdown of its key features:
+
+**Branching Model**:
+
+   - Main Branch: GitHub Flow revolves around a single main branch (often named "main" or "master"), representing the production-ready code.
+   - Feature Branches: Developers create feature branches off the main branch for each new feature or bug fix.
+
+**Workflow**:
+
+- Create a Branch: Developers create a new branch for each feature or bug fix.
+- Make Changes: Developers make changes and commits to their feature branch.
+- Open Pull Request: Once changes are complete, a pull request (PR) is opened to merge the feature branch into the main branch.
+- Review and Merge: Team members review the code changes, provide feedback, and merge the PR into the main branch once approved.
+
+**Continuous Deployment**:
+
+- Continuous Integration: GitHub Flow encourages the use of continuous integration tools to automatically test changes before merging.
+- Continuous Deployment: Merged changes are automatically deployed to production, ensuring a fast and reliable release cycle.
+
+GitHub Flow's simplicity and flexibility make it a popular choice for teams of all sizes, particularly those embracing agile development practices.
+
+### GitFlow:
+
+GitFlow, developed by Vincent Driessen, offers a more structured approach to branching and release management. It's well-suited for larger projects with longer release cycles and strict versioning requirements. Here's how GitFlow differs from GitHub Flow:
+
+**Branching Model**:
+
+- Main Branches: GitFlow defines two main branches – "master" for stable releases and "develop" for ongoing development.
+- Feature Branches: Developers create feature branches off the "develop" branch for each new feature.
+
+**Workflow**:
+
+- Feature Development: Developers work on feature branches, merging them into the "develop" branch once complete.
+- Release Branches: When it's time for a new release, a release branch is created from the "develop" branch for final testing and bug fixing.
+- Hotfix Branches: If critical issues arise in production, hotfix branches are created from the "master" branch to address them directly.
+
+**Versioning**:
+
+- GitFlow employs a strict versioning scheme, with each release assigned a unique version number based on semantic versioning principles.
+
+### Which Workflow to Choose?
+
+Choosing between GitHub Flow and GitFlow depends on your team's specific needs and project requirements:
+
+- **GitHub Flow**: Ideal for teams focused on continuous delivery, rapid iteration, and simplicity.
+- **GitFlow**: Suited for larger projects with longer release cycles, strict versioning, and a more structured approach to development.
+
+While both workflows have their merits, it's essential to assess your team's workflow preferences, project size, and release cycle frequency before making a decision.
+
+In conclusion, whether you opt for the simplicity of GitHub Flow or the structure of GitFlow, adopting a standardized Git workflow can significantly improve collaboration, code quality, and overall project success. Choose wisely, and happy coding!
+
+
 ## Python Linters Overview
 
 Here's a breakdown of popular Python linters and their functionalities:
@@ -178,9 +260,6 @@ Here's a breakdown of popular Python linters and their functionalities:
 9. **bandit**: A security-focused linter that detects security vulnerabilities and insecure coding practices in Python code.
 
 These linters can seamlessly integrate into development workflows, providing real-time feedback to developers and ensuring code quality throughout the development process.
-
-
-This command tells pre-commit to run all configured hooks on all files in the repository. It will check for issues according to the configuration specified in `.pre-commit-config.yaml` and provide feedback on any problems found.
 
 ## Documentation
 
@@ -235,7 +314,6 @@ Here are some top options for CI/CD platforms:
 
 When choosing a CI/CD platform, consider factors such as integration capabilities, scalability, ease of use, and pricing. Evaluating these options based on your specific project requirements and existing development ecosystem will help determine the best fit for your team's needs. It's often beneficial to experiment with different platforms to find the one that aligns most closely with your workflow and objectives.
 
-
 ## Unit Tests and Testing Frameworks in Python
 
 Unit tests are an essential part of software development, allowing developers to verify that individual components of their code behave as expected. The `unittest` module in Python provides a framework for organizing and running unit tests. Here's why you might consider using `unittest`:
@@ -262,79 +340,6 @@ When starting a new Python project, it's beneficial to use project templates tha
 
 In summary, while `unittest` provides a robust framework for writing unit tests in Python, alternative frameworks like Pytest and Hypothesis offer additional features and flexibility. When starting a new project, leveraging project templates such as `scicookie` with tools like `cookiecutter` can accelerate setup and promote best practices in project organization and testing.
 
-
-## Navigating Git Workflows: A Dive into GitHub Flow and GitFlow
-
-In the ever-evolving world of software development, efficient collaboration and streamlined workflows are paramount. Git, the popular version control system, offers a plethora of options for managing code changes, each tailored to different team structures and project requirements. Two widely used workflows, GitHub Flow and GitFlow, stand out for their simplicity and effectiveness. Let's explore these options in detail.
-
-## GitHub Flow:
-
-GitHub Flow is a lightweight, branch-based workflow specifically designed for teams using GitHub for version control. It emphasizes simplicity and continuous delivery, making it an ideal choice for projects with frequent releases and rapid iteration cycles. Here's a breakdown of its key features:
-
-1. **Branching Model**:
-   - Main Branch: GitHub Flow revolves around a single main branch (often named "main" or "master"), representing the production-ready code.
-   - Feature Branches: Developers create feature branches off the main branch for each new feature or bug fix.
-
-2. **Workflow**:
-   - Create a Branch: Developers create a new branch for each feature or bug fix.
-   - Make Changes: Developers make changes and commits to their feature branch.
-   - Open Pull Request: Once changes are complete, a pull request (PR) is opened to merge the feature branch into the main branch.
-   - Review and Merge: Team members review the code changes, provide feedback, and merge the PR into the main branch once approved.
-
-3. **Continuous Deployment**:
-   - Continuous Integration: GitHub Flow encourages the use of continuous integration tools to automatically test changes before merging.
-   - Continuous Deployment: Merged changes are automatically deployed to production, ensuring a fast and reliable release cycle.
-
-GitHub Flow's simplicity and flexibility make it a popular choice for teams of all sizes, particularly those embracing agile development practices.
-
-### GitHub Flow:
-
-GitHub Flow is a lightweight, branch-based workflow specifically designed for teams using GitHub for version control. It emphasizes simplicity and continuous delivery, making it an ideal choice for projects with frequent releases and rapid iteration cycles. Here's a breakdown of its key features:
-
-1. **Branching Model**:
-   - Main Branch: GitHub Flow revolves around a single main branch (often named "main" or "master"), representing the production-ready code.
-   - Feature Branches: Developers create feature branches off the main branch for each new feature or bug fix.
-
-2. **Workflow**:
-   - Create a Branch: Developers create a new branch for each feature or bug fix.
-   - Make Changes: Developers make changes and commits to their feature branch.
-   - Open Pull Request: Once changes are complete, a pull request (PR) is opened to merge the feature branch into the main branch.
-   - Review and Merge: Team members review the code changes, provide feedback, and merge the PR into the main branch once approved.
-
-3. **Continuous Deployment**:
-   - Continuous Integration: GitHub Flow encourages the use of continuous integration tools to automatically test changes before merging.
-   - Continuous Deployment: Merged changes are automatically deployed to production, ensuring a fast and reliable release cycle.
-
-GitHub Flow's simplicity and flexibility make it a popular choice for teams of all sizes, particularly those embracing agile development practices.
-
-### GitFlow:
-
-GitFlow, developed by Vincent Driessen, offers a more structured approach to branching and release management. It's well-suited for larger projects with longer release cycles and strict versioning requirements. Here's how GitFlow differs from GitHub Flow:
-
-1. **Branching Model**:
-   - Main Branches: GitFlow defines two main branches – "master" for stable releases and "develop" for ongoing development.
-   - Feature Branches: Developers create feature branches off the "develop" branch for each new feature.
-
-2. **Workflow**:
-   - Feature Development: Developers work on feature branches, merging them into the "develop" branch once complete.
-   - Release Branches: When it's time for a new release, a release branch is created from the "develop" branch for final testing and bug fixing.
-   - Hotfix Branches: If critical issues arise in production, hotfix branches are created from the "master" branch to address them directly.
-
-3. **Versioning**:
-   - GitFlow employs a strict versioning scheme, with each release assigned a unique version number based on semantic versioning principles.
-
-### Which Workflow to Choose?
-
-Choosing between GitHub Flow and GitFlow depends on your team's specific needs and project requirements:
-
-- **GitHub Flow**: Ideal for teams focused on continuous delivery, rapid iteration, and simplicity.
-- **GitFlow**: Suited for larger projects with longer release cycles, strict versioning, and a more structured approach to development.
-
-While both workflows have their merits, it's essential to assess your team's workflow preferences, project size, and release cycle frequency before making a decision.
-
-In conclusion, whether you opt for the simplicity of GitHub Flow or the structure of GitFlow, adopting a standardized Git workflow can significantly improve collaboration, code quality, and overall project success. Choose wisely, and happy coding!
-
-
 # Why Creating Virtual Environments is Important
 
 Creating virtual environments is crucial for several reasons:
@@ -356,23 +361,45 @@ Installation:
   - Install Miniconda (or Anaconda) from the official website based on your operating system.
   - Open a terminal or command prompt.
   - Create a new Conda environment:
+
+```bash
 $ conda create --name myenv
-- Activate the enviroment:
+```
+
 - On Windows:
+```bash
 $ activate myenv
-  - On Unix/ MacOs:
+```
+
+- On Unix/ MacOs:
+```bash
 $ source activate myenv
+```
+
 2. **Virtualenv**
 Virtualenv is a tool to create isolated Python environments. It's lightweight and widely used in the Python community. Here's how to set up Virtualenv:
 
 Installation:
 - Ensure you have Python installed on your system.
 - Install Virtualenv using pip (Python's package installer):
+
+```bash
 $ pip install virtualenv
-- Create a new Virtualenv:
+```
+
+Create a new Virtualenv:
+```bash
 $ virtualenv myenv
-- Activate the enviroment:
-- On Windows
+```
+
+Activate the enviroment:
+
+- On Windows:
+```bash
 $ myenv\Scripts\activate
+```
+
 - On Unix/MacOS:
+```bash
 $ source myenv/bin/activate
+```
