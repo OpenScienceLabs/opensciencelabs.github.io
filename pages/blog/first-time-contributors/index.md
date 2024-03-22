@@ -1,7 +1,7 @@
 ---
 title: "First Time Contributors"
 slug: first-time-contributors
-date: 2024-02-10
+date: 2024-03-10
 authors: ["Daniela Iglesias Rocabado"]
 tags: [open-source, contributors, git, osl]
 categories: [contributors]
@@ -402,4 +402,20 @@ $ myenv\Scripts\activate
 - On Unix/MacOS:
 ```bash
 $ source myenv/bin/activate
+```
+
+3. **Poetry** is a dependency management and packaging tool for Python. It provides a robust environment management system and simplifies the process of managing dependencies and packaging projects.
+
+Installation:
+Poetry can be installed via pip:
+```bash
+$ pip install poetry
+```
+
+4. **Pixi** is a lightweight virtual environment manager that focuses on simplicity and ease of use. It aims to provide a fast and straightforward way to create and manage virtual environments.
+
+Installation:
+Pixi can be installed via pip:
+```
+$ pip install pixi
 ```
