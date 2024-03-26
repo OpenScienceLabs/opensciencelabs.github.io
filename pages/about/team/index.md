@@ -63,15 +63,17 @@ teams:
         github_url: https://github.com/Saransh-cpp
         # github_sponsor:
 
-  - name: Interns
-    members:
-      - name: Anavelyz Pérez
+      - name: Anavelyz Perez
         bio: |
-          Statistician, data analyst. Python and R learner.
+          OSL learning coordinator.
+          Statistician and data analyst proficient in Python and R, currently exploring
+          Flutter.
         image_url: https://avatars.githubusercontent.com/u/42752529?v=4
         github_url: https://github.com/Anavelyz
         # github_sponsor:
 
+  - name: Associated collaborators
+    members:
       - name: Yurely Camacho
         bio: |
           Statistician, data analyst. Python and R learner.
@@ -79,6 +81,8 @@ teams:
         github_url: https://github.com/YurelyCamacho
         # github_sponsor:
 
+  - name: Interns
+    members:
       - name: Daniela Iglesias Rocabado
         bio: |
           Graduate in Systems Engineering with a passion for Python and Web Development.
@@ -88,7 +92,7 @@ teams:
 
   - name: Steering Council Emeritus
     members:
-      - name: Fracisco Palm
+      - name: Francisco Palm
         bio: |
           Computation & Data Science Senior Researcher, Python & R Developer
           and Software Architect. Special emphasis on hacker ethic as a learning
