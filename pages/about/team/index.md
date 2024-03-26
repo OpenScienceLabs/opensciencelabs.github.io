@@ -65,7 +65,7 @@ teams:
 
       - name: Anavelyz Perez
         bio: |
-          OSL learning coordinator.
+          OSL Learning Coordinator.
           Statistician and data analyst proficient in Python and R, currently exploring
           Flutter.
         image_url: https://avatars.githubusercontent.com/u/42752529?v=4
