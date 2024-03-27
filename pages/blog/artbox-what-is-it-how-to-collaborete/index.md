@@ -16,13 +16,11 @@ template: "blog-post.html"
 
 ArtBox is a versatile tool set designed for efficient multimedia file handling, offering a range of valuable functions to enhance your multimedia processing experience.
 
-Key Features:
-
 
 ArtBox offers a variety of features such as converting text to audio, downloading YouTube videos, creating songs based on musical notes, removing audio from videos, extracting audio from videos, and combining audio and video files, providing users with convenient solutions for various multimedia tasks.
 
 
-These key features make ArtBox an invaluable tool for multimedia enthusiasts, content creators, and anyone seeking efficient and user-friendly solutions for multimedia file manipulation. Explore the possibilities with ArtBox and elevate your multimedia processing capabilities.
+These key features make ArtBox an great tool for multimedia enthusiasts, content creators, and anyone seeking efficient and user-friendly solutions for multimedia file manipulation. Explore the possibilities with ArtBox and elevate your multimedia processing capabilities.
 
 
 
@@ -40,7 +38,7 @@ The command is creating a conda environment named "artbox" with Python version 3
 $ conda activate artbox
 ```
 
-It's also important to install the numpy libraty as follows:
+Currently to avoid dependency conflictst install the numpy library as follows:
 
 ```bash
 $ pip install "numpy>=1.20"
@@ -50,12 +48,12 @@ The conda activate artbox command is used to activate the "artbox" conda environ
 
 
 ```python
-!mamba install -q -y -c conda-forge pygobject pip
+$ !mamba install -q -y -c conda-forge pygobject pip
 ```
 
 
 ```python
-!pip install -q artbox
+$ !pip install -q artbox
 ```
 
 The pip install artbox command is used to install the Python package named "artbox" using the pip package manager. This command fetches the "artbox" package from the Python Package Index (PyPI) and installs it into the currently active Python environment. The pip install command is commonly used to add external packages or libraries to a Python environment, expanding its functionality for a particular project or application.
@@ -63,7 +61,10 @@ The pip install artbox command is used to install the Python package named "artb
 ## Examples of Artbox usage.
 For the following examples, create the a temporary folder for artbox:
 
-mkdir /tmp/artbox
+
+```python
+$ mkdir /tmp/artbox
+```
 
 ### Convert text to audio
 
@@ -74,12 +75,12 @@ specify [`gtts`](https://github.com/pndurette/gTTS) with the flag
 
 
 ```python
-echo "Are you ready to join Link and Zelda in fighting off this unprecedented threat to Hyrule?" > /tmp/artbox/text.md
+$ echo "Are you ready to join Link and Zelda in fighting off this unprecedented threat to Hyrule?" > /tmp/artbox/text.md
 ```
 
 
 ```python
-artbox voice text-to-speech \
+$ artbox voice text-to-speech \
     --title artbox \
     --text-path /tmp/artbox/text.md \
     --output-path /tmp/artbox/voice.mp3 \
@@ -91,7 +92,7 @@ If you need to generate the audio for different language, you can use the flag
 
 
 ```python
-echo "Bom dia, mundo!" > /tmp/artbox/text.md
+$ echo "Bom dia, mundo!" > /tmp/artbox/text.md
 
 artbox voice text-to-speech \
     --title artbox \
@@ -105,7 +106,7 @@ locale for that language, for example:
 
 
 ```python
-echo "Are you ready to join Link and Zelda in fighting off this unprecedented threat to Hyrule?" > /tmp/artbox/text.md
+$ echo "Are you ready to join Link and Zelda in fighting off this unprecedented threat to Hyrule?" > /tmp/artbox/text.md
 
 artbox voice text-to-speech \
     --title artbox \
@@ -122,7 +123,7 @@ command:
 
 
 ```python
-artbox youtube download \
+$ artbox youtube download \
     --url https://www.youtube.com/watch?v=zw47_q9wbBE \
     --output-path /tmp/artbox/
 ```
@@ -132,7 +133,7 @@ resolution, use the flat `--resolution`:
 
 
 ```python
-artbox youtube download \
+$ artbox youtube download \
     --url https://www.youtube.com/watch?v=zw47_q9wbBE \
     --output-path /tmp/artbox/ \
     --resolution 360p
@@ -143,7 +144,7 @@ artbox youtube download \
 
 ```python
 # json format
-echo '["E", "D#", "E", "D#", "E", "B", "D", "C", "A"]' > /tmp/artbox/notes.txt
+$ echo '["E", "D#", "E", "D#", "E", "B", "D", "C", "A"]' > /tmp/artbox/notes.txt
 
 artbox sound notes-to-audio \
   --input-path /tmp/artbox/notes.txt \
@@ -158,7 +159,7 @@ as explained before.
 
 
 ```python
-artbox video remove-audio \
+$ artbox video remove-audio \
   --input-path "/tmp/artbox/The Legend of Zelda Breath of the Wild - Nintendo Switch Presentation 2017 Trailer.mp4" \
   --output-path /tmp/artbox/botw.mp4
 ```
@@ -172,7 +173,7 @@ Next, run the following command:
 
 
 ```python
-artbox video extract-audio \
+$ artbox video extract-audio \
   --input-path "/tmp/artbox/The Legend of Zelda Breath of the Wild - Nintendo Switch Presentation 2017 Trailer.mp4" \
   --output-path /tmp/artbox/botw-audio.mp3
 ```
@@ -189,7 +190,7 @@ Next, run the following command:
 
 
 ```python
-artbox video combine-video-and-audio \
+$ artbox video combine-video-and-audio \
   --video-path /tmp/artbox/botw.mp4 \
   --audio-path /tmp/artbox/botw-audio.mp3 \
   --output-path /tmp/artbox/botw-combined.mp4
@@ -201,11 +202,11 @@ If you want to use Python to play your audio files, you can install `playsound`:
 
 
 ```python
-pip wheel --use-pep517 "playsound (==1.3.0)"
+$ pip wheel --use-pep517 "playsound (==1.3.0)"
 ```
 
-For a better explanation of the facilities and usage, please watch to the following video.
-
 ### Demo Video
+
+For a better explanation of the facilities and usage, please watch to the following video.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sITnMuZTNAw?si=goPrd2BhPxy7Fqku" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
