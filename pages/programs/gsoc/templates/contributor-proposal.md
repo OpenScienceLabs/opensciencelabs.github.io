@@ -1,6 +1,6 @@
 ---
-title: "TEMPLATE: Contributor Project Proposal"
-description: "TEMPLATE: Contributor Project Proposal"
+title: "TEMPLATE: GSoC Contributor Project Proposal"
+description: "TEMPLATE: GSoC Contributor Project Proposal"
 date: "2024-01-09"
 authors: ["OSL Team"]
 template: single-sidebar.html
@@ -47,35 +47,32 @@ Instructions:
 
 [List the mentors for this project proposal.]
 
-### Implementation Plan
+### Technical Details
 
-[Describe the tasks according to the project plan/idea.]
+[Detail each task, providing technical specifics, relevant reference links, and
+preliminary solution ideas. Include findings from any preliminary research
+undertaken to address the issue, along with links to the specific segments of
+code slated for modification or improvement. ]
 
 ### Benefits to the Community
 
 [Explain how the project will benefit the community or users.]
 
-## Planned Workflow
-
-[Detail your planned workflow, including the project management methodology,
-frequency and focus of mentor meetings, progress tracking, and task management
-strategies.]
-
-## Deliverables
-
-[List all expected deliverables, such as new features, documentation updates,
-tutorials, and blog posts. Consider writing a blog post for each major feature
-or bug fix.]
+## Deliverables and Timeline
 
 ## Timeline
 
-[Provide a detailed timeline for this project proposal, including key dates and
-tasks. This should include Community Bonding Period activities, task periods,
-blog post submission dates, and Midterm and Final evaluation schedules.]
+[Outline a comprehensive timeline for this project, specifying crucial
+milestones, deliverables, and tasks. Incorporate the Community Bonding Period,
+development of new features, resolution of bugs, enhancements to documentation,
+creation of tutorials, and preparation of blog posts. Break down each task to
+ensure clarity. It is mandatory for collaborators to write regular blog posts.
+Highly encouraged is the creation of individual blog posts for each significant
+feature developed, bug fixed, or any notable progress made.]
 
-| Dates | Tasks |
-| :---- | :---- |
-|       |       |
+| Dates | Deliverables/Tasks |
+| :---- | :----------------- |
+|       |                    |
 
 ## Previous Contributions to the Project
 
@@ -89,14 +86,6 @@ PRs, resolved issues, or types of contributions.]
 | Pull Request Title/Number | Status |
 | :------------------------ | :----- |
 |                           |        |
-
-### Issues
-
-[List all resolved issues with titles, numbers, links, and their status.]
-
-| Issue Title/Number | Status |
-| :----------------- | :----- |
-|                    |        |
 
 ## Why This Project?
 
