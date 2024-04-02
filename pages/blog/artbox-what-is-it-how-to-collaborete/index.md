@@ -1,7 +1,7 @@
 ---
 title: "ArtBox: What is it and how to collaborate?"
 slug: artbox-what-is-it-how-to-collaborete
-date: 2024-02-20
+date: 2024-04-02
 authors: ["Daniela Iglesias Rocabado"]
 tags: [open-source, art, python, multimedia processing]
 categories: [python]
@@ -38,13 +38,13 @@ The command is creating a conda environment named "artbox" with Python version 3
 $ conda activate artbox
 ```
 
-Currently to avoid dependency conflictst install the numpy library as follows:
+To prevent dependency conflicts, please install the numpy library using the following command:
 
 ```bash
 $ pip install "numpy>=1.20"
 ```
 
-The conda activate artbox command is used to activate the "artbox" conda environment, ensuring that subsequent commands or scripts run within this isolated environment. Activation modifies the system's PATH to prioritize the "artbox" environment, allowing for the use of specific Python versions and packages associated with the project, thus maintaining a clean and reproducible development or execution environment.
+The `conda activate artbox` command is used to activate the "artbox" conda environment, ensuring that subsequent commands or scripts run within this isolated environment. Activation modifies the system's `PATH` to prioritize the "artbox" environment, allowing for the use of specific Python versions and packages associated with the project, thus maintaining a clean and reproducible development or execution environment.
 
 
 ```python
@@ -56,7 +56,7 @@ $ !mamba install -q -y -c conda-forge pygobject pip
 $ !pip install -q artbox
 ```
 
-The `pip install artbox` command is used to install the Python package named "artbox" using the pip package manager. This command fetches the "artbox" package from the Python Package Index (PyPI) and installs it into the currently active Python environment. The pip install command is commonly used to add external packages or libraries to a Python environment, expanding its functionality for a particular project or application.
+The `pip install artbox` command is used to install the Python package named "artbox" using the pip package manager. This command fetches the "artbox" package from the Python Package Index (PyPI) and installs it into the currently active Python environment. The `pip install` command is commonly used to add external packages or libraries to a Python environment, expanding its functionality for a particular project or application.
 
 ## Examples of Artbox usage.
 For the following examples, create the a temporary folder for artbox:
@@ -69,21 +69,17 @@ $ mkdir /tmp/artbox
 ### Convert text to audio
 
 By default, the `artbox voice` uses
-[`edge-tts`](https://pypi.org/project/edge-tts/) engine, but if you can also
+[`edge-tts`](https://pypi.org/project/edge-tts/) engine, but you can also
 specify [`gtts`](https://github.com/pndurette/gTTS) with the flag
 `--engine gtts`.
 
 
 ```python
 $ echo "Are you ready to join Link and Zelda in fighting off this unprecedented threat to Hyrule?" > /tmp/artbox/text.md
-```
-
-
-```python
-$ artbox voice text-to-speech \
+$ artbox speech from-text \
     --title artbox \
-    --text-path /tmp/artbox/text.md \
-    --output-path /tmp/artbox/voice.mp3 \
+    --input-path /tmp/artbox/text.md \
+    --output-path /tmp/artbox/speech.mp3 \
     --engine edge-tts
 ```
 
@@ -93,27 +89,66 @@ If you need to generate the audio for different language, you can use the flag
 
 ```python
 $ echo "Bom dia, mundo!" > /tmp/artbox/text.md
-
-artbox voice text-to-speech \
+$ artbox speech from-text \
     --title artbox \
-    --text-path /tmp/artbox/text.md \
-    --output-path /tmp/artbox/voice.mp3 \
+    --input-path /tmp/artbox/text.md \
+    --output-path /tmp/artbox/speech.mp3 \
     --lang pt
 ```
 
 If you are using `edge-tts` engine (the default one), you can also specify the
-locale for that language, for example:
+locale for the language, for example:
 
 
 ```python
 $ echo "Are you ready to join Link and Zelda in fighting off this unprecedented threat to Hyrule?" > /tmp/artbox/text.md
-
-artbox voice text-to-speech \
+$ artbox speech from-text \
     --title artbox \
-    --text-path /tmp/artbox/text.md \
-    --output-path /tmp/artbox/voice.mp3 \
+    --input-path /tmp/artbox/text.md \
+    --output-path /tmp/artbox/speech.mp3 \
     --engine edge-tts \
     --lang en-IN
+```
+
+Additionally, if you are using edge-tts, you can specify `--rate`, `--volume`, and  `--pitch`, for example:
+
+
+```python
+$ echo "Do you want some coffee?" > /tmp/artbox/text.md
+$ artbox speech from-text \
+    --title artbox \
+    --input-path /tmp/artbox/text.md \
+    --output-path /tmp/artbox/speech.mp3 \
+    --engine edge-tts \
+    --lang en \
+    --rate +10% \
+    --volume -10% \
+    --pitch -5Hz
+```
+
+### Convert audio to text
+ArtBox uses `speechrecognition` to convert from audio to text. Currently, ArtBox just support the google engine.
+
+For this example, let's first create our audio:
+
+
+```python
+$ echo "Are you ready to join Link and Zelda in fighting off this unprecedented threat to Hyrule?" > /tmp/artbox/text.md
+$ artbox speech from-text \
+    --title artbox \
+    --input-path /tmp/artbox/text.md \
+    --output-path /tmp/artbox/speech.mp3 \
+    --engine edge-tts
+```
+
+Now we can convert it back to text:
+
+
+```python
+$ artbox speech to-text \
+    --input-path /tmp/artbox/speech.mp3 \
+    --output-path /tmp/artbox/text-from-speech.md \
+    --lang en
 ```
 
 ### Download a youtube video
@@ -128,8 +163,7 @@ $ artbox youtube download \
     --output-path /tmp/artbox/
 ```
 
-The command above downloads using a random resolution. If you want a specific
-resolution, use the flat `--resolution`:
+The command above downloads the video using a random resolution. If you want a specific resolution, use the flat `--resolution`:
 
 
 ```python
@@ -139,23 +173,11 @@ $ artbox youtube download \
     --resolution 360p
 ```
 
-### Create a song based on the musical notes
-
-
-```python
-# json format
-$ echo '["E", "D#", "E", "D#", "E", "B", "D", "C", "A"]' > /tmp/artbox/notes.txt
-
-artbox sound notes-to-audio \
-  --input-path /tmp/artbox/notes.txt \
-  --output-path /tmp/artbox/music.mp3 \
-  --duration 2
-```
-
 ### Remove the audio from a video
 
-First, download the youtube video `https://www.youtube.com/watch?v=zw47_q9wbBE`
-as explained before.
+First, download the youtube video `https://www.youtube.com/watch?v=zw47_q9wbBE`, as explained before.
+
+Next, run the following command:
 
 
 ```python
@@ -166,7 +188,7 @@ $ artbox video remove-audio \
 
 ### Extract the audio from a video
 
-First, download the youtube video `https://www.youtube.com/watch?v=zw47_q9wbBE`
+First, download the youtube video `https://www.youtube.com/watch?v=zw47_q9wbBE`, 
 as explained before.
 
 Next, run the following command:
