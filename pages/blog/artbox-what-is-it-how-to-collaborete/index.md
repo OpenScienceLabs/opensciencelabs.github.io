@@ -56,7 +56,7 @@ $ !mamba install -q -y -c conda-forge pygobject pip
 $ !pip install -q artbox
 ```
 
-The pip install artbox command is used to install the Python package named "artbox" using the pip package manager. This command fetches the "artbox" package from the Python Package Index (PyPI) and installs it into the currently active Python environment. The pip install command is commonly used to add external packages or libraries to a Python environment, expanding its functionality for a particular project or application.
+The `pip install artbox` command is used to install the Python package named "artbox" using the pip package manager. This command fetches the "artbox" package from the Python Package Index (PyPI) and installs it into the currently active Python environment. The pip install command is commonly used to add external packages or libraries to a Python environment, expanding its functionality for a particular project or application.
 
 ## Examples of Artbox usage.
 For the following examples, create the a temporary folder for artbox:
