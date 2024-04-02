@@ -176,6 +176,8 @@ $ git merge feature-branch
 
 Each method offers distinct advantages and considerations, influencing the project's commit history and overall workflow.
 
+In their development workflow, **Open Science Labs** recommend using squash and merge.
+
 ### Pre-commit
 
 Pre-commit is a tool used in software development to automatically run various checks and tests on files before they are committed to a version control system, such as Git. These checks can include code formatting, linting, static analysis, and other quality assurance tasks. The goal is to catch potential issues early in the development process, ensuring that only high-quality code is committed to the repository.
@@ -230,15 +232,38 @@ In the ever-evolving world of software development, efficient collaboration and 
 
 GitHub Flow is a lightweight, branch-based workflow specifically designed for teams using GitHub for version control. It emphasizes simplicity and continuous delivery, making it an ideal choice for projects with frequent releases and rapid iteration cycles. Here's a breakdown of its key features:
 
-**Branching Model**:
+**Branching Model:**
 
-   - Main Branch: GitHub Flow revolves around a single main branch (often named "main" or "master"), representing the production-ready code.
+   - Main Branch: GitHub Flow revolves around a single main branch (often named "main" or "master"), representing the development branch that leads to production-ready code.
    - Feature Branches: Developers create feature branches off the main branch for each new feature or bug fix.
 
-**Workflow**:
+**Remotes and Upstream:**
+
+- Origin: This remote, typically created by default when cloning the repository, points to your fork on GitHub.
+- Upstream: This remote points to the original (upstream) repository you forked from. It allows you to stay updated with the main project's development.
+
+Creating the Upstream Remote
+
+```bash
+git remote add upstream <URL_of_upstream_repository>
+```
+
+Using the Upstream Remote:
+
+Fetching Updates: Regularly use `git fetch upstream` to download the latest changes from the upstream repository without merging them into your local branch.
+Creating Feature Branches: When starting work on a new feature, it's recommended to base your branch on the latest upstream main branch:
+
+```bash
+git checkout upstream/main
+git checkout -b my-feature-branch
+```
+This ensures your feature branch incorporates the most recent upstream developments.
+
+
+**Workflow:**
 
 - Create a Branch: Developers create a new branch for each feature or bug fix.
-- Make Changes: Developers make changes and commits to their feature branch.
+- Make Changes: Developers create a new branch, with the latest changes from upstream/main (or origin/main, if you are not working on a fork) for each feature or bug fix.
 - Open Pull Request: Once changes are complete, a pull request (PR) is opened to merge the feature branch into the main branch.
 - Review and Merge: Team members review the code changes, provide feedback, and merge the PR into the main branch once approved.
 
@@ -251,7 +276,7 @@ GitHub Flow's simplicity and flexibility make it a popular choice for teams of a
 
 ### GitFlow:
 
-GitFlow, developed by Vincent Driessen, offers a more structured approach to branching and release management. It's well-suited for larger projects with longer release cycles and strict versioning requirements. Here's how GitFlow differs from GitHub Flow:
+GitFlow, developed by Vincent Driessen, provides a more organized approach to branching and release management. It excels in larger projects with longer release cycles and strict versioning requirements. Here's how GitFlow differs from GitHub Flow:
 
 **Branching Model**:
 
@@ -272,19 +297,20 @@ GitFlow, developed by Vincent Driessen, offers a more structured approach to bra
 
 Choosing between GitHub Flow and GitFlow depends on your team's specific needs and project requirements:
 
-- **GitHub Flow**: Ideal for teams focused on continuous delivery, rapid iteration, and simplicity.
+- **GitHub Flow**: Ideal for teams focused on continuous delivery, rapid iteration, and simplicity. This is most used in a bunch of proyects.
 - **GitFlow**: Suited for larger projects with longer release cycles, strict versioning, and a more structured approach to development.
 
 While both workflows have their merits, it's essential to assess your team's workflow preferences, project size, and release cycle frequency before making a decision.
 
-In conclusion, whether you opt for the simplicity of GitHub Flow or the structure of GitFlow, adopting a standardized Git workflow can significantly improve collaboration, code quality, and overall project success. Choose wisely, and happy coding!
+### Recommendation:
 
+For a deeper dive into GitFlow's advantages and implementation details, consider referring to the following blog post: [click here](https://lucamezzalira.medium.com/git-flow-vs-github-flow-76b93f4782f7).
 
 ## Python Linters Overview
 
 Here's a breakdown of popular Python linters and their functionalities:
 
-1. **ruff**: An agile Python code quality checker renowned for its streamlined functionality, unparalleled efficiency, and exceptional flexibility in configuration. With its emphasis on simplicity and performance, ruff stands out as a robust solution for enforcing coding standards and pinpointing potential issues within Python codebases. Its comprehensive toolset amalgamates various functionalities, making it an optimal choice for projects seeking superior code quality and enhanced development workflows.
+1. **ruff**:  High-performance Python linter and code formatter designed for efficiency.  It combines functionalities of multiple linters into a single tool, offering features like style checking, static type checking, and dead code detection.  This comprehensive approach eliminates the need for juggling various linters, streamlining your workflow.  Furthermore, ruff boasts exceptional speed, making it ideal for large codebases or integration into CI/CD pipelines.  Finally, its extensive configuration options allow you to tailor its behavior to your project's specific coding standards, ensuring adherence to your desired style and quality guidelines.
 
 2. **black**: A powerful Python code formatter that ensures code consistency by automatically applying a uniform style to your codebase.
 
@@ -326,7 +352,7 @@ Here are some popular tools for creating documentation for your project:
 
 1. **Sphinx**: Sphinx is a powerful documentation generator tool widely used for Python projects. It supports various markup formats like reStructuredText and Markdown and allows you to generate documentation in multiple output formats, including HTML, PDF, and ePub.
 
-2. **MkDocs**: MMkDocs is a straightforward and intuitive documentation tool that leverages Markdown files to effortlessly generate static websites. Its ease of setup and customization, coupled with the utilization of Jinja2 templates, empowers users to create polished and professional documentation swiftly. Whether for small-scale projects or extensive documentation needs, MkDocs offers a seamless solution for crafting well-structured and visually appealing documentation.
+2. **MkDocs**: MkDocs is a straightforward and intuitive documentation tool that leverages Markdown files to effortlessly generate static websites. Its ease of setup and customization, coupled with the utilization of Jinja2 templates, empowers users to create polished and professional documentation swiftly. Whether for small-scale projects or extensive documentation needs, MkDocs offers a seamless solution for crafting well-structured and visually appealing documentation.
 
 3. **Quarto**: Quarto is a modern documentation tool designed for data science and computational projects. It combines the power of Markdown, LaTeX, and Jupyter Notebooks to create interactive and reproducible documentation.
 
@@ -383,11 +409,11 @@ When starting a new Python project, it's beneficial to use project templates tha
 
 In summary, while `unittest` provides a robust framework for writing unit tests in Python, alternative frameworks like Pytest and Hypothesis offer additional features and flexibility. When starting a new project, leveraging project templates such as `scicookie` with tools like `cookiecutter` can accelerate setup and promote best practices in project organization and testing.
 
-# What is a virtual enviroments and why creating virtual enviroment is important
+# What is a virtual enviroments and why it is important?
 
-A virtual environment is a self-contained directory that houses a specific Python interpreter along with its associated libraries and dependencies. It allows you to create an isolated environment for each of your Python projects, ensuring that the dependencies for one project do not interfere with those of another.
+A virtual environment is a self-contained directory that isolates the dependencies for a specific project, regardless of the programming language. It can house an interpreter (like Python) along with its associated libraries, but it can also manage dependencies for other languages and tools. This isolation ensures that the project's requirements don't conflict with those of other projects on the same system.
 
-When you create a virtual environment for a project, it essentially creates a sandboxed environment where you can install packages and dependencies without affecting the global Python installation on your system. This isolation is crucial because different projects often require different versions of libraries or dependencies, and conflicts can arise if they share the same environment.
+When you create a virtual environment for each of your project, it essentially creates a sandboxed environment where you can install packages and dependencies without affecting the global Python installation on your system. This isolation is crucial because different projects often require different versions of libraries or dependencies, and conflicts can arise if they share the same environment.
 
 Creating virtual environments is crucial for several reasons:
 
@@ -427,13 +453,11 @@ $ source activate myenv
 ### Conda-Forge:
 Is a community-driven collection of recipes, build infrastructure, and distributions for the Conda package manager. It provides a vast repository of pre-built packages for various programming languages, including Python, R, C, C++, Rust, Go, Fortran, and more. Conda-Forge aims to offer high-quality, up-to-date packages that are well-integrated with Conda environments.
 
+Conda is not limited to managing Python packages; it can handle packages for various programming languages. This capability makes Conda a versatile tool for software development, allowing users to manage complex dependencies and libraries across different programming ecosystems.
+
 ### Anaconda:
 
 Anaconda is a popular Python distribution that bundles the Python interpreter, Conda package manager, and a comprehensive set of pre-installed packages for scientific computing, data analysis, and machine learning. It includes tools like Jupyter Notebook, Spyder IDE, and many essential libraries for scientific computing, making it a convenient choice for data scientists and researchers.
-
-### Agnostic Language Package Manager:
-
-Conda is not limited to managing Python packages; it can handle packages for various programming languages. This capability makes Conda a versatile tool for software development, allowing users to manage complex dependencies and libraries across different programming ecosystems.
 
 ## Virtualenv
 Virtualenv is a tool to create isolated Python environments. It's lightweight and widely used in the Python community. Here's how to set up Virtualenv:
@@ -509,11 +533,15 @@ To deactivate the virtual environment and return to your global Python environme
 - *Isolation:* Pipenv creates isolated environments for each project, preventing conflicts between dependencies.
 - *Streamlined workflow:* Pipenv combines package installation, environment management, and dependency resolution into a single tool, streamlining the development process.
 
-## Pixi
-Is a lightweight virtual environment manager that focuses on simplicity and ease of use. It aims to provide a fast and straightforward way to create and manage virtual environments.
+### Pixi
+Pixi, created by prefix.dev, is a cross-platform, multi-language package manager and workflow tool built on the foundation of the conda ecosystem. It aims to provide developers with a streamlined experience similar to popular tools like cargo or yarn, but designed to work across various programming languages.
 
-Installation:
-Pixi can be installed via pip:
-```
-$ pip install pixi
-```
+Key features of Pixi include:
+
+- Multi-language support: Manages packages written in Python, C++, R, and potentially more languages in the future.
+- Platform compatibility: Functions seamlessly on Linux, Windows, and macOS, including Apple Silicon.
+- Up-to-date lockfiles: Ensures consistent package versions across development environments.
+- Clean command-line interface: Offers a user-friendly and Cargo-like experience.
+- Per-project or system-wide installation: Provides flexibility based on project requirements.
+
+For detailed information, installation instructions, and examples, refer to the official [Pixi website](https://pixishoes.com/collections/new-arrivals).
