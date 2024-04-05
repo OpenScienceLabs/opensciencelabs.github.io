@@ -1,7 +1,7 @@
 ---
 title: "First Time Contributors"
 slug: first-time-contributors
-date: 2024-03-10
+date: 2024-04-05
 authors: ["Daniela Iglesias Rocabado"]
 tags: [open-source, contributors, git, osl]
 categories: [contributors]
@@ -87,6 +87,32 @@ A Pull Request (PR) is a proposed change that a collaborator makes to a code rep
 By following these steps, you can effectively contribute to a project's development through Pull Requests that are easy to review, approve, and merge, ultimately leading to stronger code and more efficient teamwork.
 
 
+## Remotes Repositories
+
+In version control systems like Git, a remote repository is essentially a copy of your local repository stored on a server somewhere else, often online. It acts as a central hub for collaboration and version control.
+
+
+- Origin: This remote, typically created by default when cloning the repository, points to your fork on GitHub.
+- Upstream: This remote points to the original (upstream) repository you forked from. It allows you to stay updated with the main project's development.
+
+
+Creating the Upstream Remote
+
+```bash
+git remote add upstream <URL_of_upstream_repository>
+```
+
+Using the Upstream Remote:
+
+Fetching Updates: Regularly use `git fetch upstream` to download the latest changes from the upstream repository without merging them into your local branch.
+Creating Feature Branches: When starting work on a new feature, it's recommended to base your branch on the latest upstream main branch:
+
+```bash
+git checkout upstream/main
+git checkout -b my-feature-branch
+```
+This ensures your feature branch incorporates the most recent upstream developments.
+
 ## Understanding Merge Commit vs. Rebase in Git
 
 In Git, managing branches is a fundamental aspect of collaboration and version control. When integrating changes from one branch to another, developers often encounter two primary methods: merge commit and rebase. Both approaches have their advantages and trade-offs, influencing how teams collaborate and maintain a clean project history. Let's delve into each method:
@@ -132,47 +158,31 @@ While both merge commit and rebase have their merits, the choice often depends o
 It's worth noting that some organizations, such as the Open Source Initiative (OSI), recommend the usage of git rebase to maintain a clean and linear project history. You can configure Git to use rebase by default for pull operations with the command:
 
 ```bash
-$ git config --global --pull.rebase true
+$ git config --global pull.rebase true
 ```
+
+OSL recommend the usage of git rebase
 
 
 ## Mergin a Pull Requests (PRs)
 Pull requests (PRs) are essential for collaborative software development, enabling contributors to propose changes to a project's codebase. Once a PR is submitted, it undergoes a review process before being merged into the main codebase. Here are three common methods for merging PRs:
 
 #### 1. Merge Commit:
+A merge commit combines changes from different branches in version control systems like Git. It records the integration of these changes, preserving their histories and keeping the project's development organized.
 
-- **Description:** Integrates changes from a feature branch into the target branch, creating a new merge commit.
-- **Example:**
+Use when you want to keep a detailed history of changes from multiple branches. It preserves individual commit histories, making it suitable for tracking the development of feature branches and bug fixes separately.
 
-```bash
-$ git checkout main
-$ git pull origin main
-$ git merge feature-branch
-```
 
 #### 2. Squash and Merge:
+"Squash and merge" condenses multiple commits into one before merging, simplifying the project's commit history.
 
-- **Description:** Combines all changes from a feature branch into a single commit before merging.
-- **Example:**
-
-```bash
-$ git checkout feature-branch
-$ git rebase -i main
-$ git checkout main
-$ git merge feature-branch
-```
+Employ when you have multiple small, related commits that you want to consolidate into a single, more meaningful commit. It's useful for cleaning up the commit history, especially before merging feature branches into the main branch.
 
 #### 3. Rebase and Merge:
+"Rebase and merge" rewrites commit history to integrate changes from one branch into another, maintaining a cleaner and more linear history.
 
-- **Description:** Integrates changes by applying them directly on top of the target branch's latest commit, resulting in a linear commit history.
-- **Example:**
+Opt for this method when you want to maintain a clean and linear commit history by incorporating changes from one branch into another. It helps to avoid unnecessary merge commits, keeping the commit history straightforward and easier to follow.
 
-```bash
-$ git checkout feature-branch
-$ git rebase main
-$ git checkout main
-$ git merge feature-branch
-```
 
 Each method offers distinct advantages and considerations, influencing the project's commit history and overall workflow.
 
@@ -197,7 +207,7 @@ Once pre-commit is installed, you need to set up a configuration file named .pre
 Here's a basic example of a `.pre-commit-config.yaml` file:
 
 ``` yaml
-$ repos:
+repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v3.3.0
     hooks:
@@ -236,28 +246,6 @@ GitHub Flow is a lightweight, branch-based workflow specifically designed for te
 
    - Main Branch: GitHub Flow revolves around a single main branch (often named "main" or "master"), representing the development branch that leads to production-ready code.
    - Feature Branches: Developers create feature branches off the main branch for each new feature or bug fix.
-
-**Remotes and Upstream:**
-
-- Origin: This remote, typically created by default when cloning the repository, points to your fork on GitHub.
-- Upstream: This remote points to the original (upstream) repository you forked from. It allows you to stay updated with the main project's development.
-
-Creating the Upstream Remote
-
-```bash
-git remote add upstream <URL_of_upstream_repository>
-```
-
-Using the Upstream Remote:
-
-Fetching Updates: Regularly use `git fetch upstream` to download the latest changes from the upstream repository without merging them into your local branch.
-Creating Feature Branches: When starting work on a new feature, it's recommended to base your branch on the latest upstream main branch:
-
-```bash
-git checkout upstream/main
-git checkout -b my-feature-branch
-```
-This ensures your feature branch incorporates the most recent upstream developments.
 
 
 **Workflow:**
@@ -306,55 +294,49 @@ While both workflows have their merits, it's essential to assess your team's wor
 
 For a deeper dive into GitFlow's advantages and implementation details, consider referring to the following blog post: [click here](https://lucamezzalira.medium.com/git-flow-vs-github-flow-76b93f4782f7).
 
+OSL recommend the github flow
+
 ## Python Linters Overview
 
 Here's a breakdown of popular Python linters and their functionalities:
 
-1. **ruff**:  High-performance Python linter and code formatter designed for efficiency.  It combines functionalities of multiple linters into a single tool, offering features like style checking, static type checking, and dead code detection.  This comprehensive approach eliminates the need for juggling various linters, streamlining your workflow.  Furthermore, ruff boasts exceptional speed, making it ideal for large codebases or integration into CI/CD pipelines.  Finally, its extensive configuration options allow you to tailor its behavior to your project's specific coding standards, ensuring adherence to your desired style and quality guidelines.
+1. **ruff**: A high-performance Python linter and code formatter engineered for efficiency. It amalgamates the functionalities of multiple linters into a unified tool, encompassing features such as style checking, static type validation, and dead code detection. This holistic approach obviates the necessity of managing disparate linters, thus streamlining the development workflow. Notably, ruff excels in speed, rendering it well-suited for handling extensive codebases or integration into Continuous Integration/Continuous Deployment (CI/CD) pipelines. Moreover, its extensive configuration options empower users to customize its behavior according to the specific coding standards of their projects, ensuring adherence to desired styles and quality guidelines.
 
-2. **black**: A powerful Python code formatter that ensures code consistency by automatically applying a uniform style to your codebase.
+2. **black**: An influential Python code formatter that ensures code uniformity by automatically applying a standardized style across the codebase.
 
-3. **flake8**: Combines linting, style checking, and complexity analysis in one package. It's widely used for enforcing PEP 8 coding standards and detecting common programming errors.
+3. **flake8**: Integrates linting, style validation, and complexity analysis functionalities into a unified package. Widely utilized for enforcing PEP 8 coding standards and identifying common programming errors.
 
-4. **mypy**: A static type checker for Python that detects type errors and improves code maintainability by providing type annotations.
+4. **mypy**: A static type checker for Python that identifies type errors and enhances code maintainability through type annotations.
 
-5. **pydocstyle**: Ensures compliance with Python docstring conventions outlined in PEP 257, enhancing code readability and documentation quality.
+5. **pydocstyle**: Ensures adherence to Python docstring conventions outlined in PEP 257, thereby enhancing code readability and documentation quality.
 
-6. **isort**: A utility for sorting and organizing import statements within Python code, maintaining a consistent import style and preventing import-related issues.
+6. **isort**: A utility for organizing and sorting import statements within Python code, maintaining a consistent import style and mitigating import-related issues.
 
-7. **vulture**: Identifies dead code in Python projects by detecting unused variables, functions, classes, and modules.
+7. **vulture**: Identifies redundant code in Python projects by detecting unused variables, functions, classes, and modules.
 
-8. **mccabe**: Calculates the McCabe cyclomatic complexity of functions and methods, highlighting complex areas of code for potential improvements in readability and maintainability.
+8. **mccabe**: Computes the McCabe cyclomatic complexity of functions and methods, highlighting intricate code segments for potential enhancements in readability and maintainability.
 
-9. **bandit**: A security-focused linter that detects security vulnerabilities and insecure coding practices in Python code.
+9. **bandit**: A security-centric linter that identifies security vulnerabilities and insecure coding practices in Python codebases.
 
-These linters can seamlessly integrate into development workflows, providing real-time feedback to developers and ensuring code quality throughout the development process.
+These linters seamlessly integrate into development workflows, furnishing developers with real-time feedback and upholding code quality throughout the development lifecycle.
 
 ## Documentation
 
 ### Why Documentation is Essential
 
-Documentation plays a crucial role in software development projects for several reasons:
+Documentation is essential in software development for various reasons. Firstly, it enhances clarity and understanding by detailing the purpose, functionality, and usage of the software, aiding developers, users, and stakeholders in comprehending the system's workings. Additionally, it streamlines the onboarding process for new team members by furnishing them with a comprehensive overview of the project, including its architecture and coding standards. Furthermore, well-crafted documentation promotes maintainability and scalability by elucidating the project's structure, design decisions, and coding conventions, empowering developers to implement changes, rectify bugs, and incorporate new features without introducing errors.
 
-1. **Clarity and Understanding**: Documentation provides clarity about the purpose, functionality, and usage of the software. It helps developers, users, and stakeholders understand how the system works and how to interact with it.
-
-2. **Onboarding New Team Members**: Well-written documentation facilitates the onboarding process for new team members by providing them with a comprehensive overview of the project, its architecture, and coding standards.
-
-3. **Maintainability and Scalability**: Good documentation promotes maintainability and scalability by explaining the project's structure, design decisions, and coding conventions. This makes it easier for developers to make changes, fix bugs, and add new features without introducing errors.
-
-4. **Support and Troubleshooting**: Documentation serves as a reference for users encountering issues or needing assistance. It provides troubleshooting guides, FAQs, and usage examples to help users resolve problems quickly and efficiently.
-
-5. **Project Sustainability**: Documentation ensures the long-term sustainability of a project by capturing essential knowledge about its design, implementation, and maintenance. It helps preserve institutional knowledge and facilitates future enhancements or migrations.
+Moreover, documentation serves as a valuable resource for support and troubleshooting, furnishing users with troubleshooting guides, FAQs, and usage examples to swiftly resolve issues. It also contributes to the project's sustainability by encapsulating critical knowledge about its design, implementation, and maintenance, thereby preserving institutional knowledge and facilitating future enhancements or migrations.
 
 ## Options for Creating Documentation
 
 Here are some popular tools for creating documentation for your project:
 
-1. **Sphinx**: Sphinx is a powerful documentation generator tool widely used for Python projects. It supports various markup formats like reStructuredText and Markdown and allows you to generate documentation in multiple output formats, including HTML, PDF, and ePub.
+1. **Sphinx**: Sphinx stands out as a robust documentation generator tool extensively employed within Python ecosystems. Supporting various markup formats such as reStructuredText and Markdown, Sphinx enables the generation of documentation in diverse output formats like HTML, PDF, and ePub.
 
-2. **MkDocs**: MkDocs is a straightforward and intuitive documentation tool that leverages Markdown files to effortlessly generate static websites. Its ease of setup and customization, coupled with the utilization of Jinja2 templates, empowers users to create polished and professional documentation swiftly. Whether for small-scale projects or extensive documentation needs, MkDocs offers a seamless solution for crafting well-structured and visually appealing documentation.
+2. **MkDocs**: MkDocs emerges as a user-friendly documentation tool that simplifies the generation of static websites through Markdown files. Its straightforward setup process and flexibility in customization, utilizing Jinja2 templates, empower users to swiftly produce polished and professional documentation. Be it for small-scale projects or extensive documentation requirements, MkDocs offers an intuitive solution for crafting well-structured and visually appealing documentation.
 
-3. **Quarto**: Quarto is a modern documentation tool designed for data science and computational projects. It combines the power of Markdown, LaTeX, and Jupyter Notebooks to create interactive and reproducible documentation.
+3. **Quarto**: Quarto represents a modern documentation tool tailored for data science and computational projects. Leveraging the amalgamation of Markdown, LaTeX, and Jupyter Notebooks, Quarto facilitates the creation of interactive and reproducible documentation, catering to the specific needs of these domains.
 
 ## Recommended Resources for Improving Documentation Skills
 
@@ -401,11 +383,13 @@ While `unittest` is a solid choice for writing unit tests in Python, there are a
 
 2. **Hypothesis**: Hypothesis is a property-based testing library that complements traditional example-based testing. Instead of writing specific test cases, you specify general properties that your code should satisfy. Hypothesis then generates input data automatically to thoroughly test these properties, uncovering edge cases and potential bugs.
 
+## Python Project Initialization
+
 When starting a new Python project, it's beneficial to use project templates that include predefined directory structures, configuration files, and boilerplate code to jumpstart development. Tools like `cookiecutter` and project templates such as `scicookie` provide convenient starting points for various project types:
 
 - **Cookiecutter**: Cookiecutter is a command-line utility that generates projects from project templates. It prompts you for project-specific details and then creates a customized project structure based on the selected template. There are many community-contributed templates available for various types of Python projects, including web applications, libraries, and data analysis projects.
 
-- **Scicookie**: Scicookie is a project template designed specifically for scientific computing projects in Python. It includes a structured directory layout, configuration files for tools like `pytest` and `tox`, documentation templates, and example code snippets. Scicookie helps streamline the setup process for scientific Python projects and encourages best practices in testing and documentation.
+- **SciCookie**: SciCookie is a project template ocused on the scientific python community, but it can be used by any python project. It includes a structured directory layout, documentation templates, and example code snippets. SciCookie helps streamline the setup process for scientific Python projects and encourages best practices in testing and documentation.
 
 In summary, while `unittest` provides a robust framework for writing unit tests in Python, alternative frameworks like Pytest and Hypothesis offer additional features and flexibility. When starting a new project, leveraging project templates such as `scicookie` with tools like `cookiecutter` can accelerate setup and promote best practices in project organization and testing.
 
@@ -427,9 +411,11 @@ Creating virtual environments is crucial for several reasons:
 
 
 ## Conda/Mamba
-Conda is a package manager, environment manager, and dependency solver that can install and manage packages and their dependencies. Mamba is a fast, drop-in replacement for Conda that aims to provide faster package management operations. Here's how to get started with Conda/Mamba:
+Conda is a package manager, environment manager, and dependency solver that can install and manage packages and their dependencies. Mamba is a fast, drop-in replacement for Conda that aims to provide faster package management operations.
 
-Installation:
+An agnostic language package manager is a tool that handles dependencies for software projects using multiple programming languages. Unlike traditional package managers tied to one language (like npm for JavaScript), agnostic managers work across languages. They simplify development for projects using various languages, offering features like dependency management and version control in a unified way. This helps maintain consistency and flexibility, especially in projects with mixed-language environments or complex architectures.
+
+### Installation:
 
   For Windows users, Anaconda may be a suitable choice, providing a comprehensive Python distribution along with Conda. For Linux and macOS users, Miniconda or Miniforge offers a lighter and more streamlined approach to managing environments and packages. You can download Miniforge from [here](https://github.com/conda-forge/miniforge?tab=readme-ov-file#downloadhere), which includes Miniconda, Conda Forge configuration, and Mamba.
 
@@ -533,15 +519,16 @@ To deactivate the virtual environment and return to your global Python environme
 - *Isolation:* Pipenv creates isolated environments for each project, preventing conflicts between dependencies.
 - *Streamlined workflow:* Pipenv combines package installation, environment management, and dependency resolution into a single tool, streamlining the development process.
 
-### Pixi
-Pixi, created by prefix.dev, is a cross-platform, multi-language package manager and workflow tool built on the foundation of the conda ecosystem. It aims to provide developers with a streamlined experience similar to popular tools like cargo or yarn, but designed to work across various programming languages.
+## Pixi
+Pixi, developed by prefix.dev, is a dynamic cross-platform package manager and workflow tool inspired by the Conda and Pypi ecosystems. It caters to developers seeking a unified experience across multiple programming languages, akin to renowned tools like Cargo or Yarn. Pixi's adaptability and robust feature set make it a valuable asset in modern software development environments.
 
-Key features of Pixi include:
+Key highlights of Pixi include:
 
-- Multi-language support: Manages packages written in Python, C++, R, and potentially more languages in the future.
-- Platform compatibility: Functions seamlessly on Linux, Windows, and macOS, including Apple Silicon.
-- Up-to-date lockfiles: Ensures consistent package versions across development environments.
-- Clean command-line interface: Offers a user-friendly and Cargo-like experience.
-- Per-project or system-wide installation: Provides flexibility based on project requirements.
+- **Multi-language Compatibility:** Pixi adeptly manages packages written in various languages including Python, C++, R, and more, offering versatility in development workflows.
+- **Platform Agnosticism:** It seamlessly operates on Linux, Windows, macOS, and diverse hardware architectures, ensuring consistent performance across different environments.
+- **Up-to-date Dependency Locking:** Pixi's dependency locking mechanism guarantees the stability of projects by maintaining consistent package versions across different development setups.
+- **Intuitive Command-line Interface:** With a clean and user-friendly interface, Pixi enhances developer productivity and ease of use, promoting efficient workflow management.
+- **Flexible Installation Options:** Pixi accommodates both per-project and system-wide installations, allowing developers to tailor its usage according to specific project requirements.
 
-For detailed information, installation instructions, and examples, refer to the official [Pixi website](https://pixishoes.com/collections/new-arrivals).
+For comprehensive information, detailed installation guidelines, and practical examples, visit the official [Pixi website](https://pixi.sh/latest). Explore Pixi today to streamline your development process across multiple languages with ease.
+
