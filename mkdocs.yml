@@ -41,6 +41,7 @@ nav:
       - index: 'programs/internship/index.md'
       - Interns Guide: 'programs/internship/guides/interns/index.md'
       - Mentors Guide: 'programs/internship/guides/mentors/index.md'
+      - "Cycle 2024-02": 'programs/internship/cycles/2024-02.md'
       - "Cycle 2024-01 (CLOSED)": 'programs/internship/cycles/2024-01.md'
       - "Cycle 2023-01 (CLOSED)": 'programs/internship/cycles/2023-01.md'
       - "TEMPLATE: Projects Ideas": 'programs/internship/templates/projects-ideas.md'
