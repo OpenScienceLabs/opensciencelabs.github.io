@@ -82,31 +82,31 @@ This program presents valuable opportunities for both mentors and student/collab
     - The project name
     - Project idea name
     - Motivation for wanting to collaborate on that specific project.
-- The mentor will assign you a minor issue to solve. (This step is required to check if the applicant knows git)
-- After solving the issue The mentor will ask you to fill a form via LinkedIn
-- The seleted applicant will be contated via email on May 20 week
+- The mentor will assign you a minor issue to solve. (This step is required to verify if the applicant is able to solve the project tasks.)
+- After solving the issue The mentor will ask you to fill a form via google forms.
+- The selected applicant will be contacted via email on May 20 week.
 
-Candidates are reminded of the importance of having prior knowledge of Git. Additionally, candidates should join the [OSL Discord](https://opensciencelabs.org/discord) to stay updated on announcements related to the Internship Program.
+Candidates are reminded of the importance of having prior knowledge of Git and how to make contributions we recommend this read this [blog post](https://opensciencelabs.org/blog/first-time-contributors/). Additionally, candidates should join the [OSL Discord](https://opensciencelabs.org/discord) to stay updated on announcements related to the Internship Program. We recommend to read this blog post for first time contributions
 
-Do not forget about the timeline and if you have any more questions do not hesitate to contact us through opensciencelabs@gmail.com
+Please keep in mind about the timeline, and if you have any more questions do not hesitate to contact us at team@opensciencelabs.org. 
 
 ## Timeline
 
-The following is the timeline for the OSL Internship Program Cycle 2024-01:
+The following is the timeline for the OSL Internship Program Cycle 2024-02:
 
-- **April, 22**: Call for Interns/Apprentices opens.
-- **May, 13**: Deadline for Interns/Apprentices applications.
-- **May, 20**: Announcement of approved Interns/Apprentices and start of bounding period
-- **May, 27**: Official Start Date of Internship Period; an alternative for projects not 
+- **April 22**: Call for Interns/Apprentices opens.
+- **May 13**: Deadline for Interns/Apprentices applications.
+- **May 20**: Announcement of approved Interns/Apprentices and start of the bonding period
+- **May 27**: Official Start Date of Internship Period; an alternative for projects not 
 selected by GSoC to run under the OSL Internship Program with The Graph Network support.
-- **July, 8**: Mid-term Evaluation.
-- **August, 26**: Final Evaluation.
-- **September, 3**: Official End Date; Certification process begins.
+- **July 8**: Mid-term Evaluation.
+- **August 26**: Final Evaluation.
+- **September 3**: Official End Date; Certification process begins.
 
 ## Info about participating Projects
 ---
 
-Below is the list of projects participating in the current internship cycle. Each project includes key details to help candidates understand the scope and requirements.
+Below is the list of projects participating in the current internship cycle. Each entry provides key details to assist candidates in understanding the scope and requirements of the projects.
 
 ### ArtBox
 
@@ -142,7 +142,6 @@ Below is the list of projects participating in the current internship cycle. Eac
 - **Project Idea 1 URL**: <https://github.com/osl-pocs/fqlearn/issues/42>
 - **Project Idea 2 URL**: <https://github.com/osl-pocs/fqlearn/issues/43>
 
-
 ### pymedx
 
 - **Description**: This Project aims to fetch scientific papers metadata
@@ -152,7 +151,6 @@ Below is the list of projects participating in the current internship cycle. Eac
 - **Project Ideas 1 URL**: <https://github.com/osl-incubator/pymedx/issues/10>
 - **Project Ideas 2 URL**: <https://github.com/osl-incubator/pymedx/issues/11>
 - **Project Ideas 3 URL**: <https://github.com/osl-incubator/pymedx/issues/12>
-
 
 ### Makim
 
@@ -170,7 +168,6 @@ Below is the list of projects participating in the current internship cycle. Eac
 - **Organization/Project Webpage URL:** [https://gems-uff.github.io/noworkflow/](https://gems-uff.github.io/noworkflow/)
 - **Contact:** João Felipe Nicolaci Pimentel [joaofelipenp@gmail.com](mailto:joaofelipenp@gmail.com)
 - **Project Ideas URL (only project idea 2 available):** [https://gist.github.com/JoaoFelipe/ce4cb232deb2c71d4f39afc5cbeefe2b](https://gist.github.com/JoaoFelipe/ce4cb232deb2c71d4f39afc5cbeefe2b)
-
 
 ### SciCookie
 
@@ -208,6 +205,7 @@ Below is the list of projects participating in the current internship cycle. Eac
 ### Useful Materials and Courses
 ---
 
+- **First Time Contributors:** In this [blog post](https://opensciencelabs.org/blog/first-time-contributors/) you will find useful information about how to do your first contribution in projects.
 - **Software Carpentry Lessons:** Offering tutorials on Git, Bash, Python, R, and more, these lessons are invaluable for building a strong foundation in software development. Access the lessons at Software Carpentry.
 - **Udacity CS212 - Design of Computer Programs:** This course, taught by Peter Norvig, delves into advanced programming topics and is an excellent way to deepen your understanding of computer programs. Enroll in the course at Udacity CS212.
 - **The GRAPH Network Courses:** Explore a range of courses offered by The GRAPH Network, tailored to various aspects of data analysis. Find the courses at The GRAPH Network Courses.
