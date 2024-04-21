@@ -84,7 +84,7 @@ This program presents valuable opportunities for both mentors and student/collab
     - Motivation for wanting to collaborate on that specific project.
 - The mentor will assign you a minor issue to solve. (This step is required to verify if the applicant is able to solve the project tasks.)
 - After solving the issue The mentor will ask you to fill a form via google forms.
-- The selected applicant will be contacted via email on May 20 week.
+- The selected applicant will be contacted via email on May 20.
 
 Candidates are reminded of the importance of having prior knowledge of Git and how to make contributions we recommend this read this [blog post](https://opensciencelabs.org/blog/first-time-contributors/). Additionally, candidates should join the [OSL Discord](https://opensciencelabs.org/discord) to stay updated on announcements related to the Internship Program. We recommend to read this blog post for first time contributions
 
