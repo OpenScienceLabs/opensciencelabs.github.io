@@ -1,7 +1,7 @@
 ---
 title: "First Time Contributors"
 slug: first-time-contributors
-date: 2024-04-05
+date: 2024-04-08
 authors: ["Daniela Iglesias Rocabado"]
 tags: [open-source, contributors, git, osl]
 categories: [contributors]
@@ -164,7 +164,7 @@ $ git config --global pull.rebase true
 OSL recommends the usage of git rebase
 
 
-## Merging a Pull Request (PR)
+## Mergin a Pull Requests (PRs)
 Pull requests (PRs) are essential for collaborative software development, enabling contributors to propose changes to a project's codebase. Once a PR is submitted, it undergoes a review process before being merged into the main codebase. Here are three common methods for merging PRs:
 
 #### 1. Merge Commit:
@@ -533,6 +533,6 @@ Key highlights of Pixi include:
 For comprehensive information, detailed installation guidelines, and practical examples, visit the official [Pixi website](https://pixi.sh/latest). Explore Pixi today to streamline your development process across multiple languages with ease.
 
 
-## CONSLUSION
+## Conclusion
 
 The proficiency in specific techniques and methodologies is crucial for anyone looking to make meaningful contributions to open-source projects. This article delineates the essential skills and practices required for effective participation, including but not limited to, adeptness with collaborative tools, version control systems, adherence to coding standards, and familiarity with contribution guidelines. Emphasizing the significance of tailored mentorship, accessible documentation, and active engagement within the community, the article serves as a comprehensive guide for enhancing the quality and impact of contributions. By adopting best practices in code review, project management, and fostering an inclusive dialogue, contributors can significantly elevate the collaborative dynamics and innovation within open-source endeavors. Thus, reading this article is instrumental for those aiming to navigate the complexities of open-source projects successfully and contribute to the advancement of collective scientific and technological objectives.
