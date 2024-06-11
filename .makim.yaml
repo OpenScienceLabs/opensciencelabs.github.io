@@ -1,7 +1,7 @@
 version: 1.0
 groups:
   pages:
-    targets:
+    tasks:
       pre-build:
         help: pre-build step
         shell: bash
@@ -24,11 +24,11 @@ groups:
       build:
         help: build the static page
         dependencies:
-          - target: pages.pre-build
+          - task: pages.pre-build
         run: mkdocs build --verbose --clean
 
       preview:
         help: preview the web page dynamically
         dependencies:
-          - target: pages.pre-build
+          - task: pages.pre-build
         run: mkdocs serve --watch pages --watch theme
