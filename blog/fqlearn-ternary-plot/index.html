@@ -1,0 +1,966 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Plotting ternary phase diagrams for solving thermodynamics problems using fqlearn - Open Science Labs
+    </title>
+    <link href=https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65 crossorigin=anonymous>
+    <script src=https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js integrity=sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4 crossorigin=anonymous></script>
+    <link rel=stylesheet href=https://use.fontawesome.com/aa402b3835.css>
+    <link rel=stylesheet href=/css/index.css>
+    <link rel=stylesheet href=/css/styles.css>
+    <title>Open Science Labs</title>
+    <meta charset=utf-8>
+    <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv=x-ua-compatible content="IE=edge">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-213158050-1"></script>
+    <script>
+      window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","UA-213158050-1")
+    </script>
+    <meta property="og:locale" content="es">
+    <meta property="og:locale:alternate" content="pt">
+    <meta property="og:type" content="website">
+    <meta name=description content="A Open Source community for sharing knowledge">
+    <meta name=twitter:card content="summary">
+    <meta name=twitter:creator content>
+    <meta name=twitter:title content>
+    <meta name=twitter:image content="/images/thumbnail.png">
+    <meta property="og:url" content="/">
+    <meta property="og:title" content>
+    <meta property="og:description" content="A Open Source community for sharing knowledge">
+    <meta property="og:image" content="/images/thumbnail.png">
+    <meta name=keywords content="open science,data science,latam">
+    <link rel=apple-touch-icon sizes=180x180 href=/icons/apple-touch-icon.png>
+    <link rel=icon type=image/png sizes=32x32 href=/icons/favicon-32x32.png>
+    <link rel=manifest href=/icons/site.webmanifest>
+    <link rel=canonical href=/>
+    <link rel=alternate type=application/rss+xml href=/index.xml title="Open Science Labs">
+    <link rel=alternate type=application/json href=/js/index.json title="Open Science Labs">
+    <link rel=stylesheet type=text/css></head>
+    
+<style>
+.main-nav>li>a {
+  color: #000000 !important;
+}
+</style>
+
+  </head>
+  <body data-code="100" data-lines="false" id="documentTop">
+    <header class="nav_header">
+      <nav class="nav">
+        <a href="/" class="nav_brand nav_item" title="Open Science Labs">
+          <img src="/images/logos/osl-color-horizontal.png" class=logo alt="Open Science Labs">
+          <div class=nav_close>
+            <div>
+              <svg class="icon">
+                <title>open-menu</title>
+                <use xlink:href="#open-menu"/>
+              </svg>
+              <svg class="icon">
+                <title>closeme</title>
+                <use xlink:href="#closeme"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <div class='nav_body nav_body_left'>
+          <!-- MENU -->
+          
+          
+          
+          <div class="nav_parent ">
+            <a href="../.." class="nav_item" title="Home">
+              Home
+            </a>
+          </div>
+          
+          
+          
+          <div class="nav_parent ">
+            <a href="../" class="nav_item" title="Blog">
+              Blog
+            </a>
+          </div>
+          
+          
+          
+          
+            
+            <div class="nav_parent ">
+              <a href="../../affiliations/" class="nav_item" title="Affiliations">
+                Affiliations
+              </a>
+            </div>
+            <div class="d-block d-sm-block d-md-none">
+              
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../.." class="nav_item" title="Project Affiliation">
+                  Project Affiliation
+                </a>
+              </div>
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../.." class="nav_item" title="Partnership">
+                  Partnership
+                </a>
+              </div>
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../affiliations/open-hub/" class="nav_item" title="OpenHub">
+                  OpenHub
+                </a>
+              </div>
+              
+              
+            </div>
+            
+          
+            
+          
+            
+          
+            
+          
+          
+          
+          
+          
+            
+            <div class="nav_parent ">
+              <a href="../../programs/" class="nav_item" title="Programs">
+                Programs
+              </a>
+            </div>
+            <div class="d-block d-sm-block d-md-none">
+              
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../programs/incubator/" class="nav_item" title="Incubator">
+                  Incubator
+                </a>
+              </div>
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../.." class="nav_item" title="Internship">
+                  Internship
+                </a>
+              </div>
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../.." class="nav_item" title="GSoC">
+                  GSoC
+                </a>
+              </div>
+              
+              
+            </div>
+            
+          
+            
+          
+            
+          
+            
+          
+          
+          
+          
+          
+            
+            <div class="nav_parent ">
+              <a href="../../events/" class="nav_item" title="Events">
+                Events
+              </a>
+            </div>
+            <div class="d-block d-sm-block d-md-none">
+              
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../events/openverse24/" class="nav_item" title="OpenVerse'24">
+                  OpenVerse'24
+                </a>
+              </div>
+              
+              
+            </div>
+            
+          
+            
+          
+          
+          
+          
+          
+            
+            <div class="nav_parent ">
+              <a href="../../guidelines/" class="nav_item" title="Guidelines">
+                Guidelines
+              </a>
+            </div>
+            <div class="d-block d-sm-block d-md-none">
+              
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../guidelines/articles/" class="nav_item" title="Articles">
+                  Articles
+                </a>
+              </div>
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../guidelines/dei/" class="nav_item" title="DEI">
+                  DEI
+                </a>
+              </div>
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../guidelines/mentoring/" class="nav_item" title="Mentoring">
+                  Mentoring
+                </a>
+              </div>
+              
+              
+            </div>
+            
+          
+            
+          
+            
+          
+            
+          
+          
+          
+          
+          
+            
+            <div class="nav_parent ">
+              <a href="../../about/" class="nav_item" title="About">
+                About
+              </a>
+            </div>
+            <div class="d-block d-sm-block d-md-none">
+              
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../about/" class="nav_item" title="About OSL">
+                  About OSL
+                </a>
+              </div>
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../about/formula/" class="nav_item" title="Our Formula">
+                  Our Formula
+                </a>
+              </div>
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../about/team/" class="nav_item" title="Team">
+                  Team
+                </a>
+              </div>
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../about/roadmap/" class="nav_item" title="Roadmap">
+                  Roadmap
+                </a>
+              </div>
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../about/governance/" class="nav_item" title="Governance">
+                  Governance
+                </a>
+              </div>
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../about/coc/" class="nav_item" title="CoC">
+                  CoC
+                </a>
+              </div>
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../about/coc-mentoring/" class="nav_item" title="CoC for Mentoring">
+                  CoC for Mentoring
+                </a>
+              </div>
+              
+              
+            </div>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          
+          
+          
+          <div class="nav_parent ">
+            <a href="../../donate/" class="nav_item" title="Donate">
+              Donate
+            </a>
+          </div>
+          
+          
+          
+        </div>
+        <div class=follow>
+          <a href=https://github.com/OpenScienceLabs target="_blank">
+            <svg class="icon">
+              <title>github</title>
+              <use xlink:href="#github"/>
+            </svg>
+          </a>
+          <a href=/linkedin target="_blank">
+            <svg class="icon">
+              <title>linkedin</title>
+              <use xlink:href="#linkedin"/>
+            </svg>
+          </a>
+          <a href=https://twitter.com/opensciencelabs target="_blank">
+            <svg class="icon">
+              <title>twitter</title>
+              <use xlink:href="#twitter"/>
+            </svg>
+          </a>
+          <a href=/facebook target="_blank">
+            <svg class="icon">
+              <title>facebook</title>
+              <use xlink:href="#facebook"/>
+            </svg>
+          </a>
+          <a href=/discord target="_blank">
+            <svg class="icon">
+              <title>discord</title>
+              <use xlink:href="#discord"/>
+            </svg>
+          </a>
+          <a href="/feed_rss_created.xml" target="_blank">
+            <svg class="icon">
+              <title>rss</title>
+              <use xlink:href="#rss"/>
+            </svg>
+          </a>
+          <a href=/youtube target="_blank">
+            <svg class="icon">
+              <title>youtube</title>
+              <use xlink:href="#youtube"/>
+            </svg>
+          </a>
+          <div class=color_mode><input type=checkbox class=color_choice id=mode></div>
+        </div>
+      </nav>
+      <nav class="nav d-none d-sm-none d-md-block">
+        <div class='nav_body nav_extra extra'>
+          <!-- SUB-MENU -->
+          
+        </div>
+      </nav>
+    </header>
+    <main>
+      <style>
+        .card-columns div{height:200px}
+        .card-columns img{height:160px}
+        .card-columns a{text-decoration:none}
+        footer.citation *{margin-top:20px;font-size:10px!important;font-style:italic!important}
+      </style>
+      <div class=container>
+        <section class="wrap content">
+          
+          
+<section>
+  <div class="row pt-5">
+    <div class="col-md-9 mx-auto pt-3">
+      
+
+<div>
+  <h3><a href="" title="" target="_self">Plotting ternary phase diagrams for solving thermodynamics problems using fqlearn</a></h3>
+  <div class=>
+    <span>
+      <svg class="icon">
+        <title>author</title>
+        <use xlink:href="#author"/>
+      </svg>
+    </span>
+    <span class=author_name>
+      Faith Njamiu Hunja · 
+    </span>
+    <span>
+      <svg class="icon">
+        <title>calendar</title>
+        <use xlink:href="#calendar"/>
+      </svg>
+    </span>
+    <span class=post_date>May 29, 2024</span>
+
+    <span class=page_only>
+      ·
+      <div class=post_share>
+        Share it:
+        <a href="https://twitter.com/intent/tweet?text=&url=&tw_p=tweetbutton" class=twitter title="Compartir en Twitter" target=_blank rel=nofollow>
+          <svg class="icon">
+            <title>twitter</title>
+            <use xlink:href="#twitter"/>
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/sharer.php?u=&t=" class=facebook title="Compartir en Facebook" target=_blank rel=nofollow>
+          <svg class="icon">
+            <title>facebook</title>
+            <use xlink:href="#facebook"/>
+          </svg>
+        </a>
+        <a href=#linkedinshare id=linkedinshare class=linkedin title="Compartir en LinkedIn" rel=nofollow>
+          <svg class="icon">
+            <title>linkedin</title>
+            <use xlink:href="#linkedin"/>
+          </svg>
+        </a>
+        <a href="" title="Copy Link" class="link link_yank">
+          <svg class="icon">
+            <title>copy</title>
+            <use xlink:href="#copy"/>
+          </svg>
+        </a>
+      </div>
+    </span>
+
+    
+  </div>
+
+</div>
+<div>
+  <div class=excerpt_thumbnail>
+    <figure>
+      <picture>
+        <img loading=lazy decoding=async alt=""
+          class="image_figure image_thumbnail image_internal image_unprocessed"
+          src="/blog/fqlearn-ternary-plot/header.png" alt=""></picture>
+    </figure>
+  </div>
+  <div>
+    <!-- # Plotting ternary phase diagrams for solving thermodynamics problems using fqlearn -->
+
+<p>An article on how to use the open source Fqlearn library to plot three phase diagrams used in thermodynamics, also known as ternary plots.</p>
+<!-- TEASER_END -->
+
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link"> #</a></h2>
+<p>During the Open Science Labs Q1 2024 internship, I worked on the Fqlearn project. <a href="https://github.com/osl-pocs/fqlearn">Fqlearn</a> is an open source python library, currently in development, which aims to facilitate the teaching of mass transfer and thermodynamics.</p>
+<p>My main task involved developing methods to use a three phase diagram to solve thermodynamics problems graphically. For this purpose, I wrote code for the <a href="https://github.com/osl-pocs/fqlearn/blob/main/src/fqlearn/ThreeComponent.py"><code>ThreeComponent.py</code></a> class, as well as corresponding <a href="https://github.com/osl-pocs/fqlearn/blob/main/tests/test_three_component.py">tests</a> for the class.</p>
+<h3 id="ternary-phase-diagram">Ternary phase diagram<a class="headerlink" href="#ternary-phase-diagram" title="Permanent link"> #</a></h3>
+<p>A ternary plot, ternary graph, triangle plot, simplex plot, or Gibbs triangle is a barycentric plot on three variables which sum to a constant. It graphically depicts the ratios of the three variables as positions in an equilateral triangle. It is used in physical chemistry, petrology, mineralogy, metallurgy, and other physical sciences to show the compositions of systems composed of three species. Ternary plots are tools for analyzing compositional data in the three-dimensional case [<a href="https://en.wikipedia.org/wiki/Ternary_plot">1</a>].</p>
+<p><img alt="A ternary plot example, plotted using Fqlearn" src="plot.png" /></p>
+<p>In a ternary plot, the values of the three variables a, b, and c must sum to some constant, K. Usually, this constant is represented as 1.0 or 100%. Because a + b + c = K for all substances being graphed, any one variable is not independent of the others, so only two variables must be known to find a sample's point on the graph: for instance, c must be equal to K − a − b. Because the three numerical values cannot vary independently—there are only two degrees of freedom—it is possible to graph the combinations of all three variables in only two dimensions.</p>
+<p>The advantage of using a ternary plot for depicting chemical compositions is that three variables can be conveniently plotted in a two-dimensional graph. Ternary plots can also be used to create phase diagrams by outlining the composition regions on the plot where different phases exist [<a href="https://en.wikipedia.org/wiki/Ternary_plot">1</a>]. </p>
+<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link"> #</a></h2>
+<p>To begin with, we import the libraries required for plotting ternary phase diagrams. We used <a href="https://github.com/marcharper/python-ternary"><code>python-ternary</code></a>, a plotting library that uses matplotlib to make ternary plots. Using this library, many features could be added to the fqlearn library for various purposes, as described in this article.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">plt</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">import</span> <span class="nn">ternary</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kn">from</span> <span class="nn">scipy.interpolate</span> <span class="kn">import</span> <span class="n">CubicSpline</span>
+</span></code></pre></div>
+<p>Then we define our class, <code>ThreeComponent</code>, in which we create some functions, a few of which will be explained in this article. To see how these functions work, we create some variables, which are lists containing an unordered list of tuples, each containing 3 values, representing the x, y and z values in the form <code>[(x,y,z)]</code>.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">right_eq_line</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">0.02</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mf">0.96</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.025</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">,</span> <span class="mf">0.915</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.03</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.87</span><span class="p">),</span> 
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>                <span class="p">(</span><span class="mf">0.035</span><span class="p">,</span> <span class="mf">0.16</span><span class="p">,</span> <span class="mf">0.805</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.04</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.76</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.045</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.705</span><span class="p">),</span> 
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>                <span class="p">(</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.65</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.07</span><span class="p">,</span> <span class="mf">0.36</span><span class="p">,</span> <span class="mf">0.57</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.09</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.51</span><span class="p">),</span> 
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>                <span class="p">(</span><span class="mf">0.14</span><span class="p">,</span> <span class="mf">0.48</span><span class="p">,</span> <span class="mf">0.38</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.33</span><span class="p">,</span> <span class="mf">0.49</span><span class="p">,</span> <span class="mf">0.18</span><span class="p">)]</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">left_eq_line</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">0.97</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.95</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.91</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">),</span> 
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>                <span class="p">(</span><span class="mf">0.88</span><span class="p">,</span> <span class="mf">0.09</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.83</span><span class="p">,</span> <span class="mf">0.13</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.79</span><span class="p">,</span> <span class="mf">0.17</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">),</span> 
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>                <span class="p">(</span><span class="mf">0.745</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.055</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.68</span><span class="p">,</span> <span class="mf">0.26</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.62</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.08</span><span class="p">),</span> 
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>                <span class="p">(</span><span class="mf">0.49</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.11</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.33</span><span class="p">,</span> <span class="mf">0.49</span><span class="p">,</span> <span class="mf">0.18</span><span class="p">)]</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="n">points</span> <span class="o">=</span> <span class="n">left_eq_line</span> <span class="o">+</span> <span class="n">right_eq_line</span>
+</span></code></pre></div>
+<p>We also set the scale of our plot to 100 in the <code>__init__ function</code>. This is the value that each tuple must sum up to.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="bp">self</span><span class="o">.</span><span class="n">scale</span> <span class="o">=</span> <span class="mi">100</span>
+</span></code></pre></div>
+<p>To start using the Three Component class, we can use the following code:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span> <span class="nn">fqlearn</span> <span class="kn">import</span> <span class="n">ThreeComponent</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">model</span> <span class="o">=</span> <span class="n">ThreeComponent</span><span class="p">()</span>
+</span></code></pre></div>
+<p>We can then call the functions as needed. We define a function <code>sort_points</code> that sorts the values it receives as an argument. The points are added using the <code>add_point</code> function, which ensures that the argument is not an empty list, removes duplicate tuples, and multiplies each point in the tuple by the scale. </p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">def</span> <span class="nf">add_point</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">points</span><span class="p">):</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="c1"># Check if points is an empty list</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="n">points</span><span class="p">:</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>            <span class="s2">&quot;The &#39;points&#39; list cannot be empty. Please provide valid points.&quot;</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>        <span class="p">)</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    <span class="c1"># Remove duplicate points</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    <span class="n">points_to_plot</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">points</span><span class="p">))</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="c1"># Multiply each point by the scale</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    <span class="n">points_to_plot</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>        <span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span><span class="p">,</span> <span class="n">y</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span><span class="p">,</span> <span class="n">z</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span><span class="p">)</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>        <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="ow">in</span> <span class="n">points_to_plot</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>    <span class="p">]</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>    <span class="c1"># Add the points to the plot</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">tax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">points_to_plot</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>    <span class="k">return</span> <span class="n">points_to_plot</span>
+</span></code></pre></div>
+<p>The <code>sort_points</code> function sorts the tuples using the x value in each tuple, then adds them to a new list. This allows us to have the tuples sorted in ascending order along the x-axis. The function also ensures that all points in the tuple(s) in the sorted list add up to the scale.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">def</span> <span class="nf">sort_points</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">points</span><span class="p">):</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="n">points_to_plot</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_point</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="c1"># Sort the points in ascending order</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="n">xyz</span> <span class="o">=</span> <span class="p">[(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="ow">in</span> <span class="n">points_to_plot</span><span class="p">]</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="n">sorted_points</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">xyz</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">m</span><span class="p">:</span> <span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="c1"># New list to store sorted points</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    <span class="n">new_sorted_points</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    <span class="c1"># Check if the points are in a list of lists or a single list</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>        <span class="n">sorted_points</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>    <span class="p">):</span>  <span class="c1"># Check if the first element of points is a number</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>        <span class="k">assert</span> <span class="n">sorted_points</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">sorted_points</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">sorted_points</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>        <span class="n">new_sorted_points</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sorted_points</span><span class="p">)</span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>        <span class="c1"># If the points are in a list of lists</span>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>        <span class="k">for</span> <span class="n">sorted_point</span> <span class="ow">in</span> <span class="n">sorted_points</span><span class="p">:</span>
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>            <span class="k">assert</span> <span class="n">sorted_point</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">sorted_point</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">sorted_point</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span>
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>            <span class="n">new_sorted_points</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sorted_point</span><span class="p">)</span>
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>    <span class="c1"># Add the points to the plot</span>
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">tax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">new_sorted_points</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>    <span class="k">return</span> <span class="n">new_sorted_points</span>
+</span></code></pre></div>
+<p>If we print the returned values, we get the following output, where each tuple is arranged in ascending order according to the x values:
+<div class="language-console highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="go">[(2.0, 2.0, 96.0), (2.5, 6.0, 91.5), (3.0, 10.0, 87.0), (3.5000000000000004, 16.0, 80.5), (4.0, 20.0, 76.0), (4.5, 25.0, 70.5), (5.0, 30.0, 65.0), (7.000000000000001, 36.0, 56.99999999999999), (9.0, 40.0, 51.0), (14.000000000000002, 48.0, 38.0), (33.0, 49.0, 18.0), (49.0, 40.0, 11.0), (62.0, 30.0, 8.0), (68.0, 26.0, 6.0), (74.5, 20.0, 5.5), (79.0, 17.0, 4.0), (83.0, 13.0, 4.0), (88.0, 9.0, 3.0), (91.0, 6.0, 3.0), (95.0, 3.0, 2.0), (97.0, 1.0, 2.0)]</span>
+</span></code></pre></div></p>
+<p>We can then call the <code>plot</code> function, to plot the ternary phase diagram in order to visualize the plotted points.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">tax</span><span class="o">.</span><span class="n">clear_matplotlib_ticks</span><span class="p">()</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">tax</span><span class="o">.</span><span class="n">get_axes</span><span class="p">()</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">tax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="n">ternary</span><span class="o">.</span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+<p>We obtain the ternary plot shown below:</p>
+<p><img alt="Adding points to the ternary plot" src="add_point.png" /></p>
+<p>We define the <code>composition_line</code> function which plots equilibrium lines joining the tuples corresponding to the two compositions in each index in the list of tuples. This function first multiplies each point in each tuple by the scale, then sorts the list of the left composition in ascending order, and the list of the right composition in descending order. For each tuple, the x, y and z values are extracted, then joined using equilibrium lines.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">def</span> <span class="nf">composition_line</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">left_eq_line</span><span class="p">,</span> <span class="n">right_eq_line</span><span class="p">):</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="c1"># Multiply each point by the scale</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    <span class="n">new_left_eq_line</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>        <span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span><span class="p">,</span> <span class="n">y</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span><span class="p">,</span> <span class="n">z</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="ow">in</span> <span class="n">left_eq_line</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    <span class="p">]</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    <span class="n">new_right_eq_line</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>        <span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span><span class="p">,</span> <span class="n">y</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span><span class="p">,</span> <span class="n">z</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span><span class="p">)</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>        <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="ow">in</span> <span class="n">right_eq_line</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>    <span class="p">]</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>    <span class="c1"># Sort the left points in ascending order</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>    <span class="n">xyz</span> <span class="o">=</span> <span class="p">[(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="ow">in</span> <span class="n">new_left_eq_line</span><span class="p">]</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>    <span class="n">sorted_left_eq_line</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">xyz</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">m</span><span class="p">:</span> <span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>    <span class="c1"># Sort the right points in descending order</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>    <span class="n">xyz</span> <span class="o">=</span> <span class="p">[(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="ow">in</span> <span class="n">new_right_eq_line</span><span class="p">]</span>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>    <span class="n">sorted_right_eq_line</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">xyz</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">m</span><span class="p">:</span> <span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">left_eq_line</span><span class="p">)):</span>
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>        <span class="c1"># Ensure all points add up to the scale</span>
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>        <span class="n">pointA</span> <span class="o">=</span> <span class="n">sorted_left_eq_line</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>        <span class="k">assert</span> <span class="nb">sum</span><span class="p">(</span><span class="n">pointA</span><span class="p">)</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span>
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>        <span class="n">pointB</span> <span class="o">=</span> <span class="n">sorted_right_eq_line</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>        <span class="k">assert</span> <span class="nb">sum</span><span class="p">(</span><span class="n">pointB</span><span class="p">)</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span>
+</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>
+</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>        <span class="c1"># Extract x and y coordinates of each point</span>
+</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>        <span class="n">xA</span><span class="p">,</span> <span class="n">yA</span><span class="p">,</span> <span class="n">zA</span> <span class="o">=</span> <span class="n">pointA</span>
+</span><span id="__span-8-27"><a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a>        <span class="n">xB</span><span class="p">,</span> <span class="n">yB</span><span class="p">,</span> <span class="n">zB</span> <span class="o">=</span> <span class="n">pointB</span>
+</span><span id="__span-8-28"><a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a>
+</span><span id="__span-8-29"><a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a>        <span class="c1"># Add the two points to the plot</span>
+</span><span id="__span-8-30"><a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">tax</span><span class="o">.</span><span class="n">scatter</span><span class="p">([(</span><span class="n">xA</span><span class="p">,</span> <span class="n">yA</span><span class="p">,</span> <span class="n">zA</span><span class="p">),</span> <span class="p">(</span><span class="n">xB</span><span class="p">,</span> <span class="n">yB</span><span class="p">,</span> <span class="n">zB</span><span class="p">)],</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;s&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+</span><span id="__span-8-31"><a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a>        <span class="c1"># Plot a line connecting the two points</span>
+</span><span id="__span-8-32"><a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">tax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+</span><span id="__span-8-33"><a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a>            <span class="p">[(</span><span class="n">xA</span><span class="p">,</span> <span class="n">yA</span><span class="p">,</span> <span class="n">zA</span><span class="p">),</span> <span class="p">(</span><span class="n">xB</span><span class="p">,</span> <span class="n">yB</span><span class="p">,</span> <span class="n">zB</span><span class="p">)],</span>
+</span><span id="__span-8-34"><a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a>            <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
+</span><span id="__span-8-35"><a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a>            <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span>
+</span><span id="__span-8-36"><a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a>        <span class="p">)</span>
+</span></code></pre></div>
+<p>We obtain the following ternary plot:</p>
+<p><img alt="Equilibrium line joining two compositions" src="solute_points.png" /></p>
+<p>We can calculate the slope of the equilibrium lines plotted above using the function <code>eq_slope</code>. We loop through each tuple of each composition in each index, extract the x and y values, and find the slope, by dividing the change in y by the change in x for each index. The function returns the average slope.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">def</span> <span class="nf">eq_slope</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">right_eq_line</span><span class="p">,</span> <span class="n">left_eq_line</span><span class="p">):</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="c1"># Multiply each point by the scale</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    <span class="n">right_eq_line</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>        <span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span><span class="p">,</span> <span class="n">y</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span><span class="p">,</span> <span class="n">z</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span><span class="p">)</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>        <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="ow">in</span> <span class="n">right_eq_line</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    <span class="p">]</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    <span class="n">left_eq_line</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>        <span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span><span class="p">,</span> <span class="n">y</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span><span class="p">,</span> <span class="n">z</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="ow">in</span> <span class="n">left_eq_line</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    <span class="p">]</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>    <span class="c1"># Sort the right points in ascending order</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>    <span class="n">xyz</span> <span class="o">=</span> <span class="p">[(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="ow">in</span> <span class="n">right_eq_line</span><span class="p">]</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>    <span class="n">right_eq</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">xyz</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">m</span><span class="p">:</span> <span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>    <span class="c1"># Sort the left points in descending order</span>
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>    <span class="n">xyz</span> <span class="o">=</span> <span class="p">[(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="ow">in</span> <span class="n">left_eq_line</span><span class="p">]</span>
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>    <span class="n">left_eq</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">xyz</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">m</span><span class="p">:</span> <span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>
+</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>    <span class="n">slopes</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span id="__span-9-19"><a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>
+</span><span id="__span-9-20"><a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">right_eq_line</span><span class="p">)):</span>
+</span><span id="__span-9-21"><a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>        <span class="n">pointA</span> <span class="o">=</span> <span class="n">right_eq</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span><span id="__span-9-22"><a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>        <span class="k">assert</span> <span class="nb">sum</span><span class="p">(</span><span class="n">pointA</span><span class="p">)</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span>
+</span><span id="__span-9-23"><a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a>        <span class="n">pointB</span> <span class="o">=</span> <span class="n">left_eq</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span><span id="__span-9-24"><a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a>        <span class="k">assert</span> <span class="nb">sum</span><span class="p">(</span><span class="n">pointB</span><span class="p">)</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span>
+</span><span id="__span-9-25"><a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a>
+</span><span id="__span-9-26"><a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a>        <span class="c1"># Extract x and y coordinates of each point</span>
+</span><span id="__span-9-27"><a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a>        <span class="n">xA</span><span class="p">,</span> <span class="n">yA</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">pointA</span>
+</span><span id="__span-9-28"><a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a>        <span class="n">xB</span><span class="p">,</span> <span class="n">yB</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">pointB</span>
+</span><span id="__span-9-29"><a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a>
+</span><span id="__span-9-30"><a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a>        <span class="c1"># Calculate the slope of the line joining the points</span>
+</span><span id="__span-9-31"><a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a>        <span class="k">if</span> <span class="n">xA</span> <span class="o">-</span> <span class="n">xB</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># Check for vertical line</span>
+</span><span id="__span-9-32"><a id="__codelineno-9-32" name="__codelineno-9-32" href="#__codelineno-9-32"></a>            <span class="n">slope</span> <span class="o">=</span> <span class="p">(</span><span class="n">yA</span> <span class="o">-</span> <span class="n">yB</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">xA</span> <span class="o">-</span> <span class="n">xB</span><span class="p">)</span>
+</span><span id="__span-9-33"><a id="__codelineno-9-33" name="__codelineno-9-33" href="#__codelineno-9-33"></a>            <span class="n">slopes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">slope</span><span class="p">)</span>
+</span><span id="__span-9-34"><a id="__codelineno-9-34" name="__codelineno-9-34" href="#__codelineno-9-34"></a>        <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-9-35"><a id="__codelineno-9-35" name="__codelineno-9-35" href="#__codelineno-9-35"></a>            <span class="c1"># For vertical lines, return None for slope</span>
+</span><span id="__span-9-36"><a id="__codelineno-9-36" name="__codelineno-9-36" href="#__codelineno-9-36"></a>            <span class="n">slopes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-9-37"><a id="__codelineno-9-37" name="__codelineno-9-37" href="#__codelineno-9-37"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Slope = &quot;</span><span class="p">,</span> <span class="n">slopes</span><span class="p">)</span>
+</span><span id="__span-9-38"><a id="__codelineno-9-38" name="__codelineno-9-38" href="#__codelineno-9-38"></a>
+</span><span id="__span-9-39"><a id="__codelineno-9-39" name="__codelineno-9-39" href="#__codelineno-9-39"></a>    <span class="c1"># Calculate average of the slopes</span>
+</span><span id="__span-9-40"><a id="__codelineno-9-40" name="__codelineno-9-40" href="#__codelineno-9-40"></a>    <span class="n">avg_slope</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">slopes</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">slopes</span><span class="p">)</span>
+</span><span id="__span-9-41"><a id="__codelineno-9-41" name="__codelineno-9-41" href="#__codelineno-9-41"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Average slope = &quot;</span><span class="p">,</span> <span class="n">avg_slope</span><span class="p">)</span>
+</span><span id="__span-9-42"><a id="__codelineno-9-42" name="__codelineno-9-42" href="#__codelineno-9-42"></a>    <span class="k">return</span> <span class="n">avg_slope</span>
+</span></code></pre></div>
+<p>We obtain the following output:
+<div class="language-console highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="go">Slope =  [-0.010526315789473684, -0.032432432432432434, -0.045454545454545456, -0.08284023668639054, -0.08860759493670886, -0.10738255033557047, -0.14388489208633093, -0.16393442622950818, -0.18867924528301888, -0.22857142857142856, 0]</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="go">Average slope =  -0.09930124252776436</span>
+</span></code></pre></div></p>
+<p>We can also plot a ternary phase diagram with an equilibrium line joining all the plotted points, like in a graph, by calling the <code>add_eq_line</code> function.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">def</span> <span class="nf">add_eq_line</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">right_eq_line</span><span class="p">,</span> <span class="n">left_eq_line</span><span class="p">):</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    <span class="c1"># Add the points</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">right_eq_line</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sort_points</span><span class="p">(</span><span class="n">right_eq_line</span><span class="p">)</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">left_eq_line</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sort_points</span><span class="p">(</span><span class="n">left_eq_line</span><span class="p">)</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    <span class="n">eq_line</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">right_eq_line</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">left_eq_line</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    <span class="c1"># Remove duplicate points</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>    <span class="n">eq_line_plot</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">eq_line</span><span class="p">))</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>    <span class="c1"># Sort the points in ascending order</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>    <span class="n">xyz</span> <span class="o">=</span> <span class="p">[(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="ow">in</span> <span class="n">eq_line_plot</span><span class="p">]</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>    <span class="n">sorted_eq</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">xyz</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">m</span><span class="p">:</span> <span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">tax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sorted_eq</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Equilibrium line&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>We get the ternary plot below:</p>
+<p><img alt="Joining points with an equilibrium line" src="eq_line.png" /></p>
+<p>However, the equilibrium line plotted above is not smooth. To generate a smooth line, we use the <code>interpolate_points</code> function. </p>
+<p>We first sort the points using the <code>sort_points</code> function. Then we extract the x and y values from the sorted points, ignoring the z values which will not be used. Variable <code>x</code> becomes a list of all x values and variable <code>y</code> becomes a list of all y values. After that, we perform cubic spline interpolation on the x and y values using the CubicSpline function, imported from the scipy.interpolate module of SciPy's library [<a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.CubicSpline.html">2</a>]. <code>bc_type="natural"</code> specifies the natural boundary conditions, meaning the second derivative of the spline at the boundaries will be set to zero. <code>x_cubic</code> is set to a linearly spaced array of values ranging from 0 to 100 with 100 number of points, which is the value of <code>self.scale</code>, and <code>y_cubic</code> contains the corresponding y values interpolated using the cubic spline function <code>f</code>. Then we filter out any points outside the specified range of 0 to 100 for both <code>x_cubic</code> and <code>y_cubic</code>, and use the <code>np.column_stack</code> function to combine <code>x_cubic</code> and <code>y_cubic</code> into a single 2D array, which is returned by the function as <code>interpolated_points</code>.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">def</span> <span class="nf">interpolate_points</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">points</span><span class="p">):</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    <span class="n">sorted_points</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sort_points</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>    <span class="c1"># Cubic spline interpolation</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>    <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">sorted_points</span><span class="p">]</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>    <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">sorted_points</span><span class="p">]</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>    <span class="n">f</span> <span class="o">=</span> <span class="n">CubicSpline</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">bc_type</span><span class="o">=</span><span class="s2">&quot;natural&quot;</span><span class="p">)</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>    <span class="n">x_cubic</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span><span class="p">)</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>    <span class="n">y_cubic</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x_cubic</span><span class="p">)</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>    <span class="c1"># Remove negative points</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>    <span class="n">interpolated_points</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>        <span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">((</span><span class="n">x_cubic</span><span class="p">,</span> <span class="n">y_cubic</span><span class="p">))</span>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>        <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span> <span class="ow">and</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span>
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>    <span class="p">]</span>
+</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>
+</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>    <span class="k">return</span> <span class="n">interpolated_points</span>
+</span></code></pre></div>
+<p>Printing the output of the function, we obtain the output below, showing the interpolated points:
+<div class="language-console highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="go">[[2.0202020202020203, 2.1691472640742586], [3.0303030303030303, 10.329514857514697], [4.040404040404041, 20.340775738329878], [5.050505050505051, 30.41604117022922], [6.0606060606060606, 34.9725244736696], [7.070707070707071, 36.0788150823154], [8.080808080808081, 37.866519430111914], [9.090909090909092, 40.207639450509895], [10.101010101010102, 42.33305618527275], [11.111111111111112, 44.15164951408806], [12.121212121212121, 45.70152886497335], [13.131313131313131, 47.02080366594621], [14.141414141414142, 48.147569717383064], [15.151515151515152, 49.11261947676193], [16.161616161616163, 49.927423194367556], [17.171717171717173, 50.600292249170636], [18.181818181818183, 51.13953802014185], [19.191919191919194, 51.55347188625187], [20.202020202020204, 51.850405226471395], [21.212121212121215, 52.038649419771076], [22.222222222222225, 52.12651584512162], [23.232323232323235, 52.122315881493684], [24.242424242424242, 52.03436090785797], [25.252525252525253, 51.87096230318516], [26.262626262626263, 51.640431446445916], [27.272727272727273, 51.35107971661092], [28.282828282828284, 51.011218492650855], [29.292929292929294, 50.62915915353641], [30.303030303030305, 50.213213078238255], [31.313131313131315, 49.771691645727074], [32.323232323232325, 49.31290623497355], [33.333333333333336, 48.84510804535748], [34.343434343434346, 48.37284930204433], [35.35353535353536, 47.89489752249601], [36.36363636363637, 47.409516570717145], [37.37373737373738, 46.91497031071236], [38.38383838383839, 46.40952260648627], [39.3939393939394, 45.891437322043494], [40.40404040404041, 45.358978321388655], [41.41414141414142, 44.81040946852637], [42.42424242424243, 44.24399462746127], [43.43434343434344, 43.65799766219796], [44.44444444444445, 43.050682436741056], [45.45454545454546, 42.4203128150952], [46.46464646464647, 41.765152661265006], [47.47474747474748, 41.083465839255076], [48.484848484848484, 40.373516213070054], [49.494949494949495, 39.63371670174959], [50.505050505050505, 38.86607499990182], [51.515151515151516, 38.076288591118626], [52.525252525252526, 37.270223020764256], [53.535353535353536, 36.45374383420295], [54.54545454545455, 35.63271657679892], [55.55555555555556, 34.81300679391643], [56.56565656565657, 34.000480030919704], [57.57575757575758, 33.201001833172974], [58.58585858585859, 32.42043774604049], [59.5959595959596, 31.664653314886465], [60.60606060606061, 30.93951408507516], [61.61616161616162, 30.250885601970786], [62.62626262626263, 29.60336029919871], [63.63636363636364, 28.983912044764498], [64.64646464646465, 28.366648419185424], [65.65656565656566, 27.72538388514391], [66.66666666666667, 27.0339329053224], [67.67676767676768, 26.26610994240331], [68.68686868686869, 25.39917799115036], [69.6969696969697, 24.44860975371087], [70.70707070707071, 23.453665293050822], [71.71717171717172, 22.45396405508463], [72.72727272727273, 21.489125485726685], [73.73737373737374, 20.59876903089141], [74.74747474747475, 19.822230508859366], [75.75757575757576, 19.162761793258028], [76.76767676767678, 18.552564414178864], [77.77777777777779, 17.915539652280298], [78.7878787878788, 17.175588788220747], [79.7979797979798, 16.27016258697005], [80.80808080808082, 15.240129979240486], [81.81818181818183, 14.174027140890017], [82.82828282828284, 13.160644754568583], [83.83838383838385, 12.27416074496895], [84.84848484848486, 11.4905826393484], [85.85858585858587, 10.745488901010873], [86.86868686868688, 9.974332435176901], [87.87878787878789, 9.112566147067007], [88.8888888888889, 8.11684009659671], [89.89898989898991, 7.065697936762742], [90.90909090909092, 6.081168542871885], [91.91919191919193, 5.257512388433542], [92.92929292929294, 4.543021889369125], [93.93939393939395, 3.8382841183777483], [94.94949494949496, 3.043859233178794], [95.95959595959597, 2.0885249765853326], [96.96969696969697, 1.0322241687602192]]</span>
+</span></code></pre></div></p>
+<p>Next, we define a function, <code>div_half</code>, to divide an equilibrium line in half, and thus dividing the interpolated points in the left side from those in the right side. Before that, we define some helper functions, <code>derivative</code> and <code>min_diff</code>. </p>
+<p>The <code>derivative</code> function extracts the x and y values, then calculates the n-th discrete difference between these values using NumPy's np.diff [<a href="https://numpy.org/doc/stable/reference/generated/numpy.diff.html">3</a>]. The first value of dydx is given by dydx[i] = (y[i+1] - y[i])/(x[i+1] - x[i]) along the given axis and higher differences are calculated by using np.diff recursively.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">def</span> <span class="nf">derivative</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">points</span><span class="p">):</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>    <span class="n">points_to_derive</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">interpolate_points</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    <span class="c1"># Extract x and y values</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>    <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">points_to_derive</span><span class="p">]</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>    <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span> <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">points_to_derive</span><span class="p">]</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>    <span class="c1"># Calculate derivative</span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>    <span class="n">dydx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">([</span><span class="n">y</span><span class="p">])</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">([</span><span class="n">x</span><span class="p">])</span>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>    <span class="k">return</span> <span class="n">dydx</span>
+</span></code></pre></div>
+<p>We can print out dydx to see the output:
+<div class="language-console highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="go">[[ 8.07876392e+00  9.91114827e+00  9.97451278e+00  4.51091847e+00</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="go">   1.09522770e+00  1.76982730e+00  2.31770882e+00  2.10416257e+00</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="go">   1.80040740e+00  1.53438056e+00  1.30608205e+00  1.11549839e+00</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="go">   9.55399262e-01  8.06655680e-01  6.66140364e-01  5.33853313e-01</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="go">   4.09794527e-01  2.93964007e-01  1.86361751e-01  8.69877611e-02</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="go">  -4.15796399e-03 -8.70754239e-02 -1.61764619e-01 -2.28225548e-01</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="go">  -2.86458213e-01 -3.36462612e-01 -3.78238746e-01 -4.11786615e-01</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="go">  -4.37106218e-01 -4.54197557e-01 -4.63120208e-01 -4.67536156e-01</span>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="go">  -4.73172262e-01 -4.80527142e-01 -4.89600797e-01 -5.00393227e-01</span>
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="go">  -5.12904432e-01 -5.27134411e-01 -5.43083164e-01 -5.60750693e-01</span>
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="go">  -5.80136996e-01 -6.01242073e-01 -6.24065925e-01 -6.48608552e-01</span>
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="go">  -6.74869954e-01 -7.02850130e-01 -7.32401516e-01 -7.59965285e-01</span>
+</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="go">  -7.81888545e-01 -7.98004915e-01 -8.08314395e-01 -8.12816985e-01</span>
+</span><span id="__span-15-14"><a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="go">  -8.11512685e-01 -8.04401495e-01 -7.91483416e-01 -7.72758446e-01</span>
+</span><span id="__span-15-15"><a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a><span class="go">  -7.48226587e-01 -7.17887838e-01 -6.81742198e-01 -6.41050050e-01</span>
+</span><span id="__span-15-16"><a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a><span class="go">  -6.13253772e-01 -6.11090989e-01 -6.34851889e-01 -6.84536470e-01</span>
+</span><span id="__span-15-17"><a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a><span class="go">  -7.60144733e-01 -8.58262632e-01 -9.41062555e-01 -9.84995016e-01</span>
+</span><span id="__span-15-18"><a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a><span class="go">  -9.89704226e-01 -9.55190184e-01 -8.81452890e-01 -7.68773137e-01</span>
+</span><span id="__span-15-19"><a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a><span class="go">  -6.52874028e-01 -6.04095405e-01 -6.30654514e-01 -7.32551355e-01</span>
+</span><span id="__span-15-20"><a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a><span class="go">  -8.96371939e-01 -1.01973228e+00 -1.05544181e+00 -1.00324856e+00</span>
+</span><span id="__span-15-21"><a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a><span class="go">  -8.77619170e-01 -7.75742325e-01 -7.37642801e-01 -7.63444901e-01</span>
+</span><span id="__span-15-22"><a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a><span class="go">  -8.53148625e-01 -9.85768790e-01 -1.04063074e+00 -9.74684100e-01</span>
+</span><span id="__span-15-23"><a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a><span class="go">  -8.15419593e-01 -7.07345594e-01 -6.97690393e-01 -7.86480636e-01</span>
+</span><span id="__span-15-24"><a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a><span class="go">  -9.45780914e-01 -1.04573780e+00]]</span>
+</span></code></pre></div></p>
+<p>Then we use the <code>min_diff</code> function to find the index of the point that is at the centre of the equilibrium line, which divides it into 2 halves. Starting with an index value of zero and a minimum difference given by the difference between the absolute of the first <code>dydx</code> value and the average slope, we iterate over the indices of <code>dydx</code> to find the index of the <code>dydx</code> value which is closest to the average slope <code>avg_slope</code>.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">def</span> <span class="nf">min_diff</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">right_eq_line</span><span class="p">,</span> <span class="n">left_eq_line</span><span class="p">):</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">points</span> <span class="o">=</span> <span class="n">right_eq_line</span> <span class="o">+</span> <span class="n">left_eq_line</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>    <span class="n">dydx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">derivative</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">points</span><span class="p">)</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>    <span class="n">avg_slope</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">eq_slope</span><span class="p">(</span><span class="n">right_eq_line</span><span class="p">,</span> <span class="n">left_eq_line</span><span class="p">)</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>    <span class="n">min_index</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>    <span class="c1"># Initialize min_diff_value with the first element difference</span>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>    <span class="n">min_diff_value</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">dydx</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">avg_slope</span><span class="p">)</span>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>    <span class="c1"># Iterate over indices of dydx</span>
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>    <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">dydx</span><span class="o">.</span><span class="n">size</span><span class="p">):</span>
+</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>        <span class="n">diff</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">dydx</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">index</span><span class="p">]</span> <span class="o">-</span> <span class="n">avg_slope</span><span class="p">)</span>
+</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>        <span class="k">if</span> <span class="n">diff</span> <span class="o">&lt;</span> <span class="n">min_diff_value</span><span class="p">:</span>
+</span><span id="__span-16-14"><a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a>            <span class="n">min_diff_value</span> <span class="o">=</span> <span class="n">diff</span>
+</span><span id="__span-16-15"><a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a>            <span class="n">min_index</span> <span class="o">=</span> <span class="n">index</span>
+</span><span id="__span-16-16"><a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a>
+</span><span id="__span-16-17"><a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a>    <span class="k">return</span> <span class="n">min_index</span>
+</span></code></pre></div>
+<p>We then define the <code>div_half</code> function that divides the equilibrium line precisely in half. We use the interpolated points from the <code>interpolate_points</code> function, which ensures that the point of division is very precise. Then we use the <code>min_diff</code> function to obtain the index of the point dividing the equilibrium line in half. Using this index, we can halve the interpolated points, and plot two equilibrium lines on the right and left side of the ternary plot using these points.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">def</span> <span class="nf">div_half</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">right_eq_line</span><span class="p">,</span> <span class="n">left_eq_line</span><span class="p">):</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    <span class="c1"># Add the points</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">points</span> <span class="o">=</span> <span class="n">right_eq_line</span> <span class="o">+</span> <span class="n">left_eq_line</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>    <span class="n">interpolated_points</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">interpolate_points</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">points</span><span class="p">)</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>    <span class="c1"># Use index to separate right and left side</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>    <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">min_diff</span><span class="p">(</span><span class="n">right_eq_line</span><span class="p">,</span> <span class="n">left_eq_line</span><span class="p">)</span>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">interpolated_right_side</span> <span class="o">=</span> <span class="n">interpolated_points</span><span class="p">[</span><span class="n">index</span><span class="p">:]</span>
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">interpolated_left_side</span> <span class="o">=</span> <span class="n">interpolated_points</span><span class="p">[:</span> <span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>
+</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>    <span class="c1"># Plot the curve</span>
+</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">tax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+</span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">interpolated_right_side</span><span class="p">,</span>
+</span><span id="__span-17-14"><a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>        <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
+</span><span id="__span-17-15"><a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>        <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span>
+</span><span id="__span-17-16"><a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a>        <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Right interpolated curve&quot;</span><span class="p">,</span>
+</span><span id="__span-17-17"><a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a>    <span class="p">)</span>
+</span><span id="__span-17-18"><a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">tax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+</span><span id="__span-17-19"><a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">interpolated_left_side</span><span class="p">,</span>
+</span><span id="__span-17-20"><a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a>        <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
+</span><span id="__span-17-21"><a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a>        <span class="n">color</span><span class="o">=</span><span class="s2">&quot;orange&quot;</span><span class="p">,</span>
+</span><span id="__span-17-22"><a id="__codelineno-17-22" name="__codelineno-17-22" href="#__codelineno-17-22"></a>        <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Left interpolated curve&quot;</span><span class="p">,</span>
+</span><span id="__span-17-23"><a id="__codelineno-17-23" name="__codelineno-17-23" href="#__codelineno-17-23"></a>    <span class="p">)</span>
+</span></code></pre></div>
+<p>We obtain the following ternary plot:</p>
+<p><img alt="Dividing the interpolated points in half" src="div_half.png" /></p>
+<h2 id="acknowledgements">Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permanent link"> #</a></h2>
+<p>I would like to thank the <a href="https://opensciencelabs.org/">Open Science Labs</a> and The Graph Network for giving me the opportunity to learn and gain experience in open source through this internship. I also thank <a href="https://github.com/EverVino">Ever Vino</a> for his guidance and mentorship throughout this internship program. If you would like to connect with me, you can find me on <a href="https://www.linkedin.com/in/faithhunja">LinkedIn</a>, or check out my <a href="https://faithhunja.github.io/">personal website</a>.</p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link"> #</a></h2>
+<p>[1] Ternary plots - Wikipedia: <a href="https://en.wikipedia.org/wiki/Ternary_plot">https://en.wikipedia.org/wiki/Ternary_plot</a></p>
+<p>[2] scipy.interpolate.CubicSpline - SciPy v1.13.1 Manual: <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.CubicSpline.html">https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.CubicSpline.html</a></p>
+<p>[3] numpy.diff - NumPy v1.26 Manual: <a href="https://numpy.org/doc/stable/reference/generated/numpy.diff.html">https://numpy.org/doc/stable/reference/generated/numpy.diff.html</a></p>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</section>
+
+        </section>
+      </div>
+    </main>
+    <svg width="0" height="0" class="hidden">
+      <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="facebook">
+        <path d="M437 0H75C33.648.0.0 33.648.0 75v362c0 41.352 33.648 75 75 75h151V331h-60v-90h60v-61c0-49.629 40.371-90 90-90h91v90h-91v61h91l-15 90h-76v181h121c41.352.0 75-33.648 75-75V75c0-41.352-33.648-75-75-75zm0 0"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.001 18.001" id="twitter">
+        <path d="M15.891 4.013c.808-.496 1.343-1.173 1.605-2.034a8.68 8.68.0 01-2.351.861c-.703-.756-1.593-1.14-2.66-1.14-1.043.0-1.924.366-2.643 1.078A3.56 3.56.0 008.766 5.383c0 .309.039.585.117.819-3.076-.105-5.622-1.381-7.628-3.837-.34.601-.51 1.213-.51 1.846.0 1.301.549 2.332 1.645 3.089-.625-.053-1.176-.211-1.645-.47.0.929.273 1.705.82 2.388a3.623 3.623.0 002.115 1.291c-.312.08-.641.118-.979.118-.312.0-.533-.026-.664-.083.23.757.664 1.371 1.291 1.841a3.652 3.652.0 002.152.743C4.148 14.173 2.625 14.69.902 14.69c-.422.0-.721-.006-.902-.038 1.697 1.102 3.586 1.649 5.676 1.649 2.139.0 4.029-.542 5.674-1.626 1.645-1.078 2.859-2.408 3.639-3.974a10.77 10.77.0 001.172-4.892v-.468a7.788 7.788.0 001.84-1.921 8.142 8.142.0 01-2.11.593z"/>
+      </symbol>
+      <symbol aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="mail">
+        <path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V4e2c0 26.5-21.5 48-48 48H48c-26.5.0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5.0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="calendar">
+        <path d="M452 40h-24V0h-40v40H124V0H84v40H60C26.916 40 0 66.916.0 1e2v352c0 33.084 26.916 60 60 60h392c33.084.0 60-26.916 60-60V1e2c0-33.084-26.916-60-60-60zm20 412c0 11.028-8.972 20-20 20H60c-11.028.0-20-8.972-20-20V188h432v264zm0-304H40v-48c0-11.028 8.972-20 20-20h24v40h40V80h264v40h40V80h24c11.028.0 20 8.972 20 20v48z"/>
+        <path d="M76 230h40v40H76zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zM76 310h40v40H76zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zM76 390h40v40H76zm80 0h40v40h-40zm80 0h40v40h-40zm80 0h40v40h-40zm80-80h40v40h-40z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="github">
+        <path d="M255.968 5.329C114.624 5.329.0 120.401.0 262.353c0 113.536 73.344 209.856 175.104 243.872 12.8 2.368 17.472-5.568 17.472-12.384.0-6.112-.224-22.272-.352-43.712-71.2 15.52-86.24-34.464-86.24-34.464-11.616-29.696-28.416-37.6-28.416-37.6-23.264-15.936 1.728-15.616 1.728-15.616 25.696 1.824 39.2 26.496 39.2 26.496 22.848 39.264 59.936 27.936 74.528 21.344 2.304-16.608 8.928-27.936 16.256-34.368-56.832-6.496-116.608-28.544-116.608-127.008.0-28.064 9.984-51.008 26.368-68.992-2.656-6.496-11.424-32.64 2.496-68 0 0 21.504-6.912 70.4 26.336 20.416-5.696 42.304-8.544 64.096-8.64 21.728.128 43.648 2.944 64.096 8.672 48.864-33.248 70.336-26.336 70.336-26.336 13.952 35.392 5.184 61.504 2.56 68 16.416 17.984 26.304 40.928 26.304 68.992.0 98.72-59.84 120.448-116.864 126.816 9.184 7.936 17.376 23.616 17.376 47.584.0 34.368-.32 62.08-.32 70.496.0 6.88 4.608 14.88 17.6 12.352C438.72 472.145 512 375.857 512 262.353 512 120.401 397.376 5.329 255.968 5.329z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212 212" id="gitlab">
+        <path d="M12.3 74.7h54L43.3 3c-1-3.6-6.4-3.6-7.6.0L12.3 74.8z"/>
+        <path d="M12.3 74.7.5 111c-1 3.2.0 6.8 3 8.8l101.6 74-92.5-119z"/>
+        <path d="M105 193.7l-38.6-119h-54l92.7 119z"/>
+        <path d="M105 193.7l38.7-119H66.4l38.7 119z"/>
+        <path d="M105 193.7l38.7-119H198l-93 119z"/>
+        <path d="M198 74.7l11.6 36.2c1 3 0 6.6-3 8.6l-101.5 74 93-119z"/>
+        <path d="M198 74.7h-54.3L167 3c1.2-3.6 6.4-3.6 7.6.0L198 74.8z"/>
+      </symbol>
+      <symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="rss">
+        <circle cx="3.429" cy="20.571" r="3.429"/>
+        <path d="M11.429 24h4.57C15.999 15.179 8.821 8.001.0 8v4.572c6.302.001 11.429 5.126 11.429 11.428z"/>
+        <path d="M24 24C24 10.766 13.234.0.0.0v4.571c10.714.0 19.43 8.714 19.43 19.429z"/>
+      </symbol>
+      <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="linkedin">
+        <path d="M437 0H75C33.648.0.0 33.648.0 75v362c0 41.352 33.648 75 75 75h362c41.352.0 75-33.648 75-75V75c0-41.352-33.648-75-75-75zM181 406h-60V196h60zm0-240h-60v-60h60zm210 240h-60V286c0-16.54-13.46-30-30-30s-30 13.46-30 30v120h-60V196h60v11.309C286.719 202.422 296.93 196 316 196c40.691.043 75 36.547 75 79.688zm0 0"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 612" id="to-top">
+        <path d="M604.501 440.509 325.398 134.956c-5.331-5.357-12.423-7.627-19.386-7.27-6.989-.357-14.056 1.913-19.387 7.27L7.499 440.509c-9.999 10.024-9.999 26.298.0 36.323s26.223 10.024 36.222.0l262.293-287.164L568.28 476.832c9.999 10.024 26.222 10.024 36.221.0 9.999-10.023 9.999-26.298.0-36.323z"/>
+      </symbol>
+      <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="carly">
+        <path d="M504.971 239.029 448 182.059V84c0-46.317-37.682-84-84-84h-44c-13.255.0-24 10.745-24 24s10.745 24 24 24h44c19.851.0 36 16.149 36 36v108c0 6.365 2.529 12.47 7.029 16.971L454.059 256l-47.029 47.029A24.002 24.002.0 004e2 320v108c0 19.851-16.149 36-36 36h-44c-13.255.0-24 10.745-24 24s10.745 24 24 24h44c46.318.0 84-37.683 84-84v-98.059l56.971-56.971c9.372-9.372 9.372-24.568.0-33.941zM112 192V84c0-19.851 16.149-36 36-36h44c13.255.0 24-10.745 24-24S205.255.0 192 0h-44c-46.318.0-84 37.683-84 84v98.059l-56.971 56.97c-9.373 9.373-9.373 24.568.0 33.941L64 329.941V428c0 46.317 37.682 84 84 84h44c13.255.0 24-10.745 24-24s-10.745-24-24-24h-44c-19.851.0-36-16.149-36-36V320c0-6.365-2.529-12.47-7.029-16.971L57.941 256l47.029-47.029A24.002 24.002.0 00112 192z"/>
+      </symbol>
+      <symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="copy">
+        <path d="M23 2.75A2.75 2.75.0 0020.25.0H8.75A2.75 2.75.0 006 2.75v13.5A2.75 2.75.0 008.75 19h11.5A2.75 2.75.0 0023 16.25zM18.25 14.5h-7.5a.75.75.0 010-1.5h7.5a.75.75.0 010 1.5zm0-3h-7.5a.75.75.0 010-1.5h7.5a.75.75.0 010 1.5zm0-3h-7.5a.75.75.0 010-1.5h7.5a.75.75.0 010 1.5z"/>
+        <path d="M8.75 20.5A4.255 4.255.0 014.5 16.25V2.75c0-.086.02-.166.025-.25H3.75A2.752 2.752.0 001 5.25v16A2.752 2.752.0 003.75 24h12a2.752 2.752.0 002.75-2.75v-.75z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.001 512.001" id="closeme">
+        <path d="M284.286 256.002 506.143 34.144c7.811-7.811 7.811-20.475.0-28.285-7.811-7.81-20.475-7.811-28.285.0L256 227.717 34.143 5.859c-7.811-7.811-20.475-7.811-28.285.0-7.81 7.811-7.811 20.475.0 28.285l221.857 221.857L5.858 477.859c-7.811 7.811-7.811 20.475.0 28.285a19.938 19.938.0 0014.143 5.857 19.94 19.94.0 0014.143-5.857L256 284.287l221.857 221.857c3.905 3.905 9.024 5.857 14.143 5.857s10.237-1.952 14.143-5.857c7.811-7.811 7.811-20.475.0-28.285L284.286 256.002z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="open-menu">
+        <path d="M492 236H20c-11.046.0-20 8.954-20 20s8.954 20 20 20h472c11.046.0 20-8.954 20-20s-8.954-20-20-20zm0-160H20C8.954 76 0 84.954.0 96s8.954 20 20 20h472c11.046.0 20-8.954 20-20s-8.954-20-20-20zm0 320H20c-11.046.0-20 8.954-20 20s8.954 20 20 20h472c11.046.0 20-8.954 20-20s-8.954-20-20-20z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="instagram">
+        <path d="M12 2.163c3.204.0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849.0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204.0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849.0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741.0 8.333.014 7.053.072c-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.668.072 4.948c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.668-.014 4.948-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403.0-6.162 2.759-6.162 6.162S8.597 18.163 12 18.163s6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zM12 16c-2.209.0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796.0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795.0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="youtube">
+        <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23.0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23.0C23.512 20.55 23.971 18.196 24 12c-.029-6.185-.484-8.549-4.385-8.816zM9 16V8l8 3.993L9 16z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="stackoverflow">
+        <path d="M21 27v-8h3v11H0V19h3v8h18z"/>
+        <path d="M17.1.2 15 1.8l7.9 10.6 2.1-1.6L17.1.2zm3.7 14.7L10.6 6.4l1.7-2 10.2 8.5-1.7 2zM7.2 12.3l12 5.6 1.1-2.4-12-5.6-1.1 2.4zm-1.8 6.8 13.56 1.96.17-2.38-13.26-2.55-.47 2.97zM19 25H5v-3h14v3z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="xing">
+        <path d="M18.188.0c-.517.0-.741.325-.927.66.0.0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211.0.375-.078.463-.22.089-.151.089-.346-.009-.536l-4.879-8.916c-.004-.006-.004-.016.0-.022L22.139.756c.095-.191.097-.387.006-.535C22.056.078 21.894.0 21.686.0h-3.498zM3.648 4.74c-.211.0-.385.074-.473.216-.09.149-.078.339.02.531l2.34 4.05c.004.01.004.016.0.021L1.86 16.051c-.099.188-.093.381.0.529.085.142.239.234.45.234h3.461c.518.0.766-.348.945-.667l3.734-6.609-2.378-4.155c-.172-.315-.434-.659-.962-.659H3.648v.016z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71 55" id="discord">
+        <path d="M60.1045 4.8978C55.5792 2.8214 50.7265 1.2916 45.6527.41542 45.5603.39851 45.468.440769 45.4204.525289 44.7963 1.6353 44.105 3.0834 43.6209 4.2216c-5.4572-.817-10.8864-.817-16.2317.0C26.905 3.0581 26.1886 1.6353 25.5617.525289 25.5141.443589 25.4218.40133 25.3294.41542c-5.071.87338-9.9237 2.40318-14.4518 4.48238C10.8384 4.9147 10.8048 4.9429 10.7825 4.9795 1.57795 18.7309-.943561 32.1443.293408 45.3914.299005 45.4562.335386 45.5182.385761 45.5576 6.45866 50.0174 12.3413 52.7249 18.1147 54.5195 18.2071 54.5477 18.305 54.5139 18.3638 54.4378 19.7295 52.5728 20.9469 50.6063 21.9907 48.5383 22.0523 48.4172 21.9935 48.2735 21.8676 48.2256 19.9366 47.4931 18.0979 46.6 16.3292 45.5858 16.1893 45.5041 16.1781 45.304 16.3068 45.2082 16.679 44.9293 17.0513 44.6391 17.4067 44.3461 17.471 44.2926 17.5606 44.2813 17.6362 44.3151c11.6196 5.3051 24.1992 5.3051 35.6817.0C53.3935 44.2785 53.4831 44.2898 53.5502 44.3433 53.9057 44.6363 54.2779 44.9293 54.6529 45.2082 54.7816 45.304 54.7732 45.5041 54.6333 45.5858c-1.7687 1.0339-3.6074 1.9073-5.5412 2.637C48.9662 48.2707 48.9102 48.4172 48.9718 48.5383c1.0662 2.0651 2.2836 4.0316 3.6241 5.8967C52.6519 54.5139 52.7526 54.5477 52.845 54.5195c5.8014-1.7946 11.684-4.5021 17.7569-8.9619C70.6551 45.5182 70.6887 45.459 70.6943 45.3942 72.1747 30.0791 68.2147 16.7757 60.1968 4.9823 60.1772 4.9429 60.1437 4.9147 60.1045 4.8978zM23.7259 37.3253c-3.4983.0-6.3808-3.2117-6.3808-7.156s2.8266-7.156 6.3808-7.156c3.5821.0 6.4367 3.2399 6.3807 7.156.0 3.9443-2.8266 7.156-6.3807 7.156zm23.5919.0c-3.4982.0-6.3807-3.2117-6.3807-7.156s2.8265-7.156 6.3807-7.156c3.5822.0 6.4367 3.2399 6.3808 7.156.0 3.9443-2.7986 7.156-6.3808 7.156z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17" id="author">
+        <path d="M11.667.0H3.016v1.984H2.5c-.827.0-1.5.673-1.5 1.5v8.588l2.521 4.956 2.464-4.959V3.484c0-.827-.673-1.5-1.5-1.5h-.469v-.984H11v5h5v10H4.5v1H17V5.308L11.667.0zM3.908 14.002h-.804L2 11.832V5.984h1v6.027h1V5.984h.984v5.851l-1.076 2.167zM4.984 3.484v1.5H2v-1.5c0-.275.225-.5.5-.5h1.984c.276.0.5.225.5.5zM12 1.742 15.273 5H12V1.742z" fill="#000"/>
+      </symbol>
+    </svg>
+    
+    <footer class=footer>
+      <div class="footer_inner wrap pale">
+        <img src=/icons/osl-logo-black.svg class="icon icon_2 transparent" alt="Open Science Labs">
+        <p>Copyright&nbsp;<span class=year></span>&nbsp;Open Science Labs.</p>
+        <a class=to_top href=#documentTop>
+          <svg class="icon">
+            <title>to-top</title>
+            <use xlink:href="#to-top"/>
+          </svg>
+        </a>
+      </div>
+    </footer>
+    <script type="text/javascript" src="/js/bundle.js"></script>
+    <script src="/js/search.min.js"></script>
+    
+  </body>
+</html>
