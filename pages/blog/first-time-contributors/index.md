@@ -1,7 +1,7 @@
 ---
 title: "First Time Contributors"
 slug: first-time-contributors
-date: 2024-04-05
+date: 2024-04-08
 authors: ["Daniela Iglesias Rocabado"]
 tags: [open-source, contributors, git, osl]
 categories: [contributors]
@@ -161,7 +161,7 @@ It's worth noting that some organizations, such as the Open Source Initiative (O
 $ git config --global pull.rebase true
 ```
 
-OSL recommend the usage of git rebase
+OSL recommends the usage of git rebase
 
 
 ## Mergin a Pull Requests (PRs)
@@ -285,7 +285,7 @@ GitFlow, developed by Vincent Driessen, provides a more organized approach to br
 
 Choosing between GitHub Flow and GitFlow depends on your team's specific needs and project requirements:
 
-- **GitHub Flow**: Ideal for teams focused on continuous delivery, rapid iteration, and simplicity. This is most used in a bunch of proyects.
+- **GitHub Flow**: Ideal for teams focused on continuous delivery, rapid iteration, and simplicity. This is most used in a bunch of projects.
 - **GitFlow**: Suited for larger projects with longer release cycles, strict versioning, and a more structured approach to development.
 
 While both workflows have their merits, it's essential to assess your team's workflow preferences, project size, and release cycle frequency before making a decision.
@@ -294,7 +294,7 @@ While both workflows have their merits, it's essential to assess your team's wor
 
 For a deeper dive into GitFlow's advantages and implementation details, consider referring to the following blog post: [click here](https://lucamezzalira.medium.com/git-flow-vs-github-flow-76b93f4782f7).
 
-OSL recommend the github flow
+OSL recommends the github flow
 
 ## Python Linters Overview
 
@@ -389,15 +389,15 @@ When starting a new Python project, it's beneficial to use project templates tha
 
 - **Cookiecutter**: Cookiecutter is a command-line utility that generates projects from project templates. It prompts you for project-specific details and then creates a customized project structure based on the selected template. There are many community-contributed templates available for various types of Python projects, including web applications, libraries, and data analysis projects.
 
-- **SciCookie**: SciCookie is a project template ocused on the scientific python community, but it can be used by any python project. It includes a structured directory layout, documentation templates, and example code snippets. SciCookie helps streamline the setup process for scientific Python projects and encourages best practices in testing and documentation.
+- **SciCookie**: SciCookie is a project template focused on the scientific python community, but it can be used by any python project. It includes a structured directory layout, documentation templates, and example code snippets. SciCookie helps streamline the setup process for scientific Python projects and encourages best practices in testing and documentation.
 
 In summary, while `unittest` provides a robust framework for writing unit tests in Python, alternative frameworks like Pytest and Hypothesis offer additional features and flexibility. When starting a new project, leveraging project templates such as `scicookie` with tools like `cookiecutter` can accelerate setup and promote best practices in project organization and testing.
 
-# What is a virtual enviroments and why it is important?
+# What is a virtual enviroment and why is it important?
 
 A virtual environment is a self-contained directory that isolates the dependencies for a specific project, regardless of the programming language. It can house an interpreter (like Python) along with its associated libraries, but it can also manage dependencies for other languages and tools. This isolation ensures that the project's requirements don't conflict with those of other projects on the same system.
 
-When you create a virtual environment for each of your project, it essentially creates a sandboxed environment where you can install packages and dependencies without affecting the global Python installation on your system. This isolation is crucial because different projects often require different versions of libraries or dependencies, and conflicts can arise if they share the same environment.
+When you create a virtual environment for each of your projects, it essentially creates a sandboxed environment where you can install packages and dependencies without affecting the global Python installation on your system. This isolation is crucial because different projects often require different versions of libraries or dependencies, and conflicts can arise if they share the same environment.
 
 Creating virtual environments is crucial for several reasons:
 
@@ -533,6 +533,6 @@ Key highlights of Pixi include:
 For comprehensive information, detailed installation guidelines, and practical examples, visit the official [Pixi website](https://pixi.sh/latest). Explore Pixi today to streamline your development process across multiple languages with ease.
 
 
-## CONSLUSION
+## Conclusion
 
 The proficiency in specific techniques and methodologies is crucial for anyone looking to make meaningful contributions to open-source projects. This article delineates the essential skills and practices required for effective participation, including but not limited to, adeptness with collaborative tools, version control systems, adherence to coding standards, and familiarity with contribution guidelines. Emphasizing the significance of tailored mentorship, accessible documentation, and active engagement within the community, the article serves as a comprehensive guide for enhancing the quality and impact of contributions. By adopting best practices in code review, project management, and fostering an inclusive dialogue, contributors can significantly elevate the collaborative dynamics and innovation within open-source endeavors. Thus, reading this article is instrumental for those aiming to navigate the complexities of open-source projects successfully and contribute to the advancement of collective scientific and technological objectives.

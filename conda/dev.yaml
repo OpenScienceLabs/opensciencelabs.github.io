@@ -8,7 +8,7 @@ dependencies:
   - pip:
     - pre-commit
     - mkdocs ==1.4.2
-    - makim
+    - makim ==1.14
     - mkdocs-blogging-plugin
     - mkdocs-rss-plugin <1.9.0
     - jupyterlab
