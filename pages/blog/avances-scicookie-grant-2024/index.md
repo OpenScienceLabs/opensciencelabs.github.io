@@ -2,15 +2,15 @@
 title: "¡Descubre las emocionantes novedades que SciCookie ha implementado gracias a la subvención recibida de la PSF!"
 slug: avances-scicookie-grant-2024
 date: 2024-06-21
-author: Yurely Camacho
+authors: ["Yurely Camacho"]
 tags: [psf, osl, scicookie, subvención, grant, comunidad, colaboración, desarrollo]
 categories: [código abierto, desarrollo de software, python]
-draft: false
-usePageBundles: true
+description: |
+  En esta etapa, nos complace compartir contigo los avances y las tareas que hemos
+realizado para hacer de SciCookie una herramienta aún más poderosa y versátil.
 thumbnail: "/header.png"
-featureImage: "/header.png"
+template: "blog-post.html"
 ---
-
 
 <!-- # ¡Descubre las emocionantes novedades que SciCookie ha implementado gracias a la subvención recibida de la PSF! -->
 <!-- **Por Yurely Camacho** -->
