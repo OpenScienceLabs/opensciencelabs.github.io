@@ -665,7 +665,7 @@ This ensures your feature branch incorporates the most recent upstream developme
 <p>It's worth noting that some organizations, such as the Open Source Initiative (OSI), recommend the usage of git rebase to maintain a clean and linear project history. You can configure Git to use rebase by default for pull operations with the command:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$<span class="w"> </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>pull.rebase<span class="w"> </span><span class="nb">true</span>
 </span></code></pre></div>
-<p>OSL recommend the usage of git rebase</p>
+<p>OSL recommends the usage of git rebase</p>
 <h2 id="mergin-a-pull-requests-prs">Mergin a Pull Requests (PRs)<a class="headerlink" href="#mergin-a-pull-requests-prs" title="Permanent link"> #</a></h2>
 <p>Pull requests (PRs) are essential for collaborative software development, enabling contributors to propose changes to a project's codebase. Once a PR is submitted, it undergoes a review process before being merged into the main codebase. Here are three common methods for merging PRs:</p>
 <h4 id="1-merge-commit">1. Merge Commit:<a class="headerlink" href="#1-merge-commit" title="Permanent link"> #</a></h4>
@@ -757,13 +757,13 @@ This command tells pre-commit to run all configured hooks on all files in the re
 <h3 id="which-workflow-to-choose">Which Workflow to Choose?<a class="headerlink" href="#which-workflow-to-choose" title="Permanent link"> #</a></h3>
 <p>Choosing between GitHub Flow and GitFlow depends on your team's specific needs and project requirements:</p>
 <ul>
-<li><strong>GitHub Flow</strong>: Ideal for teams focused on continuous delivery, rapid iteration, and simplicity. This is most used in a bunch of proyects.</li>
+<li><strong>GitHub Flow</strong>: Ideal for teams focused on continuous delivery, rapid iteration, and simplicity. This is most used in a bunch of projects.</li>
 <li><strong>GitFlow</strong>: Suited for larger projects with longer release cycles, strict versioning, and a more structured approach to development.</li>
 </ul>
 <p>While both workflows have their merits, it's essential to assess your team's workflow preferences, project size, and release cycle frequency before making a decision.</p>
 <h3 id="recommendation">Recommendation:<a class="headerlink" href="#recommendation" title="Permanent link"> #</a></h3>
 <p>For a deeper dive into GitFlow's advantages and implementation details, consider referring to the following blog post: <a href="https://lucamezzalira.medium.com/git-flow-vs-github-flow-76b93f4782f7">click here</a>.</p>
-<p>OSL recommend the github flow</p>
+<p>OSL recommends the github flow</p>
 <h2 id="python-linters-overview">Python Linters Overview<a class="headerlink" href="#python-linters-overview" title="Permanent link"> #</a></h2>
 <p>Here's a breakdown of popular Python linters and their functionalities:</p>
 <ol>
@@ -872,13 +872,13 @@ This command tells pre-commit to run all configured hooks on all files in the re
 <p><strong>Cookiecutter</strong>: Cookiecutter is a command-line utility that generates projects from project templates. It prompts you for project-specific details and then creates a customized project structure based on the selected template. There are many community-contributed templates available for various types of Python projects, including web applications, libraries, and data analysis projects.</p>
 </li>
 <li>
-<p><strong>SciCookie</strong>: SciCookie is a project template ocused on the scientific python community, but it can be used by any python project. It includes a structured directory layout, documentation templates, and example code snippets. SciCookie helps streamline the setup process for scientific Python projects and encourages best practices in testing and documentation.</p>
+<p><strong>SciCookie</strong>: SciCookie is a project template focused on the scientific python community, but it can be used by any python project. It includes a structured directory layout, documentation templates, and example code snippets. SciCookie helps streamline the setup process for scientific Python projects and encourages best practices in testing and documentation.</p>
 </li>
 </ul>
 <p>In summary, while <code>unittest</code> provides a robust framework for writing unit tests in Python, alternative frameworks like Pytest and Hypothesis offer additional features and flexibility. When starting a new project, leveraging project templates such as <code>scicookie</code> with tools like <code>cookiecutter</code> can accelerate setup and promote best practices in project organization and testing.</p>
-<h1 id="what-is-a-virtual-enviroments-and-why-it-is-important">What is a virtual enviroments and why it is important?<a class="headerlink" href="#what-is-a-virtual-enviroments-and-why-it-is-important" title="Permanent link"> #</a></h1>
+<h1 id="what-is-a-virtual-enviroment-and-why-is-it-important">What is a virtual enviroment and why is it important?<a class="headerlink" href="#what-is-a-virtual-enviroment-and-why-is-it-important" title="Permanent link"> #</a></h1>
 <p>A virtual environment is a self-contained directory that isolates the dependencies for a specific project, regardless of the programming language. It can house an interpreter (like Python) along with its associated libraries, but it can also manage dependencies for other languages and tools. This isolation ensures that the project's requirements don't conflict with those of other projects on the same system.</p>
-<p>When you create a virtual environment for each of your project, it essentially creates a sandboxed environment where you can install packages and dependencies without affecting the global Python installation on your system. This isolation is crucial because different projects often require different versions of libraries or dependencies, and conflicts can arise if they share the same environment.</p>
+<p>When you create a virtual environment for each of your projects, it essentially creates a sandboxed environment where you can install packages and dependencies without affecting the global Python installation on your system. This isolation is crucial because different projects often require different versions of libraries or dependencies, and conflicts can arise if they share the same environment.</p>
 <p>Creating virtual environments is crucial for several reasons:</p>
 <ul>
 <li>
