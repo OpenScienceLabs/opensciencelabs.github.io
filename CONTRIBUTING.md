@@ -70,7 +70,7 @@ dependencies and activate it.
   tags: ["tag1", "tag2"]
   categories: ["category1", "category2"]
   description: "Short description of the blog post."
-  thumbnail: "/path/to/header.jpg"
+  thumbnail: "/header.jpg"
   template: "blog-post.html"
   ---
   ```
