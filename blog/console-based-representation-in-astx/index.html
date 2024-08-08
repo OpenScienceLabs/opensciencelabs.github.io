@@ -733,140 +733,11 @@ The first thing to do is, in your Jupyter Notebook instance, import <code>displa
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">graph</span> <span class="o">=</span> <span class="n">graph_to_ascii</span><span class="p">(</span><span class="n">dot_graph</span><span class="p">)</span> 
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">graph</span><span class="p">)</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-┌────────────┐
-│MODULE[main]│
-└──────┬─────┘
-│
-v
-┌──────────────┐
-│FUNCTION[main]│
-└────┬────┬────┘
-│    │
-┌───────────────────────┘    └────────────────────────┐
-│                                                     │
-v                                                     │
-┌───────┐                                                 │
-│  body │                                                 │
-└───┬───┘                                                 │
-│                                                     │
-v                                                     │
-┌─────────┐                                                │
-│  BLOCK  │                                                │
-└─┬───┬┬┬─┘                                                │
-│   │││                                                  │
-┌───────────────────────┘   ││└──────────────────────────────┐                   │
-│      ┌────────────────────┘│                               │                   │
-v      │                     │                               │                   │
-┌───────┐  │                     │                               │                   │
-│ RETURN│  │                     │                               │                   │
-└───┬───┘  │                     │                               │                   │
-│      │                     │                               │                   │
-┌──────────┼──────┼─────────────────────┘                               │                   │
-┌──────┘          │      │                                                     │                   │
-│                 v      │                                                     │                   │
-│        ┌─────────┐     │                                                     │                   │                   ┌─────────┐
-│        │BINARY[+]│     │                                                     │                   │                   │BINARY[+]│
-│        └───┬──┬──┘     │                                                     │                   │                   └──┬─┬────┘
-│            │  │        │                                                     │                   │                      │ │ ^
-│            │  │        │                                                     │                   └──────────────┐       │ │ │
-│            │  │        │                                                     │                                  └───┐   │ │ │
-│            │  └────────┼──────────────────────────────────────────────┐      │                                      │   │ │ │
-│            └───────────┼────────────────────┐                         │      │                                      │   │ │ │
-│                        │                    │  ┌──────────────────────┼──────┼──────────────────────────────────────┼───┘ │ │
-│                        │                    │  │                      │  ┌───┼──────────────────────────────────────┼─────┘ │
-│                        │                    │  │                      │  │   │                                      │       │
-│                        │                    v  v                      v  v   │                                      │       │
-│                        │                 ┌───────┐                 ┌───────┐ │                                      │       │
-│                        │                 │  rhs  │                 │  lhs  │ │                                      │       │
-│                        │                 └──┬──┬─┘                 └──┬──┬─┘ │                                      │       │
-│                        │                    │  │                      │  │   │                                      │       │
-│                        │       ┌────────────┘  └────────────┐         │  │   └────────────────────┐                 │       │
-│                        │       │                            │         │  └────────────┐           └──┐              │       │
-│          ┌─────────────┘       │                            │         │               │              │              │       │
-│        ┌─┘                     │                            │         │               │              │              │       │
-│        │                       v                            │         v               │              │              │       │
-│        │                  ┌─────────┐                       │ ┌─────────┐             │              │              │       │
-│        │                  │BINARY[-]│                       │ │BINARY[-]│             │              │              │       │
-│        │                  └───┬──┬──┘                       │ └───┬──┬──┘             │              │              │       │
-│        │                      │  │                          │     │  │                │              │              │       │
-│        │                      │  └────────┐                 │     │  └─────┐          │              │              │       │
-│        │                      │           │  ┌──────────────┼─────┘        │          │              │              │       │
-│        │                      │           │  │              │              │          │              │              │       │
-│        │                      │           v  v              │              │          │              │              │       │
-│        │                      │        ┌───────┐            │              │          │              │              │       │
-│        │                      │        │  rhs  │            │              │          │              │              │       │
-│        │                      │        └───┬──┬┘            │              │          │              │              │       │
-│        │                      │            │  │             │              │          │              │              │       │
-│        │                      │            │  │             │              │          │      ┌───────┼──────────────┼───────┘
-│        │                      │            v  v             │              │          │      │       │              │
-│        │                      │        ┌─────────┐          │              │          │      │       │              │
-│        │                      │        │BINARY[/]│          │              │          │      │       │              │
-│        │                      │        └─┬─┬─┬─┬─┘          │              │          │      │       │              │
-│        │                      │          │ │ │ │            │              │          │      │       │              │
-│        │                      │   ┌──────┘ │ │ │            │              │          │      │       │              │
-│        │                      │   │  ┌─────┘ │ │            │              │          │      │       │              │
-│        │                      │   │  │       │ │            │              │          └──────┼┐      │              │
-│        │                      │   │  │       │ │            │              │                 │└──┐   │              │
-│        │                      │   │  │       │ │            └───────────┐  │                 │   │   │              │
-│        │                      │   │  │       │ └───────────────────┐    │  │                 │   │   │              │
-│        │                      │   │  │       └───────────┐         │    │  │                 │   │   │              │
-│        │                      └───┼──┼───────────────────┼─────────┼────┼──┼─────────────┐   │   │   │              │
-│        │                          v  v                   │         │    │  │             │   │   │   │              │
-│        │                       ┌───────┐                 │         │    │  │             │   │   │   │              │
-│        │                       │  lhs  │                 │         │    │  │             │   │   │   │              │
-│        │                       └┬────┬─┘                 │         │    │  │             │   │   │   │              │
-│        │                        │    │                   │         │    │  │             │   │   │   │              │
-│        │                        │    │                   │         │    │  │             │   │   │   │              └──────────────────┐
-│        │                        │    │                   │         │    │  │             │   │   │   └─────┐                           │
-│        │                        │    │                   │         │    │  └───────────┐ │   │   │         │                           │
-│        │                        │    │                   │         │    └────────────┐ │ │   │   │         │                           │
-│        │                        │    └───────────────────┼─────────┼─────┐           │ │ │   │   │         │                           │
-└─────┐  │                        │                        │         │     │           │ │ │   │   │         │                           │
-│  │                        v                        │         │     │           │ │ │   │   │         │                           │
-│  │                   ┌─────────┐                   │         │     │           │ │ │   │   │         │                           │
-│  │                   │BINARY[*]│                   │         │     │           │ │ │   │   │         │                           │
-│  │                   └───┬──┬──┘                   │         │     │           │ │ │   │   │         │                           │
-│  │                       │  │                      │         │     │           │ │ │   │   │         │                           │
-│  │                       │  │                      │         │     │           │ └─┼─┐ │   │         │                           │
-│  │                       │  │                      │         └─────┼───────┐   │   │ │ │   │         │                           │
-│  │                       │  │                      └───────────────┼────┐  │   │   │ │ │   │         │                           │
-│  │                       │  └─────────────────────────────────┐    │    │  │   │   │ │ │   │         │                           │
-│  │                       └──────────────────────────┐         │    │    │  │   │   │ │ │   │         │                           │
-│  └────────────────────────────┐                     │         │    │    │  │   │   │ │ │   │         │                           │
-│                               │                     │         │    │    │  │   │   │ │ │   │         │                           │
-v                               v                     v         v    │    v  v   │   v v │   │         v                           v
-┌─────────────────────────────┐ ┌─────────────────────────────┐ ┌───────┐ ┌───────┐ │ ┌───────┐ │ ┌─────┴─┐ │ ┌─────────────────────────────┐ ┌───────┐
-│VariableDeclaration[c, Int32]│ │VariableDeclaration[b, Int32]│ │  lhs  │ │  rhs  │ │ │  rhs  │ │ │  lhs  │ │ │VariableDeclaration[a, Int32]│ │  args │
-└────────┬────────────────────┘ └──────────────┬──────────────┘ └───┬───┘ └───┬───┘ │ └──┬──┬─┘ │ └───┬───┘ │ └────────────────────────────┬┘ └───┬───┘
-│                                     │                    │         │     │    │  │   │     │     │                              │      │
-│                   ┌─────────────────┘                    │         │     │    │  │   │     │     │                              │      └──────────┐
-│                   │              ┌───────────────────────┘         │     │    │  │   │     │     │                              │                 │
-│                   │              │               ┌─────────────────┘     │    │  │   │     │     └──────────┐                   │                 │
-│                   │              │   ┌───────────┼───────────────────────┘    │  │   │     │                │                   │                 │
-│                   │              │   │           │           ┌────────────────┘  │   │     │                │                   │                 │
-│                   │              │   │           │           │   ┌───────────────┘   │     │                │                   │                 │
-│                   │              │   │           │           │   │           ┌───────┘     │                │                   │                 │
-│                   │              │   │           │           │   │           │             │                │                   │                 │
-v                   v              v   v           v           v   v           v             v                v                   v                 v
-┌─────────────────┐ ┌─────────────────┐ ┌───────────┐ ┌───────────┐ ┌───────────┐ ┌───────────┐ ┌───────────┐ ┌─────────────────┐ ┌─────────────────┐ ┌────────────┐
-│Literal[Int32]: 4│ │Literal[Int32]: 2│ │Variable[a]│ │Variable[c]│ │Variable[a]│ │Variable[b]│ │Variable[b]│ │Literal[Int32]: 1│ │Literal[Int32]: 1│ │Arguments(0)│
-└─────────────────┘ └─────────────────┘ └───────────┘ └───────────┘ └───────────┘ └───────────┘ └───────────┘ └─────────────────┘ └─────────────────┘ └────────────┘
-
-</span></code>
-</pre>
-</div>
-
+<p><img alt="non-funky_ascii_tree.png" src="index_files/0d8393a6-fb00-4364-8f2f-319295075948.png" /></p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Create PNG representation</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">module</span>
 </span></code></pre></div>
-<p><img alt="png" src="index_files/index_10_0.png" /></p>
+<p><img alt="png" src="index_files/index_11_0.png" /></p>
 <div class="language-text highlight">
 <h3 class="code-label">
   OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
@@ -883,7 +754,7 @@ v                   v              v   v           v           v   v           v
 <div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Create PNG representation</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">basic_op</span>
 </span></code></pre></div>
-<p><img alt="png" src="index_files/index_12_0.png" /></p>
+<p><img alt="png" src="index_files/index_13_0.png" /></p>
 <div class="language-text highlight">
 <h3 class="code-label">
   OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
@@ -899,7 +770,7 @@ v                   v              v   v           v           v   v           v
 <div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Create PNG representation</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">a</span>
 </span></code></pre></div>
-<p><img alt="png" src="index_files/index_13_0.png" /></p>
+<p><img alt="png" src="index_files/index_14_0.png" /></p>
 <div class="language-text highlight">
 <h3 class="code-label">
   OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
@@ -920,15 +791,15 @@ v                   v              v   v           v           v   v           v
 </span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1"># Create PNG representation with diamond shape</span>
 </span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="n">viz</span><span class="o">.</span><span class="n">visualize</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">get_struct</span><span class="p">(),</span> <span class="n">shape</span><span class="o">=</span><span class="s2">&quot;diamond&quot;</span><span class="p">)</span>
 </span></code></pre></div>
-<p><img alt="png" src="index_files/index_15_0.png" /></p>
+<p><img alt="png" src="index_files/index_16_0.png" /></p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Create PNG representation with circle shape</span>
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">viz</span><span class="o">.</span><span class="n">visualize</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">get_struct</span><span class="p">(),</span> <span class="n">shape</span><span class="o">=</span><span class="s2">&quot;circle&quot;</span><span class="p">)</span>
 </span></code></pre></div>
-<p><img alt="png" src="index_files/index_16_0.png" /></p>
+<p><img alt="png" src="index_files/index_17_0.png" /></p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># Create PNG representation with ellipse shape</span>
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">viz</span><span class="o">.</span><span class="n">visualize</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">get_struct</span><span class="p">(),</span> <span class="n">shape</span><span class="o">=</span><span class="s2">&quot;ellipse&quot;</span><span class="p">)</span>
 </span></code></pre></div>
-<p><img alt="png" src="index_files/index_17_0.png" /></p>
+<p><img alt="png" src="index_files/index_18_0.png" /></p>
 <h1 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link"> #</a></h1>
 <p>This guide provides clear instructions and a simple example for you to start using the ASTx library. But this is just the beginning of your journey. Make sure to check out the other tutorials available, such as the one for <a href="https://github.com/arxlang/astx/blob/main/docs/tutorials/variables.ipynb">variables</a> and the one for <a href="https://github.com/arxlang/astx/blob/main/docs/tutorials/functions.ipynb">functions</a>.</p>
   </div>
