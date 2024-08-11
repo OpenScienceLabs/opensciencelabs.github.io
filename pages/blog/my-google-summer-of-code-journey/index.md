@@ -13,7 +13,7 @@ template: "blog-post.html"
 <h1>My Google Summer of Code Journey</h1>
 
 # About Me
-I am <b>[Kishan Ved](https://github.com/Kishan-Ved)</b>, an undergraduate student at the Indian Institute of Technology Gandhinagar (IIT Gandhinagar)</b>, India, in the department of Computer Science and Engineering. I spent the summer after my second year doing my Google Summer of Code 2024 project with the NumFOCUS organization (which serves as an umbrella organization for open source projects)</b>, which had Open Science Labs as a sub organization. The project I worked on is: <b>[PyDataStructs](https://github.com/codezonediitj/pydatastructs)</b>.
+I am <b>[Kishan Ved](https://github.com/Kishan-Ved)</b>, an undergraduate student at the Indian Institute of Technology Gandhinagar (IIT Gandhinagar), India, in the department of Computer Science and Engineering. I spent the summer after my second year doing my Google Summer of Code 2024 project with the NumFOCUS organization (which serves as an umbrella organization for open source projects), which had Open Science Labs as a sub organization. The project I worked on is: <b>[PyDataStructs](https://github.com/codezonediitj/pydatastructs)</b>.
 
 # About PyDataStructs
 
@@ -26,7 +26,7 @@ I began contributing to open source in December 2023, when I connected to a seni
 I went to the issues tab on the repository's github page and searched for good first issues. I noticed an issue that seemed doable: <b>[Implement Introsort](https://github.com/codezonediitj/pydatastructs/issues/545)</b>. This involved implementing the sorting algorithm: Introsort in the Python backend. I had learned this as a part of my academic cousework, and hence, I was able to code this.
 
 ## My first Pull Request
-I started reading the README file and set up the repository locally and created the conda environment. Then I got to work. In a day, I was able to successfully create a PR (pull request)</b> and open it on GitHub: <b>[Implemented Introsort](https://github.com/codezonediitj/pydatastructs/pull/549)</b>. This PR was reviewed and changes were requested. Once I had done all of them and all the CI checks passed, it was merged. And that's my first open souce contribution!
+I started reading the README file and set up the repository locally and created the conda environment. Then I got to work. In a day, I was able to successfully create a PR (pull request) and open it on GitHub: <b>[Implemented Introsort](https://github.com/codezonediitj/pydatastructs/pull/549)</b>. This PR was reviewed and changes were requested. Once I had done all of them and all the CI checks passed, it was merged. And that's my first open souce contribution!
 
 # Pre-GSoC Phase
 
@@ -47,7 +47,7 @@ These made me well versed with various git commands, the skill of handling a lar
 ## Drafting my GSoC proposal
 Next, it was time to submit proposals for GSoC projects. By then, I had been contributing to open source for nearly 3 months. I requested a meeting with Gagandeep Sir to help me decide my proposal. He kindly agreed and we set up an online meeting, where we discussed potential GSoC ideas and the timeline that was best suited for me.
 
-I submitted 2 proposals, to LPython (Python Software Foundation)</b> and PyDataStructs (NumFOCUS)</b>:
+I submitted 2 proposals, to LPython (Python Software Foundation) and PyDataStructs (NumFOCUS):
 
 - <b>[NumFOCUS - Open Science Labs: PyDataStructs: Add C++ Backend for all trees](https://drive.google.com/file/d/1khpreH4pVJSj26VGJOf2v_XDCrOlo8qP/view?usp=sharing)</b>
 
