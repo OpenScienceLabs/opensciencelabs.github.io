@@ -83,11 +83,11 @@ teams:
 
   - name: Interns
     members:
-      - name: Daniela Iglesias Rocabado
+      - name: Mfonobong Emmanuel Uyah
         bio: |
-          Graduate in Systems Engineering with a passion for Python and Web Development.
-        image_url: https://avatars.githubusercontent.com/u/107383061?v=4
-        github_url: https://github.com/DanielaIgRo
+          Electrical and Electronics Engineering graduate with interest in software development using Python, Django, and JavaScript. Looking to develop and participate in open-source and open-science projects. 
+        image_url: https://avatars.githubusercontent.com/u/97167651?v=4&size=64
+        github_url: https://github.com/investor-uyah
         # github_sponsor:
 
   - name: Steering Council Emeritus
@@ -137,16 +137,23 @@ teams:
         date: 2022-04-12
         github_sponsor: https://github.com/sponsors/luabida/button
         github_url: https://github.com/luabida
+      
+      - name: Daniela Iglesias Rocabado
+        bio: |
+          Graduate in Systems Engineering with a passion for Python and Web Development.
+        image_url: https://avatars.githubusercontent.com/u/107383061?v=4
+        github_url: https://github.com/DanielaIgRo
+        # github_sponsor:
 ---
 
 # OSL Team
 
-OSL is a Open-Source community and everyone can join, check our
+OSL is an Open-Source community which anyone can join. Check our
 [GitHub](https://github.com/OpenScienceLabs/opensciencelabs.github.io) to be
-apart of the issues.
+a part of the issues.
 
 ## How can you contribute?
 
-To be contributing with the community you must know our
-[Guidelines](/guidelines/), there you will find the
+To contribute alongside the community, be sure to check our
+[Guidelines](/guidelines/). There, you will find the
 workflow of the running projects and how you can apply to our team.

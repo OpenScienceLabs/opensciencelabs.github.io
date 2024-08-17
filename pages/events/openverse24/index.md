@@ -57,11 +57,9 @@
 
 ## Eligibility
 
-- Open to individuals of majority age in their jurisdiction or at least 18 years
-  old.
+- Open to individuals of majority age in their jurisdiction or at least 18 years old.
 - Not open to residents of countries where participation is prohibited by law,
-  individuals under 18, and employees or agents of promotion entities involved
-  in the hackathon.
+individuals under 18, and employees or agents of promotion entities involved in the hackathon.
 
 Participants completing Stage 1 within the specified duration are eligible for
 certificates of participation. Further stages and detailed participation
