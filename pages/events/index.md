@@ -4,7 +4,6 @@ date: 2024-02-24
 authors: ["OSL Team"]
 template: events.html
 events:
-  proposed: {}
   upcoming:
     - name: "OpenVerse'24 - Stage 1"
       description: |
