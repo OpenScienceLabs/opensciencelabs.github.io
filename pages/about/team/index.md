@@ -15,16 +15,6 @@ teams:
         github_url: "https://github.com/xmnlab"
         github_sponsor: "https://github.com/sponsors/xmnlab/button"
 
-      - name: Eunice Rodas
-        bio: |
-          I’m currently working on Beek.io as Data Engineer, I work create and model,
-          ETL, pipelines and Datawarehouse using Python, Pandas, Airflow and GCP.
-          I'm data passionate, I studied a postgraduate in Data Predict and Analytics
-          using Pandas, Tensorflow and R.
-        image_url: https://avatars.githubusercontent.com/u/12076074?v=4
-        github_url: https://github.com/eunrod16
-        # github_sponsor:
-
       - name: Ever Vino
         bio: |
           Bioprocess & Chemical processes Mathematical Modelling Developer,
@@ -39,16 +29,6 @@ teams:
           CEO and Owner at AyPhu.
         image_url: https://avatars.githubusercontent.com/u/4383323?v=4
         github_url: https://github.com/luisgagocasas
-        # github_sponsor:
-
-      - name: Agustina Pesce Lopez
-        bio: |
-          I'm a Physicist and a PhD in Geophysics. All those years, I worked in applied
-          geophysics and studied subduction zones through geodynamical numerical modeling.
-          I'm also committed to contribute to open-source software projects to improve
-          science openness and reproducibility.
-        image_url: https://avatars.githubusercontent.com/u/13738018?v=4
-        github_url: https://github.com/aguspesce
         # github_sponsor:
 
   - name: Coordinators
@@ -126,6 +106,26 @@ teams:
         image_url: https://avatars.githubusercontent.com/u/3450741?v=4%22
         github_url: https://github.com/esloch
         github_sponsor: https://github.com/sponsors/esloch/button
+
+      - name: Eunice Rodas
+        bio: |
+          I’m currently working on Beek.io as Data Engineer, I work create and model,
+          ETL, pipelines and Datawarehouse using Python, Pandas, Airflow and GCP.
+          I'm data passionate, I studied a postgraduate in Data Predict and Analytics
+          using Pandas, Tensorflow and R.
+        image_url: https://avatars.githubusercontent.com/u/12076074?v=4
+        github_url: https://github.com/eunrod16
+        # github_sponsor:
+
+      - name: Agustina Pesce Lopez
+        bio: |
+          I'm a Physicist and a PhD in Geophysics. All those years, I worked in applied
+          geophysics and studied subduction zones through geodynamical numerical modeling.
+          I'm also committed to contribute to open-source software projects to improve
+          science openness and reproducibility.
+        image_url: https://avatars.githubusercontent.com/u/13738018?v=4
+        github_url: https://github.com/aguspesce
+        # github_sponsor:
 
   - name: Alumni
     members:
