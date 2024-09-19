@@ -22,43 +22,48 @@ extra_javascript:
   - js/index.json
 
 nav:
-  - Home: 'index.md'
+  # - Home: 'index.md'
   - Blog: 'blog/index.md'
   - Affiliations:
     - index: affiliations/index.md
     # - Member Affiliation: 'affiliations/membership/index.md'
-    - Project Affiliation:
-      - index: 'affiliations/projects/index.md'
-      - Affiliated Projects: 'affiliations/projects/projects.md'
-    - Partnership:
-      - index: 'affiliations/partnership/index.md'
-      - Partners: 'affiliations/partnership/partners/index.md'
-    - OpenHub: 'affiliations/open-hub/index.md'
-  - Programs:
-    - index: 'programs/index.md'
-    - Incubator: 'programs/incubator/index.md'
+    # - OpenHub: 'affiliations/open-hub/index.md'
+  # - Programs:
+    # Mentors: 'projects/mentoring/mentors.md'
+    # - Activities: about/archives/index.md
+    # note> faq is out-of-date
+    # - FAQ: faq/index.md
+  - Projects:
+    - index: 'projects/index.md'
+    - Incubator: 'projects/incubator/index.md'
+    - Affiliated:
+      - index: 'projects/affiliated/index.md'
+      - Affiliated Projects: 'projects/affiliated/projects.md'
+    # - Mentoring: 'projects/mentoring/index.md'
+    # note: let's keep these projects hidden for now
+    # - Packaging Support: 'projects/packaging-support/index.md'
+    # - Virtual-Labs: 'projects/virtual-labs/index.md'
+  - Careers:
+    - index: careers/index.md
     - Internship:
-      - index: 'programs/internship/index.md'
-      - Interns Guide: 'programs/internship/guides/interns/index.md'
-      - Mentors Guide: 'programs/internship/guides/mentors/index.md'
-      - "Cycle 2024-02": 'programs/internship/cycles/2024-02.md'
-      - "Cycle 2024-01 (CLOSED)": 'programs/internship/cycles/2024-01.md'
-      - "Cycle 2023-01 (CLOSED)": 'programs/internship/cycles/2023-01.md'
-      - "TEMPLATE: Projects Ideas": 'programs/internship/templates/projects-ideas.md'
-      - "TEMPLATE: Intern Project Proposal": 'programs/internship/templates/intern-proposal.md'
+      - index: 'careers/internship/index.md'
+      - Interns Guide: 'careers/internship/guides/interns/index.md'
+      - Mentors Guide: 'careers/internship/guides/mentors/index.md'
+      # - "Cycle 2024-02": 'careers/internship/cycles/2024-02.md'
+      # - "Cycle 2024-01 (CLOSED)": 'careers/internship/cycles/2024-01.md'
+      # - "Cycle 2023-01 (CLOSED)": 'careers/internship/cycles/2023-01.md'
+      - "TEMPLATE: Projects Ideas": 'careers/internship/templates/projects-ideas.md'
+      - "TEMPLATE: Intern Project Proposal": 'careers/internship/templates/intern-proposal.md'
     - GSoC:
-      - index: 'programs/gsoc/index.md'
-      - Contributor Guide: 'programs/gsoc/guides/contributor/index.md'
-      - "TEMPLATE: Contributor Project Proposal": 'programs/gsoc/templates/contributor-proposal.md'
-    # - Mentoring: 'programs/mentoring/index.md'
-    # note: let's keep these programs hidden for now
-    # - Packaging Support: 'programs/packaging-support/index.md'
-    # - Virtual-Labs: 'programs/virtual-labs/index.md'
+      - index: 'careers/gsoc/index.md'
+      - Contributor Guide: 'careers/gsoc/guides/contributor/index.md'
+      - "TEMPLATE: Contributor Project Proposal": 'careers/gsoc/templates/contributor-proposal.md'
+  - Partnership:
+      - index: 'partnership/index.md'
+      - Partners: 'partnership/partners/index.md'
   - Events:
     - index: events/index.md
     - "OpenVerse'24": events/openverse24/index.md
-  - Careers:
-    - index: careers/index.md
   - Guidelines:
     - index: guidelines/index.md
     - Articles: guidelines/articles/index.md
@@ -71,14 +76,9 @@ nav:
     - About OSL: 'about/index.md'
     - Our Formula: 'about/formula/index.md'
     - Team: about/team/index.md
-    # Mentors: 'programs/mentoring/mentors.md'
-    # - Activities: about/archives/index.md
-    # note> faq is out-of-date
-    # - FAQ: faq/index.md
     - Roadmap: about/roadmap/index.md
     - Governance: about/governance/index.md
     - CoC: about/coc/index.md
-    - CoC for Mentoring: about/coc-mentoring/index.md
   - Donate: 'donate/index.md'
 
 markdown_extensions:
