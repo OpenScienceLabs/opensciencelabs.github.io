@@ -36,19 +36,19 @@ In this section we can find our initial DEI declaration.
   <li><a href="/guidelines/dei/">Statement on Diversity, Equity and Inclusion</a></li>
 </ul>
 
-## DevOps
+<!-- ## DevOps
 
 In this section, we have the documentation about all our infrastructure (work in
 progress), and our goal is to have the necessary information for anyone who
-wants to help us in the DevOps tasks.
+wants to help us in the DevOps tasks. -->
 
-### Discord
+<!-- ### Discord
 
 <ul>
   <li><a href="/guidelines/devops/discord">Guideline for Discord</a></li>
-</ul>
+</ul> -->
 
-## Fund Raiser
+<!-- ## Fund Raiser
 
 In the section, we are gathering all the information and investigation results
 about grants, institutes, fiscal sponsors, etc that can help us to decide the
@@ -56,29 +56,23 @@ fund raising activities and help other communities as well.
 
 <ul>
   <li><a href="/guidelines/fund-raiser/">Fund Raiser Guideline</a></li>
-</ul>
+</ul> -->
 
 ## Mentoring
 
-In this section, there are documents about Open Science Labs Mentoring program.
-The mentoring could be running as a community mentoring, where someone from the
-community for the mentoring program and Open Science Labs tries to find one
-mentor inside our community, using discord, or using the social media, in order
-to reach someone outside.
-
-Another way that the mentoring can happen is inside the internship program.
+In this section, there is a document about Open Science Labs Mentoring program.
+Mentoring can happen within the community, such as through Discord or any of our social media channels. Another way that mentoring can happen is through the internship program. 
 
 <ul>
   <li><a href="/guidelines/mentoring">Mentoring Guideline</a></li>
-  <li><a href="/guidelines/coc-mentoring">Code of Conduct for Mentoring</a></li>
-</ul>
+</ul> 
 
-## Roadmap
+<!-- ## Roadmap
 
 If you are interested in the Open Science Labs next steps, please check our
-[Roadmap](/guidelines/roadmap/).
+[Roadmap](/guidelines/roadmap/). -->
 
-## Governance
+<!-- ## Governance
 
 For more information about our project governance, please check
-[governance document](/guidelines/governance/).
+[governance document](/guidelines/governance/). -->
