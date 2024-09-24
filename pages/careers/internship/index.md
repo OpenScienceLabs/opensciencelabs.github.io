@@ -24,7 +24,7 @@ unique features:
   embracing diversity in knowledge and experience. Potential candidates should feel free to submit project ideas at any time as there are no internship cycles. 
 - **Flexible Commitment**: A minimum of 20 hours per week allows for impactful
   work while accommodating your schedule.
-- **End-of-Internship Presentations**: At the end of each every, individual   participants are
+- **End-of-Internship Presentations**: At the end of every internship, individual   participants are
   encouraged to share their journey and project outcomes, enhancing their public
   speaking and technical communication skills.
 - **Non-Monetary Rewards**: While the internship does not offer financial
