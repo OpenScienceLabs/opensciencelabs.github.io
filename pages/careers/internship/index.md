@@ -21,12 +21,10 @@ With a structure inspired by the Google Summer of Code, our program offers some
 unique features:
 
 - **Open Participation**: We welcome everyone from students to professionals,
-  embracing diversity in knowledge and experience.
+  embracing diversity in knowledge and experience. Potential candidates should feel free to submit project ideas at any time as there are no internship cycles. 
 - **Flexible Commitment**: A minimum of 20 hours per week allows for impactful
   work while accommodating your schedule.
-- **Biannual Cycles**: With two distinct cycles per year, there are ample
-  opportunities to get involved at a time that suits you best.
-- **End-of-Cycle Presentations**: At the end of each cycle, participants are
+- **End-of-Internship Presentations**: At the end of every internship, individual   participants are
   encouraged to share their journey and project outcomes, enhancing their public
   speaking and technical communication skills.
 - **Non-Monetary Rewards**: While the internship does not offer financial
