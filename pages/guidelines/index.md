@@ -3,7 +3,9 @@ title: Guidelines
 authors: ["OSL Team"]
 ---
 
-# The Open Science Labs Guideline is a collection of documents about how to get started in specific areas.
+# Guidelines
+
+The Open Science Labs Guideline is a collection of documents about how to get started in specific areas.
 
 ## Articles
 
@@ -36,6 +38,7 @@ In this section we can find our initial DEI declaration.
   <li><a href="/guidelines/dei/">Statement on Diversity, Equity and Inclusion</a></li>
 </ul>
 
+<!--
 ## DevOps
 
 In this section, we have the documentation about all our infrastructure (work in
@@ -57,6 +60,7 @@ fund raising activities and help other communities as well.
 <ul>
   <li><a href="/guidelines/fund-raiser/">Fund Raiser Guideline</a></li>
 </ul>
+-->
 
 ## Mentoring
 
@@ -70,13 +74,14 @@ Another way that the mentoring can happen is inside the internship program.
 
 <ul>
   <li><a href="/guidelines/mentoring">Mentoring Guideline</a></li>
-  <li><a href="/guidelines/coc-mentoring">Code of Conduct for Mentoring</a></li>
 </ul>
 
+<!--
 ## Roadmap
 
 If you are interested in the Open Science Labs next steps, please check our
 [Roadmap](/guidelines/roadmap/).
+-->
 
 ## Governance
 

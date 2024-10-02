@@ -21,7 +21,7 @@ With a structure inspired by the Google Summer of Code, our program offers some
 unique features:
 
 - **Open Participation**: We welcome everyone from students to professionals,
-  embracing diversity in knowledge and experience.
+  embracing diversity in knowledge and experience. Prospective participants should submit their relevant project ideas to designated OSL mentors or supervisors through email or our social media platforms like Discord.  
 - **Flexible Commitment**: A minimum of 20 hours per week allows for impactful
   work while accommodating your schedule.
 - **Biannual Cycles**: With two distinct cycles per year, there are ample
