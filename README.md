@@ -12,7 +12,7 @@ cd opensciencelabs.github.io
 ```
 
 ```bash
-mamba env create -f conda/dev.yaml
+mamba env create -f conda/dev.yaml --yes
 conda activate osl-web
 poetry install
 ```
