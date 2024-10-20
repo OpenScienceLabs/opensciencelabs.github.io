@@ -15,8 +15,7 @@ authors: ["OSL Team"]
   personas aprendan. Para más informaciones, ingrese a la
   <a href="/guidelines/mentoring/">Guía de Mentorías</a>.
 
-  ¡Encuentre aquí tu mentora o mentor!
-</small>
+¡Encuentre aquí tu mentora o mentor! </small>
 
 <div class="card mb-3" style="">
   <div class="row g-0">

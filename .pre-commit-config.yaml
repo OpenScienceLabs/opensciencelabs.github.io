@@ -1,0 +1,24 @@
+default_stages:
+  - pre-commit
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: trailing-whitespace
+        exclude: "pages/blog"
+      - id: end-of-file-fixer
+        exclude: "pages/blog"
+      - id: check-json
+      - id: check-toml
+      - id: check-xml
+      - id: check-builtin-literals
+      - id: check-case-conflict
+      - id: check-docstring-first
+      - id: detect-private-key
+        exclude: "theme"
+
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: "v3.0.2"
+    hooks:
+      - id: prettier
+        exclude: "pages/blog|theme"

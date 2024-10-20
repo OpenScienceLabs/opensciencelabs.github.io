@@ -5,6 +5,7 @@ date: "2024-01-09"
 authors: ["OSL Team"]
 template: single-sidebar.html
 ---
+
 ```
 Instructions:
 
@@ -56,39 +57,46 @@ Instructions:
 
 ## Planned Workflow
 
-[Detail your planned workflow, including the project management methodology, frequency and focus of mentor meetings, progress tracking, and task management strategies.]
+[Detail your planned workflow, including the project management methodology,
+frequency and focus of mentor meetings, progress tracking, and task management
+strategies.]
 
 ## Deliverables
 
-[List all expected deliverables, such as new features, documentation updates, tutorials, and blog posts. Consider writing a blog post for each major feature or bug fix.]
+[List all expected deliverables, such as new features, documentation updates,
+tutorials, and blog posts. Consider writing a blog post for each major feature
+or bug fix.]
 
 ## Timeline
 
-[Provide a detailed timeline of the internship, including key dates and tasks. This should include Community Bonding Period activities, task periods, blog post submission dates, and Midterm and Final evaluation schedules.]
+[Provide a detailed timeline of the internship, including key dates and tasks.
+This should include Community Bonding Period activities, task periods, blog post
+submission dates, and Midterm and Final evaluation schedules.]
 
-| Dates       | Tasks                        |
-|:------------|:-----------------------------|
-|             |                              |
+| Dates | Tasks |
+| :---- | :---- |
+|       |       |
 
 ## Previous Contributions to the Project
 
-[Summarize your contributions to the project, including the number of merged PRs, resolved issues, or types of contributions.]
+[Summarize your contributions to the project, including the number of merged
+PRs, resolved issues, or types of contributions.]
 
 ### Pull Requests
 
 [List all contributed PRs with titles, numbers, links, and their status.]
 
-| Pull Request Title/Number       | Status   |
-|:--------------------------------|:---------|
-|                                 |          |
+| Pull Request Title/Number | Status |
+| :------------------------ | :----- |
+|                           |        |
 
 ### Issues
 
 [List all resolved issues with titles, numbers, links, and their status.]
 
-| Issue Title/Number              | Status   |
-|:--------------------------------|:---------|
-|                                 |          |
+| Issue Title/Number | Status |
+| :----------------- | :----- |
+|                    |        |
 
 ## Why This Project?
 
@@ -96,7 +104,8 @@ Instructions:
 
 ## Availability
 
-[Confirm your availability during the internship, including weekly hours, other commitments, and a plan for catching up if behind schedule.]
+[Confirm your availability during the internship, including weekly hours, other
+commitments, and a plan for catching up if behind schedule.]
 
 ## Post-OSL Internship Program
 

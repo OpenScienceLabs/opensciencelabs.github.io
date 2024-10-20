@@ -1,11 +1,10 @@
-
 name: main
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   check-branch:
@@ -36,26 +35,36 @@ jobs:
       run:
         shell: bash -l {0}
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - uses: conda-incubator/setup-miniconda@v3
-      with:
-        miniconda-version: "latest"
-        environment-file: conda/dev.yaml
-        channels: conda-forge,nodefaults
-        activate-environment: osl-web
-        auto-update-conda: true
-        conda-solver: libmamba
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          miniconda-version: "latest"
+          environment-file: conda/dev.yaml
+          channels: conda-forge,nodefaults
+          activate-environment: osl-web
+          auto-update-conda: true
+          conda-solver: libmamba
 
-    - name: Build the book
-      run: |
-        makim pages.build
-        echo "opensciencelabs.org" > build/CNAME
+      - name: Install dependencies
+        run: |
+          poetry check
+          poetry install
 
-    # Push the book's HTML to github-pages
-    - name: GitHub Pages action
-      uses: peaceiris/actions-gh-pages@v3.5.9
-      if: ${{ github.event_name == 'push' }}
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build
+      - name: Linter
+        run: |
+          pre-commit install
+          pre-commit run --all-file
+
+      - name: Build the book
+        run: |
+          makim pages.build
+          echo "opensciencelabs.org" > build/CNAME
+
+      # Push the book's HTML to github-pages
+      - name: GitHub Pages action
+        uses: peaceiris/actions-gh-pages@v3.5.9
+        if: ${{ github.event_name == 'push' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build

@@ -11,17 +11,14 @@ OSL es una comunidad de código abierto a la que todos pueden unirse, consulta
 nuestro
 
 <a href="https://github.com/OpenScienceLabs/opensciencelabs.github.io"
- alt="Open Science Labs">GitHub</a>
-para que seas parte y puedas resolver Issues.
-
+ alt="Open Science Labs">GitHub</a> para que seas parte y puedas resolver
+Issues.
 
 <h2>¿Cómo puedes contribuir?</h2>
 
 Para contribuir con la comunidad debes conocer nuestras
-<a href="/guidelines/">guías</a>, allí
-encontrarás el flujo de trabajo de los proyectos en marcha y cómo puedes aplicar
-a nuestro equipo.
-
+<a href="/guidelines/">guías</a>, allí encontrarás el flujo de trabajo de los
+proyectos en marcha y cómo puedes aplicar a nuestro equipo.
 
 <h2>Junta directiva</h2>
 
@@ -50,6 +47,7 @@ a nuestro equipo.
        title="Sponsor xmnlab" height="35" width="116"
        style="border: 0;"></iframe>
     </div>
+
   </div>
   <div class="card">
     <img src="https://avatars.githubusercontent.com/u/12076074?v=4"
@@ -135,6 +133,7 @@ a nuestro equipo.
        title="Sponsor xmnlab" height="35" width="116"
        style="border: 0;"></iframe>
     </div>
+
   </div>
 
   <div class="card">
@@ -151,7 +150,6 @@ a nuestro equipo.
       </p>
     </div>
   </div>
-
 
   <div class="card">
     <img src="https://avatars.githubusercontent.com/u/42752529?v=4"

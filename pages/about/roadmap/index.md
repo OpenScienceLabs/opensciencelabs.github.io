@@ -60,20 +60,20 @@ open science and technology community.
 - **New Initiative:** Launch the Project Affiliation program to bring external
   projects under the OSL umbrella, offering various benefits.
 - **Implementation Plan:**
-    - Identify and invite potential projects to join the OSL ecosystem.
-    - Provide affiliated projects with opportunities to participate in the OSL
-      Internship and Grants Programs.
-    - Work towards extending additional support and resources as the program
-      matures.
+  - Identify and invite potential projects to join the OSL ecosystem.
+  - Provide affiliated projects with opportunities to participate in the OSL
+    Internship and Grants Programs.
+  - Work towards extending additional support and resources as the program
+    matures.
 
 ### OSL Grants Program
 
 - **New Initiative:** Establish the OSL Grants Program to offer financial
   support to affiliated projects.
 - **Implementation Plan:**
-    - Develop criteria and a selection process for grant allocation.
-    - Secure funding and manage the distribution of grants to support innovative
-      projects and initiatives within the OSL community.
+  - Develop criteria and a selection process for grant allocation.
+  - Secure funding and manage the distribution of grants to support innovative
+    projects and initiatives within the OSL community.
 
 ## Continuing Initiatives
 
@@ -84,14 +84,14 @@ open science and technology community.
 - **Objective:** Continuously enhance the internship program based on learned
   experiences, aiming to offer an enriching and educational journey for interns.
 - **Plan for Improvement:**
-    - Analyze feedback from previous cycles to identify areas for enhancement in
-      both the program structure and mentorship experience.
-    - Refine project criteria and the intern selection process to align with
-      evolving industry standards and educational goals.
-    - Strengthen the support system for interns, ensuring an environment that
-      fosters both learning and meaningful contributions to open source projects.
-    - Implement new strategies and tools to streamline communication, project
-      tracking, and collaborative learning.
+  - Analyze feedback from previous cycles to identify areas for enhancement in
+    both the program structure and mentorship experience.
+  - Refine project criteria and the intern selection process to align with
+    evolving industry standards and educational goals.
+  - Strengthen the support system for interns, ensuring an environment that
+    fosters both learning and meaningful contributions to open source projects.
+  - Implement new strategies and tools to streamline communication, project
+    tracking, and collaborative learning.
 
 ### Events and Community Engagement
 

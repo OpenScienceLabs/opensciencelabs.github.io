@@ -5,6 +5,7 @@ date: "2023-11-03"
 authors: ["OSL Team"]
 template: single-sidebar.html
 ---
+
 # Internship/Apprenticeship Program
 
 Welcome to the Open Science Labs (OSL) Internship/Apprenticeship Program! At the
@@ -21,7 +22,9 @@ With a structure inspired by the Google Summer of Code, our program offers some
 unique features:
 
 - **Open Participation**: We welcome everyone from students to professionals,
-  embracing diversity in knowledge and experience. Prospective participants should submit their relevant project ideas to designated OSL mentors or supervisors through email or our social media platforms like Discord.  
+  embracing diversity in knowledge and experience. Prospective participants
+  should submit their relevant project ideas to designated OSL mentors or
+  supervisors through email or our social media platforms like Discord.
 - **Flexible Commitment**: A minimum of 20 hours per week allows for impactful
   work while accommodating your schedule.
 - **Biannual Cycles**: With two distinct cycles per year, there are ample
@@ -108,7 +111,8 @@ For more information about the Cycle 2024-01 Timeline, check its official page:
 
 - **April, 22**: Call for Interns/Apprentices opens.
 - **May, 13**: Deadline for Interns/Apprentices applications.
-- **May, 20**: Announcement of approved Interns/Apprentices and start of bounding period
+- **May, 20**: Announcement of approved Interns/Apprentices and start of
+  bounding period
 - **May, 27**: Official Start Date of Internship Period; an alternative for
   projects not selected by GSoC to run under the OSL Internship Program with The
   Graph Network support.

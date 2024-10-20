@@ -65,7 +65,7 @@ teams:
     members:
       - name: Mfonobong Emmanuel Uyah
         bio: |
-          Electrical and Electronics Engineering graduate with interest in software development using Python, Django, and JavaScript. Looking to develop and participate in open-source and open-science projects. 
+          Electrical and Electronics Engineering graduate with interest in software development using Python, Django, and JavaScript. Looking to develop and participate in open-source and open-science projects.
         image_url: https://avatars.githubusercontent.com/u/97167651?v=4&size=64
         github_url: https://github.com/investor-uyah
         # github_sponsor:
@@ -137,7 +137,7 @@ teams:
         date: 2022-04-12
         github_sponsor: https://github.com/sponsors/luabida/button
         github_url: https://github.com/luabida
-      
+
       - name: Daniela Iglesias Rocabado
         bio: |
           Graduate in Systems Engineering with a passion for Python and Web Development.
@@ -149,11 +149,11 @@ teams:
 # OSL Team
 
 OSL is an Open-Source community which anyone can join. Check our
-[GitHub](https://github.com/OpenScienceLabs/opensciencelabs.github.io) to be
-a part of the issues.
+[GitHub](https://github.com/OpenScienceLabs/opensciencelabs.github.io) to
+contribute to the project and help resolve issues.
 
 ## How can you contribute?
 
 To contribute alongside the community, be sure to check our
-[Guidelines](/guidelines/). There, you will find the
-workflow of the running projects and how you can apply to our team.
+[Guidelines](/guidelines/). There, you will find the workflow of the running
+projects and how you can apply to our team.

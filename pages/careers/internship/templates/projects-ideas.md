@@ -49,7 +49,7 @@ Instructions:
 ### Details
 
 - Prerequisites:
-    - [List prerequisites here]
+  - [List prerequisites here]
 - Expected Time: [#] hours (note: minimum 350 hours)
 - Potential Mentor(s): [Mentor 1, Mentor 2, ...]
   <!-- names of all potential mentors, separated by commas -->
