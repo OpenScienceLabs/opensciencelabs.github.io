@@ -11,8 +11,8 @@ authors: ["OSL Team"]
 
 In today's dynamic scientific landscape, collaboration and community engagement
 are more crucial than ever. That’s why Open Science Labs is proud to introduce
-Virtual Labs — a dedicated platform where scientific groups can collaborate, share
-knowledge, and grow together.
+Virtual Labs — a dedicated platform where scientific groups can collaborate,
+share knowledge, and grow together.
 
 ### 🟢 **Basic Plan: Free Community Space**
 

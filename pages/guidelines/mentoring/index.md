@@ -284,7 +284,6 @@ As a mentee within our community, you agree to:
 - Hold all sensitive information provided through your mentoring relationship in
   strict confidence.
 
-
 [umich-mentoring-guide]:
   https://www.rackham.umich.edu/downloads/more-mentoring-guide-for-mentors.pdf
 [mmu-mentoring-guidlines]:

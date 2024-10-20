@@ -6,7 +6,7 @@ site_dir: build
 
 theme:
   name: null
-  custom_dir: 'theme/'
+  custom_dir: "theme/"
   features:
     - content.code.copy
   palette:
@@ -23,63 +23,63 @@ extra_javascript:
 
 nav:
   # - Home: 'index.md'
-  - Blog: 'blog/index.md'
+  - Blog: "blog/index.md"
   - Affiliations:
-    - index: affiliations/index.md
+      - index: affiliations/index.md
     # - Member Affiliation: 'affiliations/membership/index.md'
     # - OpenHub: 'affiliations/open-hub/index.md'
   # - Programs:
-    # Mentors: 'projects/mentoring/mentors.md'
-    # - Activities: about/archives/index.md
-    # note> faq is out-of-date
-    # - FAQ: faq/index.md
+  # Mentors: 'projects/mentoring/mentors.md'
+  # - Activities: about/archives/index.md
+  # note> faq is out-of-date
+  # - FAQ: faq/index.md
   - Projects:
-    - index: 'projects/index.md'
-    - Incubator: 'projects/incubator/index.md'
-    - Affiliated:
-      - index: 'projects/affiliated/index.md'
-      - Affiliated Projects: 'projects/affiliated/projects.md'
+      - index: "projects/index.md"
+      - Incubator: "projects/incubator/index.md"
+      - Affiliated:
+          - index: "projects/affiliated/index.md"
+          - Affiliated Projects: "projects/affiliated/projects.md"
     # - Mentoring: 'projects/mentoring/index.md'
     # note: let's keep these projects hidden for now
     # - Packaging Support: 'projects/packaging-support/index.md'
     # - Virtual-Labs: 'projects/virtual-labs/index.md'
   - Careers:
-    - index: careers/index.md
-    - Internship:
-      - index: 'careers/internship/index.md'
-      - Interns Guide: 'careers/internship/guides/interns/index.md'
-      - Mentors Guide: 'careers/internship/guides/mentors/index.md'
-      # - "Cycle 2024-02": 'careers/internship/cycles/2024-02.md'
-      # - "Cycle 2024-01 (CLOSED)": 'careers/internship/cycles/2024-01.md'
-      # - "Cycle 2023-01 (CLOSED)": 'careers/internship/cycles/2023-01.md'
-      - "TEMPLATE: Projects Ideas": 'careers/internship/templates/projects-ideas.md'
-      - "TEMPLATE: Intern Project Proposal": 'careers/internship/templates/intern-proposal.md'
-    - GSoC:
-      - index: 'careers/gsoc/index.md'
-      - Contributor Guide: 'careers/gsoc/guides/contributor/index.md'
-      - "TEMPLATE: Contributor Project Proposal": 'careers/gsoc/templates/contributor-proposal.md'
+      - index: careers/index.md
+      - Internship:
+          - index: "careers/internship/index.md"
+          - Interns Guide: "careers/internship/guides/interns/index.md"
+          - Mentors Guide: "careers/internship/guides/mentors/index.md"
+          # - "Cycle 2024-02": 'careers/internship/cycles/2024-02.md'
+          # - "Cycle 2024-01 (CLOSED)": 'careers/internship/cycles/2024-01.md'
+          # - "Cycle 2023-01 (CLOSED)": 'careers/internship/cycles/2023-01.md'
+          - "TEMPLATE: Projects Ideas": "careers/internship/templates/projects-ideas.md"
+          - "TEMPLATE: Intern Project Proposal": "careers/internship/templates/intern-proposal.md"
+      - GSoC:
+          - index: "careers/gsoc/index.md"
+          - Contributor Guide: "careers/gsoc/guides/contributor/index.md"
+          - "TEMPLATE: Contributor Project Proposal": "careers/gsoc/templates/contributor-proposal.md"
   - Partnership:
-      - index: 'partnership/index.md'
-      - Partners: 'partnership/partners/index.md'
+      - index: "partnership/index.md"
+      - Partners: "partnership/partners/index.md"
   - Events:
-    - index: events/index.md
-    - "OpenVerse'24": events/openverse24/index.md
+      - index: events/index.md
+      - "OpenVerse'24": events/openverse24/index.md
   - Guidelines:
-    - index: guidelines/index.md
-    - Articles: guidelines/articles/index.md
-    - DEI: guidelines/dei/index.md
-    # - DevOps/Discord: guidelines/devops/discord.md
-    # - Fund Raiser: guidelines/fund-raiser/index.md
-    - Mentoring: guidelines/mentoring/index.md
+      - index: guidelines/index.md
+      - Articles: guidelines/articles/index.md
+      - DEI: guidelines/dei/index.md
+      # - DevOps/Discord: guidelines/devops/discord.md
+      # - Fund Raiser: guidelines/fund-raiser/index.md
+      - Mentoring: guidelines/mentoring/index.md
   - About:
-    - index: 'about/index.md'
-    - About OSL: 'about/index.md'
-    - Our Formula: 'about/formula/index.md'
-    - Team: about/team/index.md
-    - Roadmap: about/roadmap/index.md
-    - Governance: about/governance/index.md
-    - CoC: about/coc/index.md
-  - Donate: 'donate/index.md'
+      - index: "about/index.md"
+      - About OSL: "about/index.md"
+      - Our Formula: "about/formula/index.md"
+      - Team: about/team/index.md
+      - Roadmap: about/roadmap/index.md
+      - Governance: about/governance/index.md
+      - CoC: about/coc/index.md
+  - Donate: "donate/index.md"
 
 markdown_extensions:
   - toc:
@@ -101,7 +101,7 @@ plugins:
         tags: {}
 
   - rss:
-      abstract_chars_count: 160  # -1 for full content
+      abstract_chars_count: 160 # -1 for full content
       abstract_delimiter: <!-- more -->
       categories:
         - tags

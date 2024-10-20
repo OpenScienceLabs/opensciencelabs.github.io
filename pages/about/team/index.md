@@ -149,11 +149,11 @@ teams:
 # OSL Team
 
 OSL is an Open-Source community which anyone can join. Check our
-[GitHub](https://github.com/OpenScienceLabs/opensciencelabs.github.io)
-to contribute to the project and help resolve issues.
+[GitHub](https://github.com/OpenScienceLabs/opensciencelabs.github.io) to
+contribute to the project and help resolve issues.
 
 ## How can you contribute?
 
 To contribute alongside the community, be sure to check our
-[Guidelines](/guidelines/). There, you will find the
-workflow of the running projects and how you can apply to our team.
+[Guidelines](/guidelines/). There, you will find the workflow of the running
+projects and how you can apply to our team.

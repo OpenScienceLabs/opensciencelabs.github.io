@@ -5,7 +5,8 @@ authors: ["OSL Team"]
 
 # Guidelines
 
-The Open Science Labs Guideline is a collection of documents about how to get started in specific areas.
+The Open Science Labs Guideline is a collection of documents about how to get
+started in specific areas.
 
 ## Articles
 

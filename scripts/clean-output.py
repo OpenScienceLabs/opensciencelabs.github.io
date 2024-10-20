@@ -19,4 +19,3 @@ if __name__ == "__main__":
     input_text = sys.stdin.read()
     cleaned_text = remove_ansi_escape_sequences(input_text)
     print(cleaned_text, end='')
-

@@ -10,8 +10,7 @@ category: ["devops"]
 <!-- # [ES] Discord -->
 
 Discord es nuestra principal herramienta de comunicación con la comunidad. El
-enlace directo a nuestro discord es
-[/discord](/discord).
+enlace directo a nuestro discord es [/discord](/discord).
 
 ## Convenciones
 

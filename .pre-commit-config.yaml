@@ -5,7 +5,9 @@ repos:
     rev: v4.6.0
     hooks:
       - id: trailing-whitespace
+        exclude: "pages/blog"
       - id: end-of-file-fixer
+        exclude: "pages/blog"
       - id: check-json
       - id: check-toml
       - id: check-xml
@@ -13,8 +15,10 @@ repos:
       - id: check-case-conflict
       - id: check-docstring-first
       - id: detect-private-key
+        exclude: "theme"
 
   - repo: https://github.com/pre-commit/mirrors-prettier
     rev: "v3.0.2"
     hooks:
       - id: prettier
+        exclude: "pages/blog|theme"
