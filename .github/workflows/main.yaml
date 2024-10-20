@@ -47,12 +47,12 @@ jobs:
         auto-update-conda: true
         conda-solver: libmamba
 
-		- name: Install dependencies
+    - name: Install dependencies
       run: |
         poetry check
-				poetry install
+        poetry install
 
-		- name: Build the book
+    - name: Build the book
       run: |
         makim pages.build
         echo "opensciencelabs.org" > build/CNAME
