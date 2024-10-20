@@ -20,3 +20,12 @@ poetry install
 ```bash
 makim pages.preview
 ```
+
+## Linter
+
+Ensure you have installed the pre-commit config locally:
+
+```bash
+# with your conda env active, run:
+$ pre-commit install
+```

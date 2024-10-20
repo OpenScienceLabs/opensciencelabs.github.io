@@ -52,6 +52,11 @@ jobs:
         poetry check
         poetry install
 
+    - name: Linter
+      run: |
+        pre-commit install
+        pre-commit run --all-file
+
     - name: Build the book
       run: |
         makim pages.build
