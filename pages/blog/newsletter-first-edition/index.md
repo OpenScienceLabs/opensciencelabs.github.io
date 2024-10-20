@@ -18,6 +18,7 @@ template: "blog-post.html"
 - **OSL Grant News**
 - **PyOpenSci’s Upcoming Fall Festival Event**
 - **OSL Projects Development Report**
+- **Open Study Group**
 
 ## News: OSL Receives PSF Grant for MAKIM and ASTx Projects
 
