@@ -1,10 +1,9 @@
-version: 1.0
 groups:
   pages:
     tasks:
       pre-build:
         help: pre-build step
-        shell: bash
+        backend: bash
         run: |
           mkdir -p build
           # Directory to search for .ipynb files
@@ -23,12 +22,14 @@ groups:
 
       build:
         help: build the static page
-        dependencies:
-          - task: pages.pre-build
+        hooks:
+          pre-run:
+            - task: pages.pre-build
         run: mkdocs build --verbose --clean
 
       preview:
         help: preview the web page dynamically
-        dependencies:
-          - task: pages.pre-build
+        hooks:
+          pre-run:
+            - task: pages.pre-build
         run: mkdocs serve --watch pages --watch theme
