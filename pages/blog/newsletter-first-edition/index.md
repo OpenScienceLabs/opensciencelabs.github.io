@@ -1,78 +1,143 @@
 ---
-title: "OSL Newsletter First Edition"
-slug: "osl-newsletter-first-edition"
+title: "Newsletter First Edition"
+slug: "newsletter-first-edition"
 date: 2024-10-19
 authors: ["Mfonobong Uyah"]
 tags: ["Newsletter", "OSL", "First Edition"]
 categories: ["Newsletter"]
-description: "The OSL newsletter is getting ready to launch. Our first release has been repurposed for this blog post but you can catch the next release right in your mail."
+description: |
+  The OSL newsletter is launching soon! Our first edition has been repurposed
+  for this blog post, but you can subscribe to receive future releases directly
+  in your inbox.
 thumbnail: "/header.jpg"
 template: "blog-post.html"
 ---
 
 **Highlights:**
 
-- OSL grant news 
-- A little about the Python Software Foundation
-- MAKIM development report
-- ASTx development report
-- Sugar development report 
-- SciCookie development report 
-- PyOpenSci’s Upcoming Fall Festival Event
+- **OSL Grant News**
+- **PyOpenSci’s Upcoming Fall Festival Event**
+- **OSL Projects Development Report**
+- **Open Study Group**
 
+## News: OSL Receives PSF Grant for MAKIM and ASTx Projects
 
-## News: OSL receives PSF grant for its MAKIM and ASTx Projects
+We're thrilled to announce that the Python Software Foundation (PSF) has granted
+funding to two of our key projects: **MAKIM** and **ASTx**. This support will
+help accelerate development and enhance the capabilities of these tools. Read on
+to learn more about these projects and the impact of the PSF grant.
 
-The Python Software Foundation (PSF) has agreed to fund two projects under the OSL umbrella. The projects are MAKIM and ASTx. Find out more about these projects and the ongoing PSF grant work in the following sections. 
+### About the Python Software Foundation
 
-## About the Python Software Foundation
+Founded in March 2001, the Python Software Foundation (PSF) is a nonprofit
+organization dedicated to advancing and promoting the Python programming
+language. The PSF supports a wide range of open-source Python projects,
+fostering a vibrant and inclusive community.
 
-The Python Software Foundation (PSF) is a nonprofit organisation dedicated to supporting the development of open-source projects linked to the Python language. Founded in March 2001, the PSF has grown to become an impactful and outstanding organisation sponsoring some of the most reputable Python-based open-source programs.
+## Are You a Pythonista? Join the PyOpenSci Fall Festival 2024
 
-## MAKIM Improvements
+Mark your calendars! Our partner is hosting a one-of-a-kind event. The
+**PyOpenSci Fall Festival 2024** is an inaugural online meeting of Python, Open
+Science, and Open Source enthusiasts set to take place from October 28 to
+November 1, 2024.
 
-Makim is a YAML-based task automation tool inspired by Make, offering structured definitions for tasks and dependencies with support for conditionals, arguments, grouping, variables, Jinja2 templating, and environment file integration. 
+The event promises to feature insightful talks, essential hands-on workshops,
+and office hours with numerous industry experts exchanging ideas and sharing
+experiences.
+[Go here](https://www.pyopensci.org/events/pyopensci-2024-fall-festival.html) to
+learn more.
 
-Our in-house team has made many recent updates to the project. A missing single quote was added to address an error related to a wrong command, enhancing command functionality. Support for interactive arguments was introduced, allowing for more dynamic user input. Dependency management was updated, specifically with the paginate library, while also resolving a CI installation issue to streamline the build process. Additionally, the attribute "shell" was refactored to "backend," improving code clarity. Finally, the configuration for MyPy was updated to ensure better type-checking practices.
+## OSL Projects Development Report
 
-Read more about MAKIM <a href="https://dev.to/opensciencelabs/streamlining-project-automation-with-makim-21nc">here</a>.
- 
-## ASTx Improvements
+### MAKIM Improvements
 
-ASTx is a language-agnostic expression structure designed primarily for the ArxLang project, although it can be utilised by any programming language or parser to create a high-level representation of Abstract Syntax Trees (AST). It does not function as a lexer or parser. Its features include modular AST blocks, control flow structures (like if/else statements and for loops), integer data types (Int8 to Int64), binary and unary operators, object visibility (public and private), scope management (global and local), a symbol table organised by scope, and function declarations and calls. 
+**MAKIM** is a YAML-based task automation tool inspired by Make. It offers
+structured definitions for tasks and dependencies, supporting conditionals,
+arguments, grouping, variables, Jinja2 templating, and environment file
+integration.
 
-Our team has made several developmental improvements to ASTx, which include the addition of a new import statement feature allowing for improved module management, implementation of runtime type checking using Typeguard, enhancement of type safety and reliability, and update on the Prettier configuration as well as the MAKIM and CI steps to streamline the development and integration processes.
+Makim team has made several recent updates to the project, including the
+addition of new features supported by the PSF grant.
 
-If you would like to read more on ASTx, <a href="https://opensciencelabs.org/blog/console-based-representation-in-astx/">go here</a>. 
+- Added support for checking the .makim.yaml structure with a schema definition.
+- Added support for matrix variables for tasks.
+- Changed from dependencies support to hooks with pre and post run support.
+- Fixed text problems and issues in the continuous integration jobs.
+- Introduced support for interactive arguments, allowing for more dynamic user
+  input.
+- Refactored the attribute "shell" to "backend," improving code clarity.
+- Updated the configuration for MyPy to ensure better type-checking practices.
 
-## EXTRA: Sugar and SciCookie Both Have New Updates
+Read more about MAKIM
+[here](https://dev.to/opensciencelabs/streamlining-project-automation-with-makim-21nc).
 
-MAKIM and ASTx are not the only projects getting new updates. The latest PRs on the Sugar repository have seen a fix for the Jinja2 template, another that refractors the interface for plugins/extensions and moves the main command to the compose group, and another that refractor and fixes the classes and CLI. On the SciCookie project, our team has added a smoke test for pyenv. 
+### ASTx Improvements
 
-Love to become a contributor? Jump on any open issues or make a PR for a new feature, fix, or test. 
+**ASTx** is a language-agnostic expression structure designed primarily for the
+ArxLang project. However, it can be utilized by any programming language or
+parser to create high-level representations of Abstract Syntax Trees (AST).
 
+ArxLang team has made several developmental improvements to ASTx, including the
+addition of new features supported by the PSF grant:
 
-<p>
-    <img src=./study.jpeg alt ="Study Group">
-</p>
-<a href="https://discord.gg/Z7uqu82A">Jump to OSL Discord Group</a>
- 
+- Added a new import statement feature for improved module management.
+- Implemented runtime type checking using Typeguard.
+- Enhanced type safety and reliability.
+- Improved the development configuration structure, and dependencies.
+- Added a transpiler from astx to python
+- Added support to complex32 and complex64
+- Added support to float16, and float64
+- Added support to uint8, uint16, unit32, uint64, uint128
 
-## Are you a Pythonista? Join the PyOpenSci Fall Festival 2024
+If you would like to read more on ASTx,
+[go here](https://opensciencelabs.org/blog/console-based-representation-in-astx/).
 
-Mark your calendars! Our partner is hosting a one-of-a-kind event. The PyOpenSci Fall Festival 2024 is an inaugural online meeting of Python, Open Science, and Open Source enthusiasts set to take place from October 28 to November 1, 2024. 
+### Sugar and SciCookie Both Have New Updates
 
-The event promises to feature big talks, essential hands-on workshops, and office hours with lots of industry experts exchanging ideas and sharing experiences. Go <a href="https://www.pyopensci.org/events/pyopensci-2024-fall-festival.html">here</a> to learn more.
+**Sugar** and **SciCookie** are not the only projects receiving updates. The
+latest PRs on the Sugar repository include:
 
-## What Next? How To Get Started Learning About OSL Products and Activities
+- Added support for checking the .sugar.yaml structure with a schema definition.
+- A fix for the Jinja2 template.
+- A refactor of the interface for plugins/extensions that moves the main command
+  to the compose group.
 
-- Tour our website: Jump on the OSL website to explore information about our mission, vision, contribution guidelines, and much more. Visit our website now by simply clicking this link.  
- 
-- Become a member: Join the OSL Discord server. This is recommended if you have a technical background, especially regarding software development. But we also welcome new talents and enthusiasts. If you also want to contribute through server moderation or critical decision-making, our Discord server is the place to be. Come onboard using this link.
- 
-- Become one of our important connections: The OSL LinkedIn and X accounts are active. Here, you can get updates about published articles and events before they hit your email.  
- 
-- Explore our products and ideas: Visit our YouTube channel. There are already 12 insightful videos to watch on our channel with a lot more rolling out soon. See how to install and use our most popular tools and pick up new knowledge on programming languages, coding best practices, and past events.
+On the SciCookie project, SciCookie team has added some feature and
+improvements:
 
-<a align="center" href="https://www.youtube.com/@opensciencelabs/videos">Jump to Our YouTube Channel</a>. 
+- Improved tests and infrastructure.
+- Added support to pixi with pyproject.
+- Added support to circleci.
 
+## What’s Next? How to Get Started Learning About OSL Projects and Activities
+
+- **Tour Our Website:** Explore our mission, vision, contribution guidelines,
+  and more on the [OSL website](https://www.opensciencelabs.org).
+- **Become a Member:** Join our
+  [OSL Discord server](https://www.opensciencelabs.org/discord) to connect with
+  like-minded individuals, contribute to discussions, and collaborate to project
+  under OSL umbrella. Whether you have a technical background or are a new
+  enthusiast, everyone is welcome!
+
+- **Stay Connected:** Follow us on
+  [LinkedIn](https://www.linkedin.com/company/opensciencelabs) and
+  [X](https://twitter.com/opensciencelabs) to get updates about published
+  articles and events before they hit your email.
+
+- **Explore Our Projects and Ideas:** Visit our
+  [YouTube channel](https://www.youtube.com/@opensciencelabs/videos). With 12
+  insightful videos already available and many more rolling out soon, you can
+  learn how to install and use our most popular tools, as well as gain knowledge
+  on programming languages, coding best practices, and past events.
+
+### Open Study Group
+
+Join our Open Study Group! Everyone is welcome to participate in our dedicated
+one-hour sessions designed to support your personal studies. Use this online
+meeting space to focus on your work, ask questions, and share updates about your
+progress. Whether you're tackling a new project, learning a new skill, or simply
+seeking a quiet time to study, our study group provides a supportive and
+collaborative environment to help you achieve your goals. Come connect with
+fellow learners and make the most of your study time together!
+
+Ask for more information on our [Discord](https://www.opensciencelabs.org/discord).
