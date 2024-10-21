@@ -16,7 +16,7 @@ template: "blog-post.html"
 **Highlights:**
 
 - **OSL Grant News**
-- **PyOpenSci’s Upcoming Fall Festival Event**
+- **pyOpenSci’s Upcoming Fall Festival Event**
 - **OSL Projects Development Report**
 - **Open Study Group**
 
@@ -34,10 +34,10 @@ organization dedicated to advancing and promoting the Python programming
 language. The PSF supports a wide range of open-source Python projects,
 fostering a vibrant and inclusive community.
 
-## Are You a Pythonista? Join the PyOpenSci Fall Festival 2024
+## Are You a Pythonista? Join the pyOpenSci Fall Festival 2024
 
 Mark your calendars! Our partner is hosting a one-of-a-kind event. The
-**PyOpenSci Fall Festival 2024** is an inaugural online meeting of Python, Open
+**pyOpenSci Fall Festival 2024** is an inaugural online meeting of Python, Open
 Science, and Open Source enthusiasts set to take place from October 28 to
 November 1, 2024.
 
@@ -94,8 +94,7 @@ If you would like to read more on ASTx,
 
 ### Sugar and SciCookie Both Have New Updates
 
-**Sugar** and **SciCookie** are not the only projects receiving updates. The
-latest PRs on the Sugar repository include:
+**Sugar** and **SciCookie** projects are also receiving updates. The latest PRs on the Sugar repository include:
 
 - Added support for checking the .sugar.yaml structure with a schema definition.
 - A fix for the Jinja2 template.
