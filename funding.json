@@ -1,0 +1,129 @@
+{
+    "version": "v1.0.0",
+    "entity": {
+        "type": "non-profit",
+        "role": "open source development",
+        "name": "Open Science Labs (OSL)",
+        "email": "opensciencelabs@gmail.com",
+        "phone": "",
+        "description": "Open Science Labs (OSL) is a non-profit organisation dedication to creating innovative FOSS.",
+        "webpageurl": {
+            "url": "www.opensciencelabs.org",
+            "wellKnown": ""
+        }
+    },
+    "projects": [{
+
+        "guid": "",
+        "name": "Sugar",
+        "description": "Sugar is a tool that helps users organize their stack of containers and any additional scripts. ",
+        "webpageUrl": ""
+
+    },
+    "repositoryUrl", "https://github.com/osl-incubator/sugar"],
+
+    [{
+        "guid": "",
+        "name": "Makim",
+        "description": "Makim is a YAML-based task automation tool offering structures for the definition for tasks and dependencies, with  support for conditionals.",
+        "webpageUrl": ""
+
+    },
+    "repositoryUrl", "https://github.com/osl-incubator/makim"],
+
+    [{
+        "guid": "",
+        "name": "Growth-forge",
+        "description": "Growth-forge is a simplified feedback exchange platform designed for project participants, with the aim of streamlining communication and insights sharing.",
+        "webpageUrl": "",
+
+    }]
+    "repositoryUrl": "https://github.com/osl-incubator/growth-forge",
+
+    [{
+        "guid": "",
+        "name": "SciCookie",
+        "description": "Scicookie is a template which creates projects from project templates and is based on Cookiecutter. It serves as an initial structure to simply project creation processes.",
+        "webpageUrl": "",
+
+    },
+    "repositoryUrl", "https://github.com/osl-incubator/scicookie"],
+
+    [{
+        "guid": "",
+        "name": "ArtBox",
+        "description": "Artbox is a tool that handles multimedia files processing, such as conversion from speech to text and vice versa.",
+        "webpageUrl": "",
+
+    },
+    "repositoryUrl", "https://github.com/osl-incubator/artbox"]
+
+    "funding": {
+        "channels": [
+            {
+                "guid": "mybank",
+                "type": "bank",
+                "address": "",
+                "description": "Will accept direct bank transfers. Please e-mail us for details."
+            },
+            {
+                "guid": "mypay",
+                "type": "payment-provider",
+                "address": "https://example.com/payme/@myid",
+                "description": "Pay with your debit/credit card through this gateway and setup recurring subscriptions.",
+            }
+        ],
+        "plans": [
+            {
+                "guid": "hosting-monthly",
+                "status": "planned",
+                "name": "hosting suppport",
+                "description": "This will cover the cost of proposed server hosting for OSL projects.",
+                "amount": "250",
+                "currency": "USD",
+                "frequency": "monthly",
+                "channels": "mypay",
+            },
+            {
+                "guid": "developer-time",
+                "status": "active",
+                "name": "developer-support",
+                "description": "This will cover the cost of one developer working part-time on the projects.",
+                "amount": "1000",
+                "currency": "USD",
+                "frequency": "monthly",
+                "channels": ["mybank"],
+            },
+            {
+                "guid": "angel-plan",
+                "status": "active",
+                "name": "goodwill plan",
+                "description": "Pay anything you wish to show your goodwill for our projects.",
+                "amount": "0",
+                "currency": "USD",
+                "frequency": "one-time",
+                "channels": ["mybank", "mypay"],
+            },
+            {
+                "history": [
+                    {"year": "2024",
+                    "amount": "5126",
+                    "currency": "USD",
+                    "type": "grant",
+                    "expenses": "Development work",
+                    "taxes": "466",
+                    "currency": "USD",
+                    "description": "This funding of $5,xxx was made by the Python Software Foundation towards the development of the OSL Makim and ASTx projects."},
+
+                    {"year": "",
+                    "amount": "",
+                    "currency": "USD",
+                    "type": "",
+                    "expenses": "",
+                    "taxes": "",
+                    "description": ""},
+                ]
+            }
+        ]
+    }
+}
