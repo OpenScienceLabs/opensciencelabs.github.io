@@ -1,0 +1,102 @@
+{
+  "version": "v1.0.0",
+  "entity": {
+    "type": "non-profit",
+    "role": "open source development",
+    "name": "Open Science Labs (OSL)",
+    "email": "opensciencelabs@gmail.com",
+    "phone": "",
+    "description": "Open Science Labs (OSL) is a non-profit organisation dedication to creating innovative FOSS.",
+    "webpageurl": {
+      "url": "www.opensciencelabs.org",
+      "wellKnown": ""
+    }
+  },
+  "projects": [
+    {
+      "guid": "",
+      "name": "Sugar",
+      "description": "Sugar is a tool that helps users organize their stack of containers and any additional scripts. ",
+      "webpageUrl": "",
+      "repositoryUrl": "https://github.com/osl-incubator/sugar"
+    },
+
+    {
+      "guid": "",
+      "name": "Makim",
+      "description": "Makim is a YAML-based task automation tool offering structures for the definition for tasks and dependencies, with  support for conditionals.",
+      "webpageUrl": "",
+      "repositoryUrl": "https://github.com/osl-incubator/makim"
+    },
+
+    {
+      "guid": "",
+      "name": "Growth-forge",
+      "description": "Growth-forge is a simplified feedback exchange platform designed for project participants, with the aim of streamlining communication and insights sharing.",
+      "webpageUrl": "",
+      "repositoryUrl": "https://github.com/osl-incubator/growth-forge"
+    },
+
+    {
+      "guid": "",
+      "name": "SciCookie",
+      "description": "Scicookie is a template which creates projects from project templates and is based on Cookiecutter. It serves as an initial structure to simply project creation processes.",
+      "webpageUrl": "",
+      "repositoryUrl": "https://github.com/osl-incubator/scicookie"
+    },
+
+    {
+      "guid": "",
+      "name": "ArtBox",
+      "description": "Artbox is a tool that handles multimedia files processing, such as conversion from speech to text and vice versa.",
+      "webpageUrl": "",
+      "repositoryUrl": "https://github.com/osl-incubator/artbox"
+    }
+  ],
+
+  "funding": {
+    "channels": [
+      {
+        "guid": "OpenCollective",
+        "type": "bank",
+        "address": "https://opencollective.com/osl",
+        "description": "We use Open Collective for receiving funds."
+      }
+    ],
+    "plans": [
+      {
+        "guid": "hosting-monthly",
+        "status": "planned",
+        "name": "hosting suppport",
+        "description": "This will cover the cost of proposed server hosting for OSL projects.",
+        "amount": "250",
+        "currency": "USD",
+        "frequency": "monthly",
+        "channels": ["OpenCollective"]
+      },
+      {
+        "guid": "developer-time",
+        "status": "active",
+        "name": "developer-support",
+        "description": "This will cover the cost of one developer working part-time on the projects.",
+        "amount": "1000",
+        "currency": "USD",
+        "frequency": "monthly",
+        "channels": ["OpenCollective"]
+      },
+      {
+        "guid": "angel-plan",
+        "status": "active",
+        "name": "goodwill plan",
+        "description": "Pay anything you wish to show your goodwill for our projects.",
+        "amount": "0",
+        "currency": "USD",
+        "frequency": "one-time",
+        "channels": ["OpenCollective"]
+      },
+      {
+        "history": []
+      }
+    ]
+  }
+}
