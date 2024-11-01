@@ -2,54 +2,69 @@
   "version": "v1.0.0",
   "entity": {
     "type": "non-profit",
-    "role": "open source development",
-    "name": "Open Science Labs (OSL)",
-    "email": "opensciencelabs@gmail.com",
+    "role": "owner",
+    "name": "Open Science Labs",
+    "email": "team@opensciencelabs.org",
     "phone": "",
     "description": "Open Science Labs (OSL) is a non-profit organisation dedication to creating innovative FOSS.",
     "webpageurl": {
-      "url": "www.opensciencelabs.org",
+      "url": "https://www.opensciencelabs.org",
       "wellKnown": ""
     }
   },
   "projects": [
     {
-      "guid": "",
-      "name": "Sugar",
-      "description": "Sugar is a tool that helps users organize their stack of containers and any additional scripts. ",
-      "webpageUrl": "",
+      "guid": "astx",
+      "name": "ASTx",
+      "description": "ASTx is a groundbreaking library designed to encapsulate language components in an agnostic and pythonic way. It provides a comprehensive set of classes and functionalities, allowing developers to articulate the core elements of any programming language.",
+      "webpageUrl": {
+        "url": "https://astx.arxlang.org",
+        "wellKnown": "https://astx.arxlang.org"
+      },
       "repositoryUrl": "https://github.com/osl-incubator/sugar"
     },
 
     {
-      "guid": "",
+      "guid": "sugar",
+      "name": "Sugar",
+      "description": "Sugar is a tool that helps users organize their stack of containers and any additional scripts. ",
+      "webpageUrl": {
+        "url": "https://osl-incubator.github.io/sugar",
+        "wellKnown": "https://osl-incubator.github.io/sugar"
+      },
+      "repositoryUrl": "https://github.com/osl-incubator/sugar"
+    },
+
+    {
+      "guid": "makim",
       "name": "Makim",
       "description": "Makim is a YAML-based task automation tool offering structures for the definition for tasks and dependencies, with  support for conditionals.",
-      "webpageUrl": "",
+      "webpageUrl": {
+        "url": "https://osl-incubator.github.io/makim",
+        "wellKnown": "https://osl-incubator.github.io/makim"
+      },
       "repositoryUrl": "https://github.com/osl-incubator/makim"
     },
 
     {
-      "guid": "",
-      "name": "Growth-forge",
-      "description": "Growth-forge is a simplified feedback exchange platform designed for project participants, with the aim of streamlining communication and insights sharing.",
-      "webpageUrl": "",
-      "repositoryUrl": "https://github.com/osl-incubator/growth-forge"
-    },
-
-    {
-      "guid": "",
+      "guid": "scicookie",
       "name": "SciCookie",
       "description": "Scicookie is a template which creates projects from project templates and is based on Cookiecutter. It serves as an initial structure to simply project creation processes.",
-      "webpageUrl": "",
+      "webpageUrl": {
+        "url": "https://osl-incubator.github.io/scicookie",
+        "wellKnown": "https://osl-incubator.github.io/scicookie"
+      },
       "repositoryUrl": "https://github.com/osl-incubator/scicookie"
     },
 
     {
-      "guid": "",
+      "guid": "artbox",
       "name": "ArtBox",
       "description": "Artbox is a tool that handles multimedia files processing, such as conversion from speech to text and vice versa.",
-      "webpageUrl": "",
+      "webpageUrl": {
+        "url": "https://osl-incubator.github.io/artbox",
+        "wellKnown": "https://osl-incubator.github.io/artbox"
+      },
       "repositoryUrl": "https://github.com/osl-incubator/artbox"
     }
   ],
@@ -57,8 +72,8 @@
   "funding": {
     "channels": [
       {
-        "guid": "OpenCollective",
-        "type": "bank",
+        "guid": "opencollective",
+        "type": "payment-provider",
         "address": "https://opencollective.com/osl",
         "description": "We use Open Collective for receiving funds."
       }
@@ -66,23 +81,23 @@
     "plans": [
       {
         "guid": "hosting-monthly",
-        "status": "planned",
+        "status": "active",
         "name": "hosting suppport",
         "description": "This will cover the cost of proposed server hosting for OSL projects.",
-        "amount": "250",
+        "amount": "0",
         "currency": "USD",
         "frequency": "monthly",
-        "channels": ["OpenCollective"]
+        "channels": ["opencollective"]
       },
       {
         "guid": "developer-time",
         "status": "active",
         "name": "developer-support",
         "description": "This will cover the cost of one developer working part-time on the projects.",
-        "amount": "1000",
+        "amount": "0",
         "currency": "USD",
         "frequency": "monthly",
-        "channels": ["OpenCollective"]
+        "channels": ["opencollective"]
       },
       {
         "guid": "angel-plan",
@@ -92,7 +107,7 @@
         "amount": "0",
         "currency": "USD",
         "frequency": "one-time",
-        "channels": ["OpenCollective"]
+        "channels": ["opencollective"]
       },
       {
         "history": []
