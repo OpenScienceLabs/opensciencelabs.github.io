@@ -1,7 +1,7 @@
 {
   "version": "v1.0.0",
   "entity": {
-    "type": "non-profit",
+    "type": "organisation",
     "role": "owner",
     "name": "Open Science Labs",
     "email": "team@opensciencelabs.org",
@@ -21,7 +21,10 @@
         "url": "https://astx.arxlang.org",
         "wellKnown": "https://astx.arxlang.org"
       },
-      "repositoryUrl": "https://github.com/osl-incubator/sugar"
+      "repositoryUrl": {
+        "url": "https://github.com/arxlang/astx",
+        "wellKnown": "https://github.com/arxlang/astx"
+      }
     },
 
     {
@@ -32,7 +35,11 @@
         "url": "https://osl-incubator.github.io/sugar",
         "wellKnown": "https://osl-incubator.github.io/sugar"
       },
-      "repositoryUrl": "https://github.com/osl-incubator/sugar"
+      "repositoryUrl": {
+        "url": "https://github.com/osl-incubator/sugar",
+        "wellKnown": "https://github.com/osl-incubator/sugar"
+      }
+
     },
 
     {
@@ -43,7 +50,11 @@
         "url": "https://osl-incubator.github.io/makim",
         "wellKnown": "https://osl-incubator.github.io/makim"
       },
-      "repositoryUrl": "https://github.com/osl-incubator/makim"
+      "repositoryUrl": {
+        "url": "https://github.com/osl-incubator/makim",
+        "wellKnown": "https://github.com/osl-incubator/makim"
+      }
+
     },
 
     {
@@ -54,7 +65,11 @@
         "url": "https://osl-incubator.github.io/scicookie",
         "wellKnown": "https://osl-incubator.github.io/scicookie"
       },
-      "repositoryUrl": "https://github.com/osl-incubator/scicookie"
+      "repositoryUrl": {
+        "url": "https://github.com/osl-incubator/scicookie",
+        "wellKnown": "https://github.com/osl-incubator/scicookie"
+      }
+
     },
 
     {
@@ -65,7 +80,11 @@
         "url": "https://osl-incubator.github.io/artbox",
         "wellKnown": "https://osl-incubator.github.io/artbox"
       },
-      "repositoryUrl": "https://github.com/osl-incubator/artbox"
+      "repositoryUrl": {
+        "url": "https://github.com/osl-incubator/artbox",
+        "wellKnown": "https://github.com/osl-incubator/artbox"
+      }
+
     }
   ],
 
@@ -84,7 +103,7 @@
         "status": "active",
         "name": "hosting suppport",
         "description": "This will cover the cost of proposed server hosting for OSL projects.",
-        "amount": "0",
+        "amount": 0,
         "currency": "USD",
         "frequency": "monthly",
         "channels": ["opencollective"]
@@ -94,7 +113,7 @@
         "status": "active",
         "name": "developer-support",
         "description": "This will cover the cost of one developer working part-time on the projects.",
-        "amount": "0",
+        "amount": 0,
         "currency": "USD",
         "frequency": "monthly",
         "channels": ["opencollective"]
@@ -104,7 +123,7 @@
         "status": "active",
         "name": "goodwill plan",
         "description": "Pay anything you wish to show your goodwill for our projects.",
-        "amount": "0",
+        "amount": 0,
         "currency": "USD",
         "frequency": "one-time",
         "channels": ["opencollective"]
