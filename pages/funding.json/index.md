@@ -1,5 +1,14 @@
-{
-  "version": "v1.0.0",
+---
+title: "funding.json"
+description: "Open Science Labs, sharing knowledge"
+date: "2019-02-28"
+authors: ["OSL Team"]
+---
+
+## Here's the OSL funding.json manifest
+
+```
+{ "version": "v1.0.0",
   "entity": {
     "type": "organisation",
     "role": "owner",
@@ -18,26 +27,26 @@
       "name": "ASTx",
       "description": "ASTx is a groundbreaking library designed to encapsulate language components in an agnostic and pythonic way. It provides a comprehensive set of classes and functionalities, allowing developers to articulate the core elements of any programming language.",
       "webpageUrl": {
-        "url": "https://astx.arxlang.org",
-        "wellKnown": "https://astx.arxlang.org"
+        "url": "https://astx.arxlang.org"
+
       },
       "repositoryUrl": {
         "url": "https://github.com/arxlang/astx",
-        "wellKnown": "https://github.com/arxlang/astx"
+        "wellKnown": "https://github.com/opensciencelabs/opensciencelabs.github.io/tree/main/.well-known/funding-manifest-urls"
       }
     },
 
-    {
+      {
       "guid": "sugar",
       "name": "Sugar",
       "description": "Sugar is a tool that helps users organize their stack of containers and any additional scripts. ",
       "webpageUrl": {
-        "url": "https://osl-incubator.github.io/sugar",
-        "wellKnown": "https://osl-incubator.github.io/sugar"
+        "url": "https://osl-incubator.github.io/sugar"
+
       },
       "repositoryUrl": {
         "url": "https://github.com/osl-incubator/sugar",
-        "wellKnown": "https://github.com/osl-incubator/sugar"
+        "wellKnown": "https://github.com/opensciencelabs/opensciencelabs.github.io/tree/main/.well-known/funding-manifest-urls"
       }
 
     },
@@ -47,12 +56,12 @@
       "name": "Makim",
       "description": "Makim is a YAML-based task automation tool offering structures for the definition for tasks and dependencies, with  support for conditionals.",
       "webpageUrl": {
-        "url": "https://osl-incubator.github.io/makim",
-        "wellKnown": "https://osl-incubator.github.io/makim"
+        "url": "https://osl-incubator.github.io/makim"
+
       },
       "repositoryUrl": {
         "url": "https://github.com/osl-incubator/makim",
-        "wellKnown": "https://github.com/osl-incubator/makim"
+        "wellKnown": "https://github.com/opensciencelabs/opensciencelabs.github.io/tree/main/.well-known/funding-manifest-urls"
       }
 
     },
@@ -62,12 +71,12 @@
       "name": "SciCookie",
       "description": "Scicookie is a template which creates projects from project templates and is based on Cookiecutter. It serves as an initial structure to simply project creation processes.",
       "webpageUrl": {
-        "url": "https://osl-incubator.github.io/scicookie",
-        "wellKnown": "https://osl-incubator.github.io/scicookie"
+        "url": "https://osl-incubator.github.io/scicookie"
+
       },
       "repositoryUrl": {
         "url": "https://github.com/osl-incubator/scicookie",
-        "wellKnown": "https://github.com/osl-incubator/scicookie"
+        "wellKnown": "https://github.com/opensciencelabs/opensciencelabs.github.io/tree/main/.well-known/funding-manifest-urls"
       }
 
     },
@@ -77,12 +86,12 @@
       "name": "ArtBox",
       "description": "Artbox is a tool that handles multimedia files processing, such as conversion from speech to text and vice versa.",
       "webpageUrl": {
-        "url": "https://osl-incubator.github.io/artbox",
-        "wellKnown": "https://osl-incubator.github.io/artbox"
+        "url": "https://osl-incubator.github.io/artbox"
+
       },
       "repositoryUrl": {
         "url": "https://github.com/osl-incubator/artbox",
-        "wellKnown": "https://github.com/osl-incubator/artbox"
+        "wellKnown": "https://github.com/opensciencelabs/opensciencelabs.github.io/tree/main/.well-known/funding-manifest-urls"
       }
 
     }
@@ -134,3 +143,4 @@
     ]
   }
 }
+```
