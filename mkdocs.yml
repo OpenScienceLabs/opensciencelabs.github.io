@@ -63,7 +63,7 @@ nav:
       - Partners: "partnership/partners/index.md"
   - Events:
       - index: events/index.md
-      - "OpenVerse'24": events/openverse24/index.md
+      # - "OpenVerse'24": events/openverse24/index.md
   - Guidelines:
       - index: guidelines/index.md
       - Articles: guidelines/articles/index.md
