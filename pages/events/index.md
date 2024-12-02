@@ -13,6 +13,16 @@ events:
       date_start: August 29th, 2024
       date_end: August 29th, 2024
 
+    - name: "OpenVerse'24 Hackathon"
+      description: |
+        <strong>OpenVerse'24</strong> is a beginner-friendly hackathon
+        designed to welcome newcomers to the <strong>open-source</strong>
+        development community. Our mission is to provide a supportive
+        environment for learning and contributing to open-source projects, with a strong focus on education and practical experience.
+      thumbnail: /images/events/openverse24.png
+      date_start: February 29th, 2024
+      date_end: March 1st, 2024
+
     - name:
         "Collaborative localization of documentation: Scikit-Learn and
         Matplotlib Cases"
