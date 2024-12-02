@@ -79,7 +79,6 @@ nav:
       - Governance: about/governance/index.md
       - CoC: about/coc/index.md
   - Donate: "donate/index.md"
-  # - funding.json: "funding.json/index.md"
 
 markdown_extensions:
   - toc:
