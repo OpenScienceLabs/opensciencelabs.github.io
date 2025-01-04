@@ -2,44 +2,43 @@
 title: Programs
 ---
 
-# Open Science Labs Programs
+# Open Science Labs Projects
 
-Open Science Labs (OSL) is dedicated to fostering innovation and collaboration
-within the open science and open-source communities. Our mission is to create a
-supportive environment where technology meets scientific inquiry, enabling
-researchers, developers, and enthusiasts to contribute to and benefit from open
-science. Currently, OSL offers the following cornerstone programs designed to
-facilitate this mission:
+Open Science Labs (OSL) champions the intersection of open science and
+open-source technology, fostering a vibrant community where researchers,
+developers, and enthusiasts can collaborate and innovate. OSL supports this
+mission through robust programs designed to facilitate growth and development.
 
-## Incubator Program
+## Incubator and Affiliated Projects
 
-The **Incubator Program** at OSL is crafted to nurture open-source projects with
-a focus on scientific research and development. This program offers resources,
-mentorship, and a community platform for projects at their nascent stages,
-helping them to grow and thrive. By providing these projects with the support
-they need, we aim to accelerate their development and increase their impact
-within the scientific community. Participants in the Incubator Program gain
-access to a network of mentors and collaborators, along with exposure to best
-practices in open-source development and scientific research.
+### Incubator Program
+
+The **Incubator Program** at OSL supports emerging open-source libraries and
+tools to support scientific and general projects, providing them with necessary
+resources, mentorship, and a collaborative community. Projects in this program
+benefit from guidance on best practices in open-source development and
+scientific research, helping to enhance their visibility and impact.
+
+### Affiliation Benefits
+
+Projects that become affiliated with OSL enjoy several advantages. They gain
+eligibility to participate in special programs such as the OSL Internship
+Program, the Google Summer of Code, and potentially receive OSL Development
+Grants aimed at accelerating their growth and expanding their reach within the
+global community.
 
 ## Internship Program
 
-Parallelly, the **Internship Program** is designed to connect talented
-individuals with projects under the OSL umbrella, including those within the
-Incubator Program. This initiative is inspired by the successful format of the
-Google Summer of Code, focusing on providing real-world experience to students
-and early-career professionals. Through this program, interns work closely with
-mentors on meaningful contributions to open-source projects, gaining hands-on
-experience, enhancing their skills, and making significant advancements in their
-professional development. The Internship Program is an invaluable opportunity
-for both personal growth and for contributing to the broader goals of open
-science.
+The **Internship Program** offers hands-on experience to aspiring professionals
+by pairing them with both incubated and affiliated projects under the OSL
+umbrella. Modeled after successful initiatives like Google Summer of Code, this
+program allows interns to work on substantive projects, sharpening their skills
+and contributing to significant advancements in open science.
 
----
+## Bridging Theory and Practice
 
-Together, these programs embody the essence of Open Science Labs' commitment to
-advancing open science and technology. By bridging the gap between theoretical
-knowledge and practical application, we aim to cultivate a vibrant community
-that contributes to meaningful scientific advancements. Whether you're looking
-to grow an early-stage project or seeking to dive into the world of open-source
-development, OSL offers a platform to connect, learn, and contribute.
+Through these initiatives, OSL is dedicated to transforming theoretical
+knowledge into practical application, fostering a dynamic environment where
+continuous learning and active contribution drive scientific progress. Whether
+you are developing an innovative project or seeking to engage with the
+open-source community, OSL provides the resources and platform to thrive.

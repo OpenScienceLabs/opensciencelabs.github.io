@@ -3,28 +3,29 @@ title: "Affiliated Projects"
 description: "Affiliated Projects"
 date: "2024-01-29"
 authors: ["OSL Team"]
-template: single-sidebar.html
+template: single.html
 ---
 
-# Affiliated Projects
+# Affiliated and Incubated Projects
 
 We proudly showcase a curated list of innovative and diverse projects that are
 part of the Open Science Labs family. Each of these projects embodies our
 commitment to open science and technology, and they play a pivotal role in
 driving forward our shared goals. These collaborations not only strengthen our
 community but also contribute significantly to the broader field of open source
-and scientific research. Below, you'll find information about each project.
+and scientific research. Below, you'll find information about affiliated and
+incubated projects.
 
 ---
 
-## [ArtBox](https://osl-incubator.github.io/artbox/)
+### <img alt="Static Badge" src="https://img.shields.io/badge/project-incubated-333333?style=for-the-badge&label=project&labelColor=FFAA00&color=888888"> [ArtBox](https://osl-incubator.github.io/artbox/)
 
 ArtBox is a tool set for handling multimedia files with a bunch of useful
 functions.
 
 ---
 
-## [ArxLang](https://arxlang.github.io/)
+### <img alt="Static Badge" src="https://img.shields.io/badge/project-affiliated-333333?style=for-the-badge&label=project&labelColor=FF0000&color=888888"> [ArxLang](https://arxlang.github.io/)
 
 ArxLang Project is compounded mainly by three sub-projects: ASTx, IRx, and Arx.
 
@@ -39,7 +40,7 @@ multi-architecture machine target code generation.
 
 ---
 
-## [Envers](https://osl-incubator.github.io/envers/)
+### <img alt="Static Badge" src="https://img.shields.io/badge/project-incubated-333333?style=for-the-badge&label=project&labelColor=FFAA00&color=888888"> [Envers](https://osl-incubator.github.io/envers/)
 
 Envers is a command-line tool (CLI) designed to manage and version environment
 variables for different deployment stages such as staging, development, and
@@ -48,21 +49,21 @@ environment-specific configurations.
 
 ---
 
-## [fqlearn](https://osl-pocs.github.io/fqlearn/)
+### <img alt="Static Badge" src="https://img.shields.io/badge/project-incubated-333333?style=for-the-badge&label=project&labelColor=FFAA00&color=888888"> [fqlearn](https://osl-pocs.github.io/fqlearn/)
 
 This Project aims to facilitate the teaching of unit operations and
 thermodynamics.
 
 ---
 
-## [Makim](https://osl-incubator.github.io/makim/)
+### <img alt="Static Badge" src="https://img.shields.io/badge/project-incubated-333333?style=for-the-badge&label=project&labelColor=FFAA00&color=888888"> [Makim](https://osl-incubator.github.io/makim/)
 
 Makim (or makim) is based on make and focus on improve the way to define targets
 and dependencies. Instead of using the Makefile format, it uses yaml format.
 
 ---
 
-## [noWorkflow](https://gems-uff.github.io/noworkflow/)
+### <img alt="Static Badge" src="https://img.shields.io/badge/project-affiliated-333333?style=for-the-badge&label=project&labelColor=FF0000&color=888888"> [noWorkflow](https://gems-uff.github.io/noworkflow/)
 
 The noWorkflow project aims at allowing scientists to benefit from provenance
 data analysis even when they don't use a workflow system. It transparently
@@ -71,21 +72,21 @@ support the analysis and management of the provenance.
 
 ---
 
-## [PyDataStructs](https://pydatastructs.readthedocs.io/en/latest/)
+### <img alt="Static Badge" src="https://img.shields.io/badge/project-affiliated-333333?style=for-the-badge&label=project&labelColor=FF0000&color=888888"> [PyDataStructs](https://pydatastructs.readthedocs.io/en/latest/)
 
 PyDataStructs project aims to be a Python package for various data structures
 and algorithms (including their parallel implementations).
 
 ---
 
-## [SciCookie](https://osl-incubator.github.io/scicookie)
+### <img alt="Static Badge" src="https://img.shields.io/badge/project-incubated-333333?style=for-the-badge&label=project&labelColor=FFAA00&color=888888"> [SciCookie](https://osl-incubator.github.io/scicookie)
 
 SciCookie is a template developed by <https://opensciencelabs.org/> that creates
 projects from project templates.
 
 ---
 
-## [Sugar](https://osl-incubator.github.io/sugar/)
+### <img alt="Static Badge" src="https://img.shields.io/badge/project-incubated-333333?style=for-the-badge&label=project&labelColor=FFAA00&color=888888"> [Sugar](https://osl-incubator.github.io/sugar/)
 
 Sugar aims to organize your stack of containers, gathering some useful scripts
 and keeping this information centralized in a configuration file. So the command
