@@ -29,7 +29,6 @@ teams:
           CEO and Owner at AyPhu.
         image_url: https://avatars.githubusercontent.com/u/4383323?v=4
         github_url: https://github.com/luisgagocasas
-        # github_sponsor:
 
   - name: Coordinators
     members:
@@ -41,16 +40,14 @@ teams:
           and Type Theory. I am extremely passionate about Open-Source and Open-Science.
         image_url: https://saransh-cpp.github.io/assets/img/SaranshChopra.jpeg
         github_url: https://github.com/Saransh-cpp
-        # github_sponsor:
 
       - name: Anavelyz Perez
         bio: |
-          OSL Learning Coordinator.
+          OSL Coordinator.
           Statistician and data analyst proficient in Python and R, currently exploring
           Flutter.
         image_url: https://avatars.githubusercontent.com/u/42752529?v=4
         github_url: https://github.com/Anavelyz
-        # github_sponsor:
 
   - name: Associated collaborators
     members:
@@ -59,16 +56,6 @@ teams:
           Statistician, data analyst. Python and R learner.
         image_url: https://avatars.githubusercontent.com/u/49034451?v=4
         github_url: https://github.com/YurelyCamacho
-        # github_sponsor:
-
-  - name: Interns
-    members:
-      - name: Mfonobong Emmanuel Uyah
-        bio: |
-          Electrical and Electronics Engineering graduate with interest in software development using Python, Django, and JavaScript. Looking to develop and participate in open-source and open-science projects.
-        image_url: https://avatars.githubusercontent.com/u/97167651?v=4&size=64
-        github_url: https://github.com/investor-uyah
-        # github_sponsor:
 
   - name: Steering Council Emeritus
     members:
@@ -81,14 +68,12 @@ teams:
           Distributed Massive Empowerment.
         image_url: https://avatars.githubusercontent.com/u/236351?v=4
         github_url: https://github.com/map0logo
-        # github_sponsor:
 
       - name: Ingrid Garcia
         bio: |
           Research Coordinator at 60 Decibels.
         image_url: https://avatars.githubusercontent.com/u/47956238?v=4
         github_url: https://github.com/ibianka
-        # github_sponsor:
 
       - name: Mariangela Petrizzo
         bio: |
@@ -97,7 +82,6 @@ teams:
           plenty of selfishness.
         image_url: https://avatars.githubusercontent.com/u/221018?v=4
         github_url: https://github.com/petrizzo
-        # github_sponsor:
 
       - name: Sandro Loch
         bio: |
@@ -115,7 +99,6 @@ teams:
           using Pandas, Tensorflow and R.
         image_url: https://avatars.githubusercontent.com/u/12076074?v=4
         github_url: https://github.com/eunrod16
-        # github_sponsor:
 
       - name: Agustina Pesce Lopez
         bio: |
@@ -125,7 +108,6 @@ teams:
           science openness and reproducibility.
         image_url: https://avatars.githubusercontent.com/u/13738018?v=4
         github_url: https://github.com/aguspesce
-        # github_sponsor:
 
   - name: Alumni
     members:
@@ -134,7 +116,6 @@ teams:
           Software Developer and DevOps
         image_url: https://avatars.githubusercontent.com/u/82233055?v=4
         type: team-template
-        date: 2022-04-12
         github_sponsor: https://github.com/sponsors/luabida/button
         github_url: https://github.com/luabida
 
@@ -143,7 +124,12 @@ teams:
           Graduate in Systems Engineering with a passion for Python and Web Development.
         image_url: https://avatars.githubusercontent.com/u/107383061?v=4
         github_url: https://github.com/DanielaIgRo
-        # github_sponsor:
+
+      - name: Mfonobong Emmanuel Uyah
+        bio: |
+          Electrical and Electronics Engineering graduate with interest in software development using Python, Django, and JavaScript. Looking to develop and participate in open-source and open-science projects.
+        image_url: https://avatars.githubusercontent.com/u/97167651?v=4
+        github_url: https://github.com/investor-uyah
 ---
 
 # OSL Team

@@ -3,6 +3,7 @@ title: "Open Science Labs Formula"
 description: "Open Science Labs Formula"
 date: "2024-02-14"
 authors: ["OSL Team"]
+template: single.html
 ---
 
 # Open Science Labs Formula

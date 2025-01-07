@@ -17,6 +17,16 @@ partners:
     github: https://github.com/thegraphnetwork
     twitter: https://twitter.com/thegraphnetwork
 
+  - name: The GRAPH Courses
+    summary: |
+      The GRAṔH Courses is a non-profit making data science accessible for
+      students, researchers and professionals with affordable live bootcamps
+      and free self-paced courses.
+    thumbnail: https://thegraphnetwork.org/wp-content/uploads/2021/07/Research_GRAPH_logo-2-1-1-2-3-150x150.png
+    url: https://thegraphcourses.org/
+    github: https://github.com/the-graph-courses
+    twitter: https://twitter.com/thegraphnetwork
+
   - name: AlertaDengue
     summary: |
       InfoDengue is an early-warning system to all states
@@ -78,6 +88,7 @@ partners:
       LiteRev simplifies the process of finding the articles you need.
     thumbnail: /images/partners/literev.png
     url: https://literev.unige.ch
+    github: https://github.com/thegraphnetwork-literev
 ---
 
 # Partners

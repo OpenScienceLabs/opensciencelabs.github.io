@@ -22,42 +22,27 @@ extra_javascript:
   - js/index.json
 
 nav:
-  # - Home: 'index.md'
   - Blog: "blog/index.md"
-  - Affiliations:
-      - index: affiliations/index.md
-    # - Member Affiliation: 'affiliations/membership/index.md'
-    # - OpenHub: 'affiliations/open-hub/index.md'
-  # - Programs:
-  # Mentors: 'projects/mentoring/mentors.md'
-  # - Activities: about/archives/index.md
-  # note> faq is out-of-date
-  # - FAQ: faq/index.md
+  # - Affiliations:
+  #     - index: affiliations/index.md
   - Projects:
       - index: "projects/index.md"
-      - Incubator: "projects/incubator/index.md"
-      - Affiliated:
-          - index: "projects/affiliated/index.md"
-          - Affiliated Projects: "projects/affiliated/projects.md"
-    # - Mentoring: 'projects/mentoring/index.md'
-    # note: let's keep these projects hidden for now
-    # - Packaging Support: 'projects/packaging-support/index.md'
-    # - Virtual-Labs: 'projects/virtual-labs/index.md'
-  - Careers:
-      - index: careers/index.md
-      - Internship:
-          - index: "careers/internship/index.md"
-          - Interns Guide: "careers/internship/guides/interns/index.md"
-          - Mentors Guide: "careers/internship/guides/mentors/index.md"
-          # - "Cycle 2024-02": 'careers/internship/cycles/2024-02.md'
-          # - "Cycle 2024-01 (CLOSED)": 'careers/internship/cycles/2024-01.md'
-          # - "Cycle 2023-01 (CLOSED)": 'careers/internship/cycles/2023-01.md'
-          - "TEMPLATE: Projects Ideas": "careers/internship/templates/projects-ideas.md"
-          - "TEMPLATE: Intern Project Proposal": "careers/internship/templates/intern-proposal.md"
+      - Incubation: "projects/incubation/index.md"
+      - Affiliation:
+          - index: "projects/affiliation/index.md"
+      - All Projects: "projects/list/index.md"
+  - Opportunities:
+      - index: opportunities/index.md
+      - Open Source Internship:
+          - index: "opportunities/internship/index.md"
+          - Interns Guide: "opportunities/internship/guides/interns/index.md"
+          - Mentors Guide: "opportunities/internship/guides/mentors/index.md"
+          - "TEMPLATE: Projects Ideas": "opportunities/internship/templates/projects-ideas.md"
+          - "TEMPLATE: Intern Project Proposal": "opportunities/internship/templates/intern-proposal.md"
       - GSoC:
-          - index: "careers/gsoc/index.md"
-          - Contributor Guide: "careers/gsoc/guides/contributor/index.md"
-          - "TEMPLATE: Contributor Project Proposal": "careers/gsoc/templates/contributor-proposal.md"
+          - index: "opportunities/gsoc/index.md"
+          - Contributor Guide: "opportunities/gsoc/guides/contributor/index.md"
+          - "TEMPLATE: Contributor Project Proposal": "opportunities/gsoc/templates/contributor-proposal.md"
   - Partnership:
       - index: "partnership/index.md"
       - Partners: "partnership/partners/index.md"
@@ -67,8 +52,6 @@ nav:
       - index: guidelines/index.md
       - Articles: guidelines/articles/index.md
       - DEI: guidelines/dei/index.md
-      # - DevOps/Discord: guidelines/devops/discord.md
-      # - Fund Raiser: guidelines/fund-raiser/index.md
       - Mentoring: guidelines/mentoring/index.md
   - About:
       - index: "about/index.md"
@@ -92,6 +75,10 @@ markdown_extensions:
   - pymdownx.superfences
 
 plugins:
+  - include-markdown:
+      start: <!-- start -->
+      end: <!-- end -->
+
   - blogging:
       template: theme/blog-list.html
       dirs:

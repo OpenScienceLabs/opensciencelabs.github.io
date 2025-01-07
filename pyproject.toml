@@ -1,22 +1,28 @@
-[tool.poetry]
+[project]
 name = "oslweb"
 version = "0.1.0"
 description = ""
-authors = ["Ivan Ogasawara <ivan.ogasawara@gmail.com>"]
-license = "BSD-3-Clause"
 readme = "README.md"
-package-mode = false
+authors = [
+  {"name" = "Ivan Ogasawara", "email" = "ivan.ogasawara@gmail.com"}
+]
+license = "BSD-3-Clause"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "pre-commit>=4.0.1",
+  "mkdocs>=1.4.2",
+  "makim>=1.19.0",
+  "mkdocs-blogging-plugin>=2.2.11",
+  "mkdocs-rss-plugin<1.9.0",
+  "jupyterlab>=4.2.5",
+  "nbconvert>=7.16.4",
+  "pymdown-extensions>=10",
+  "mkdocs-include-markdown-plugin>=7.1",
+]
 
-[tool.poetry.dependencies]
-python = "3.11.*"
-pre-commit = "^4.0.1"
-mkdocs = "1.4.2"
-makim = "^1.19.0"
-mkdocs-blogging-plugin = "^2.2.11"
-mkdocs-rss-plugin = "<1.9.0"
-jupyterlab = "^4.2.5"
-nbconvert = "^7.16.4"
-pymdown-extensions = ">=10"
+
+[tool.poetry]
+package-mode = false
 
 
 [build-system]

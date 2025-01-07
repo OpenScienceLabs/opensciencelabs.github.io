@@ -3,76 +3,49 @@ title: "Partners Program"
 description: "Partners Program"
 date: "2023-08-27"
 authors: ["OSL Team"]
-template: single-sidebar.html
+template: single.html
 ---
 
-# Open Science Labs (OSL) Partners Program
+# Become a Partner with Open Science Labs
 
-## Forging Synergistic Partnerships in the Realm of Open Science and Open Source
+Open Science Labs (OSL) is committed to advancing open science and open-source
+technology through collaboration with diverse partners. By joining forces with
+OSL, your organization can play a pivotal role in shaping the future of
+scientific research and technological innovation. We welcome partnerships with
+academic institutions, industry leaders, non-profits, and community groups.
 
-Join the esteemed ranks of our existing partners like EpiGraphHub, The Graph
-Network, Alerta Dengue, PyOpenSci, ArxLang, PyDataStructs, and IGDORE. At Open
-Science Labs, we believe in the strength of collaboration and mutual growth. Our
-Partners Program aims to build a rich network among groups dedicated to open
-science and open-source initiatives.
+## Benefits of Partnership
 
-### What We Offer
+Partnership with OSL offers numerous benefits:
 
-#### 🎙️ **Webinars and Events**
+- **Enhanced Visibility**: Gain recognition within and beyond the OSL community
+  through joint projects, events, and promotional activities.
+- **Collaborative Opportunities**: Work alongside renowned experts in open
+  science and technology on projects that are at the forefront of innovation.
+- **Resource Sharing**: Leverage OSL's network of resources, expertise, and
+  platforms to accelerate your own projects and initiatives.
+- **Community Engagement**: Engage with a vibrant community of researchers,
+  developers, and enthusiasts dedicated to open-source collaboration and
+  knowledge sharing.
 
-- **Webinars**: Join us in webinars on our platforms to talk about your projects
-  and plans.
+## How You Can Contribute
 
-- **Conferences & Unconferences**: Collaborate with us and other partners to
-  organize impactful events, both structured and informal.
+Partners can contribute in various ways:
 
-#### 🤝 **Community and Infrastructure Access**
+- **Project Collaboration**: Bring your projects under the OSL umbrella to
+  benefit from our incubator and internship programs.
+- **Mentorship**: Provide expertise and guidance to budding scientists and
+  developers in our community.
+- **Financial Support**: Contribute through funding to help sustain and grow
+  OSL's activities and infrastructure.
+- **Resource Provision**: Offer tools, datasets, or platforms that can aid in
+  the development of open-source projects.
 
-- Gain unparalleled access to our dynamic community and infrastructure.
+## How to Apply
 
-#### 💡 **Internship Recommendations**
+If your organization is interested in partnering with Open Science Labs, please
+reach out to us via email at `team@opensciencelabs.org`. We are eager to discuss
+potential collaboration and how we can work together to make a significant
+impact in the realm of open science.
 
-- Utilize the talent from our community for internships through the Open Science
-  Labs Internship Program.
-
-#### 📦 **Packaging Support**
-
-- Add packages that you need to our community wishlist in the Packaging Support
-  Program.
-
-### Eligibility and Criteria
-
-- **Who Can Apply?**: Groups, communities, or projects that are related to open
-  science or open source.
-
-- **Code of Conduct**: Candidates must commit to our Code of Conduct to maintain
-  the integrity and focus of our combined missions.
-
-- **Social Media Collaboration**: Any assistance in amplifying our mutual
-  initiatives through social media is highly appreciated.
-
-### How to Join
-
-1. **Read Our Code of Conduct**: Familiarize yourself with our principles and
-   standards.
-
-2. **Apply**: Fill out our application form, detailing how your group aligns
-   with open science or open-source domains.
-
-3. **Engage**: Once approved, we will mutually announce our partnership and you
-   can start enjoying the myriad of benefits and collaborations that come with
-   it.
-
-### Why Become a Partner?
-
-- **Network Benefits**: Leverage the extensive network from all affiliated
-  groups.
-
-- **OSL Programs**: Benefit from other OSL Programs like Packaging Support,
-  Internship Program, etc.
-
-- **Enhanced Visibility**: Gain more exposure through our webinars, conferences,
-  and social media channels.
-
-Join us today to foster a collaborative environment and drive the future of open
-science and open-source projects.
+Together, we can build a more open, collaborative, and innovative future.

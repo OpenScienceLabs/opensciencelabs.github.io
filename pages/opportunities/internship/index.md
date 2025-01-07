@@ -1,22 +1,23 @@
 ---
-title: "OSL Internship Program"
+title: "OSL Open Source Internship Program"
 description: "Internship Program details"
 date: "2023-11-03"
 authors: ["OSL Team"]
 template: single-sidebar.html
 ---
 
-# Internship/Apprenticeship Program
+# Open Source Internship Program
 
-Welcome to the Open Science Labs (OSL) Internship/Apprenticeship Program! At the
+Welcome to the Open Science Labs (OSL) Open Source Internship Program! At the
 heart of our mission lies the commitment to foster innovation and growth within
 the realm of open science and open source. This program is an embodiment of that
 commitment, providing an inclusive, dynamic, and nurturing environment for
 contributors of all backgrounds-whether you're a student stepping into the world
 of open-source, or a professional looking to give back and refine your skills.
 
-This program is under [The GRAPH Network](https://thegraphnetwork.org) who
-enhances our reach and impact across the open science community.
+This program is a partnership between OSL and
+[The GRAPH Network](https://thegraphnetwork.org), who enhances our reach and
+impact across the scientific community.
 
 With a structure inspired by the Google Summer of Code, our program offers some
 unique features:
@@ -27,8 +28,13 @@ unique features:
   supervisors through email or our social media platforms like Discord.
 - **Flexible Commitment**: A minimum of 20 hours per week allows for impactful
   work while accommodating your schedule.
-- **Biannual Cycles**: With two distinct cycles per year, there are ample
-  opportunities to get involved at a time that suits you best.
+- **Flexible Application Timeline**: Our Open Source Internship Program now
+  offers a rolling application process, allowing candidates to apply at any time
+  that fits their schedule. This flexibility ensures that everyone has the
+  opportunity to participate and gain valuable experience without the
+  constraints of fixed cycles. Whether you're ready to dive into a new project
+  now or planning for the future, you can submit your application when it suits
+  you best.
 - **End-of-Cycle Presentations**: At the end of each cycle, participants are
   encouraged to share their journey and project outcomes, enhancing their public
   speaking and technical communication skills.
