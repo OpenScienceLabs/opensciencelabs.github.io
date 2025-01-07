@@ -3,6 +3,7 @@ title: "Incubator Program"
 description: "Incubator Program"
 date: "2023-08-23"
 authors: ["OSL Team"]
+template: single.html
 ---
 
 # Open Science Labs (OSL) Incubator Program

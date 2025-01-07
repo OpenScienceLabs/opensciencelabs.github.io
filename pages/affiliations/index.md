@@ -1,5 +1,6 @@
 ---
 title: Affiliations
+template: single.html
 ---
 
 # Affiliations at Open Science Labs

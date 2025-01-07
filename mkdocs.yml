@@ -75,6 +75,10 @@ markdown_extensions:
   - pymdownx.superfences
 
 plugins:
+  - include-markdown:
+      start: <!-- start -->
+      end: <!-- end -->
+
   - blogging:
       template: theme/blog-list.html
       dirs:

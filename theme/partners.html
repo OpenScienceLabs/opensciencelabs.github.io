@@ -1,4 +1,4 @@
-{% extends "single-sidebar.html" %}
+{% extends "single.html" %}
 {% block header_extra %}
 <style>
   .main-nav > li > a {
@@ -9,14 +9,10 @@
 {% endblock header_extra%}
 
 {% block content_inner %}
-<div class="row pt-0">
-  <div class="col-md-9 mx-auto pt-0">
-    {{ page.content }}
-  </div>
-</div>
+{{ page.content }}
 
 <div class="row">
-  <div class="col-md-9 mx-auto pt-3">
+  <div class="col-md-12 pt-3">
 
     {% for partner in page.meta["partners"] %}
 
@@ -27,19 +23,20 @@
         </a>
       </div>
       <div class="col-8">
-        <h2>{{ partner.name }}</h2>
-        <p>{{ partner.summary }}</p>
-        <p>
-        {% if "github" in partner  %}
+        <h2>
+          {{ partner.name }}
+          {% if "github" in partner  %}
           <a href="{{ partner.github }}"><i
-              class="fa fa-brands fa-github-square position-static text-dark"></i></a>
-        {% endif %}
-        {% if "twitter" in partner  %}
+            class="fa fa-brands fa-github-square position-static text-dark"></i>
+          </a>
+          {% endif %}
+          {% if "twitter" in partner  %}
           <a href="{{ partner.twitter }}"><i
             class="fa fa-brands fa-twitter-square"></i>
           </a>
-        {% endif %}
-        </p>
+          {% endif %}
+        </h2>
+        <p>{{ partner.summary }}</p>
       </div>
     </div>
     <hr />

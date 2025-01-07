@@ -17,7 +17,7 @@ mkdocs-rss-plugin = "<1.9.0"
 jupyterlab = "^4.2.5"
 nbconvert = "^7.16.4"
 pymdown-extensions = ">=10"
-
+mkdocs-include-markdown-plugin = ">=7.1"
 
 [build-system]
 requires = ["poetry-core"]

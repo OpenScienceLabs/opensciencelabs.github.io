@@ -128,7 +128,7 @@ teams:
       - name: Mfonobong Emmanuel Uyah
         bio: |
           Electrical and Electronics Engineering graduate with interest in software development using Python, Django, and JavaScript. Looking to develop and participate in open-source and open-science projects.
-        image_url: https://avatars.githubusercontent.com/u/97167651?v=4&size=64
+        image_url: https://avatars.githubusercontent.com/u/97167651?v=4
         github_url: https://github.com/investor-uyah
 ---
 

@@ -3,6 +3,7 @@ title: "Open Science Labs Project Governance"
 date: 2019-09-14
 authors: ["Ivan Ogasawara"]
 tags: ["governance"]
+template: single.html
 ---
 
 # Open Science Labs Project Governance

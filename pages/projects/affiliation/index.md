@@ -3,7 +3,7 @@ title: "Project Affiliation Program"
 description: "Project Affiliation Program"
 date: "2024-01-21"
 authors: ["OSL Team"]
-template: single-sidebar.html
+template: single.html
 ---
 
 # Open Science Labs Project Affiliation Program

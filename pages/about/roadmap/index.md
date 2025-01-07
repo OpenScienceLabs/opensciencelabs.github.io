@@ -3,6 +3,7 @@ title: "Open Science Labs Roadmap - 2025"
 date: 2024-01-19
 authors: ["Ivan Ogasawara"]
 tags: ["roadmap"]
+template: single.html
 ---
 
 # Open Science Labs Roadmap - 2025
