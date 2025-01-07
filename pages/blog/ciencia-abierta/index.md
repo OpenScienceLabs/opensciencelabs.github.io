@@ -104,7 +104,7 @@ composiciones.
 
 ## Una inteligencia artificial que 'mira' a traves de las paredes mediante señales WiFi
 
-En este paper [RF-Pose](http://rfpose.csail.mit.edu/#Paper) publicado por Zhao
+En este paper [RF-Pose](https://rfpose.csail.mit.edu/#Paper) publicado por Zhao
 et al. se presenta una aplicación llamada RF-Pose que analiza las señales radio
 en las frecuencias WiFi, aprovechandose que estas señales inalambricas traspasan
 las paredes y se reflejan del cuerpo humano, para estimar poses 2D. Para estimar
@@ -125,7 +125,7 @@ ocurran. Sin embargo, exige que hayan expertos que identífiquen y interpreten
 dentro de las imagenes generadas por este proceso ciertas anormalidades, lo cual
 esta sujeto al error humano y, por lo tanto, sufre de tasas subóptimas de falsos
 positivos y negativos. Por lo tanto, en este paper
-[International evaluation of an AI system for breast cancer screening](https://deepmind.com/research/publications/International-evaluation-of-an-artificial-intelligence-system-to-identify-breast-cancer-in-screening-mammography)
+[International evaluation of an AI system for breast cancer screening](https://www.nature.com/articles/s41586-019-1799-6)
 publicado por Etemadi et al. en el 2020 se buscó crear un sistema que utilizara
 la inteligencia artificial para ayudar a los medicos a identíficarlo, y
 sorprendentemente, se encontro que el sistema no solamente funcionaba, sino que
@@ -143,6 +143,6 @@ posean los recursos necesarios para realizarla en números mayores.
 - [First Order Motion Model for Image Animation](https://aliaksandrsiarohin.github.io/first-order-model-website/)
 - [First Order Motion Model for Image Animation](https://www.youtube.com/watch?v=u-0cQ-grXBQ)
 - [MuseNet](https://openai.com/blog/musenet/)
-- [RF-Pose](http://rfpose.csail.mit.edu/#Paper)
+- [RF-Pose](https://rfpose.csail.mit.edu/#Paper)
 - [AI Senses People Through Walls](https://www.youtube.com/watch?v=HgDdaMy8KNE)
-- [International evaluation of an AI system for breast cancer screening](https://deepmind.com/research/publications/International-evaluation-of-an-artificial-intelligence-system-to-identify-breast-cancer-in-screening-mammography)
+- [International evaluation of an AI system for breast cancer screening](https://www.nature.com/articles/s41586-019-1799-6)

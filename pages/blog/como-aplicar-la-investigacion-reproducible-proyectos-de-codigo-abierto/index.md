@@ -122,7 +122,7 @@ actual de reproducibilidad. ¡Haz la diferencia!
 
 ### Referencias
 
-- [Ciencia reproducible, qué, por qué, cómo](https://www.revistaecosistemas.net/index.php/ecosistemas/article/view/1178/973)
+- [Ciencia reproducible, qué, por qué, cómo](https://revistaecosistemas.net/index.php/ecosistemas/article/view/1178)
 
 - [Manual de capacitación sobre ciencia abierta de la FOSTER](https://book.fosteropenscience.eu/es/)
 

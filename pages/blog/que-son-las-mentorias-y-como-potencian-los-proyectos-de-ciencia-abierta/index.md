@@ -148,11 +148,11 @@ presentamos algunas plataformas e iniciativas de programas de mentorías:
 - [Acamica](https://www.acamica.com/)
 - [Red de Mentores UANL](http://innovacion.uanl.mx/mentoria/)
 - [Red de Mentores de Madrid](https://www.madrimasd.org/emprendedores/red-mentores-madrid)
-- [WINN Women in the news Networs](http://winnlatam.com/mentorias/)
+- [WINN Women in the news Network](https://www.womeninnetwork.org/que-hacemos)
 - [Programa de mentorías de la Universidad Complutense de Madrid](https://www.ucm.es/mentorias)
 - [Programa de mentorías de la Universidad de la Frontera](http://mentorias.ufro.cl/)
 - [Open Life Science](https://openlifesci.org)
-- [Neoscientia](https://neoscientia.com/mentoring/)
+- [Neoscientia](https://neoscientia.com/)
 - [Encontrar mentores en ciencia de datos](https://mentorcruise.com/)
 
 Y en openScienceLabs te brindamos un programa de mentorías sobre algunos temas
@@ -161,6 +161,6 @@ de ciencia abierta que puedes consutar en enlace.
 ### Referencias
 
 - [MENTOR-Sociedad Nacional de Mentoría](https://www.mentoring.org/)
-- [Neoscientia](https://neoscientia.com/mentoring/)
+- [Neoscientia](https://neoscientia.com/)
 - [El mentoring como herramienta de motivación y retención del talento](http://pdfs.wke.es/2/2/7/6/pd0000012276.pdf)
 - [Mentoría en educación superior, la experiencia en un programa extracurricular](http://www.scielo.org.mx/pdf/redie/v20n4/1607-4041-redie-20-04-86.pdf)

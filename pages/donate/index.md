@@ -1,6 +1,6 @@
 ---
 title: "Support Open Science Labs: Donate Today"
-template: single.html
+template: main.html
 ---
 
 <div class="pt-5"></div>

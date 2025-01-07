@@ -132,8 +132,8 @@ escritor.
 Acá te dejamos algunos enlaces a manuales e información importante sobre
 Markdown:
 
-- Guía breve de Markdown
-  (http://fobos.inf.um.es/R/taller5j/30-markdown/guiabreve.pdf)
+- Guía rápida Markdown
+  (https://tutorialmarkdown.com/guia)
 - Información sobre Markdown (https://markdown.es/)
 - Blog (https://joedicastro.com/pages/markdown.html)
 

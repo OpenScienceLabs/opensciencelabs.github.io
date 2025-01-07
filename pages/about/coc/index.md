@@ -3,7 +3,7 @@ title: "Contributor Covenant Code of Conduct"
 date: 2022-09-14
 authors: ["Mariangela Petrizzo"]
 tags: [coc]
-template: single.html
+template: main.html
 ---
 
 # Code of Conduct

@@ -3,7 +3,7 @@ title: "Partners Program"
 description: "Partners Program"
 date: "2023-08-27"
 authors: ["OSL Team"]
-template: single.html
+template: main.html
 ---
 
 # Become a Partner with Open Science Labs

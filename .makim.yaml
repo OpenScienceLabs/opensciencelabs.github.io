@@ -25,7 +25,7 @@ groups:
         hooks:
           pre-run:
             - task: pages.pre-build
-        run: mkdocs build --verbose --clean
+        run: mkdocs build --verbose --clean --strict
 
       preview:
         help: preview the web page dynamically

@@ -3,7 +3,7 @@ title: "Fiscal Sponsor: The GRAPH Network"
 description: "Fiscal Sponsor: The GRAPH Network"
 date: "2024-02-24"
 authors: ["OSL Team"]
-template: single.html
+template: main.html
 ---
 
 # Our Fiscal Sponsor: The GRAPH Network

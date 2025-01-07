@@ -15,15 +15,11 @@ thumbnail: "/header.png"
 template: "blog-post.html"
 ---
 
-<!-- # Primeros pasos con Spyder -->
-
 Si has elegido programar en Python, luego de haberlo instalado quizás te
 preguntarás; ¿dónde voy a programar? Para esto necesitas un editor de código.
 Existen muchas opciones de IDE (Entorno de Desarrollo Integrado) que puedes
 usar, la elección dependerá de la herramienta que te haga sentir comodidad, se
 adapte a tus necesidades de trabajo y, muy importante, sea sencilla de manejar.
-
-<!-- TEASER_END -->
 
 En este post presentamos lo que necesitas saber para utilizar
 [Spyder](https://www.spyder-ide.org/) como entorno de desarrollo para escribir,
@@ -125,8 +121,6 @@ para evaluarlo, ver sus resultados en cualquier momento y consultar el historial
 de comandos, un **Explorador de Variables** para ver qué variables se han
 definido durante la evaluación, que cuenta con botones de **ayuda** para
 cualquier comando y **explorador de archivos**.
-
-![Spyder](spyder.png)
 
 Como puedes observar, del lado izquierdo tenemos el _Editor de código_. En la
 parte superior derecha se encuentran las pestañas: _Explorador de variables_,

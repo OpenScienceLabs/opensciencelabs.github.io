@@ -18,6 +18,8 @@ dependencies = [
   "nbconvert>=7.16.4",
   "pymdown-extensions>=10",
   "mkdocs-include-markdown-plugin>=7.1",
+  "colorama (>=0.4.6,<0.5.0)",
+  "linkcheckmd (>=1.4.0,<2.0.0)",
 ]
 
 

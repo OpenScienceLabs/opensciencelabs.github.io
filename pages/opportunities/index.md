@@ -5,9 +5,6 @@ date: "2024-08-17"
 authors: ["OSL Team"]
 ---
 
-This page is dedicated to posting open and available opportunities within Open
-Science Labs, its partner companies/organizations, and other affiliates.
-
 ## Open Source Internships
 
 Open Science Labs (OSL) offers opportunities for enthusiasts who are new to

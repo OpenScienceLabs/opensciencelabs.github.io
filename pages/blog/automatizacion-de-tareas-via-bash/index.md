@@ -15,9 +15,6 @@ thumbnail: "/header.png"
 template: "blog-post.html"
 ---
 
-<!-- # Automatización de tareas vía bash -->
-<!-- **Por Anavelyz Pérez** -->
-
 ¿Qué es Bash?
 
 Es un shell, o intérprete de lenguaje de comandos, para el sistema operativo
@@ -25,8 +22,6 @@ GNU. Su nombre es un acrónimo de "_Bourne-Again SHell_", un juego de palabras
 sobre Stephen Bourne, el autor del antepasado directo del actual shell de Unix
 sh, que apareció en la séptima edición de la versión de _Bell Labs Research_ de
 Unix.
-
-<!-- TEASER_END -->
 
 El shell también es conocido como **terminal**; una interfaz entre el usuario y
 el propio sistema operativo. Podemos acceder a él a través del menú o una
@@ -43,8 +38,6 @@ Microsoft Windows por el proyecto Cygwin.
 Ahora bien, cuando desde una distribución Linux abrimos o activamos un terminal
 se indica que estamos en nuestro home mediante el signo ~.Veremos en pantalla
 algo similar a:
-
-![Terminal](terminal1.png)
 
 El home es el sitio donde se pueden aplicar inicialmente las tareas.
 
@@ -63,8 +56,6 @@ y la palabra de la cual tenemos duda. Por ejemplo si tecleamos `info bash` o
 `man bash`, tenemos la posibilidad de leer un texto sobre lo que es bash y sus
 características principales.
 
-![Comandos man e info](ayuda.gif)
-
 ## Crear, eliminar y editar carpetas o directorios
 
 Entre las tareas que podemos realizar con bash están crear, eliminar y editar
@@ -72,8 +63,6 @@ carpetas o directorios. Algunos de los comandos asociados a estas son:
 
 `pwd` nos indica el directorio en el que estamos actualmente. Si probamos este
 comando en el home obtendremos algo similar a
-
-![pwd en home](pwd.png)
 
 `ls` nos permite ver la lista de los directorios, carpetas y archivos contenidos
 en el sitio o carpeta en la que estemos. `ls -a` nos muestra todos los archivos

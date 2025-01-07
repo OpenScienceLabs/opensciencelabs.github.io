@@ -94,8 +94,6 @@ que te animes a utilizar R:
   ventana para ver las variables que has guardado y otra disponible para que
   guardes tu script, todo en un mismo lugar.
 
-![RStudio](img/RStudio.png)
-
 - R te permite obtener resultados detallados y generar reportes profesionales
   con ayuda de herramientas como
   [**Rmarkdown**](https://rmarkdown.rstudio.com/). Con esta funcionalidad puedes

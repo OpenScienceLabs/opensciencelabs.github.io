@@ -11,7 +11,7 @@
 {% block content %}
 <section>
   <div class="row pt-2">
-    <div class="col-md-9 mx-auto">
+    <div class="col-md-12 mx-auto">
       {% block content_inner %}
       {{ page.content }}
       {% endblock content_inner %}
@@ -20,7 +20,7 @@
 
   {% for group in page.meta["teams"] %}
   <div class="row">
-    <div class="col-md-9 mx-auto pt-3">
+    <div class="col-md-12 mx-auto pt-3">
       <h2>{{ group.name }}</h2>
       <div class="row row-cols-1 row-cols-md-3">
         {% for member in group.members %}

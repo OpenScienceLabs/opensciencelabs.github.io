@@ -18,11 +18,6 @@ thumbnail: "/header.png"
 template: "blog-post.html"
 ---
 
-<!-- # Los laboratorios sociales y el manejo del COVID-19 -->
-<!-- **Por Yurely Camacho** -->
-
-![header](../../../images/blog/los-laboratorios-sociales-y-el-manejo-del-covid-19/header.png)
-
 Frente a la pandemia ocasionada por la enfermedad COVID-19 se han desarrollado
 en todo el mundo, distintas prácticas de ciencia abierta para hacerle frente.
 Una de ellas son los **Laboratorios Sociales** donde los integrantes desarrollan
@@ -86,7 +81,7 @@ Este proyecto es una colaboración del MIT con el Banco Mundial y se refiere al
 seguimiento mundial de la evolución en tiempo real del COVID-19 mediante la
 cuantificación del distanciamiento social y el impacto económico.
 
-- [Pandemic Response CoLab](https://www.pandemicresponsecolab.org/)
+- Pandemic Response CoLab (service unavailable)
 
 El propósito del proyecto es:
 
@@ -97,7 +92,7 @@ El propósito del proyecto es:
 - Reclutar personas y recursos para implementar estas soluciones
 
 El proyecto ofrece un dashboard, el
-[Pandemic Response Data Dashboard](https://www.pandemicresponsedata.org/) que
+Pandemic Response Data Dashboard (service unavailable) que
 recopila datos fiables y oportunos para ayudar a la comunidad científica a
 encontrar las soluciones más impactantes a la pandemia.
 
@@ -114,7 +109,7 @@ para conectarnos desde la solidaridad y la creatividad.
 
 Estos laboratorios, en ocasiones, trabajan en conjunto en la planificación y
 desarrollo de proyectos para el bienestar social. Uno de ellos es la iniciativa
-[LabIN #UGRenCasa](https://ugrencasa.labingranada.org/), un espacio de encuentro
+LabIN #UGRenCasa (link no disponible), un espacio de encuentro
 para la comunidad universitaria y la ciudadanía durante el confinamiento con el
 fin de proponer ideas para vivir mejor y compartir experiencias sobre esta
 situación y qué podemos aprender de ello para el futuro.

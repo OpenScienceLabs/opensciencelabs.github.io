@@ -19,10 +19,6 @@ thumbnail: "/header.png"
 template: "blog-post.html"
 ---
 
-<!-- # Te mostramos algunos repositorios con datos sobre el COVID-19 -->
-
-![header](../../../images/blog/te-mostramos-algunos-repositorios-con-datos-sobre-el-covid-19/header.png)
-
 El covid-19 es un virus que emergió en Wuhan, China a finales del año 2019, este
 virus ha generado desde entonces una gran alarma internacional. Se trata de una
 infección respiratoria que comienza con fiebre y tos seca y que, al cabo de
@@ -32,8 +28,6 @@ persona infectada tose o estornuda \[https://www.isglobal.org/coronavirus\].
 También se transmite al tocarse ojos, nariz o boca tras tocar superficies
 contaminadas. Este virus se ha extendido y el número de países en los que sus
 ciudadanos se han contagiado incrementó masivamente en los últimos días.
-
-<!-- TEASER_END -->
 
 Para el 11 de marzo de 2020 la Organización Mundial de la Salud ha declarado el
 brote del virus como una pandemia global. En un artículo de la revista Nature

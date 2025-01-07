@@ -1,4 +1,7 @@
-{% extends "single.html" %}
+{% extends "main.html" %}
+
+{% set colors=["", "bg-light"] %}
+
 {% block header_extra %}
 <style>
   .main-nav > li > a {
@@ -16,7 +19,7 @@
 
     {% for partner in page.meta["partners"] %}
 
-    <div class="row">
+    <div class="row {{ colors[loop.index % 2] }}">
       <div class="col-4 text-center">
         <a href="{{ partner.url }}">
           <img src="{{ partner.thumbnail }}" />
@@ -39,8 +42,6 @@
         <p>{{ partner.summary }}</p>
       </div>
     </div>
-    <hr />
-
     {% endfor %}
   </div>
 </div>

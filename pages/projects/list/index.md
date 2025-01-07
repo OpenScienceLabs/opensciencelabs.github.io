@@ -3,7 +3,7 @@ title: "Affiliated Projects"
 description: "Affiliated Projects"
 date: "2024-01-29"
 authors: ["OSL Team"]
-template: single.html
+template: main.html
 ---
 
 # Affiliated and Incubated Projects
