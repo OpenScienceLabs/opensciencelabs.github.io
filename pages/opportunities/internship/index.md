@@ -111,7 +111,7 @@ internship/apprenticeship program.
 ### Cycle 1: Winter/Spring 2024
 
 For more information about the Cycle 2024-01 Timeline, check its official page:
-<https://opensciencelabs.org/programs/internship/cycles/2024-01/#timeline>
+<https://opensciencelabs.org/opportunities/internship/cycles/2024-01/#timeline>
 
 ### Cycle 2: 2024 (Estimated Timeline & GSoC Alignment)
 

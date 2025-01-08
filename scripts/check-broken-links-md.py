@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import os
-import re
 import subprocess
 
 # List of exception URLs
@@ -11,13 +10,14 @@ exception_urls = [
     "https://www.linkedin.com/",
 ]
 
+
 def process_log() -> None:
     """Run the command and capture the output."""
-    log_out = ""
     log_err = ""
     exitcode = 0
+
     try:
-        result = subprocess.run(
+        subprocess.run(
             ["python", "-m", "linkcheckmd", "-r", "-v", "-m", "get", "pages"],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
@@ -27,7 +27,6 @@ def process_log() -> None:
     except subprocess.CalledProcessError as e:
         exitcode = e.returncode
         # for some reason they were swapped
-        log_out = e.stderr
         log_err = e.stdout
 
     if exitcode == 0:
@@ -36,7 +35,7 @@ def process_log() -> None:
 
     flagged_errors = []
     for line in log_err.splitlines():
-        line = line.strip()
+        line = line.strip()  # noqa: PLW2901
         # Check if the line starts with '('
         if line.startswith("("):
             # Extract the URL using regex

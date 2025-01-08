@@ -52,7 +52,7 @@ to achieve during the GSoC period. This should include specific milestones, a
 timeline, and how your work will contribute to the project's goals.
 
 Please, follow the template provided
-[here](/programs/gsoc/templates/contributor-proposal).
+[here](/opportunities/gsoc/templates/contributor-proposal).
 
 **Note on Mentor Evaluation**: Mentors will assess if candidates possess the
 basic requirements to contribute effectively to the project. Transparent

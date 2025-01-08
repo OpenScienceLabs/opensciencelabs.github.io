@@ -14,7 +14,7 @@ candidate's familiarity with open-source software tools and best practices. We
 encourage all candidates to appreciate and make the most of these opportunities
 as we look forward to a productive collaboration.
 
-Jump on to learn about the [OSL internship](/programs/internship/).
+Jump on to learn about the [OSL internship](/opportunities/internship/).
 
 ## Google Summer of Code
 

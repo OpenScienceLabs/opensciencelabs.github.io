@@ -20,6 +20,7 @@ dependencies = [
   "mkdocs-include-markdown-plugin>=7.1",
   "colorama (>=0.4.6,<0.5.0)",
   "linkcheckmd (>=1.4.0,<2.0.0)",
+  "beautifulsoup4 (>=4.12.3,<5.0.0)",
 ]
 
 
@@ -27,6 +28,43 @@ dependencies = [
 package-mode = false
 
 
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.8.6"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+
+[tool.ruff]
+line-length = 79
+force-exclude = true
+src = ["./"]
+fix = true
+
+[tool.ruff.lint]
+ignore = [
+  "F811",
+  "PLR0911",  # Too many return statements
+  "PLR0912",  # Too many branches
+  "PLR0913",
+]
+select = [
+  "E",   # pycodestyle
+  "F",   # pyflakes
+  "D",   # pydocstyle
+  "YTT", # flake8-2020
+  "PL",  # PL
+  "RUF", # Ruff-specific rules
+  "I001", # isort
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.ruff.lint.isort]
+# Use a single line between direct and from import
+lines-between-types = 1
+
+[tool.ruff.format]
+quote-style = "double"

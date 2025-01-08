@@ -26,7 +26,7 @@ for more details.
 ## Contributor Guide
 
 Candidates and contributors can find important information about GSoC in the
-[Contributor Guide](/programs/gsoc/guides/contributor).
+[Contributor Guide](/opportunities/gsoc/guides/contributor).
 
 ## Our Project Ideas for GSoC
 

@@ -126,7 +126,7 @@ abilities.
   allowing mentors to assess progress and students/collaborators to evaluate
   their contributions.
   > **Information:** For more details about internships, you can
-  > [click here](https://opensciencelabs.org/programs/internship/cycles/2024-01/#osl-web-page)
+  > [click here](https://opensciencelabs.org/opportunities/internship/cycles/2024-01/#osl-web-page)
 
 ## Timeline
 
