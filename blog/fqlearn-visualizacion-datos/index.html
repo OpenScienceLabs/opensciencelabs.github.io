@@ -36,16 +36,17 @@
     <link rel=icon type=image/png sizes=32x32 href=/icons/favicon-32x32.png>
     <link rel=manifest href=/icons/site.webmanifest>
     <link rel=canonical href=/>
-    <link rel=alternate type=application/rss+xml href=/index.xml title="Open Science Labs">
+
+    <link rel=alternate type=application/rss+xml href=/feed_rss_created.xml title="Open Science Labs">
     <link rel=alternate type=application/json href=/js/index.json title="Open Science Labs">
     <link rel=stylesheet type=text/css></head>
     
-<style>
-.main-nav>li>a {
-  color: #000000 !important;
-}
-</style>
-
+    <style>
+      .main-nav>li>a {
+        color: #000000 !important;
+      }
+    </style>
+    
   </head>
   <body data-code="100" data-lines="false" id="documentTop">
     <header class="nav_header">
@@ -296,8 +297,8 @@
               
 
               <div class="nav ">
-                <a href="../../about/formula/" class="nav_item" title="Our Formula">
-                  Our Formula
+                <a href="../../about/contact/" class="nav_item" title="Contact">
+                  Contact
                 </a>
               </div>
               
@@ -308,6 +309,26 @@
               <div class="nav ">
                 <a href="../../about/team/" class="nav_item" title="Team">
                   Team
+                </a>
+              </div>
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../about/formula/" class="nav_item" title="Our Formula">
+                  Our Formula
+                </a>
+              </div>
+              
+              
+              
+              
+
+              <div class="nav ">
+                <a href="../../about/coc/" class="nav_item" title="CoC">
+                  CoC
                 </a>
               </div>
               
@@ -332,17 +353,9 @@
               </div>
               
               
-              
-              
-
-              <div class="nav ">
-                <a href="../../about/coc/" class="nav_item" title="CoC">
-                  CoC
-                </a>
-              </div>
-              
-              
             </div>
+            
+          
             
           
             
@@ -390,10 +403,12 @@
         <section class="wrap content">
           
           
-<section>
-  <div class="row pt-2">
-    <div class="col-md-9 mx-auto">
-      
+          <section>
+            
+            <div class="row pt-0">
+            
+              <div class="col-md-12 mx-auto">
+                
 
 <div>
   <h3><a href="" title="" target="_self">Explorando fqlearn: Potenciando el Análisis y Diseño de Procesos Termodinámicos</a></h3>
@@ -463,16 +478,28 @@
     <!-- # Explorando fqlearn: Potenciando el Análisis y Diseño de Procesos Termodinámicos -->
 
 <p>En este artículo se describe la utilidad que ofrece una visualización sencilla
-  de cálculos termodinámicos, útil para el manejo de docentes y el aprendizaje
-  por parte de los alumnos interesados en el tema. Usando las funciones disponibles
-  en las clases de McCabe-Thiele, y SteamTable.</p>
+de cálculos termodinámicos, útil para el manejo de docentes y el aprendizaje por
+parte de los alumnos interesados en el tema. Usando las funciones disponibles en
+las clases de McCabe-Thiele, y SteamTable.</p>
 <!-- TEASER_END -->
 
 <h1 id="explorando-fqlearn-potenciando-el-analisis-y-diseno-de-procesos-termodinamicos">Explorando fqlearn: Potenciando el Análisis y Diseño de Procesos Termodinámicos<a class="headerlink" href="#explorando-fqlearn-potenciando-el-analisis-y-diseno-de-procesos-termodinamicos" title="Permanent link"> #</a></h1>
-<p>En el apasionante mundo de la ingeniería química, la biblioteca <code>fqlearn</code> emerge como una herramienta valiosa, ofreciendo capacidades significativas para el análisis y diseño de procesos. Diseñada para mejorar la visualización de datos y servir como una herramienta educativa, <code>fqlearn</code> se posiciona como un recurso versátil para ingenieros y científicos en la industria química.</p>
+<p>En el apasionante mundo de la ingeniería química, la biblioteca <code>fqlearn</code> emerge
+como una herramienta valiosa, ofreciendo capacidades significativas para el
+análisis y diseño de procesos. Diseñada para mejorar la visualización de datos y
+servir como una herramienta educativa, <code>fqlearn</code> se posiciona como un recurso
+versátil para ingenieros y científicos en la industria química.</p>
 <h2 id="implementacion-de-la-clase-mccabe-thiele-para-analisis-grafico-de-destilacion-binaria-en-python">Implementación de la Clase McCabe-Thiele para Análisis Gráfico de Destilación Binaria en Python<a class="headerlink" href="#implementacion-de-la-clase-mccabe-thiele-para-analisis-grafico-de-destilacion-binaria-en-python" title="Permanent link"> #</a></h2>
-<p>La clase <code>McCabeThiele</code> dentro de <code>fqlearn</code> brinda funcionalidades especializadas para llevar a cabo cálculos de equilibrio líquido-vapor utilizando el método de McCabe-Thiele. Este método es esencial en el diseño de columnas de destilación, permitiendo determinar el número óptimo de etapas necesarias para separar componentes en una mezcla.</p>
-<p>La clase McCabeThiele es una implementación en Python del método de McCabe-Thiele, una técnica gráfica fundamental en el diseño de columnas de destilación para procesos químicos. Este método proporciona una manera visual de analizar y dimensionar sistemas de destilación binaria. A continuación, se presenta una descripción detallada de la clase y sus principales componentes.</p>
+<p>La clase <code>McCabeThiele</code> dentro de <code>fqlearn</code> brinda funcionalidades
+especializadas para llevar a cabo cálculos de equilibrio líquido-vapor
+utilizando el método de McCabe-Thiele. Este método es esencial en el diseño de
+columnas de destilación, permitiendo determinar el número óptimo de etapas
+necesarias para separar componentes en una mezcla.</p>
+<p>La clase McCabeThiele es una implementación en Python del método de
+McCabe-Thiele, una técnica gráfica fundamental en el diseño de columnas de
+destilación para procesos químicos. Este método proporciona una manera visual de
+analizar y dimensionar sistemas de destilación binaria. A continuación, se
+presenta una descripción detallada de la clase y sus principales componentes.</p>
 <h1 id="ejemplo-de-uso-de-mccabethiele-en-fqlearn">Ejemplo de uso de McCabeThiele en fqlearn<a class="headerlink" href="#ejemplo-de-uso-de-mccabethiele-en-fqlearn" title="Permanent link"> #</a></h1>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Importar la clase McCabeThiele de la biblioteca fqlearn</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">fqlearn.McCabeThiele</span> <span class="kn">import</span> <span class="n">McCabeThiele</span>
@@ -497,7 +524,8 @@
 </span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="n">model</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </span></code></pre></div>
 <h2 id="funcion-describe">Función describe<a class="headerlink" href="#funcion-describe" title="Permanent link"> #</a></h2>
-<p>La función 'describe' imprime en pantalla información sobre cada etapa en el proceso de McCabe-Thiele.</p>
+<p>La función 'describe' imprime en pantalla información sobre cada etapa en el
+proceso de McCabe-Thiele.</p>
 <ul>
 <li>El reflujo mínimo es de: 0.7480780119884876</li>
 <li>La composición líquida de salida: 0.05</li>
@@ -520,51 +548,98 @@
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">model</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </span></code></pre></div>
 <h2 id="funcion-plot">Función plot<a class="headerlink" href="#funcion-plot" title="Permanent link"> #</a></h2>
-<p>La función plot de McCabe-Thiele le muestra al usuario la gráfica de destilación binaria, con todas las etapas y demás información que el usuario pueda solicitar</p>
+<p>La función plot de McCabe-Thiele le muestra al usuario la gráfica de destilación
+binaria, con todas las etapas y demás información que el usuario pueda solicitar</p>
 <p><img alt="ejemplo de mcabethiele" src="mccabethiele.png" /></p>
-<p><strong>Ejes:</strong>
-Los ejes X e Y representan la composición molar x y y respectivamente, variando de 0 a 1.</p>
+<p><strong>Ejes:</strong> Los ejes X e Y representan la composición molar x y y respectivamente,
+variando de 0 a 1.</p>
 <p><strong>Líneas:</strong></p>
 <ul>
 <li>
-<p><em>Equilibrio (azul):</em> Esta línea se extiende diagonalmente a través del gráfico y representa el equilibrio entre las fases líquida y vapor de la mezcla.</p>
+<p><em>Equilibrio (azul):</em> Esta línea se extiende diagonalmente a través del gráfico
+  y representa el equilibrio entre las fases líquida y vapor de la mezcla.</p>
 </li>
 <li>
-<p><em>Intersección (roja):</em> Esta línea marca un punto específico de intersección entre las curvas ROP y SOP.</p>
+<p><em>Intersección (roja):</em> Esta línea marca un punto específico de intersección
+  entre las curvas ROP y SOP.</p>
 </li>
 <li>
-<p><em>ROP (naranja):</em> Representa la línea de operación de rectificación, que es la sección de la columna de destilación por encima del plato de alimentación.</p>
+<p><em>ROP (naranja):</em> Representa la línea de operación de rectificación, que es la
+  sección de la columna de destilación por encima del plato de alimentación.</p>
 </li>
 <li>
-<p><em>SOP (verde):</em> Representa la línea de operación de agotamiento, que es la sección de la columna de destilación por debajo del plato de alimentación.</p>
+<p><em>SOP (verde):</em> Representa la línea de operación de agotamiento, que es la
+  sección de la columna de destilación por debajo del plato de alimentación.</p>
 </li>
 <li>
-<p><em>Pasos (púrpura):</em> Estos indican los platos teóricos necesarios para la separación. Cada paso representa un plato teórico en la columna de destilación.</p>
+<p><em>Pasos (púrpura):</em> Estos indican los platos teóricos necesarios para la
+  separación. Cada paso representa un plato teórico en la columna de
+  destilación.</p>
 </li>
 </ul>
-<p>Este gráfico es útil para determinar el número de platos teóricos necesarios en una columna de destilación para separar una mezcla de metanol-agua. Los platos teóricos son una medida de la eficiencia de la columna de destilación. Cuantos más platos teóricos tenga una columna, más eficiente será la separación.</p>
+<p>Este gráfico es útil para determinar el número de platos teóricos necesarios en
+una columna de destilación para separar una mezcla de metanol-agua. Los platos
+teóricos son una medida de la eficiencia de la columna de destilación. Cuantos
+más platos teóricos tenga una columna, más eficiente será la separación.</p>
 <p><strong>Importancia de la Destilación Binaria de McCabe-Thiele:</strong></p>
-<p>La destilación binaria de McCabe-Thiele es un método crucial en ingeniería química y procesos de separación, utilizado para analizar y diseñar columnas de destilación. A continuación, se detallan algunas de las razones clave por las cuales la destilación binaria de McCabe-Thiele es importante:</p>
-<p><strong>Diseño Eficiente de Columnas de Destilación:</strong>
-- Proporciona un enfoque sistemático y gráfico para el diseño de columnas de destilación binarias, permitiendo determinar el número mínimo de etapas requeridas para una separación específica.
-- Facilita la comprensión de la eficiencia de una columna de destilación y la relación entre el número de etapas teóricas y reales.</p>
-<p><strong>Optimización de Procesos de Separación:</strong>
-- Permite optimizar los procesos de separación de mezclas binarias, como la purificación de componentes en la industria química y petroquímica.
-- Ayuda en la selección adecuada de condiciones operativas para lograr la separación deseada de componentes.</p>
-<p><strong>Análisis Detallado de Comportamientos de Mezclas:</strong>
-- Proporciona una representación visual y detallada de la composición de las mezclas en cada etapa de la columna de destilación, lo que facilita el análisis del comportamiento de los componentes.
-- Permite identificar el reflujo mínimo necesario para una separación específica y evaluar la eficiencia del proceso.</p>
-<p><strong>Entendimiento de Interacciones de Componentes:</strong>
-- Ayuda a comprender las interacciones entre los componentes de la mezcla y cómo influyen en el proceso de destilación.
-- Permite evaluar la viabilidad y eficiencia de la separación de componentes específicos en una mezcla binaria.</p>
-<p><strong>Herramienta Educativa y de Investigación:</strong>
-- Se utiliza como herramienta educativa para estudiantes en ingeniería química y campos relacionados para comprender los principios fundamentales de la destilación.
-- Es una herramienta valiosa para la investigación y desarrollo de procesos de destilación más eficientes y sostenibles.</p>
-<p><strong>Análisis de Sistemas de Ingeniería de Procesos:</strong>
-- Facilita el análisis de sistemas de ingeniería de procesos que involucran la destilación de mezclas binarias, contribuyendo a la mejora continua y la optimización de operaciones.</p>
+<p>La destilación binaria de McCabe-Thiele es un método crucial en ingeniería
+química y procesos de separación, utilizado para analizar y diseñar columnas de
+destilación. A continuación, se detallan algunas de las razones clave por las
+cuales la destilación binaria de McCabe-Thiele es importante:</p>
+<p><strong>Diseño Eficiente de Columnas de Destilación:</strong></p>
+<ul>
+<li>Proporciona un enfoque sistemático y gráfico para el diseño de columnas de
+  destilación binarias, permitiendo determinar el número mínimo de etapas
+  requeridas para una separación específica.</li>
+<li>Facilita la comprensión de la eficiencia de una columna de destilación y la
+  relación entre el número de etapas teóricas y reales.</li>
+</ul>
+<p><strong>Optimización de Procesos de Separación:</strong></p>
+<ul>
+<li>Permite optimizar los procesos de separación de mezclas binarias, como la
+  purificación de componentes en la industria química y petroquímica.</li>
+<li>Ayuda en la selección adecuada de condiciones operativas para lograr la
+  separación deseada de componentes.</li>
+</ul>
+<p><strong>Análisis Detallado de Comportamientos de Mezclas:</strong></p>
+<ul>
+<li>Proporciona una representación visual y detallada de la composición de las
+  mezclas en cada etapa de la columna de destilación, lo que facilita el
+  análisis del comportamiento de los componentes.</li>
+<li>Permite identificar el reflujo mínimo necesario para una separación específica
+  y evaluar la eficiencia del proceso.</li>
+</ul>
+<p><strong>Entendimiento de Interacciones de Componentes:</strong></p>
+<ul>
+<li>Ayuda a comprender las interacciones entre los componentes de la mezcla y cómo
+  influyen en el proceso de destilación.</li>
+<li>Permite evaluar la viabilidad y eficiencia de la separación de componentes
+  específicos en una mezcla binaria.</li>
+</ul>
+<p><strong>Herramienta Educativa y de Investigación:</strong></p>
+<ul>
+<li>Se utiliza como herramienta educativa para estudiantes en ingeniería química y
+  campos relacionados para comprender los principios fundamentales de la
+  destilación.</li>
+<li>Es una herramienta valiosa para la investigación y desarrollo de procesos de
+  destilación más eficientes y sostenibles.</li>
+</ul>
+<p><strong>Análisis de Sistemas de Ingeniería de Procesos:</strong></p>
+<ul>
+<li>Facilita el análisis de sistemas de ingeniería de procesos que involucran la
+  destilación de mezclas binarias, contribuyendo a la mejora continua y la
+  optimización de operaciones.</li>
+</ul>
 <h2 id="implementacion-de-la-clase-steamtable-para-una-consulta-eficaz-de-las-tablas-de-vapor">Implementación de la Clase SteamTable para una consulta eficáz de las tablas de vapor<a class="headerlink" href="#implementacion-de-la-clase-steamtable-para-una-consulta-eficaz-de-las-tablas-de-vapor" title="Permanent link"> #</a></h2>
-<p>La clase SteamTable ofrece capacidades para gestionar y representar datos termodinámicos asociados con las fases de vapor y líquido, centrándose especialmente en tablas vapor.</p>
-<p>Esta función es valiosa en aplicaciones donde se requiere conocer propiedades termodinámicas precisas para una temperatura específica, por ejemplo, en el diseño y análisis de sistemas termodinámicos, procesos de ingeniería, o cualquier escenario donde la temperatura es un parámetro crítico. Proporciona una herramienta flexible y útil para obtener datos detallados en puntos específicos de interés en la tabla termodinámica de vapor.</p>
+<p>La clase SteamTable ofrece capacidades para gestionar y representar datos
+termodinámicos asociados con las fases de vapor y líquido, centrándose
+especialmente en tablas vapor.</p>
+<p>Esta función es valiosa en aplicaciones donde se requiere conocer propiedades
+termodinámicas precisas para una temperatura específica, por ejemplo, en el
+diseño y análisis de sistemas termodinámicos, procesos de ingeniería, o
+cualquier escenario donde la temperatura es un parámetro crítico. Proporciona
+una herramienta flexible y útil para obtener datos detallados en puntos
+específicos de interés en la tabla termodinámica de vapor.</p>
 <h1 id="ejemplo-de-uso-de-steamtable-en-fqlearn">Ejemplo de uso de SteamTable en fqlearn<a class="headerlink" href="#ejemplo-de-uso-de-steamtable-en-fqlearn" title="Permanent link"> #</a></h1>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">fqlearn.SteamTable</span> <span class="kn">import</span> <span class="n">SteamTable</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
@@ -584,7 +659,10 @@ Los ejes X e Y representan la composición molar x y y respectivamente, variando
 </span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="n">sistema</span><span class="o">.</span><span class="n">point</span><span class="p">(</span><span class="n">t</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
 </span></code></pre></div>
 <h2 id="funcion-data">Función data<a class="headerlink" href="#funcion-data" title="Permanent link"> #</a></h2>
-<p>La función 'data' tiene la capacidad de imprimir las tablas de vapor que están cargadas en la base de datos, mostrándolas con incrementos de 20 en 20. Este enfoque permite al usuario visualizar de manera rápida y eficiente la tabla, facilitando así la realización de consultas de forma ágil.</p>
+<p>La función 'data' tiene la capacidad de imprimir las tablas de vapor que están
+cargadas en la base de datos, mostrándolas con incrementos de 20 en 20. Este
+enfoque permite al usuario visualizar de manera rápida y eficiente la tabla,
+facilitando así la realización de consultas de forma ágil.</p>
 <table>
 <thead>
 <tr>
@@ -804,34 +882,55 @@ Los ejes X e Y representan la composición molar x y y respectivamente, variando
 <h2 id="funcion-plot_1">Función plot<a class="headerlink" href="#funcion-plot_1" title="Permanent link"> #</a></h2>
 <h3 id="diagrama-presion-volumen-p-v">Diagrama Presión-Volumen (P-V):<a class="headerlink" href="#diagrama-presion-volumen-p-v" title="Permanent link"> #</a></h3>
 <ul>
-<li><strong>Concepto:</strong> Muestra la relación entre la presión y el volumen de un sistema termodinámico.</li>
+<li><strong>Concepto:</strong> Muestra la relación entre la presión y el volumen de un sistema
+  termodinámico.</li>
 <li><strong>Eje X:</strong> Volumen.</li>
 <li><strong>Eje Y:</strong> Presión.</li>
-<li><strong>Características:</strong> En un diagrama P-V, las curvas representan los procesos termodinámicos del sistema. Puede mostrar procesos adiabáticos, isotérmicos, isobáricos, etc. La pendiente de las curvas indica propiedades como la compresibilidad del fluido.</li>
+<li><strong>Características:</strong> En un diagrama P-V, las curvas representan los procesos
+  termodinámicos del sistema. Puede mostrar procesos adiabáticos, isotérmicos,
+  isobáricos, etc. La pendiente de las curvas indica propiedades como la
+  compresibilidad del fluido.</li>
 </ul>
 <p><img alt="diagrama pv" src="pvdiagram.png" /></p>
 <h3 id="diagrama-presion-temperatura-p-t">Diagrama Presión-Temperatura (P-T):<a class="headerlink" href="#diagrama-presion-temperatura-p-t" title="Permanent link"> #</a></h3>
 <ul>
-<li><strong>Concepto:</strong> Muestra la relación entre la presión y la temperatura de un sistema termodinámico.</li>
+<li><strong>Concepto:</strong> Muestra la relación entre la presión y la temperatura de un
+  sistema termodinámico.</li>
 <li><strong>Eje X:</strong> Temperatura.</li>
 <li><strong>Eje Y:</strong> Presión.</li>
-<li><strong>Características:</strong> Este diagrama revela cómo cambia la presión con la temperatura bajo diversas condiciones. Puede mostrar regiones de fases (por ejemplo, líquido, vapor, o ambos) y proporciona información sobre las transiciones de fase.</li>
+<li><strong>Características:</strong> Este diagrama revela cómo cambia la presión con la
+  temperatura bajo diversas condiciones. Puede mostrar regiones de fases (por
+  ejemplo, líquido, vapor, o ambos) y proporciona información sobre las
+  transiciones de fase.</li>
 </ul>
 <p><img alt="diagrama pt" src="ptdiagram.png" /></p>
 <h3 id="diagrama-temperatura-volumen-t-v">Diagrama Temperatura-Volumen (T-V):<a class="headerlink" href="#diagrama-temperatura-volumen-t-v" title="Permanent link"> #</a></h3>
 <ul>
-<li><strong>Concepto:</strong> Muestra la relación entre la temperatura y el volumen de un sistema termodinámico.</li>
+<li><strong>Concepto:</strong> Muestra la relación entre la temperatura y el volumen de un
+  sistema termodinámico.</li>
 <li><strong>Eje X:</strong> Volumen.</li>
 <li><strong>Eje Y:</strong> Temperatura.</li>
-<li><strong>Características:</strong> Este diagrama ayuda a visualizar cómo la temperatura se relaciona con el volumen en diferentes procesos. Puede mostrar curvas de saturación, isóbaras, entre otras.</li>
+<li><strong>Características:</strong> Este diagrama ayuda a visualizar cómo la temperatura se
+  relaciona con el volumen en diferentes procesos. Puede mostrar curvas de
+  saturación, isóbaras, entre otras.</li>
 </ul>
 <p><img alt="diagrama tv" src="tvdiagram.png" /></p>
-<p>Estos diagramas son herramientas esenciales en termodinámica y se utilizan comúnmente para representar y analizar los ciclos termodinámicos, como el ciclo de Carnot en máquinas térmicas. Además, en el caso de sustancias puras, los diagramas P-V, P-T y T-V son útiles para entender las propiedades y comportamientos de la sustancia en diferentes estados termodinámicos. Por ejemplo, el diagrama P-V de una sustancia pura puede revelar información sobre la expansión y la compresión durante un proceso termodinámico.</p>
+<p>Estos diagramas son herramientas esenciales en termodinámica y se utilizan
+comúnmente para representar y analizar los ciclos termodinámicos, como el ciclo
+de Carnot en máquinas térmicas. Además, en el caso de sustancias puras, los
+diagramas P-V, P-T y T-V son útiles para entender las propiedades y
+comportamientos de la sustancia en diferentes estados termodinámicos. Por
+ejemplo, el diagrama P-V de una sustancia pura puede revelar información sobre
+la expansión y la compresión durante un proceso termodinámico.</p>
 <h2 id="funcion-plot3d">Función plot3d<a class="headerlink" href="#funcion-plot3d" title="Permanent link"> #</a></h2>
 <h3 id="diagrama-tridimensional-pvt">Diagrama Tridimensional PVT:<a class="headerlink" href="#diagrama-tridimensional-pvt" title="Permanent link"> #</a></h3>
 <ul>
-<li><strong>Ejes:</strong></li>
-<li><strong>Eje X:</strong> Volumen (V)</li>
+<li>
+<p><strong>Ejes:</strong></p>
+</li>
+<li>
+<p><strong>Eje X:</strong> Volumen (V)</p>
+</li>
 <li><strong>Eje Y:</strong> Presión (P)</li>
 <li>
 <p><strong>Eje Z:</strong> Temperatura (T)</p>
@@ -840,25 +939,32 @@ Los ejes X e Y representan la composición molar x y y respectivamente, variando
 <p><strong>Características:</strong></p>
 </li>
 <li>
-<p>Este diagrama tridimensional proporciona una representación visual de cómo la presión, el volumen y la temperatura interactúan en un sistema termodinámico.</p>
+<p>Este diagrama tridimensional proporciona una representación visual de cómo
+    la presión, el volumen y la temperatura interactúan en un sistema
+    termodinámico.</p>
 </li>
 <li>
-<p>Permite observar las superficies de fases y regiones críticas en función de los cambios en las variables P, V y T.</p>
+<p>Permite observar las superficies de fases y regiones críticas en función de
+    los cambios en las variables P, V y T.</p>
 </li>
 <li>
-<p>Se utiliza para estudiar propiedades como la expansión y contracción de sustancias, cambios de fase y transiciones críticas.</p>
+<p>Se utiliza para estudiar propiedades como la expansión y contracción de
+    sustancias, cambios de fase y transiciones críticas.</p>
 </li>
 <li>
-<p>Puede revelar información sobre la estabilidad de las fases y proporcionar una comprensión detallada del comportamiento termodinámico de un fluido.</p>
+<p>Puede revelar información sobre la estabilidad de las fases y proporcionar
+    una comprensión detallada del comportamiento termodinámico de un fluido.</p>
 </li>
 <li>
 <p><strong>Aplicaciones:</strong></p>
 </li>
 <li>
-<p>Útil en la industria química y de petróleo para comprender el comportamiento de sustancias en condiciones de presión y temperatura variables.</p>
+<p>Útil en la industria química y de petróleo para comprender el comportamiento
+    de sustancias en condiciones de presión y temperatura variables.</p>
 </li>
 <li>
-<p>Permite visualizar las áreas de vapor, líquido y fase crítica en un solo diagrama.</p>
+<p>Permite visualizar las áreas de vapor, líquido y fase crítica en un solo
+    diagrama.</p>
 </li>
 <li>
 <p>Ayuda en el diseño y optimización de procesos termodinámicos complejos.</p>
@@ -867,16 +973,23 @@ Los ejes X e Y representan la composición molar x y y respectivamente, variando
 <p><strong>Importancia:</strong></p>
 </li>
 <li>
-<p>Facilita la comprensión de las propiedades físicas de sustancias y su respuesta a cambios en las condiciones ambientales.</p>
+<p>Facilita la comprensión de las propiedades físicas de sustancias y su
+    respuesta a cambios en las condiciones ambientales.</p>
 </li>
 <li>
-<p>Ayuda en la predicción de comportamientos críticos, como la formación de fases y puntos críticos.</p>
+<p>Ayuda en la predicción de comportamientos críticos, como la formación de
+    fases y puntos críticos.</p>
 </li>
 </ul>
-<p>Este tipo de diagrama es una herramienta valiosa para los ingenieros y científicos que trabajan en el estudio y diseño de sistemas termodinámicos, especialmente en áreas como la química, la ingeniería de procesos y la industria del petróleo y gas.</p>
+<p>Este tipo de diagrama es una herramienta valiosa para los ingenieros y
+científicos que trabajan en el estudio y diseño de sistemas termodinámicos,
+especialmente en áreas como la química, la ingeniería de procesos y la industria
+del petróleo y gas.</p>
 <p><img alt="diagrama 3d" src="3ddiagram.png" /></p>
 <h2 id="funcion-point">Función point<a class="headerlink" href="#funcion-point" title="Permanent link"> #</a></h2>
-<p>La función 'point' permite al usuario buscar valores en la tabla de vapor introduciendo la temperatura deseada, esta regresa el valor correspondiende de presión, densidad, entalpía, entropía y volumen</p>
+<p>La función 'point' permite al usuario buscar valores en la tabla de vapor
+introduciendo la temperatura deseada, esta regresa el valor correspondiende de
+presión, densidad, entalpía, entropía y volumen</p>
 <h3 id="datos-del-punto-buscado">Datos del punto buscado<a class="headerlink" href="#datos-del-punto-buscado" title="Permanent link"> #</a></h3>
 <ul>
 <li>Temperatura: 100ºC</li>
@@ -893,59 +1006,98 @@ Los ejes X e Y representan la composición molar x y y respectivamente, variando
 <li>Volumen vapor (vV): 1671.8 cm^3/g</li>
 </ul>
 <p><strong>Importancia de las Tablas de Vapor en Termodinámica:</strong></p>
-<p>Las tablas de vapor son herramientas fundamentales en termodinámica para el estudio y análisis de sustancias en estados gaseosos y líquidos, proporcionando información crucial sobre las propiedades termodinámicas de las sustancias. A continuación, se detallan algunas de las razones clave por las cuales las tablas de vapor son esenciales:</p>
+<p>Las tablas de vapor son herramientas fundamentales en termodinámica para el
+estudio y análisis de sustancias en estados gaseosos y líquidos, proporcionando
+información crucial sobre las propiedades termodinámicas de las sustancias. A
+continuación, se detallan algunas de las razones clave por las cuales las tablas
+de vapor son esenciales:</p>
 <p><strong>Propiedades Termodinámicas Precisas:</strong></p>
 <ul>
 <li>
-<p>Las tablas de vapor contienen datos precisos y experimentales sobre propiedades termodinámicas, como la presión, temperatura, entalpía, entropía, volumen específico y otras.</p>
+<p>Las tablas de vapor contienen datos precisos y experimentales sobre
+  propiedades termodinámicas, como la presión, temperatura, entalpía, entropía,
+  volumen específico y otras.</p>
 </li>
 <li>
-<p>Estos datos permiten realizar cálculos precisos en procesos termodinámicos y determinar el comportamiento de las sustancias en diferentes condiciones.</p>
+<p>Estos datos permiten realizar cálculos precisos en procesos termodinámicos y
+  determinar el comportamiento de las sustancias en diferentes condiciones.</p>
 </li>
 </ul>
 <p><strong>Diseño y Análisis de Ciclos Termodinámicos:</strong></p>
 <ul>
 <li>
-<p>Son esenciales en el diseño y análisis de ciclos termodinámicos, como el ciclo Rankine en plantas de energía, el ciclo de refrigeración por compresión de vapor, y otros procesos de conversión de energía.</p>
+<p>Son esenciales en el diseño y análisis de ciclos termodinámicos, como el ciclo
+  Rankine en plantas de energía, el ciclo de refrigeración por compresión de
+  vapor, y otros procesos de conversión de energía.</p>
 </li>
 <li>
-<p>Facilitan la identificación de puntos críticos, condiciones de saturación, y la comprensión de las fases involucradas en estos ciclos.</p>
+<p>Facilitan la identificación de puntos críticos, condiciones de saturación, y
+  la comprensión de las fases involucradas en estos ciclos.</p>
 </li>
 </ul>
-<p><strong>Predicción de Comportamientos en Procesos Térmicos:</strong>
-- Permiten predecir cómo una sustancia se comportará bajo diversas condiciones de temperatura y presión, facilitando la planificación y operación eficiente de sistemas termodinámicos.</p>
+<p><strong>Predicción de Comportamientos en Procesos Térmicos:</strong></p>
 <ul>
-<li>Ayudan en la identificación de transiciones de fase, como la vaporización y la condensación, y proporcionan datos sobre las condiciones críticas.</li>
+<li>
+<p>Permiten predecir cómo una sustancia se comportará bajo diversas condiciones
+  de temperatura y presión, facilitando la planificación y operación eficiente
+  de sistemas termodinámicos.</p>
+</li>
+<li>
+<p>Ayudan en la identificación de transiciones de fase, como la vaporización y la
+  condensación, y proporcionan datos sobre las condiciones críticas.</p>
+</li>
 </ul>
 <p><strong>Determinación de Propiedades en Ingeniería y Ciencias Aplicadas:</strong></p>
 <ul>
 <li>
-<p>En ingeniería química, mecánica y otras disciplinas, las tablas de vapor son utilizadas para calcular y analizar procesos, desde la producción de energía hasta el diseño de sistemas de climatización.</p>
+<p>En ingeniería química, mecánica y otras disciplinas, las tablas de vapor son
+  utilizadas para calcular y analizar procesos, desde la producción de energía
+  hasta el diseño de sistemas de climatización.</p>
 </li>
 <li>
-<p>Facilitan la determinación de propiedades clave necesarias en el diseño y operación de equipos y maquinaria.</p>
+<p>Facilitan la determinación de propiedades clave necesarias en el diseño y
+  operación de equipos y maquinaria.</p>
 </li>
 </ul>
 <p><strong>Análisis de Problemas de Transferencia de Calor y Masa:</strong></p>
 <ul>
 <li>
-<p>Son esenciales para el análisis de problemas relacionados con la transferencia de calor y masa, proporcionando datos para calcular tasas de evaporación, coeficientes de transferencia de calor, y más.</p>
+<p>Son esenciales para el análisis de problemas relacionados con la transferencia
+  de calor y masa, proporcionando datos para calcular tasas de evaporación,
+  coeficientes de transferencia de calor, y más.</p>
 </li>
 <li>
-<p>Ayudan en la comprensión de fenómenos como la condensación y evaporación en intercambiadores de calor.</p>
+<p>Ayudan en la comprensión de fenómenos como la condensación y evaporación en
+  intercambiadores de calor.</p>
 </li>
 </ul>
 <p><strong>Entendimiento de Comportamientos de Sustancias Puras:</strong></p>
 <ul>
-<li>Para sustancias puras, las tablas de vapor son fundamentales para entender cómo las propiedades termodinámicas varían en diferentes estados, lo que es esencial para la investigación y el desarrollo de nuevos materiales y procesos.</li>
+<li>Para sustancias puras, las tablas de vapor son fundamentales para entender
+  cómo las propiedades termodinámicas varían en diferentes estados, lo que es
+  esencial para la investigación y el desarrollo de nuevos materiales y
+  procesos.</li>
 </ul>
-<p>En resumen, las tablas de vapor son una herramienta invaluable en la termodinámica aplicada, proporcionando datos cruciales que permiten comprender, diseñar y optimizar una amplia variedad de sistemas y procesos en ingeniería y ciencia.</p>
+<p>En resumen, las tablas de vapor son una herramienta invaluable en la
+termodinámica aplicada, proporcionando datos cruciales que permiten comprender,
+diseñar y optimizar una amplia variedad de sistemas y procesos en ingeniería y
+ciencia.</p>
 <h1 id="conclusiones">Conclusiones<a class="headerlink" href="#conclusiones" title="Permanent link"> #</a></h1>
-<p>En este artículo, hemos explorado la utilidad y aplicaciones prácticas de las funciones disponibles en las clases de McCabe-Thiele y SteamTable de fqlearn. La capacidad de visualizar de manera sencilla cálculos termodinámicos demuestra ser invaluable, especialmente para docentes que buscan simplificar la enseñanza y para alumnos que desean comprender de manera efectiva los conceptos termodinámicos. La combinación de estas herramientas en fqlearn proporciona una plataforma integral que facilita tanto la instrucción como el aprendizaje en el fascinante campo de la termodinámica.</p>
+<p>En este artículo, hemos explorado la utilidad y aplicaciones prácticas de las
+funciones disponibles en las clases de McCabe-Thiele y SteamTable de fqlearn. La
+capacidad de visualizar de manera sencilla cálculos termodinámicos demuestra ser
+invaluable, especialmente para docentes que buscan simplificar la enseñanza y
+para alumnos que desean comprender de manera efectiva los conceptos
+termodinámicos. La combinación de estas herramientas en fqlearn proporciona una
+plataforma integral que facilita tanto la instrucción como el aprendizaje en el
+fascinante campo de la termodinámica.</p>
 <h2 id="repositorio-en-github">Repositorio en GitHub<a class="headerlink" href="#repositorio-en-github" title="Permanent link"> #</a></h2>
-<p>No olvides que puedes consultar fqlearn en <a href="https://github.com/osl-pocs/fqlearn">Github</a></p>
+<p>No olvides que puedes consultar fqlearn en
+<a href="https://github.com/osl-pocs/fqlearn">Github</a></p>
 <h2 id="contacto">Contácto<a class="headerlink" href="#contacto" title="Permanent link"> #</a></h2>
-<p>El autor de este artículo se encuentra disponible en <a href="https://www.linkedin.com/in/josé-maría-garcía-márquez-556a75199/">LinkedIn</a>, en <a href="https://github.com/JoseMariaGarciaMarquez">Github</a>, y en su <a href="https://www.josemaria.me">página</a></p>
+<p>El autor de este artículo se encuentra disponible en
+<a href="https://www.linkedin.com/in/josé-maría-garcía-márquez-556a75199/">LinkedIn</a>, y
+en <a href="https://github.com/JoseMariaGarciaMarquez">Github</a>.</p>
   </div>
 </div>
 
@@ -976,10 +1128,10 @@ Los ejes X e Y representan la composición molar x y y respectivamente, variando
 
 
 
-    </div>
-  </div>
-</section>
-
+              </div>
+            </div>
+          </section>
+          
         </section>
       </div>
     </main>
