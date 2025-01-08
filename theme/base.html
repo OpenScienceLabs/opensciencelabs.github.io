@@ -36,10 +36,17 @@
     <link rel=icon type=image/png sizes=32x32 href=/icons/favicon-32x32.png>
     <link rel=manifest href=/icons/site.webmanifest>
     <link rel=canonical href=/>
-    <link rel=alternate type=application/rss+xml href=/index.xml title="Open Science Labs">
+
+    <link rel=alternate type=application/rss+xml href=/feed_rss_created.xml title="Open Science Labs">
     <link rel=alternate type=application/json href=/js/index.json title="Open Science Labs">
     <link rel=stylesheet type=text/css></head>
-    {% block header_extra %}{% endblock header_extra%}
+    {% block header_extra %}
+    <style>
+      .main-nav>li>a {
+        color: #000000 !important;
+      }
+    </style>
+    {% endblock header_extra%}
   </head>
   <body data-code="100" data-lines="false" id="documentTop">
     <header class="nav_header">
@@ -141,7 +148,19 @@
           <div class="d-block d-sm-block d-md-none" style="margin-top:50px"></div>
           {% endif %}
           {% block content %}
-          {{ page.content }}
+          <section>
+            {% if page.parent.children %}
+            <div class="row pt-2">
+            {% else %}
+            <div class="row pt-0">
+            {% endif %}
+              <div class="col-md-12 mx-auto">
+                {% block content_inner %}
+                  {{ page.content }}
+                {% endblock content_inner %}
+              </div>
+            </div>
+          </section>
           {% endblock content %}
         </section>
       </div>

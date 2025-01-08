@@ -3,7 +3,7 @@ title: "Open Science Labs Twitter/X"
 description: "Open Science Labs, sharing knowledge"
 date: "2019-02-28"
 authors: ["OSL Team"]
-template: single.html
+template: main.html
 ---
 
 <script>

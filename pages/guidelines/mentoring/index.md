@@ -27,7 +27,7 @@ development.
 
 ## Types of mentoring
 
-According to [The university of Auckland](auckland-mentoring-guide-final)
+According to [The university of Auckland][auckland-mentoring-guide-final]
 suggests two types of mentoring relationships:
 
 1. Informal mentoring, when somebody with more experience than others helps
@@ -40,9 +40,9 @@ suggests two types of mentoring relationships:
 
 ## Skills and experience required to be a mentor
 
-According to
-[Manchester Metropolitan University (MMU)](mmu-mentoring-guidlines), it exists
-at least ten requirements to be a mentor:
+According to [Manchester Metropolitan University
+(MMU)][mmu-mentoring-guidlines], it exists at least ten requirements to be a
+mentor:
 
 1. Self awareness: it is related to having your own personal goals, career, and
    knowing your own strengths.
@@ -87,13 +87,13 @@ accomplishments. They believe in the mentees capacity to grow personally and
 professionally. In addition, they respond to their frustrations and challenges.
 It is important that mentors share their personal vision or those of other
 leaders, such as their experiences, mistakes and successes in achieving their
-goals
-[The Center for Health Leadership & Practice (CHLP)](umich-mentoring-guide).
+goals [The Center for Health Leadership & Practice
+(CHLP)][umich-mentoring-guide].
 
 ## The mentoring process / stages
 
 The process of mentoring is an activity that has a beginning and ending,
-[MMU](mmu-mentoring-guidlines) lists three stages:
+[MMU][mmu-mentoring-guidlines] lists three stages:
 
 1. Initial;(building the relationship): explain goals of this mentoring. Time to
    involve (schedule for communication). Discuss backgrounds, experiences,
@@ -117,7 +117,7 @@ The process of mentoring is an activity that has a beginning and ending,
 
 ## Setting goals and expectations
 
-According to [Harvard University](harvard-mentoring-guide) suggests that both
+According to [Harvard University][harvard-mentoring-guide] suggests that both
 mentors and mentees establish their objectives, expectations and actively
 collaborate to have effective mentoring. Here there some steps to consider:
 
@@ -169,7 +169,7 @@ mentoring:
 1. The mentees can identify with mentors who have values, attitudes, and
    experiences that the mentees holds or aspires to have.
 
-In addition, [The Actuaries w Without Borders](actuaries-mentoring-guidelines)
+In addition, [The Actuaries w Without Borders][actuaries-mentoring-guidelines]
 describes some personal characteristics in mentoring:
 
 1. Mentors; ask open and supportive questions and provide constructive feedback.
@@ -190,7 +190,7 @@ describes some personal characteristics in mentoring:
 
 Mentoring involves the relationship between mentors and mentees. Good mentors
 are enthusiastic people, enjoying the role they play in helping others achieve
-their goals [(CHLP)](umich-mentoring-guide). There are some different roles that
+their goals [(CHLP)][umich-mentoring-guide]. There are some different roles that
 Mentors may be required to take:
 
 1. Networking; mentors help mentees to find people and resources that go beyond

@@ -1,40 +1,17 @@
-{% extends "single-sidebar.html" %}
-{% block header_extra %}
-<style>
-  .main-nav > li > a {
-    color: #000000 !important;
-  }
-</style>
+{% extends "main.html" %}
 
-{% endblock header_extra%}
+{% set colors=["", "bg-light"] %}
 
 {% block content %}
-<section>
-  {% block content_inner %}
-  <div class="row pt-0">
-    <div class="col-md-9 mx-auto pt-0">
-      <h1>Events</h1>
-      <p>
-        Welcome to the Events page of Open Science Labs! Here, we showcase a curated
-        list of upcoming and past events designed to engage, educate, and inspire our
-        community. From workshops and hackathons to conferences and webinars, our
-        events serve as a platform for collaboration, learning, and sharing of ideas
-        within the realms of open science and technology. Explore our event listings to
-        discover opportunities to connect with like-minded individuals, enhance your
-        skills, and contribute to the growing field of science, and technology.
-      </p>
-      {{ page.content }}
-    </div>
-  </div>
-  {% endblock content_inner %}
+  {{ page.content }}
 
   <div class="row">
-    <div class="col-md-9 mx-auto pt-3">
+    <div class="col-md-12 mx-auto pt-3">
       {%set upcoming_events = page.meta.get("events", {}).get("upcoming", {}) %}
       <h2>Upcoming Events</h2>
       {% for event in upcoming_events %}
 
-      <div class="row">
+      <div class="row {{ colors[loop.index % 2] }}">
         <div class="col-4 text-center">
           <a href="{{ event.url }}">
             <img src="{{ event.thumbnail }}" />
@@ -52,7 +29,6 @@
           </p>
         </div>
       </div>
-      <hr />
 
       {% endfor %}
 
@@ -63,12 +39,12 @@
   </div>
 
   <div class="row">
-    <div class="col-md-9 mx-auto pt-3">
+    <div class="col-md-12 mx-auto pt-3">
       <h2>Past Events</h2>
       {%set past_events = page.meta.get("events", {}).get("past_events", {}) %}
       {% for event in past_events %}
 
-      <div class="row">
+      <div class="row {{ colors[loop.index % 2] }}">
         <div class="col-4 text-center">
           <a href="{{ event.url }}">
             <img src="{{ event.thumbnail }}" />
@@ -86,7 +62,6 @@
           </p>
         </div>
       </div>
-      <hr />
 
       {% endfor %}
 
@@ -96,5 +71,4 @@
     </div>
   </div>
 
-</section>
 {% endblock content %}

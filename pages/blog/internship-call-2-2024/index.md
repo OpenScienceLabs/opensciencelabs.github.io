@@ -88,7 +88,7 @@ This program presents valuable opportunities for both mentors and student/collab
 
 Candidates should have a basic understanding of Git and how to contribute. For guidance, we recommend reading this [blog post](https://opensciencelabs.org/blog/first-time-contributors/) designed for first-time contributors. Additionally, to stay informed about announcements related to the Internship Program, candidates are encouraged to join the [OSL Discord](https://opensciencelabs.org/discord).
 
-Please keep in mind about the timeline, and if you have any more questions do not hesitate to contact us at team@opensciencelabs.org. 
+Please keep in mind about the timeline, and if you have any more questions do not hesitate to contact us at team@opensciencelabs.org.
 
 ## Timeline
 
@@ -97,7 +97,7 @@ The following is the timeline for the OSL Internship Program Cycle 2024-02:
 - **April 22**: Call for Interns/Apprentices opens.
 - **May 13**: Deadline for Interns/Apprentices applications.
 - **May 20**: Announcement of approved Interns/Apprentices and start of the bonding period
-- **May 27**: Official Start Date of Internship Period; an alternative for projects not 
+- **May 27**: Official Start Date of Internship Period; an alternative for projects not
 selected by GSoC to run under the OSL Internship Program with The Graph Network support.
 - **July 8**: Mid-term Evaluation.
 - **August 26**: Final Evaluation.
@@ -121,7 +121,7 @@ Below is the list of projects participating in the current internship cycle. Eac
 
 - **Description:** ASTx is an agnostic expression structure for AST. It is agnostic because it is not specific to any language, neither to the ArxLang project, although its main focus is to provide all needed feature for ArxLang.
 - **Categories:** AST, Compiler
-- **Organization/Project Webpage URL:** [https://arxlang.github.io/astx/](https://arxlang.github.io/astx/)
+- **Organization/Project Webpage URL:** [https://astx.arxlang.org/](https://astx.arxlang.org/)
 - **Contact:** Ivan Ogasawara [ivan.ogasawara@gmail.com](mailto:ivan.ogasawara@gmail.com)
 - **Project Ideas URL:** <https://github.com/arxlang/astx/wiki/OSL-Internship-%E2%80%90-2024-%E2%80%90-2nd-Cycle>
 

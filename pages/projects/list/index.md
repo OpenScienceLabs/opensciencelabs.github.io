@@ -3,7 +3,7 @@ title: "Affiliated Projects"
 description: "Affiliated Projects"
 date: "2024-01-29"
 authors: ["OSL Team"]
-template: single.html
+template: main.html
 ---
 
 # Affiliated and Incubated Projects
@@ -25,7 +25,7 @@ functions.
 
 ---
 
-### <img alt="Static Badge" src="https://img.shields.io/badge/project-affiliated-333333?style=for-the-badge&label=project&labelColor=FF0000&color=888888"> [ArxLang](https://arxlang.github.io/)
+### <img alt="Static Badge" src="https://img.shields.io/badge/project-affiliated-333333?style=for-the-badge&label=project&labelColor=FF0000&color=888888"> [ArxLang](https://arxlang.org)
 
 ArxLang Project is compounded mainly by three sub-projects: ASTx, IRx, and Arx.
 

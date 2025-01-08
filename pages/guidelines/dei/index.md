@@ -12,7 +12,7 @@ tags: ["DEI"]
 
 Open Science Labs (OSL) is a community that offers an open space to share, learn
 and teach topics related to Open Science and Computational Technologies to the
-public in Latin America, but not restricted to it.
+people from all parts of the world.
 
 ### OSL Mission
 

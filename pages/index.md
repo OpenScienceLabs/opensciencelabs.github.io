@@ -132,7 +132,7 @@ initiatives:
               Offering hands-on experience in open source projects, fostering
               learning, and contributing to the community.
             </p>
-            <a href="/programs/internship" class="btn btn-primary"
+            <a href="/opportunities/internship" class="btn btn-primary"
               >Learn More</a
             >
           </div>
@@ -146,7 +146,7 @@ initiatives:
               Supporting and promoting open source projects aligned with our
               mission, providing visibility and resources.
             </p>
-            <a href="/affiliations/projects" class="btn btn-primary">Learn More</a>
+            <a href="/projects/affiliation/" class="btn btn-primary">Learn More</a>
           </div>
         </div>
       </div>
@@ -159,7 +159,7 @@ initiatives:
               and resources needed to evolve ideas into impactful solutions
               for the global research community.
             </p>
-            <a href="/programs/incubator" class="btn btn-primary"
+            <a href="/projects/incubation" class="btn btn-primary"
               >Learn More</a
             >
           </div>
@@ -174,9 +174,10 @@ initiatives:
               communities, fostering collaboration and knowledge sharing in
               open science and technology.
             </p>
-            <a href="/affiliations/open-hub" class="btn btn-primary"
-              >Learn More</a
-            >
+            For more information, please send us an email to
+            <a href="mailto:team@opensciencelabs.org" target="_blank"
+              >team@opensciencelabs.org</a
+            >.
           </div>
         </div>
       </div>
@@ -233,7 +234,7 @@ initiatives:
       innovation.
     </p>
     <div class="text-center mt-4">
-      <a href="/affiliations/projects" class="btn btn-primary"
+      <a href="/projects/affiliation/" class="btn btn-primary"
         >Learn More</a
       >
     </div>
@@ -278,7 +279,7 @@ initiatives:
         empower open science initiatives worldwide.
       </p>
       <p>
-        If you want to be our partner, please us an email to
+        If you want to be our partner, please send us an email to
         <a href="mailto:team@opensciencelabs.org" target="_blank"
           >team@opensciencelabs.org</a
         >.

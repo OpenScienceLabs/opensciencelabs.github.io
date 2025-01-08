@@ -4,6 +4,9 @@ site_url: https://opensciencelabs.org
 docs_dir: pages
 site_dir: build
 
+extra:
+  enumerate: !!python/name:builtins.enumerate
+
 theme:
   name: null
   custom_dir: "theme/"
@@ -23,8 +26,6 @@ extra_javascript:
 
 nav:
   - Blog: "blog/index.md"
-  # - Affiliations:
-  #     - index: affiliations/index.md
   - Projects:
       - index: "projects/index.md"
       - Incubation: "projects/incubation/index.md"
@@ -56,11 +57,12 @@ nav:
   - About:
       - index: "about/index.md"
       - About OSL: "about/index.md"
-      - Our Formula: "about/formula/index.md"
+      - Contact: about/contact/index.md
       - Team: about/team/index.md
+      - Our Formula: "about/formula/index.md"
+      - CoC: about/coc/index.md
       - Roadmap: about/roadmap/index.md
       - Governance: about/governance/index.md
-      - CoC: about/coc/index.md
   - Donate: "donate/index.md"
 
 markdown_extensions:

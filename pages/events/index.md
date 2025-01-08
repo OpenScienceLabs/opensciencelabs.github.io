@@ -49,3 +49,13 @@ events:
       date_start: August 5th, 2022
       date_end: August 5th, 2022
 ---
+
+# Events
+
+Welcome to the Events page of Open Science Labs! Here, we showcase a curated
+list of upcoming and past events designed to engage, educate, and inspire our
+community. From workshops and hackathons to conferences and webinars, our events
+serve as a platform for collaboration, learning, and sharing of ideas within the
+realms of open science and technology. Explore our event listings to discover
+opportunities to connect with like-minded individuals, enhance your skills, and
+contribute to the growing field of science, and technology.

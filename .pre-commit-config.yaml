@@ -22,3 +22,40 @@ repos:
     hooks:
       - id: prettier
         exclude: "pages/blog|theme"
+
+  - repo: local
+    hooks:
+      - id: mkdocs-build
+        name: mkdocs-build
+        entry: makim pages.build
+        files: pages
+        language: system
+        pass_filenames: false
+
+      - id: linkcheckmd
+        name: linkcheckmd
+        entry: python scripts/check-broken-links-md.py
+        language: system
+        pass_filenames: false
+
+      - id: check-internal-links
+        name: check-internal-links
+        entry: python scripts/check-broken-links-internal.py
+        language: system
+        pass_filenames: false
+
+      - id: ruff-format
+        name: ruff-format
+        entry: ruff format
+        language: system
+        pass_filenames: true
+        types:
+          - python
+
+      - id: ruff-linter
+        name: ruff-linter
+        entry: ruff check
+        language: system
+        pass_filenames: true
+        types:
+          - python

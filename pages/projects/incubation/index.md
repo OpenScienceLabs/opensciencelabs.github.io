@@ -3,7 +3,7 @@ title: "Incubator Program"
 description: "Incubator Program"
 date: "2023-08-23"
 authors: ["OSL Team"]
-template: single.html
+template: main.html
 ---
 
 # Open Science Labs (OSL) Incubator Program
@@ -31,8 +31,8 @@ Projects in this phase can be found at
 **Application Process:**
 
 - Submit a proposal through
-  [OSL PoC GitHub Issues](https://github.com/osl-pocs/issues), including the
-  concept, objectives, and a high-level design.
+  [OSL PoC GitHub Issues](https://github.com/osl-pocs/tickets/issues), including
+  the concept, objectives, and a high-level design.
 - Undergo a review process by the OSL selection committee.
 
 ### 2. Incubation
@@ -54,7 +54,7 @@ in this stage can be found at
 
 - Complete the PoC phase with positive evaluations.
 - Submit an application for the Incubation phase at
-  [OSL Incubator GitHub Issues](https://github.com/osl-incubator/issues),
+  [OSL Incubator GitHub Issues](https://github.com/osl-incubator/tickets/issues),
   including a detailed project plan.
 - Obtain approval from OSL mentors and stakeholders.
 
@@ -80,7 +80,7 @@ Graduated projects are available at
 
 - Successfully meet all the milestones during the Incubation phase.
 - Submit a graduation application at
-  [OSL Graduated GitHub Issues](https://github.com/osl-projects/issues),
+  [OSL Graduated GitHub Issues](https://github.com/osl-projects/tickets/issues),
   detailing achievements and future plans.
 - Undergo a final review and approval by OSL’s governing board.
 

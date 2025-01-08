@@ -5,9 +5,6 @@ date: "2024-08-17"
 authors: ["OSL Team"]
 ---
 
-This page is dedicated to posting open and available opportunities within Open
-Science Labs, its partner companies/organizations, and other affiliates.
-
 ## Open Source Internships
 
 Open Science Labs (OSL) offers opportunities for enthusiasts who are new to
@@ -17,7 +14,7 @@ candidate's familiarity with open-source software tools and best practices. We
 encourage all candidates to appreciate and make the most of these opportunities
 as we look forward to a productive collaboration.
 
-Jump on to learn about the [OSL internship](/programs/internship/).
+Jump on to learn about the [OSL internship](/opportunities/internship/).
 
 ## Google Summer of Code
 
