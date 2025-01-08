@@ -26,8 +26,6 @@ extra_javascript:
 
 nav:
   - Blog: "blog/index.md"
-  # - Affiliations:
-  #     - index: affiliations/index.md
   - Projects:
       - index: "projects/index.md"
       - Incubation: "projects/incubation/index.md"

@@ -21,7 +21,7 @@ Open Science Labs. OSL Blogs can be accessed [here](/blog/).
 
 Open Science Labs (OSL) is a community that offers an open space to share, learn
 and teach topics related to Open Science and Computational Technologies to
-people from Latin America or any part of the world.
+people from any part of the world.
 
 DEI is a very important aspect of our community and we really care about that.
 

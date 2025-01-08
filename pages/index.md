@@ -146,7 +146,7 @@ initiatives:
               Supporting and promoting open source projects aligned with our
               mission, providing visibility and resources.
             </p>
-            <a href="/affiliations/projects" class="btn btn-primary">Learn More</a>
+            <a href="/projects/affiliation/" class="btn btn-primary">Learn More</a>
           </div>
         </div>
       </div>
@@ -233,7 +233,7 @@ initiatives:
       innovation.
     </p>
     <div class="text-center mt-4">
-      <a href="/affiliations/projects" class="btn btn-primary"
+      <a href="/projects/affiliation/" class="btn btn-primary"
         >Learn More</a
       >
     </div>

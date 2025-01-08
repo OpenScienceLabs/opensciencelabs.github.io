@@ -22,3 +22,18 @@ repos:
     hooks:
       - id: prettier
         exclude: "pages/blog|theme"
+
+  - repo: local
+    hooks:
+      - id: linkcheckmd
+        name: linkcheckmd
+        entry: python scripts/check-broken-links.py
+        language: system
+        pass_filenames: false
+
+      - id: mkdocs-build
+        name: mkdocs-build
+        entry: makim pages.build
+        files: pages
+        language: system
+        pass_filenames: false

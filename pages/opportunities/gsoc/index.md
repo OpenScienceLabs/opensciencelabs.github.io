@@ -66,7 +66,7 @@ experienced mentors.
 - **Description**: ASTx is an agnostic expression structure for AST. It is
   agnostic because it is not specific to any language, neither to the ArxLang
   project, although its main focus is to provide all needed feature for ArxLang.
-- **Project WEB Page**: <https://arxlang.github.io/astx/>
+- **Project WEB Page**: <https://astx.arxlang.org/>
 - **Project Ideas**:
   [link](<https://github.com/arxlang/astx/wiki/Google-Summer-of-Code-(GSoc)-%E2%80%90-2024>)
 
