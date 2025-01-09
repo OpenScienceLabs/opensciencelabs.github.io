@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block header_extra %}
+<style>
+  .main-nav > li > a {
+    color: #000000 !important;
+  }
+</style>
+
+{% endblock header_extra%}
+
+{% set colors=["", "bg-light"] %}
+
+{% block content %}
+<section>
+  <div class="row pt-2">
+    <div class="col-md-12 mx-auto">
+      {% block content_inner %}
+      {{ page.content }}
+      {% endblock content_inner %}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 pt-3">
+
+      {% for project in page.meta["projects"] %}
+
+      <div class="row {{ colors[loop.index % 2] }}">
+        <div class="col">
+          <h2>
+            <a href="{{ project.url }}" target="_blank">
+              {% if project.type == "incubated"  %}
+              <img
+                alt="Static Badge"
+                src="https://img.shields.io/badge/project-incubated-333333?style=for-the-badge&label=project&labelColor=FFAA00&color=888888"
+              />
+              {% elif project.type == "affiliated" %}
+              <img
+                alt="Static Badge"
+                src="https://img.shields.io/badge/project-affiliated-333333?style=for-the-badge&label=project&labelColor=FF0000&color=888888"
+              />
+              {% endif %}
+              {{ project.name }}
+            </a>
+          </h2>
+          <p>{{ project.description }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock content %}
