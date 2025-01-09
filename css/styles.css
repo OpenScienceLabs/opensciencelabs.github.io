@@ -287,8 +287,8 @@ a:focus,a:focus-within{
 h1,h2,h3,h4,h5{
   font-family:inherit;
   font-weight:300;
-  padding:5px 0;
-  margin:15px 0;
+  padding:10px 0 0 0;
+  margin:15px 0 5px 0;
   color:var(--header-text);
   line-height:1.35
 }
@@ -412,7 +412,7 @@ blockquote+.highlight_wrap{
   margin-top:2.25rem
 }
 p{
-  padding:0.8rem 0
+  padding:0.8rem 0 0 0;
 }
 picture{
   display:block;
