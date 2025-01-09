@@ -12,7 +12,7 @@ partners:
 
   - name: The GRAPH Courses
     url: https://thegraphcourses.org/
-    logo: https://thegraphnetwork.org/wp-content/uploads/2021/07/Research_GRAPH_logo-2-1-1-2-3-150x150.png
+    logo: /images/partners/graph_courses_logo.png
 
   - name: AlertaDengue
     url: https://info.dengue.mat.br/
@@ -105,15 +105,17 @@ initiatives:
       these initiatives to see how you can engage, contribute, and grow with
       us.
     </p>
-    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4" data-masonry='{"percentPosition": true }'>
       <div class="col">
-        <div class="card">
-          <div class="card-body">
+        <div class="card m-0 p-0">
+          <div class="card-body m-0">
             <h5 class="card-title">Community</h5>
             <p class="card-text fw-lighter">
               Whether you're here to learn, share, or contribute, you'll find
               a supportive space to explore open science and technology.
             </p>
+          </div>
+          <div class="card-footer m-0">
             <a
               href="https://opensciencelabs.org/discord"
               class="btn btn-success"
@@ -125,40 +127,46 @@ initiatives:
         </div>
       </div>
       <div class="col">
-        <div class="card">
-          <div class="card-body">
+        <div class="card m-0 p-0">
+          <div class="card-body m-0">
             <h5 class="card-title">Internship Program</h5>
             <p class="card-text fw-lighter">
               Offering hands-on experience in open source projects, fostering
               learning, and contributing to the community.
             </p>
-            <a href="/opportunities/internship" class="btn btn-primary"
+          </div>
+          <div class="card-footer m-0">
+            <a href="/opportunities/os-internship" class="btn btn-primary"
               >Learn More</a
             >
           </div>
         </div>
       </div>
       <div class="col">
-        <div class="card">
-          <div class="card-body">
+        <div class="card m-0 p-0">
+          <div class="card-body m-0">
             <h5 class="card-title">Project Affiliation</h5>
             <p class="card-text fw-lighter">
               Supporting and promoting open source projects aligned with our
               mission, providing visibility and resources.
             </p>
+          </div>
+          <div class="card-footer m-0">
             <a href="/projects/affiliation/" class="btn btn-primary">Learn More</a>
           </div>
         </div>
       </div>
       <div class="col">
-        <div class="card">
-          <div class="card-body">
+        <div class="card m-0 p-0">
+          <div class="card-body m-0">
             <h5 class="card-title">Incubator Program</h5>
             <p class="card-text fw-lighter">
               Nurturing innovative open source projects, providing the support
               and resources needed to evolve ideas into impactful solutions
               for the global research community.
             </p>
+          </div>
+          <div class="card-footer m-0">
             <a href="/projects/incubation" class="btn btn-primary"
               >Learn More</a
             >
@@ -166,30 +174,40 @@ initiatives:
         </div>
       </div>
       <div class="col">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">OpenHub</h5>
+        <div class="card m-0 p-0">
+          <div class="card-body m-0">
+            <h5 class="card-title">Study Groups</h5>
             <p class="card-text fw-lighter">
-              OpenHub by Open Science Labs serves as a global network of local
-              communities, fostering collaboration and knowledge sharing in
-              open science and technology.
+              We encourage the community to organize study groups
+              to foster a collaborative environment for learning
+              and sharing. Currently, OSL, sponsored by LiteRev,
+              hosts a study group dedicated to enhancing
+              problem-solving skills through the Advent of Code
+              challenges.
             </p>
-            For more information, please send us an email to
-            <a href="mailto:team@opensciencelabs.org" target="_blank"
-              >team@opensciencelabs.org</a
-            >.
+          </div>
+          <div class="card-footer m-0">
+            <a
+              href="https://opensciencelabs.org/discord"
+              class="btn btn-success"
+              target="_blank"
+            >
+              Join our Discord server
+            </a>
           </div>
         </div>
       </div>
       <div class="col">
-        <div class="card">
-          <div class="card-body">
+        <div class="card m-0 p-0">
+          <div class="card-body m-0">
             <h5 class="card-title">Blog</h5>
             <p class="card-text fw-lighter">
               Our blog features contributions from our vibrant community,
               showcasing project updates, innovative research findings, and
               expert opinions to inspire and inform.
             </p>
+          </div>
+          <div class="card-footer m-0">
             <a href="/blog" class="btn btn-primary">Learn More</a>
           </div>
         </div>

@@ -1,59 +1,57 @@
 ---
 title: "About"
 description: "Open Science Labs, sharing knowledge"
-date: "2019-02-28"
+date: "2025-01-09"
 authors: ["OSL Team"]
 template: main.html
 ---
 
-# About
+# About Open Science Labs
 
-Open science labs is a community that aims to gather people from all parts of
-the world and creates an open space for teaching, learning and sharing topics
-around open science and computational tools.
+Open Science Labs (OSL) is committed to advancing open science and open source
+projects through collaboration, innovation, and education. We are a vibrant
+community where scientists, developers, and enthusiasts come together to share
+knowledge and foster the development of open-source software and scientific
+research.
 
-## Community
+## Our Mission
 
-We are using discord to organize our community. There you can decide which group
-you want to join, for example python, c++, compilers, open science, devops,
-languages (English, Spanish) , etc.
+Our mission is to make scientific research more accessible and transparent,
+thereby enhancing the community's ability to conduct and share reproducible
+research. We aim to provide tools, resources, and a collaborative platform to
+support and amplify the global open science and open source effort.
 
-Also, everyone is more than welcome to propose a study-group. If you want to
-study a specific topic, and want to gather more people to study that with you,
-we encourage you to propose a study-group.
+## What We Do
 
-If you want to give a talk or tutorial about a specific topic, raise your voice
-in the channel #comm-general and we will be more than happy to help you to hold
-this event on discord.
+- **Incubator Program:** We nurture innovative open-source projects with the
+  potential to significantly impact scientific research.
+- **Internship Program:** We connect talented individuals with advanced
+  projects, providing practical experience and fostering professional growth.
+- **Mentoring:** Our Internship Program also aims to offer mentoring to
+  students, professionals, and researchers, enhancing their learning and career
+  prospects.
+- **Google Summer of Code (GSoC):** We annually apply to participate in GSoC,
+  helping newcomers integrate into open-source projects.
+- **Blog:** We encourage the community to share their knowledge and experiences
+  through blog posts, fostering a collaborative learning environment.
+- **Community Support:** Through our Discord Server, we provide a community
+  platform where members can discuss topics related to open science and open
+  technologies, including various programming languages.
 
-## Collaborate!
+## Join Us
 
-If you want to join us, apply to be a volunteer here.
+If you are interested in contributing to or learning more about our projects,
+please join our vibrant community on
+[Discord](https://opensciencelabs.org/discord).
 
-Also, take a look into our Code of Conduct.
+## Contributions from many parts of the world
 
-We need help in areas, such as:
+People from many parts of world had engaged and contributed to the projects and
+activities under OSL Umbrella, such as: Argentina, Bolivia, Brazil, Canada,
+Kenya, India, Indonesia, Mexico, Nigeria, Peru, United States, Venezuela, etc.
 
-- DevOps
-- Articles
-- Videos
-- Community Management
-- Social Media
-- Diversity, Equity and Inclusion
-- Events
-- Documentation
-- Mentoring
-- Project Managements
+<!--
+https://visitedplaces.com/world/?map=world&projection=geoEquirectangular&theme=light-green&water=1&graticule=0&names=0&duration=0&placeduration=0&slider=0&autoplay=0&autozoom=none&autostep=0&home=-&places=~BO_BR_MX_IN_NG_KE_ID_US_AR_VE_CA_PE
+-->
 
-Join our community on [discord](/discord). Learn more and contribute on
-[GitHub](https://github.com/opensciencelabs).
-
-## Roadmap
-
-If you are interested in the Open Science Labs next steps, please check our
-Roadmap.
-
-## Governance
-
-For more information about our project governance, please check governance
-document.
+<img src="/images/internship/map.png" />

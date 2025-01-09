@@ -22,7 +22,7 @@ partners:
       The GRAṔH Courses is a non-profit making data science accessible for
       students, researchers and professionals with affordable live bootcamps
       and free self-paced courses.
-    thumbnail: https://thegraphnetwork.org/wp-content/uploads/2021/07/Research_GRAPH_logo-2-1-1-2-3-150x150.png
+    thumbnail: /images/partners/graph_courses_logo.png
     url: https://thegraphcourses.org/
     github: https://github.com/the-graph-courses
     twitter: https://twitter.com/thegraphnetwork
@@ -54,6 +54,13 @@ partners:
     github: https://github.com/arxlang/arx
     twitter: https://twitter.com/arx_lang
 
+  - name: PyDataStructs
+    summary: |
+      A Python package for data structures and algorithms.
+    thumbnail: /images/partners/pydatastructs.png
+    url: https://pydatastructs.readthedocs.io/en/stable
+    github: https://github.com/codezonediitj/pydatastructs
+
   - name: pyOpenSci
     summary: |
       pyOpenSci promotes open and reproducible research
@@ -62,23 +69,6 @@ partners:
     url: https://www.pyopensci.org/
     github: https://github.com/pyOpenSci/software-review
     twitter: https://twitter.com/pyopensci
-
-  - name: PyDataStructs
-    summary: |
-      A Python package for data structures and algorithms.
-    thumbnail: /images/partners/pydatastructs.png
-    url: https://pydatastructs.readthedocs.io/en/stable
-    github: https://github.com/codezonediitj/pydatastructs
-
-  - name: IGDORE
-    summary: |
-      Institute for Globally Distributed Open Research and Education
-      (IGDORE) is an independent research institute dedicated to improving
-      the quality of science, science education, and quality of life for
-      scientists, students and their families.
-    thumbnail: /images/partners/IGDORE-logo.png
-    url: https://igdore.org
-    twitter: https://twitter.com/IGDOREinstitute
 
   - name: LiteRev
     summary: |
@@ -89,6 +79,16 @@ partners:
     thumbnail: /images/partners/literev.png
     url: https://literev.unige.ch
     github: https://github.com/thegraphnetwork-literev
+
+  - name: IGDORE
+    summary: |
+      Institute for Globally Distributed Open Research and Education
+      (IGDORE) is an independent research institute dedicated to improving
+      the quality of science, science education, and quality of life for
+      scientists, students and their families.
+    thumbnail: /images/partners/IGDORE-logo.png
+    url: https://igdore.org
+    twitter: https://twitter.com/IGDOREinstitute
 ---
 
 # Partners

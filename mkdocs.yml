@@ -35,11 +35,11 @@ nav:
   - Opportunities:
       - index: opportunities/index.md
       - Open Source Internship:
-          - index: "opportunities/internship/index.md"
-          - Interns Guide: "opportunities/internship/guides/interns/index.md"
-          - Mentors Guide: "opportunities/internship/guides/mentors/index.md"
-          - "TEMPLATE: Projects Ideas": "opportunities/internship/templates/projects-ideas.md"
-          - "TEMPLATE: Intern Project Proposal": "opportunities/internship/templates/intern-proposal.md"
+          - index: "opportunities/os-internship/index.md"
+          - Interns Guide: "opportunities/os-internship/guides/interns/index.md"
+          - Mentors Guide: "opportunities/os-internship/guides/mentors/index.md"
+          - "TEMPLATE: Projects Ideas": "opportunities/os-internship/templates/projects-ideas.md"
+          - "TEMPLATE: Intern Project Proposal": "opportunities/os-internship/templates/intern-proposal.md"
       - GSoC:
           - index: "opportunities/gsoc/index.md"
           - Contributor Guide: "opportunities/gsoc/guides/contributor/index.md"
