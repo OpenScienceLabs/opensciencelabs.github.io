@@ -12,7 +12,7 @@ partners:
 
   - name: The GRAPH Courses
     url: https://thegraphcourses.org/
-    logo: https://thegraphnetwork.org/wp-content/uploads/2021/07/Research_GRAPH_logo-2-1-1-2-3-150x150.png
+    logo: /images/partners/graph_courses_logo.png
 
   - name: AlertaDengue
     url: https://info.dengue.mat.br/
@@ -132,7 +132,7 @@ initiatives:
               Offering hands-on experience in open source projects, fostering
               learning, and contributing to the community.
             </p>
-            <a href="/opportunities/internship" class="btn btn-primary"
+            <a href="/opportunities/os-internship" class="btn btn-primary"
               >Learn More</a
             >
           </div>
@@ -168,16 +168,18 @@ initiatives:
       <div class="col">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">OpenHub</h5>
+            <h5 class="card-title">Study Groups</h5>
             <p class="card-text fw-lighter">
-              OpenHub by Open Science Labs serves as a global network of local
-              communities, fostering collaboration and knowledge sharing in
-              open science and technology.
+              We encourage the community to organize study groups to foster a
+              collaborative environment for learning and sharing.
             </p>
-            For more information, please send us an email to
-            <a href="mailto:team@opensciencelabs.org" target="_blank"
-              >team@opensciencelabs.org</a
-            >.
+            <a
+              href="https://opensciencelabs.org/discord"
+              class="btn btn-success"
+              target="_blank"
+            >
+              Join our Discord server
+            </a>
           </div>
         </div>
       </div>
