@@ -302,6 +302,11 @@ initiatives:
           >team@opensciencelabs.org</a
         >.
       </p>
+      <div class="text-center mt-4">
+      <a
+        href="/partnership"
+        class="btn btn-primary">Learn More</a>
+    </div>
     </div>
   </div>
 </section>
