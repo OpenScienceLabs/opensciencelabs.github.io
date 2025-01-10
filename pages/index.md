@@ -303,10 +303,10 @@ initiatives:
         >.
       </p>
       <div class="text-center mt-4">
-      <a
-        href="/partnership"
-        class="btn btn-primary">Learn More</a>
-    </div>
+        <a
+          href="/partnership"
+          class="btn btn-primary">Learn More</a>
+      </div>
     </div>
   </div>
 </section>
