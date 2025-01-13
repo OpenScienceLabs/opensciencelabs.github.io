@@ -42,8 +42,10 @@ nav:
           - "TEMPLATE: Intern Project Proposal": "opportunities/os-internship/templates/intern-proposal.md"
       - GSoC:
           - index: "opportunities/gsoc/index.md"
+          - Project Ideas: "opportunities/gsoc/project-ideas/index.md"
           - Contributor Guide: "opportunities/gsoc/guides/contributor/index.md"
-          - "TEMPLATE: Contributor Project Proposal": "opportunities/gsoc/templates/contributor-proposal.md"
+          - Project Idea Template: "opportunities/gsoc/templates/project-ideas.md"
+          - Contributor Project Proposal Template: "opportunities/gsoc/templates/contributor-proposal.md"
   - Partnership:
       - index: "partnership/index.md"
       - Partners: "partnership/partners/index.md"
