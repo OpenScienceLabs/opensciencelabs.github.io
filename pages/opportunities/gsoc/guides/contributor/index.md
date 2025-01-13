@@ -12,11 +12,13 @@ This comprehensive document is your gateway to engaging with a network of
 professionals and peers dedicated to the advancement of open science and open
 source. Whether you're considering applying to GSoC with Open Science Labs or if
 you've already been accepted, this guide is designed to facilitate a smooth
-transition into our collaborative environment. You'll find detailed instructions
-on how to apply, connect with sub-organizations/projects, and make the most of
-your GSoC period once you're on board. It's a chance to contribute to a global
-movement and develop skills that will serve you throughout your career. Let's
-embark on this exciting journey together.
+transition into our collaborative environment.
+
+You'll find detailed instructions on how to apply, connect with
+sub-organizations/projects, and make the most of your GSoC period once you're on
+board. It's a chance to contribute to a global movement and develop skills that
+will serve you throughout your career. Let's embark on this exciting journey
+together.
 
 ## Part I: Contributor Candidates
 
@@ -88,3 +90,14 @@ open to code reviews and feedback, as they are learning opportunities.
 By following these guidelines, both candidates and approved contributors can
 maximize their growth, contributions, and overall experience within the GSoC
 with Open Science Labs.
+
+## Resources for writing the proposal
+
+Applicants should consult the
+[GSoC Student Guide](https://google.github.io/gsocguides/student/) for more
+details on how to apply and tips on crafting their proposals. Additional
+recommendations can be found
+[here](https://developers.google.com/open-source/gsoc/help/student-advice).
+
+For further guidance, our suggested proposal template offers valuable insights
+and can be accessed [here](/opportunities/gsoc/templates/contributor-proposal).

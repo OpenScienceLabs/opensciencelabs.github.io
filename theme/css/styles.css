@@ -296,20 +296,20 @@ h1:hover .link,h2:hover .link,h3:hover .link,h4:hover .link,h5:hover .link{
   opacity:1
 }
 h1{
-  font-size:200%;
+  font-size:175%;
   font-weight:400
 }
 h2{
-  font-size:175%
-}
-h3{
   font-size:150%
 }
+h3{
+  font-size:130%
+}
 h4{
-  font-size:125%
+  font-size:120%
 }
 h5{
-  font-size:120%
+  font-size:110%
 }
 h6{
   font-size:100%
