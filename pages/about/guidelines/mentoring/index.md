@@ -4,6 +4,7 @@ date: 2019-04-08
 authors: ["Ingrid Bianka Garcia"]
 tags: ["mentoring"]
 category: ["mentoring"]
+template: single-sidebar.html
 ---
 
 # Mentoring Guideline

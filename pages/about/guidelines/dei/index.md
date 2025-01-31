@@ -4,6 +4,7 @@ date: 2019-04-08
 authors: ["Mariangela Petrizzo"]
 featured: true
 tags: ["DEI"]
+template: single-sidebar.html
 ---
 
 # Statement on Diversity, Equity and Inclusion
