@@ -40,7 +40,7 @@ nav:
           - Mentors Guide: "opportunities/os-internship/guides/mentors/index.md"
           - "TEMPLATE: Projects Ideas": "opportunities/os-internship/templates/projects-ideas.md"
           - "TEMPLATE: Intern Project Proposal": "opportunities/os-internship/templates/intern-proposal.md"
-      - GSoC:
+      - Google Summer of Code:
           - index: "opportunities/gsoc/index.md"
           - Project Ideas: "opportunities/gsoc/project-ideas/index.md"
           - Contributor Guide: "opportunities/gsoc/guides/contributor/index.md"
@@ -51,11 +51,6 @@ nav:
       - Partners: "partnership/partners/index.md"
   - Events:
       - index: events/index.md
-  - Guidelines:
-      - index: guidelines/index.md
-      - Articles: guidelines/articles/index.md
-      - DEI: guidelines/dei/index.md
-      - Mentoring: guidelines/mentoring/index.md
   - About:
       - index: "about/index.md"
       - About OSL: "about/index.md"
@@ -65,6 +60,11 @@ nav:
       - CoC: about/coc/index.md
       - Roadmap: about/roadmap/index.md
       - Governance: about/governance/index.md
+      - Guidelines:
+          - index: about/guidelines/index.md
+          - Articles: about/guidelines/articles/index.md
+          - DEI: about/guidelines/dei/index.md
+          - Mentoring: about/guidelines/mentoring/index.md
   - Donate: "donate/index.md"
 
 markdown_extensions:

@@ -2,6 +2,7 @@
 title: "Editorial Guidelines for Article Creation"
 date: 2019-04-08
 authors: ["Mariangela Petrizzo"]
+template: single-sidebar.html
 ---
 
 # Articles

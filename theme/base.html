@@ -143,18 +143,16 @@
         footer.citation *{margin-top:20px;font-size:10px!important;font-style:italic!important}
       </style>
       <div class=container>
-        <section class="wrap content">
+        <section class="content-inner">
           {% if page.parent.children %}
+          <!--
           <div class="d-none d-sm-none d-md-block" style="margin-top:80px"></div>
           <div class="d-block d-sm-block d-md-none" style="margin-top:50px"></div>
+          -->
           {% endif %}
           {% block content %}
           <section>
-            {% if page.parent.children %}
-            <div class="row pt-2">
-            {% else %}
             <div class="row pt-0">
-            {% endif %}
               <div class="col-md-12 mx-auto">
                 {% block content_inner %}
                   {{ page.content }}

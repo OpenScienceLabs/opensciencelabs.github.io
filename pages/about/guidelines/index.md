@@ -1,6 +1,7 @@
 ---
 title: Guidelines
 authors: ["OSL Team"]
+template: single-sidebar.html
 ---
 
 # Guidelines
@@ -14,7 +15,7 @@ In this section, there are the guideline about how to write the blog posts for
 Open Science Labs. OSL Blogs can be accessed [here](/blog/).
 
 <ul>
-  <li><a href="/guidelines/articles/">Article Guideline</a></li>
+  <li><a href="/about/guidelines/articles/">Article Guideline</a></li>
 </ul>
 
 ## Diversity, Equity and Inclusion (DEI)
@@ -28,7 +29,7 @@ DEI is a very important aspect of our community and we really care about that.
 In this section we can find our initial DEI declaration.
 
 <ul>
-  <li><a href="/guidelines/dei/">Statement on Diversity, Equity and Inclusion</a></li>
+  <li><a href="/about/guidelines/dei/">Statement on Diversity, Equity and Inclusion</a></li>
 </ul>
 
 ## Mentoring
@@ -42,5 +43,5 @@ to reach someone outside.
 Another way that the mentoring can happen is inside the internship program.
 
 <ul>
-  <li><a href="/guidelines/mentoring">Mentoring Guideline</a></li>
+  <li><a href="/about/guidelines/mentoring">Mentoring Guideline</a></li>
 </ul>
