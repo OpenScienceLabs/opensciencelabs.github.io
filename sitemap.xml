@@ -46,6 +46,26 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://opensciencelabs.org/about/guidelines/</loc>
+         <lastmod>2025-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://opensciencelabs.org/about/guidelines/articles/</loc>
+         <lastmod>2025-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://opensciencelabs.org/about/guidelines/dei/</loc>
+         <lastmod>2025-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://opensciencelabs.org/about/guidelines/mentoring/</loc>
+         <lastmod>2025-01-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://opensciencelabs.org/about/roadmap/</loc>
          <lastmod>2025-01-31</lastmod>
          <changefreq>daily</changefreq>
@@ -197,26 +217,6 @@
     </url>
     <url>
          <loc>https://opensciencelabs.org/funding.json/</loc>
-         <lastmod>2025-01-31</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://opensciencelabs.org/guidelines/</loc>
-         <lastmod>2025-01-31</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://opensciencelabs.org/guidelines/articles/</loc>
-         <lastmod>2025-01-31</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://opensciencelabs.org/guidelines/dei/</loc>
-         <lastmod>2025-01-31</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://opensciencelabs.org/guidelines/mentoring/</loc>
          <lastmod>2025-01-31</lastmod>
          <changefreq>daily</changefreq>
     </url>

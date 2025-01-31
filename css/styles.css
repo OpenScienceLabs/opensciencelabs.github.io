@@ -449,6 +449,7 @@ picture{
   display:flex;
   flex:1
 }
+/*
 .nav_header{
   background-color:#374955;
   padding:0 1.5rem;
@@ -456,6 +457,13 @@ picture{
   width:100%;
   z-index:99;
   left:0
+}
+  */
+.nav_header {
+  position: sticky;
+  top: 0;
+  z-index: 1030; /* Ensure it's above content */
+  background-color:#374955;
 }
 .nav_item{
   padding:0.5rem 1rem;
