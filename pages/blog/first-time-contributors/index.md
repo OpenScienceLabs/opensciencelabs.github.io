@@ -292,7 +292,7 @@ While both workflows have their merits, it's essential to assess your team's wor
 
 ### Recommendation:
 
-For a deeper dive into both advantages and implementation details, consider referring to the following blog post: [click here](https://www.harness.io/blog/github-flow-vs-git-flow-whats-the-difference).
+For a deeper dive into their advantages and implementation details, consider referring to the following blog post: [click here](https://www.harness.io/blog/github-flow-vs-git-flow-whats-the-difference).
 
 OSL recommends the GitHub flow for development.
 
