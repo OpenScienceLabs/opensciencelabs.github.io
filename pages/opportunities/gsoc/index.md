@@ -6,28 +6,59 @@ authors: ["OSL Team"]
 template: single-sidebar.html
 ---
 
-# Google Summer of Code (GSoC) with Open Science Labs
+# Google Summer of Code (GSoC) at Open Science Labs
 
-Google Summer of Code is a global program focused on bringing students and
-newcomer open-source developers into open-source software development.
+Open Science Labs is excited to apply as a mentoring organization for Google
+Summer of Code 2025. This global program is an excellent opportunity for
+students and newcomers to dive into open source software development.
 
-For more detailed and complete information about the GSoC, please check its
-[official guide](https://developers.google.com/open-source/gsoc/resources/guide)
+## About Google Summer of Code
 
-### Contributor Guide
+Google Summer of Code offers students worldwide the chance to contribute to open
+source projects over the summer. This initiative is not only about coding; it's
+about learning the open source culture, understanding project maintenance, and
+improving software alongside experienced mentors.
 
-Candidate contributors can find important information about GSoC in our
-[Contributor Guide](/opportunities/gsoc/guides/contributor) section.
+For more information about GSoC, check out its official web page at
+<https://summerofcode.withgoogle.com/>.
 
-### Project Ideas for GSoC
+### Why Participate with OSL?
 
-For more information about the Project Ideas, check the section
-[Project Ideas](/opportunities/gsoc/project-ideas)
+Open Science Labs has a history of participation under the NumFOCUS umbrella in
+2023 and 2024, providing robust support to budding open-source enthusiasts
+through structured projects that enhance both learning and contribution.
 
-### History
+### Project Ideas Submission
 
-Open Science Labs has participated in the GSoC 2024 and 2023 under
-[NumFOCUS](https://github.com/numfocus/gsoc) umbrella.
+Mentors play a crucial role at GSoC, providing guidance and expertise to help
+shape the next generation of open source contributors. If you have a project
+that could use enhancements or require tricky bug fixes, please propose your
+ideas. We welcome initial drafts, and if accepted, there will be time to refine
+these ideas further.
 
-The list of OSL Project Ideas that participated in GSoC 2024 can be checked
-[here](https://github.com/OpenScienceLabs/gsoc/blob/main/project-ideas/gsoc2024.md).
+The current list of project ideas can be found
+[here](/opportunities/gsoc/project-ideas).
+
+If you are considering submitting your project idea to OSL, please send your
+project by email to <team@opensciencelabs.org> by February 6. Check out our
+project idea template for more insights:
+</opportunities/gsoc/templates/project-ideas/>.
+
+Additionally, all discussions about OSL participation in GSoC will happen on our
+Discord server at <https://opensciencelabs.org/discord>.
+
+### For Potential Contributors
+
+If you're a student or a newcomer eager to get involved in open source through
+GSoC, stay tuned to this page for updates on project ideas and submission
+guidelines. Check out our
+[Contributor Guide](/opportunities/gsoc/guides/contributor) for more details on
+how to prepare for your application and stay updated with our project idea pages
+to check which projects are applying with us to GSoC.
+
+### Reach Out for More Information
+
+For any inquiries or to discuss project ideas, feel free to reach out at
+`team@opensciencelabs.org`. Also, join us on our Discord server at
+<https://opensciencelabs.org/discord>, where all discussions with mentors and
+contributors will take place.

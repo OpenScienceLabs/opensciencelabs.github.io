@@ -292,9 +292,9 @@ While both workflows have their merits, it's essential to assess your team's wor
 
 ### Recommendation:
 
-For a deeper dive into GitFlow's advantages and implementation details, consider referring to the following blog post: [click here](https://lucamezzalira.medium.com/git-flow-vs-github-flow-76b93f4782f7).
+For a deeper dive into their advantages and implementation details, consider referring to the following blog post: [click here](https://www.harness.io/blog/github-flow-vs-git-flow-whats-the-difference).
 
-OSL recommends the github flow
+OSL recommends the GitHub flow for development.
 
 ## Python Linters Overview
 
