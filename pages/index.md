@@ -130,7 +130,7 @@ initiatives:
               class="btn btn-success"
               target="_blank"
             >
-              Join our Discord server
+              Join us on Discord
             </a>
           </div>
         </div>
@@ -187,21 +187,17 @@ initiatives:
           <div class="card-body m-0">
             <h5 class="card-title text-dark">Study Groups</h5>
             <p class="card-text fw-lighter">
-              We encourage the community to organize study groups
-              to foster a collaborative environment for learning
-              and sharing. Currently, OSL, sponsored by LiteRev,
-              hosts a study group dedicated to enhancing
-              problem-solving skills through the Advent of Code
-              challenges.
+              Join Open Science Labs study groups to engage, learn, and
+              collaborate on diverse topics around open science and
+              technologies.
             </p>
           </div>
           <div class="card-footer m-0">
             <a
-              href="https://opensciencelabs.org/discord"
-              class="btn btn-success"
-              target="_blank"
+              href="/learning/study-groups"
+              class="btn btn-primary"
             >
-              Join our Discord server
+              Learn More
             </a>
           </div>
         </div>
@@ -211,7 +207,7 @@ initiatives:
           <div class="card-body m-0">
             <h5 class="card-title">Blog</h5>
             <p class="card-text fw-lighter">
-              Our blog features contributions from our vibrant community,
+              Our blog features contributions from our community,
               showcasing project updates, innovative research findings, and
               expert opinions to inspire and inform.
             </p>
@@ -283,7 +279,7 @@ initiatives:
         class="btn btn-success"
         target="_blank"
       >
-        Join our Discord server
+        Join us on Discord
       </a>
     </div>
   </div>
