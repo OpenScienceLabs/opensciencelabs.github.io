@@ -57,10 +57,19 @@ initiatives:
 <section id="home" class="p-5 text-center bg-light welcome-section">
   <div class="overlay px-0 py-4">
     <div class="container p-0">
-      <h1>Welcome to the <span class="bg-light text-warning rounded">Open Science Labs</span></h1>
+      <h1>
+        <span class="bg-dark text-white rounded">
+          Welcome to the
+        </span>
+        <span class="bg-warning text-light rounded">
+          Open Science Labs
+        </span>
+      </h1>
       <h2>
-        Fostering innovation and collaboration with open science and open
-        source.
+        <span class="bg-secondary text-ligh rounded">
+          Fostering innovation and collaboration with open science and open
+          source.
+        </span>
       </h2>
     </div>
   </div>
@@ -90,9 +99,9 @@ initiatives:
   </div>
 </section>
 
-<section id="initiatives" class="p-5 bg-light">
+<section id="initiatives" class="p-5 bg-light text-black-50">
   <div class="container">
-    <h2 class="text-center">Our Main Initiatives</h2>
+    <h2 class="text-center text-dark">Our Main Initiatives</h2>
     <p>
       Discover Our Main Initiatives at Open Science Labs, where we champion
       the advancement of scientific research and technology through a
@@ -109,7 +118,7 @@ initiatives:
       <div class="col">
         <div class="card m-0 p-0">
           <div class="card-body m-0">
-            <h5 class="card-title">Community</h5>
+            <h5 class="card-title text-dark">Community</h5>
             <p class="card-text fw-lighter">
               Whether you're here to learn, share, or contribute, you'll find
               a supportive space to explore open science and technology.
@@ -129,7 +138,7 @@ initiatives:
       <div class="col">
         <div class="card m-0 p-0">
           <div class="card-body m-0">
-            <h5 class="card-title">Internship Program</h5>
+            <h5 class="card-title text-dark">Internship Program</h5>
             <p class="card-text fw-lighter">
               Offering hands-on experience in open source projects, fostering
               learning, and contributing to the community.
@@ -145,7 +154,7 @@ initiatives:
       <div class="col">
         <div class="card m-0 p-0">
           <div class="card-body m-0">
-            <h5 class="card-title">Project Affiliation</h5>
+            <h5 class="card-title text-dark">Project Affiliation</h5>
             <p class="card-text fw-lighter">
               Supporting and promoting open source projects aligned with our
               mission, providing visibility and resources.
@@ -159,7 +168,7 @@ initiatives:
       <div class="col">
         <div class="card m-0 p-0">
           <div class="card-body m-0">
-            <h5 class="card-title">Incubator Program</h5>
+            <h5 class="card-title text-dark">Incubator Program</h5>
             <p class="card-text fw-lighter">
               Nurturing innovative open source projects, providing the support
               and resources needed to evolve ideas into impactful solutions
@@ -176,7 +185,7 @@ initiatives:
       <div class="col">
         <div class="card m-0 p-0">
           <div class="card-body m-0">
-            <h5 class="card-title">Study Groups</h5>
+            <h5 class="card-title text-dark">Study Groups</h5>
             <p class="card-text fw-lighter">
               We encourage the community to organize study groups
               to foster a collaborative environment for learning
@@ -235,9 +244,9 @@ initiatives:
   </div>
 </section>
 
-<section id="affiliation" class="p-5 bg-light">
+<section id="affiliation" class="p-5 bg-light text-black-50">
   <div class="container">
-    <h2 class="text-center">Project Affiliation</h2>
+    <h2 class="text-center text-dark">Project Affiliation</h2>
     <p>
       The Project Affiliation program at Open Science Labs is designed to
       foster collaboration and growth among open science and open source
@@ -280,9 +289,9 @@ initiatives:
   </div>
 </section>
 
-<section id="partnership" class="p-5 bg-light">
+<section id="partnership" class="p-5 bg-light text-black-50">
   <div class="container">
-    <h2 class="text-center">Partnership</h2>
+    <h2 class="text-center text-dark">Partnership</h2>
     <div>
       <p>
         The Partner Program at Open Science Labs is designed to forge

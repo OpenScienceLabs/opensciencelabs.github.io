@@ -49,8 +49,12 @@ nav:
   - Partnership:
       - index: "partnership/index.md"
       - Partners: "partnership/partners/index.md"
-  - Events:
-      - index: events/index.md
+  - Learning:
+      - index: learning/index.md
+      - Events:
+          - index: learning/events/index.md
+      - Study Groups:
+          - index: learning/study-groups/index.md
   - About:
       - index: "about/index.md"
       - About OSL: "about/index.md"
