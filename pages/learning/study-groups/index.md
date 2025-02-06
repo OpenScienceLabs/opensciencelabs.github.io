@@ -2,7 +2,6 @@
 title: Study Groups
 date: 2025-02-02
 authors: ["OSL Team"]
-template: single-sidebar.html
 ---
 
 # Study Groups at Open Science Labs
@@ -25,7 +24,10 @@ problem-solving skills through the
 provides an engaging way to tackle interesting programming problems and improve
 your coding proficiency.
 
+- **Moderator**: _Ivan Ogasawara_
 - **Level**: _Advanced_
+- **Language**: _English_
+- **Programming Language**: _Any_
 - **Discord Channel**: _stdy-advent-of-code_
 - **Frequency**: _Weekly meetings_
 
@@ -39,7 +41,10 @@ upcoming "Python 101 Challenges" study group. This beginner-level group is
 designed to help you tackle fundamental Python problems, making it an ideal
 starting point for those new to coding.
 
+- **Moderator**: _Ivan Ogasawara_
 - **Level**: _Beginner_
+- **Language**: _English_
+- **Programming Language**: _Python_
 - **Planned Start Date**: _Week of February 10, 2025_
 - **Frequency**: _Weekly meetings_
 - **Initial Challenge Source**:
@@ -53,13 +58,13 @@ looking to understand Python basics or get a taste of real-world programming,
 this study group will provide the guidance and community support you need to
 kickstart your coding journey.
 
-### Join a Study Group
+## Join a Study Group
 
 Interested in joining one of our active study groups? Connect with us on
 [Discord](https://opensciencelabs.org/discord), click on **"Browse Channels"**,
 and select the **study-groups** category to see all available groups.
 
-### Start Your Own Study Group
+## Start Your Own Study Group
 
 If you're interested in starting a new study group, we would love to support
 you! Please send an email to
