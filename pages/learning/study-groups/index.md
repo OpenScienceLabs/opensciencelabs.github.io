@@ -29,9 +29,10 @@ your coding proficiency.
 - **Language**: _English_
 - **Programming Language**: _Any_
 - **Discord Channel**: _stdy-advent-of-code_
-
-* **Schedule**: _Every Wednesday at 12:00PM (GMT-4)_
-* **Video Call Link**: <https://meet.google.com/tve-rtvp-tqa>
+  (<https://opensciencelabs.org/discord>)
+- **Schedule**: _Every Wednesday at 12:00PM (GMT-4)_
+- **Video Call Link**: <https://meet.google.com/tve-rtvp-tqa>
+- **Challenge link**: https://adventofcode.com/
 
 ### Python 101 Challenges
 
@@ -44,13 +45,12 @@ starting point for those new to coding.
 - **Level**: _Beginner_
 - **Language**: _English_
 - **Programming Language**: _Python_
+- **Discord Channel**: _stdy-python-101_ (<https://opensciencelabs.org/discord>)
 - **Start Date**: _February 20, 2025_
-
-* **Schedule**: _Every Thursday at 12:00PM (GMT-3)_
-
+- **Schedule**: _Every Thursday at 12:00PM (GMT-3)_
+- **Video Call**: On discord (voice channel _stdy-python-101_)
 - **Challenge link**:
   [101 Computing Python Challenges](https://www.101computing.net/python-challenges-for-beginners/)
-  (subject to confirmation)
 
 ## Join a Study Group
 
