@@ -5,14 +5,27 @@ date: "2024-01-29"
 authors: ["OSL Team"]
 template: projects.html
 projects:
+  - name: AnamnesisAI
+    type: incubated
+    maintainer_name: Ivan Ogasawara
+    maintainer_email: ivan.ogasawara@gmail.com
+    url: https://osl-incubator.github.io/anamnesis.ai/
+    description: |
+      AnamnesisAI is a project focused on extracting anamnesis in FHIR format from text.
+
   - name: ArtBox
     type: incubated
+    maintainer_name: Ivan Ogasawara
+    maintainer_email: ivan.ogasawara@gmail.com
     url: https://osl-incubator.github.io/artbox/
     description: |
       ArtBox is a tool set for handling multimedia files with a bunch of useful
       functions.
+
   - name: ArxLang
     type: affiliated
+    maintainer_name: Ivan Ogasawara
+    maintainer_email: ivan.ogasawara@gmail.com
     url: https://arxlang.org
     description: |
       ArxLang Project is compounded mainly by three sub-projects: ASTx, IRx, and Arx.
@@ -25,6 +38,8 @@ projects:
 
   - name: Envers
     type: incubated
+    maintainer_name: Ivan Ogasawara
+    maintainer_email: ivan.ogasawara@gmail.com
     url: https://osl-incubator.github.io/envers/
     description: |
       Envers is a command-line tool (CLI) designed to manage and version environment
@@ -34,6 +49,8 @@ projects:
 
   - name: fqlearn
     type: incubated
+    maintainer_name: Ever Vino
+    maintainer_email: ever.vino00@gmail.com
     url: https://osl-pocs.github.io/fqlearn/
     description: |
       This Project aims to facilitate the teaching of unit operations and
@@ -41,13 +58,25 @@ projects:
 
   - name: Makim
     type: incubated
+    maintainer_name: Ivan Ogasawara
+    maintainer_email: ivan.ogasawara@gmail.com
     url: https://osl-incubator.github.io/makim/
     description: |
       Makim (or makim) is based on make and focus on improve the way to define targets
       and dependencies. Instead of using the Makefile format, it uses yaml format.
 
+  - name: Rago
+    type: incubated
+    maintainer_name: Ivan Ogasawara
+    maintainer_email: ivan.ogasawara@gmail.com
+    url: https://osl-incubator.github.io/rago/
+    description: |
+      Rago is a lightweight framework for RAG.
+
   - name: noWorkflow
     type: affiliated
+    maintainer_name: Joao Felipe
+    maintainer_email: joaofelipenp@gmail.com
     url: https://gems-uff.github.io/noworkflow/
     description: |
       The noWorkflow project aims at allowing scientists to benefit from provenance
@@ -57,13 +86,26 @@ projects:
 
   - name: PyDataStructs
     type: affiliated
+    maintainer_name: Gagandeep Singh
+    maintainer_email: gdp.1807@gmail.com
     url: https://pydatastructs.readthedocs.io/en/latest/
     description: |
       PyDataStructs project aims to be a Python package for various data structures
       and algorithms (including their parallel implementations).
 
+  - name: PyMedX
+    type: incubated
+    maintainer_name: Ever Vino
+    maintainer_email: ever.vino00@gmail.com
+    url: https://osl-incubator.github.io/pymedx
+    description: |
+      PyMedX is a Python library that provides access to PubMed/PubMed Central.
+      This project is a fork from the archived project PyMed.
+
   - name: SciCookie
     type: incubated
+    maintainer_name: Ivan Ogasawara
+    maintainer_email: ivan.ogasawara@gmail.com
     url: https://osl-incubator.github.io/scicookie
     description: |
       SciCookie is a template developed by Open Science Labs that creates
@@ -71,6 +113,8 @@ projects:
 
   - name: Sugar
     type: incubated
+    maintainer_name: Ivan Ogasawara
+    maintainer_email: ivan.ogasawara@gmail.com
     url: https://osl-incubator.github.io/sugar/
     description: |
       Sugar aims to organize your stack of containers, gathering some useful scripts

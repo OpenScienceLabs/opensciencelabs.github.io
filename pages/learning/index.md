@@ -2,7 +2,6 @@
 title: Learning
 date: 2025-02-02
 authors: ["OSL Team"]
-template: single-sidebar.html
 ---
 
 # Learning at Open Science Labs

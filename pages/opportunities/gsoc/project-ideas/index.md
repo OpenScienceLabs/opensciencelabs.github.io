@@ -1,6 +1,6 @@
 ---
-title: "TEMPLATE: GSoC Project Idea"
-description: "TEMPLATE: GSoC Project Idea"
+title: "GSoC Project Ideas"
+description: "GSoC Project Ideas"
 date: "2025-01-13"
 authors: ["OSL Team"]
 template: single-sidebar.html
@@ -30,67 +30,42 @@ sub-oganization/project mentors.
 _Note: Each organization includes a designated list of mentors. Please get in
 touch with them directly if you have any inquiries._
 
-### ArtBox
+<!--
+### AnamnesisAI
 
-- **Description**: ArtBox is a tool set for handling multimedia files with a
-  bunch of useful functions.
-- **Project WEB Page**: <https://osl-incubator.github.io/artbox/>
+- **Description**: AnamnesisAI is a project focused on extracting anamnesis in
+  FHIR format from text.
+- **Project WEB Page**: <https://osl-incubator.github.io/anamnesis.ai/>
 - **Project Ideas**:
-  [link](<https://github.com/osl-incubator/artbox/wiki/Google-Summer-of-Code-(GSoc)-%E2%80%90-2024>)
+  [link](https://github.com/osl-incubator/anamnesis.ai/wiki/Project-Ideas)
+-->
 
 ### ArxLang/ASTx
 
 - **Description**: ASTx is an agnostic expression structure for AST. It is
-  agnostic because it is not specific to any language, neither to the ArxLang
-  project, although its main focus is to provide all needed feature for ArxLang.
+  agnostic because it is not specific to any language.
 - **Project WEB Page**: <https://astx.arxlang.org/>
-- **Project Ideas**:
-  [link](<https://github.com/arxlang/astx/wiki/Google-Summer-of-Code-(GSoc)-%E2%80%90-2024>)
+- **Project Ideas**: [link](https://github.com/arxlang/astx/wiki/Project-Ideas)
 
-### Envers
+<!--
+### ArxLang/IRx
 
-- **Description**: Envers is a command-line tool (CLI) designed to manage and
-  version environment variables for different deployment stages such as staging,
-  development, and production. It provides a secure and organized way to handle
-  environment-specific configurations.
-- **Project WEB Page**: <https://osl-incubator.github.io/envers/>
-- **Project Ideas**:
-  [link](<https://github.com/osl-incubator/envers/wiki/Google-Summer-of-Code-(GSoc)-%E2%80%90-2024>)
+- **Description**: IRx aims to provide a translator to LLVM-IR from ASTx
+  objects. IRx uses llvmlite in order to generate LLVM-IR source and binary
+  generation.
+- **Project WEB Page**: <https://irx.arxlang.org/>
+- **Project Ideas**: [link](https://github.com/arxlang/irx/wiki/Project-Ideas)
 
-### fqlearn
-
-- **Description**: This Project aims to facilitate the teaching of unit
-  operations and thermodynamics.
-- **Project WEB Page**: <https://osl-pocs.github.io/fqlearn/>
-- **Project Ideas**:
-  [link](<https://github.com/osl-pocs/fqlearn/wiki/Google-Summer-of-Code-(GSoc)-%E2%80%90-2024>)
+-->
 
 ### Makim
 
-- **Description**: Makim is based on make and focus on improve the way to define
-  targets and dependencies. Instead of using the Makefile format, it uses yaml
-  format.
+- **Description**: Makim is based on **make** and focus on improving the way to
+  define targets and dependencies. Instead of using the Makefile format, it uses
+  yaml format.
 - **Project WEB Page**: <https://osl-incubator.github.io/makim/>
 - **Project Ideas**:
-  [link](<https://github.com/osl-incubator/makim/wiki/Google-Summer-of-Code-(GSoc)-%E2%80%90-2024>)
-
-### noWorkflow
-
-- **Description**: The noWorkflow project aims at allowing scientists to benefit
-  from provenance data analysis even when they don't use a workflow system. It
-  transparently collects provenance from Python scripts and notebooks and
-  provide tools to support the analysis and management of the provenance.
-- **Project WEB Page**: <https://gems-uff.github.io/noworkflow/>
-- **Project Ideas**:
-  [link](https://gist.github.com/JoaoFelipe/ce4cb232deb2c71d4f39afc5cbeefe2b)
-
-### OSL Web Page
-
-- **Description**: OpenScienceLabs web page, is a project that serves as a way
-  to present OSL to the world through a web page.
-- **Project WEB Page**: <https://opensciencelabs.org/>
-- **Project Ideas**:
-  [link](<https://github.com/OpenScienceLabs/opensciencelabs.github.io/wiki/Google-Summer-of-Code-(GSoc)-%E2%80%90-2024>)
+  [link](https://github.com/osl-incubator/makim/wiki/Project-Ideas)
 
 ### PyDataStructs
 
@@ -100,19 +75,21 @@ touch with them directly if you have any inquiries._
 - **Project Ideas**:
   [link](https://github.com/codezonediitj/pydatastructs/wiki/Google-Summer-of-Code-Project-Ideas)
 
+<!--
 ### SciCookie
 
-- **Description**: SciCookie is a template developed by
-  <https://opensciencelabs.org/> that creates projects from project templates.
+- **Description**: SciCookie creates new python project's structure from an
+  opinionated project template.
 - **Project WEB Page**: <https://osl-incubator.github.io/scicookie>
 - **Project Ideas**:
-  [link](<https://github.com/osl-incubator/scicookie/wiki/Google-Summer-of-Code-(GSoc)-%E2%80%90-2024>)
+  [link](https://github.com/osl-incubator/scicookie/wiki/Project-Ideas)
+-->
 
 ### Sugar
 
-- **Description**: Sugar aims to organize your stack of containers, gathering
-  some useful scripts and keeping this information centralized in a
-  configuration file. So the command line would be very simple.
+- **Description**: Sugar organizes your stack of containers, gathering some
+  useful scripts and keeping this information centralized in a configuration
+  file with a friendly command line interface.
 - **Project WEB Page**: <https://osl-incubator.github.io/sugar/>
 - **Project Ideas**:
-  [link](<https://github.com/osl-incubator/sugar/wiki/Google-Summer-of-Code-(GSoc)-%E2%80%90-2024>)
+  [link](https://github.com/osl-incubator/sugar/wiki/Project-Ideas)
