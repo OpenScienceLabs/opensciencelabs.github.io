@@ -75,6 +75,13 @@ touch with them directly if you have any inquiries._
 - **Project Ideas**:
   [link](https://github.com/codezonediitj/pydatastructs/wiki/Google-Summer-of-Code-Project-Ideas)
 
+### Rago
+
+- **Description**: Rago is a lightweight framework for RAG.
+- **Project WEB Page**: <https://osl-incubator.github.io/rago/>
+- **Project Ideas**:
+  [link](https://github.com/osl-incubator/rago/wiki/Project-Ideas)
+
 <!--
 ### SciCookie
 
