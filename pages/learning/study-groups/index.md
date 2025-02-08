@@ -29,9 +29,8 @@ your coding proficiency.
 - **Language**: _English_
 - **Programming Language**: _Any_
 - **Discord Channel**: _stdy-advent-of-code_
-- **Frequency**: _Weekly meetings_
 
-* **Date**: _Every Wednesday at 12:00PM (GMT-4)_
+* **Schedule**: _Every Wednesday at 12:00PM (GMT-4)_
 * **Video Call Link**: <https://meet.google.com/tve-rtvp-tqa>
 
 ### Python 101 Challenges
@@ -41,22 +40,17 @@ upcoming "Python 101 Challenges" study group. This beginner-level group is
 designed to help you tackle fundamental Python problems, making it an ideal
 starting point for those new to coding.
 
-- **Moderator**: _Ivan Ogasawara_
+- **Moderator**: _Sandro Loch_
 - **Level**: _Beginner_
 - **Language**: _English_
 - **Programming Language**: _Python_
-- **Planned Start Date**: _Week of February 10, 2025_
-- **Frequency**: _Weekly meetings_
-- **Initial Challenge Source**:
+- **Start Date**: _February 20, 2025_
+
+* **Schedule**: _Every Thursday at 12:00PM (GMT-3)_
+
+- **Challenge link**:
   [101 Computing Python Challenges](https://www.101computing.net/python-challenges-for-beginners/)
   (subject to confirmation)
-- **More Details**: To be announced
-
-Stay tuned for additional information including the exact meeting times, the
-official challenge list, and the dedicated Discord channel. Whether you're
-looking to understand Python basics or get a taste of real-world programming,
-this study group will provide the guidance and community support you need to
-kickstart your coding journey.
 
 ## Join a Study Group
 

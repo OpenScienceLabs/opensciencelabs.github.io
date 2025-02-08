@@ -30,6 +30,7 @@ sub-oganization/project mentors.
 _Note: Each organization includes a designated list of mentors. Please get in
 touch with them directly if you have any inquiries._
 
+<!--
 ### AnamnesisAI
 
 - **Description**: AnamnesisAI is a project focused on extracting anamnesis in
@@ -37,6 +38,7 @@ touch with them directly if you have any inquiries._
 - **Project WEB Page**: <https://osl-incubator.github.io/anamnesis.ai/>
 - **Project Ideas**:
   [link](https://github.com/osl-incubator/anamnesis.ai/wiki/Project-Ideas)
+-->
 
 ### ArxLang/ASTx
 
@@ -45,6 +47,7 @@ touch with them directly if you have any inquiries._
 - **Project WEB Page**: <https://astx.arxlang.org/>
 - **Project Ideas**: [link](https://github.com/arxlang/astx/wiki/Project-Ideas)
 
+<!--
 ### ArxLang/IRx
 
 - **Description**: IRx aims to provide a translator to LLVM-IR from ASTx
@@ -52,6 +55,8 @@ touch with them directly if you have any inquiries._
   generation.
 - **Project WEB Page**: <https://irx.arxlang.org/>
 - **Project Ideas**: [link](https://github.com/arxlang/irx/wiki/Project-Ideas)
+
+-->
 
 ### Makim
 
@@ -62,13 +67,6 @@ touch with them directly if you have any inquiries._
 - **Project Ideas**:
   [link](https://github.com/osl-incubator/makim/wiki/Project-Ideas)
 
-### OSL Web Page
-
-- **Description**: Open Science Labs web page.
-- **Project WEB Page**: <https://opensciencelabs.org/>
-- **Project Ideas**:
-  [link](https://github.com/OpenScienceLabs/opensciencelabs.github.io/wiki/Project-Ideas)
-
 ### PyDataStructs
 
 - **Description**: PyDataStructs project aims to be a Python package for various
@@ -77,6 +75,7 @@ touch with them directly if you have any inquiries._
 - **Project Ideas**:
   [link](https://github.com/codezonediitj/pydatastructs/wiki/Google-Summer-of-Code-Project-Ideas)
 
+<!--
 ### SciCookie
 
 - **Description**: SciCookie creates new python project's structure from an
@@ -84,6 +83,7 @@ touch with them directly if you have any inquiries._
 - **Project WEB Page**: <https://osl-incubator.github.io/scicookie>
 - **Project Ideas**:
   [link](https://github.com/osl-incubator/scicookie/wiki/Project-Ideas)
+-->
 
 ### Sugar
 
