@@ -3,6 +3,7 @@ title: Contact Us
 date: 2025-01-07
 authors:
   - Ivan Ogasawara
+template: single-sidebar.html
 ---
 
 # Contact Us

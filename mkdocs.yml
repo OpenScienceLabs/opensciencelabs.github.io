@@ -57,13 +57,15 @@ nav:
           - index: learning/study-groups/index.md
   - About:
       - index: "about/index.md"
-      - About OSL: "about/index.md"
-      - Contact: about/contact/index.md
+      - About OSL:
+          - index: "about/index.md"
+          - Contact Us: about/contact/index.md
+          - Our Formula: "about/formula/index.md"
+          - Roadmap: about/roadmap/index.md
+          - Code Of Conduct: about/coc/index.md
+          - Governance: about/governance/index.md
       - Team: about/team/index.md
-      - Our Formula: "about/formula/index.md"
-      - CoC: about/coc/index.md
-      - Roadmap: about/roadmap/index.md
-      - Governance: about/governance/index.md
+      - Fiscal Sponsor: about/fiscal-sponsor/index.md
       - Guidelines:
           - index: about/guidelines/index.md
           - Articles: about/guidelines/articles/index.md
