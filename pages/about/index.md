@@ -3,7 +3,7 @@ title: "About"
 description: "Open Science Labs, sharing knowledge"
 date: "2025-01-09"
 authors: ["OSL Team"]
-template: main.html
+template: single-sidebar.html
 ---
 
 # About Open Science Labs
