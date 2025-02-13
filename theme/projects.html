@@ -9,6 +9,7 @@
 {% endblock header_extra%}
 
 {% set colors=["", "bg-light"] %}
+{% set text_colors=["", "text-secondary"] %}
 
 {% block content %}
 <section>
@@ -43,11 +44,11 @@
               {{ project.name }}
             </a>
           </h2>
-          <p>
+          <p class="{{ text_colors[loop.index % 2] }}">
             <strong>Maintainer</strong>: {{ project.maintainer_name }}
             &lt;<a href="mailto:{{ project.maintainer_email }}">{{ project.maintainer_email }}</a>&gt;
           </p>
-          <p>{{ project.description }}</p>
+          <p class="{{ text_colors[loop.index % 2] }}">{{ project.description }}</p>
         </div>
       </div>
       {% endfor %}

@@ -17,7 +17,7 @@ Instructions:
   the square brackets [ and ] themselves.
 ```
 
-```
+```md
 # [Project Proposal Name]
 
 ## Candidate Info

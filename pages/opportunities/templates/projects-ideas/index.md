@@ -20,7 +20,7 @@ Instructions:
   consistency.
 ```
 
-```
+```md
 ## Project Idea 1: [Project Idea 1 Title]
 
 ### Abstract
