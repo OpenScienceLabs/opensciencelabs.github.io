@@ -38,8 +38,8 @@ nav:
           - index: "opportunities/os-internship/index.md"
           - Interns Guide: "opportunities/os-internship/guides/interns/index.md"
           - Mentors Guide: "opportunities/os-internship/guides/mentors/index.md"
-          - "TEMPLATE: Projects Ideas": "opportunities/os-internship/templates/projects-ideas.md"
-          - "TEMPLATE: Intern Project Proposal": "opportunities/os-internship/templates/intern-proposal.md"
+          - Projects Ideas Template: "opportunities/templates/projects-ideas/index.md"
+          - Candidates's Project Proposal Template: "opportunities/templates/candidate-proposal/index.md"
       - Google Summer of Code:
           - index: "opportunities/gsoc/index.md"
           - Project Ideas: "opportunities/gsoc/project-ideas/index.md"

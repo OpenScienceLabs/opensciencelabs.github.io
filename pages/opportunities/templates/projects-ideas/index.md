@@ -1,6 +1,6 @@
 ---
-title: "TEMPLATE: Projects Ideas"
-description: "TEMPLATE: Projects Ideas"
+title: "Projects Ideas Template"
+description: "Projects Ideas Template"
 date: "2023-11-01"
 authors: ["OSL Team"]
 template: single-sidebar.html
@@ -20,6 +20,7 @@ Instructions:
   consistency.
 ```
 
+```md
 ## Project Idea 1: [Project Idea 1 Title]
 
 ### Abstract
@@ -61,3 +62,4 @@ Instructions:
 ---
 
 <!-- Add more project ideas below using the same template as above -->
+```

@@ -1,6 +1,6 @@
 ---
-title: "TEMPLATE: Intern Project Proposal"
-description: "TEMPLATE: Intern Project Proposal"
+title: "Intern Project Proposal Template"
+description: "Intern Project Proposal Template"
 date: "2024-01-09"
 authors: ["OSL Team"]
 template: single-sidebar.html
@@ -17,6 +17,7 @@ Instructions:
   the square brackets [ and ] themselves.
 ```
 
+```md
 # [Project Proposal Name]
 
 ## Candidate Info
@@ -110,3 +111,4 @@ commitments, and a plan for catching up if behind schedule.]
 ## Post-OSL Internship Program
 
 [Outline any plans for continuing contributions to the project post-internship.]
+```
