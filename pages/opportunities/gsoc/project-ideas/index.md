@@ -1,7 +1,7 @@
 ---
 title: "GSoC Project Ideas"
 description: "GSoC Project Ideas"
-date: "2025-01-13"
+date: "2025-02-01"
 authors: ["OSL Team"]
 template: single-sidebar.html
 ---
