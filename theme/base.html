@@ -32,6 +32,17 @@
     <meta property="og:description" content="A Open Source community for sharing knowledge">
     <meta property="og:image" content="/images/thumbnail.png">
     <meta name=keywords content="open science,data science,latam">
+    <meta name="last-modified" content="{{ build_date_utc.strftime('%Y-%m-%d') }}">
+    <meta name="DC.date.modified" content="{{ build_date_utc.strftime('%Y-%m-%d') }}">
+    <meta property="og:updated_time" content="{{ build_date_utc.strftime('%Y-%m-%d') }}T00:00:00Z">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Open Science Labs",
+        "dateModified": "{{ build_date_utc.strftime('%Y-%m-%d') }}T00:00:00Z"
+      }
+    </script>
     <link rel=apple-touch-icon sizes=180x180 href=/icons/apple-touch-icon.png>
     <link rel=icon type=image/png sizes=32x32 href=/icons/favicon-32x32.png>
     <link rel=manifest href=/icons/site.webmanifest>
@@ -157,6 +168,17 @@
           </section>
           {% endblock content %}
         </section>
+        <div>
+          <i>
+            <!-- This section adds support for localized revision dates -->
+            {% if page.meta.git_revision_date_localized %}
+            <small>Last update: {{ page.meta.git_revision_date_localized }}</small>
+            {% endif %}
+            {% if page.meta.git_created_date_localized %}
+            <small>Created: {{ page.meta.git_created_date_localized }}</small>
+            {% endif %}
+          </i>
+        </div>
       </div>
     </main>
     <svg width="0" height="0" class="hidden">

@@ -1,7 +1,7 @@
 ---
 title: "GSoC Contributor Guide"
 description: "GSoC Contributor Guide"
-date: "2023-10-30"
+date: "2025-02-01"
 authors: ["OSL Team"]
 template: single-sidebar.html
 ---

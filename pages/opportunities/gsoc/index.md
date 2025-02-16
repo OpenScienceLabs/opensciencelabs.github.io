@@ -1,7 +1,7 @@
 ---
 title: "Google Summer of Code with Open Science Labs"
 description: "Google Summer of Code with Open Science Labs"
-date: "2024-01-29"
+date: "2025-02-01"
 authors: ["OSL Team"]
 template: single-sidebar.html
 ---

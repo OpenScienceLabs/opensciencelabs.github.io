@@ -118,3 +118,7 @@ plugins:
         utm_source: "documentation"
         utm_medium: "RSS"
         utm_campaign: "feed-syndication"
+  - git-revision-date-localized:
+      enabled: true
+      enable_creation_date: false
+      type: iso_date
