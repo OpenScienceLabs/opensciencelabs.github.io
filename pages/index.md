@@ -48,7 +48,7 @@ initiatives:
       Whether you're here to learn, share, or contribute, you'll find
       a supportive space to explore open science and technology.
     action:
-      url: https://opensciencelabs.org/discord
+      url: https://discord.gg/Ydht7BBcgy
       text: Join us now
       color-type: success
 ---
@@ -126,7 +126,7 @@ initiatives:
           </div>
           <div class="card-footer m-0">
             <a
-              href="https://opensciencelabs.org/discord"
+              href="https://discord.gg/Ydht7BBcgy"
               class="btn btn-success"
               target="_blank"
             >
@@ -275,7 +275,7 @@ initiatives:
     </p>
     <div class="text-center mt-4">
       <a
-        href="https://opensciencelabs.org/discord"
+        href="https://discord.gg/Ydht7BBcgy"
         class="btn btn-success"
         target="_blank"
       >
