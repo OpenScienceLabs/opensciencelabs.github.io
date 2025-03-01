@@ -7,5 +7,5 @@ template: main.html
 ---
 
 <script>
-  window.location.href = "https://discord.com/invite/mjAnW8BPck";
+  window.location.href = "https://discord.gg/Ydht7BBcgy";
 </script>
