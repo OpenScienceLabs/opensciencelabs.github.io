@@ -52,6 +52,21 @@ starting point for those new to coding.
 - **Challenge link**:
   [101 Computing Python Challenges](https://www.101computing.net/python-challenges-for-beginners/)
 
+### Creative Coding
+
+Our group will explore coding as a creative process rather than just a technical skill. Many beginners find programming intimidating and miss out on the enjoyment it can offer. By using code to create graphics, we can make learning more approachable and visually rewarding. This study group will center around programming with P5.js, an open-source JavaScript framework designed for creative coding.
+
+- **Moderator**: _Jigyasu_
+- **Level**: _Beginner_
+- **Language**: _English_
+- **Programming Language**: _JS_
+- **Discord Channel**: _stdy-creative-coding_ (<https://opensciencelabs.org/discord>)
+- **Start Date**: _March 15, 2025_
+- **Schedule**: _Alternate Saturday at 10:00 PM (GMT+5:30)_
+- **Video Call**:  [RSVP](https://calendar.app.google/x2BLjFu6J55jCoHq5)
+- **Challenge link**:
+  [p5.js tutorials](https://p5js.org/tutorials/)
+
 ## Join a Study Group
 
 Interested in joining one of our active study groups? Connect with us on
