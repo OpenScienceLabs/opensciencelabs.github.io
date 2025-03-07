@@ -63,7 +63,7 @@ Our group will explore coding as a creative process rather than just a technical
 - **Discord Channel**: _stdy-creative-coding_ (<https://opensciencelabs.org/discord>)
 - **Start Date**: _March 15, 2025_
 - **Schedule**: _Alternate Saturday at 10:00 PM (GMT+5:30)_
-- **Video Call**:  [RSVP](https://calendar.app.google/x2BLjFu6J55jCoHq5)
+- **Video Call**:  [Google Meet](https://calendar.app.google/x2BLjFu6J55jCoHq5)
 - **Challenge link**:
   [p5.js tutorials](https://p5js.org/tutorials/)
 
