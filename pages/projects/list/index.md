@@ -5,11 +5,29 @@ date: "2024-01-29"
 authors: ["OSL Team"]
 template: projects.html
 projects:
+  - name: Alpha One Labs
+    type: affiliated
+    maintainer_name: Daniel Jones
+    maintainer_email: info@alphaonelabs.com
+    url: https://github.com/alphaonelabs/education-website
+    communication_channel:
+      provider: slack
+      url: https://join.slack.com/t/alphaonelabs/shared_invite/zt-7dvtocfr-1dYWOL0XZwEEPUeWXxrB1A
+    description: |
+      Alpha One Labs is a nonprofit, open-source education platform dedicated
+      to hands-on learning in tech, science, and engineering. Evolving from a
+      Brooklyn hackerspace founded in 2009, we now provide cutting-edge STEM
+      experiences to learners everywhere. Our mission is to inspire creativity,
+      experimentation, and collaboration through engaging, hands-on innovation.
+
   - name: AnamnesisAI
     type: incubated
     maintainer_name: Ivan Ogasawara
     maintainer_email: ivan.ogasawara@gmail.com
     url: https://osl-incubator.github.io/anamnesis.ai/
+    communication_channel:
+      provider: discord
+      url: https://opensciencelabs.org/discord
     description: |
       AnamnesisAI is a project focused on extracting anamnesis in FHIR format from text.
 
@@ -18,6 +36,9 @@ projects:
     maintainer_name: Ivan Ogasawara
     maintainer_email: ivan.ogasawara@gmail.com
     url: https://osl-incubator.github.io/artbox/
+    communication_channel:
+      provider: discord
+      url: https://opensciencelabs.org/discord
     description: |
       ArtBox is a tool set for handling multimedia files with a bunch of useful
       functions.
@@ -27,6 +48,9 @@ projects:
     maintainer_name: Ivan Ogasawara
     maintainer_email: ivan.ogasawara@gmail.com
     url: https://arxlang.org
+    communication_channel:
+      provider: discord
+      url: https://arxlang.org/discord
     description: |
       ArxLang Project is compounded mainly by three sub-projects: ASTx, IRx, and Arx.
       ASTx is an agnostic expression structure for AST. It is agnostic because it is
@@ -41,6 +65,9 @@ projects:
     maintainer_name: Ivan Ogasawara
     maintainer_email: ivan.ogasawara@gmail.com
     url: https://osl-incubator.github.io/envers/
+    communication_channel:
+      provider: discord
+      url: https://opensciencelabs.org/discord
     description: |
       Envers is a command-line tool (CLI) designed to manage and version environment
       variables for different deployment stages such as staging, development, and
@@ -61,6 +88,9 @@ projects:
     maintainer_name: Ivan Ogasawara
     maintainer_email: ivan.ogasawara@gmail.com
     url: https://osl-incubator.github.io/makim/
+    communication_channel:
+      provider: discord
+      url: https://opensciencelabs.org/discord
     description: |
       Makim (or makim) is based on make and focus on improve the way to define targets
       and dependencies. Instead of using the Makefile format, it uses yaml format.
@@ -70,6 +100,9 @@ projects:
     maintainer_name: Ivan Ogasawara
     maintainer_email: ivan.ogasawara@gmail.com
     url: https://osl-incubator.github.io/rago/
+    communication_channel:
+      provider: discord
+      url: https://opensciencelabs.org/discord
     description: |
       Rago is a lightweight framework for RAG.
 
@@ -98,6 +131,9 @@ projects:
     maintainer_name: Ever Vino
     maintainer_email: ever.vino00@gmail.com
     url: https://osl-incubator.github.io/pymedx
+    communication_channel:
+      provider: discord
+      url: https://opensciencelabs.org/discord
     description: |
       PyMedX is a Python library that provides access to PubMed/PubMed Central.
       This project is a fork from the archived project PyMed.
@@ -107,6 +143,9 @@ projects:
     maintainer_name: Ivan Ogasawara
     maintainer_email: ivan.ogasawara@gmail.com
     url: https://osl-incubator.github.io/scicookie
+    communication_channel:
+      provider: discord
+      url: https://opensciencelabs.org/discord
     description: |
       SciCookie is a template developed by Open Science Labs that creates
       projects from project templates.
@@ -116,6 +155,9 @@ projects:
     maintainer_name: Ivan Ogasawara
     maintainer_email: ivan.ogasawara@gmail.com
     url: https://osl-incubator.github.io/sugar/
+    communication_channel:
+      provider: discord
+      url: https://opensciencelabs.org/discord
     description: |
       Sugar aims to organize your stack of containers, gathering some useful scripts
       and keeping this information centralized in a configuration file. So the command
