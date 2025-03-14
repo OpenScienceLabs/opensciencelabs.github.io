@@ -72,6 +72,28 @@ creative coding.
 - **Video Call**: [Google Meet](https://calendar.app.google/x2BLjFu6J55jCoHq5)
 - **Challenge link**: [p5.js tutorials](https://p5js.org/tutorials/)
 
+
+### Neuronauts: The AI Expedition
+
+study group focused on exploring the fundamentals of Artificial Intelligence,
+Machine Learning, and Deep Learning. In this group, members dive into both 
+the theory and practical applications of AI, moving beyond surface-level use of APIs and automated tools.
+Participants will engage in discussions, work on projects, and
+tackle exercises that help build a solid understanding of the 
+underlying principles of AI.
+- **Moderator**: _Chirag_
+- **Level**: _Beginner_
+- **Language**: _English_
+- **Programming Language**: _Python_
+- **Focus**: _Artificial Intelligence (AI), Machine Learning (ML), Deep Learning (DL)_
+- **Discord Channel**: _stdy-neuronauts_ (<https://opensciencelabs.org/discord>)
+- **Start Date**: _March 21, 2025_
+- **Schedule**: _Every Friday at 11:30 PM (GMT+5:30)_
+- **Duration**: _1 hour_
+- **Frequency**: _Once a week_
+- **Video Call Link**: [Google Meet](https://meet.google.com/fpp-saum-qhg)
+- **Google Calendar Link**: [Add to Calendar](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=N3FkdHZrMDFrMTVxYzY0ZDMzYmcyOWpjcjlfMjAyNTAzMTRUMTgwMDAwWiBmMjAyMTIxNzlAZ29hLmJpdHMtcGlsYW5pLmFjLmlu&tmsrc=f20212179%40goa.bits-pilani.ac.in&scp=ALL)
+
 ## Join a Study Group
 
 Interested in joining one of our active study groups? Connect with us on
