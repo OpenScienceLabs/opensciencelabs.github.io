@@ -75,7 +75,7 @@ creative coding.
 
 ### Neuronauts: The AI Expedition
 
-study group focused on exploring the fundamentals of Artificial Intelligence,
+A study group focused on exploring the fundamentals of Artificial Intelligence,
 Machine Learning, and Deep Learning. In this group, members dive into both 
 the theory and practical applications of AI, moving beyond surface-level use of APIs and automated tools.
 Participants will engage in discussions, work on projects, and
