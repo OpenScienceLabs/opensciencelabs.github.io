@@ -145,7 +145,7 @@ initiatives:
             </p>
           </div>
           <div class="card-footer m-0">
-            <a href="/opportunities/os-internship" class="btn btn-primary"
+            <a href="/opportunities/internships/oss" class="btn btn-primary"
               >Learn More</a
             >
           </div>

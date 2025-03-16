@@ -21,19 +21,20 @@ Instructions:
 ```
 
 ```md
+# [Project Name]
+
+[Project Summary]
+
+**Project License:** [Link to the project license] **Code of Conduct:** [Link to
+the code of conduct] **Documentation:** [Link to the documentation page]
+**Compensation:** [Specify if compensation is provided by the mentor or if this
+is an unpaid internship]
+
 ## Project Idea 1: [Project Idea 1 Title]
 
 ### Abstract
 
 [Short summary or abstract of Project Idea 1]
-
-### License
-
-[Project License Name]: [Link to the project license]
-
-### Code of Conduct
-
-[Link to the Code of Conduct]
 
 ### Current State
 

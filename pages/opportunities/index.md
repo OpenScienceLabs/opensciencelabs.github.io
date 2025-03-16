@@ -5,7 +5,7 @@ date: "2024-08-17"
 authors: ["OSL Team"]
 ---
 
-## Open Source Internships
+## Open Source Software Internships
 
 Open Science Labs (OSL) provides a valuable opportunity for newcomers to
 open-source software development through its internship program. This program is
@@ -13,8 +13,19 @@ designed to deepen participants' understanding of open-source tools and best
 practices in a real-world setting. We invite candidates to seize this chance to
 enhance their skills and contribute to real projects.
 
-<a href="/opportunities/os-internship" class="btn btn-primary">Learn more about
-OSL Open Source Internship</a>
+<a href="/opportunities/internships/oss" class="btn btn-primary">Learn more
+about OSL Open Source Internship</a>
+
+## Open Source Software Research Seed Internships
+
+Open Science Labs (OSL) provides a valuable opportunity for newcomers to
+open-source software development through its internship program. This program is
+designed to deepen participants' understanding of open-source tools and best
+practices in a real-world setting. We invite candidates to seize this chance to
+enhance their skills and contribute to real projects.
+
+<a href="/opportunities/internships/oss-research-seed" class="btn btn-primary">Learn
+more about OSL Open Source Internship</a>
 
 ## Google Summer of Code
 

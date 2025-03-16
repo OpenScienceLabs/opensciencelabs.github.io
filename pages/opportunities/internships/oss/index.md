@@ -83,4 +83,4 @@ For more information on affiliation, please visit
 
 If your project is already affiliated with OSL, you can submit your project idea
 proposal to `team@opensciencelabs.org`. Please use the template provided at
-[Project Idea Template](/opportunities/templates/projects-ideas/).
+[Project Idea Template](/opportunities/internships/templates/projects-ideas/).
