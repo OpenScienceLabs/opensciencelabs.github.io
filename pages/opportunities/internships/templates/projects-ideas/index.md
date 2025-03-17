@@ -25,10 +25,11 @@ Instructions:
 
 [Project Summary]
 
-**Project License:** [Link to the project license] **Code of Conduct:** [Link to
-the code of conduct] **Documentation:** [Link to the documentation page]
-**Compensation:** [Specify if compensation is provided by the mentor or if this
-is an unpaid internship]
+- **Project License:** [Link to the project license]
+- **Code of Conduct:** [Link to the code of conduct]
+- **Documentation:** [Link to the documentation page]
+- **Compensation:** [Specify if compensation is provided by the mentor or if
+  this is an unpaid internship]
 
 ## Project Idea 1: [Project Idea 1 Title]
 
