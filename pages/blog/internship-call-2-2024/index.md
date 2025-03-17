@@ -94,9 +94,9 @@ Please keep in mind about the timeline, and if you have any more questions do no
 
 The following is the timeline for the OSL Internship Program Cycle 2024-02:
 
-- **April 22**: Call for Interns/Apprentices opens.
-- **May 13**: Deadline for Interns/Apprentices applications.
-- **May 20**: Announcement of approved Interns/Apprentices and start of the bonding period
+- **April 22**: Call for Interns opens.
+- **May 13**: Deadline for Interns applications.
+- **May 20**: Announcement of approved Interns and start of the bonding period
 - **May 27**: Official Start Date of Internship Period; an alternative for projects not
 selected by GSoC to run under the OSL Internship Program with The Graph Network support.
 - **July 8**: Mid-term Evaluation.

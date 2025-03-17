@@ -58,8 +58,10 @@ Prospective interns must meet the following criteria:
   application.
 - **Time Commitment**: A minimum of 20 hours per week is required during the
   3-month internship period.
-- **Nature of Opportunity**: This is an unpaid internship, ideal for gaining
-  experience and networking in the open science community.
+- **Opportunity Nature:** This is primarily an unpaid internship designed to
+  provide practical experience and build professional networks. If any
+  compensation is available, it will be specified by the mentors in the
+  internship announcement.
 - **Initial Contribution**: Candidates must make a preliminary contribution to
   their chosen project, allowing mentors to evaluate their skills and
   commitment.
@@ -83,4 +85,4 @@ For more information on affiliation, please visit
 
 If your project is already affiliated with OSL, you can submit your project idea
 proposal to `team@opensciencelabs.org`. Please use the template provided at
-[Project Idea Template](/opportunities/templates/projects-ideas/).
+[Project Idea Template](/opportunities/internships/templates/projects-ideas/).
