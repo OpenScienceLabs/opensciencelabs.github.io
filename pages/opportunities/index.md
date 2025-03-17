@@ -13,6 +13,13 @@ designed to deepen participants' understanding of open-source tools and best
 practices in a real-world setting. We invite candidates to seize this chance to
 enhance their skills and contribute to real projects.
 
+Interns typically work on an unpaid basis, helping to advance these projects
+while gaining practical experience. Where available, project maintainers can
+compensate interns through our fiscal host,
+[Open Source Collective](https://opencollective.com/osl). Mentors are expected
+to commit at least 5 hours per week, with daily reviews recommended to monitor
+progress and provide feedback.
+
 <a href="/opportunities/internships/oss" class="btn btn-primary">Learn more
 here</a>
 
@@ -55,6 +62,13 @@ For updates about our 2025 participation, please join our community on Discord:
 Open Science Labs (OSL) is excited to announce the upcoming launch of a new
 internship program dedicated to Data Science projects. This initiative will
 provide hands-on experience in real-world data science applications.
+
+Interns typically work on an unpaid basis, helping to advance these projects
+while gaining practical experience. Where available, project maintainers can
+compensate interns through our fiscal host,
+[Open Source Collective](https://opencollective.com/osl). Mentors are expected
+to commit at least 5 hours per week, with daily reviews recommended to monitor
+progress and provide feedback.
 
 For those interested in participating, we invite you to join our community on
 Discord for the latest updates and launch details:
