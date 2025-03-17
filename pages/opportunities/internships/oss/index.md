@@ -58,8 +58,10 @@ Prospective interns must meet the following criteria:
   application.
 - **Time Commitment**: A minimum of 20 hours per week is required during the
   3-month internship period.
-- **Nature of Opportunity**: This is an unpaid internship, ideal for gaining
-  experience and networking in the open science community.
+- **Opportunity Nature:** This is primarily an unpaid internship designed to
+  provide practical experience and build professional networks. If any
+  compensation is available, it will be specified by the mentors in the
+  internship announcement.
 - **Initial Contribution**: Candidates must make a preliminary contribution to
   their chosen project, allowing mentors to evaluate their skills and
   commitment.

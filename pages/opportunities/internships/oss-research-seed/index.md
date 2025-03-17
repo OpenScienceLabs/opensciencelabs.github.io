@@ -71,12 +71,12 @@ Candidates should meet the following criteria:
   license. Please check our template
   [here](/opportunities/internships/templates/candidate-proposal).
 
-## Guidelines for Open-Source Research Project Contributors
+## Guidelines for Open-Source Research Project Author
 
-If you are a maintainer or core contributor of an open-source research project,
-you can submit your project for affiliation with OSL and eligibility for this
-internship program. Please send a link to your project proposal to
-`team@opensciencelabs.org` using the template provided
+If you are the author of an open-source research project, you can submit your
+project for affiliation with OSL and eligibility for this internship program.
+Please send a link to your project proposal to `team@opensciencelabs.org` using
+the template provided
 [here](/opportunities/internships/templates/projects-ideas).
 
 Although pre-existing code is not required to apply for this program, each
