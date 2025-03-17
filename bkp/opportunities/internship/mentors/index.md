@@ -9,16 +9,16 @@ template: single-sidebar.html
 # Open Science Labs Mentor Guide
 
 The Open Science Labs Mentor Guide is a consolidated resource designed to guide
-potential mentoring organizations through the proposal and application process,
-and to support approved mentors in fostering intern development. From project
+potential sub-organizations through the proposal and application process, and to
+support approved mentors in fostering intern development. From project
 submission to nurturing intern growth, and facilitating their successful
 contributions to open source, this guide outlines the key steps and best
 practices to ensure a rewarding mentorship experience in our community-driven
 programs.
 
-## Part I: Applying to Become a Mentoring Organization
+## Part I: Applying to Become a Sub-Organization
 
-As a prospective mentoring organization within Open Science Labs, you have the
+As a prospective sub-organization within Open Science Labs, you have the
 opportunity to shape the future of open source by guiding and nurturing new
 talent. Your contributions, in the form of project ideas and mentorship, are
 crucial to the development of both individual contributors and the larger
@@ -27,8 +27,8 @@ process and help you submit your project proposals effectively.
 
 ### Application Process
 
-When the call for mentoring organizations opens, you are encouraged to apply
-with a detailed outline of all the project ideas. A 'project' constitutes a
+When the call for sub-organizations opens, you are encouraged to apply with a
+detailed outline of all the project ideas. A 'project' constitutes a
 well-defined proposal targeting a specific software, package, or library with
 distinct tasks. While there is no limit to the number of projects you can
 propose, please note that OSL reserves the right to approve only a subset based
@@ -40,12 +40,11 @@ will provide updates on this option once GSoC confirmations are received.
 
 ## Part II: Recommendations for Approved Mentors
 
-Congratulations on being selected as a mentor for the OSL
-Internship/Apprenticeship Program! You are about to embark on a rewarding
-journey of imparting knowledge and facilitating growth. This part of the guide
-is crafted to support you in leading an effective mentorship, outlining key
-activities and providing practical tips for fostering a successful internship
-experience.
+Congratulations on being selected as a mentor for the OSL Internship Program!
+You are about to embark on a rewarding journey of imparting knowledge and
+facilitating growth. This part of the guide is crafted to support you in leading
+an effective mentorship, outlining key activities and providing practical tips
+for fostering a successful internship experience.
 
 ### Conducting Effective Mentorship
 

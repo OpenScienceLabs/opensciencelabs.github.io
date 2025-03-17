@@ -6,18 +6,18 @@ authors: ["OSL Team"]
 template: single-sidebar.html
 ---
 
-# Open Science Labs Intern/Apprentice Guide
+# Open Science Labs Interns Guide
 
-Welcome to the Open Science Labs Internship/Apprenticeship Program Guide. This
-comprehensive document is your gateway to engaging with a network of
-professionals and peers dedicated to the advancement of open science and open
-source. Whether you're considering applying to our program or you've already
-been accepted, this guide is designed to facilitate a smooth transition into our
-collaborative environment. You'll find detailed instructions on how to apply,
-connect with mentoring organizations, and make the most of your internship once
-you're on board. It's more than just an internship—it's a chance to contribute
-to a global movement and develop skills that will serve you throughout your
-career. Let's embark on this exciting journey together.
+Welcome to the Open Science Labs Internship Program Guide. This comprehensive
+document is your gateway to engaging with a network of professionals and peers
+dedicated to the advancement of open science and open source. Whether you're
+considering applying to our program or you've already been accepted, this guide
+is designed to facilitate a smooth transition into our collaborative
+environment. You'll find detailed instructions on how to apply, connect with
+sub-organizations, and make the most of your internship once you're on board.
+It's more than just an internship—it's a chance to contribute to a global
+movement and develop skills that will serve you throughout your career. Let's
+embark on this exciting journey together.
 
 ## Part I: Prospective Candidates
 
@@ -32,10 +32,10 @@ technology.
 
 ### 1. How to Apply
 
-#### 1.1. Choosing a Mentoring Organization and Project
+#### 1.1. Choosing a Sub-Organization and Project
 
-Begin by exploring the list of available mentoring organizations and their
-projects. Look for one that aligns with your interests and skills.
+Begin by exploring the list of available sub-organizations and their projects.
+Look for one that aligns with your interests and skills.
 
 #### 1.2. Initiating Contact with Projects and Mentors
 
@@ -90,4 +90,4 @@ open to code reviews and feedback, as they are learning opportunities.
 
 By following these guidelines, both candidates and approved interns/apprentices
 can maximize their growth, contributions, and overall experience within the Open
-Science Labs Internship/Apprenticeship Program.
+Science Labs Internship Program.

@@ -34,16 +34,16 @@ nav:
       - All Projects: "projects/list/index.md"
   - Opportunities:
       - index: opportunities/index.md
-      - Open Source Software Internship:
+      - OSS Internship:
           - index: "opportunities/internships/oss/index.md"
+          - Project Ideas: "opportunities/internships/oss/project-ideas/index.md"
           - Interns Guide: "opportunities/internships/guides/interns/index.md"
-          - Mentors Guide: "opportunities/internships/guides/mentors/index.md"
           - Projects Ideas Template: "opportunities/internships/templates/projects-ideas/index.md"
           - Candidates's Project Proposal Template: "opportunities/internships/templates/candidate-proposal/index.md"
-      - Open Source Software Research Internship:
+      - OSS Research Seed Internship:
           - index: "opportunities/internships/oss-research-seed/index.md"
+          - Project Ideas: "opportunities/internships/oss-research-seed/project-ideas/index.md"
           - Interns Guide: "opportunities/internships/guides/interns/index.md"
-          - Mentors Guide: "opportunities/internships/guides/mentors/index.md"
           - Projects Ideas Template: "opportunities/internships/templates/projects-ideas/index.md"
           - Candidates's Project Proposal Template: "opportunities/internships/templates/candidate-proposal/index.md"
       - Google Summer of Code:

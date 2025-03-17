@@ -1,4 +1,12 @@
-# Open Source Software Research Seed Internship Program
+---
+title: "OSL Open Source Research Seed Internship Program"
+description: "Internship Research Seed Internship Program"
+date: "2023-11-03"
+authors: ["OSL Team"]
+template: single-sidebar.html
+---
+
+# Open Source Software (OSS) Research Seed Internship Program
 
 This document provides guidelines for both open-source research project
 maintainers and internship candidates for the OSS Research Seed Internship
