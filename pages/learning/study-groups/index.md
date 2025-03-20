@@ -96,6 +96,25 @@ principles of AI.
 - **Google Calendar Link**:
   [Add to Calendar](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=N3FkdHZrMDFrMTVxYzY0ZDMzYmcyOWpjcjlfMjAyNTAzMTRUMTgwMDAwWiBmMjAyMTIxNzlAZ29hLmJpdHMtcGlsYW5pLmFjLmlu&tmsrc=f20212179%40goa.bits-pilani.ac.in&scp=ALL)
 
+
+
+### DevOps \& Backend Engineering
+
+This study group is designed for those interested in learning about DevOps practices and backend development. Participants will explore infrastructure as code, CI/CD pipelines, containerization, and backend architecture principles while working on practical projects to build real-world skills.
+
+- **Moderator**: _Alex Chen_
+- **Level**: _Intermediate_
+- **Language**: _English_
+- **Programming Languages**: _Python, Go, Bash_
+- **Focus**: _DevOps, Backend Development, Cloud Infrastructure_
+- **Discord Channel**: _stdy-devops-backend_ ([https://opensciencelabs.org/discord](https://opensciencelabs.org/discord))
+- **Start Date**: _April 5, 2025_
+- **Schedule**: _Every Saturday at 9:00 PM (GMT-5:30)_
+- **Duration**: _90 minutes_
+- **Frequency**: _Weekly_
+- **Video Call Link**: [Google Meet](https://meet.google.com/eiu-zsea-bvg)
+- **Resources**: Docker, Kubernetes, Kafka/RabbitMQ/NATS , Redis/Memcached , Celery , Opentelemetry(Jaegar ,Zipkin) , Reverse Proxy Servers (Caddy,Nginx) , ELK Stack , gRPC ,GraphQL ,  ORM (Object-Relational Mapping) in RDBMS , OAUTH/SAML/OIDC/Active Directory . Remote Desktop Control Protocols (VNC,RDP,XRDP)
+
 ## Join a Study Group
 
 Interested in joining one of our active study groups? Connect with us on
