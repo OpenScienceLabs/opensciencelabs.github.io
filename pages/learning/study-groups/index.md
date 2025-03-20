@@ -102,10 +102,10 @@ principles of AI.
 
 This study group is designed for those interested in learning about DevOps practices and backend development. Participants will explore infrastructure as code, CI/CD pipelines, containerization, and backend architecture principles while working on practical projects to build real-world skills.
 
-- **Moderator**: _Alex Chen_
+- **Moderator**: _Sai Sanjay_ _&_ _Ansh_
 - **Level**: _Intermediate_
 - **Language**: _English_
-- **Programming Languages**: _Python, Go, Bash_
+- **Programming Languages**: _Python, Go, Bash_ , _Typescript_
 - **Focus**: _DevOps, Backend Development, Cloud Infrastructure_
 - **Discord Channel**: _stdy-devops-backend_ ([https://opensciencelabs.org/discord](https://opensciencelabs.org/discord))
 - **Start Date**: _April 5, 2025_
