@@ -1,103 +1,101 @@
----
-title: "GSoC Contributor Guide"
-description: "GSoC Contributor Guide"
-date: "2025-02-01"
-authors: ["OSL Team"]
-template: single-sidebar.html
----
-
 # Google Summer of Code (GSoC) Contributor Guide
 
-This comprehensive document is your gateway to engaging with a network of
-professionals and peers dedicated to the advancement of open science and open
-source. Whether you're considering applying to GSoC with Open Science Labs or if
-you've already been accepted, this guide is designed to facilitate a smooth
-transition into our collaborative environment.
+This guide is intended for both prospective and accepted candidates of the GSoC
+program with Open Science Labs. It provides detailed, objective instructions to
+help navigate the application process, engage with mentors, and succeed during
+the program period. The guide covers project selection, initial contributions,
+proposal development, and expectations for approved contributors.
 
-You'll find detailed instructions on how to apply, connect with
-sub-organizations/projects, and make the most of your GSoC period once you're on
-board. It's a chance to contribute to a global movement and develop skills that
-will serve you throughout your career. Let's embark on this exciting journey
-together.
+## Candidates' Guide
 
-## Part I: Contributor Candidates
+This section outlines the steps candidates should follow to apply effectively.
 
-This part of the guide is tailored to assist you in navigating the application
-process seamlessly. It provides insights on how to identify and select a project
-that resonates with your passion, how to engage with mentors proactively, and
-how to make preliminary contributions that will set you apart.
+### How to Apply
 
-### 1. How to Apply
+#### Selecting a Sub-Organization/Project
 
-#### 1.1. Choosing a Sub-Organization/Project
+Candidates should begin by reviewing the list of available sub-organizations
+under Open Science Labs and their projects. It is important to choose a project
+that aligns with individual interests and skills.
 
-Begin by exploring the list of available sub-organizations under the Open
-Science Labs organization and their projects. Look for one that aligns with your
-interests and skills.
+#### Initiating Contact with Projects and Mentors
 
-#### 1.2. Initiating Contact with Projects and Mentors
+Candidates are advised to contact project mentors using the recommended
+communication platform (discord, slack, email, etc). A brief introduction,
+expression of interest, and any initial questions about the project or mentoring
+process should be included. Each project or sub-organizations should specify the
+recommended platform for all the communications with candidates.
 
-Reach out to the project mentors via the contact information provided. Introduce
-yourself, express your interest, share your CV, and ask any initial questions
-you may have about the project or the mentoring process.
+#### Making an Initial Contribution
 
-#### 1.3. Making a Small Contribution
+Demonstrating commitment early on is valuable. Candidates are encouraged to
+contribute a small but meaningful improvement—such as fixing a minor bug or
+implementing small features suggested by the mentor.
 
-Demonstrate your commitment by making a small contribution to the project. This
-could be fixing a minor bug, improving documentation, or any other task as
-suggested by the mentor.
+#### Crafting a Proposal with Mentor Support
 
-#### 1.4. Crafting a Proposal with Mentor Support
+Under mentor guidance, candidates should develop a detailed proposal that
+outlines:
 
-With your mentor's guidance, develop a detailed proposal outlining what you aim
-to achieve during the GSoC period. This should include specific milestones, a
-timeline, and how your work will contribute to the project's goals.
+- **Milestones and Timeline:** Specific tasks and expected outcomes within the
+  program period.
+- **Contribution Impact:** How the work will further the project’s goals.
+- **Language and Style:** Clear, informative, and objective language; concise
+  and focused content without unnecessary filler or marketing-style phrasing.
 
-Please, follow the template provided
+Candidates should also ensure that proposals do not exhibit signs of complete AI
+generation, such as excessive buzzwords or generic phrasing. While AI tools may
+be used to enhance clarity, the proposal must reflect the candidate’s own work.
+
+It is essential to review the
+[contributor rules](https://summerofcode.withgoogle.com/rules) for the program
+and follow the proposal template provided
 [here](/opportunities/gsoc/templates/contributor-proposal).
 
-**Note on Mentor Evaluation**: Mentors will assess if candidates possess the
-basic requirements to contribute effectively to the project. Transparent
-feedback will be provided, allowing candidates to shift to another project if
-necessary to ensure a suitable fit.
+## Review Process
 
-## Part II: Approved Contributors
+Mentors will evaluate proposals to determine if candidates meet the fundamental
+requirements for effective contribution. Transparent feedback will be provided,
+and candidates may be guided to consider alternative projects if a better fit is
+identified. When a proposal is ready for review, candidates should send a direct
+message to the mentors via the recommended communication channel (e.g., Discord,
+Slack, or email). For all other communications, public channels are preferred.
+Candidates should remain patient as mentors manage a high volume of messages,
+issues, pull requests, and reviews.
 
-This part of the guide will serve as a roadmap to your success in the GSoC with
-Open Science Labs. It outlines the expectations for your collaboration with
-mentors, the importance of communication, and the coding standards you should
-follow. You will find tips on how to maintain an effective workflow, stay
-proactive, and ensure that your contribution leaves a lasting impact.
+## Approved Contributors
+
+For accepted candidates, the following guidelines serve as a roadmap for
+successful collaboration during the GSoC program with Open Science Labs.
 
 ### Effective Workflow and Proactivity
 
-Once accepted, establish a regular workflow with your mentor. Be proactive: seek
-out tasks, ask questions, and push beyond the basics. Set up frequent check-ins
-and be clear about what you aim to accomplish each week.
+- **Establish a Regular Workflow:** Work closely with your mentor to set clear
+  weekly objectives.
+- **Proactive Engagement:** Actively seek tasks, ask clarifying questions, and
+  schedule regular check-ins to monitor progress.
 
 ### Communication Best Practices
 
-Clear and timely communication is essential. Keep your mentor updated on your
-progress, challenges, and any assistance you may require. Use the communication
-tools preferred by the project for all discussions.
+- **Timely Updates:** Keep mentors informed about progress, challenges, and any
+  required assistance.
+- **Use Designated Channels:** Communicate via the project’s preferred platforms
+  to ensure transparency and prompt feedback.
 
 ### Programming Best Practices
 
-Adhere to the programming standards and best practices recommended by your
-mentor and the project. Write clean, well-documented, and maintainable code. Be
-open to code reviews and feedback, as they are learning opportunities.
+- **Adherence to Standards:** Follow the coding standards and best practices
+  outlined by your mentor and project guidelines.
+- **Maintainable Code:** Write clean, well-documented, and maintainable code.
+- **Constructive Feedback:** Embrace code reviews as opportunities to learn and
+  improve your technical skills.
 
-By following these guidelines, both candidates and approved contributors can
-maximize their growth, contributions, and overall experience within the GSoC
-with Open Science Labs.
+## Proposal Resources
 
-## Resources for writing the proposal
-
-Applicants should consult the
-[GSoC Student Guide](https://google.github.io/gsocguides/student/) for more
-details on how to apply and tips on crafting their proposals. Additional
-recommendations can be found
-[here](https://developers.google.com/open-source/gsoc/help/student-advice).
-
-For further guidance, our suggested proposal template offers valuable insights
-and can be accessed [here](/opportunities/gsoc/templates/contributor-proposal).
+Candidates are encouraged to consult the
+[GSoC Student Guide](https://google.github.io/gsocguides/student/) for
+comprehensive details on the application process and proposal preparation.
+Additional recommendations can be found
+[here](https://developers.google.com/open-source/gsoc/help/student-advice). For
+further guidance, refer to the suggested proposal template available
+[here](/opportunities/gsoc/templates/contributor-proposal).
