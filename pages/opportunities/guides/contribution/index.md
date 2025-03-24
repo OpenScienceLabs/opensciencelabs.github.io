@@ -1,4 +1,12 @@
-# Contributors Guidelines
+---
+title: "Contribution Guidelines"
+description: "Contribution Guidelines"
+date: "2025-03-23"
+authors: ["OSL Team"]
+template: single-sidebar.html
+---
+
+# Contribution Guidelines
 
 These recommendations are general guidelines from Open Science Labs. Each
 project may have its own specific set of recommendations and rules; contributors
