@@ -218,7 +218,19 @@
               </div>
               
               
+              
+              
+
+              <div class="nav ">
+                <a href="../.." class="nav_item" title="Open Proposals">
+                  Open Proposals
+                </a>
+              </div>
+              
+              
             </div>
+            
+          
             
           
             
@@ -475,15 +487,13 @@
 </ol>
 <h4 id="benefits-of-forking-a-repository">Benefits of Forking a Repository<a class="headerlink" href="#benefits-of-forking-a-repository" title="Permanent link"> #</a></h4>
 <ul>
-<li>
-<p><strong>Independence:</strong> Forking gives you complete control over your copy of the project. You can modify it as you see fit without impacting the original.</p>
-</li>
-<li>
-<p><strong>Experimentation:</strong> Forking provides a safe environment for experimenting with changes. You can try out new features, fix bugs, or test ideas without risking the stability of the main project.</p>
-</li>
-<li>
-<p><strong>Collaboration:</strong> Forking facilitates collaboration by enabling contributors to work on different aspects of the project simultaneously. Once you've made improvements or fixes in your fork, you can propose them to the original project through a pull request.</p>
-</li>
+<li><strong>Independence:</strong> Forking gives you complete control over your copy of the project. You can modify it as you see fit without impacting the original.</li>
+</ul>
+<ul>
+<li><strong>Experimentation:</strong> Forking provides a safe environment for experimenting with changes. You can try out new features, fix bugs, or test ideas without risking the stability of the main project.</li>
+</ul>
+<ul>
+<li><strong>Collaboration:</strong> Forking facilitates collaboration by enabling contributors to work on different aspects of the project simultaneously. Once you've made improvements or fixes in your fork, you can propose them to the original project through a pull request.</li>
 </ul>
 <h3 id="what-is-a-pull-request-merge-request-and-why-is-it-important">What is a Pull Request / Merge Request and why is it important?<a class="headerlink" href="#what-is-a-pull-request-merge-request-and-why-is-it-important" title="Permanent link"> #</a></h3>
 <p>A Pull Request (PR) is a proposed change that a collaborator makes to a code repository managed by a version control system such as Git. It's essentially a request for the changes made in one branch of a repository to be incorporated into another branch, usually the main branch. Pull Requests are essential in the collaborative workflow of software development, as they allow teams to review, discuss, and approve changes before they are merged into the codebase. This facilitates collaboration, improves code quality, and helps maintain a clear history of modifications made to the project.</p>
@@ -567,10 +577,8 @@ This ensures your feature branch incorporates the most recent upstream developme
 <li>Preferred when collaboration involves multiple contributors or when maintaining a clear record of individual contributions is essential.</li>
 </ul>
 <p><strong>Rebase</strong>:</p>
-<ul>
-<li>Promotes a cleaner, linear project history.</li>
-<li>Recommended for feature branches with short-lived changes or when maintaining a tidy commit history is a priority.</li>
-</ul>
+<p>- Promotes a cleaner, linear project history.
+  - Recommended for feature branches with short-lived changes or when maintaining a tidy commit history is a priority.</p>
 <p>It's worth noting that some organizations, such as the Open Source Initiative (OSI), recommend the usage of git rebase to maintain a clean and linear project history. You can configure Git to use rebase by default for pull operations with the command:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$<span class="w"> </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>pull.rebase<span class="w"> </span><span class="nb">true</span>
 </span></code></pre></div>
@@ -629,10 +637,8 @@ This command tells pre-commit to run all configured hooks on all files in the re
 <h3 id="github-flow">GitHub Flow:<a class="headerlink" href="#github-flow" title="Permanent link"> #</a></h3>
 <p>GitHub Flow is a lightweight, branch-based workflow specifically designed for teams using GitHub for version control. It emphasizes simplicity and continuous delivery, making it an ideal choice for projects with frequent releases and rapid iteration cycles. Here's a breakdown of its key features:</p>
 <p><strong>Branching Model:</strong></p>
-<ul>
-<li>Main Branch: GitHub Flow revolves around a single main branch (often named "main" or "master"), representing the development branch that leads to production-ready code.</li>
-<li>Feature Branches: Developers create feature branches off the main branch for each new feature or bug fix.</li>
-</ul>
+<p>- Main Branch: GitHub Flow revolves around a single main branch (often named "main" or "master"), representing the development branch that leads to production-ready code.
+   - Feature Branches: Developers create feature branches off the main branch for each new feature or bug fix.</p>
 <p><strong>Workflow:</strong></p>
 <ul>
 <li>Create a Branch: Developers create a new branch for each feature or bug fix.</li>
@@ -777,12 +783,10 @@ This command tells pre-commit to run all configured hooks on all files in the re
 <h2 id="python-project-initialization">Python Project Initialization<a class="headerlink" href="#python-project-initialization" title="Permanent link"> #</a></h2>
 <p>When starting a new Python project, it's beneficial to use project templates that include predefined directory structures, configuration files, and boilerplate code to jumpstart development. Tools like <code>cookiecutter</code> and project templates such as <code>scicookie</code> provide convenient starting points for various project types:</p>
 <ul>
-<li>
-<p><strong>Cookiecutter</strong>: Cookiecutter is a command-line utility that generates projects from project templates. It prompts you for project-specific details and then creates a customized project structure based on the selected template. There are many community-contributed templates available for various types of Python projects, including web applications, libraries, and data analysis projects.</p>
-</li>
-<li>
-<p><strong>SciCookie</strong>: SciCookie is a project template focused on the scientific python community, but it can be used by any python project. It includes a structured directory layout, documentation templates, and example code snippets. SciCookie helps streamline the setup process for scientific Python projects and encourages best practices in testing and documentation.</p>
-</li>
+<li><strong>Cookiecutter</strong>: Cookiecutter is a command-line utility that generates projects from project templates. It prompts you for project-specific details and then creates a customized project structure based on the selected template. There are many community-contributed templates available for various types of Python projects, including web applications, libraries, and data analysis projects.</li>
+</ul>
+<ul>
+<li><strong>SciCookie</strong>: SciCookie is a project template focused on the scientific python community, but it can be used by any python project. It includes a structured directory layout, documentation templates, and example code snippets. SciCookie helps streamline the setup process for scientific Python projects and encourages best practices in testing and documentation.</li>
 </ul>
 <p>In summary, while <code>unittest</code> provides a robust framework for writing unit tests in Python, alternative frameworks like Pytest and Hypothesis offer additional features and flexibility. When starting a new project, leveraging project templates such as <code>scicookie</code> with tools like <code>cookiecutter</code> can accelerate setup and promote best practices in project organization and testing.</p>
 <h1 id="what-is-a-virtual-enviroment-and-why-is-it-important">What is a virtual enviroment and why is it important?<a class="headerlink" href="#what-is-a-virtual-enviroment-and-why-is-it-important" title="Permanent link"> #</a></h1>
@@ -790,18 +794,16 @@ This command tells pre-commit to run all configured hooks on all files in the re
 <p>When you create a virtual environment for each of your projects, it essentially creates a sandboxed environment where you can install packages and dependencies without affecting the global Python installation on your system. This isolation is crucial because different projects often require different versions of libraries or dependencies, and conflicts can arise if they share the same environment.</p>
 <p>Creating virtual environments is crucial for several reasons:</p>
 <ul>
-<li>
-<p><strong>Isolation:</strong> Virtual environments allow you to isolate project dependencies, preventing conflicts between different projects that may require different versions of the same packages. This ensures that your projects remain stable and reproducible.</p>
-</li>
-<li>
-<p><strong>Dependency Management:</strong> By creating separate environments for each project, you can manage dependencies more effectively. You can install specific versions of packages for each project without affecting other projects or the system-wide installation.</p>
-</li>
-<li>
-<p><strong>Experimentation:</strong> Virtual environments provide a safe space for experimentation. You can try out new packages or versions without worrying about breaking existing projects or the system environment.</p>
-</li>
-<li>
-<p><strong>Reproducibility:</strong> Utilizing virtual environments not only streamlines collaboration but also enhances reproducibility in project workflows. By sharing environment configuration files such as environment.yml, collaborators ensure uniformity in dependencies and versions across all team members. This practice mitigates compatibility issues and fosters consistency, enabling seamless replication of results and facilitating smoother collaboration.</p>
-</li>
+<li><strong>Isolation:</strong> Virtual environments allow you to isolate project dependencies, preventing conflicts between different projects that may require different versions of the same packages. This ensures that your projects remain stable and reproducible.</li>
+</ul>
+<ul>
+<li><strong>Dependency Management:</strong> By creating separate environments for each project, you can manage dependencies more effectively. You can install specific versions of packages for each project without affecting other projects or the system-wide installation.</li>
+</ul>
+<ul>
+<li><strong>Experimentation:</strong> Virtual environments provide a safe space for experimentation. You can try out new packages or versions without worrying about breaking existing projects or the system environment.</li>
+</ul>
+<ul>
+<li><strong>Reproducibility:</strong> Utilizing virtual environments not only streamlines collaboration but also enhances reproducibility in project workflows. By sharing environment configuration files such as environment.yml, collaborators ensure uniformity in dependencies and versions across all team members. This practice mitigates compatibility issues and fosters consistency, enabling seamless replication of results and facilitating smoother collaboration.</li>
 </ul>
 <h2 id="condamamba">Conda/Mamba<a class="headerlink" href="#condamamba" title="Permanent link"> #</a></h2>
 <p>Conda is a package manager, environment manager, and dependency solver that can install and manage packages and their dependencies. Mamba is a fast, drop-in replacement for Conda that aims to provide faster package management operations.</p>
@@ -813,16 +815,14 @@ To create a new Conda enviroment named <code>myenv</code>, open a terminal or co
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>$<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>myenv
 </span></code></pre></div>
 <ul>
-<li>
-<p>On Windows:
+<li>On Windows:
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>$<span class="w"> </span>activate<span class="w"> </span>myenv
-</span></code></pre></div></p>
-</li>
-<li>
-<p>On Unix/ MacOs:
+</span></code></pre></div></li>
+</ul>
+<ul>
+<li>On Unix/ MacOs:
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>activate<span class="w"> </span>myenv
-</span></code></pre></div></p>
-</li>
+</span></code></pre></div></li>
 </ul>
 <h3 id="conda-forge">Conda-Forge:<a class="headerlink" href="#conda-forge" title="Permanent link"> #</a></h3>
 <p>Is a community-driven collection of recipes, build infrastructure, and distributions for the Conda package manager. It provides a vast repository of pre-built packages for various programming languages, including Python, R, C, C++, Rust, Go, Fortran, and more. Conda-Forge aims to offer high-quality, up-to-date packages that are well-integrated with Conda environments.</p>
@@ -841,16 +841,14 @@ To create a new Conda enviroment named <code>myenv</code>, open a terminal or co
 </span></code></pre></div></p>
 <p>Activate the enviroment:</p>
 <ul>
-<li>
-<p>On Windows:
+<li>On Windows:
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>$<span class="w"> </span>myenv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
-</span></code></pre></div></p>
-</li>
-<li>
-<p>On Unix/MacOS:
+</span></code></pre></div></li>
+</ul>
+<ul>
+<li>On Unix/MacOS:
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>myenv/bin/activate
-</span></code></pre></div></p>
-</li>
+</span></code></pre></div></li>
 </ul>
 <h2 id="pipenv">Pipenv<a class="headerlink" href="#pipenv" title="Permanent link"> #</a></h2>
 <p>Pipenv is a higher-level tool compared to Virtualenv. It aims to simplify and streamline the process of managing dependencies and environments for Python projects. Here's how to get started with Pipenv:</p>

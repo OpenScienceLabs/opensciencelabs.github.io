@@ -326,6 +326,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://opensciencelabs.org/partnership/open-proposals/</loc>
+         <lastmod>2025-03-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://opensciencelabs.org/partnership/open-proposals/community-training/</loc>
+         <lastmod>2025-03-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://opensciencelabs.org/partnership/partners/</loc>
          <lastmod>2025-03-24</lastmod>
          <changefreq>daily</changefreq>
