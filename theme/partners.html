@@ -1,10 +1,11 @@
 {% extends "main.html" %}
 
 {% set colors=["", "bg-light"] %}
+{% set text_color = ["", "text-dark"] %}
 
 {% block header_extra %}
 <style>
-  .main-nav > li > a {
+  .main-nav>li>a {
     color: #000000 !important;
   }
 </style>
@@ -22,20 +23,18 @@
     <div class="row {{ colors[loop.index % 2] }}">
       <div class="col-4 text-center">
         <a href="{{ partner.url }}">
-          <img src="{{ partner.thumbnail }}" style="height: 150px;"/>
+          <img src="{{ partner.thumbnail }}" style="height: 150px;" />
         </a>
       </div>
-      <div class="col-8">
-        <h2>
+      <div class="col-8 {{ text_color[loop.index % 2] }}">
+        <h2 class="{{ text_color[loop.index % 2] }}">
           {{ partner.name }}
-          {% if "github" in partner  %}
-          <a href="{{ partner.github }}"><i
-            class="fa fa-brands fa-github-square position-static text-dark"></i>
+          {% if "github" in partner %}
+          <a href="{{ partner.github }}"><i class="fa fa-brands fa-github-square position-static text-dark"></i>
           </a>
           {% endif %}
-          {% if "twitter" in partner  %}
-          <a href="{{ partner.twitter }}"><i
-            class="fa fa-brands fa-twitter-square"></i>
+          {% if "twitter" in partner %}
+          <a href="{{ partner.twitter }}"><i class="fa fa-brands fa-twitter-square"></i>
           </a>
           {% endif %}
         </h2>
