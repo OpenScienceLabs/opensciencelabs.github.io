@@ -1,394 +1,1724 @@
 
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>
-      Open Proposal: Community Training - Open Science Labs
-    </title>
-    <link href=https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65 crossorigin=anonymous>
-    <script src=https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js integrity=sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4 crossorigin=anonymous></script>
-    <link rel=stylesheet href=https://use.fontawesome.com/aa402b3835.css>
-    <link rel=stylesheet href=/css/index.css>
-    <link rel=stylesheet href=/css/styles.css>
-    <title>Open Science Labs</title>
-    <meta charset=utf-8>
-    <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-    <meta http-equiv=x-ua-compatible content="IE=edge">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-213158050-1"></script>
-    <script>
-      window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","UA-213158050-1")
-    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    
+    <title>Community Training · Open Science Labs</title>
+
+    <meta name="description" content="Open Proposal: Community Training">
+    <meta name="keywords" content="open science,data science,latam">
+    <meta name="last-modified" content="2025-09-02">
+    <meta name="DC.date.modified" content="2025-09-02">
+    <meta property="og:updated_time" content="2025-09-02T00:00:00Z">
+
     <meta property="og:locale" content="es">
     <meta property="og:locale:alternate" content="pt">
     <meta property="og:type" content="website">
-    <meta name=description content="A Open Source community for sharing knowledge">
-    <meta name=twitter:card content="summary">
-    <meta name=twitter:creator content>
-    <meta name=twitter:title content>
-    <meta name=twitter:image content="/images/thumbnail.png">
-    <meta property="og:url" content="/">
-    <meta property="og:title" content>
-    <meta property="og:description" content="A Open Source community for sharing knowledge">
+    <meta property="og:url" content="https://opensciencelabs.org/partnership/open-proposals/community-training/">
+    <meta property="og:title" content="Community Training">
+    <meta property="og:description" content="Open Proposal: Community Training">
     <meta property="og:image" content="/images/thumbnail.png">
-    <meta name=keywords content="open science,data science,latam">
-    <meta name="last-modified" content="2025-03-25">
-    <meta name="DC.date.modified" content="2025-03-25">
-    <meta property="og:updated_time" content="2025-03-25T00:00:00Z">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Community Training">
+    <meta name="twitter:image" content="/images/thumbnail.png">
+    <meta name="twitter:creator" content="">
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Open Science Labs",
-        "dateModified": "2025-03-25T00:00:00Z"
+        "name": "Community Training",
+        "dateModified": "2025-09-02T00:00:00Z",
+        "url": "https://opensciencelabs.org/partnership/open-proposals/community-training/"
       }
     </script>
-    <link rel=apple-touch-icon sizes=180x180 href=/icons/apple-touch-icon.png>
-    <link rel=icon type=image/png sizes=32x32 href=/icons/favicon-32x32.png>
-    <link rel=manifest href=/icons/site.webmanifest>
-    <link rel=canonical href=/>
-    <link rel=alternate type=application/rss+xml href=/feed_rss_created.xml title="Open Science Labs">
-    <link rel=alternate type=application/json href=/js/index.json title="Open Science Labs">
-    <link rel=stylesheet type=text/css></head>
-    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+
+    <script>
+      (function(){
+        var k='osl-color-mode', s=null;
+        try { s = localStorage.getItem(k); } catch(e){}
+        var m = s ? s : (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dim' : 'lit');
+        var h = document.documentElement;
+        h.setAttribute('data-mode', m);
+        h.setAttribute('data-bs-theme', m === 'dim' ? 'dark' : 'light');
+      })();
+    </script>
+
+
+    <link rel="canonical" href="https://opensciencelabs.org/partnership/open-proposals/community-training/">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="manifest" href="/icons/site.webmanifest">
+
+    <link rel="alternate" type="application/rss+xml" href="/feed_rss_created.xml" title="Open Science Labs">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+          crossorigin="anonymous">
+
+    <!-- Icons -->
+    <link rel="preconnect" href="https://use.fontawesome.com" crossorigin>
+    <link rel="stylesheet" href="https://use.fontawesome.com/aa402b3835.css">
+
+    <!-- Your theme CSS (order matters) -->
+    <link rel="stylesheet" href="/css/tokens.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/search.css">
+    <link rel="stylesheet" href="/css/content.css">
+    <link rel="stylesheet" href="/css/code.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/utilities.css">
+    <link rel="stylesheet" href="/css/blog.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-213158050-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)}
+      gtag("js", new Date); gtag("config", "UA-213158050-1");
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
 
     
-<style>
-.main-nav>li>a {
-  color: #000000 !important;
-}
-</style>
-
+    
   </head>
-  <body data-code="100" data-lines="false" id="documentTop">
-    <header class="nav_header">
-      <nav class="nav">
-        <a href="/" class="nav_brand nav_item" title="Open Science Labs">
-          <img src="/images/logos/osl-color-horizontal.png" class=logo alt="Open Science Labs">
-          <div class=nav_close>
-            <div>
-              <svg class="icon">
-                <title>open-menu</title>
-                <use xlink:href="#open-menu"/>
-              </svg>
-              <svg class="icon">
-                <title>closeme</title>
-                <use xlink:href="#closeme"/>
-              </svg>
-            </div>
-          </div>
-        </a>
-        <div class='nav_body nav_body_left'>
-          <!-- MENU -->
-          
-          
-          
-          <div class="nav_parent ">
-            <a href="../../../blog/" class="nav_item" title="Blog">
-              Blog
-            </a>
-          </div>
-          
-          
-          
-          
-            
-            <div class="nav_parent ">
-              <a href="../../../projects/" class="nav_item" title="Projects">
-                Projects
-              </a>
-            </div>
-            <div class="d-block d-sm-block d-md-none">
-              
-              
-              
+
+  <body id="documentTop" data-code="100" data-lines="false">
+    <!-- ========================= NAV (paste to replace your entire <header>...</header>) ========================= -->
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-lg navbar-dark py-2" role="navigation" aria-label="Main">
+        <div class="container-xxl">
+
+          <!-- Brand -->
+          <a class="navbar-brand d-flex align-items-center gap-2" href="/" title="Open Science Labs">
+            <img src="/images/logos/osl-color-horizontal.png" class="logo" alt="Open Science Labs">
+          </a>
+
+          <!-- Mobile toggler (offcanvas) -->
+          <button class="navbar-toggler ms-2" type="button"
+                  data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav"
+                  aria-controls="offcanvasNav" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Desktop menu (grows to fill middle) -->
+          <div class="collapse navbar-collapse order-lg-1">
+            <ul class="navbar-nav ms-3">
+
               
               
 
-              <div class="nav ">
-                <a href="../../../projects/incubation/" class="nav_item" title="Incubation">
-                  Incubation
-                </a>
-              </div>
-              
-              
-              
-              
-
-              <div class="nav ">
-                <a href="../../.." class="nav_item" title="Affiliation">
-                  Affiliation
-                </a>
-              </div>
-              
-              
-              
-              
-
-              <div class="nav ">
-                <a href="../../../projects/list/" class="nav_item" title="All Projects">
-                  All Projects
-                </a>
-              </div>
-              
-              
-            </div>
-            
-          
-            
-          
-            
-          
-            
-          
-          
-          
-          
-          
-            
-            <div class="nav_parent ">
-              <a href="../../../opportunities/" class="nav_item" title="Opportunities">
-                Opportunities
-              </a>
-            </div>
-            <div class="d-block d-sm-block d-md-none">
-              
-              
-              
-              
-              
-
-              <div class="nav ">
-                <a href="../../.." class="nav_item" title="OSS Internship">
-                  OSS Internship
-                </a>
-              </div>
-              
-              
-              
-              
-
-              <div class="nav ">
-                <a href="../../.." class="nav_item" title="OSS Research Seed Internship">
-                  OSS Research Seed Internship
-                </a>
-              </div>
-              
-              
-              
-              
-
-              <div class="nav ">
-                <a href="../../.." class="nav_item" title="Google Summer of Code">
-                  Google Summer of Code
-                </a>
-              </div>
-              
-              
-            </div>
-            
-          
-            
-          
-            
-          
-            
-          
-          
-          
-          
-          
-            
-            <div class="nav_parent nav_active">
-              <a href="../../" class="nav_item" title="Partnership">
-                Partnership
-              </a>
-            </div>
-            <div class="d-block d-sm-block d-md-none">
-              
-              
-              
-              
-              
-              
-              
-
-              <div class="nav ">
-                <a href="../../partners/" class="nav_item" title="Partners">
-                  Partners
-                </a>
-              </div>
-              
-              
-              
-              
-              
-              
-
-              <div class="nav nav_active">
-                <a href="../../.." class="nav_item" title="Open Proposals">
-                  Open Proposals
-                </a>
-              </div>
-              
-              
-            </div>
-            
-          
-            
-          
-            
-          
-          
-          
-          
-          
-            
-            <div class="nav_parent ">
-              <a href="../../../learning/" class="nav_item" title="Learning">
-                Learning
-              </a>
-            </div>
-            <div class="d-block d-sm-block d-md-none">
-              
-              
-              
-              
-              
-
-              <div class="nav ">
-                <a href="../../.." class="nav_item" title="Events">
-                  Events
-                </a>
-              </div>
-              
-              
-              
-              
-
-              <div class="nav ">
-                <a href="../../.." class="nav_item" title="Study Groups">
-                  Study Groups
-                </a>
-              </div>
-              
-              
-            </div>
-            
-          
-            
-          
-            
-          
-          
-          
-          
-          
-            
-            <div class="nav_parent ">
-              <a href="../../../about/" class="nav_item" title="About">
-                About
-              </a>
-            </div>
-            <div class="d-block d-sm-block d-md-none">
-              
-              
-              
-              
-              
-
-              <div class="nav ">
-                <a href="../../.." class="nav_item" title="About OSL">
-                  About OSL
-                </a>
-              </div>
-              
-              
-              
-              
-
-              <div class="nav ">
-                <a href="../../../about/team/" class="nav_item" title="Team">
-                  Team
-                </a>
-              </div>
-              
-              
-              
-              
-
-              <div class="nav ">
-                <a href="../../../about/fiscal-sponsor/" class="nav_item" title="Fiscal Sponsor">
-                  Fiscal Sponsor
-                </a>
-              </div>
-              
-              
-              
-              
-
-              <div class="nav ">
-                <a href="../../.." class="nav_item" title="Guidelines">
-                  Guidelines
-                </a>
-              </div>
-              
-              
-            </div>
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-          
-          
-          
-          <div class="nav_parent ">
-            <a href="../../../donate/" class="nav_item" title="Donate">
-              Donate
-            </a>
-          </div>
-          
-          
-          
-        </div>
-      </nav>
-      <nav class="nav d-none d-sm-none d-md-block">
-        <div class='nav_body nav_extra extra'>
-          <!-- SUB-MENU -->
-          <div class="" style="border-top:1px solid white;">
-              <a href="../../partners/" class="nav_item" title="Partners">
-                Partners
-              </a>
-            </div>
-            
-              <div class="nav_active" style="border-top:1px solid white;">
-                  <a href="../" class="nav_item" title="Open Proposals">
-                    Open Proposals
-                  </a>
-                </div>
                 
-            
+                  <!-- Top-level single page -->
+                  <li class="nav-item ">
+                    <a class="nav-link "
+                      href="../../../blog/"
+                      aria-current="false">
+                      Blog
+                    </a>
+                  </li>
+
+                
+
+              
+
+                
+                  
+                  
+
+                  <!-- Top-level section with children => MEGA DROPDOWN + Bootstrap accordion -->
+                  <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle "
+                      href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                      aria-expanded="false">
+                      Projects
+                    </a>
+
+                    <div class="dropdown-menu mega p-2" role="menu" aria-label="Projects">
+                      
+                      
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                      
+
+                      
+                      <div class="accordion" id="mega-acc-1">
+                        
+                          
+
+                            
+                              
+                              <div class="px-1">
+                                <a class="dropdown-item "
+                                  href="../../../projects/">Overview</a>
+                              </div>
+                            
+
+                          
+                        
+                          
+
+                            
+                              
+                              <div class="px-1">
+                                <a class="dropdown-item "
+                                  href="../../../projects/incubation/">Incubation</a>
+                              </div>
+                            
+
+                          
+                        
+                          
+
+                            
+                              
+                              <div class="px-1">
+                                <a class="dropdown-item "
+                                  href="../../../projects/affiliation/">Affiliation</a>
+                              </div>
+                            
+
+                          
+                        
+                          
+
+                            
+                              
+                              <div class="px-1">
+                                <a class="dropdown-item "
+                                  href="../../../projects/list/">All Projects</a>
+                              </div>
+                            
+
+                          
+                        
+                      </div>
+                    </div>
+                  </li>
+                
+
+              
+
+                
+                  
+                  
+
+                  <!-- Top-level section with children => MEGA DROPDOWN + Bootstrap accordion -->
+                  <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle "
+                      href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                      aria-expanded="false">
+                      Opportunities
+                    </a>
+
+                    <div class="dropdown-menu mega p-2" role="menu" aria-label="Opportunities">
+                      
+                      
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                      
+
+                      
+                      <div class="accordion" id="mega-acc-2">
+                        
+                          
+
+                            
+                              
+                              <div class="px-1">
+                                <a class="dropdown-item "
+                                  href="../../../opportunities/">Overview</a>
+                              </div>
+                            
+
+                          
+                        
+                          
+
+                            
+                              
+                              
+                              
+                              <div class="accordion-item mega-group">
+                                <h2 class="accordion-header" id="mh-2-1">
+                                  <button class="accordion-button collapsed group-title" type="button"
+                                          data-bs-toggle="collapse"
+                                          data-bs-target="#mc-2-1"
+                                          aria-controls="mc-2-1"
+                                          aria-expanded="false">
+                                    OSS Internship
+                                  </button>
+                                </h2>
+                                <div id="mc-2-1" class="accordion-collapse collapse"
+                                    data-bs-parent="#mega-acc-2">
+                                  <div class="accordion-body p-2">
+
+                                    
+                                    
+                                      
+                                    
+                                      
+                                    
+                                      
+                                    
+                                      
+                                    
+                                      
+                                    
+                                      
+                                    
+
+                                    <ul class="list-unstyled mb-0">
+                                      
+
+                                      
+                                        
+                                          <li>
+                                            <a class="dropdown-item small py-1 "
+                                              href="../../../opportunities/internships/oss/">Overview</a>
+                                          </li>
+                                        
+                                      
+                                        
+                                          <li>
+                                            <a class="dropdown-item small py-1 "
+                                              href="../../../opportunities/internships/oss/project-ideas/">Project Ideas</a>
+                                          </li>
+                                        
+                                      
+                                        
+                                          <li>
+                                            <a class="dropdown-item small py-1 "
+                                              href="../../../opportunities/guides/contribution/">Contribution Guidelines</a>
+                                          </li>
+                                        
+                                      
+                                        
+                                          <li>
+                                            <a class="dropdown-item small py-1 "
+                                              href="../../../opportunities/internships/guides/interns/">Candidates' Guide</a>
+                                          </li>
+                                        
+                                      
+                                        
+                                          <li>
+                                            <a class="dropdown-item small py-1 "
+                                              href="../../../opportunities/internships/templates/projects-ideas/">Template: Projects Ideas</a>
+                                          </li>
+                                        
+                                      
+                                        
+                                          <li>
+                                            <a class="dropdown-item small py-1 "
+                                              href="../../../opportunities/internships/templates/candidate-proposal/">Template: Candidates's Project Proposal</a>
+                                          </li>
+                                        
+                                      
+                                    </ul>
+
+                                  </div>
+                                </div>
+                              </div>
+
+                            
+
+                          
+                        
+                          
+
+                            
+                              
+                              
+                              
+                              <div class="accordion-item mega-group">
+                                <h2 class="accordion-header" id="mh-2-2">
+                                  <button class="accordion-button collapsed group-title" type="button"
+                                          data-bs-toggle="collapse"
+                                          data-bs-target="#mc-2-2"
+                                          aria-controls="mc-2-2"
+                                          aria-expanded="false">
+                                    OSS Research Seed Internship
+                                  </button>
+                                </h2>
+                                <div id="mc-2-2" class="accordion-collapse collapse"
+                                    data-bs-parent="#mega-acc-2">
+                                  <div class="accordion-body p-2">
+
+                                    
+                                    
+                                      
+                                    
+                                      
+                                    
+                                      
+                                    
+                                      
+                                    
+                                      
+                                    
+                                      
+                                    
+
+                                    <ul class="list-unstyled mb-0">
+                                      
+
+                                      
+                                        
+                                          <li>
+                                            <a class="dropdown-item small py-1 "
+                                              href="../../../opportunities/internships/oss-research-seed/">Overview</a>
+                                          </li>
+                                        
+                                      
+                                        
+                                          <li>
+                                            <a class="dropdown-item small py-1 "
+                                              href="../../../opportunities/internships/oss-research-seed/project-ideas/">Project Ideas</a>
+                                          </li>
+                                        
+                                      
+                                        
+                                          <li>
+                                            <a class="dropdown-item small py-1 "
+                                              href="../../../opportunities/guides/contribution/">Contribution Guidelines</a>
+                                          </li>
+                                        
+                                      
+                                        
+                                          <li>
+                                            <a class="dropdown-item small py-1 "
+                                              href="../../../opportunities/internships/guides/interns/">Candidates' Guide</a>
+                                          </li>
+                                        
+                                      
+                                        
+                                          <li>
+                                            <a class="dropdown-item small py-1 "
+                                              href="../../../opportunities/internships/templates/projects-ideas/">Template: Projects Ideas</a>
+                                          </li>
+                                        
+                                      
+                                        
+                                          <li>
+                                            <a class="dropdown-item small py-1 "
+                                              href="../../../opportunities/internships/templates/candidate-proposal/">Template: Candidates's Project Proposal</a>
+                                          </li>
+                                        
+                                      
+                                    </ul>
+
+                                  </div>
+                                </div>
+                              </div>
+
+                            
+
+                          
+                        
+                          
+
+                            
+                              
+                              
+                              
+                              <div class="accordion-item mega-group">
+                                <h2 class="accordion-header" id="mh-2-3">
+                                  <button class="accordion-button collapsed group-title" type="button"
+                                          data-bs-toggle="collapse"
+                                          data-bs-target="#mc-2-3"
+                                          aria-controls="mc-2-3"
+                                          aria-expanded="false">
+                                    Google Summer of Code
+                                  </button>
+                                </h2>
+                                <div id="mc-2-3" class="accordion-collapse collapse"
+                                    data-bs-parent="#mega-acc-2">
+                                  <div class="accordion-body p-2">
+
+                                    
+                                    
+                                      
+                                    
+                                      
+                                    
+                                      
+                                    
+                                      
+                                    
+                                      
+                                    
+                                      
+                                    
+
+                                    <ul class="list-unstyled mb-0">
+                                      
+
+                                      
+                                        
+                                          <li>
+                                            <a class="dropdown-item small py-1 "
+                                              href="../../../opportunities/gsoc/">Overview</a>
+                                          </li>
+                                        
+                                      
+                                        
+                                          <li>
+                                            <a class="dropdown-item small py-1 "
+                                              href="../../../opportunities/gsoc/project-ideas/">Project Ideas</a>
+                                          </li>
+                                        
+                                      
+                                        
+                                          <li>
+                                            <a class="dropdown-item small py-1 "
+                                              href="../../../opportunities/guides/contribution/">Contribution Guidelines</a>
+                                          </li>
+                                        
+                                      
+                                        
+                                          <li>
+                                            <a class="dropdown-item small py-1 "
+                                              href="../../../opportunities/gsoc/guides/contributor/">Candidates' Guide</a>
+                                          </li>
+                                        
+                                      
+                                        
+                                          <li>
+                                            <a class="dropdown-item small py-1 "
+                                              href="../../../opportunities/gsoc/templates/project-ideas/">Template: Project Idea</a>
+                                          </li>
+                                        
+                                      
+                                        
+                                          <li>
+                                            <a class="dropdown-item small py-1 "
+                                              href="../../../opportunities/gsoc/templates/contributor-proposal/">Template: Candidates Project Proposal</a>
+                                          </li>
+                                        
+                                      
+                                    </ul>
+
+                                  </div>
+                                </div>
+                              </div>
+
+                            
+
+                          
+                        
+                      </div>
+                    </div>
+                  </li>
+                
+
+              
+
+                
+                  
+                  
+
+                  <!-- Top-level section with children => MEGA DROPDOWN + Bootstrap accordion -->
+                  <li class="nav-item dropdown nav_active">
+                    <a class="nav-link dropdown-toggle active"
+                      href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                      aria-expanded="false">
+                      Partnership
+                    </a>
+
+                    <div class="dropdown-menu mega p-2" role="menu" aria-label="Partnership">
+                      
+                      
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                      
+
+                      
+                      <div class="accordion" id="mega-acc-3">
+                        
+                          
+
+                            
+                              
+                              <div class="px-1">
+                                <a class="dropdown-item "
+                                  href="../../">Overview</a>
+                              </div>
+                            
+
+                          
+                        
+                          
+
+                            
+                              
+                              <div class="px-1">
+                                <a class="dropdown-item "
+                                  href="../../partners/">Partners</a>
+                              </div>
+                            
+
+                          
+                        
+                          
+
+                            
+                              
+                              
+                              
+                              <div class="accordion-item mega-group">
+                                <h2 class="accordion-header" id="mh-3-2">
+                                  <button class="accordion-button collapsed group-title" type="button"
+                                          data-bs-toggle="collapse"
+                                          data-bs-target="#mc-3-2"
+                                          aria-controls="mc-3-2"
+                                          aria-expanded="false">
+                                    Open Proposals
+                                  </button>
+                                </h2>
+                                <div id="mc-3-2" class="accordion-collapse collapse"
+                                    data-bs-parent="#mega-acc-3">
+                                  <div class="accordion-body p-2">
+
+                                    
+                                    
+                                      
+                                    
+                                      
+                                    
+
+                                    <ul class="list-unstyled mb-0">
+                                      
+
+                                      
+                                        
+                                          <li>
+                                            <a class="dropdown-item small py-1 "
+                                              href="../">Overview</a>
+                                          </li>
+                                        
+                                      
+                                        
+                                          <li>
+                                            <a class="dropdown-item small py-1 active"
+                                              href="./">Community Training</a>
+                                          </li>
+                                        
+                                      
+                                    </ul>
+
+                                  </div>
+                                </div>
+                              </div>
+
+                            
+
+                          
+                        
+                      </div>
+                    </div>
+                  </li>
+                
+
+              
+
+                
+                  
+                  
+
+                  <!-- Top-level section with children => MEGA DROPDOWN + Bootstrap accordion -->
+                  <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle "
+                      href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                      aria-expanded="false">
+                      Learning
+                    </a>
+
+                    <div class="dropdown-menu mega p-2" role="menu" aria-label="Learning">
+                      
+                      
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                      
+
+                      
+                      <div class="accordion" id="mega-acc-4">
+                        
+                          
+
+                            
+                              
+                              <div class="px-1">
+                                <a class="dropdown-item "
+                                  href="../../../learning/">Overview</a>
+                              </div>
+                            
+
+                          
+                        
+                          
+
+                            
+                              
+                              <div class="px-1">
+                                <a class="dropdown-item "
+                                  href="../../../learning/events/">Events</a>
+                              </div>
+                            
+
+                          
+                        
+                          
+
+                            
+                              
+                              <div class="px-1">
+                                <a class="dropdown-item "
+                                  href="../../../learning/study-groups/">Study Groups</a>
+                              </div>
+                            
+
+                          
+                        
+                      </div>
+                    </div>
+                  </li>
+                
+
+              
+
+                
+                  
+                  
+
+                  <!-- Top-level section with children => MEGA DROPDOWN + Bootstrap accordion -->
+                  <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle "
+                      href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                      aria-expanded="false">
+                      About
+                    </a>
+
+                    <div class="dropdown-menu mega p-2" role="menu" aria-label="About">
+                      
+                      
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                      
+
+                      
+                      <div class="accordion" id="mega-acc-5">
+                        
+                          
+
+                            
+                              
+                              <div class="px-1">
+                                <a class="dropdown-item "
+                                  href="../../../about/">Overview</a>
+                              </div>
+                            
+
+                          
+                        
+                          
+
+                            
+                              
+                              
+                              
+                              <div class="accordion-item mega-group">
+                                <h2 class="accordion-header" id="mh-5-1">
+                                  <button class="accordion-button collapsed group-title" type="button"
+                                          data-bs-toggle="collapse"
+                                          data-bs-target="#mc-5-1"
+                                          aria-controls="mc-5-1"
+                                          aria-expanded="false">
+                                    About OSL
+                                  </button>
+                                </h2>
+                                <div id="mc-5-1" class="accordion-collapse collapse"
+                                    data-bs-parent="#mega-acc-5">
+                                  <div class="accordion-body p-2">
+
+                                    
+                                    
+                                      
+                                    
+                                      
+                                    
+                                      
+                                    
+                                      
+                                    
+                                      
+                                    
+                                      
+                                    
+
+                                    <ul class="list-unstyled mb-0">
+                                      
+
+                                      
+                                        
+                                          <li>
+                                            <a class="dropdown-item small py-1 "
+                                              href="../../../about/">Overview</a>
+                                          </li>
+                                        
+                                      
+                                        
+                                          <li>
+                                            <a class="dropdown-item small py-1 "
+                                              href="../../../about/contact/">Contact Us</a>
+                                          </li>
+                                        
+                                      
+                                        
+                                          <li>
+                                            <a class="dropdown-item small py-1 "
+                                              href="../../../about/formula/">Our Formula</a>
+                                          </li>
+                                        
+                                      
+                                        
+                                          <li>
+                                            <a class="dropdown-item small py-1 "
+                                              href="../../../about/roadmap/">Roadmap</a>
+                                          </li>
+                                        
+                                      
+                                        
+                                          <li>
+                                            <a class="dropdown-item small py-1 "
+                                              href="../../../about/coc/">Code Of Conduct</a>
+                                          </li>
+                                        
+                                      
+                                        
+                                          <li>
+                                            <a class="dropdown-item small py-1 "
+                                              href="../../../about/governance/">Governance</a>
+                                          </li>
+                                        
+                                      
+                                    </ul>
+
+                                  </div>
+                                </div>
+                              </div>
+
+                            
+
+                          
+                        
+                          
+
+                            
+                              
+                              <div class="px-1">
+                                <a class="dropdown-item "
+                                  href="../../../about/team/">Team</a>
+                              </div>
+                            
+
+                          
+                        
+                          
+
+                            
+                              
+                              <div class="px-1">
+                                <a class="dropdown-item "
+                                  href="../../../about/fiscal-sponsor/">Fiscal Sponsor</a>
+                              </div>
+                            
+
+                          
+                        
+                          
+
+                            
+                              
+                              
+                              
+                              <div class="accordion-item mega-group">
+                                <h2 class="accordion-header" id="mh-5-4">
+                                  <button class="accordion-button collapsed group-title" type="button"
+                                          data-bs-toggle="collapse"
+                                          data-bs-target="#mc-5-4"
+                                          aria-controls="mc-5-4"
+                                          aria-expanded="false">
+                                    Guidelines
+                                  </button>
+                                </h2>
+                                <div id="mc-5-4" class="accordion-collapse collapse"
+                                    data-bs-parent="#mega-acc-5">
+                                  <div class="accordion-body p-2">
+
+                                    
+                                    
+                                      
+                                    
+                                      
+                                    
+                                      
+                                    
+                                      
+                                    
+
+                                    <ul class="list-unstyled mb-0">
+                                      
+
+                                      
+                                        
+                                          <li>
+                                            <a class="dropdown-item small py-1 "
+                                              href="../../../about/guidelines/">Overview</a>
+                                          </li>
+                                        
+                                      
+                                        
+                                          <li>
+                                            <a class="dropdown-item small py-1 "
+                                              href="../../../about/guidelines/articles/">Articles</a>
+                                          </li>
+                                        
+                                      
+                                        
+                                          <li>
+                                            <a class="dropdown-item small py-1 "
+                                              href="../../../about/guidelines/dei/">DEI</a>
+                                          </li>
+                                        
+                                      
+                                        
+                                          <li>
+                                            <a class="dropdown-item small py-1 "
+                                              href="../../../about/guidelines/mentoring/">Mentoring</a>
+                                          </li>
+                                        
+                                      
+                                    </ul>
+
+                                  </div>
+                                </div>
+                              </div>
+
+                            
+
+                          
+                        
+                      </div>
+                    </div>
+                  </li>
+                
+
+              
+
+                
+                  <!-- Top-level single page -->
+                  <li class="nav-item ">
+                    <a class="nav-link "
+                      href="../../../donate/"
+                      aria-current="false">
+                      Donate
+                    </a>
+                  </li>
+
+                
+
+              
+              
+
+            </ul>
+          </div>
+
+          <!-- Desktop search (RIGHT side) -->
+          <form class="d-none d-lg-block ms-lg-auto order-lg-2 position-relative" role="search">
+            <label for="mkdocs-search" class="visually-hidden">Search</label>
+            <div class="input-group input-group-sm searchbar flex-nowrap">
+              <span class="input-group-text bg-transparent border-0 pe-2">
+                <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <input id="mkdocs-search"
+                    type="search"
+                    class="form-control border-0 bg-transparent"
+                    placeholder="Search…"
+                    autocomplete="off" />
+            </div>
+            <!-- results popover anchor -->
+            <div class="search-popover" id="search-popover-desktop" aria-label="Search results"></div>
+          </form>
+
         </div>
-      </nav>
+</nav>
+
+      <!-- ========================= MOBILE OFFCANVAS (Accordion) ========================= -->
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavLabel">Open Science Labs</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body">
+          <!-- Mobile search -->
+          <form class="d-lg-none mb-3" role="search">
+            <div class="input-group input-group-sm searchbar flex-nowrap">
+              <span class="input-group-text bg-transparent border-0 pe-2">
+                <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <input id="mkdocs-search-mobile"
+                    type="search"
+                    class="form-control border-0 bg-transparent"
+                    placeholder="Search…"
+                    autocomplete="off" />
+            </div>
+          </form>
+
+          <!-- Accordion nav -->
+          <div class="accordion accordion-flush" id="navAccordion">
+            
+              
+                <!-- Single page -->
+                <div class="accordion-item bg-transparent border-0">
+                  <h2 class="accordion-header" id="h-top-1">
+                    <a class="nav-link px-0 py-2 "
+                      href="../../../blog/">Blog</a>
+                  </h2>
+                </div>
+
+              
+            
+              
+                
+                <div class="accordion-item bg-transparent">
+                  <h2 class="accordion-header" id="h-p-2">
+                    <button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#c-p-2"
+                            aria-expanded="false" aria-controls="c-p-2">
+                      Projects
+                    </button>
+                  </h2>
+
+                  <div id="c-p-2" class="accordion-collapse collapse" data-bs-parent="#navAccordion">
+                    <div class="accordion-body py-2">
+
+                      
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+
+                      
+                      
+                        
+
+                          
+                            
+                            <a class="nav-link py-1 "
+                              href="../../../projects/">Overview</a>
+                          
+
+                        
+                      
+                        
+
+                          
+                            
+                            <a class="nav-link py-1 "
+                              href="../../../projects/incubation/">Incubation</a>
+                          
+
+                        
+                      
+                        
+
+                          
+                            
+                            <a class="nav-link py-1 "
+                              href="../../../projects/affiliation/">Affiliation</a>
+                          
+
+                        
+                      
+                        
+
+                          
+                            
+                            <a class="nav-link py-1 "
+                              href="../../../projects/list/">All Projects</a>
+                          
+
+                        
+                      
+
+                    </div>
+                  </div>
+                </div>
+              
+            
+              
+                
+                <div class="accordion-item bg-transparent">
+                  <h2 class="accordion-header" id="h-p-3">
+                    <button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#c-p-3"
+                            aria-expanded="false" aria-controls="c-p-3">
+                      Opportunities
+                    </button>
+                  </h2>
+
+                  <div id="c-p-3" class="accordion-collapse collapse" data-bs-parent="#navAccordion">
+                    <div class="accordion-body py-2">
+
+                      
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+
+                      
+                      
+                        
+
+                          
+                            
+                            <a class="nav-link py-1 "
+                              href="../../../opportunities/">Overview</a>
+                          
+
+                        
+                      
+                        
+
+                          
+                            
+                            <div class="mt-2 small text-secondary">OSS Internship</div>
+                            <ul class="list-unstyled ms-2">
+                              
+                              
+                                
+                              
+                                
+                              
+                                
+                              
+                                
+                              
+                                
+                              
+                                
+                              
+                              
+                              
+                                
+                                  <li>
+                                    <a class="nav-link py-1 "
+                                      href="../../../opportunities/internships/oss/">Overview</a>
+                                  </li>
+                                
+                              
+                                
+                                  <li>
+                                    <a class="nav-link py-1 "
+                                      href="../../../opportunities/internships/oss/project-ideas/">Project Ideas</a>
+                                  </li>
+                                
+                              
+                                
+                                  <li>
+                                    <a class="nav-link py-1 "
+                                      href="../../../opportunities/guides/contribution/">Contribution Guidelines</a>
+                                  </li>
+                                
+                              
+                                
+                                  <li>
+                                    <a class="nav-link py-1 "
+                                      href="../../../opportunities/internships/guides/interns/">Candidates' Guide</a>
+                                  </li>
+                                
+                              
+                                
+                                  <li>
+                                    <a class="nav-link py-1 "
+                                      href="../../../opportunities/internships/templates/projects-ideas/">Template: Projects Ideas</a>
+                                  </li>
+                                
+                              
+                                
+                                  <li>
+                                    <a class="nav-link py-1 "
+                                      href="../../../opportunities/internships/templates/candidate-proposal/">Template: Candidates's Project Proposal</a>
+                                  </li>
+                                
+                              
+                            </ul>
+
+                          
+
+                        
+                      
+                        
+
+                          
+                            
+                            <div class="mt-2 small text-secondary">OSS Research Seed Internship</div>
+                            <ul class="list-unstyled ms-2">
+                              
+                              
+                                
+                              
+                                
+                              
+                                
+                              
+                                
+                              
+                                
+                              
+                                
+                              
+                              
+                              
+                                
+                                  <li>
+                                    <a class="nav-link py-1 "
+                                      href="../../../opportunities/internships/oss-research-seed/">Overview</a>
+                                  </li>
+                                
+                              
+                                
+                                  <li>
+                                    <a class="nav-link py-1 "
+                                      href="../../../opportunities/internships/oss-research-seed/project-ideas/">Project Ideas</a>
+                                  </li>
+                                
+                              
+                                
+                                  <li>
+                                    <a class="nav-link py-1 "
+                                      href="../../../opportunities/guides/contribution/">Contribution Guidelines</a>
+                                  </li>
+                                
+                              
+                                
+                                  <li>
+                                    <a class="nav-link py-1 "
+                                      href="../../../opportunities/internships/guides/interns/">Candidates' Guide</a>
+                                  </li>
+                                
+                              
+                                
+                                  <li>
+                                    <a class="nav-link py-1 "
+                                      href="../../../opportunities/internships/templates/projects-ideas/">Template: Projects Ideas</a>
+                                  </li>
+                                
+                              
+                                
+                                  <li>
+                                    <a class="nav-link py-1 "
+                                      href="../../../opportunities/internships/templates/candidate-proposal/">Template: Candidates's Project Proposal</a>
+                                  </li>
+                                
+                              
+                            </ul>
+
+                          
+
+                        
+                      
+                        
+
+                          
+                            
+                            <div class="mt-2 small text-secondary">Google Summer of Code</div>
+                            <ul class="list-unstyled ms-2">
+                              
+                              
+                                
+                              
+                                
+                              
+                                
+                              
+                                
+                              
+                                
+                              
+                                
+                              
+                              
+                              
+                                
+                                  <li>
+                                    <a class="nav-link py-1 "
+                                      href="../../../opportunities/gsoc/">Overview</a>
+                                  </li>
+                                
+                              
+                                
+                                  <li>
+                                    <a class="nav-link py-1 "
+                                      href="../../../opportunities/gsoc/project-ideas/">Project Ideas</a>
+                                  </li>
+                                
+                              
+                                
+                                  <li>
+                                    <a class="nav-link py-1 "
+                                      href="../../../opportunities/guides/contribution/">Contribution Guidelines</a>
+                                  </li>
+                                
+                              
+                                
+                                  <li>
+                                    <a class="nav-link py-1 "
+                                      href="../../../opportunities/gsoc/guides/contributor/">Candidates' Guide</a>
+                                  </li>
+                                
+                              
+                                
+                                  <li>
+                                    <a class="nav-link py-1 "
+                                      href="../../../opportunities/gsoc/templates/project-ideas/">Template: Project Idea</a>
+                                  </li>
+                                
+                              
+                                
+                                  <li>
+                                    <a class="nav-link py-1 "
+                                      href="../../../opportunities/gsoc/templates/contributor-proposal/">Template: Candidates Project Proposal</a>
+                                  </li>
+                                
+                              
+                            </ul>
+
+                          
+
+                        
+                      
+
+                    </div>
+                  </div>
+                </div>
+              
+            
+              
+                
+                <div class="accordion-item bg-transparent">
+                  <h2 class="accordion-header" id="h-p-4">
+                    <button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#c-p-4"
+                            aria-expanded="false" aria-controls="c-p-4">
+                      Partnership
+                    </button>
+                  </h2>
+
+                  <div id="c-p-4" class="accordion-collapse collapse" data-bs-parent="#navAccordion">
+                    <div class="accordion-body py-2">
+
+                      
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+
+                      
+                      
+                        
+
+                          
+                            
+                            <a class="nav-link py-1 "
+                              href="../../">Overview</a>
+                          
+
+                        
+                      
+                        
+
+                          
+                            
+                            <a class="nav-link py-1 "
+                              href="../../partners/">Partners</a>
+                          
+
+                        
+                      
+                        
+
+                          
+                            
+                            <div class="mt-2 small text-secondary">Open Proposals</div>
+                            <ul class="list-unstyled ms-2">
+                              
+                              
+                                
+                              
+                                
+                              
+                              
+                              
+                                
+                                  <li>
+                                    <a class="nav-link py-1 "
+                                      href="../">Overview</a>
+                                  </li>
+                                
+                              
+                                
+                                  <li>
+                                    <a class="nav-link py-1 active"
+                                      href="./">Community Training</a>
+                                  </li>
+                                
+                              
+                            </ul>
+
+                          
+
+                        
+                      
+
+                    </div>
+                  </div>
+                </div>
+              
+            
+              
+                
+                <div class="accordion-item bg-transparent">
+                  <h2 class="accordion-header" id="h-p-5">
+                    <button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#c-p-5"
+                            aria-expanded="false" aria-controls="c-p-5">
+                      Learning
+                    </button>
+                  </h2>
+
+                  <div id="c-p-5" class="accordion-collapse collapse" data-bs-parent="#navAccordion">
+                    <div class="accordion-body py-2">
+
+                      
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+
+                      
+                      
+                        
+
+                          
+                            
+                            <a class="nav-link py-1 "
+                              href="../../../learning/">Overview</a>
+                          
+
+                        
+                      
+                        
+
+                          
+                            
+                            <a class="nav-link py-1 "
+                              href="../../../learning/events/">Events</a>
+                          
+
+                        
+                      
+                        
+
+                          
+                            
+                            <a class="nav-link py-1 "
+                              href="../../../learning/study-groups/">Study Groups</a>
+                          
+
+                        
+                      
+
+                    </div>
+                  </div>
+                </div>
+              
+            
+              
+                
+                <div class="accordion-item bg-transparent">
+                  <h2 class="accordion-header" id="h-p-6">
+                    <button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#c-p-6"
+                            aria-expanded="false" aria-controls="c-p-6">
+                      About
+                    </button>
+                  </h2>
+
+                  <div id="c-p-6" class="accordion-collapse collapse" data-bs-parent="#navAccordion">
+                    <div class="accordion-body py-2">
+
+                      
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+
+                      
+                      
+                        
+
+                          
+                            
+                            <a class="nav-link py-1 "
+                              href="../../../about/">Overview</a>
+                          
+
+                        
+                      
+                        
+
+                          
+                            
+                            <div class="mt-2 small text-secondary">About OSL</div>
+                            <ul class="list-unstyled ms-2">
+                              
+                              
+                                
+                              
+                                
+                              
+                                
+                              
+                                
+                              
+                                
+                              
+                                
+                              
+                              
+                              
+                                
+                                  <li>
+                                    <a class="nav-link py-1 "
+                                      href="../../../about/">Overview</a>
+                                  </li>
+                                
+                              
+                                
+                                  <li>
+                                    <a class="nav-link py-1 "
+                                      href="../../../about/contact/">Contact Us</a>
+                                  </li>
+                                
+                              
+                                
+                                  <li>
+                                    <a class="nav-link py-1 "
+                                      href="../../../about/formula/">Our Formula</a>
+                                  </li>
+                                
+                              
+                                
+                                  <li>
+                                    <a class="nav-link py-1 "
+                                      href="../../../about/roadmap/">Roadmap</a>
+                                  </li>
+                                
+                              
+                                
+                                  <li>
+                                    <a class="nav-link py-1 "
+                                      href="../../../about/coc/">Code Of Conduct</a>
+                                  </li>
+                                
+                              
+                                
+                                  <li>
+                                    <a class="nav-link py-1 "
+                                      href="../../../about/governance/">Governance</a>
+                                  </li>
+                                
+                              
+                            </ul>
+
+                          
+
+                        
+                      
+                        
+
+                          
+                            
+                            <a class="nav-link py-1 "
+                              href="../../../about/team/">Team</a>
+                          
+
+                        
+                      
+                        
+
+                          
+                            
+                            <a class="nav-link py-1 "
+                              href="../../../about/fiscal-sponsor/">Fiscal Sponsor</a>
+                          
+
+                        
+                      
+                        
+
+                          
+                            
+                            <div class="mt-2 small text-secondary">Guidelines</div>
+                            <ul class="list-unstyled ms-2">
+                              
+                              
+                                
+                              
+                                
+                              
+                                
+                              
+                                
+                              
+                              
+                              
+                                
+                                  <li>
+                                    <a class="nav-link py-1 "
+                                      href="../../../about/guidelines/">Overview</a>
+                                  </li>
+                                
+                              
+                                
+                                  <li>
+                                    <a class="nav-link py-1 "
+                                      href="../../../about/guidelines/articles/">Articles</a>
+                                  </li>
+                                
+                              
+                                
+                                  <li>
+                                    <a class="nav-link py-1 "
+                                      href="../../../about/guidelines/dei/">DEI</a>
+                                  </li>
+                                
+                              
+                                
+                                  <li>
+                                    <a class="nav-link py-1 "
+                                      href="../../../about/guidelines/mentoring/">Mentoring</a>
+                                  </li>
+                                
+                              
+                            </ul>
+
+                          
+
+                        
+                      
+
+                    </div>
+                  </div>
+                </div>
+              
+            
+              
+                <!-- Single page -->
+                <div class="accordion-item bg-transparent border-0">
+                  <h2 class="accordion-header" id="h-top-7">
+                    <a class="nav-link px-0 py-2 "
+                      href="../../../donate/">Donate</a>
+                  </h2>
+                </div>
+
+              
+            
+          </div>
+        </div>
+      </div>
     </header>
+    <!-- ========================= /NAV ========================= -->
+
+
     <main>
-      <style>
-        footer.citation *{margin-top:20px;font-size:10px!important;font-style:italic!important}
-      </style>
-      <div class=container>
+      <div class="container-xxl">
         <section class="content-inner">
-          
-          <!--
-          <div class="d-none d-sm-none d-md-block" style="margin-top:80px"></div>
-          <div class="d-block d-sm-block d-md-none" style="margin-top:50px"></div>
-          -->
-          
           
 
 <section>
@@ -405,9 +1735,15 @@
       <div class="list-group pt-4">
         
         <a
+          href="/partnership/open-proposals/"
+          class="list-group-item list-group-item-action">
+          Overview
+        </a>
+        
+        <a
           href="/partnership/open-proposals/community-training/"
           class="list-group-item list-group-item-action active" aria-current="true">
-          Community Traning
+          Community Training
         </a>
         
       </div>
@@ -537,18 +1873,19 @@ us at: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#116;&#101;&#97;&#109;&
   </div>
 </section>
 
+
+          <div class="mt-4">
+            <small class="badge-updated">
+              
+                Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-09-02</span>
+              
+              
+            </small>
+          </div>
         </section>
-        <div>
-          <i>
-            <!-- This section adds support for localized revision dates -->
-            
-            <small>Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-03-25</span></small>
-            
-            
-          </i>
-        </div>
       </div>
     </main>
+
     <svg width="0" height="0" class="hidden">
       <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="facebook">
         <path d="M437 0H75C33.648.0.0 33.648.0 75v362c0 41.352 33.648 75 75 75h151V331h-60v-90h60v-61c0-49.629 40.371-90 90-90h91v90h-91v61h91l-15 90h-76v181h121c41.352.0 75-33.648 75-75V75c0-41.352-33.648-75-75-75zm0 0"/>
@@ -619,72 +1956,71 @@ us at: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#116;&#101;&#97;&#109;&
         <path d="M11.667.0H3.016v1.984H2.5c-.827.0-1.5.673-1.5 1.5v8.588l2.521 4.956 2.464-4.959V3.484c0-.827-.673-1.5-1.5-1.5h-.469v-.984H11v5h5v10H4.5v1H17V5.308L11.667.0zM3.908 14.002h-.804L2 11.832V5.984h1v6.027h1V5.984h.984v5.851l-1.076 2.167zM4.984 3.484v1.5H2v-1.5c0-.275.225-.5.5-.5h1.984c.276.0.5.225.5.5zM12 1.742 15.273 5H12V1.742z" fill="#000"/>
       </symbol>
     </svg>
+
     
-    <footer class=footer>
-      <div class="footer_inner wrap pale">
-        <img src=/icons/osl-logo-black.svg class="icon icon_2 transparent" alt="Open Science Labs">
-        <a class=to_top href=#documentTop>
-          <svg class="icon">
-            <title>to-top</title>
-            <use xlink:href="#to-top"/>
-          </svg>
-        </a>
-        <a href=https://github.com/OpenScienceLabs target="_blank">
-          <svg class="icon">
-            <title>github</title>
-            <use xlink:href="#github"/>
-          </svg>
-        </a>
-        <a href=/linkedin target="_blank">
-          <svg class="icon">
-            <title>linkedin</title>
-            <use xlink:href="#linkedin"/>
-          </svg>
-        </a>
-        <a href=https://twitter.com/opensciencelabs target="_blank">
-          <svg class="icon">
-            <title>twitter</title>
-            <use xlink:href="#twitter"/>
-          </svg>
-        </a>
-        <a href=/facebook target="_blank">
-          <svg class="icon">
-            <title>facebook</title>
-            <use xlink:href="#facebook"/>
-          </svg>
-        </a>
-        <a href=/discord target="_blank">
-          <svg class="icon">
-            <title>discord</title>
-            <use xlink:href="#discord"/>
-          </svg>
-        </a>
-        <a href="/feed_rss_created.xml" target="_blank">
-          <svg class="icon">
-            <title>rss</title>
-            <use xlink:href="#rss"/>
-          </svg>
-        </a>
-        <a href=/youtube target="_blank">
-          <svg class="icon">
-            <title>youtube</title>
-            <use xlink:href="#youtube"/>
-          </svg>
-        </a>
-        <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
-          <img
-            alt="Creative Commons License"
-            style="border-width:0"
-            src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
-        </a>
-      </div>
-      <div class="footer_inner wrap pale">
-        <p>Copyright&nbsp;<span class=year></span>&nbsp;Open Science Labs.</p>
-        <div class=color_mode><input type=checkbox class=color_choice id=mode></div>
+    <a class="to_top glass p-2 rounded-circle" href="#documentTop" aria-label="Back to top">
+      <svg class="icon"><title>to-top</title><use xlink:href="#to-top"/></svg>
+    </a>
+    <footer class="footer">
+      <div class="container-xxl">
+        <div class="footer_inner">
+          <div class="d-flex align-items-center gap-3">
+            <img src="/icons/osl-logo-black.svg" class="transparent" alt="Open Science Labs" style="height:28px;">
+            <div class="d-flex align-items-center gap-3">
+              <a href="https://github.com/OpenScienceLabs" target="_blank" aria-label="GitHub">
+                <svg class="icon"><use xlink:href="#github"/></svg>
+              </a>
+              <a href="/linkedin" target="_blank" aria-label="LinkedIn">
+                <svg class="icon"><use xlink:href="#linkedin"/></svg>
+              </a>
+              <a href="https://twitter.com/opensciencelabs" target="_blank" aria-label="Twitter / X">
+                <svg class="icon"><use xlink:href="#twitter"/></svg>
+              </a>
+              <a href="/facebook" target="_blank" aria-label="Facebook">
+                <svg class="icon"><use xlink:href="#facebook"/></svg>
+              </a>
+              <a href="/discord" target="_blank" aria-label="Discord">
+                <svg class="icon"><use xlink:href="#discord"/></svg>
+              </a>
+              <a href="/feed_rss_created.xml" target="_blank" aria-label="RSS">
+                <svg class="icon"><use xlink:href="#rss"/></svg>
+              </a>
+              <a href="/youtube" target="_blank" aria-label="YouTube">
+                <svg class="icon"><use xlink:href="#youtube"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="d-flex align-items-center gap-3">
+            <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
+              <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png">
+            </a>
+            <div class="color_mode">
+              <input type="checkbox" class="color_choice" id="mode" aria-label="Toggle color mode">
+            </div>
+          </div>
+        </div>
+        <div class="footer_inner">
+          <p class="mb-0 small text-secondary">
+            Copyright&nbsp;<span class="year"></span>&nbsp;Open Science Labs.
+          </p>
+        </div>
       </div>
     </footer>
-    <script type="text/javascript" src="/js/bundle.js"></script>
-    <script src="/js/search.min.js"></script>
+
+    <!-- Lunr core -->
+    <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js" defer></script>
+
+    <!-- OPTIONAL: language support (Spanish/Portuguese); keep only what you need -->
+    <script src="https://cdn.jsdelivr.net/npm/lunr-languages@1.4.0/min/lunr.stemmer.support.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/lunr-languages@1.4.0/min/lunr.es.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/lunr-languages@1.4.0/min/lunr.pt.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/lunr-languages@1.4.0/min/lunr.multi.min.js" defer></script>
+
+    <!-- Your search UI/logic (must come after Lunr) -->
+    <script src="/js/osl-search.js" defer></script>
+    <script src="/js/theme.js" defer></script>
+
     
+
   </body>
 </html>
