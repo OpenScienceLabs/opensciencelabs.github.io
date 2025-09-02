@@ -83,7 +83,7 @@ nav:
       - Team: about/team/index.md
       - Fiscal Sponsor: about/fiscal-sponsor/index.md
       - Guidelines:
-          - General: about/guidelines/index.md
+          - Overview: about/guidelines/index.md
           - Articles: about/guidelines/articles/index.md
           - DEI: about/guidelines/dei/index.md
           - Mentoring: about/guidelines/mentoring/index.md

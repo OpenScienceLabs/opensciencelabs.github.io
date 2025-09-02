@@ -1,4 +1,5 @@
 {% set menu_2nd_level_selected = [] %}
+{% set menu_group_titles = [''] %}
 <!DOCTYPE html>
 <html lang="{{ config.extra.lang|default('en') }}">
   <head>
@@ -78,6 +79,7 @@
     <link rel="stylesheet" href="/css/code.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/utilities.css">
+    <link rel="stylesheet" href="/css/blog.css">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-213158050-1"></script>
     <script>
@@ -88,8 +90,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
-            integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
 
     {% block header_extra %}
     {% endblock header_extra%}
@@ -125,7 +125,6 @@
 
               {% if nav|length > 0 %}
               {% for nav_item in nav %}
-
                 {% if not nav_item.children %}
                   <!-- Top-level single page -->
                   <li class="nav-item {% if nav_item.active %}nav_active{% endif %}">
@@ -137,7 +136,10 @@
                   </li>
 
                 {% else %}
-                  <!-- Top-level section with children => MEGA DROPDOWN -->
+                  {# capture this top-level index (avoid loop.parent) #}
+                  {% set top_i = loop.index0 %}
+
+                  <!-- Top-level section with children => MEGA DROPDOWN + Bootstrap accordion -->
                   <li class="nav-item dropdown {% if nav_item.active %}nav_active{% endif %}">
                     <a class="nav-link dropdown-toggle {% if nav_item.active %}active{% endif %}"
                       href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
@@ -145,56 +147,78 @@
                       {{ nav_item.title }}
                     </a>
 
-                    <div class="dropdown-menu mega" role="menu" aria-label="{{ nav_item.title }}">
-                      {# Parent Overview (works with 'index' or 'Overview') #}
-                      {% set parent_index_url = None %}
+                    <div class="dropdown-menu mega p-2" role="menu" aria-label="{{ nav_item.title }}">
+                      {# optional Overview link for the section #}
+                      {% set parent_overview = None %}
                       {% for ch in nav_item.children %}
-                        {% if ch.title in ['index','Overview'] %}
-                          {% set parent_index_url = ch.url|url %}
+                        {% if ch.title in menu_group_titles %}
+                          {% set parent_overview = ch %}
                         {% endif %}
                       {% endfor %}
-                      {% if parent_index_url %}
-                        <div class="mega-head px-2 py-2">
-                          <a class="dropdown-item fw-semibold" href="{{ parent_index_url }}">
+                      {% if parent_overview %}
+                        <div class="px-2 pb-2">
+                          <a class="dropdown-item fw-semibold" href="{{ parent_overview.url|url }}">
                             {{ nav_item.title }} · Overview
                           </a>
                         </div>
-                        <hr class="dropdown-divider my-1">
+                        <hr class="dropdown-divider my-2">
                       {% endif %}
 
-                      <div class="mega-grid">
+                      {# Accordion: one open at a time #}
+                      <div class="accordion" id="mega-acc-{{ top_i }}">
                         {% for child in nav_item.children %}
-                          {% if child.title not in ['index','Overview'] %}
+                          {% if child.title not in menu_group_titles %}
 
                             {% if child.children %}
-                              {# CHILD SECTION COLUMN (with its own Overview + grandchildren) #}
-                              {% set child_index_url = None %}
-                              {% for gc in child.children %}
-                                {% if gc.title in ['index','Overview'] %}
-                                  {% set child_index_url = gc.url|url %}
-                                {% endif %}
-                              {% endfor %}
+                              {# child is a subgroup with grandchildren -> accordion item #}
+                              {% set hdr_id = 'mh-' ~ top_i ~ '-' ~ loop.index0 %}
+                              {% set col_id = 'mc-' ~ top_i ~ '-' ~ loop.index0 %}
+                              <div class="accordion-item mega-group">
+                                <h2 class="accordion-header" id="{{ hdr_id }}">
+                                  <button class="accordion-button collapsed group-title" type="button"
+                                          data-bs-toggle="collapse"
+                                          data-bs-target="#{{ col_id }}"
+                                          aria-controls="{{ col_id }}"
+                                          aria-expanded="false">
+                                    {{ child.title }}
+                                  </button>
+                                </h2>
+                                <div id="{{ col_id }}" class="accordion-collapse collapse"
+                                    data-bs-parent="#mega-acc-{{ top_i }}">
+                                  <div class="accordion-body p-2">
+                                    {% set child_overview = None %}
+                                    {% for gc in child.children %}
+                                      {% if gc.title in menu_group_titles %}
+                                        {% set child_overview = gc %}
+                                      {% endif %}
+                                    {% endfor %}
 
-                              <section class="mega-group">
-                                <a class="group-title" href="{{ child_index_url or '#' }}">{{ child.title }}</a>
-                                <ul class="list-unstyled mb-0">
-                                  {% for gc in child.children %}
-                                    {% if gc.title not in ['index','Overview'] %}
-                                      <li>
-                                        <a class="dropdown-item small py-1 {% if gc.active %}active{% endif %}"
-                                          href="{{ gc.url|url }}">{{ gc.title }}</a>
-                                      </li>
-                                    {% endif %}
-                                  {% endfor %}
-                                </ul>
-                              </section>
+                                    <ul class="list-unstyled mb-0">
+                                      {% if child_overview %}
+                                        <li>
+                                          <a class="dropdown-item small py-1 {% if child_overview.active %}active{% endif %}"
+                                            href="{{ child_overview.url|url }}">Overview</a>
+                                        </li>
+                                      {% endif %}
+                                      {% for gc in child.children %}
+                                        {% if gc.title not in menu_group_titles %}
+                                          <li>
+                                            <a class="dropdown-item small py-1 {% if gc.active %}active{% endif %}"
+                                              href="{{ gc.url|url }}">{{ gc.title }}</a>
+                                          </li>
+                                        {% endif %}
+                                      {% endfor %}
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
 
                             {% else %}
-                              {# CHILD PLAIN PAGE as a single link column #}
-                              <section class="mega-group">
+                              {# child is just a page -> simple link in the mega menu #}
+                              <div class="px-1">
                                 <a class="dropdown-item {% if child.active %}active{% endif %}"
                                   href="{{ child.url|url }}">{{ child.title }}</a>
-                              </section>
+                              </div>
                             {% endif %}
 
                           {% endif %}
@@ -203,7 +227,6 @@
                     </div>
                   </li>
                 {% endif %}
-
               {% endfor %}
               {% endif %}
 
@@ -211,6 +234,7 @@
           </div>
         </div>
       </nav>
+
 
       <!-- ========================= MOBILE OFFCANVAS (Accordion) ========================= -->
       <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
@@ -254,14 +278,14 @@
 
                       {# Parent Overview #}
                       {% for ch in nav_item.children %}
-                        {% if ch.title in ['index','Overview'] %}
+                        {% if ch.title in menu_group_titles %}
                           <a class="nav-link py-1 {% if ch.active %}active{% endif %}" href="{{ ch.url|url }}">Overview</a>
                         {% endif %}
                       {% endfor %}
 
                       {# Children #}
                       {% for child in nav_item.children %}
-                        {% if child.title not in ['index','Overview'] %}
+                        {% if child.title not in menu_group_titles %}
 
                           {% if child.children %}
                             {# Section subtree #}
@@ -269,7 +293,7 @@
                             <ul class="list-unstyled ms-2">
                               {% set child_index = None %}
                               {% for gc in child.children %}
-                                {% if gc.title in ['index','Overview'] %}{% set child_index = gc %}{% endif %}
+                                {% if gc.title in menu_group_titles %}{% set child_index = gc %}{% endif %}
                               {% endfor %}
                               {% if child_index %}
                                 <li>
@@ -278,7 +302,7 @@
                                 </li>
                               {% endif %}
                               {% for gc in child.children %}
-                                {% if gc.title not in ['index','Overview'] %}
+                                {% if gc.title not in menu_group_titles %}
                                   <li>
                                     <a class="nav-link py-1 {% if gc.active %}active{% endif %}"
                                       href="{{ gc.url|url }}">{{ gc.title }}</a>
@@ -416,7 +440,7 @@
       <div class="container-xxl">
         <div class="footer_inner">
           <div class="d-flex align-items-center gap-3">
-            <img src="/icons/osl-logo-black.svg" class="icon icon_2 transparent" alt="Open Science Labs" style="height:28px;">
+            <img src="/icons/osl-logo-black.svg" class="transparent" alt="Open Science Labs" style="height:28px;">
             <div class="d-flex align-items-center gap-3">
               <a href="https://github.com/OpenScienceLabs" target="_blank" aria-label="GitHub">
                 <svg class="icon"><use xlink:href="#github"/></svg>

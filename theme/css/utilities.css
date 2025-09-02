@@ -26,3 +26,9 @@
   .grid-4{ grid-template-columns:repeat(auto-fit, minmax(16rem, 1fr)); }
   .grid-inverse{ grid-template-columns:70% 1fr; grid-column-gap:4rem; }
 }
+
+
+/* Generic icon theming: inherit text color in all modes */
+svg.icon { fill: currentColor; stroke: currentColor; }
+svg.icon [fill]:not([fill="none"]) { fill: currentColor !important; }
+svg.icon [stroke]:not([stroke="none"]) { stroke: currentColor !important; }
