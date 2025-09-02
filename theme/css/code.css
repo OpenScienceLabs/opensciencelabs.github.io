@@ -39,3 +39,29 @@ code{
   font-size: 18px; border-bottom: 1px solid #fafafa; line-height: 23.4px;
   position: absolute; right: 25px; margin-top: 15px; color: #fff !important;
 }
+
+/* ===== Lock <pre> / block-code colors (same in light & dark) ===== */
+
+/* Choose a single text color that matches your fixed pre background */
+:root{
+  --pre-fg-locked: #e6edf3; /* good for a dark pre background */
+  /* if your pre background is light, use something like: #111 */
+}
+
+/* Block code only (does NOT touch inline `code`) */
+pre,
+pre.output,
+pre code,
+pre.output code,
+.highlight pre,
+.highlight code {
+  color: var(--pre-fg-locked) !important;
+}
+
+/* Extra specificity so theme toggles can’t override */
+[data-bs-theme="light"] pre,
+[data-bs-theme="dark"]  pre,
+[data-bs-theme="light"] pre code,
+[data-bs-theme="dark"]  pre code {
+  color: var(--pre-fg-locked) !important;
+}
