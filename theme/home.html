@@ -1,72 +1,142 @@
 {% extends "base.html" %}
 
+{% set hero_image   = page.meta.hero_image   or "/images/home/header.jpg" %}
+{% set hero_title   = page.meta.hero_title   or "Open collaboration for research, education & social good." %}
+{% set hero_blurb   = page.meta.hero_blurb   or "Open Science Labs helps people learn, build, and contribute to impactful open-source projects — mentored by a welcoming community." %}
+{% set cta_primary  = page.meta.cta_primary  or {"label":"Explore Projects", "href":"/projects/"} %}
+{% set cta_secondary= page.meta.cta_secondary or {"label":"Get Involved", "href":"/opportunities/"} %}
+
 {% block header_extra %}
-<style>
-  footer.citation * {
-    margin-top: 20px;
-    font-size: 10px !important;
-    font-style: italic !important;
-  }
-  .welcome-section {
-    background-image: url("/images/home/header.png");
-    background-size: cover;
-    color: white;
-    padding: 100px 0;
-  }
-
-  .welcome-section p {
-    color: #333333 !important;
-  }
-
-  .overlay {
-    background-color: rgba(
-      255,
-      255,
-      255,
-      0.7
-    ); /* Black background with 50% opacity */
-    color: white;
-    padding: 100px 0;
-  }
-
-  .card-footer {
-    background-color: #ffffff!important;
-  }
-</style>
+  <!-- Home-only CSS -->
+  <link rel="stylesheet" href="/css/home.css">
 {% endblock header_extra %}
 
 {% block content %}
-<div class="pt-5"></div>
-{{ page.content }}
 
-<!-- Partners -->
-<section id="partnership" class="p-5">
-  <div class="container">
-    <h2 class="text-center">Our Partners</h2>
-    <p>
-      We welcome partnerships with organizations and projects in the
-      realms of research, education, open source, and social good.
-      By collaborating with us, we can collectively enhance an ecosystem
-      that is more open, transparent, and inclusive.
-    </p>
-    <div class="card-columns partners pb-3">
-      {% for partner in page.meta["partners"] %}
-      <div class="card m-0 p-0">
-        <div class="card-body m-0 text-center">
-          <a href="{{ partner.url }}">
-            <img
-              src="{{ partner.logo }}"
-              alt="{{ partner.name }}"
-            />
-          </a>
+<!-- ===================== HERO ===================== -->
+<section class="home-hero" style="--hero-image: url('{{ hero_image }}')">
+  <div class="container-xxl">
+    <div class="row align-items-center min-vh-50 py-5">
+      <div class="col-12 col-lg-7">
+        <p class="eyebrow mb-2">Welcome to</p>
+        <h1 class="display-4 fw-bold mb-3">{{ hero_title }}</h1>
+        <p class="lead mb-4">{{ hero_blurb }}</p>
+
+        <div class="d-flex gap-3 flex-wrap">
+          <a class="btn btn-primary btn-lg shadow-sm" href="{{ cta_primary.href }}">{{ cta_primary.label }}</a>
+          <a class="btn btn-outline-light btn-lg shadow-sm" href="{{ cta_secondary.href }}">{{ cta_secondary.label }}</a>
         </div>
-        <div class="card-footer m-0">
-          <a href="{{ partner.url }}">
-            <h5 class="card-title text-dark"><strong>{{ partner.name }}</strong></h5>
-          </a>
+
+        <ul class="hero-bullets mt-4">
+          <li><span class="dot"></span> Mentored OSS contributions</li>
+          <li><span class="dot"></span> Programs & study groups</li>
+          <li><span class="dot"></span> A supportive global community</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MISSION / GOALS ===================== -->
+<section class="py-5">
+  <div class="container-xxl">
+    <div class="row g-4">
+      <div class="col-12 col-lg-6">
+        <div class="home-card h-100">
+          <h2 class="h4 fw-semibold mb-2">Our Mission</h2>
+          <p class="mb-0">
+            At Open Science Labs (OSL), we are dedicated to advancing the scientific
+            research through collaboration, innovation, and education. Our mission
+            is to create a more inclusive, transparent, and accessible scientific community.
+          </p>
         </div>
       </div>
+      <div class="col-12 col-lg-6">
+        <div class="home-card h-100">
+          <h2 class="h4 fw-semibold mb-2">Our Goals</h2>
+          <p class="mb-0">
+            To empower researchers, educators, and students by providing resources,
+            tools, and a collaborative platform for sharing knowledge and advancing
+            open science initiatives.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== INITIATIVES ===================== -->
+<section class="py-5">
+  <div class="container-xxl">
+    <h2 class="section-title">Our Main Initiatives</h2>
+    <p class="text-secondary mb-4">
+      Discover our programs spanning open-source projects, internships, and learning tracks.
+    </p>
+
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-xl-4">
+        <a class="home-tile" href="/projects/">
+          <div class="tile-body">
+            <h3 class="h5 mb-1">Projects</h3>
+            <p class="mb-0">Incubation, affiliation and a curated list of OSS projects.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-12 col-md-6 col-xl-4">
+        <a class="home-tile" href="/opportunities/">
+          <div class="tile-body">
+            <h3 class="h5 mb-1">Opportunities</h3>
+            <p class="mb-0">Internships (OSS, research seed, GSoC) and contributor guides.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-12 col-md-6 col-xl-4">
+        <a class="home-tile" href="/learning/">
+          <div class="tile-body">
+            <h3 class="h5 mb-1">Learning</h3>
+            <p class="mb-0">Events, study groups and resources for continuous growth.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PARTNERS ===================== -->
+<section class="py-5">
+  <div class="container-xxl">
+    <h2 class="section-title">Our Partners</h2>
+    <p class="text-secondary mb-4">
+      We collaborate with organizations across research, education and social good.
+    </p>
+
+    <ul class="logo-grid">
+      {% for partner in page.meta["partners"] %}
+      <li class="logo-item">
+        <a href="{{ partner.url }}" target="_blank" rel="noopener">
+          <img src="{{ partner.logo }}" alt="{{ partner.name }}">
+          <span class="logo-caption">{{ partner.name }}</span>
+        </a>
+      </li>
       {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section class="py-5">
+  <div class="container-xxl">
+    <div class="cta-banner">
+      <div>
+        <h3 class="h4 mb-1">Ready to join the community?</h3>
+        <p class="mb-0 text-secondary">Contribute to projects, mentor newcomers, or start a study group.</p>
+      </div>
+      <div class="d-flex gap-3">
+        <a class="btn btn-primary" href="/opportunities/">Get Involved</a>
+        <a class="btn btn-outline-light" href="/about/">Learn More</a>
+      </div>
     </div>
   </div>
 </section>
