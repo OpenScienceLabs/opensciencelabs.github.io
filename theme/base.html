@@ -58,7 +58,6 @@
     <link rel="manifest" href="/icons/site.webmanifest">
 
     <link rel="alternate" type="application/rss+xml" href="/feed_rss_created.xml" title="Open Science Labs">
-    <link rel="alternate" type="application/json" href="/js/index.json" title="Open Science Labs">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -106,12 +105,6 @@
             <img src="/images/logos/osl-color-horizontal.png" class="logo" alt="{{ config.site_name }}">
           </a>
 
-          <!-- Desktop search -->
-          <div class="mk-search order-lg-2 d-none d-md-block ms-auto me-2">
-            <input id="mkdocs-search" type="search" class="form-control form-control-sm" placeholder="Search…" aria-label="Search">
-            <i class="fa fa-search"></i>
-          </div>
-
           <!-- Mobile toggler (offcanvas) -->
           <button class="navbar-toggler ms-2" type="button"
                   data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav"
@@ -119,12 +112,13 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <!-- Desktop menu -->
+          <!-- Desktop menu (grows to fill middle) -->
           <div class="collapse navbar-collapse order-lg-1">
             <ul class="navbar-nav ms-3">
 
               {% if nav|length > 0 %}
               {% for nav_item in nav %}
+
                 {% if not nav_item.children %}
                   <!-- Top-level single page -->
                   <li class="nav-item {% if nav_item.active %}nav_active{% endif %}">
@@ -148,7 +142,7 @@
                     </a>
 
                     <div class="dropdown-menu mega p-2" role="menu" aria-label="{{ nav_item.title }}">
-                      {# optional Overview link for the section #}
+                      {# Optional Overview link for the section #}
                       {% set parent_overview = None %}
                       {% for ch in nav_item.children %}
                         {% if ch.title in menu_group_titles %}
@@ -186,6 +180,7 @@
                                 <div id="{{ col_id }}" class="accordion-collapse collapse"
                                     data-bs-parent="#mega-acc-{{ top_i }}">
                                   <div class="accordion-body p-2">
+
                                     {% set child_overview = None %}
                                     {% for gc in child.children %}
                                       {% if gc.title in menu_group_titles %}
@@ -200,6 +195,7 @@
                                             href="{{ child_overview.url|url }}">Overview</a>
                                         </li>
                                       {% endif %}
+
                                       {% for gc in child.children %}
                                         {% if gc.title not in menu_group_titles %}
                                           <li>
@@ -209,6 +205,7 @@
                                         {% endif %}
                                       {% endfor %}
                                     </ul>
+
                                   </div>
                                 </div>
                               </div>
@@ -227,14 +224,35 @@
                     </div>
                   </li>
                 {% endif %}
+
               {% endfor %}
               {% endif %}
 
             </ul>
           </div>
-        </div>
-      </nav>
 
+          <!-- Desktop search (RIGHT side) -->
+          <form class="d-none d-lg-block ms-lg-auto order-lg-2 position-relative" role="search">
+            <label for="mkdocs-search" class="visually-hidden">Search</label>
+            <div class="input-group input-group-sm searchbar flex-nowrap">
+              <span class="input-group-text bg-transparent border-0 pe-2">
+                <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <input id="mkdocs-search"
+                    type="search"
+                    class="form-control border-0 bg-transparent"
+                    placeholder="Search…"
+                    autocomplete="off" />
+            </div>
+            <!-- results popover anchor -->
+            <div class="search-popover" id="search-popover-desktop" aria-label="Search results"></div>
+          </form>
+
+        </div>
+</nav>
 
       <!-- ========================= MOBILE OFFCANVAS (Accordion) ========================= -->
       <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
@@ -245,10 +263,21 @@
 
         <div class="offcanvas-body">
           <!-- Mobile search -->
-          <div class="mk-search mb-3">
-            <input id="mkdocs-search-mobile" type="search" class="form-control" placeholder="Search…" aria-label="Search">
-            <i class="fa fa-search"></i>
-          </div>
+          <form class="d-lg-none mb-3" role="search">
+            <div class="input-group input-group-sm searchbar flex-nowrap">
+              <span class="input-group-text bg-transparent border-0 pe-2">
+                <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <input id="mkdocs-search-mobile"
+                    type="search"
+                    class="form-control border-0 bg-transparent"
+                    placeholder="Search…"
+                    autocomplete="off" />
+            </div>
+          </form>
 
           <!-- Accordion nav -->
           <div class="accordion accordion-flush" id="navAccordion">
@@ -482,8 +511,17 @@
       </div>
     </footer>
 
-    <script type="text/javascript" src="/js/bundle.js" defer></script>
-    <script src="/js/search.min.js" defer></script>
+    <!-- Lunr core -->
+    <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js" defer></script>
+
+    <!-- OPTIONAL: language support (Spanish/Portuguese); keep only what you need -->
+    <script src="https://cdn.jsdelivr.net/npm/lunr-languages@1.4.0/min/lunr.stemmer.support.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/lunr-languages@1.4.0/min/lunr.es.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/lunr-languages@1.4.0/min/lunr.pt.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/lunr-languages@1.4.0/min/lunr.multi.min.js" defer></script>
+
+    <!-- Your search UI/logic (must come after Lunr) -->
+    <script src="/js/osl-search.js" defer></script>
     <script src="/js/theme.js" defer></script>
 
     {% endblock footer %}

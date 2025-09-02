@@ -50,6 +50,7 @@ jobs:
         run: |
           poetry check
           poetry install
+          python -m nltk.downloader punkt
 
       - name: Linter
         if: ${{ github.event_name == 'pull_request' }}

@@ -28,10 +28,13 @@ extra_css:
   - css/utilities.css
 
 extra_javascript:
-  - js/bundle.js
-  - js/search.js
-  - js/index.json
   - js/theme.js
+  - js/osl-search.js
+  - js/vendor/lunr.min.js
+  - js/vendor/lunr.stemmer.support.min.js
+  - js/vendor/lunr.multi.min.js
+  - js/vendor/lunr.es.min.js
+  - js/vendor/lunr.pt.min.js
 
 nav:
   - Blog: "blog/index.md"
@@ -141,3 +144,10 @@ plugins:
       enabled: true
       enable_creation_date: false
       type: iso_date
+
+  - search:
+      lang:
+        - en
+        - es
+        - pt
+      prebuild_index: true

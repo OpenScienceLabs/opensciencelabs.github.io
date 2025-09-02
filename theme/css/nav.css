@@ -162,3 +162,84 @@
 /* Back to top */
 .to_top{ position: fixed; right: 1rem; bottom: 1rem; z-index: 10; opacity: .9; }
 .to_top .icon{ width: 34px; height: 34px; }
+
+
+/* Keep navbar items on one line and let brand | menu | search align properly */
+.navbar > .container-xxl,
+.navbar > .container,
+.navbar > .container-fluid{
+  display: flex;              /* be explicit */
+  flex-wrap: nowrap;          /* no wrapping */
+  align-items: center;        /* vertical centering */
+  justify-content: space-between; /* brand left, last item (search) far right */
+}
+
+
+/* Keep icon + input on one line and vertically centered */
+.navbar .searchbar { flex-wrap: nowrap; align-items: center; }
+
+/* Make the icon sit nicely in light/dark */
+.navbar .searchbar .input-group-text {
+  display: flex; align-items: center;
+  color: var(--nav-link); /* inherits your theme */
+}
+
+/* Size + feel of the field */
+.navbar .searchbar .form-control {
+  min-width: 20rem;           /* adjust as you like */
+  box-shadow: none !important;
+  color: var(--nav-link);
+}
+.navbar .searchbar .form-control::placeholder { opacity: .6; }
+
+/* Tweak for narrower viewports where this form is still visible */
+@media (max-width: 1200px){
+  .navbar .searchbar .form-control { min-width: 14rem; }
+}
+
+/* Prevent navbar wrapping that shoves items to a new row */
+.navbar .container,
+.navbar .container-fluid { flex-wrap: nowrap; align-items: center; }
+
+/* Brand sizing guard — prevents distortion */
+.navbar-brand img {
+  height: 34px;           /* adjust if you prefer 32/36 */
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Search bar: keep icon + field on one line and nice width */
+.navbar .searchbar {
+  flex-wrap: nowrap;
+  align-items: center;
+  width: clamp(12rem, 22vw, 18rem); /* doesn’t push nav items */
+}
+
+/* Icon inside the input group (independent of your global .icon rules) */
+.navbar .searchbar .search-icon {
+  width: 16px; height: 16px;
+  display: block;
+}
+
+/* Field look + colors for dark/light */
+.navbar .searchbar .form-control {
+  box-shadow: none !important;
+  color: var(--nav-link);
+}
+.navbar .searchbar .form-control::placeholder { opacity: .6; }
+
+/* Make sure the text addon inherits theme color */
+.navbar .searchbar .input-group-text {
+  color: var(--nav-link);
+}
+
+/* Slightly shrink on tighter desktops so it never wraps */
+@media (max-width: 1200px){
+  .navbar .searchbar { width: clamp(10rem, 24vw, 14rem); }
+}
+
+/* Let the menu take the middle space so search pushes to the edge */
+@media (min-width: 992px){
+  .navbar .navbar-collapse { flex-grow: 1; }
+}

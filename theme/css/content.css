@@ -28,3 +28,17 @@ blockquote{
 .notices.note{ border-color: var(--notice-note-border-color); background: var(--notice-note-background); }
 .notices.tip{ border-color: var(--notice-tip-border-color); background: var(--notice-tip-background); }
 .notices .highlight_wrap{ background: var(--code-bg) !important; }
+
+/* copy-code button */
+.copy-code { font-size: .75rem; line-height: 1; }
+
+/* heading anchor mark */
+.anchor-link { text-decoration: none; opacity: .6; }
+.anchor-link:hover { opacity: 1; }
+
+/* ensure the back-to-top is perfectly round */
+.to_top {
+  width: 48px; height: 48px; border-radius: 50%;
+  display: grid; place-items: center;
+}
+.to_top .icon { width: 24px; height: 24px; }

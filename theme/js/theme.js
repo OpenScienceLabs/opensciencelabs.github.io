@@ -92,4 +92,118 @@
     setMode: (m) => applyMode(m === 'dim' ? 'dim' : 'lit'),
     clearPreference: () => { try { localStorage.removeItem(STORAGE_KEY); } catch (e) {} }
   };
+
+  // --- Minimal extras formerly in bundle.js ---
+
+  // A) external links => target=_blank, rel=noopener
+  document.querySelectorAll('a[href^="http"]').forEach(a => {
+    try {
+      const url = new URL(a.href);
+      // skip same-origin
+      if (url.origin === window.location.origin) return;
+      if (!a.hasAttribute('target')) a.setAttribute('target', '_blank');
+      if (!a.hasAttribute('rel')) a.setAttribute('rel', 'noopener');
+    } catch (_) {}
+  });
+
+  // B) small “copy code” buttons for pygments blocks (MkDocs default markup)
+  document.querySelectorAll('div.highlight > pre').forEach((pre, i) => {
+    // container for the button
+    const wrap = pre.parentElement; // .highlight
+    wrap.style.position = 'relative';
+
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'btn btn-sm btn-secondary position-absolute top-0 end-0 m-2 copy-code';
+    btn.setAttribute('aria-label', 'Copy code');
+    btn.textContent = 'Copy';
+
+    btn.addEventListener('click', async () => {
+      const code = pre.innerText;
+      try {
+        await navigator.clipboard.writeText(code);
+        const old = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(() => (btn.textContent = old), 1200);
+      } catch (e) {
+        // fallback
+        const ta = document.createElement('textarea');
+        ta.value = code;
+        ta.style.position = 'fixed';
+        ta.style.left = '-9999px';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        const old = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(() => (btn.textContent = old), 1200);
+      }
+    });
+
+    wrap.appendChild(btn);
+  });
+
+  // C) heading anchors (h2–h4) inside main content
+  const contentRoot = document.querySelector('main .content-inner') || document.querySelector('main');
+  if (contentRoot) {
+    contentRoot.querySelectorAll('h2[id], h3[id], h4[id]').forEach(h => {
+      if (h.querySelector('a.anchor-link')) return; // idempotent
+      const a = document.createElement('a');
+      a.href = `#${h.id}`;
+      a.className = 'anchor-link ms-2';
+      a.setAttribute('aria-label', 'Copy link to this section');
+      a.innerHTML = '¶'; // simple mark; you can swap for an SVG if you prefer
+      a.addEventListener('click', (e) => {
+        // let it navigate, then copy
+        setTimeout(() => navigator.clipboard.writeText(window.location.href), 0);
+      });
+      h.appendChild(a);
+    });
+  }
+
+})();
+
+
+// --- Search results link absolutizer ---
+(function () {
+  // Which containers might hold search result links?
+  const candidates = [
+    '.mk-search-results',
+    '.search-results',
+    '#mkdocs-search-results'
+  ];
+
+  function absolutize(href) {
+    if (!href) return href;
+    if (/^([a-z]+:)?\/\//i.test(href)) return href;      // already absolute URL
+    if (href.startsWith('/')) return href;                // already site-absolute
+    return '/' + href.replace(/^\/+/, '');                // make it site-absolute
+  }
+
+  function fixLinks(root = document) {
+    candidates.forEach(sel => {
+      root.querySelectorAll(`${sel} a[href]`).forEach(a => {
+        const fixed = absolutize(a.getAttribute('href'));
+        if (fixed && fixed !== a.getAttribute('href')) a.setAttribute('href', fixed);
+      });
+    });
+  }
+
+  // 1) Run once after DOM ready (in case results render immediately)
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => fixLinks());
+  } else {
+    fixLinks();
+  }
+
+  // 2) Watch for results being (re)rendered
+  const obs = new MutationObserver(muts => {
+    for (const m of muts) {
+      if (m.type === 'childList' && (m.addedNodes && m.addedNodes.length)) {
+        fixLinks(document);
+      }
+    }
+  });
+  obs.observe(document.body, { childList: true, subtree: true });
 })();
