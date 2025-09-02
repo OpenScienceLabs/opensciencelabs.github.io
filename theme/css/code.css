@@ -1,0 +1,41 @@
+/* Code blocks & highlighting wrappers */
+code{
+  font-size: 85%;
+  font-weight: 400;
+  display: inline-block;
+  font-family: Monaco, ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+.highlight{ display: grid; width: 100%; border-radius: 4px; overflow-x: auto; position: relative; }
+.highlight_wrap{
+  background: var(--code-bg) !important;
+  border-radius: .5rem;
+  position: relative;
+  padding: 0 1rem;
+  margin: 1.5rem auto 1rem auto;
+}
+.highlight pre{
+  border-radius: 4px;
+  font-family: Monaco, ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  padding: 1.5rem 10px 2rem 10px;
+}
+
+/* Optional: your magenta theme (comment out to disable) */
+.highlight *{ background: #44002e !important; }
+.language-text.highlight *{ background-color: #333 !important; }
+.language-text.highlight code.noClass{ color: #fff !important; }
+
+/* Token-ish colors (only if you use Pygments/HLJS classes) */
+.k,.kc,.kd,.kn,.kp,.kr,.kt,.nt{ color:#6ab825; font-weight:500; }
+.nb,.no,.nv{ color:#24909d; }
+.nc,.nf,.nn{ color:#447fcf; }
+.s,.sa,.sb,.sc,.dl,.sd,.s2,.se,.sh,.si,.sx,.sr,.s1,.ss{ color:#ed9d13; }
+.m,.mb,.mf,.mh,.mi,.il,.mo{ color:#3677a9; }
+.c,.ch,.cm,.c1{ color:#999; font-style: italic; }
+
+/* Code output helpers */
+.language-text.highlight .output{ padding-bottom: 0; }
+.code-output{ border-top: 10px solid #383838; }
+.code-label{
+  font-size: 18px; border-bottom: 1px solid #fafafa; line-height: 23.4px;
+  position: absolute; right: 25px; margin-top: 15px; color: #fff !important;
+}

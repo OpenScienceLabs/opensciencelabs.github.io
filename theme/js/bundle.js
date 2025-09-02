@@ -589,75 +589,7 @@ function disableCodeLineNumbers(block){
   })();
 })();
 
-;
-(function toggleColorModes(){
-  const light = 'lit';
-  const dark = 'dim';
-  const storageKey = 'colorMode';
-  const key = '--color-mode';
-  const data = 'data-mode';
-  const bank = window.localStorage;
-
-  function currentMode() {
-    let acceptableChars = light + dark;
-    acceptableChars = [...acceptableChars];
-    let mode = getComputedStyle(doc).getPropertyValue(key).replace(/\"/g, '').trim();
-
-    mode = [...mode].filter(function(letter){
-      return acceptableChars.includes(letter);
-    });
-
-    return mode.join('');
-  }
-
-  function changeMode(isDarkMode) {
-    if(isDarkMode) {
-      bank.setItem(storageKey, light)
-      elemAttribute(doc, data, light);
-    } else {
-      bank.setItem(storageKey, dark);
-      elemAttribute(doc, data, dark);
-    }
-  }
-
-  function setUserColorMode(mode = false) {
-    const isDarkMode = currentMode() == dark;
-    const storedMode = bank.getItem(storageKey);
-    if(storedMode) {
-      if(mode) {
-        changeMode(isDarkMode);
-      } else {
-        elemAttribute(doc, data, storedMode);
-      }
-    } else {
-      if(mode === true) {
-        changeMode(isDarkMode)
-      }
-    }
-  }
-
-  setUserColorMode();
-
-  doc.addEventListener('click', function(event) {
-    let target = event.target;
-    let modeClass = 'color_choice';
-    let animateClass = 'color_animate';
-    let isModeToggle = containsClass(target, modeClass);
-    if(isModeToggle) {
-      pushClass(target, animateClass);
-      setUserColorMode(true);
-    }
-  });
-})();
-
 function fileClosure(){
-
-  (function updateDate() {
-    const date = new Date();
-    const year = date.getFullYear();
-    const yearEl = elem('.year');
-    yearEl ? yearEl.innerHTML = `${year}` : false;
-  })();
 
   (function makeExternalLinks(){
     let links = elems('a');
@@ -985,48 +917,6 @@ function fileClosure(){
     horizontalSwipe(doc, toggleTags, 'left');
   })();
 
-  (function navToggle() {
-    doc.addEventListener('click', function(event){
-      const target = event.target;
-      const open = 'jsopen';
-      const navCloseIconClass = '.nav_close';
-      const navClose = elem(navCloseIconClass);
-      const isNavToggle = target.matches(navCloseIconClass) || target.closest(navCloseIconClass);
-      const harmburgerIcon = navClose.firstElementChild.firstElementChild;
-      if(isNavToggle) {
-        event.preventDefault();
-        modifyClass(doc, open);
-        modifyClass(harmburgerIcon, 'isopen');
-      }
-
-      if(!target.closest('.nav') && elem(`.${open}`)) {
-        modifyClass(doc, open);
-        let navIsOpen = containsClass(doc, open);
-        !navIsOpen  ? modifyClass(harmburgerIcon, 'isopen') : false;
-      }
-
-      const navItem = 'nav_item';
-      const navSub = 'nav_sub';
-      const showSub = 'nav_open';
-      const isNavItem = target.matches(`.${navItem}`);
-      const isNavItemIcon = target.closest(`.${navItem}`)
-
-      if(isNavItem || isNavItemIcon) {
-        const thisItem = isNavItem ? target : isNavItemIcon;
-        const hasNext = thisItem.nextElementSibling
-        const hasSubNav = hasNext ? hasNext.matches(`.${navSub}`) : null;
-        if (hasSubNav) {
-          event.preventDefault();
-          Array.from(thisItem.parentNode.parentNode.children).forEach(function(item){
-            const targetItem = item.firstElementChild;
-            targetItem != thisItem ? deleteClass(targetItem, showSub) : false;
-          });
-          modifyClass(thisItem, showSub);
-        }
-      }
-    });
-  })();
-
   function isMobileDevice() {
     const agent = navigator.userAgent.toLowerCase();
     const isMobile = agent.includes('android') || agent.includes('iphone');
@@ -1085,7 +975,7 @@ function fileClosure(){
   // add new code above this line
 }
 
-window.addEventListener(pageHasLoaded, fileClosure());
+window.addEventListener(pageHasLoaded, fileClosure);
 
 ;
 // add custom js in this file
