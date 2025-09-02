@@ -1,0 +1,75 @@
+footer.footer{
+  margin-top: 3rem;
+  border-top: 1px solid var(--nav-border);
+  background: rgba(255,255,255,.02);
+}
+.footer_inner{
+  display: flex; gap: 1rem; align-items: center; justify-content: space-between;
+  padding: 1.25rem 0;
+}
+.footer_inner .icon{ width: 22px; height: 22px; fill: var(--fg); opacity: .85; }
+.footer_inner .icon:hover{ opacity: 1; }
+.badge-updated{
+  background: rgba(255,255,255,.08);
+  color: var(--muted);
+  border-radius: .5rem;
+  padding: .35rem .6rem;
+}
+
+/* ========== Color mode toggle (footer) ========== */
+.color_mode{
+  display:flex;
+  align-items:center;
+  min-height:28px;
+}
+
+/* The switch “track” */
+.color_choice{
+  width:48px;
+  height:24px;
+  appearance:none;
+  -webkit-appearance:none;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:999px;
+  position:relative;
+  cursor:pointer;
+  outline:none;
+  display:inline-block;
+}
+
+/* The “knob” */
+.color_choice::after{
+  content:"";
+  position:absolute;
+  top:2px;
+  left:2px;
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  background:#fff;
+  box-shadow:0 2px 8px rgba(0,0,0,.25);
+  transform:translateX(0);
+  transition:transform .22s ease, background .22s ease;
+}
+
+/* Dark mode: move knob right */
+html[data-mode="dim"] .color_choice::after{
+  transform:translateX(24px);
+}
+
+/* Optional: show a subtle sun/moon via emojis (no images needed) */
+.color_choice:before{
+  content:"☀️";
+  position:absolute;
+  left:8px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:11px;
+  opacity:.8;
+}
+html[data-mode="dim"] .color_choice:before{
+  content:"🌙";
+  left:auto;
+  right:6px;
+}

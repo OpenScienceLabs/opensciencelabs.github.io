@@ -1,0 +1,38 @@
+/* Reset & base layout */
+* { box-sizing: border-box; -webkit-appearance: none; }
+html, body { min-height: 100%; }
+html { scroll-padding-top: 4.5rem; }
+body{
+  background: var(--bg);
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  position: relative;
+}
+
+/* One fixed background layer to avoid “banding” on long pages */
+body::before{
+  content:"";
+  position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, var(--glow-1), transparent 60%),
+    radial-gradient(900px 500px at 110% 10%, var(--glow-2), transparent 60%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Typography */
+a{ color: var(--brand); text-decoration: none; }
+a:hover{ color: var(--brand-2); }
+h1,h2,h3,h4,h5,h6{ font-weight: 300; line-height: 1.35; margin: 15px 0 5px; }
+h1{ font-size: 175%; font-weight: 400; }
+h2{ font-size: 150%; } h3{ font-size: 130%; } h4{ font-size: 120%; } h5{ font-size: 110%; } h6{ font-size: 100%; }
+p{ padding: .8rem 0 0 0; }
+
+/* Media */
+img, svg{ max-width: 100%; height: auto; vertical-align: middle; }
+.logo{ height: 34px; }
+
+/* Containers */
+.container-xxl{ max-width: 1200px; }
+.content-inner{ padding-top: 2rem; padding-bottom: 4rem; }

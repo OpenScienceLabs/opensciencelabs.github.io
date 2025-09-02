@@ -1,0 +1,169 @@
+/* ---------- Hero ---------- */
+.home-hero{
+  position: relative;
+  isolation: isolate;
+  background-image:
+    var(--hero-overlay, linear-gradient(to bottom right, rgba(0,0,0,.55), rgba(0,0,0,.35))),
+    var(--hero-image);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  border-radius: var(--radius, 12px);
+  overflow: hidden;
+  margin-top: 1rem;
+}
+[data-bs-theme="light"] .home-hero{
+  --hero-overlay: linear-gradient(to bottom right, rgba(0,0,0,.55), rgba(0,0,0,.30));
+}
+[data-bs-theme="dark"] .home-hero{
+  --hero-overlay: linear-gradient(to bottom right, rgba(0,0,0,.60), rgba(0,0,0,.45));
+}
+.home-hero .eyebrow{
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  opacity: .85;
+}
+.home-hero h1{
+  text-wrap: balance;
+}
+.home-hero .lead{
+  max-width: 52ch;
+  opacity: .9;
+}
+.hero-bullets{
+  list-style: none; padding: 0; margin: 0;
+  display: flex; flex-wrap: wrap; gap: .75rem 1.25rem;
+  opacity: .95;
+}
+.hero-bullets .dot{
+  display: inline-block; width: .5rem; height: .5rem; border-radius: 50%;
+  background: var(--brand, #4ea1ff); margin-right: .5rem;
+  transform: translateY(-.1rem);
+}
+
+/* ---------- Cards / tiles ---------- */
+.home-card{
+  background: var(--surface, rgba(255,255,255,.06));
+  border: 1px solid var(--card-border, rgba(255,255,255,.12));
+  border-radius: var(--radius, 12px);
+  padding: 1.25rem 1.25rem;
+}
+[data-bs-theme="light"] .home-card{
+  --surface: #fff;
+  --card-border: rgba(0,0,0,.08);
+}
+.home-tile{
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: var(--radius, 12px);
+  border: 1px solid var(--card-border, rgba(255,255,255,.12));
+  background: var(--surface, rgba(255,255,255,.06));
+  transition: transform .12s ease, border-color .12s ease, box-shadow .12s ease;
+}
+.home-tile:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.15);
+  border-color: var(--brand, #4ea1ff);
+}
+.home-tile .tile-body{ padding: 1.25rem 1.25rem; }
+
+/* ---------- Section title ---------- */
+.section-title{
+  margin-bottom: .25rem;
+}
+
+/* ---------- Logo grid ---------- */
+.logo-grid{
+  --cols: 6;
+  list-style: none; padding: 0; margin: 0;
+  display: grid; gap: 1rem;
+  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+}
+@media (max-width: 1200px){ .logo-grid{ --cols: 5; } }
+@media (max-width: 992px){ .logo-grid{ --cols: 4; } }
+@media (max-width: 768px){ .logo-grid{ --cols: 3; } }
+@media (max-width: 576px){ .logo-grid{ --cols: 2; } }
+
+.logo-item{
+  border: 1px solid var(--card-border, rgba(255,255,255,.12));
+  background: var(--surface, rgba(255,255,255,.04));
+  border-radius: var(--radius, 12px);
+  padding: .75rem .75rem 1rem;
+  text-align: center;
+  transition: transform .12s ease, border-color .12s ease;
+}
+.logo-item:hover{
+  transform: translateY(-2px);
+  border-color: var(--brand, #4ea1ff);
+}
+.logo-item img{
+  max-width: 100%;
+  max-height: 52px;
+  object-fit: contain;
+  filter: saturate(.95);
+}
+.logo-caption{
+  display: block;
+  font-size: .85rem;
+  opacity: .8;
+  margin-top: .35rem;
+}
+
+/* ---------- CTA banner ---------- */
+.cta-banner{
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; flex-wrap: wrap;
+  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+  border: 1px solid var(--card-border, rgba(255,255,255,.12));
+  border-radius: var(--radius, 12px);
+  padding: 1.25rem 1.25rem;
+}
+[data-bs-theme="light"] .cta-banner{
+  background: linear-gradient(180deg, #ffffff, #fafafa);
+}
+
+/* ---------- Fix “Back to top” button shape (site-wide safe) ---------- */
+.to_top{
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(0,0,0,.35);
+  box-shadow: 0 6px 20px rgba(0,0,0,.25);
+}
+[data-bs-theme="light"] .to_top{ background: rgba(255,255,255,.85); }
+.to_top .icon{ width: 22px; height: 22px; }
+
+/* ===================== Light-mode contrast boost ===================== */
+/* Stronger borders, solid white surfaces, and a subtle elevation */
+[data-bs-theme="light"] .home-card,
+[data-bs-theme="light"] .home-tile,
+[data-bs-theme="light"] .logo-item,
+[data-bs-theme="light"] .cta-banner{
+  --surface: #ffffff;
+  --card-border: rgba(0,0,0,.14);                 /* was ~.08 */
+  background-color: #ffffff;
+  border-color: rgba(0,0,0,.14);
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+
+/* Hover elevation + clearer edge */
+[data-bs-theme="light"] .home-tile:hover,
+[data-bs-theme="light"] .home-card:hover,
+[data-bs-theme="light"] .logo-item:hover{
+  box-shadow: 0 10px 24px rgba(0,0,0,.12);
+  border-color: rgba(0,0,0,.22);
+}
+
+/* Type color tweaks for better legibility on white */
+[data-bs-theme="light"] .section-title{ color:#111827; }        /* near-black */
+[data-bs-theme="light"] .home-card,
+[data-bs-theme="light"] .home-tile .tile-body{ color:#24292f; } /* body text */
+[data-bs-theme="light"] .cta-banner{
+  background: linear-gradient(180deg, #ffffff, #f7f7f8);        /* more contrast */
+}
+
+/* (optional) tone the “secondary” copy up a bit only inside home sections */
+[data-bs-theme="light"] section .text-secondary{ color:#4b5563 !important; }

@@ -16,61 +16,70 @@ theme:
     primary: indigo
 
 extra_css:
-  - css/style.css
-  - css/index.css
+  - css/base.css
+  - css/blog.css
+  - css/code.css
+  - css/content.css
+  - css/footer.css
+  - css/home.css
+  - css/nav.css
+  - css/search.css
+  - css/tokens.css
+  - css/utilities.css
 
 extra_javascript:
-  - js/bundle.js
-  - js/search.js
-  - js/index.json
+  - js/theme.js
+  - js/osl-search.js
+  - js/vendor/lunr.min.js
+  - js/vendor/lunr.stemmer.support.min.js
+  - js/vendor/lunr.multi.min.js
+  - js/vendor/lunr.es.min.js
+  - js/vendor/lunr.pt.min.js
 
 nav:
   - Blog: "blog/index.md"
   - Projects:
-      - index: "projects/index.md"
+      - Overview: "projects/index.md"
       - Incubation: "projects/incubation/index.md"
-      - Affiliation:
-          - index: "projects/affiliation/index.md"
+      - Affiliation: "projects/affiliation/index.md"
       - All Projects: "projects/list/index.md"
   - Opportunities:
-      - index: opportunities/index.md
+      - Overview: opportunities/index.md
       - OSS Internship:
-          - index: "opportunities/internships/oss/index.md"
+          - Overview: "opportunities/internships/oss/index.md"
           - Project Ideas: "opportunities/internships/oss/project-ideas/index.md"
           - "Contribution Guidelines": "opportunities/guides/contribution/index.md"
           - "Candidates' Guide": "opportunities/internships/guides/interns/index.md"
           - "Template: Projects Ideas": "opportunities/internships/templates/projects-ideas/index.md"
           - "Template: Candidates's Project Proposal": "opportunities/internships/templates/candidate-proposal/index.md"
       - OSS Research Seed Internship:
-          - index: "opportunities/internships/oss-research-seed/index.md"
+          - Overview: "opportunities/internships/oss-research-seed/index.md"
           - Project Ideas: "opportunities/internships/oss-research-seed/project-ideas/index.md"
           - "Contribution Guidelines": "opportunities/guides/contribution/index.md"
           - "Candidates' Guide": "opportunities/internships/guides/interns/index.md"
           - "Template: Projects Ideas": "opportunities/internships/templates/projects-ideas/index.md"
           - "Template: Candidates's Project Proposal": "opportunities/internships/templates/candidate-proposal/index.md"
       - Google Summer of Code:
-          - index: "opportunities/gsoc/index.md"
+          - Overview: "opportunities/gsoc/index.md"
           - Project Ideas: "opportunities/gsoc/project-ideas/index.md"
           - "Contribution Guidelines": "opportunities/guides/contribution/index.md"
           - "Candidates' Guide": "opportunities/gsoc/guides/contributor/index.md"
           - "Template: Project Idea": "opportunities/gsoc/templates/project-ideas.md"
           - "Template: Candidates Project Proposal": "opportunities/gsoc/templates/contributor-proposal.md"
   - Partnership:
-      - index: "partnership/index.md"
+      - Overview: "partnership/index.md"
       - Partners: "partnership/partners/index.md"
       - Open Proposals:
-          - index: "partnership/open-proposals/index.md"
-          - Community Traning: "partnership/open-proposals/community-training/index.md"
+          - Overview: "partnership/open-proposals/index.md"
+          - Community Training: "partnership/open-proposals/community-training/index.md"
   - Learning:
-      - index: learning/index.md
-      - Events:
-          - index: learning/events/index.md
-      - Study Groups:
-          - index: learning/study-groups/index.md
+      - Overview: learning/index.md
+      - Events: learning/events/index.md
+      - Study Groups: learning/study-groups/index.md
   - About:
-      - index: "about/index.md"
+      - Overview: "about/index.md"
       - About OSL:
-          - index: "about/index.md"
+          - Overview: "about/index.md"
           - Contact Us: about/contact/index.md
           - Our Formula: "about/formula/index.md"
           - Roadmap: about/roadmap/index.md
@@ -79,7 +88,7 @@ nav:
       - Team: about/team/index.md
       - Fiscal Sponsor: about/fiscal-sponsor/index.md
       - Guidelines:
-          - index: about/guidelines/index.md
+          - Overview: about/guidelines/index.md
           - Articles: about/guidelines/articles/index.md
           - DEI: about/guidelines/dei/index.md
           - Mentoring: about/guidelines/mentoring/index.md
@@ -135,3 +144,10 @@ plugins:
       enabled: true
       enable_creation_date: false
       type: iso_date
+
+  - search:
+      lang:
+        - en
+        - es
+        - pt
+      prebuild_index: true
