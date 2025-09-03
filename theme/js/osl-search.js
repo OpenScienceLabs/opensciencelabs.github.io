@@ -4,17 +4,17 @@
 */
 
 (function () {
-  "use strict";
+  'use strict';
 
-  const INDEX_URL = "/search/search_index.json";
+  const INDEX_URL = '/search/search_index.json';
   const MAX_RESULTS = 8;
   const MIN_QUERY_LEN = 2;
 
   // Internal state (built once)
-  let _docs = null; // array of { title, text, location }
-  let _byRef = null; // Map(location -> doc)
-  let _idx = null; // lunr.Index
-  let _building = null; // build promise (avoid duplicate builds)
+  let _docs = null;           // array of { title, text, location }
+  let _byRef = null;          // Map(location -> doc)
+  let _idx = null;            // lunr.Index
+  let _building = null;       // build promise (avoid duplicate builds)
 
   // --- Utilities -----------------------------------------------------------
 
@@ -23,11 +23,11 @@
     // keep full URLs as-is
     if (/^([a-z]+:)?\/\//i.test(href)) return href;
     // force site-rooted path
-    return "/" + href.replace(/^\/+/, "");
+    return '/' + href.replace(/^\/+/, '');
   }
 
   function injectBaseStylesOnce() {
-    if (document.getElementById("osl-search-styles")) return;
+    if (document.getElementById('osl-search-styles')) return;
     const css = `
       .osl-search-panel {
         position: absolute;
@@ -123,8 +123,8 @@
         visibility: hidden;
       }
     `;
-    const style = document.createElement("style");
-    style.id = "osl-search-styles";
+    const style = document.createElement('style');
+    style.id = 'osl-search-styles';
     style.textContent = css;
     document.head.appendChild(style);
   }
@@ -132,17 +132,17 @@
   async function ensureLunrReady() {
     if (window.lunr) return;
     await new Promise((resolve) => {
-      if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", resolve, { once: true });
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', resolve, { once: true });
       } else {
         setTimeout(resolve, 0);
       }
     });
-    if (!window.lunr) throw new Error("Lunr failed to load");
+    if (!window.lunr) throw new Error('Lunr failed to load');
   }
 
   async function fetchIndexJSON() {
-    const res = await fetch(INDEX_URL, { credentials: "same-origin" });
+    const res = await fetch(INDEX_URL, { credentials: 'same-origin' });
     if (!res.ok) throw new Error(`Failed to fetch ${INDEX_URL}: ${res.status}`);
     const json = await res.json();
     // MkDocs "search" plugin typically returns { docs: [...] }
@@ -151,22 +151,22 @@
 
   function normalizeDocs(arr) {
     return arr.map((d) => ({
-      title: d.title || "",
-      text: d.text || "",
-      location: d.location || "",
+      title: d.title || '',
+      text: d.text || '',
+      location: d.location || '',
     }));
   }
 
   function buildSnippet(text, rawQuery) {
-    if (!text) return "";
-    const q = (rawQuery || "").trim();
+    if (!text) return '';
+    const q = (rawQuery || '').trim();
     const MAX = 160;
-    if (!q) return text.slice(0, MAX) + (text.length > MAX ? "…" : "");
+    if (!q) return text.slice(0, MAX) + (text.length > MAX ? '…' : '');
 
     // find first occurrence of any term (basic, case-insensitive)
     const terms = q.split(/\s+/).filter(Boolean);
     let hit = -1,
-      termUsed = "";
+      termUsed = '';
     for (const t of terms) {
       const idx = text.toLowerCase().indexOf(t.toLowerCase());
       if (idx !== -1 && (hit === -1 || idx < hit)) {
@@ -175,26 +175,26 @@
       }
     }
     if (hit === -1) {
-      return text.slice(0, MAX) + (text.length > MAX ? "…" : "");
+      return text.slice(0, MAX) + (text.length > MAX ? '…' : '');
     }
     const start = Math.max(0, hit - 40);
     const end = Math.min(text.length, hit + 120);
     let snip =
-      (start > 0 ? "…" : "") +
+      (start > 0 ? '…' : '') +
       text.slice(start, end) +
-      (end < text.length ? "…" : "");
+      (end < text.length ? '…' : '');
 
     // simple highlight for all terms
     terms.forEach((t) => {
       if (!t) return;
-      const re = new RegExp(`(${escapeRegExp(t)})`, "ig");
+      const re = new RegExp(`(${escapeRegExp(t)})`, 'ig');
       snip = snip.replace(re, '<span class="osl-search-mark">$1</span>');
     });
     return snip;
   }
 
   function escapeRegExp(s) {
-    return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   }
 
   async function ensureIndex() {
@@ -209,15 +209,15 @@
       _byRef = new Map(_docs.map((d) => [d.location, d]));
 
       // Build index
-      const hasMulti = typeof lunr.multiLanguage === "function";
+      const hasMulti = typeof lunr.multiLanguage === 'function';
       _idx = lunr(function () {
         if (hasMulti) {
           // Adjust languages if you only need some of them
-          this.use(lunr.multiLanguage("en", "es", "pt"));
+          this.use(lunr.multiLanguage('en', 'es', 'pt'));
         }
-        this.ref("location");
-        this.field("title", { boost: 10 });
-        this.field("text");
+        this.ref('location');
+        this.field('title', { boost: 10 });
+        this.field('text');
 
         _docs.forEach((doc) => this.add(doc));
       });
@@ -241,8 +241,8 @@
     if (!/[~^*]/.test(q))
       q = q
         .split(/\s+/)
-        .map((t) => t + "*")
-        .join(" ");
+        .map((t) => t + '*')
+        .join(' ');
     let hits = [];
     try {
       hits = _idx.search(q);
@@ -266,10 +266,10 @@
   // --- UI (panel) ---------------------------------------------------------
 
   function mkPanel() {
-    const div = document.createElement("div");
-    div.className = "osl-search-panel";
-    div.setAttribute("role", "listbox");
-    div.style.display = "none";
+    const div = document.createElement('div');
+    div.className = 'osl-search-panel';
+    div.setAttribute('role', 'listbox');
+    div.style.display = 'none';
     document.body.appendChild(div);
     return div;
   }
@@ -285,29 +285,29 @@
   }
 
   function renderResults(panel, items, rawQuery) {
-    panel.innerHTML = "";
+    panel.innerHTML = '';
     if (!items.length) {
-      const empty = document.createElement("div");
-      empty.className = "osl-search-empty";
+      const empty = document.createElement('div');
+      empty.className = 'osl-search-empty';
       empty.textContent =
         rawQuery && rawQuery.length >= MIN_QUERY_LEN
-          ? "No results"
-          : "Type to search…";
+          ? 'No results'
+          : 'Type to search…';
       panel.appendChild(empty);
       return;
     }
     items.forEach(({ doc }, idx) => {
-      const a = document.createElement("a");
-      a.className = "osl-search-item";
+      const a = document.createElement('a');
+      a.className = 'osl-search-item';
       a.href = toAbsolute(doc.location);
 
-      const title = document.createElement("div");
-      title.className = "osl-search-title";
-      title.innerHTML = doc.title || "(untitled)";
+      const title = document.createElement('div');
+      title.className = 'osl-search-title';
+      title.innerHTML = doc.title || '(untitled)';
 
-      const snip = document.createElement("p");
-      snip.className = "osl-search-snippet";
-      snip.innerHTML = buildSnippet(doc.text || "", rawQuery);
+      const snip = document.createElement('p');
+      snip.className = 'osl-search-snippet';
+      snip.innerHTML = buildSnippet(doc.text || '', rawQuery);
 
       a.appendChild(title);
       a.appendChild(snip);
@@ -317,30 +317,30 @@
   }
 
   function activateItem(panel, nextIndex) {
-    const items = Array.from(panel.querySelectorAll(".osl-search-item"));
+    const items = Array.from(panel.querySelectorAll('.osl-search-item'));
     if (!items.length) return -1;
-    items.forEach((el) => el.classList.remove("is-active"));
+    items.forEach((el) => el.classList.remove('is-active'));
     const idx = Math.max(0, Math.min(nextIndex, items.length - 1));
-    items[idx].classList.add("is-active");
-    items[idx].scrollIntoView({ block: "nearest" });
+    items[idx].classList.add('is-active');
+    items[idx].scrollIntoView({ block: 'nearest' });
     return idx;
   }
 
   function currentActiveIndex(panel) {
-    const active = panel.querySelector(".osl-search-item.is-active");
+    const active = panel.querySelector('.osl-search-item.is-active');
     return active ? parseInt(active.dataset.index, 10) : -1;
   }
 
   function navigateActive(panel) {
     const active =
-      panel.querySelector(".osl-search-item.is-active") ||
-      panel.querySelector(".osl-search-item");
+      panel.querySelector('.osl-search-item.is-active') ||
+      panel.querySelector('.osl-search-item');
     if (active) window.location.assign(active.href);
   }
 
   function closePanel(panel) {
-    panel.style.display = "none";
-    panel.innerHTML = "";
+    panel.style.display = 'none';
+    panel.innerHTML = '';
   }
 
   // --- Per-input wiring ----------------------------------------------------
@@ -350,36 +350,36 @@
     inputEl.__oslWired__ = true;
 
     // Add ARIA attributes
-    inputEl.setAttribute("role", "searchbox");
-    inputEl.setAttribute("aria-label", "Search");
-    inputEl.setAttribute("aria-expanded", "false");
+    inputEl.setAttribute('role', 'searchbox');
+    inputEl.setAttribute('aria-label', 'Search');
+    inputEl.setAttribute('aria-expanded', 'false');
 
     injectBaseStylesOnce();
     const panel = mkPanel();
-    let lastQuery = "";
+    let lastQuery = '';
     let lastActive = -1;
 
     function openPanel() {
       positionPanel(panel, inputEl);
-      panel.style.display = "block";
-      inputEl.setAttribute("aria-expanded", "true");
+      panel.style.display = 'block';
+      inputEl.setAttribute('aria-expanded', 'true');
     }
 
     function updatePosition() {
-      if (panel.style.display !== "none") positionPanel(panel, inputEl);
+      if (panel.style.display !== 'none') positionPanel(panel, inputEl);
     }
 
     function closePanel(panel) {
-      panel.style.display = "none";
-      panel.innerHTML = "";
-      inputEl.setAttribute("aria-expanded", "false");
+      panel.style.display = 'none';
+      panel.innerHTML = '';
+      inputEl.setAttribute('aria-expanded', 'false');
     }
     // Debounce to keep it snappy
     let t = null;
     function onInput() {
       clearTimeout(t);
       t = setTimeout(async () => {
-        const q = inputEl.value || "";
+        const q = inputEl.value || '';
         lastQuery = q;
         if (q.trim().length < MIN_QUERY_LEN) {
           renderResults(panel, [], q);
@@ -394,7 +394,7 @@
           openPanel();
           lastActive = activateItem(panel, 0);
         } catch (e) {
-          console.warn("[OSL Search] failed:", e);
+          console.warn('[OSL Search] failed:', e);
           renderResults(panel, [], q);
           openPanel();
         }
@@ -403,24 +403,24 @@
 
     function onKey(e) {
       if (
-        panel.style.display === "none" &&
-        (e.key === "ArrowDown" || e.key === "ArrowUp")
+        panel.style.display === 'none' &&
+        (e.key === 'ArrowDown' || e.key === 'ArrowUp')
       ) {
         openPanel();
       }
       switch (e.key) {
-        case "ArrowDown":
+        case 'ArrowDown':
           e.preventDefault();
           lastActive = activateItem(panel, currentActiveIndex(panel) + 1);
           break;
-        case "ArrowUp":
+        case 'ArrowUp':
           e.preventDefault();
           lastActive = activateItem(panel, currentActiveIndex(panel) - 1);
           break;
-        case "Enter":
+        case 'Enter':
           // If the panel is open and we have results, navigate the active item
-          if (panel.style.display !== "none") {
-            const anyItem = panel.querySelector(".osl-search-item");
+          if (panel.style.display !== 'none') {
+            const anyItem = panel.querySelector('.osl-search-item');
             if (anyItem) {
               e.preventDefault();
               navigateActive(panel);
@@ -428,16 +428,16 @@
             }
           }
           break;
-        case "Escape":
+        case 'Escape':
           closePanel(panel);
           break;
       }
     }
 
     function onFocus() {
-      if ((inputEl.value || "").trim().length >= 0) {
+      if ((inputEl.value || '').trim().length >= 0) {
         updatePosition();
-        panel.style.display = "block";
+        panel.style.display = 'block';
       }
     }
 
@@ -449,8 +449,8 @@
     }
 
     // Clicks inside panel: follow links, also set active on hover
-    panel.addEventListener("mousemove", (e) => {
-      const a = e.target.closest(".osl-search-item");
+    panel.addEventListener('mousemove', (e) => {
+      const a = e.target.closest('.osl-search-item');
       if (a && panel.contains(a)) {
         const idx = parseInt(a.dataset.index, 10);
         if (!Number.isNaN(idx)) {
@@ -458,8 +458,8 @@
         }
       }
     });
-    panel.addEventListener("click", (e) => {
-      const a = e.target.closest("a.osl-search-item");
+    panel.addEventListener('click', (e) => {
+      const a = e.target.closest('a.osl-search-item');
       if (!a) return;
       e.preventDefault();
       window.location.assign(a.href);
@@ -467,31 +467,31 @@
     });
 
     // Outside click closes panel
-    document.addEventListener("click", (e) => {
+    document.addEventListener('click', (e) => {
       if (e.target === inputEl) return;
       if (panel.contains(e.target)) return;
       if (!panel.contains(e.target)) closePanel(panel);
     });
 
     // Reposition on scroll/resize
-    window.addEventListener("scroll", updatePosition, { passive: true });
-    window.addEventListener("resize", updatePosition);
+    window.addEventListener('scroll', updatePosition, { passive: true });
+    window.addEventListener('resize', updatePosition);
 
-    inputEl.setAttribute("autocomplete", "off");
-    inputEl.addEventListener("input", onInput);
-    inputEl.addEventListener("keydown", onKey);
-    inputEl.addEventListener("focus", onFocus);
-    inputEl.addEventListener("blur", onBlur);
+    inputEl.setAttribute('autocomplete', 'off');
+    inputEl.addEventListener('input', onInput);
+    inputEl.addEventListener('keydown', onKey);
+    inputEl.addEventListener('focus', onFocus);
+    inputEl.addEventListener('blur', onBlur);
   }
 
   function setupKeyboardShortcuts() {
-    document.addEventListener("keydown", (e) => {
+    document.addEventListener('keydown', (e) => {
       // Check for Ctrl+K or Cmd+K
-      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
         e.preventDefault();
         const searchInput =
-          document.getElementById("mkdocs-search") ||
-          document.getElementById("mkdocs-search-mobile");
+          document.getElementById('mkdocs-search') ||
+          document.getElementById('mkdocs-search-mobile');
         if (searchInput) {
           searchInput.focus();
         }
@@ -506,30 +506,30 @@
   };
 
   // Optional: auto-wire known fields if present
-  document.addEventListener("DOMContentLoaded", () => {
-    const desktop = document.getElementById("mkdocs-search");
-    const mobile = document.getElementById("mkdocs-search-mobile");
+  document.addEventListener('DOMContentLoaded', () => {
+    const desktop = document.getElementById('mkdocs-search');
+    const mobile = document.getElementById('mkdocs-search-mobile');
 
     if (desktop) {
       // Wrap search input in container
-      const container = document.createElement("div");
-      container.className = "search-container";
+      const container = document.createElement('div');
+      container.className = 'search-container';
       desktop.parentNode.insertBefore(container, desktop);
       container.appendChild(desktop);
 
       wireInput(desktop);
 
       // Add keyboard shortcut hint inside container
-      const hint = document.createElement("span");
-      hint.className = "search-hint";
-      hint.textContent = navigator.platform.includes("Mac") ? "⌘K" : "Ctrl+K";
+      const hint = document.createElement('span');
+      hint.className = 'search-hint';
+      hint.textContent = navigator.platform.includes('Mac') ? '⌘K' : 'Ctrl+K';
       container.appendChild(hint);
     }
 
     if (mobile) {
       // Wrap mobile search input in container
-      const container = document.createElement("div");
-      container.className = "search-container";
+      const container = document.createElement('div');
+      container.className = 'search-container';
       mobile.parentNode.insertBefore(container, mobile);
       container.appendChild(mobile);
 
