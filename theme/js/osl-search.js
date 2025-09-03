@@ -72,7 +72,7 @@
       }
       .osl-search-mark { background: rgba(255, 208, 0, .35); border-radius: .2rem; }
 
-      /* Enhanced focus and outline styles */
+      /* Added outline and keyboard focus enhancements */
       #mkdocs-search,
       #mkdocs-search-mobile {
         outline: 1px solid #e0e0e0;
