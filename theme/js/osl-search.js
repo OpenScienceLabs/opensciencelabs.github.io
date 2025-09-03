@@ -71,6 +71,57 @@
         opacity: .8;
       }
       .osl-search-mark { background: rgba(255, 208, 0, .35); border-radius: .2rem; }
+
+      /* Added outline and keyboard focus enhancements */
+      #mkdocs-search,
+      #mkdocs-search-mobile {
+        outline: 1px solid #e0e0e0;
+        outline-offset: 2px;
+        transition: all 0.2s ease;
+        border: 1px solid var(--border-color, rgba(255,255,255,.12));
+        border-radius: 6px;
+      }
+
+      #mkdocs-search:hover,
+      #mkdocs-search-mobile:hover {
+        border-color: var(--md-primary-fg-color, #1976d2);
+      }
+
+      #mkdocs-search:focus,
+      #mkdocs-search-mobile:focus {
+        outline: 2px solid var(--md-primary-fg-color, #1976d2);
+        border-color: var(--md-primary-fg-color, #1976d2);
+        box-shadow: 0 0 0 4px var(--md-primary-fg-color-transparent, rgba(25, 118, 210, 0.1));
+      }
+
+      /* Search container styles */
+      .search-container {
+        position: relative;
+        display: inline-block;
+      }
+
+      .search-container:focus-within .search-hint {
+        opacity: 1;
+      }
+
+      /* Add keyboard shortcut hint */
+      .search-hint {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 12px;
+        opacity: 0.6;
+        pointer-events: none;
+        transition: opacity 0.2s ease;
+      }
+
+      /* Hide hint when input has content */
+      .search-container input:not(:placeholder-shown) + .search-hint,
+      .search-container input:focus + .search-hint {
+        opacity: 0;
+        visibility: hidden;
+      }
     `;
     const style = document.createElement('style');
     style.id = 'osl-search-styles';
@@ -95,14 +146,14 @@
     if (!res.ok) throw new Error(`Failed to fetch ${INDEX_URL}: ${res.status}`);
     const json = await res.json();
     // MkDocs "search" plugin typically returns { docs: [...] }
-    return Array.isArray(json) ? json : (json.docs || []);
+    return Array.isArray(json) ? json : json.docs || [];
   }
 
   function normalizeDocs(arr) {
-    return arr.map(d => ({
+    return arr.map((d) => ({
       title: d.title || '',
       text: d.text || '',
-      location: d.location || ''
+      location: d.location || '',
     }));
   }
 
@@ -114,20 +165,27 @@
 
     // find first occurrence of any term (basic, case-insensitive)
     const terms = q.split(/\s+/).filter(Boolean);
-    let hit = -1, termUsed = '';
+    let hit = -1,
+      termUsed = '';
     for (const t of terms) {
       const idx = text.toLowerCase().indexOf(t.toLowerCase());
-      if (idx !== -1 && (hit === -1 || idx < hit)) { hit = idx; termUsed = t; }
+      if (idx !== -1 && (hit === -1 || idx < hit)) {
+        hit = idx;
+        termUsed = t;
+      }
     }
     if (hit === -1) {
       return text.slice(0, MAX) + (text.length > MAX ? '…' : '');
     }
     const start = Math.max(0, hit - 40);
     const end = Math.min(text.length, hit + 120);
-    let snip = (start > 0 ? '…' : '') + text.slice(start, end) + (end < text.length ? '…' : '');
+    let snip =
+      (start > 0 ? '…' : '') +
+      text.slice(start, end) +
+      (end < text.length ? '…' : '');
 
     // simple highlight for all terms
-    terms.forEach(t => {
+    terms.forEach((t) => {
       if (!t) return;
       const re = new RegExp(`(${escapeRegExp(t)})`, 'ig');
       snip = snip.replace(re, '<span class="osl-search-mark">$1</span>');
@@ -148,7 +206,7 @@
 
       const raw = await fetchIndexJSON();
       _docs = normalizeDocs(raw);
-      _byRef = new Map(_docs.map(d => [d.location, d]));
+      _byRef = new Map(_docs.map((d) => [d.location, d]));
 
       // Build index
       const hasMulti = typeof lunr.multiLanguage === 'function';
@@ -161,7 +219,7 @@
         this.field('title', { boost: 10 });
         this.field('text');
 
-        _docs.forEach(doc => this.add(doc));
+        _docs.forEach((doc) => this.add(doc));
       });
 
       return _idx;
@@ -180,18 +238,29 @@
     // Keep it simple; allow prefix matches
     let q = query.trim();
     // Improve small queries a bit: foo -> foo*
-    if (!/[~^*]/.test(q)) q = q.split(/\s+/).map(t => t + '*').join(' ');
+    if (!/[~^*]/.test(q))
+      q = q
+        .split(/\s+/)
+        .map((t) => t + '*')
+        .join(' ');
     let hits = [];
     try {
       hits = _idx.search(q);
     } catch (e) {
       // fallback: plain search without wildcard if syntax error
-      try { hits = _idx.search(query); } catch (_e) { hits = []; }
+      try {
+        hits = _idx.search(query);
+      } catch (_e) {
+        hits = [];
+      }
     }
-    return hits.slice(0, MAX_RESULTS).map(h => {
-      const doc = _byRef.get(h.ref);
-      return doc ? { doc, score: h.score } : null;
-    }).filter(Boolean);
+    return hits
+      .slice(0, MAX_RESULTS)
+      .map((h) => {
+        const doc = _byRef.get(h.ref);
+        return doc ? { doc, score: h.score } : null;
+      })
+      .filter(Boolean);
   }
 
   // --- UI (panel) ---------------------------------------------------------
@@ -220,7 +289,10 @@
     if (!items.length) {
       const empty = document.createElement('div');
       empty.className = 'osl-search-empty';
-      empty.textContent = (rawQuery && rawQuery.length >= MIN_QUERY_LEN) ? 'No results' : 'Type to search…';
+      empty.textContent =
+        rawQuery && rawQuery.length >= MIN_QUERY_LEN
+          ? 'No results'
+          : 'Type to search…';
       panel.appendChild(empty);
       return;
     }
@@ -247,7 +319,7 @@
   function activateItem(panel, nextIndex) {
     const items = Array.from(panel.querySelectorAll('.osl-search-item'));
     if (!items.length) return -1;
-    items.forEach(el => el.classList.remove('is-active'));
+    items.forEach((el) => el.classList.remove('is-active'));
     const idx = Math.max(0, Math.min(nextIndex, items.length - 1));
     items[idx].classList.add('is-active');
     items[idx].scrollIntoView({ block: 'nearest' });
@@ -260,8 +332,9 @@
   }
 
   function navigateActive(panel) {
-    const active = panel.querySelector('.osl-search-item.is-active') ||
-                   panel.querySelector('.osl-search-item');
+    const active =
+      panel.querySelector('.osl-search-item.is-active') ||
+      panel.querySelector('.osl-search-item');
     if (active) window.location.assign(active.href);
   }
 
@@ -276,6 +349,11 @@
     if (!inputEl || inputEl.__oslWired__) return;
     inputEl.__oslWired__ = true;
 
+    // Add ARIA attributes
+    inputEl.setAttribute('role', 'searchbox');
+    inputEl.setAttribute('aria-label', 'Search');
+    inputEl.setAttribute('aria-expanded', 'false');
+
     injectBaseStylesOnce();
     const panel = mkPanel();
     let lastQuery = '';
@@ -284,12 +362,18 @@
     function openPanel() {
       positionPanel(panel, inputEl);
       panel.style.display = 'block';
+      inputEl.setAttribute('aria-expanded', 'true');
     }
 
     function updatePosition() {
       if (panel.style.display !== 'none') positionPanel(panel, inputEl);
     }
 
+    function closePanel(panel) {
+      panel.style.display = 'none';
+      panel.innerHTML = '';
+      inputEl.setAttribute('aria-expanded', 'false');
+    }
     // Debounce to keep it snappy
     let t = null;
     function onInput() {
@@ -318,7 +402,10 @@
     }
 
     function onKey(e) {
-      if (panel.style.display === 'none' && (e.key === 'ArrowDown' || e.key === 'ArrowUp')) {
+      if (
+        panel.style.display === 'none' &&
+        (e.key === 'ArrowDown' || e.key === 'ArrowUp')
+      ) {
         openPanel();
       }
       switch (e.key) {
@@ -397,6 +484,21 @@
     inputEl.addEventListener('blur', onBlur);
   }
 
+  function setupKeyboardShortcuts() {
+    document.addEventListener('keydown', (e) => {
+      // Check for Ctrl+K or Cmd+K
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        const searchInput =
+          document.getElementById('mkdocs-search') ||
+          document.getElementById('mkdocs-search-mobile');
+        if (searchInput) {
+          searchInput.focus();
+        }
+      }
+    });
+  }
+
   // Public initializer (used by theme.js)
   window.initSearch = function (inputEl) {
     if (!inputEl) return;
@@ -407,8 +509,33 @@
   document.addEventListener('DOMContentLoaded', () => {
     const desktop = document.getElementById('mkdocs-search');
     const mobile = document.getElementById('mkdocs-search-mobile');
-    if (desktop) wireInput(desktop);
-    if (mobile) wireInput(mobile);
-  });
 
+    if (desktop) {
+      // Wrap search input in container
+      const container = document.createElement('div');
+      container.className = 'search-container';
+      desktop.parentNode.insertBefore(container, desktop);
+      container.appendChild(desktop);
+
+      wireInput(desktop);
+
+      // Add keyboard shortcut hint inside container
+      const hint = document.createElement('span');
+      hint.className = 'search-hint';
+      hint.textContent = navigator.platform.includes('Mac') ? '⌘K' : 'Ctrl+K';
+      container.appendChild(hint);
+    }
+
+    if (mobile) {
+      // Wrap mobile search input in container
+      const container = document.createElement('div');
+      container.className = 'search-container';
+      mobile.parentNode.insertBefore(container, mobile);
+      container.appendChild(mobile);
+
+      wireInput(mobile);
+    }
+
+    setupKeyboardShortcuts();
+  });
 })();
