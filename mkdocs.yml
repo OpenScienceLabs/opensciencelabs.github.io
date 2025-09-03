@@ -25,6 +25,7 @@ extra_css:
   - css/nav.css
   - css/partners.css
   - css/search.css
+  - css/team.css
   - css/tokens.css
   - css/utilities.css
 
