@@ -81,12 +81,12 @@
         border: 1px solid var(--border-color, rgba(255,255,255,.12));
         border-radius: 6px;
       }
-      
+
       #mkdocs-search:hover,
       #mkdocs-search-mobile:hover {
         border-color: var(--md-primary-fg-color, #1976d2);
       }
-      
+
       #mkdocs-search:focus,
       #mkdocs-search-mobile:focus {
         outline: 2px solid var(--md-primary-fg-color, #1976d2);
@@ -99,7 +99,7 @@
         position: relative;
         display: inline-block;
       }
-      
+
       .search-container:focus-within .search-hint {
         opacity: 1;
       }
