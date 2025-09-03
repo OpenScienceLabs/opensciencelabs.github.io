@@ -37,11 +37,16 @@ def process_log() -> None:
     for line in log_err.splitlines():
         line = line.strip()  # noqa: PLW2901
         # Check if the line starts with '('
-        if line.startswith("("):
-            # Extract the URL using regex
-            for exception_url in exception_urls:
-                if exception_url not in line:
-                    flagged_errors.append(line)
+        if not line.startswith("("):
+            continue
+
+        if line.endswith("429)"):
+            # Too Many Requests http error
+            continue
+        # Extract the URL using regex
+        for exception_url in exception_urls:
+            if exception_url not in line:
+                flagged_errors.append(line)
 
     # Print flagged errors
     if not flagged_errors:
