@@ -1,0 +1,56 @@
+/* ===== Team page (scoped) ===== */
+.team-grid .card{
+  border-radius: 1rem;
+  border: 1px solid var(--card-border, rgba(255,255,255,.12));
+  background: var(--card-bg, rgba(20,24,33,.6));
+  overflow: hidden;
+}
+[data-bs-theme="light"] .team-grid .card{
+  background: #fff;
+  border-color: rgba(0,0,0,.08);
+}
+
+.team-grid .card-img-top{
+  display:block;
+  width:100%;
+  aspect-ratio: 4 / 3;       /* keeps consistent header area */
+  object-fit: cover;         /* crops tall/wide headshots neatly */
+}
+
+.team-grid .card-title{
+  font-size: 1.15rem;
+  margin-bottom: .25rem;
+}
+
+/* Social icon row */
+.team-grid .social{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+/* Tight, consistent SVG icon sizing + inherit theme color */
+.team-grid .social .icon{
+  width: 22px;               /* <- right here: fix HUGE icon */
+  height: 22px;
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;        /* ensure symbols use text color */
+}
+.team-grid .social a{
+  color: var(--fg, #e6e9f0);
+  opacity: .85;
+  text-decoration: none;
+}
+[data-bs-theme="light"] .team-grid .social a{
+  color: #1f2937;
+}
+.team-grid .social a:hover{
+  color: var(--brand, #3b82f6);
+  opacity: 1;
+}
+
+/* Sponsor iframe wrapper spacing */
+.team-grid .sponsor{
+  margin-top: .5rem;
+}
