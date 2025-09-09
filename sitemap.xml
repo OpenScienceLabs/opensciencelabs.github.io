@@ -161,6 +161,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://opensciencelabs.org/blog/packaging-a-vs-code-extension-using-pnpm-and-vsce/</loc>
+         <lastmod>2025-09-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://opensciencelabs.org/blog/psf-funding-open-source-projects-development-scicookie/</loc>
          <lastmod>2025-09-09</lastmod>
          <changefreq>daily</changefreq>
