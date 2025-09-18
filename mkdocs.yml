@@ -23,7 +23,9 @@ extra_css:
   - css/footer.css
   - css/home.css
   - css/nav.css
+  - css/partners.css
   - css/search.css
+  - css/team.css
   - css/tokens.css
   - css/utilities.css
 
