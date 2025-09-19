@@ -18,7 +18,7 @@
         <div class="logo-wrap p-4">
           {% if logo %}
             <a href="{{ site or '#' }}" class="d-inline-flex" target="_blank" rel="noopener">
-              <img src="{{ logo }}" alt="{{ partner.name }}">
+              <img src="{{ logo }}" alt="{{ partner.name }}" />
             </a>
           {% endif %}
         </div>
@@ -44,6 +44,10 @@
             {% if 'facebook' in partner %}<a href="{{ partner.facebook }}" class="icon-btn" target="_blank" rel="noopener" aria-label="Facebook"><svg class="icon"><use xlink:href="#facebook"/></svg></a>{% endif %}
             {% if 'discord' in partner %}<a href="{{ partner.discord }}" class="icon-btn" target="_blank" rel="noopener" aria-label="Discord"><svg class="icon"><use xlink:href="#discord"/></svg></a>{% endif %}
             {% if 'rss' in partner %}<a href="{{ partner.rss }}" class="icon-btn" target="_blank" rel="noopener" aria-label="RSS"><svg class="icon"><use xlink:href="#rss"/></svg></a>{% endif %}
+            {% if 'blog' in partner %}<a href="{{ partner.blog }}" class="icon-btn" target="_blank" rel="noopener" aria-label="Blog"><svg class="icon"><use xlink:href="#blog"/></svg></a>{% endif %}
+            {% if 'youtube' in partner %}<a href="{{ partner.youtube }}" class="icon-btn" target="_blank" rel="noopener" aria-label="YouTube"><svg class="icon"><use xlink:href="#youtube"/></svg></a>{% endif %}
+            {% if 'instagram' in partner %}<a href="{{ partner.instagram }}" class="icon-btn" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon"><use xlink:href="#instagram"/></svg></a>{% endif %}
+            {% if 'bluesky' in partner %}<a href="{{ partner.bluesky }}" class="icon-btn" target="_blank" rel="noopener" aria-label="Bluesky"><svg class="icon"><use xlink:href="#bluesky"/></svg></a>{% endif %}
           </div>
         </div>
       </article>
