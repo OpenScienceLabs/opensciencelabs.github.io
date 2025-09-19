@@ -154,7 +154,7 @@ projects:
     type: incubated
     maintainer_name: Ivan Ogasawara
     maintainer_email: ivan.ogasawara@gmail.com
-    url: https://osl-incubator.github.io/sugar/
+    url: https://sugar-org.github.io/sugar/
     communication_channel:
       provider: discord
       url: https://opensciencelabs.org/discord
@@ -162,6 +162,18 @@ projects:
       Sugar aims to organize your stack of containers, gathering some useful scripts
       and keeping this information centralized in a configuration file. So the command
       line would be very simple.
+  
+  - name: swarm-external-secrets
+    type: incubated
+    maintainer_name: Sai Sanjay
+    maintainer_email: saisanjay7660@gmail.com
+    url: https://sugar-org.github.io/swarm-external-secrets/
+    communication_channel:
+      provider: discord
+      url: https://opensciencelabs.org/discord
+    description: |
+      A Docker Swarm secrets plugin that integrates with multiple secret management providers including HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, and OpenBao.
+
 ---
 
 # Affiliated and Incubated Projects
