@@ -61,6 +61,7 @@ For this tutorial, we will disable the output color feature provided by typer, t
 
 ```python
 import os
+
 os.environ["NO_COLOR"] = "1"
 ```
 

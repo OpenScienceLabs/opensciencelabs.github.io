@@ -54,9 +54,9 @@ The first thing to do is, in your Jupyter Notebook instance, import `display`, w
 
 ```python
 # import display for AST visualization
-from IPython.display import display
-from astx.viz import traverse_ast_ascii, graph_to_ascii
 import astx
+
+from astx.viz import graph_to_ascii, traverse_ast_ascii
 ```
 
 Then we create an instance of the Module class, and this instance will be the first node of the tree, or the root node. After that, we declare the variables and literal that will be part of the basic operation that we will parse into an AST.
