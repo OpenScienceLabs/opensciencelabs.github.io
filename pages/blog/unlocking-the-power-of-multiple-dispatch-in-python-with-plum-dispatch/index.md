@@ -41,6 +41,7 @@ To demonstrate the basic usage of `plum-dispatch`, let's start with a simple exa
 ```python
 from plum import dispatch
 
+
 class Processor:
     @dispatch
     def process(self, data: int):
