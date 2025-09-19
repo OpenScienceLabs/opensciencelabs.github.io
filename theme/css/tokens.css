@@ -1,0 +1,96 @@
+/* ───────── TOKENS & MODES (light default; dark via [data-mode="dim"]) ───────── */
+:root{
+  /* Palette */
+  --bg: #f8fafc;
+  --fg: #101218;
+  --muted: #5f6b7a;
+
+  --brand: #5cc8ff;
+  --brand-2: #8a7dff;
+
+  /* Nav / surfaces */
+  --nav-bg: rgba(255,255,255,.75);
+  --nav-border: rgba(0,0,0,.06);
+  --nav-link: rgba(0,0,0,.72);
+
+  /* Dropdown (desktop & mobile) */
+  --dd-bg: rgba(255,255,255,.98);
+  --dd-border: rgba(0,0,0,.08);
+  --dd-link: #111827;
+  --dd-hover-bg: rgba(92,200,255,.14);
+  --dd-hover: #0b1220;
+
+  /* Background glow (fixed layer) */
+  --glow-1: rgba(92,200,255,.10);
+  --glow-2: rgba(138,125,255,.08);
+
+  /* Layout */
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(0,0,0,.12);
+
+  /* Tables / callouts */
+  --table-bg: #fff;
+  --table-haze: #f2f2f2;
+  --table-border: #dedede;
+
+  --notice-info-border-color: #6AB0DE;
+  --notice-info-background: #E7F2FA;
+  --notice-note-border-color: #F0B37E;
+  --notice-note-background: #FFF2DB;
+  --notice-tip-border-color: rgba(92,184,92,.8);
+  --notice-tip-background: #E6F9E6;
+  --notice-warning-border-color: rgba(217,83,79,.8);
+  --notice-warning-background: #FAE2E2;
+
+  /* Code */
+  --code-bg: #0f1420;
+}
+
+/* Dark mode via attribute */
+html[data-mode="dim"]{
+  --bg: #0b0d12;
+  --fg: #e7ecf4;
+  --muted: #a7b0c0;
+
+  --nav-bg: rgba(14,18,26,.55);
+  --nav-border: rgba(255,255,255,.06);
+  --nav-link: rgba(255,255,255,.78);
+
+  --dd-bg: rgba(16,18,26,.94);
+  --dd-border: rgba(255,255,255,.08);
+  --dd-link: #e7ecf4;
+  --dd-hover-bg: rgba(92,200,255,.16);
+  --dd-hover: #ffffff;
+
+  --glow-1: rgba(92,200,255,.18);
+  --glow-2: rgba(138,125,255,.16);
+  --table-bg: rgba(255,255,255,.06);
+  --table-haze: rgba(255,255,255,.08);
+  --table-border: rgba(255,255,255,.12);
+}
+
+/* Respect OS if user hasn’t forced a mode */
+@media (prefers-color-scheme: dark){
+  html:not([data-mode="lit"]){
+    /* mirror dark tokens */
+    --bg: #0b0d12;
+    --fg: #e7ecf4;
+    --muted: #a7b0c0;
+
+    --nav-bg: rgba(14,18,26,.55);
+    --nav-border: rgba(255,255,255,.06);
+    --nav-link: rgba(255,255,255,.78);
+
+    --dd-bg: rgba(16,18,26,.94);
+    --dd-border: rgba(255,255,255,.08);
+    --dd-link: #e7ecf4;
+    --dd-hover-bg: rgba(92,200,255,.16);
+    --dd-hover: #ffffff;
+
+    --glow-1: rgba(92,200,255,.18);
+    --glow-2: rgba(138,125,255,.16);
+    --table-bg: rgba(255,255,255,.06);
+    --table-haze: rgba(255,255,255,.08);
+    --table-border: rgba(255,255,255,.12);
+  }
+}

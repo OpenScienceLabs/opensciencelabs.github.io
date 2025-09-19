@@ -34,13 +34,17 @@ partners:
     url: https://www.pyopensci.org/
     logo: /images/partners/pyopensci.png
 
-  - name: PyDataStructs
-    url: https://pydatastructs.readthedocs.io/en/stable
-    logo: /images/partners/pydatastructs.png
-
   - name: IGDORE
     url: https://igdore.org/
     logo: /images/partners/IGDORE-logo-200pxx200px.png
+
+  - name: Data Umbrella
+    url: https://dataumbrella.org/
+    logo: /images/partners/dataumbrella.png
+
+  - name: TeleHealthCareAI
+    url: https://telehealthcareai.org/
+    logo: /images/partners/thcai.png
 
 initiatives:
   - title: Community

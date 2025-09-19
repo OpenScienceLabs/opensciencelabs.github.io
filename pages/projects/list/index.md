@@ -74,6 +74,22 @@ projects:
       production. It provides a secure and organized way to handle
       environment-specific configurations.
 
+  - name: Extralit
+    type: affiliated
+    maintainer_name: Jonny Tran
+    maintainer_email: nhat.c.tran@gmail.com
+    url: https://github.com/extralit/extralit
+    communication_channel:
+      provider: slack
+      url: https://join.slack.com/t/extralit/shared_invite/zt-32blg3602-0m0XewPBXF7776BQ3m7ZlA
+    description: |
+      Extralit is an open-source platform for researchers to
+      extract structured data from scientific literature. It
+      combines advanced document AI with collaborative human
+      validation workflows to create analysis-ready datasets
+      fit-for-purpose to any scientific domain, enabling faster
+      evidence synthesis and meta-analysis.
+
   - name: fqlearn
     type: incubated
     maintainer_name: Ever Vino
