@@ -1,8 +1,12 @@
 {% extends "base.html" %}
 
+{% block header_extra %}
+<link rel="stylesheet" href="/css/team.css">
+{% endblock header_extra %}
+
 {% block content %}
-<section>
-  <div class="row pt-2">
+<section class="team-grid py-2">
+  <div class="row">
     <div class="col-md-12 mx-auto">
       {% block content_inner %}
       {{ page.content }}
@@ -11,43 +15,54 @@
   </div>
 
   {% for group in page.meta["teams"] %}
-  <div class="row">
-    <div class="col-md-12 mx-auto pt-3">
-      <h2>{{ group.name }}</h2>
-      <div class="row row-cols-1 row-cols-md-3">
+  <div class="row pt-3">
+    <div class="col-md-12 mx-auto">
+      <h2 class="mb-3">{{ group.name }}</h2>
+
+      <!-- Responsive grid with gutter spacing -->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
         {% for member in group.members %}
         <div class="col">
-          <div class="card p-0 mt-3">
-            <img src="{{ member.image_url }}" class="card-img-top m-0" />
-            <div class="card-body">
-              <h3 class="card-title">{{ member.name }}</h3>
+          <div class="card h-100">
+            {% if member.image_url %}
+              <img src="{{ member.image_url }}" class="card-img-top" alt="{{ member.name }}">
+            {% endif %}
 
-              <a class="git_ico" href="{{ member.github_url }}">
-                <svg class="icon">
-                  <title>github</title>
-                  <use xlink:href="#github"></use>
-                </svg>
-              </a>
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start">
+                <h3 class="card-title mb-2">{{ member.name }}</h3>
 
-              <p class="card-text">{{ member.bio }}</p>
+                {% if member.github_url %}
+                <div class="social">
+                  <a class="git_ico" href="{{ member.github_url }}" target="_blank" aria-label="{{ member.name }} on GitHub" rel="noopener">
+                    <svg class="icon"><use xlink:href="#github"/></svg>
+                  </a>
+                </div>
+                {% endif %}
+              </div>
+
+              {% if member.bio %}
+                <p class="card-text mb-2">{{ member.bio }}</p>
+              {% endif %}
 
               {% if "github_sponsor" in member %}
-              Support his work on community and open source projects via:
-
-              <iframe
-                src="{{ member.github_sponsor }}"
-                title="Sponsor {{ member.name }}"
-                height="35"
-                width="116"
-                style="border: 0"
-              ></iframe>
-
+                <div class="sponsor mt-auto">
+                  <small class="text-secondary d-block mb-1">Support this work:</small>
+                  <iframe
+                    src="{{ member.github_sponsor }}"
+                    title="Sponsor {{ member.name }}"
+                    height="35"
+                    width="116"
+                    style="border:0"
+                  ></iframe>
+                </div>
               {% endif %}
             </div>
           </div>
         </div>
         {% endfor %}
       </div>
+
     </div>
   </div>
   {% endfor %}
