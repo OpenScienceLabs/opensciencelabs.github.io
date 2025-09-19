@@ -107,3 +107,6 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+.partner-card .stretched-link::after { z-index: 1; }           /* overlay */
+.partner-card .icon-btn { position: relative; z-index: 2; }    /* icons above */

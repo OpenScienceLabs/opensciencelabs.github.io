@@ -53,6 +53,8 @@ partners:
     url: https://arxlang.org/
     github: https://github.com/arxlang/arx
     twitter: https://twitter.com/arx_lang
+    discord: https://arxlang.org/discord
+    youtube: https://www.youtube.com/@arxlang
 
   - name: pyOpenSci
     summary: |
@@ -62,6 +64,10 @@ partners:
     url: https://www.pyopensci.org/
     github: https://github.com/pyOpenSci/software-review
     twitter: https://twitter.com/pyopensci
+    bluesky: https://bsky.app/profile/pyopensci.bsky.social
+    discord: https://discord.gg/yYyDFP2BcP
+    linkedin: https://www.linkedin.com/company/pyopensci
+    rss: https://www.pyopensci.org/feed.xml
 
   - name: LiteRev
     summary: |
@@ -90,9 +96,12 @@ partners:
       can be of any self-identified category (gender, race, ethnicity,
       age, sexual orientation, disability, geographic location,
       socioeconomic level and others).
-    thumbnail: /images/partners/dataumbrella.png
+    thumbnail: /images/partners/dataumbrella.jpg
     url: https://dataumbrella.org
-    twitter: https://twitter.com/DataUmbrella
+    youtube: https://www.youtube.com/c/dataumbrella
+    linkedin: https://www.linkedin.com/company/dataumbrella/
+    blog: https://blog.dataumbrella.org/
+    github: https://github.com/data-umbrella
 
   - name: TeleHealthCareAI
     summary: |
@@ -104,6 +113,8 @@ partners:
     thumbnail: /images/partners/thcai.png
     url: https://telehealthcareai.org
     github: https://github.com/telehealthcareai
+    discord: https://discord.gg/Nu4MdGj9jB
+    # instagram: https://instagram.com/telehealthcareai
 ---
 
 # Partners
