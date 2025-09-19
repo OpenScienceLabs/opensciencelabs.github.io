@@ -54,13 +54,6 @@ partners:
     github: https://github.com/arxlang/arx
     twitter: https://twitter.com/arx_lang
 
-  - name: PyDataStructs
-    summary: |
-      A Python package for data structures and algorithms.
-    thumbnail: /images/partners/pydatastructs.png
-    url: https://pydatastructs.readthedocs.io/en/stable
-    github: https://github.com/codezonediitj/pydatastructs
-
   - name: pyOpenSci
     summary: |
       pyOpenSci promotes open and reproducible research
@@ -89,6 +82,28 @@ partners:
     thumbnail: /images/partners/IGDORE-logo.png
     url: https://igdore.org
     twitter: https://twitter.com/IGDOREinstitute
+
+  - name: DataUmbrella
+    summary: |
+      Data Umbrella, founded in December 2019, is a global community for
+      underrepresented persons in data science. Underrepresented persons
+      can be of any self-identified category (gender, race, ethnicity,
+      age, sexual orientation, disability, geographic location,
+      socioeconomic level and others).
+    thumbnail: /images/partners/dataumbrella.png
+    url: https://dataumbrella.org
+    twitter: https://twitter.com/DataUmbrella
+
+  - name: TeleHealthCareAI
+    summary: |
+      TeleHealthCareAI is an initiative dedicated to advancing (tele)medicine
+      through artificial intelligence using an open-source and open-science
+      approach. Our mission is to build a dynamic network of healthcare
+      projects that leverage AI to enhance remote diagnosis,
+      treatment and patient care.
+    thumbnail: /images/partners/thcai.png
+    url: https://telehealthcareai.org
+    github: https://github.com/telehealthcareai
 ---
 
 # Partners
