@@ -162,7 +162,7 @@ projects:
       Sugar aims to organize your stack of containers, gathering some useful scripts
       and keeping this information centralized in a configuration file. So the command
       line would be very simple.
-  
+
   - name: swarm-external-secrets
     type: incubated
     maintainer_name: Sai Sanjay
@@ -173,7 +173,6 @@ projects:
       url: https://opensciencelabs.org/discord
     description: |
       A Docker Swarm secrets plugin that integrates with multiple secret management providers including HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, and OpenBao.
-
 ---
 
 # Affiliated and Incubated Projects
