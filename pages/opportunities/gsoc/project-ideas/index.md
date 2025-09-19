@@ -64,7 +64,6 @@ touch with them directly if you have any inquiries._
 - **Communication channel**: [Discord](https://arxlang.org/discord)
 - **Project Ideas**: [link](https://github.com/arxlang/astx/wiki/Project-Ideas)
 
-<!--
 ### ArxLang/IRx
 
 - **Description**: IRx aims to provide a translator to LLVM-IR from ASTx
@@ -75,7 +74,19 @@ touch with them directly if you have any inquiries._
 - **Communication channel**: [Discord](https://arxlang.org/discord)
 - **Project Ideas**: [link](https://github.com/arxlang/irx/wiki/Project-Ideas)
 
--->
+### Extralit
+
+- **Description**: Extralit is an open-source platform for researchers to
+  extract structured data from scientific literature. It combines advanced
+  document AI with collaborative human validation workflows to create
+  analysis-ready datasets fit-for-purpose to any scientific domain, enabling
+  faster evidence synthesis and meta-analysis.
+- **Project WEB Page**: <https://docs.extralit.ai/>
+- **Repository**: <https://github.com/extralit/extralit>
+- **Communication channel**:
+  [Slack](https://join.slack.com/t/extralit/shared_invite/zt-32blg3602-0m0XewPBXF7776BQ3m7ZlA)
+- **Project Ideas**:
+  [link](https://github.com/extralit/extralit/wiki/GSoC-Project-Ideas-2025)
 
 ### Makim
 
