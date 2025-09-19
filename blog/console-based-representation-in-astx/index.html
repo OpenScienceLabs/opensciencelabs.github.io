@@ -1822,9 +1822,9 @@ $~~~~$ <code>lit_1</code> is a defined integer, and \
 $~~~~$ <code>a</code>, <code>b</code>, and <code>c</code> are variables.\
 The first thing to do is, in your Jupyter Notebook instance, import <code>display</code>, which will allow you to have a basic visualization of the AST, and the astx library itself. </p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># import display for AST visualization</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">from</span> <span class="nn">astx.viz</span> <span class="kn">import</span> <span class="n">traverse_ast_ascii</span><span class="p">,</span> <span class="n">graph_to_ascii</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kn">import</span> <span class="nn">astx</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">import</span> <span class="nn">astx</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kn">from</span> <span class="nn">astx.viz</span> <span class="kn">import</span> <span class="n">graph_to_ascii</span><span class="p">,</span> <span class="n">traverse_ast_ascii</span>
 </span></code></pre></div>
 <p>Then we create an instance of the Module class, and this instance will be the first node of the tree, or the root node. After that, we declare the variables and literal that will be part of the basic operation that we will parse into an AST.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Create module</span>
