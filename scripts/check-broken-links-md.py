@@ -14,8 +14,6 @@ from typing import Dict, List, Optional, Tuple
 # Constants
 DEFAULT_EXCEPTION_URLS = [
     "https://www.linkedin.com/",
-    "https://localhost",
-    "http://localhost",
 ]
 
 STATUS_CODE_429 = "429"
