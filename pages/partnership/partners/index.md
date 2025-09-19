@@ -83,7 +83,7 @@ partners:
     url: https://igdore.org
     twitter: https://twitter.com/IGDOREinstitute
 
-  - name: DataUmbrella
+  - name: Data Umbrella
     summary: |
       Data Umbrella, founded in December 2019, is a global community for
       underrepresented persons in data science. Underrepresented persons
