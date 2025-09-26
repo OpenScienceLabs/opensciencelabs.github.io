@@ -40,7 +40,7 @@ partners:
 
   - name: Data Umbrella
     url: https://dataumbrella.org/
-    logo: /images/partners/dataumbrella.png
+    logo: /images/partners/dataumbrella.jpg
 
   - name: TeleHealthCareAI
     url: https://telehealthcareai.org/
