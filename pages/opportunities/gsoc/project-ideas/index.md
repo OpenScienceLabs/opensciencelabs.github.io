@@ -6,10 +6,14 @@ authors: ["OSL Team"]
 template: single-sidebar.html
 ---
 
-# OSL Project Ideas for GSoC 2025
+# OSL Project Ideas for GSoC 2026
+
+> - Note 1: This is a list of the projects we will propose for 2026.
+> - Note 2: The application for GSoC Mentoring Organization 2026 is not running
+>   yet. Stay Tunned!
 
 Welcome to the Open Science Labs (OSL) project ideas page for Google Summer of
-Code 2025. As an umbrella organization, OSL hosts links to the ideas pages of
+Code 2026. As an umbrella organization, OSL hosts links to the ideas pages of
 each member organization. You can explore these projects here.
 
 At OSL, we've assembled a selection of project ideas that not only embody our
@@ -20,25 +24,14 @@ potential project ideas we're considering for GSoC. We believe these projects
 provide students with a valuable chance to engage with open-source efforts and
 develop their skills under the mentorship of seasoned professionals.
 
-This page details the sub-organizations available for GSoC 2025 participants.
+This page details the sub-organizations available for GSoC 2026 participants.
 Applicants are welcome to reach out to us on our
-[Discord](https://opensciencelabs.org/discord) or directly contact the
-sub-oganization/project mentors.
+[Discord](https://opensciencelabs.org/discord).
 
 ## Sub-Organizations
 
 _Note: Each organization includes a designated list of mentors. Please get in
 touch with them directly if you have any inquiries._
-
-<!--
-### AnamnesisAI
-
-- **Description**: AnamnesisAI is a project focused on extracting anamnesis in
-  FHIR format from text.
-- **Project WEB Page**: <https://osl-incubator.github.io/anamnesis.ai/>
-- **Project Ideas**:
-  [link](https://github.com/osl-incubator/anamnesis.ai/wiki/Project-Ideas)
--->
 
 ### Alpha One Labs
 
@@ -54,15 +47,6 @@ touch with them directly if you have any inquiries._
   [Slack](https://join.slack.com/t/alphaonelabs/shared_invite/zt-7dvtocfr-1dYWOL0XZwEEPUeWXxrB1A)
 - **Project Ideas**:
   [link](https://github.com/alphaonelabs/education-website/wiki/GSOC-2025-Ideas-Refined)
-
-### ArxLang/ASTx
-
-- **Description**: ASTx is an agnostic expression structure for AST. It is
-  agnostic because it is not specific to any language.
-- **Project WEB Page**: <https://astx.arxlang.org/>
-- **Repository**: <https://github.com/arxlang/astx>
-- **Communication channel**: [Discord](https://arxlang.org/discord)
-- **Project Ideas**: [link](https://github.com/arxlang/astx/wiki/Project-Ideas)
 
 ### ArxLang/IRx
 
@@ -88,17 +72,6 @@ touch with them directly if you have any inquiries._
 - **Project Ideas**:
   [link](https://github.com/extralit/extralit/wiki/GSoC-Project-Ideas-2025)
 
-### Makim
-
-- **Description**: Makim is based on **make** and focus on improving the way to
-  define targets and dependencies. Instead of using the Makefile format, it uses
-  yaml format.
-- **Project WEB Page**: <https://osl-incubator.github.io/makim/>
-- **Repository**: <https://github.com/osl-incubator/makim>
-- **Communication channel**: [Discord](https://opensciencelabs.org/discord)
-- **Project Ideas**:
-  [link](https://github.com/osl-incubator/makim/wiki/Project-Ideas)
-
 ### PyDataStructs
 
 - **Description**: PyDataStructs project aims to be a Python package for various
@@ -107,34 +80,12 @@ touch with them directly if you have any inquiries._
 - **Project Ideas**:
   [link](https://github.com/codezonediitj/pydatastructs/wiki/Google-Summer-of-Code-Project-Ideas)
 
-### Rago
+### SDX
 
-- **Description**: Rago is a lightweight framework for RAG.
-- **Project WEB Page**: <https://osl-incubator.github.io/rago/>
-- **Repository**: <https://github.com/osl-incubator/rago>
-- **Communication channel**: [Discord](https://opensciencelabs.org/discord)
-- **Project Ideas**:
-  [link](https://github.com/osl-incubator/rago/wiki/Project-Ideas)
-
-<!--
-### SciCookie
-
-- **Description**: SciCookie creates new python project's structure from an
-  opinionated project template.
-- **Project WEB Page**: <https://osl-incubator.github.io/scicookie>
-- **Repository**: <https://github.com/osl-incubator/scicookie>
-- **Communication channel**: [Discord](https://opensciencelabs.org/discord)
-- **Project Ideas**:
-  [link](https://github.com/osl-incubator/scicookie/wiki/Project-Ideas)
--->
-
-### Sugar
-
-- **Description**: Sugar organizes your stack of containers, gathering some
-  useful scripts and keeping this information centralized in a configuration
-  file with a friendly command line interface.
-- **Project WEB Page**: <https://osl-incubator.github.io/sugar/>
-- **Repository**: <https://github.com/osl-incubator/sugar>
-- **Communication channel**: [Discord](https://opensciencelabs.org/discord)
-- **Project Ideas**:
-  [link](https://github.com/osl-incubator/sugar/wiki/Project-Ideas)
+- **Description**: SDX provides a set of tools and libraries for health care
+  services empowered by AI. It includes screening, diagnosis, treatments,
+  prescriptions, clinical records, etc.
+- **Project WEB Page**: <https://sdx-org.github.io/sdx/>
+- **Repository**: <https://github.com/sdx-org/sdx>
+- **Communication channel**: [Discord](https://discord.gg/Nu4MdGj9jB)
+- **Project Ideas**: [link](https://github.com/sdx-org/sdx/wiki/Project-Ideas)
