@@ -74,6 +74,17 @@ touch with them directly if you have any inquiries._
   [link](https://github.com/osl-incubator/scicookie/wiki/Project-Ideas)
 - **Compensation**: Unpaid
 
+### SDX
+
+- **Description**: SDX provides a set of tools and libraries for health care
+  services empowered by AI. It includes screening, diagnosis, treatments,
+  prescriptions, clinical records, etc.
+- **Project WEB Page**: <https://sdx-org.github.io/sdx/>
+- **Repository**: <https://github.com/sdx-org/sdx>
+- **Communication channel**: [Discord](https://discord.gg/Nu4MdGj9jB)
+- **Project Ideas**: [link](https://github.com/sdx-org/sdx/wiki/Project-Ideas)
+- **Compensation**: Unpaid
+
 ### Sugar
 
 - **Description**: Sugar organizes your stack of containers, gathering some
