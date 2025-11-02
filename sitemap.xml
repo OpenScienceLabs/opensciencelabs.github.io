@@ -196,6 +196,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://opensciencelabs.org/blog/three-years-with-google-summer-of-code-what-ive-learned/</loc>
+         <lastmod>2025-11-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://opensciencelabs.org/blog/typer-a-python-library-for-building-cli-applications/</loc>
          <lastmod>2025-11-02</lastmod>
          <changefreq>daily</changefreq>
