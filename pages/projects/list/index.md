@@ -166,6 +166,19 @@ projects:
       SciCookie is a template developed by Open Science Labs that creates
       projects from project templates.
 
+- name: SDX
+    type: affiliated
+    maintainer_name: Ivan Ogasawara
+    maintainer_email: ivan.ogasawara@gmail.com
+    url: https://sdx-org.github.io/sdx/
+    communication_channel:
+      provider: discord
+      url: https://discord.gg/Nu4MdGj9jB
+    description: |
+      SDX provides a set of tools and libraries for health care
+      services empowered by AI. It includes screening, diagnosis,
+      treatments, prescriptions, clinical records, etc.
+
   - name: Sugar
     type: affiliated
     maintainer_name: Ivan Ogasawara
