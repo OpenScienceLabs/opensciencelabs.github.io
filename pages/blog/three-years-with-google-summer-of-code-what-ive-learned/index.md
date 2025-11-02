@@ -11,7 +11,7 @@ description: |
   playbook is simple—balance mentors, set explicit contribution rules, meet 
   regularly; and for contributors: communicate publicly and ship small, 
   tested PRs.
-thumbnail: "/header.svg"
+thumbnail: "/header.png"
 template: "blog-post.html"
 ---
 
