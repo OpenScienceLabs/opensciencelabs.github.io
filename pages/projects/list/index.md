@@ -100,7 +100,7 @@ projects:
       thermodynamics.
 
   - name: Makim
-    type: incubated
+    type: affiliated
     maintainer_name: Ivan Ogasawara
     maintainer_email: ivan.ogasawara@gmail.com
     url: https://osl-incubator.github.io/makim/
@@ -167,7 +167,7 @@ projects:
       projects from project templates.
 
   - name: Sugar
-    type: incubated
+    type: affiliated
     maintainer_name: Ivan Ogasawara
     maintainer_email: ivan.ogasawara@gmail.com
     url: https://sugar-org.github.io/sugar/
@@ -180,7 +180,7 @@ projects:
       line would be very simple.
 
   - name: swarm-external-secrets
-    type: incubated
+    type: affiliated
     maintainer_name: Sai Sanjay
     maintainer_email: saisanjay7660@gmail.com
     url: https://sugar-org.github.io/swarm-external-secrets/
