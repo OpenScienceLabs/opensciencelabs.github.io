@@ -119,7 +119,12 @@ clarity, and care. Everything else follows.
 - **Ship tests and pass CI.** If you fix a bug or add a feature, include tests.
   Make sure CI is green before asking for review.
 
-- **Write a crisp proposal.** Be clear, specific, and concise (≤10 pages).
+- **Submit up to three proposals to multiple orgs.** Each org has limited slots,
+  so contributing and applying across organizations can improve your chances—but
+  focus on quality! Note: only one proposal can be accepted per contributor.
+  ([developers.google.com][can_i_submit_more_than_one_proposal])
+
+* **Write a crisp proposal.** Be clear, specific, and concise (≤10 pages).
   Demonstrate understanding of the project and outline concrete steps,
   milestones, and risks. Ask maintainers for early feedback so you have time to
   refine.
@@ -134,3 +139,7 @@ team for running this program year after year—it raises the visibility of
 projects, gives newcomers a safe place to learn from experts, and strengthens
 the open-source ecosystem. For hundreds of students and first-time contributors,
 GSoC isn't just a summer; it's a beginning.
+
+[can_i_submit_more_than_one_proposal]:
+  https://developers.google.com/open-source/gsoc/faq#can_i_submit_more_than_one_proposal
+  "Frequently Asked Questions | Google Summer of Code"
