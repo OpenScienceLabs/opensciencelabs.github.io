@@ -98,8 +98,9 @@ clarity, and care. Everything else follows.
 - **Default to public communication.** Ask questions in the project's public
   channels. It helps others learn and shows the team how you collaborate.
 
-- **If a mentor is unresponsive, switch projects.** Don't stall your learning.
-  Healthy teams respond; find one that does.
+- **If a mentor is unresponsive, switch projects.** They're likely overloaded;
+  repeated pings won't help. Find a project with responsive maintainers and
+  bandwidth for new contributors.
 
 - **Avoid giant PRs.** Huge changes are hard to review and often get stuck. Ship
   small, focused PRs that follow the project's style and tests.
