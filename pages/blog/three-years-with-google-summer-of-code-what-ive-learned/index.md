@@ -119,8 +119,6 @@ clarity, and care. Everything else follows.
 - **Ship tests and pass CI.** If you fix a bug or add a feature, include tests.
   Make sure CI is green before asking for review.
 
-Here’s a cleaner, correct version:
-
 - **Submit up to three proposals to multiple orgs.** Each org has limited slots,
   so contributing and applying across organizations can improve your chances—but
   focus on quality! Note: only one proposal can be accepted per contributor.
