@@ -46,6 +46,16 @@ jobs:
           auto-update-conda: true
           conda-solver: libmamba
 
+      - name: Ensure conda 'defaults' channel not present
+        run: |
+          # Only remove the 'defaults' channel if it exists to avoid CondaKeyError
+          if conda config --show channels | grep -q 'defaults'; then
+            conda config --remove channels defaults
+            echo "Removed 'defaults' channel"
+          else
+            echo "'defaults' channel not present, skipping removal"
+          fi
+
       - name: Install dependencies
         run: |
           poetry check
