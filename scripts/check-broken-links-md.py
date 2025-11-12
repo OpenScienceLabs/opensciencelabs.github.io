@@ -1,65 +1,100 @@
-"""Check if ther eis any broken links."""
-
-from __future__ import annotations
-
-import os
 import subprocess
+import sys
+import re
+import json
+from pathlib import Path
+from typing import List, Tuple
 
-# List of exception URLs
-exception_urls = [
-    "https://www.linkedin.com/",
-]
+# ==== BASIC SETTINGS ====
+IGNORE_URLS = ["https://www.linkedin.com/"]  # URLs to skip
+RETRY_STATUS = 429  # Too many requests
+SCAN_FOLDER = "pages"  # default folder to check
+HTTP_MODE = "get"  # request type
 
 
-def process_log() -> None:
-    """Run the command and capture the output."""
-    log_err = ""
-    exitcode = 0
-
+# ==== HELPERS ====
+def load_whitelist(path: str) -> List[str]:
+    """Load extra ignored links from a JSON file (if available)."""
     try:
-        subprocess.run(
-            ["python", "-m", "linkcheckmd", "-r", "-v", "-m", "get", "pages"],
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        print("[ii] Using default ignore list.")
+        return IGNORE_URLS
+
+
+def run_checker(folder: str, method: str) -> Tuple[int, str]:
+    """Run linkcheckmd and capture what it says."""
+    try:
+        task = subprocess.run(
+            ["python", "-m", "linkcheckmd", "-r", "-v", "-m", method, folder],
+            capture_output=True,
             text=True,
             check=True,
         )
+        return task.returncode, task.stdout
     except subprocess.CalledProcessError as e:
-        exitcode = e.returncode
-        # for some reason they were swapped
-        log_err = e.stdout
+        return e.returncode, e.stdout + e.stderr
 
-    if exitcode == 0:
-        print("[II] All links are ok.")
+
+def extract_bad_links(log: str) -> List[Tuple[str, str, int]]:
+    """
+    Pull out (file, url, status) from linkcheckmd logs.
+    """
+    regex = re.compile(r"\(([^)]+)\)\s+(https?://[^\s]+)\s+\[status:(\d+)\]")
+    found = regex.findall(log)
+    return [(f, u, int(s)) for f, u, s in found]
+
+
+def skip_allowed(links: List[Tuple[str, str, int]], ignore_list: List[str]):
+    """Remove whitelisted or rate-limited links."""
+    final = []
+    for file, url, code in links:
+        if any(skip in url for skip in ignore_list):
+            continue
+        if code == RETRY_STATUS:
+            continue
+        final.append((file, url, code))
+    return final
+
+
+def print_report(bad_links: List[Tuple[str, str, int]]):
+    """Display summary in a friendlier way."""
+    if not bad_links:
+        print(" Everything looks good! No broken links 🎉")
         return
 
-    flagged_errors = []
-    for line in log_err.splitlines():
-        line = line.strip()  # noqa: PLW2901
-        # Check if the line starts with '('
-        if not line.startswith("("):
-            continue
+    print(f"[!!] Found {len(bad_links)} broken link(s):\n")
+    for file, url, code in bad_links:
+        print(f"- In: {file}\n  → {url}\n  (Status: {code})\n")
+    sys.exit(1)
 
-        if line.endswith("429)"):
-            # Too Many Requests http error
-            continue
-        # Extract the URL using regex
-        for exception_url in exception_urls:
-            if exception_url not in line:
-                flagged_errors.append(line)
 
-    # Print flagged errors
-    if not flagged_errors:
-        print("[II] All links are ok.")
-        print("No errors flagged. All URLs are in the exception list.")
+#  MAIN WORK 
+def main():
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Simple Markdown link checker.")
+    parser.add_argument("-d", "--dir", default=SCAN_FOLDER, help="Folder to check.")
+    parser.add_argument(
+        "-e", "--exceptions", default="", help="Path to JSON file of links to skip."
+    )
+    parser.add_argument(
+        "-m", "--method", default=HTTP_MODE, help="HTTP method (default: get)."
+    )
+    args = parser.parse_args()
+
+    whitelist = load_whitelist(args.exceptions)
+    code, output = run_checker(args.dir, args.method)
+
+    if code == 0:
+        print(" All clear! No broken links reported.")
         return
 
-    print("Errors flagged for the following URLs:")
-    for line in flagged_errors:
-        print(line)
-    os._exit(1)
+    bad_links = extract_bad_links(output)
+    final_list = skip_allowed(bad_links, whitelist)
+    print_report(final_list)
 
 
-# Run the script
 if __name__ == "__main__":
-    process_log()
+    main()
