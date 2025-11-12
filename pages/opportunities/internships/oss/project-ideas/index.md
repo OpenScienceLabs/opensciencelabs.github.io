@@ -30,27 +30,6 @@ sub-oganization/project mentors.
 _Note: Each organization includes a designated list of mentors. Please get in
 touch with them directly if you have any inquiries._
 
-<!--
-### AnamnesisAI
-
-- **Description**: AnamnesisAI is a project focused on extracting anamnesis in
-  FHIR format from text.
-- **Project WEB Page**: <https://osl-incubator.github.io/anamnesis.ai/>
-- **Project Ideas**:
-  [link](https://github.com/osl-incubator/anamnesis.ai/wiki/Project-Ideas)
--->
-
-### ArxLang/ASTx
-
-- **Description**: ASTx is an agnostic expression structure for AST. It is
-  agnostic because it is not specific to any language.
-- **Project WEB Page**: <https://astx.arxlang.org/>
-- **Repository**: <https://github.com/arxlang/astx>
-- **Communication channel**: [Discord](https://arxlang.org/discord)
-- **Project Ideas**: [link](https://github.com/arxlang/astx/wiki/Project-Ideas)
-- **Compensation**: Unpaid
-
-<!--
 ### ArxLang/IRx
 
 - **Description**: IRx aims to provide a translator to LLVM-IR from ASTx
@@ -61,8 +40,6 @@ touch with them directly if you have any inquiries._
 - **Communication channel**: [Discord](https://arxlang.org/discord)
 - **Project Ideas**: [link](https://github.com/arxlang/irx/wiki/Project-Ideas)
 - **Compensation**: Unpaid
-
--->
 
 ### Makim
 
@@ -86,7 +63,6 @@ touch with them directly if you have any inquiries._
   [link](https://github.com/osl-incubator/rago/wiki/Project-Ideas)
 - **Compensation**: Unpaid
 
-<!--
 ### SciCookie
 
 - **Description**: SciCookie creates new python project's structure from an
@@ -97,7 +73,17 @@ touch with them directly if you have any inquiries._
 - **Project Ideas**:
   [link](https://github.com/osl-incubator/scicookie/wiki/Project-Ideas)
 - **Compensation**: Unpaid
--->
+
+### SDX
+
+- **Description**: SDX provides a set of tools and libraries for health care
+  services empowered by AI. It includes screening, diagnosis, treatments,
+  prescriptions, clinical records, etc.
+- **Project WEB Page**: <https://sdx-org.github.io/sdx/>
+- **Repository**: <https://github.com/sdx-org/sdx>
+- **Communication channel**: [Discord](https://discord.gg/Nu4MdGj9jB)
+- **Project Ideas**: [link](https://github.com/sdx-org/sdx/wiki/Project-Ideas)
+- **Compensation**: Unpaid
 
 ### Sugar
 

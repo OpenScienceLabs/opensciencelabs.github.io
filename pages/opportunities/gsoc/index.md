@@ -8,9 +8,7 @@ template: single-sidebar.html
 
 # Google Summer of Code (GSoC) at Open Science Labs
 
-Open Science Labs is excited to apply as a mentoring organization for Google
-Summer of Code 2025. This global program is an excellent opportunity for
-students and newcomers to dive into open source software development.
+Open Science Labs plans to apply for GSoC 2026. Stay tuned!
 
 ## About Google Summer of Code
 
@@ -24,9 +22,11 @@ For more information about GSoC, check out its official web page at
 
 ### Why Participate with OSL?
 
-Open Science Labs has a history of participation under the NumFOCUS umbrella in
-2023 and 2024, providing robust support to budding open-source enthusiasts
-through structured projects that enhance both learning and contribution.
+OSL has participated in GSoC since 2023: in 2023 and 2024 as a NumFOCUS
+sub-organization, and in 2025 as an independent Mentoring Organization.
+
+OSL provides robust support to budding open-source enthusiasts through
+structured projects that enhance both learning and contribution.
 
 ### Project Ideas Submission
 
@@ -40,8 +40,8 @@ The current list of project ideas can be found
 [here](/opportunities/gsoc/project-ideas).
 
 If you are considering submitting your project idea to OSL, please send your
-project by email to <team@opensciencelabs.org> by February 6. Check out our
-project idea template for more insights:
+project by email to <team@opensciencelabs.org> by January 31, 2026. Check out
+our project idea template for more insights:
 </opportunities/gsoc/templates/project-ideas/>.
 
 Additionally, all discussions about OSL participation in GSoC will happen on our

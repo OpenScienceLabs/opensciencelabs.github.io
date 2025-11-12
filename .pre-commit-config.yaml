@@ -11,6 +11,7 @@ repos:
       - id: check-json
       - id: check-toml
       - id: check-xml
+        exclude: ".*.svg"
       - id: check-builtin-literals
       - id: check-case-conflict
       - id: check-docstring-first
