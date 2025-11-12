@@ -56,7 +56,7 @@ jobs:
         if: ${{ github.event_name == 'pull_request' }}
         run: |
           pre-commit install
-          pre-commit run --all-file --verbose
+          pre-commit run --all-files --verbose
 
       - name: Build the book
         run: |
