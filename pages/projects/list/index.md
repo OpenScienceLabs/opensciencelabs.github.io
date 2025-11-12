@@ -166,7 +166,7 @@ projects:
       SciCookie is a template developed by Open Science Labs that creates
       projects from project templates.
 
-- name: SDX
+  - name: SDX
     type: affiliated
     maintainer_name: Ivan Ogasawara
     maintainer_email: ivan.ogasawara@gmail.com
