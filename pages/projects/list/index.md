@@ -12,7 +12,7 @@ projects:
     url: https://github.com/alphaonelabs/education-website
     communication_channel:
       provider: slack
-      url: https://join.slack.com/t/alphaonelabs/shared_invite/zt-7dvtocfr-1dYWOL0XZwEEPUeWXxrB1A
+      url: https://join.slack.com/t/alphaonelabs/shared_invite/zt-3glzypiib-8Lq~UZwWvcCFAjeG5uwcPg
     description: |
       Alpha One Labs is a nonprofit, open-source education platform dedicated
       to hands-on learning in tech, science, and engineering. Evolving from a
