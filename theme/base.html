@@ -363,34 +363,49 @@
     <!-- ========================= /NAV ========================= -->
 
 
-    <main>
-      <div class="container-xxl">
-        <section class="content-inner">
-          {% block content %}
-          <section>
-            <div class="row">
-              <div class="col-12 col-xl-10 mx-auto">
-                {% block content_inner %}
-                  {{ page.content }}
-                {% endblock content_inner %}
-              </div>
-            </div>
-          </section>
-          {% endblock content %}
+<main>
+  <div class="container-xxl">
+    <section class="content-inner">
+      {% block content %}
+      <section>
+        <div class="row">
+          <div class="col-12 col-xl-10 mx-auto">
+            {% block content_inner %}
 
-          <div class="mt-4">
-            <small class="badge-updated">
-              {% if page.meta.git_revision_date_localized %}
-                Last update: {{ page.meta.git_revision_date_localized }}
-              {% endif %}
-              {% if page.meta.git_created_date_localized %}
-                &nbsp;•&nbsp;Created: {{ page.meta.git_created_date_localized }}
-              {% endif %}
-            </small>
+              <!-- Listen to article button -->
+              <div class="mb-3">
+                <button
+                  id="tts-btn"
+                  type="button"
+                  class="btn btn-sm btn-outline-secondary"
+                  aria-label="Listen to article"
+                >
+                  Listen to article
+                </button>
+              </div>
+
+              {{ page.content }}
+
+            {% endblock content_inner %}
           </div>
-        </section>
+        </div>
+      </section>
+      {% endblock content %}
+
+      <div class="mt-4">
+        <small class="badge-updated">
+          {% if page.meta.git_revision_date_localized %}
+            Last update: {{ page.meta.git_revision_date_localized }}
+          {% endif %}
+          {% if page.meta.git_created_date_localized %}
+            &nbsp;•&nbsp;Created: {{ page.meta.git_created_date_localized }}
+          {% endif %}
+        </small>
       </div>
-    </main>
+    </section>
+  </div>
+</main>
+
 
     <svg width="0" height="0" class="hidden">
       <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="facebook">
