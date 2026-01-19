@@ -150,7 +150,7 @@ As **Jim Kwik** says in his *Super Brain* course:
 
 Before closing, I want to say a special thank you to some amazing
 collaborators who have helped us more actively in different projects and
-initiatives: **Sandro Loch**, **Ever Vino**, **Satarupa Deb**, **Yuvi Mittal**,
+initiatives: **Sandro Loch**, **Ever Vino**, **Felipe Paes**, **Satarupa Deb**, **Yuvi Mittal**,
 **Aniket Kumar**, **Abhijeet**, and all our interns, mentors, former steering
 council members, and partners.
 
