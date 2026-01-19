@@ -1,12 +1,12 @@
 ---
 title: "OSL 2.0"
 slug: osl-2-0
-date: 2025-03-01
+date: 2026-01-19
 authors: ["Ivan Ogasawara"]
 tags: [osl]
 categories: [osl]
 description: |
-  OSL 2.0 is a new chapter—and an open invitation. If you believe in **Growth**, **Collaboration**, and **Impact**, there’s a place for you here: to learn in public, contribute to real projects, and grow into a leader who helps others do the same. Whether you’re a student, a researcher, a maintainer, or simply someone who cares about open source and open science, we’d love to meet you. Read our mission, join the conversation, and take your first step with us—one small contribution can become a life-changing journey.
+  OSL 2.0 is a new chapter—and an open invitation. If you believe in Growth, Collaboration, and Impact, there's a place for you here: to learn in public, contribute to real projects, and grow into a leader who helps others do the same. Whether you're a student, a researcher, a maintainer, or simply someone who cares about open source and open science, we'd love to meet you. Read our mission, join the conversation, and take your first step with us—one small contribution can become a life-changing journey.
 thumbnail: "/header.png"
 ---
 
@@ -119,11 +119,11 @@ We truly believe that open source is a powerful way to connect people who want
 experience with maintainers who need contributors.
 
 Today, only a small fraction of students manage to work in the field they
-studied after finishing university. That’s the gap OSL is trying to help fill.
+studied after finishing university. That's the gap OSL is trying to help fill.
 
 ---
 
-### We don’t want followers, we want leaders
+### We don't want followers, we want leaders
 
 The focus of OSL is not to create followers, but to help people become
 **leaders**.
@@ -136,13 +136,13 @@ understand the architecture, roadmap, and purpose of a project. It can also
 take time before you feel confident to contribute independently or receive an
 invitation to become a maintainer.
 
-That’s normal. Don’t give up.
+That's normal. Don't give up.
 
 Keep moving forward. Ask for feedback. Use every step to grow.
 
 As **Jim Kwik** says in his *Super Brain* course:
 
-> “Practice doesn’t make perfect. Practice makes progress.”
+> “Practice doesn't make perfect. Practice makes progress.”
 
 ---
 
