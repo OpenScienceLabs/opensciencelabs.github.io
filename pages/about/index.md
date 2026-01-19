@@ -1,57 +1,86 @@
 ---
 title: "About"
-description: "Open Science Labs, sharing knowledge"
-date: "2025-01-09"
+description:
+  "Open Science Labs — empowered growth through belonging, mentorship, and
+  purpose."
+date: "2026-01-19"
 authors: ["OSL Team"]
 template: single-sidebar.html
 ---
 
 # About Open Science Labs
 
-Open Science Labs (OSL) is committed to advancing open science and open source
-projects through collaboration, innovation, and education. We are a vibrant
-community where scientists, developers, and enthusiasts come together to share
-knowledge and foster the development of open-source software and scientific
-research.
+Open Science Labs (OSL) is a unified, no-fee commons where people and open
+projects grow together. We exist to turn learning into real-world experience,
+and open collaboration into visible, lasting social and technological impact.
 
-## Our Mission
+OSL is for the moments when people feel stuck or unseen—finishing a course and
+wondering “now what?”, facing “experience required” walls, or watching a project
+stall without contributors. We bring belonging, momentum, and recognition by
+helping contributors ship meaningful work alongside supportive peers and
+mentors.
 
-Our mission is to make scientific research more accessible and transparent,
-thereby enhancing the community's ability to conduct and share reproducible
-research. We aim to provide tools, resources, and a collaborative platform to
-support and amplify the global open science and open source effort.
+## Our Gift
+
+We envision a world where opportunity is not reserved for the few—where
+newcomers and early-stage projects, regardless of background or location, enter
+an open, supportive commons. In this environment, anyone aligned with our values
+grows through learning and contribution, and together we turn open science and
+open technology into tangible social and technological impact.
+
+## Our Promise
+
+**OSL empowers people and projects to grow together**—turning learning into
+real-world experience, careers with purpose, and open collaboration into lasting
+social and technological impact.
+
+## What We Stand For
+
+- **Growth:** learning by doing, with steady progress and real outcomes.
+- **Belonging:** a friendly, supportive place to contribute and be seen.
+- **Mentorship:** trust, care, and guidance that builds confidence and skill.
+- **Collaboration:** collective momentum across cultures, disciplines, and time
+  zones.
+- **Empowerment:** pathways that help people believe in their potential.
+- **Purpose:** work that matters—socially, technically, and scientifically.
+- **Gratitude & recognition:** celebrating contributions and making impact
+  visible.
 
 ## What We Do
 
-- **Incubator Program:** We nurture innovative open-source projects with the
-  potential to significantly impact scientific research.
-- **Internship Program:** We connect talented individuals with advanced
-  projects, providing practical experience and fostering professional growth.
-- **Mentoring:** Our Internship Program also aims to offer mentoring to
-  students, professionals, and researchers, enhancing their learning and career
-  prospects.
-- **Google Summer of Code (GSoC):** We annually apply to participate in GSoC,
-  helping newcomers integrate into open-source projects.
-- **Blog:** We encourage the community to share their knowledge and experiences
-  through blog posts, fostering a collaborative learning environment.
-- **Community Support:** Through our Discord Server, we provide a community
-  platform where members can discuss topics related to open science and open
-  technologies, including various programming languages.
+- **Project Incubation:** we support mission-driven open projects with a path
+  from idea → contributors → releases → adoption.
+- **Internships & structured onboarding:** we help newcomers build credible,
+  portfolio-ready experience through real work on real projects.
+- **Mentorship network:** multi-level mentoring that supports both contributors
+  and maintainers over time.
+- **Programs & partnerships:** we collaborate with institutions and communities
+  to grow open ecosystems (including participating in initiatives like GSoC when
+  applicable).
+- **Visibility & storytelling:** we publish and amplify work through posts,
+  updates, and public artifacts so contributors and projects get recognized.
+- **Community space:** our Discord is where people meet, ask, build, review, and
+  ship—together.
+
+## Who OSL Is For
+
+- **Newcomers** who want a real path from learning to meaningful experience.
+- **Maintainers** who need contributors, structure, and long-term momentum.
+- **Researchers and developers** who want to build openly, reproducibly, and
+  with purpose.
+- **Communities across geographies** looking for a welcoming place to grow.
 
 ## Join Us
 
-If you are interested in contributing to or learning more about our projects,
-please join our vibrant community on
-[Discord](https://opensciencelabs.org/discord).
+If you want to learn by contributing, grow with others, or help open projects
+move forward, join our community:
 
-## Contributions from many parts of the world
+[Discord](https://opensciencelabs.org/discord)
 
-People from many parts of world had engaged and contributed to the projects and
-activities under OSL Umbrella, such as: Argentina, Bolivia, Brazil, Canada,
-Kenya, India, Indonesia, Mexico, Nigeria, Peru, United States, Venezuela, etc.
+## Global, by design
 
-<!--
-https://visitedplaces.com/world/?map=world&projection=geoEquirectangular&theme=light-green&water=1&graticule=0&names=0&duration=0&placeduration=0&slider=0&autoplay=0&autozoom=none&autostep=0&home=-&places=~BO_BR_MX_IN_NG_KE_ID_US_AR_VE_CA_PE
--->
+OSL is shaped by contributors from many parts of the world. We prioritize
+cross-geography collaboration so that opportunity, mentorship, and visibility
+are not limited by location.
 
-<img src="/images/internship/map.png" />
+<img src="/images/internship/map.png" alt="Map of countries engaged with OSL" />
