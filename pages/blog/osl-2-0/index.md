@@ -1,7 +1,7 @@
 ---
 title: "OSL 2.0"
 slug: osl-2-0
-date: 2025-03-01
+date: 2026-01-19
 authors: ["Ivan Ogasawara"]
 tags: [osl]
 categories: [osl]
