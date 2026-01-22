@@ -55,23 +55,19 @@
     if (offcanvasEl) {
       offcanvasEl.addEventListener('click', function (e) {
         const a = e.target.closest('a');
-        if (!a) return; // ignore clicks on accordion buttons etc.
+        if (!a) return;
         const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl) ||
                           new bootstrap.Offcanvas(offcanvasEl);
-        // Close for internal links (no target="_blank")
         if (a.getAttribute('href') && !a.getAttribute('target')) {
           offcanvas.hide();
         }
       });
     }
 
-    /* 5) Mega dropdown accordions: ensure one-open-at-a-time via data-bs-parent */
+    /* 5) Mega dropdown accordions */
     document.querySelectorAll('.dropdown-menu.mega .accordion').forEach((acc, i) => {
-      // Make sure the accordion has an id
       if (!acc.id) acc.id = `mega-acc-${i}`;
       const parentSel = `#${acc.id}`;
-
-      // For each collapse pane, set data-bs-parent if missing
       acc.querySelectorAll('.accordion-collapse').forEach(col => {
         if (!col.getAttribute('data-bs-parent')) {
           col.setAttribute('data-bs-parent', parentSel);
@@ -79,11 +75,51 @@
       });
     });
 
-    /* 6) Keep clicks inside mega from bubbling to the dropdown toggle (belt & suspenders).
-          With data-bs-auto-close="outside" this isn’t strictly needed, but it’s harmless. */
+    /* 6) Stop mega menu click bubbling */
     document.querySelectorAll('.dropdown-menu.mega').forEach(menu => {
       menu.addEventListener('click', (e) => e.stopPropagation());
     });
+
+    /* =========================================================
+       7) Client-side Text-to-Speech (Listen to Article)
+       ========================================================= */
+    if ('speechSynthesis' in window) {
+      const ttsBtn = document.getElementById('tts-btn');
+      let speaking = false;
+      let utterance = null;
+
+      function getArticleText() {
+        const main = document.querySelector('main');
+        return main ? main.innerText : '';
+      }
+
+      if (ttsBtn) {
+        ttsBtn.addEventListener('click', function () {
+          if (speaking) {
+            window.speechSynthesis.cancel();
+            speaking = false;
+            ttsBtn.textContent = 'Listen to article';
+            return;
+          }
+
+          const text = getArticleText();
+          if (!text) return;
+
+          utterance = new SpeechSynthesisUtterance(text);
+          utterance.lang = 'en-US';
+          utterance.rate = 1;
+
+          utterance.onend = function () {
+            speaking = false;
+            ttsBtn.textContent = 'Listen to article';
+          };
+
+          window.speechSynthesis.speak(utterance);
+          speaking = true;
+          ttsBtn.textContent = 'Stop listening';
+        });
+      }
+    }
   });
 
   // Optional public API
@@ -99,17 +135,15 @@
   document.querySelectorAll('a[href^="http"]').forEach(a => {
     try {
       const url = new URL(a.href);
-      // skip same-origin
       if (url.origin === window.location.origin) return;
       if (!a.hasAttribute('target')) a.setAttribute('target', '_blank');
       if (!a.hasAttribute('rel')) a.setAttribute('rel', 'noopener');
     } catch (_) {}
   });
 
-  // B) small “copy code” buttons for pygments blocks (MkDocs default markup)
+  // B) copy code buttons
   document.querySelectorAll('div.highlight > pre').forEach((pre, i) => {
-    // container for the button
-    const wrap = pre.parentElement; // .highlight
+    const wrap = pre.parentElement;
     wrap.style.position = 'relative';
 
     const btn = document.createElement('button');
@@ -126,7 +160,6 @@
         btn.textContent = 'Copied!';
         setTimeout(() => (btn.textContent = old), 1200);
       } catch (e) {
-        // fallback
         const ta = document.createElement('textarea');
         ta.value = code;
         ta.style.position = 'fixed';
@@ -144,18 +177,17 @@
     wrap.appendChild(btn);
   });
 
-  // C) heading anchors (h2–h4) inside main content
+  // C) heading anchors
   const contentRoot = document.querySelector('main .content-inner') || document.querySelector('main');
   if (contentRoot) {
     contentRoot.querySelectorAll('h2[id], h3[id], h4[id]').forEach(h => {
-      if (h.querySelector('a.anchor-link')) return; // idempotent
+      if (h.querySelector('a.anchor-link')) return;
       const a = document.createElement('a');
       a.href = `#${h.id}`;
       a.className = 'anchor-link ms-2';
       a.setAttribute('aria-label', 'Copy link to this section');
-      a.innerHTML = '¶'; // simple mark; you can swap for an SVG if you prefer
-      a.addEventListener('click', (e) => {
-        // let it navigate, then copy
+      a.innerHTML = '¶';
+      a.addEventListener('click', () => {
         setTimeout(() => navigator.clipboard.writeText(window.location.href), 0);
       });
       h.appendChild(a);
@@ -167,7 +199,6 @@
 
 // --- Search results link absolutizer ---
 (function () {
-  // Which containers might hold search result links?
   const candidates = [
     '.mk-search-results',
     '.search-results',
@@ -176,31 +207,31 @@
 
   function absolutize(href) {
     if (!href) return href;
-    if (/^([a-z]+:)?\/\//i.test(href)) return href;      // already absolute URL
-    if (href.startsWith('/')) return href;                // already site-absolute
-    return '/' + href.replace(/^\/+/, '');                // make it site-absolute
+    if (/^([a-z]+:)?\/\//i.test(href)) return href;
+    if (href.startsWith('/')) return href;
+    return '/' + href.replace(/^\/+/, '');
   }
 
   function fixLinks(root = document) {
     candidates.forEach(sel => {
       root.querySelectorAll(`${sel} a[href]`).forEach(a => {
         const fixed = absolutize(a.getAttribute('href'));
-        if (fixed && fixed !== a.getAttribute('href')) a.setAttribute('href', fixed);
+        if (fixed && fixed !== a.getAttribute('href')) {
+          a.setAttribute('href', fixed);
+        }
       });
     });
   }
 
-  // 1) Run once after DOM ready (in case results render immediately)
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => fixLinks());
   } else {
     fixLinks();
   }
 
-  // 2) Watch for results being (re)rendered
   const obs = new MutationObserver(muts => {
     for (const m of muts) {
-      if (m.type === 'childList' && (m.addedNodes && m.addedNodes.length)) {
+      if (m.type === 'childList' && m.addedNodes.length) {
         fixLinks(document);
       }
     }
