@@ -81,12 +81,12 @@ touch with them directly if you have any inquiries._
 - **Project Ideas**:
   [link](https://github.com/codezonediitj/pydatastructs/wiki/Google-Summer-of-Code-Project-Ideas)
 
-### SDX
+### Hiperhealth
 
-- **Description**: SDX provides a set of tools and libraries for health care
+- **Description**: Hiperhealth provides a set of tools and libraries for health care
   services empowered by AI. It includes screening, diagnosis, treatments,
   prescriptions, clinical records, etc.
-- **Project WEB Page**: <https://sdx-org.github.io/sdx/>
-- **Repository**: <https://github.com/sdx-org/sdx>
+- **Project WEB Page**: <https://hiperhealth.github.io/hiperhealth/>
+- **Repository**: <https://github.com/hiperhealth/hiperhealth>
 - **Communication channel**: [Discord](https://discord.gg/Nu4MdGj9jB)
 - **Project Ideas**: [link](https://github.com/sdx-org/sdx/wiki/Project-Ideas)
