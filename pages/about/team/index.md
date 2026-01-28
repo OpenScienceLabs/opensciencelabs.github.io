@@ -32,9 +32,9 @@ teams:
 
       - name: Yuvi Mittal
         bio: |
-           Software Engineer and open-source contributor with a strong interest in compilers,
-           systems programming, and backend development. Experienced in JavaScript, C, and Python,
-           with hands-on work in LLVM-IR generation, APIs, and collaborative open-source projects.
+          Software Engineer and open-source contributor with a strong interest in compilers,
+          systems programming, and backend development. Experienced in JavaScript, C, and Python,
+          with hands-on work in LLVM-IR generation, APIs, and collaborative open-source projects.
         github_url: https://github.com/yuvimittal
         github_sponsor: https://github.com/sponsors/yuvimittal
 
