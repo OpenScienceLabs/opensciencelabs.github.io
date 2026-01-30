@@ -42,8 +42,8 @@ We received support from wonderful people and friends like **Francisco Palm**,
 **Mariangela Petrizzo**, **Ever Vino**, **Eunice Rodas**, **Luis Gago**,
 **Agustina Pesce**, **Sandro Loch**, and many others.
 
-New interns joined too, such as **Luã Bida**, **Anaveliz Perez**, and **Yurely
-Camacho**, who helped keep many internal projects moving. Later, Anaveliz also
+New interns joined too, such as **Luã Bida**, **Anavelyz Perez**, and **Yurely
+Camacho**, who helped keep many internal projects moving. Later, Anavelyz also
 helped coordinate our activities related to **Google Summer of Code (GSoC)**.
 
 And speaking of GSoC, we are deeply grateful to **Gagandeep Singh** for his
@@ -64,7 +64,7 @@ We are also very grateful to the **Python Software Foundation**, which supported
 us with three grants to help maintain three affiliated projects: **SciCookie**,
 **Makim**, and **ASTx**.
 
-These grants allowed us to hire amazing former interns like **Anaveliz**,
+These grants allowed us to hire amazing former interns like **Anavelyz**,
 **Yurely**, **Abhijeet**, and **Ana Paula**.
 
 ---
