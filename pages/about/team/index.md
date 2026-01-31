@@ -33,7 +33,7 @@ teams:
       - name: Aniket Kumar
         bio: |
           Machine learning Engineer passionate about Open Science and Open Source.
-          Exprienced in python development, data science and collaborative research.
+          Experienced in python development, data science and collaborative research.
         image_url: https://avatars.githubusercontent.com/u/116947102?v=4
         github_url: https://github.com/whitewolf2000ani
         github_sponsor: https://github.com/sponsors/whitewolf2000ani
