@@ -30,6 +30,22 @@ teams:
         image_url: https://avatars.githubusercontent.com/u/4383323?v=4
         github_url: https://github.com/luisgagocasas
 
+      - name: Yuvi Mittal
+        bio: |
+          Software Engineer and open-source contributor with a strong interest in compilers,
+          systems programming, and backend development. Experienced in JavaScript, C, and Python,
+          with hands-on work in LLVM-IR generation, APIs, and collaborative open-source projects.
+        github_url: https://github.com/yuvimittal
+        github_sponsor: https://github.com/sponsors/yuvimittal
+
+      - name: Aniket Kumar
+        bio: |
+          Machine learning Engineer passionate about Open Science and Open Source.
+          Experienced in python development, data science and collaborative research.
+        image_url: https://avatars.githubusercontent.com/u/116947102?v=4
+        github_url: https://github.com/whitewolf2000ani
+        github_sponsor: https://github.com/sponsors/whitewolf2000ani
+
   - name: Coordinators
     members:
       - name: Saransh Chopra
