@@ -11,7 +11,7 @@ description: |
   Science Labs (OSL), submitted between January and February 2023. The
   proposal was submitted to contribute to the development and maintenance
   of SciCookie, a Python tool within the [OSL incubation
-  projects](/programs/incubator/).
+  projects](/projects/incubation/).
 thumbnail: "/header.svg"
 template: "blog-post.html"
 ---
@@ -23,7 +23,7 @@ In this article, we will share our experience in applying for and executing a
 Python Software Foundation (PSF) grant on behalf of Open Science Labs (OSL),
 submitted between January and February 2023. The proposal was submitted to
 contribute to the development and maintenance of SciCookie, a Python tool within
-the [OSL incubation projects](/programs/incubator/).
+the [OSL incubation projects](/projects/incubation/).
 
 We'll begin by introducing SciCookie, highlighting its key features and aspects
 that might interest you. Then, we'll go over the grant application process and

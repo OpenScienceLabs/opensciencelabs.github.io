@@ -1,43 +1,72 @@
-
 name: main
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
+  check-branch:
+    if: ${{ github.event_name == 'pull_request' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    concurrency:
+      group: check-pr-${{ github.ref }}
+      cancel-in-progress: true
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check if the PR's branch is updated
+        uses: osl-incubator/gh-check-pr-is-updated@1.0.0
+        with:
+          remote_branch: origin/main
+          pr_sha: ${{ github.event.pull_request.head.sha }}
+
   build:
     runs-on: ubuntu-latest
     concurrency:
-      group: ci-${{ github.ref }}
+      group: ci-${{ github.event_name }}-${{ github.ref }}
       cancel-in-progress: true
     defaults:
       run:
         shell: bash -l {0}
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-    - uses: conda-incubator/setup-miniconda@v2
-      with:
-        miniconda-version: "latest"
-        mamba-version: "*"
-        environment-file: conda/dev.yaml
-        channels: conda-forge,nodefaults
-        activate-environment: osl-web
-        use-mamba: true
-        miniforge-variant: Mambaforge
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          miniconda-version: "latest"
+          environment-file: conda/dev.yaml
+          channels: conda-forge,nodefaults
+          activate-environment: osl-web
+          auto-update-conda: true
+          conda-solver: libmamba
 
-    - name: Build the book
-      run: |
-        makim pages.build
-        echo "opensciencelabs.org" > build/CNAME
+      - name: Install dependencies
+        run: |
+          poetry check
+          poetry install
+          python -m nltk.downloader punkt
 
-    # Push the book's HTML to github-pages
-    - name: GitHub Pages action
-      uses: peaceiris/actions-gh-pages@v3.5.9
-      if: ${{ github.event_name == 'push' }}
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build
+      - name: Linter
+        if: ${{ github.event_name == 'pull_request' }}
+        run: |
+          pre-commit install
+          pre-commit run --all-file --verbose
+
+      - name: Build the book
+        run: |
+          makim pages.build
+          echo "opensciencelabs.org" > build/CNAME
+
+      # Push the book's HTML to github-pages
+      - name: GitHub Pages action
+        uses: peaceiris/actions-gh-pages@v3.5.9
+        if: ${{ github.event_name == 'push' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build

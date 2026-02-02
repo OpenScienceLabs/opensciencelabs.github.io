@@ -1,10 +1,9 @@
-version: 1.0
 groups:
   pages:
-    targets:
+    tasks:
       pre-build:
         help: pre-build step
-        shell: bash
+        backend: bash
         run: |
           mkdir -p build
           # Directory to search for .ipynb files
@@ -16,14 +15,29 @@ groups:
             "*.ipynb" -exec sh -c \
             'jupyter nbconvert --to markdown --template=theme/custom-markdown.tpl --output-dir "$(dirname "$0")" --output "index" "$0"' {} \;
 
+          # remove console colors from md files
+          find "$SEARCH_DIR" -name \
+            "index.md" -exec sh -c \
+            'cat "$(dirname "$0")/index.md" | python scripts/clean-output.py > "$(dirname "$0")/temp_index.md" && mv "$(dirname "$0")/temp_index.md" "$(dirname "$0")/index.md"' {} \;
+
       build:
         help: build the static page
-        dependencies:
-          - target: pages.pre-build
-        run: mkdocs build --verbose --clean
+        hooks:
+          pre-run:
+            - task: pages.pre-build
+        run: |
+          rm -rf build/*
+          mkdocs build --verbose --clean --strict
 
       preview:
         help: preview the web page dynamically
-        dependencies:
-          - target: pages.pre-build
+        args:
+          run-pre-build:
+            help: Run pre-build task
+            type: bool
+            action: store_true
+        hooks:
+          pre-run:
+            - task: pages.pre-build
+              if: ${{ args.run_pre_build }}
         run: mkdocs serve --watch pages --watch theme

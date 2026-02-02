@@ -1,0 +1,112 @@
+/* ===== Partners grid (dark/light friendly, glass cards) ===== */
+
+:root{
+  --pc-text: var(--fg, #e8eaf0);
+  --pc-bg: rgba(16,18,27,.6);
+  --pc-border: rgba(255,255,255,.12);
+  --pc-hover: rgba(255,255,255,.06);
+}
+[data-bs-theme="light"]{
+  --pc-text: #111827;
+  --pc-bg: #ffffff;
+  --pc-border: rgba(0,0,0,.08);
+  --pc-hover: rgba(0,0,0,.04);
+}
+
+.partners-grid .partner-card{
+  background: var(--pc-bg);
+  border: 1px solid var(--pc-border);
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+  transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease;
+  position: relative;
+}
+.partners-grid .partner-card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(0,0,0,.16);
+  border-color: color-mix(in oklab, var(--pc-border) 60%, var(--brand, #3b82f6));
+}
+
+.partners-grid .partner-body{
+  color: var(--pc-text);
+}
+.partners-grid .partner-title a{
+  color: inherit;
+  text-decoration: none;
+}
+.partners-grid .partner-title a:hover{
+  text-decoration: underline;
+}
+.partners-grid .partner-summary{
+  color: color-mix(in oklab, var(--pc-text) 80%, transparent);
+  margin-bottom: .75rem;
+}
+
+.partners-grid .icon{ width: 18px; height: 18px; }
+
+.partners-grid .icon-btn{
+  --_bd: var(--pc-border);
+  --_fg: var(--pc-text);
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: .35rem;
+  border: 1px solid var(--_bd);
+  border-radius: 999px;
+  padding: .35rem .45rem;
+  line-height: 1;
+  color: var(--_fg);
+  background: transparent;
+  text-decoration: none;
+  transition: background-color .15s ease, border-color .15s ease, transform .05s ease;
+}
+.partners-grid .icon-btn:hover{
+  background: var(--pc-hover);
+  border-color: color-mix(in oklab, var(--_bd) 60%, var(--brand, #3b82f6));
+}
+.partners-grid .icon-btn:active{ transform: translateY(1px); }
+
+/* Logo band: fixed height + hidden overflow so nothing spills into the title */
+.partners-grid .logo-wrap{
+  height: 110px;                 /* was 130px */
+  padding: 12px 16px;
+  overflow: hidden;              /* hard stop */
+  display: flex; align-items: center; justify-content: center;
+  border-bottom: 1px dashed var(--pc-border);
+  background: color-mix(in oklab, var(--pc-bg) 92%, transparent);
+  border-top-left-radius: 1rem; border-top-right-radius: 1rem;
+}
+
+/* Logos: clamp both height and width so tall/wide marks don’t dominate */
+.partners-grid .logo-wrap img{
+  display: block;
+  object-fit: contain;
+  width: auto;
+  max-width: 80%;                /* prevent super-wide brands from touching edges */
+  max-height: clamp(44px, 8vw, 78px); /* scale responsively but never huge */
+  transform: scale(var(--logo-scale, 1));  /* per-partner fine-tune (see below) */
+  transform-origin: center;
+}
+
+/* Slightly larger on very wide screens, still bounded */
+@media (min-width: 1400px){
+  .partners-grid .logo-wrap{ height: 120px; }
+  .partners-grid .logo-wrap img{ max-height: 84px; }
+}
+
+/* And a touch smaller on tight screens to avoid crowding */
+@media (max-width: 480px){
+  .partners-grid .logo-wrap{ height: 96px; }
+  .partners-grid .logo-wrap img{ max-height: 64px; }
+}
+
+/* Optional: keep long names tidy */
+.partners-grid .partner-title{
+  display: -webkit-box;
+  -webkit-line-clamp: 2;         /* clamp to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.partner-card .stretched-link::after { z-index: 1; }           /* overlay */
+.partner-card .icon-btn { position: relative; z-index: 2; }    /* icons above */

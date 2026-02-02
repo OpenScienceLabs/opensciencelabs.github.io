@@ -136,8 +136,8 @@ print(result.compute())  # Outputting the computed result
 ```python
 #Lazy Evalution with dask
 import dask.dataframe as dd
-import pandas as pd
 import numpy as np
+import pandas as pd
 
 # Creating a dummy dataset
 num_rows = 100  # Number of rows
@@ -229,6 +229,7 @@ print(y_dask.compute())
 ```python
 # Dynamic task scheduling with Dask
 import dask
+
 
 @dask.delayed
 def square(x):

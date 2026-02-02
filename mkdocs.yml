@@ -4,68 +4,97 @@ site_url: https://opensciencelabs.org
 docs_dir: pages
 site_dir: build
 
+extra:
+  enumerate: !!python/name:builtins.enumerate
+
 theme:
   name: null
-  custom_dir: 'theme/'
+  custom_dir: "theme/"
   features:
     - content.code.copy
   palette:
     primary: indigo
 
 extra_css:
-  - css/style.css
-  - css/index.css
+  - css/base.css
+  - css/blog.css
+  - css/code.css
+  - css/content.css
+  - css/footer.css
+  - css/home.css
+  - css/nav.css
+  - css/partners.css
+  - css/search.css
+  - css/team.css
+  - css/tokens.css
+  - css/utilities.css
 
 extra_javascript:
-  - js/bundle.js
-  - js/search.js
-  - js/index.json
+  - js/theme.js
+  - js/osl-search.js
+  - js/vendor/lunr.min.js
+  - js/vendor/lunr.stemmer.support.min.js
+  - js/vendor/lunr.multi.min.js
+  - js/vendor/lunr.es.min.js
+  - js/vendor/lunr.pt.min.js
 
 nav:
-  - Home: 'index.md'
-  - Blog: 'blog/index.md'
-  - Programs:
-    - index: 'programs/index.md'
-    - Member Affiliation: 'programs/member-affiliation/index.md'
-    - Project Affiliation:
-      - index: 'programs/project-affiliation/index.md'
-      - Affiliated Projects: 'programs/project-affiliation/projects.md'
-    # - Ambassadors: 'programs/ambassadors/index.md'
-    - Incubator: 'programs/incubator/index.md'
-    - Internship:
-      - index: 'programs/internship/index.md'
-      - Interns Guide: 'programs/internship/guides/interns/index.md'
-      - Mentors Guide: 'programs/internship/guides/mentors/index.md'
-      - "Google Summer Of Code": 'programs/internship/gsoc/index.md'
-      - "Cycle 2024-01 (OPEN)": 'programs/internship/cycles/2024-01.md'
-      - "Cycle 2023-01 (CLOSED)": 'programs/internship/cycles/2023-01.md'
-      - "TEMPLATE: Projects Ideas": 'programs/internship/templates/projects-ideas.md'
-      - "TEMPLATE: Intern Project Proposal": 'programs/internship/templates/intern-proposal.md'
-    - Mentoring: 'programs/mentoring/index.md'
-    - Partners: 'programs/partners/index.md'
-    # note: let's keep these programs hidden for now
-    # - Packaging Support: 'programs/packaging-support/index.md'
-    # - Virtual-Labs: 'programs/virtual-labs/index.md'
-  - Guidelines:
-    - index: guidelines/index.md
-    - Articles: guidelines/articles/index.md
-    - DEI: guidelines/dei/index.md
-    - DevOps/Discord: guidelines/devops/discord.md
-    - Fund Raiser: guidelines/fund-raiser/index.md
-    - Governance: guidelines/governance/index.md
-    - Mentoring: guidelines/mentoring/index.md
+  - Blog: "blog/index.md"
+  - Projects:
+      - Overview: "projects/index.md"
+      - Incubation: "projects/incubation/index.md"
+      - Affiliation: "projects/affiliation/index.md"
+      - All Projects: "projects/list/index.md"
+  - Opportunities:
+      - Overview: opportunities/index.md
+      - OSS Internship:
+          - Overview: "opportunities/internships/oss/index.md"
+          - Project Ideas: "opportunities/internships/oss/project-ideas/index.md"
+          - "Contribution Guidelines": "opportunities/guides/contribution/index.md"
+          - "Candidates' Guide": "opportunities/internships/guides/interns/index.md"
+          - "Template: Projects Ideas": "opportunities/internships/templates/projects-ideas/index.md"
+          - "Template: Candidates's Project Proposal": "opportunities/internships/templates/candidate-proposal/index.md"
+      - OSS Research Seed Internship:
+          - Overview: "opportunities/internships/oss-research-seed/index.md"
+          - Project Ideas: "opportunities/internships/oss-research-seed/project-ideas/index.md"
+          - "Contribution Guidelines": "opportunities/guides/contribution/index.md"
+          - "Candidates' Guide": "opportunities/internships/guides/interns/index.md"
+          - "Template: Projects Ideas": "opportunities/internships/templates/projects-ideas/index.md"
+          - "Template: Candidates's Project Proposal": "opportunities/internships/templates/candidate-proposal/index.md"
+      - Google Summer of Code:
+          - Overview: "opportunities/gsoc/index.md"
+          - Project Ideas: "opportunities/gsoc/project-ideas/index.md"
+          - "Contribution Guidelines": "opportunities/guides/contribution/index.md"
+          - "Candidates' Guide": "opportunities/gsoc/guides/contributor/index.md"
+          - "Template: Project Idea": "opportunities/gsoc/templates/project-ideas.md"
+          - "Template: Candidates Project Proposal": "opportunities/gsoc/templates/contributor-proposal.md"
+  - Partnership:
+      - Overview: "partnership/index.md"
+      - Partners: "partnership/partners/index.md"
+      - Open Proposals:
+          - Overview: "partnership/open-proposals/index.md"
+          - Community Training: "partnership/open-proposals/community-training/index.md"
+  - Learning:
+      - Overview: learning/index.md
+      - Events: learning/events/index.md
+      - Study Groups: learning/study-groups/index.md
   - About:
-    - index: 'about/index.md'
-    - About OSL: 'about/index.md'
-    - Team: about/team/index.md
-    - Mentors: 'programs/mentoring/mentors.md'
-    - Partners: about/partners/index.md
-    # - Activities: about/archives/index.md
-    - FAQ: faq/index.md
-    - Roadmap: about/roadmap/index.md
-    - CoC: about/coc/index.md
-    - CoC for Mentoring: about/coc-mentoring/index.md
-    - Acknowledges: about/acknowledges/index.md
+      - Overview: "about/index.md"
+      - About OSL:
+          - Overview: "about/index.md"
+          - Contact Us: about/contact/index.md
+          - Our Formula: "about/formula/index.md"
+          - Roadmap: about/roadmap/index.md
+          - Code Of Conduct: about/coc/index.md
+          - Governance: about/governance/index.md
+      - Team: about/team/index.md
+      - Fiscal Sponsor: about/fiscal-sponsor/index.md
+      - Guidelines:
+          - Overview: about/guidelines/index.md
+          - Articles: about/guidelines/articles/index.md
+          - DEI: about/guidelines/dei/index.md
+          - Mentoring: about/guidelines/mentoring/index.md
+  - Donate: "donate/index.md"
 
 markdown_extensions:
   - toc:
@@ -77,8 +106,13 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - mdx_truly_sane_lists
 
 plugins:
+  - include-markdown:
+      start: <!-- start -->
+      end: <!-- end -->
+
   - blogging:
       template: theme/blog-list.html
       dirs:
@@ -87,7 +121,7 @@ plugins:
         tags: {}
 
   - rss:
-      abstract_chars_count: 160  # -1 for full content
+      abstract_chars_count: 160 # -1 for full content
       abstract_delimiter: <!-- more -->
       categories:
         - tags
@@ -108,3 +142,14 @@ plugins:
         utm_source: "documentation"
         utm_medium: "RSS"
         utm_campaign: "feed-syndication"
+  - git-revision-date-localized:
+      enabled: true
+      enable_creation_date: false
+      type: iso_date
+
+  - search:
+      lang:
+        - en
+        - es
+        - pt
+      prebuild_index: true

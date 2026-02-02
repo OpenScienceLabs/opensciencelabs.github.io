@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% set colors=["", "bg-light"] %}
+{% set text_colors=["", "text-secondary"] %}
+
+{% block content %}
+<section>
+  <div class="row pt-2">
+    <div class="col-md-12 mx-auto">
+      {% block content_inner %}
+      {{ page.content }}
+      {% endblock content_inner %}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 pt-3">
+
+      {% for project in page.meta["projects"] %}
+
+      <div class="row {{ colors[loop.index % 2] }}">
+        <div class="col">
+          <h2>
+            <a href="{{ project.url }}" target="_blank">
+              {% if project.type == "incubated"  %}
+              <img
+                alt="Static Badge"
+                src="https://img.shields.io/badge/project-incubated-333333?style=for-the-badge&label=project&labelColor=FFAA00&color=888888"
+              />
+              {% elif project.type == "affiliated" %}
+              <img
+                alt="Static Badge"
+                src="https://img.shields.io/badge/project-affiliated-333333?style=for-the-badge&label=project&labelColor=0E91C3&color=888888"
+              />
+              {% endif %}
+              {{ project.name }}
+            </a>
+          </h2>
+          <p class="{{ text_colors[loop.index % 2] }}">
+            <strong>Maintainer</strong>: {{ project.maintainer_name }}
+            &lt;<a href="mailto:{{ project.maintainer_email }}">{{ project.maintainer_email }}</a>&gt;<br/>
+            {% if project.communication_channel %}
+            <strong>Communication Channel</strong>:
+            <a href="{{ project.communication_channel.url }}">{{ project.communication_channel.provider.title() }}</a>
+            {% endif %}
+          </p>
+          <p class="{{ text_colors[loop.index % 2] }}">{{ project.description }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock content %}

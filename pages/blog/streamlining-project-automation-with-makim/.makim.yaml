@@ -1,0 +1,12 @@
+version: 1.0
+working-directory: "/tmp"
+
+groups:
+  check-wd:
+    targets:
+      is-tmp:
+        help: Test if working directory is `tmp`
+        run: |
+          import os
+          print(os.getcwd())
+          assert os.getcwd() == "/tmp"

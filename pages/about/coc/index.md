@@ -3,6 +3,7 @@ title: "Contributor Covenant Code of Conduct"
 date: 2022-09-14
 authors: ["Mariangela Petrizzo"]
 tags: [coc]
+template: single-sidebar.html
 ---
 
 # Code of Conduct
@@ -67,7 +68,7 @@ representative at an online or offline event.
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
 reported to the community leaders responsible for enforcement at
-opensciencelabs@gmail.com. All complaints will be reviewed and investigated
+team@opensciencelabs.org. All complaints will be reviewed and investigated
 promptly and fairly.
 
 All community leaders are obligated to respect the privacy and security of the

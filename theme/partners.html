@@ -1,54 +1,58 @@
-{% extends "base.html" %}
+{% extends "main.html" %}
+
 {% block header_extra %}
-<style>
-  .main-nav > li > a {
-    color: #000000 !important;
-  }
-</style>
+<link rel="stylesheet" href="/css/partners.css">
+{% endblock header_extra %}
 
-{% endblock header_extra%}
+{% block content_inner %}
+{{ page.content }}
 
-{% block content %}
-<section>
-  <div class="row pt-5">
-    <div class="col-md-9 mx-auto pt-3">
-      {% block content_inner %}
-      {{ page.content }}
-      {% endblock content_inner %}
-    </div>
-  </div>
+<div class="partners-grid row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 mt-2">
 
-  <div class="row">
-    <div class="col-md-9 mx-auto pt-3">
+  {% for partner in page.meta["partners"] %}
+    {% set logo = (partner.thumbnail if 'thumbnail' in partner else (partner.logo if 'logo' in partner else None)) %}
+    {% set site  = partner.url if 'url' in partner else None %}
 
-      {% for partner in page.meta["partners"] %}
-
-      <div class="row">
-        <div class="col-4 text-center">
-          <a href="{{ partner.url }}">
-            <img src="{{ partner.thumbnail }}" />
-          </a>
-        </div>
-        <div class="col-8">
-          <h2>{{ partner.name }}</h2>
-          <p>{{ partner.summary }}</p>
-          <p>
-          {% if "github" in partner  %}
-            <a href="{{ partner.github }}"><i
-                class="fa fa-brands fa-github-square position-static text-dark"></i></a>
-          {% endif %}
-          {% if "twitter" in partner  %}
-            <a href="{{ partner.twitter }}"><i
-              class="fa fa-brands fa-twitter-square"></i>
+    <div class="col">
+      <article class="partner-card h-100 d-flex flex-column">
+        <div class="logo-wrap p-4">
+          {% if logo %}
+            <a href="{{ site or '#' }}" class="d-inline-flex" target="_blank" rel="noopener">
+              <img src="{{ logo }}" alt="{{ partner.name }}" />
             </a>
           {% endif %}
-          </p>
         </div>
-      </div>
-      <hr />
 
-      {% endfor %}
+        <div class="partner-body px-4 pb-4 pt-3 d-flex flex-column flex-grow-1">
+          <h3 class="h5 partner-title mb-2">
+            {% if site %}
+              <a href="{{ site }}" class="stretched-link" target="_blank" rel="noopener">{{ partner.name }}</a>
+            {% else %}
+              {{ partner.name }}
+            {% endif %}
+          </h3>
+
+          {% if 'summary' in partner and partner.summary %}
+            <p class="partner-summary">{{ partner.summary }}</p>
+          {% endif %}
+
+          <div class="mt-auto d-flex flex-wrap gap-2">
+            {# Social icons (only render if URL exists). These IDs come from base.html sprite. #}
+            {% if 'github' in partner %}<a href="{{ partner.github }}" class="icon-btn" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use xlink:href="#github"/></svg></a>{% endif %}
+            {% if 'twitter' in partner %}<a href="{{ partner.twitter }}" class="icon-btn" target="_blank" rel="noopener" aria-label="Twitter / X"><svg class="icon"><use xlink:href="#twitter"/></svg></a>{% endif %}
+            {% if 'linkedin' in partner %}<a href="{{ partner.linkedin }}" class="icon-btn" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon"><use xlink:href="#linkedin"/></svg></a>{% endif %}
+            {% if 'facebook' in partner %}<a href="{{ partner.facebook }}" class="icon-btn" target="_blank" rel="noopener" aria-label="Facebook"><svg class="icon"><use xlink:href="#facebook"/></svg></a>{% endif %}
+            {% if 'discord' in partner %}<a href="{{ partner.discord }}" class="icon-btn" target="_blank" rel="noopener" aria-label="Discord"><svg class="icon"><use xlink:href="#discord"/></svg></a>{% endif %}
+            {% if 'rss' in partner %}<a href="{{ partner.rss }}" class="icon-btn" target="_blank" rel="noopener" aria-label="RSS"><svg class="icon"><use xlink:href="#rss"/></svg></a>{% endif %}
+            {% if 'blog' in partner %}<a href="{{ partner.blog }}" class="icon-btn" target="_blank" rel="noopener" aria-label="Blog"><svg class="icon"><use xlink:href="#blog"/></svg></a>{% endif %}
+            {% if 'youtube' in partner %}<a href="{{ partner.youtube }}" class="icon-btn" target="_blank" rel="noopener" aria-label="YouTube"><svg class="icon"><use xlink:href="#youtube"/></svg></a>{% endif %}
+            {% if 'instagram' in partner %}<a href="{{ partner.instagram }}" class="icon-btn" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon"><use xlink:href="#instagram"/></svg></a>{% endif %}
+            {% if 'bluesky' in partner %}<a href="{{ partner.bluesky }}" class="icon-btn" target="_blank" rel="noopener" aria-label="Bluesky"><svg class="icon"><use xlink:href="#bluesky"/></svg></a>{% endif %}
+          </div>
+        </div>
+      </article>
     </div>
-  </div>
-</section>
-{% endblock content %}
+  {% endfor %}
+
+</div>
+{% endblock content_inner %}

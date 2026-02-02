@@ -15,16 +15,6 @@ teams:
         github_url: "https://github.com/xmnlab"
         github_sponsor: "https://github.com/sponsors/xmnlab/button"
 
-      - name: Eunice Rodas
-        bio: |
-          I’m currently working on Beek.io as Data Engineer, I work create and model,
-          ETL, pipelines and Datawarehouse using Python, Pandas, Airflow and GCP.
-          I'm data passionate, I studied a postgraduate in Data Predict and Analytics
-          using Pandas, Tensorflow and R.
-        image_url: https://avatars.githubusercontent.com/u/12076074?v=4
-        github_url: https://github.com/eunrod16
-        # github_sponsor:
-
       - name: Ever Vino
         bio: |
           Bioprocess & Chemical processes Mathematical Modelling Developer,
@@ -39,44 +29,53 @@ teams:
           CEO and Owner at AyPhu.
         image_url: https://avatars.githubusercontent.com/u/4383323?v=4
         github_url: https://github.com/luisgagocasas
-        # github_sponsor:
 
-      - name: Agustina Pesce Lopez
+      - name: Yuvi Mittal
         bio: |
-          I'm a Physicist and a PhD in Geophysics. All those years, I worked in applied
-          geophysics and studied subduction zones through geodynamical numerical modeling.
-          I'm also committed to contribute to open-source software projects to improve
-          science openness and reproducibility.
-        image_url: https://avatars.githubusercontent.com/u/13738018?v=4
-        github_url: https://github.com/aguspesce
-        # github_sponsor:
+          Software Engineer and open-source contributor with a strong interest in compilers,
+          systems programming, and backend development. Experienced in JavaScript, C, and Python,
+          with hands-on work in LLVM-IR generation, APIs, and collaborative open-source projects.
+        github_url: https://github.com/yuvimittal
+        github_sponsor: https://github.com/sponsors/yuvimittal
 
-  - name: Interns
+      - name: Aniket Kumar
+        bio: |
+          Machine learning Engineer passionate about Open Science and Open Source.
+          Experienced in python development, data science and collaborative research.
+        image_url: https://avatars.githubusercontent.com/u/116947102?v=4
+        github_url: https://github.com/whitewolf2000ani
+        github_sponsor: https://github.com/sponsors/whitewolf2000ani
+
+  - name: Coordinators
     members:
-      - name: Anavelyz Pérez
+      - name: Saransh Chopra
         bio: |
-          Statistician, data analyst. Python and R learner.
+          I am currently based at CERN, working as a Research Fellow with the Princeton
+          Research Computing Group and IRIS-HEP. I am broadly interested in Research
+          Software Engineering, Scientific Computing, DevOps, Theory of Computation,
+          and Type Theory. I am extremely passionate about Open-Source and Open-Science.
+        image_url: https://saransh-cpp.github.io/assets/img/SaranshChopra.jpeg
+        github_url: https://github.com/Saransh-cpp
+
+      - name: Anavelyz Perez
+        bio: |
+          OSL Coordinator.
+          Statistician and data analyst proficient in Python and R, currently exploring
+          Flutter.
         image_url: https://avatars.githubusercontent.com/u/42752529?v=4
         github_url: https://github.com/Anavelyz
-        # github_sponsor:
 
+  - name: Associated collaborators
+    members:
       - name: Yurely Camacho
         bio: |
           Statistician, data analyst. Python and R learner.
         image_url: https://avatars.githubusercontent.com/u/49034451?v=4
         github_url: https://github.com/YurelyCamacho
-        # github_sponsor:
-
-      - name: Daniela Iglesias Rocabado
-        bio: |
-          Graduate in Systems Engineering with a passion for Python and Web Development.
-        image_url: https://avatars.githubusercontent.com/u/107383061?v=4
-        github_url: https://github.com/DanielaIgRo
-        # github_sponsor:
 
   - name: Steering Council Emeritus
     members:
-      - name: Fracisco Palm
+      - name: Francisco Palm
         bio: |
           Computation & Data Science Senior Researcher, Python & R Developer
           and Software Architect. Special emphasis on hacker ethic as a learning
@@ -85,14 +84,12 @@ teams:
           Distributed Massive Empowerment.
         image_url: https://avatars.githubusercontent.com/u/236351?v=4
         github_url: https://github.com/map0logo
-        # github_sponsor:
 
       - name: Ingrid Garcia
         bio: |
           Research Coordinator at 60 Decibels.
         image_url: https://avatars.githubusercontent.com/u/47956238?v=4
         github_url: https://github.com/ibianka
-        # github_sponsor:
 
       - name: Mariangela Petrizzo
         bio: |
@@ -101,7 +98,6 @@ teams:
           plenty of selfishness.
         image_url: https://avatars.githubusercontent.com/u/221018?v=4
         github_url: https://github.com/petrizzo
-        # github_sponsor:
 
       - name: Sandro Loch
         bio: |
@@ -111,6 +107,24 @@ teams:
         github_url: https://github.com/esloch
         github_sponsor: https://github.com/sponsors/esloch/button
 
+      - name: Eunice Rodas
+        bio: |
+          I’m currently working on Beek.io as Data Engineer, I work create and model,
+          ETL, pipelines and Datawarehouse using Python, Pandas, Airflow and GCP.
+          I'm data passionate, I studied a postgraduate in Data Predict and Analytics
+          using Pandas, Tensorflow and R.
+        image_url: https://avatars.githubusercontent.com/u/12076074?v=4
+        github_url: https://github.com/eunrod16
+
+      - name: Agustina Pesce Lopez
+        bio: |
+          I'm a Physicist and a PhD in Geophysics. All those years, I worked in applied
+          geophysics and studied subduction zones through geodynamical numerical modeling.
+          I'm also committed to contribute to open-source software projects to improve
+          science openness and reproducibility.
+        image_url: https://avatars.githubusercontent.com/u/13738018?v=4
+        github_url: https://github.com/aguspesce
+
   - name: Alumni
     members:
       - name: Luã Bida Vacaro
@@ -118,19 +132,35 @@ teams:
           Software Developer and DevOps
         image_url: https://avatars.githubusercontent.com/u/82233055?v=4
         type: team-template
-        date: 2022-04-12
         github_sponsor: https://github.com/sponsors/luabida/button
         github_url: https://github.com/luabida
+
+      - name: Daniela Iglesias Rocabado
+        bio: |
+          Graduate in Systems Engineering with a passion for Python and Web Development.
+        image_url: https://avatars.githubusercontent.com/u/107383061?v=4
+        github_url: https://github.com/DanielaIgRo
+
+      - name: Mfonobong Emmanuel Uyah
+        bio: |
+          Electrical and Electronics Engineering graduate with interest in software development using Python, Django, and JavaScript. Looking to develop and participate in open-source and open-science projects.
+        image_url: https://avatars.githubusercontent.com/u/97167651?v=4
+        github_url: https://github.com/investor-uyah
 ---
 
 # OSL Team
 
-OSL is a Open-Source community and everyone can join, check our
-[GitHub](https://github.com/OpenScienceLabs/opensciencelabs.github.io) to be
-apart of the issues.
+Join our community of innovators, thinkers, and creators. Whether you're a
+researcher, student, or open science enthusiast, there's a place for you at OSL.
+Explore our programs, participate in our events, and contribute to making
+science and technology open and accessible to all.
+
+<a
+  href="https://opensciencelabs.org/discord"
+  class="btn btn-success"
+  target="_blank">Join our Discord server </a>
 
 ## How can you contribute?
 
-To be contributing with the community you must know our
-[Guidelines](/guidelines/), there you will find the
-workflow of the running projects and how you can apply to our team.
+To contribute alongside the community, be sure to check our
+[Code of Conduct](/about/coc).

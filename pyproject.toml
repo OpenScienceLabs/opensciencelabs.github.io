@@ -1,0 +1,74 @@
+[project]
+name = "oslweb"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+authors = [
+  {"name" = "Ivan Ogasawara", "email" = "ivan.ogasawara@gmail.com"}
+]
+license = "BSD-3-Clause"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "pre-commit>=4.0.1",
+  "mkdocs>=1.4.2",
+  "makim>=1.19.0",
+  "mkdocs-blogging-plugin>=2.2.11",
+  "mkdocs-rss-plugin<1.9.0",
+  "jupyterlab>=4.2.5",
+  "nbconvert>=7.16.4",
+  "pymdown-extensions>=10",
+  "mkdocs-include-markdown-plugin>=7.1",
+  "colorama (>=0.4.6,<0.5.0)",
+  "linkcheckmd (>=1.4.0,<2.0.0)",
+  "beautifulsoup4 (>=4.12.3,<5.0.0)",
+  "mkdocs-git-revision-date-localized-plugin (>=1.3)",
+  "mdx-truly-sane-lists (>=1.3,<2.0)",
+  "lunr[languages] (>=0.8.0)",
+  "nltk (>=3.9.1)",
+]
+
+
+[tool.poetry]
+package-mode = false
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.8.6"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.ruff]
+line-length = 79
+force-exclude = true
+src = ["./"]
+fix = true
+
+[tool.ruff.lint]
+ignore = [
+  "F811",
+  "PLR0911",  # Too many return statements
+  "PLR0912",  # Too many branches
+  "PLR0913",
+]
+select = [
+  "E",   # pycodestyle
+  "F",   # pyflakes
+  "D",   # pydocstyle
+  "YTT", # flake8-2020
+  "PL",  # PL
+  "RUF", # Ruff-specific rules
+  "I001", # isort
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.ruff.lint.isort]
+# Use a single line between direct and from import
+lines-between-types = 1
+
+[tool.ruff.format]
+quote-style = "double"

@@ -1,0 +1,6 @@
+overrides:
+  - files: "*.md"
+    options:
+      parser: remark
+      proseWrap: always
+      printWidth: 80
