@@ -83,8 +83,8 @@ touch with them directly if you have any inquiries._
 
 ### Hiperhealth
 
-- **Description**: Hiperhealth provides a set of tools and libraries for health care
-  services empowered by AI. It includes screening, diagnosis, treatments,
+- **Description**: Hiperhealth provides a set of tools and libraries for health
+  care services empowered by AI. It includes screening, diagnosis, treatments,
   prescriptions, clinical records, etc.
 - **Project WEB Page**: <https://hiperhealth.github.io/hiperhealth/>
 - **Repository**: <https://github.com/hiperhealth/hiperhealth>
