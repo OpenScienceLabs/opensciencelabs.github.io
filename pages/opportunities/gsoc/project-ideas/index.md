@@ -90,3 +90,14 @@ touch with them directly if you have any inquiries._
 - **Repository**: <https://github.com/hiperhealth/hiperhealth>
 - **Communication channel**: [Discord](https://discord.gg/Nu4MdGj9jB)
 - **Project Ideas**: [link](https://github.com/sdx-org/sdx/wiki/Project-Ideas)
+
+### Sugar (swarm-external-secrets)
+
+- **Description**: swarm-external-secrets is a Docker plugin that bridges
+  external secrets management systems with Docker Swarm's native secrets
+  infrastructure.
+- **Project WEB Page**: <https://sugar-org.github.io/swarm-external-secrets/>
+- **Repository**: <https://github.com/sugar-org/swarm-external-secrets>
+- **Communication channel**: [Discord](https://opensciencelabs.org/discord)
+- **Project Ideas**:
+  [link](https://github.com/sugar-org/swarm-external-secrets/wiki/Project-Ideas)
