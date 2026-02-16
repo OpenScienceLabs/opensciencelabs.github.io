@@ -73,14 +73,6 @@ touch with them directly if you have any inquiries._
 - **Project Ideas**:
   [link](https://github.com/extralit/extralit/wiki/GSoC-Project-Ideas-2025)
 
-### PyDataStructs
-
-- **Description**: PyDataStructs project aims to be a Python package for various
-  data structures and algorithms (including their parallel implementations).
-- **Project WEB Page**: <https://pydatastructs.readthedocs.io/en/latest/>
-- **Project Ideas**:
-  [link](https://github.com/codezonediitj/pydatastructs/wiki/Google-Summer-of-Code-Project-Ideas)
-
 ### Hiperhealth
 
 - **Description**: Hiperhealth provides a set of tools and libraries for health
