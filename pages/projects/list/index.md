@@ -195,7 +195,7 @@ projects:
   - name: swarm-external-secrets
     type: affiliated
     maintainer_name: Sai Sanjay
-    maintainer_email: saisanjay7660@gmail.com
+    maintainer_email: sanjay@nullvijayawada.org
     url: https://sugar-org.github.io/swarm-external-secrets/
     communication_channel:
       provider: discord
