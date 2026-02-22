@@ -47,7 +47,7 @@ touch with them directly if you have any inquiries._
 - **Communication channel**:
   [Slack](https://join.slack.com/t/alphaonelabs/shared_invite/zt-7dvtocfr-1dYWOL0XZwEEPUeWXxrB1A)
 - **Project Ideas**:
-  [link](https://github.com/alphaonelabs/education-website/wiki/GSOC-2025-Ideas-Refined)
+  [link](https://github.com/alphaonelabs/alphaonelabs-education-website/wiki/GSOC-2026-Ideas)
 
 ### ArxLang/IRx
 
