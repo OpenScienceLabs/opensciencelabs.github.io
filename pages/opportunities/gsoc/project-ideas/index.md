@@ -61,7 +61,7 @@ touch with them directly if you have any inquiries._
 
 ### Extralit
 
-- **Description**: Extralit is an open-source platform for researchers to
+- **Description**: Extralit is an open-source tool for researchers to
   extract structured data from scientific literature. It combines advanced
   document AI with collaborative human validation workflows to create
   analysis-ready datasets fit-for-purpose to any scientific domain, enabling
@@ -69,9 +69,9 @@ touch with them directly if you have any inquiries._
 - **Project WEB Page**: <https://docs.extralit.ai/>
 - **Repository**: <https://github.com/extralit/extralit>
 - **Communication channel**:
-  [Slack](https://join.slack.com/t/extralit/shared_invite/zt-32blg3602-0m0XewPBXF7776BQ3m7ZlA)
+  [Slack](https://join.slack.com/t/extralit/shared_invite/zt-3gw1ah8bl-AiVNrkIVYOL4yVGOxN8WFw)
 - **Project Ideas**:
-  [link](https://github.com/extralit/extralit/wiki/GSoC-Project-Ideas-2025)
+  [link](https://github.com/extralit/extralit/wiki/GSoC-Project-Ideas-2025) (postponed for 2026)
 
 ### Hiperhealth
 
