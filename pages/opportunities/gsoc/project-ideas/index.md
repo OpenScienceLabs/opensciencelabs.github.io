@@ -59,20 +59,6 @@ touch with them directly if you have any inquiries._
 - **Communication channel**: [Discord](https://arxlang.org/discord)
 - **Project Ideas**: [link](https://github.com/arxlang/irx/wiki/Project-Ideas)
 
-### Extralit
-
-- **Description**: Extralit is an open-source tool for researchers to
-  extract structured data from scientific literature. It combines advanced
-  document AI with collaborative human validation workflows to create
-  analysis-ready datasets fit-for-purpose to any scientific domain, enabling
-  faster evidence synthesis and meta-analysis.
-- **Project WEB Page**: <https://docs.extralit.ai/>
-- **Repository**: <https://github.com/extralit/extralit>
-- **Communication channel**:
-  [Slack](https://join.slack.com/t/extralit/shared_invite/zt-3gw1ah8bl-AiVNrkIVYOL4yVGOxN8WFw)
-- **Project Ideas**:
-  [link](https://github.com/extralit/extralit/wiki/GSoC-Project-Ideas-2025) (postponed for 2026)
-
 ### Hiperhealth
 
 - **Description**: Hiperhealth provides a set of tools and libraries for health
@@ -93,3 +79,19 @@ touch with them directly if you have any inquiries._
 - **Communication channel**: [Discord](https://opensciencelabs.org/discord)
 - **Project Ideas**:
   [link](https://github.com/sugar-org/swarm-external-secrets/wiki/Project-Ideas)
+
+<!--
+### Extralit
+
+- **Description**: Extralit is an open-source tool for researchers to
+  extract structured data from scientific literature. It combines advanced
+  document AI with collaborative human validation workflows to create
+  analysis-ready datasets fit-for-purpose to any scientific domain, enabling
+  faster evidence synthesis and meta-analysis.
+- **Project WEB Page**: <https://docs.extralit.ai/>
+- **Repository**: <https://github.com/extralit/extralit>
+- **Communication channel**:
+  [Slack](https://join.slack.com/t/extralit/shared_invite/zt-3gw1ah8bl-AiVNrkIVYOL4yVGOxN8WFw)
+- **Project Ideas**:
+  [link](https://github.com/extralit/extralit/wiki/GSoC-Project-Ideas-2025) (postponed for 2026)
+-->
