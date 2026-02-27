@@ -76,7 +76,7 @@ touch with them directly if you have any inquiries._
   infrastructure.
 - **Project WEB Page**: <https://sugar-org.github.io/swarm-external-secrets/>
 - **Repository**: <https://github.com/sugar-org/swarm-external-secrets>
-- **Communication channel**: [Discord](https://opensciencelabs.org/discord)
+- **Communication channel**: [Discord](https://discord.gg/4NYdBu7bZy)
 - **Project Ideas**:
   [link](https://github.com/sugar-org/swarm-external-secrets/wiki/Project-Ideas)
 
