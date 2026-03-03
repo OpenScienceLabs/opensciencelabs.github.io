@@ -73,14 +73,13 @@ dependencies and activate it.
   ---
   ```
 
-  The body of the file uses standard Markdown plus any Quarto features you
-  need (code chunks, figures, etc.). During the build, `makim pages.build`
-  will render `index.qmd` to `index.md` using Quarto so that MkDocs can
-  consume the generated Markdown.
+  The body of the file uses standard Markdown plus any Quarto features you need
+  (code chunks, figures, etc.). During the build, `makim pages.build` will
+  render `index.qmd` to `index.md` using Quarto so that MkDocs can consume the
+  generated Markdown.
 
-- **Legacy Jupyter Notebook Posts (optional / for migration only):**  
-  Existing posts may still be stored as `index.ipynb`. To migrate them to
-  Quarto, run:
+- **Legacy Jupyter Notebook Posts (optional / for migration only):** Existing
+  posts may still be stored as `index.ipynb`. To migrate them to Quarto, run:
 
   ```bash
   python scripts/convert-blog-posts-to-qmd.py
