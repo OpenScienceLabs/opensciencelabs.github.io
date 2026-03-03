@@ -42,15 +42,13 @@ dependencies and activate it.
 
 ### Creating a New Blog Post
 
-1. **Prepare the Blog Post:**
+1. **Prepare the Blog Post (Quarto-first workflow):**
 
    - Navigate to `pages/blog` and create a new folder with a slugified version
      of your blog post's title. Use
      [https://slugify.online/](https://slugify.online/) to generate a slug.
-   - Inside this folder, create your blog post file:
-     - For Markdown: `index.md`
-     - For Jupyter Notebooks: `index.ipynb` (use Jupyter Lab to create this
-       directly)
+   - Inside this folder, create your blog post as a **Quarto document**:
+     - `index.qmd`
 
 2. **Include a Header Image:**
    - Place a header image (either `header.png` or `header.jpg`) in your blog
@@ -58,8 +56,8 @@ dependencies and activate it.
 
 ### Metadata and Formatting
 
-- **Markdown Posts:** Add a metadata block at the beginning of your `index.md`
-  file:
+- **Quarto (`.qmd`) Posts:** Add a metadata block at the beginning of your
+  `index.qmd` file:
 
   ```markdown
   ---
@@ -75,8 +73,21 @@ dependencies and activate it.
   ---
   ```
 
-- **Jupyter Notebook Posts:** The first cell of your `index.ipynb` should be in
-  `raw` mode containing the same metadata as above.
+  The body of the file uses standard Markdown plus any Quarto features you
+  need (code chunks, figures, etc.). During the build, `makim pages.build`
+  will render `index.qmd` to `index.md` using Quarto so that MkDocs can
+  consume the generated Markdown.
+
+- **Legacy Jupyter Notebook Posts (optional / for migration only):**  
+  Existing posts may still be stored as `index.ipynb`. To migrate them to
+  Quarto, run:
+
+  ```bash
+  python scripts/convert-blog-posts-to-qmd.py
+  ```
+
+  This will generate corresponding `index.qmd` files, which you can then edit
+  directly. New posts should **not** be authored as notebooks; prefer `.qmd`.
 
 3. **Building and Viewing:**
    - If using a Jupyter Notebook, run `makim pages.build` to convert the
@@ -89,6 +100,8 @@ dependencies and activate it.
 Before submitting your blog post:
 
 - Ensure all files are added to your repository.
+- For new or migrated posts, confirm that `index.qmd` exists and that
+  `makim pages.build` successfully generates the corresponding `index.md`.
 - Submit a pull request to the main `opensciencelabs.github.io` repository for
   review.
 
