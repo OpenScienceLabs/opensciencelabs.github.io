@@ -64,6 +64,7 @@ def _convert_markdown_to_qmd(md_path: Path) -> None:
 
 
 def main() -> None:
+    """Convert blog posts from ipynb/md to qmd format."""
     if not BLOG_ROOT.exists():
         raise SystemExit(f"Blog directory not found: {BLOG_ROOT}")
 
@@ -75,7 +76,10 @@ def main() -> None:
     for md_path in BLOG_ROOT.rglob("*.md"):
         _convert_markdown_to_qmd(md_path)
 
-    print("[II] Conversion complete. Review generated .qmd files and commit them.")
+    print(
+        "[II] Conversion complete. "
+        "Review generated .qmd files and commit them."
+        )
 
 
 if __name__ == "__main__":
