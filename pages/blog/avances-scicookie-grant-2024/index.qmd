@@ -9,6 +9,9 @@ description: |
   Descripción de las mejoras y tareas realizadas en SciCookie gracias a la subvención de la PSF.
 thumbnail: "/header.png"
 template: "blog-post.html"
+format:
+  gfm:
+    variant: +yaml_metadata_block
 ---
 
 Como mencionamos en el post anterior [SciCookie recibe nueva subvención de PSF para mejoras y crecimiento](https://opensciencelabs.org/blog/scicookie-recibe-nueva-subvencion-de-psf-para-mejoras-crecimiento/), en enero de 2024 la PSF aprobó nuestra solicitud de subvención. Esto nos ha permitido implementar una serie de mejoras significativas en SciCookie. A continuación, presentamos los avances y tareas realizadas.

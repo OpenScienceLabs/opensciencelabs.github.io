@@ -9,7 +9,11 @@ description: |
   ArtBox is a tool set for handling multimedia files with a bunch of useful functions.
 thumbnail: "/header.jpg"
 template: "blog-post.html"
+format:
+  gfm:
+    variant: +yaml_metadata_block
 ---
+# How to use it?
 
 ## What is ArtBox?
 

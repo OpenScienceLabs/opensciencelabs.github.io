@@ -12,7 +12,11 @@ description: |
   like type hints, to define CLI commands in a straightforward and intuitive way.
 thumbnail: "/header.svg"
 template: "blog-post.html"
+format:
+  gfm:
+    variant: +yaml_metadata_block
 ---
+# Typer: A Python Library for Building CLI Applications
 
 ## What is Typer?
 
@@ -99,36 +103,16 @@ if __name__ == "__main__":
     app()
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Overwriting greet.py
-
-</span></code>
-</pre>
-</div>
+    Overwriting greet.py
+    
 
 
 ```python
 !python greet.py --name Alice
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Hello Alice!
-
-</span></code>
-</pre>
-</div>
+    Hello Alice!
+    
 
 ### Help Documentation
 
@@ -139,29 +123,19 @@ Typer automatically generates help documentation for your application. Try runni
 !python greet.py --help
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Usage: greet.py [OPTIONS]
-
-Greets the user by name.
-
-Options:
---name TEXT                     The name of the person to greet.  [required]
---install-completion [bash|zsh|fish|powershell|pwsh]
-Install completion for the specified shell.
---show-completion [bash|zsh|fish|powershell|pwsh]
-Show completion for the specified shell, to
-copy it or customize the installation.
---help                          Show this message and exit.
-
-</span></code>
-</pre>
-</div>
+    Usage: greet.py [OPTIONS]
+    
+      Greets the user by name.
+    
+    Options:
+      --name TEXT                     The name of the person to greet.  [required]
+      --install-completion [bash|zsh|fish|powershell|pwsh]
+                                      Install completion for the specified shell.
+      --show-completion [bash|zsh|fish|powershell|pwsh]
+                                      Show completion for the specified shell, to
+                                      copy it or customize the installation.
+      --help                          Show this message and exit.
+    
 
 You'll get a detailed description of how to use the command, including available options.
 
@@ -232,18 +206,8 @@ if __name__ == "__main__":
     app()
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Overwriting ecommerce.py
-
-</span></code>
-</pre>
-</div>
+    Overwriting ecommerce.py
+    
 
 A key feature demonstrated in the script is the use of the callback function with the invoke_without_command=True parameter. This setup enables the execution of specific code (like displaying the version or help text) before any subcommands are processed. It's a powerful tool for handling pre-command logic or global options that apply to the entire CLI application.
 
@@ -256,104 +220,64 @@ In the following lines, there are some examples of the CLI call with different p
 !python ecommerce.py --help
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Usage: ecommerce.py [OPTIONS] COMMAND [ARGS]...
-
-Operations for e-commerce.
-
-Options:
--v, --version                   Show the version and exit.
---install-completion [bash|zsh|fish|powershell|pwsh]
-Install completion for the specified shell.
---show-completion [bash|zsh|fish|powershell|pwsh]
-Show completion for the specified shell, to
-copy it or customize the installation.
---help                          Show this message and exit.
-
-Commands:
-product  Operations for product model.
-user     Operations for user model.
-
-</span></code>
-</pre>
-</div>
+    Usage: ecommerce.py [OPTIONS] COMMAND [ARGS]...
+    
+      Operations for e-commerce.
+    
+    Options:
+      -v, --version                   Show the version and exit.
+      --install-completion [bash|zsh|fish|powershell|pwsh]
+                                      Install completion for the specified shell.
+      --show-completion [bash|zsh|fish|powershell|pwsh]
+                                      Show completion for the specified shell, to
+                                      copy it or customize the installation.
+      --help                          Show this message and exit.
+    
+    Commands:
+      product  Operations for product model.
+      user     Operations for user model.
+    
 
 
 ```python
 !python ecommerce.py --version
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Version: 0.1.0
-
-</span></code>
-</pre>
-</div>
+    Version: 0.1.0
+    
 
 
 ```python
 !python ecommerce.py user --help
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Usage: ecommerce.py user [OPTIONS] COMMAND [ARGS]...
-
-Operations for user model.
-
-Options:
---help  Show this message and exit.
-
-Commands:
-create  Create a new user with the given name.
-update  Update user data with the given name.
-
-</span></code>
-</pre>
-</div>
+    Usage: ecommerce.py user [OPTIONS] COMMAND [ARGS]...
+    
+      Operations for user model.
+    
+    Options:
+      --help  Show this message and exit.
+    
+    Commands:
+      create  Create a new user with the given name.
+      update  Update user data with the given name.
+    
 
 
 ```python
 !python ecommerce.py user create --help
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Usage: ecommerce.py user create [OPTIONS] NAME
-
-Create a new user with the given name.
-
-Arguments:
-NAME  Name of the user to create.  [required]
-
-Options:
---help  Show this message and exit.
-
-</span></code>
-</pre>
-</div>
+    Usage: ecommerce.py user create [OPTIONS] NAME
+    
+      Create a new user with the given name.
+    
+    Arguments:
+      NAME  Name of the user to create.  [required]
+    
+    Options:
+      --help  Show this message and exit.
+    
 
 
 ```python

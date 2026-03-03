@@ -15,6 +15,9 @@ description: |
   [proyectos de incubación de OSL](/projects/incubation/).
 thumbnail: "/header.svg"
 template: "blog-post.html"
+format:
+  gfm:
+    variant: +yaml_metadata_block
 ---
 
 <!-- # PSF financiando el desarrollo de proyectos open source: SciCookie -->

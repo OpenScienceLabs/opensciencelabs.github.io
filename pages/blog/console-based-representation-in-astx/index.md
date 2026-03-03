@@ -10,7 +10,6 @@ description: |
 thumbnail: "/header.png"
 template: "blog-post.html"
 ---
-# Introduction
 
 The ASTx library is an agnostic framework for constructing and representing Abstract Syntax Trees (ASTs). Its primary objective is to provide a versatile and language-independent structure for ASTs, with the flexibility to be utilized across various programming languages and parsing tools. ASTx doesn't aim to be a lexer or a parser, although it could be used by any programming language or parser written in Python in order to provide a high level representation of the AST.
 

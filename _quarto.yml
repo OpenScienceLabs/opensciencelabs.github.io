@@ -1,0 +1,5 @@
+# Project-level Quarto config. Ensures GFM output keeps YAML front matter
+# so blog index.md have title, date, authors, tags, etc. for MkDocs.
+format:
+  gfm:
+    variant: +yaml_metadata_block

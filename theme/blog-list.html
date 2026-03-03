@@ -4,7 +4,7 @@
 {% macro render_blog(title, description, time, url, page) -%}
 {% if title != "Blog" %}
   {# Thumbnail path (fallback if missing) #}
-  {% set thumb = '/images/placeholders/post-16x9.png' %}
+  {% set thumb = 'https://fastly.picsum.photos/id/866/600/300.jpg?hmac=Zlb4VEJZKg8E6U7UZGt9Mq8Ly0cZsb8ZloMpw_5WB2M' %}
   {% if page.meta and page.meta.slug and page.meta.thumbnail %}
     {% set thumb = '/blog/' ~ page.meta.slug ~ page.meta.thumbnail %}
   {% endif %}

@@ -10,6 +10,9 @@ description: |
   enabling real-time autocompletion, hover info, diagnostics, and more.
 thumbnail: "/header.png"
 template: "blog-post.html"
+format:
+  gfm:
+    variant: +yaml_metadata_block
 ---
 
 # Language Server Protocol (LSP): How Editors Speak Code

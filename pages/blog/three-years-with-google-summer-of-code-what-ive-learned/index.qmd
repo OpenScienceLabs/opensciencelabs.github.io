@@ -13,6 +13,9 @@ description: |
   tested PRs.
 thumbnail: "/header.png"
 template: "blog-post.html"
+format:
+  gfm:
+    variant: +yaml_metadata_block
 ---
 
 # Three Years with Google Summer of Code: What I've Learned

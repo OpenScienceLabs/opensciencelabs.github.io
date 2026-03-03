@@ -10,6 +10,9 @@ description: |
   covering how to avoid dependency resolution issues.
 thumbnail: "/header.png"
 template: "blog-post.html"
+format:
+  gfm:
+    variant: +yaml_metadata_block
 ---
 
 # Packaging a VS Code Extension Using pnpm and VSCE

@@ -11,6 +11,9 @@ description: |
   de la Python Software Foundation (PSF)!
 thumbnail: "/header.svg"
 template: "blog-post.html"
+format:
+  gfm:
+    variant: +yaml_metadata_block
 ---
 
 <!-- # SciCookie recibe nueva subvención de PSF para mejoras y crecimiento -->

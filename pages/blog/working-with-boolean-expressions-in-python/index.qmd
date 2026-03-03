@@ -12,7 +12,11 @@ description: |
   We'll apply it to medical symptom data as an illustrative example.
 thumbnail: "/header.png"
 template: "blog-post.html"
+format:
+  gfm:
+    variant: +yaml_metadata_block
 ---
+# Working with Boolean Expressions in Python
 
 Boolean logic is a crucial component in many programming tasks, especially in searching and querying data. In this tutorial, we'll explore how to use `boolean.py`, a Python library, for handling Boolean expressions. We'll apply it to medical symptom data as an illustrative example.
 
@@ -54,17 +58,7 @@ fever, cough
 
 
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-(Symbol('fever'), Symbol('cough'))
-</span></code>
-</pre>
-</div>
+    (Symbol('fever'), Symbol('cough'))
 
 
 
@@ -88,20 +82,10 @@ no_fever = ~fever
 print(no_fever)
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-fever&cough
-fever|cough
-~fever
-
-</span></code>
-</pre>
-</div>
+    fever&cough
+    fever|cough
+    ~fever
+    
 
 Here, we demonstrate basic Boolean operations: AND, OR, and NOT. These operations are essential in constructing more complex Boolean expressions. For example, `symptoms_and` represents a scenario where a patient has both fever and cough.
 
@@ -121,18 +105,8 @@ complex_symptoms = (fever | cough) & ~headache & fatigue
 print(complex_symptoms)
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-((fever|cough)&~headache)&fatigue
-
-</span></code>
-</pre>
-</div>
+    ((fever|cough)&~headache)&fatigue
+    
 
 This complex expression can represent a more specific medical query. For instance, it could be used to find patients who have either fever or cough, do not have a headache, but are experiencing fatigue.
 
@@ -163,18 +137,8 @@ print("Does the patient match the criteria?", result, "=", result.simplify() == 
 
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Does the patient match the criteria? (((1)|(0))&(~(0)))&(1) = True
-
-</span></code>
-</pre>
-</div>
+    Does the patient match the criteria? (((1)|(0))&(~(0)))&(1) = True
+    
 
 In this example, we demonstrate how to evaluate a Boolean expression against a set of patient symptoms. We use `.subs()` to replace each symbol in our expression with the corresponding value (symptom presence) from `patient_symptoms`. The `.simplify()` method then evaluates this substituted expression to a Boolean value, indicating whether the patient's symptoms match our query criteria.
 
@@ -200,19 +164,9 @@ result = parsed_expression.subs(patient_symptoms)
 print(f"Does the patient match the criteria? {result.simplify() == true}")
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-parsed expression: (fever|cough)&~headache&fatigue
-Does the patient match the criteria? True
-
-</span></code>
-</pre>
-</div>
+    parsed expression: (fever|cough)&~headache&fatigue
+    Does the patient match the criteria? True
+    
 
 Parsing expressions from strings is extremely useful when you need to construct Boolean expressions dynamically, such as from user inputs or configuration files. In this example, we parse a string representing a Boolean expression and then evaluate it as before.
 
@@ -227,18 +181,8 @@ except boolean.ParseError as e:
     print("[EE]", str(e))
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-[EE] Unknown token for token: """ at position: 9
-
-</span></code>
-</pre>
-</div>
+    [EE] Unknown token for token: """ at position: 9
+    
 
 The string parser doesn't work with complex strings directly, but creating a manual symbol for the disease works fine.
 
@@ -261,23 +205,13 @@ result = chest_infection.subs(chest_infection_patient_symptoms)
 print(f"Does the patient match the criteria? {result.simplify() == true}")
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-================================================================================
-patient without fever
-Does the patient match the criteria? False
-================================================================================
-patient with all symptoms
-Does the patient match the criteria? True
-
-</span></code>
-</pre>
-</div>
+    ================================================================================
+    patient without fever
+    Does the patient match the criteria? False
+    ================================================================================
+    patient with all symptoms
+    Does the patient match the criteria? True
+    
 
 ## Conclusion
 

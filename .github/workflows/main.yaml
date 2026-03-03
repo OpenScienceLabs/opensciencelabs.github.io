@@ -33,9 +33,10 @@ jobs:
       cancel-in-progress: true
     defaults:
       run:
-        shell: bash -l {0}
+        # bash -el required so conda activation persists (README: IMPORTANT)
+        shell: bash -el {0}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - uses: conda-incubator/setup-miniconda@v3
         with:
@@ -45,6 +46,7 @@ jobs:
           activate-environment: osl-web
           auto-update-conda: true
           conda-solver: libmamba
+          conda-remove-defaults: true
 
       - name: Install dependencies
         run: |
@@ -52,11 +54,18 @@ jobs:
           poetry install
           python -m nltk.downloader punkt
 
+      # Render blog .qmd → .md so Build uses correct index.md (with YAML)
+      - name: Pre-build blog (quarto + inject)
+        run: makim pages.pre-build
+
+      # Skip mkdocs-build in pre-commit so we don't fail when repo's md != pre-build output
       - name: Linter
         if: ${{ github.event_name == 'pull_request' }}
+        env:
+          PRE_COMMIT_SKIP: mkdocs-build
         run: |
           pre-commit install
-          pre-commit run --all-file --verbose
+          pre-commit run --all-files --verbose
 
       - name: Build the book
         run: |

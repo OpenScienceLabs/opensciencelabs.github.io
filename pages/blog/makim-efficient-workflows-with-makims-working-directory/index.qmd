@@ -14,7 +14,11 @@ description: |
   feature!
 thumbnail: "/header.jpg"
 template: "blog-post.html"
+format:
+  gfm:
+    variant: +yaml_metadata_block
 ---
+# **Efficent Workflows with Makim's Working Directory**
 
 Welcome to the world of [Makim](https://github.com/osl-incubator/makim), your go-to command-line companion for project automation. In our ongoing effort to enhance Makim's capabilities, we've introduced an exciting new feature—the Working Directory. This feature brings a new level of control and flexibility to your project workflows.
 
@@ -164,18 +168,8 @@ groups:
           # Add commands for building Vue.js frontend
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Overwriting .makim.yaml
-
-</span></code>
-</pre>
-</div>
+    Overwriting .makim.yaml
+    
 
 
 ```python
@@ -185,21 +179,11 @@ Overwriting .makim.yaml
 !makim --makim-file ./.makim.yaml frontend_vue.build
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Linting Python code...
-Running Java backend tests...
-Running React frontend tests...
-Building Vue.js frontend...
-
-</span></code>
-</pre>
-</div>
+    Linting Python code...
+    Running Java backend tests...
+    Running React frontend tests...
+    Building Vue.js frontend...
+    
 
 ## Conclusion
 

@@ -14,7 +14,11 @@ description: |
   environment.
 thumbnail: "/header.png"
 template: "blog-post.html"
+format:
+  gfm:
+    variant: +yaml_metadata_block
 ---
+# Streamlining Project Automation with Makim
 
 In software development, where efficiency, consistency, and reliability are paramount, automation tools play a crucial role. Makim, an innovative open-source tool, steps into the spotlight to improve automation workflows. It simplifies script execution, environment management, and task dependencies, positioning itself as a great asset in modern development environments.
 
@@ -100,18 +104,8 @@ groups:
          echo "Runnint unit tests..."
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Overwriting .makim.yaml
-
-</span></code>
-</pre>
-</div>
+    Overwriting .makim.yaml
+    
 
 This setup demonstrates Makim's ability to manage tasks with conditional logic and dependencies.
 
@@ -124,43 +118,33 @@ Makim's CLI provides insights into available commands, arguments, and configurat
 !makim --help
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-                                                                                
- Usage: makim [OPTIONS] COMMAND [ARGS]...                                       
-                                                                                
-Makim is a tool that helps you to organize and simplify your helper commands.
-
-╭─ Options ────────────────────────────────────────────────────────────────────╮
-│ --version             -v            Show the version and exit                │
-│ --file                        TEXT  Makim config file [default: .makim.yaml] │
-│ --dry-run                           Execute the command in dry mode          │
-│ --verbose                           Execute the command in verbose mode      │
-│ --install-completion                Install completion for the current       │
-│                                     shell.                                   │
-│ --show-completion                   Show completion for the current shell,   │
-│                                     to copy it or customize the              │
-│                                     installation.                            │
-│ --help                              Show this message and exit.              │
-╰──────────────────────────────────────────────────────────────────────────────╯
-╭─ Commands ───────────────────────────────────────────────────────────────────╮
-│ clean.tmp        Use this target to clean up temporary files                 │
-│ tests.unit       Build the program                                           │
-╰──────────────────────────────────────────────────────────────────────────────╯
-
-If you have any problem, open an issue at:
-https://github.com/osl-incubator/makim
-
-
-
-</span></code>
-</pre>
-</div>
+    [1m                                                                                [0m
+    [1m [0m[1mUsage: [0m[1mmakim [OPTIONS] COMMAND [ARGS]...[0m[1m                                      [0m[1m [0m
+    [1m                                                                                [0m
+     Makim is a tool that helps you to organize and simplify your helper commands.  
+                                                                                    
+    [2m╭─[0m[2m Options [0m[2m───────────────────────────────────────────────────────────────────[0m[2m─╮[0m
+    [2m│[0m [1m-[0m[1m-version[0m             [1m-v[0m      [1m    [0m  Show the version and exit                [2m│[0m
+    [2m│[0m [1m-[0m[1m-file[0m                        [1mTEXT[0m  Makim config file [2m[default: .makim.yaml][0m [2m│[0m
+    [2m│[0m [1m-[0m[1m-dry[0m[1m-run[0m                     [1m    [0m  Execute the command in dry mode          [2m│[0m
+    [2m│[0m [1m-[0m[1m-verbose[0m                     [1m    [0m  Execute the command in verbose mode      [2m│[0m
+    [2m│[0m [1m-[0m[1m-install[0m[1m-completion[0m          [1m    [0m  Install completion for the current       [2m│[0m
+    [2m│[0m                                     shell.                                   [2m│[0m
+    [2m│[0m [1m-[0m[1m-show[0m[1m-completion[0m             [1m    [0m  Show completion for the current shell,   [2m│[0m
+    [2m│[0m                                     to copy it or customize the              [2m│[0m
+    [2m│[0m                                     installation.                            [2m│[0m
+    [2m│[0m [1m-[0m[1m-help[0m                        [1m    [0m  Show this message and exit.              [2m│[0m
+    [2m╰──────────────────────────────────────────────────────────────────────────────╯[0m
+    [2m╭─[0m[2m Commands [0m[2m──────────────────────────────────────────────────────────────────[0m[2m─╮[0m
+    [2m│[0m [1mclean.tmp      [0m[1m [0m Use this target to clean up temporary files                 [2m│[0m
+    [2m│[0m [1mtests.unit     [0m[1m [0m Build the program                                           [2m│[0m
+    [2m╰──────────────────────────────────────────────────────────────────────────────╯[0m
+                                                                                    
+     If you have any problem, open an issue at:                                     
+     https://github.com/osl-incubator/makim                                         
+                                                                                    
+    
+    
 
 This feature facilitates easy access to Makim's functionalities, enhancing usability and understanding of the tool.
 
@@ -173,38 +157,18 @@ With your `.makim.yaml` file set up, you can begin to use `makim`:
 !makim clean.tmp
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Makim file: .makim.yaml
-Cleaning up...
-
-</span></code>
-</pre>
-</div>
+    Makim file: .makim.yaml
+    Cleaning up...
+    
 
 
 ```python
 !makim tests.unit
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Makim file: .makim.yaml
-Runnint unit tests...
-
-</span></code>
-</pre>
-</div>
+    Makim file: .makim.yaml
+    Runnint unit tests...
+    
 
 In the case you type your command wrong, **Makim** will suggest you some alternative:
 
@@ -213,23 +177,13 @@ In the case you type your command wrong, **Makim** will suggest you some alterna
 !makim tests.unittest
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Usage: makim [OPTIONS] COMMAND [ARGS]...
-Try 'makim --help' for help.
-╭─ Error ──────────────────────────────────────────────────────────────────────╮
-│ No such command 'tests.unittest'.                                            │
-╰──────────────────────────────────────────────────────────────────────────────╯
-Command tests.unittest not found. Did you mean tests.unit'?
-
-</span></code>
-</pre>
-</div>
+    Usage: makim [OPTIONS] COMMAND [ARGS]...
+    [2mTry [0m[2m'makim [0m[1;2m-[0m[1;2m-help[0m[2m'[0m[2m for help.[0m
+    ╭─ Error ──────────────────────────────────────────────────────────────────────╮
+    │ No such command 'tests.unittest'.                                            │
+    ╰──────────────────────────────────────────────────────────────────────────────╯
+    [31mCommand tests.unittest not found. Did you mean tests.unit'?[0m
+    
 
 **Makim** CLI is empowered by **Typer**, and it allows us to have auto-completion for Makim groups and targets! If you want to install, you can run the following command:
 
@@ -238,19 +192,9 @@ Command tests.unittest not found. Did you mean tests.unit'?
 !makim --install-completion 
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-bash completion installed in /home/xmn/.bash_completions/makim.sh
-Completion will take effect once you restart the terminal
-
-</span></code>
-</pre>
-</div>
+    [32mbash completion installed in /home/xmn/.bash_completions/makim.sh[0m
+    Completion will take effect once you restart the terminal
+    
 
 After this command you will need to restart the terminal in order to use this auto-completion feature.
 
@@ -279,18 +223,8 @@ This section demonstrates executing straightforward commands across multiple int
 MSG_PREFIX="Running Makim: Hello, World,"
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Overwriting .env
-
-</span></code>
-</pre>
-</div>
+    Overwriting .env
+    
 
 
 ```python
@@ -334,65 +268,45 @@ groups:
           - target: sh
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Overwriting .makim.yaml
-
-</span></code>
-</pre>
-</div>
+    Overwriting .makim.yaml
+    
 
 
 ```python
 !makim --help
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-                                                                                
- Usage: makim [OPTIONS] COMMAND [ARGS]...                                       
-                                                                                
-Makim is a tool that helps you to organize and simplify your helper commands.
-
-╭─ Options ────────────────────────────────────────────────────────────────────╮
-│ --version             -v            Show the version and exit                │
-│ --file                        TEXT  Makim config file [default: .makim.yaml] │
-│ --dry-run                           Execute the command in dry mode          │
-│ --verbose                           Execute the command in verbose mode      │
-│ --install-completion                Install completion for the current       │
-│                                     shell.                                   │
-│ --show-completion                   Show completion for the current shell,   │
-│                                     to copy it or customize the              │
-│                                     installation.                            │
-│ --help                              Show this message and exit.              │
-╰──────────────────────────────────────────────────────────────────────────────╯
-╭─ Commands ───────────────────────────────────────────────────────────────────╮
-│ tests.node             Test using nodejs                                     │
-│ tests.perl             Test using perl                                       │
-│ tests.python           Test using php                                        │
-│ tests.r                Test using R                                          │
-│ tests.run-all          Run tests for all the other targets                   │
-│ tests.sh               Test using sh                                         │
-╰──────────────────────────────────────────────────────────────────────────────╯
-
-If you have any problem, open an issue at:
-https://github.com/osl-incubator/makim
-
-
-
-</span></code>
-</pre>
-</div>
+    [1m                                                                                [0m
+    [1m [0m[1mUsage: [0m[1mmakim [OPTIONS] COMMAND [ARGS]...[0m[1m                                      [0m[1m [0m
+    [1m                                                                                [0m
+     Makim is a tool that helps you to organize and simplify your helper commands.  
+                                                                                    
+    [2m╭─[0m[2m Options [0m[2m───────────────────────────────────────────────────────────────────[0m[2m─╮[0m
+    [2m│[0m [1m-[0m[1m-version[0m             [1m-v[0m      [1m    [0m  Show the version and exit                [2m│[0m
+    [2m│[0m [1m-[0m[1m-file[0m                        [1mTEXT[0m  Makim config file [2m[default: .makim.yaml][0m [2m│[0m
+    [2m│[0m [1m-[0m[1m-dry[0m[1m-run[0m                     [1m    [0m  Execute the command in dry mode          [2m│[0m
+    [2m│[0m [1m-[0m[1m-verbose[0m                     [1m    [0m  Execute the command in verbose mode      [2m│[0m
+    [2m│[0m [1m-[0m[1m-install[0m[1m-completion[0m          [1m    [0m  Install completion for the current       [2m│[0m
+    [2m│[0m                                     shell.                                   [2m│[0m
+    [2m│[0m [1m-[0m[1m-show[0m[1m-completion[0m             [1m    [0m  Show completion for the current shell,   [2m│[0m
+    [2m│[0m                                     to copy it or customize the              [2m│[0m
+    [2m│[0m                                     installation.                            [2m│[0m
+    [2m│[0m [1m-[0m[1m-help[0m                        [1m    [0m  Show this message and exit.              [2m│[0m
+    [2m╰──────────────────────────────────────────────────────────────────────────────╯[0m
+    [2m╭─[0m[2m Commands [0m[2m──────────────────────────────────────────────────────────────────[0m[2m─╮[0m
+    [2m│[0m [1mtests.node           [0m[1m [0m Test using nodejs                                     [2m│[0m
+    [2m│[0m [1mtests.perl           [0m[1m [0m Test using perl                                       [2m│[0m
+    [2m│[0m [1mtests.python         [0m[1m [0m Test using php                                        [2m│[0m
+    [2m│[0m [1mtests.r              [0m[1m [0m Test using R                                          [2m│[0m
+    [2m│[0m [1mtests.run-all        [0m[1m [0m Run tests for all the other targets                   [2m│[0m
+    [2m│[0m [1mtests.sh             [0m[1m [0m Test using sh                                         [2m│[0m
+    [2m╰──────────────────────────────────────────────────────────────────────────────╯[0m
+                                                                                    
+     If you have any problem, open an issue at:                                     
+     https://github.com/osl-incubator/makim                                         
+                                                                                    
+    
+    
 
 Prior to executing these targets, it is necessary to install the required dependencies:
 
@@ -408,25 +322,15 @@ Proceed to execute all defined targets by invoking the run-all target, which enc
 !makim tests.run-all
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Makim file: .makim.yaml
-Running Makim: Hello, World, from NodeJS!
-(node:1634785) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
-(Use `node --trace-warnings ...` to show where the warning was created)
-Running Makim: Hello, World, from Perl!
-Running Makim: Hello, World, from Python!
-[1] "Running Makim: Hello, World, from R!"
-Running Makim: Hello, World, from sh!
-
-</span></code>
-</pre>
-</div>
+    Makim file: .makim.yaml
+    Running Makim: Hello, World, from NodeJS!
+    (node:1634785) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+    (Use `node --trace-warnings ...` to show where the warning was created)
+    Running Makim: Hello, World, from Perl!
+    Running Makim: Hello, World, from Python!
+    [1] "Running Makim: Hello, World, from R!"
+    Running Makim: Hello, World, from sh!
+    
 
 In scenarios where your chosen interpreter supports debugging - such as Python or Xonsh through the use of `breakpoint()` - you can introduce a breakpoint within your code. This enables the debugging of your **Makim** target, allowing for an interactive examination of the execution flow and variable states.
 
@@ -497,18 +401,8 @@ groups:
               install(package, version)
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Overwriting .makim.yaml
-
-</span></code>
-</pre>
-</div>
+    Overwriting .makim.yaml
+    
 
 Now, let's proceed to create users within the staging environment:
 
@@ -517,27 +411,17 @@ Now, let's proceed to create users within the staging environment:
 !makim staging.create-users
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Makim file: .makim.yaml
-create admin users:
->>> creating user: admin1 ... DONE!
->>> creating user: admin2 ... DONE!
->>> creating user: admin3 ... DONE!
-
-create staging users:
->>> creating user: staging1 ... DONE!
->>> creating user: staging2 ... DONE!
->>> creating user: staging3 ... DONE!
-
-</span></code>
-</pre>
-</div>
+    Makim file: .makim.yaml
+    create admin users:
+    >>> creating user: admin1 ... DONE!
+    >>> creating user: admin2 ... DONE!
+    >>> creating user: admin3 ... DONE!
+    
+    create staging users:
+    >>> creating user: staging1 ... DONE!
+    >>> creating user: staging2 ... DONE!
+    >>> creating user: staging3 ... DONE!
+    
 
 Last but not least, let's run the install target:
 
@@ -546,26 +430,16 @@ Last but not least, let's run the install target:
 !makim staging.install
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Makim file: .makim.yaml
-install global dependencies:
->>> installing: dep1@v1 ... DONE!
->>> installing: dep2@v1.1 ... DONE!
->>> installing: dep3@v2.3 ... DONE!
-
-install staging dependencies:
->>> installing: dep4@v4.3 ... DONE!
->>> installing: dep5@v1.1.1 ... DONE!
-
-</span></code>
-</pre>
-</div>
+    Makim file: .makim.yaml
+    install global dependencies:
+    >>> installing: dep1@v1 ... DONE!
+    >>> installing: dep2@v1.1 ... DONE!
+    >>> installing: dep3@v2.3 ... DONE!
+    
+    install staging dependencies:
+    >>> installing: dep4@v4.3 ... DONE!
+    >>> installing: dep5@v1.1.1 ... DONE!
+    
 
 ### Defining Arguments
 
@@ -612,58 +486,28 @@ groups:
               name: Marc
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Overwriting .makim.yaml
-
-</span></code>
-</pre>
-</div>
+    Overwriting .makim.yaml
+    
 
 
 ```python
 !makim print.list
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Makim file: .makim.yaml
-
-</span></code>
-</pre>
-</div>
+    Makim file: .makim.yaml
+    
 
 
 ```python
 !makim print.list --i-am-sure
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Makim file: .makim.yaml
-Mary
-John
-Ellen
-Marc
-
-</span></code>
-</pre>
-</div>
+    Makim file: .makim.yaml
+    Mary
+    John
+    Ellen
+    Marc
+    
 
 ### Utilizing Environment Variables
 
@@ -679,18 +523,8 @@ Examine an example to understand the implementation:
 ENV=dev
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Overwriting .env
-
-</span></code>
-</pre>
-</div>
+    Overwriting .env
+    
 
 
 ```python
@@ -724,54 +558,24 @@ groups:
           assert "${{ env.get("UNKNOWN_TARGET_VAR", "4") }}" == "4"
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Overwriting .makim.yaml
-
-</span></code>
-</pre>
-</div>
+    Overwriting .makim.yaml
+    
 
 
 ```python
 !makim global-scope.test-var-env-file
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Makim file: .makim.yaml
-
-</span></code>
-</pre>
-</div>
+    Makim file: .makim.yaml
+    
 
 
 ```python
 !makim global-scope.test-var-env
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Makim file: .makim.yaml
-
-</span></code>
-</pre>
-</div>
+    Makim file: .makim.yaml
+    
 
 ### Specifying the Working Directory
 
@@ -796,37 +600,17 @@ groups:
           assert os.getcwd() == "/tmp"
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Overwriting .makim.yaml
-
-</span></code>
-</pre>
-</div>
+    Overwriting .makim.yaml
+    
 
 
 ```python
 !makim check-wd.is-tmp
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Makim file: .makim.yaml
-/tmp
-
-</span></code>
-</pre>
-</div>
+    Makim file: .makim.yaml
+    /tmp
+    
 
 This tutorial concludes with a showcase of Makim's key features. While this overview covers the essentials, diving deeper into **Makim** will reveal more advanced and intriguing ways to leverage its capabilities.
 

@@ -9,6 +9,9 @@ description: |
   The second edition of the OSL newsletter is here. Catch up on the latest updates from within and outside our organisation. Don't forget to share this resource with your network. 
 thumbnail: "/header.jpg"
 template: "blog-post.html"
+format:
+  gfm:
+    variant: +yaml_metadata_block
 ---
 
 **Highlights:**

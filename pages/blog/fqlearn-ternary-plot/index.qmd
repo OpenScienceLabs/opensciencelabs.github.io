@@ -13,10 +13,9 @@ description: |
 
 thumbnail: "/header.png"
 template: "blog-post.html"
----
-
-thumbnail: "/header.png"
-template: "blog-post.html"
+format:
+  gfm:
+    variant: +yaml_metadata_block
 ---
 
 <!-- # Plotting ternary phase diagrams for solving thermodynamics problems using fqlearn -->

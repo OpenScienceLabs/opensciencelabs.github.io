@@ -19,8 +19,9 @@ description: |
   performance and a commitment to ethical research practices.
 thumbnail: /header.png
 template: blog-post.html
----
-
+format:
+  gfm:
+    variant: +yaml_metadata_block
 ---
 
 
@@ -77,3 +78,4 @@ Despite its open-source nature, LLama-2 comes with certain restrictions, particu
 ## Final Thoughts
 
 LLama-2 heralds a new era in dialogue applications, pushing the boundaries of what's possible with language models while upholding ethical standards and responsible research practices. Whether you're a researcher, developer, or enthusiast, LLama-2 opens doors to a world of innovative possibilities, paving the way for transformative interactions between humans and machines.
+

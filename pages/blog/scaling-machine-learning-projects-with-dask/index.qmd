@@ -20,8 +20,9 @@ description: |
   provides a brief overview of the basic features of Dask.
 thumbnail: /image.png
 template: blog-post.html
----
-
+format:
+  gfm:
+    variant: +yaml_metadata_block
 ---
 # Scaling Python Data Analysis with Dask
 
@@ -83,19 +84,9 @@ print(result)
 
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-[ 9986.14978723 10073.19700192  9985.6576724  ...  9923.550924
-9978.70237439  9990.8504103 ]
-
-</span></code>
-</pre>
-</div>
+    [ 9986.14978723 10073.19700192  9985.6576724  ...  9923.550924
+      9978.70237439  9990.8504103 ]
+    
 
 2. **Dask Collections:**
    Dask provides high-level abstractions known as Dask collections, which are parallel and distributed counterparts to familiar Python data structures. These include `dask.array` for parallel arrays, `dask.bag` for parallel bags, and `dask.dataframe` for parallel dataframes, seamlessly integrating with existing Python libraries.
@@ -115,18 +106,8 @@ print(result.compute())  # Outputting the computed result
 
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-2.0
-
-</span></code>
-</pre>
-</div>
+    2.0
+    
 
 3. **Lazy Evaluation:**
    One of Dask's core principles is lazy evaluation. Instead of immediately computing results, Dask builds a task graph representing the computation. The actual computation occurs only when the results are explicitly requested. This approach enhances efficiency and allows for optimizations in resource usage.
@@ -167,18 +148,8 @@ print(mean_result.compute())  # Outputting the computed result
 
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-0.5112260135512784
-
-</span></code>
-</pre>
-</div>
+    0.5112260135512784
+    
 
 4. **Integration with Existing Libraries:**
    Dask is designed to integrate seamlessly with popular Python libraries, such as NumPy, Pandas, and scikit-learn. This means that you can often replace existing code with Dask equivalents without significant modifications.
@@ -203,24 +174,14 @@ print(y_dask.compute())
 
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-[[1.40940907 1.32044698 1.48172367 ... 1.4266846  0.84142743 0.33577001]
-[1.32044698 1.02252065 1.17250384 ... 0.40216939 1.58544767 1.12049071]
-[1.48172367 1.17250384 1.98886224 ... 0.86271956 1.27977778 0.95136532]
-...
-[1.4266846  0.40216939 0.86271956 ... 1.44980096 1.38712404 0.75331149]
-[0.84142743 1.58544767 1.27977778 ... 1.38712404 1.50814693 1.01719649]
-[0.33577001 1.12049071 0.95136532 ... 0.75331149 1.01719649 1.47050452]]
-
-</span></code>
-</pre>
-</div>
+    [[1.40940907 1.32044698 1.48172367 ... 1.4266846  0.84142743 0.33577001]
+     [1.32044698 1.02252065 1.17250384 ... 0.40216939 1.58544767 1.12049071]
+     [1.48172367 1.17250384 1.98886224 ... 0.86271956 1.27977778 0.95136532]
+     ...
+     [1.4266846  0.40216939 0.86271956 ... 1.44980096 1.38712404 0.75331149]
+     [0.84142743 1.58544767 1.27977778 ... 1.38712404 1.50814693 1.01719649]
+     [0.33577001 1.12049071 0.95136532 ... 0.75331149 1.01719649 1.47050452]]
+    
 
 5. **Task Scheduling:**
    Dask dynamically schedules the execution of tasks, optimizing the computation based on available resources. This makes it well-suited for handling larger-than-memory datasets efficiently. Dask is a powerful tool for data scientists and engineers working with large-scale data processing tasks, providing a convenient way to scale computations without requiring a complete rewrite of existing code.
@@ -249,19 +210,10 @@ print(final_result)
 
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-(1, 4, 9, 16, 25, 36, 49, 64, 81)
-
-</span></code>
-</pre>
-</div>
+    (1, 4, 9, 16, 25, 36, 49, 64, 81)
+    
 
 ## Conclusion:
 
 **Dask** stands as a powerful tool in the Python ecosystem, addressing the challenges posed by the ever-increasing scale of data. Its ability to seamlessly integrate with existing libraries, support lazy evaluation, and provide parallel and distributed computing makes it a valuable asset for data scientists and engineers tackling large-scale data processing tasks. Whether you're working on a single machine with moderately sized datasets or dealing with big data challenges that require distributed computing, Dask offers a flexible and efficient solution. As we continue to navigate the era of big data, Dask proves to be a key player in unlocking the full potential of Python for scalable and parallelized data processing. Start harnessing the power of Dask today and supercharge your data processing workflows!
+
