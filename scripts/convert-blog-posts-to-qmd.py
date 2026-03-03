@@ -27,8 +27,8 @@ from __future__ import annotations
 from pathlib import Path
 
 import nbformat
-from nbconvert import MarkdownExporter
 
+from nbconvert import MarkdownExporter
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 BLOG_ROOT = REPO_ROOT / "pages" / "blog"
@@ -79,9 +79,8 @@ def main() -> None:
     print(
         "[II] Conversion complete. "
         "Review generated .qmd files and commit them."
-        )
+    )
 
 
 if __name__ == "__main__":
     main()
-
