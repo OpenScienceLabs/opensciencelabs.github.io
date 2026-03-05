@@ -78,21 +78,9 @@ dependencies and activate it.
   render `index.qmd` to `index.md` using Quarto so that MkDocs can consume the
   generated Markdown.
 
-- **Legacy Jupyter Notebook Posts (optional / for migration only):** Existing
-  posts may still be stored as `index.ipynb`. To migrate them to Quarto, run:
-
-  ```bash
-  python scripts/convert-blog-posts-to-qmd.py
-  ```
-
-  This will generate corresponding `index.qmd` files, which you can then edit
-  directly. New posts should **not** be authored as notebooks; prefer `.qmd`.
-
 3. **Building and Viewing:**
-   - If using a Jupyter Notebook, run `makim pages.build` to convert the
-     notebook into a Markdown file (`index.md`).
-   - Add the generated `index.md` to your repository as it will be used to
-     render the webpage.
+   - Run `makim pages.build` to render `index.qmd` to `index.md` and build the
+     site. The generated `index.md` is used to render the webpage.
 
 ## Final Steps
 
