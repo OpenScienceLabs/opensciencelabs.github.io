@@ -90,6 +90,10 @@ def check_links(folder_path: Path, port: int):
 
 
 if __name__ == "__main__":
+    # Repo root = parent of directory containing this script
+    _repo_root = Path(__file__).resolve().parents[1]
+    _default_build = _repo_root / "build"
+
     parser = argparse.ArgumentParser(
         description="Check for broken internal links."
     )
@@ -97,16 +101,23 @@ if __name__ == "__main__":
         "--port", "-p", default=8000, type=int, help="Port for HTTP server."
     )
     parser.add_argument(
-        "--folder", "-f", default="build", type=str, help="Folder to serve."
+        "--folder",
+        "-f",
+        default=None,
+        type=str,
+        help="Folder to serve (default: repo root / build).",
     )
     args = parser.parse_args()
 
-    folder_path = Path(args.folder)
+    folder_path = Path(args.folder) if args.folder else _default_build
     HTTP_PORT = args.port
 
     if not folder_path.exists():
-        print(f"Error: The path {folder_path} doesn't exist.")
-        sys.exit(1)
+        print(
+            "[WW] Build folder not found; skipping internal link check. "
+            "Run 'makim pages.build' first."
+        )
+        sys.exit(0)
 
     # Start the HTTP server
     server = start_http_server(folder_path, HTTP_PORT)
