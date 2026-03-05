@@ -56,11 +56,13 @@ jobs:
       - name: Linter
         if: ${{ github.event_name == 'pull_request' }}
         run: |
+          conda activate osl-web
           pre-commit install
           pre-commit run --all-files --verbose
 
       - name: Build the book
         run: |
+          conda activate osl-web
           makim pages.build
           echo "opensciencelabs.org" > build/CNAME
 

@@ -5,6 +5,7 @@ groups:
         help: pre-build step
         backend: bash
         run: |
+          set -e
           mkdir -p build
           # Directory to search for blog sources
           export SEARCH_DIR="pages/blog"
