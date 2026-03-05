@@ -17,11 +17,10 @@ groups:
             'jupyter nbconvert --to markdown --template=theme/custom-markdown.tpl --output-dir "$(dirname "$0")" --output "index" "$0"' {} \;
 
           # 2) Convert .qmd blog posts to Markdown using Quarto
-          #    This allows us to use .qmd as the single canonical format
-          #    while still feeding Markdown into MkDocs.
+          #    Run quarto render from inside each blog folder (Quarto rejects --output path).
           if command -v quarto >/dev/null 2>&1; then
             find "$SEARCH_DIR" -name "*.qmd" -exec sh -c \
-              'quarto render "$0" --to gfm --output "$(dirname "$0")/$(basename "$0" .qmd).md"' {} \;
+              'dir=$(dirname "$0"); base=$(basename "$0" .qmd); (cd "$dir" && quarto render "$base.qmd" --to gfm)' {} \;
           else
             echo "[WW] Quarto is not available on PATH; .qmd files will not be rendered."
           fi
