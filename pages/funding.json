@@ -14,14 +14,40 @@
   },
   "projects": [
     {
-      "guid": "astx",
-      "name": "ASTx",
-      "description": "ASTx is a groundbreaking library designed to encapsulate language components in an agnostic and pythonic way. It provides a comprehensive set of classes and functionalities, allowing developers to articulate the core elements of any programming language.",
+      "guid": "irx",
+      "name": "IRx",
+      "description": "IRx is a Python library that serves as the LLVM backend for ARXLang, enabling high-level ASTx programs to be compiled into executable machine code. It achieves this by lowering ASTx nodes into LLVM IR using llvmlite",
       "webpageUrl": {
-        "url": "https://astx.arxlang.org"
+        "url": "https://irx.arxlang.org/"
       },
       "repositoryUrl": {
-        "url": "https://github.com/arxlang/astx",
+        "url": "https://github.com/arxlang/irx",
+        "wellKnown": "https://github.com/opensciencelabs/opensciencelabs.github.io/tree/main/.well-known/funding-manifest-urls"
+      }
+    },
+
+    {
+      "guid": "sciarx",
+      "name": "sciarx",
+      "description": "SciArx is a scientific computation library written in ArxLang, a statically-typed, LLVM-powered language with Python-like syntax and native Apache Arrow datatype support.",
+      "webpageUrl": {
+        "url": "https://arxlang.org/"
+      },
+      "repositoryUrl": {
+        "url": "https://github.com/arxlang/sciarx",
+        "wellKnown": "https://github.com/opensciencelabs/opensciencelabs.github.io/tree/main/.well-known/funding-manifest-urls"
+      }
+    },
+
+    {
+      "guid": "arx",
+      "name": "ARx",
+      "description": "Arx is a programming language that targets multi-architecture native code and integrates directly with Apache Arrow, achieved by leveraging the LLVM compilation infrastructure for code generation. ",
+      "webpageUrl": {
+        "url": "https://arxlang.org/"
+      },
+      "repositoryUrl": {
+        "url": "https://github.com/arxlang/arx",
         "wellKnown": "https://github.com/opensciencelabs/opensciencelabs.github.io/tree/main/.well-known/funding-manifest-urls"
       }
     },
