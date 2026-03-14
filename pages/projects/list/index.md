@@ -35,7 +35,7 @@ projects:
     type: incubated
     maintainer_name: Ivan Ogasawara
     maintainer_email: ivan.ogasawara@gmail.com
-    url: https://osl-incubator.github.io/artbox/
+    url: https://mediatoolbox-org.github.io/artbox/
     communication_channel:
       provider: discord
       url: https://opensciencelabs.org/discord

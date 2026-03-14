@@ -1,110 +1,108 @@
 {
-  "version": "v1.0.0",
+  "version": "v1.1.0",
   "entity": {
     "type": "organisation",
     "role": "owner",
     "name": "Open Science Labs",
     "email": "team@opensciencelabs.org",
-    "phone": "",
-    "description": "Open Science Labs (OSL) is a non-profit organisation dedication to creating innovative FOSS.",
-    "webpageurl": {
-      "url": "https://www.opensciencelabs.org",
-      "wellKnown": ""
+    "description": "Open Science Labs (OSL) is a non-profit organisation dedicated to creating and sustaining innovative FOSS projects.",
+    "webpageUrl": {
+      "url": "https://opensciencelabs.org"
     }
   },
   "projects": [
     {
       "guid": "irx",
       "name": "IRx",
-      "description": "IRx is a Python library that serves as the LLVM backend for ARXLang, enabling high-level ASTx programs to be compiled into executable machine code. It achieves this by lowering ASTx nodes into LLVM IR using llvmlite",
+      "description": "IRx is a Python library that serves as the LLVM backend for ARXLang, enabling high-level ASTx programs to be compiled into executable machine code.",
       "webpageUrl": {
         "url": "https://irx.arxlang.org/"
       },
       "repositoryUrl": {
-        "url": "https://github.com/arxlang/irx",
-        "wellKnown": "https://github.com/opensciencelabs/opensciencelabs.github.io/tree/main/.well-known/funding-manifest-urls"
-      }
+        "url": "https://github.com/arxlang/irx"
+      },
+      "licenses": ["spdx:BSD-3-Clause"],
+      "tags": ["developer-tools", "programming", "software-engineering"]
     },
-
     {
       "guid": "sciarx",
-      "name": "sciarx",
-      "description": "SciArx is a scientific computation library written in ArxLang, a statically-typed, LLVM-powered language with Python-like syntax and native Apache Arrow datatype support.",
+      "name": "SciArx",
+      "description": "SciArx is a scientific computing library written in ArxLang, with native Apache Arrow datatype support.",
       "webpageUrl": {
         "url": "https://arxlang.org/"
       },
       "repositoryUrl": {
-        "url": "https://github.com/arxlang/sciarx",
-        "wellKnown": "https://github.com/opensciencelabs/opensciencelabs.github.io/tree/main/.well-known/funding-manifest-urls"
-      }
+        "url": "https://github.com/arxlang/sciarx"
+      },
+      "licenses": ["spdx:BSD-3-Clause"],
+      "tags": ["science", "scientific-computing", "programming"]
     },
-
     {
       "guid": "arx",
       "name": "ARx",
-      "description": "Arx is a programming language that targets multi-architecture native code and integrates directly with Apache Arrow, achieved by leveraging the LLVM compilation infrastructure for code generation. ",
+      "description": "ARx is a programming language that targets multi-architecture native code and integrates directly with Apache Arrow through LLVM-based code generation.",
       "webpageUrl": {
         "url": "https://arxlang.org/"
       },
       "repositoryUrl": {
-        "url": "https://github.com/arxlang/arx",
-        "wellKnown": "https://github.com/opensciencelabs/opensciencelabs.github.io/tree/main/.well-known/funding-manifest-urls"
-      }
+        "url": "https://github.com/arxlang/arx"
+      },
+      "licenses": ["spdx:Apache-2.0"],
+      "tags": ["programming", "developer-tools", "scientific-computing"]
     },
-
     {
       "guid": "sugar",
       "name": "Sugar",
-      "description": "Sugar is a tool that helps users organize their stack of containers and any additional scripts. ",
+      "description": "Sugar simplifies the usage of containers and container stacks for reproducible development workflows.",
       "webpageUrl": {
-        "url": "https://osl-incubator.github.io/sugar"
+        "url": "https://sugar-org.github.io/sugar/"
       },
       "repositoryUrl": {
-        "url": "https://github.com/osl-incubator/sugar",
-        "wellKnown": "https://github.com/opensciencelabs/opensciencelabs.github.io/tree/main/.well-known/funding-manifest-urls"
-      }
+        "url": "https://github.com/sugar-org/sugar"
+      },
+      "licenses": ["spdx:BSD-3-Clause"],
+      "tags": ["devops", "cloud", "developer-tools"]
     },
-
     {
       "guid": "makim",
       "name": "Makim",
-      "description": "Makim is a YAML-based task automation tool offering structures for the definition for tasks and dependencies, with  support for conditionals.",
+      "description": "Makim is a YAML-based task automation tool focused on task definition, dependencies, and conditional execution.",
       "webpageUrl": {
-        "url": "https://osl-incubator.github.io/makim"
+        "url": "http://docs.makim.org/"
       },
       "repositoryUrl": {
-        "url": "https://github.com/osl-incubator/makim",
-        "wellKnown": "https://github.com/opensciencelabs/opensciencelabs.github.io/tree/main/.well-known/funding-manifest-urls"
-      }
+        "url": "https://github.com/makim-org/makim"
+      },
+      "licenses": ["spdx:BSD-3-Clause"],
+      "tags": ["developer-tools", "devops", "development"]
     },
-
     {
       "guid": "scicookie",
       "name": "SciCookie",
-      "description": "Scicookie is a template which creates projects from project templates and is based on Cookiecutter. It serves as an initial structure to simply project creation processes.",
+      "description": "SciCookie is a Cookiecutter-based template that helps teams bootstrap Python projects from reusable project templates.",
       "webpageUrl": {
         "url": "https://osl-incubator.github.io/scicookie"
       },
       "repositoryUrl": {
-        "url": "https://github.com/osl-incubator/scicookie",
-        "wellKnown": "https://github.com/opensciencelabs/opensciencelabs.github.io/tree/main/.well-known/funding-manifest-urls"
-      }
+        "url": "https://github.com/osl-incubator/scicookie"
+      },
+      "licenses": ["spdx:BSD-3-Clause"],
+      "tags": ["developer-tools", "software-engineering", "programming"]
     },
-
     {
       "guid": "artbox",
       "name": "ArtBox",
-      "description": "Artbox is a tool that handles multimedia files processing, such as conversion from speech to text and vice versa.",
+      "description": "ArtBox processes multimedia files, including speech-to-text, text-to-speech, and other media workflows.",
       "webpageUrl": {
-        "url": "https://osl-incubator.github.io/artbox"
+        "url": "https://mediatoolbox-org.github.io/artbox/"
       },
       "repositoryUrl": {
-        "url": "https://github.com/osl-incubator/artbox",
-        "wellKnown": "https://github.com/opensciencelabs/opensciencelabs.github.io/tree/main/.well-known/funding-manifest-urls"
-      }
+        "url": "https://github.com/mediatoolbox-org/artbox"
+      },
+      "licenses": ["spdx:BSD-3-Clause"],
+      "tags": ["audio", "developer-tools", "productivity"]
     }
   ],
-
   "funding": {
     "channels": [
       {
@@ -118,8 +116,8 @@
       {
         "guid": "hosting-monthly",
         "status": "active",
-        "name": "hosting suppport",
-        "description": "This will cover the cost of proposed server hosting for OSL projects.",
+        "name": "Hosting support",
+        "description": "This covers infrastructure and hosting costs for OSL projects.",
         "amount": 0,
         "currency": "USD",
         "frequency": "monthly",
@@ -128,8 +126,8 @@
       {
         "guid": "developer-time",
         "status": "active",
-        "name": "developer-support",
-        "description": "This will cover the cost of one developer working part-time on the projects.",
+        "name": "Developer support",
+        "description": "This supports part-time developer time across OSL projects.",
         "amount": 0,
         "currency": "USD",
         "frequency": "monthly",
@@ -138,15 +136,12 @@
       {
         "guid": "angel-plan",
         "status": "active",
-        "name": "goodwill plan",
-        "description": "Pay anything you wish to show your goodwill for our projects.",
+        "name": "Goodwill plan",
+        "description": "Give any amount to support OSL and its projects.",
         "amount": 0,
         "currency": "USD",
         "frequency": "one-time",
         "channels": ["opencollective"]
-      },
-      {
-        "history": []
       }
     ]
   }

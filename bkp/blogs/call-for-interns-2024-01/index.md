@@ -158,7 +158,7 @@ requirements.
   bunch of useful functions.
 - **Category:** Multimedia Processing.
 - **Organization/Project Webpage URL:**
-  [https://osl-incubator.github.io/artbox/](https://osl-incubator.github.io/artbox/)
+  [https://mediatoolbox-org.github.io/artbox/](https://mediatoolbox-org.github.io/artbox/)
 - **Contact:** Ivan Ogasawara
   [ivan.ogasawara@gmail.com](mailto:ivan.ogasawara@gmail.com)
 - **Project Ideas URL:**
