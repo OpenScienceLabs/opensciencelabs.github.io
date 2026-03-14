@@ -18,7 +18,7 @@
         <div class="logo-wrap p-4">
           {% if logo %}
             <a href="{{ site or '#' }}" class="d-inline-flex" target="_blank" rel="noopener">
-              <img src="{{ logo }}" alt="{{ partner.name }}" />
+              <img src="{{ logo }}" alt="{{ partner.name }}" loading="lazy" decoding="async" />
             </a>
           {% endif %}
         </div>

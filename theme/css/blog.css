@@ -221,3 +221,14 @@
 
 /* Safety: never allow gigantic SVGs inside blog content */
 .blog-article .post_body svg.icon { width: 1em; height: 1em; }
+
+/* Responsive images in blog content (LCP / defer offscreen images) */
+.blog-article .post_body img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.blog-article .post_body img:not([width]):not([height]) {
+  /* Reserve space to reduce CLS when dimensions unknown */
+  min-height: 1px;
+}

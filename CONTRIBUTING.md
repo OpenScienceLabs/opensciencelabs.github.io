@@ -56,6 +56,18 @@ dependencies and activate it.
    - Place a header image (either `header.png` or `header.jpg`) in your blog
      post folder. Make sure the image is under a free license.
 
+### Authoring images (performance and accessibility)
+
+- **Alt text:** Always add descriptive `alt` text for images (e.g. in Markdown:
+  `![Description of the image](image.png)`). This helps accessibility and SEO.
+- **Dimensions:** Prefer images with reasonable dimensions (e.g. 1200px wide for
+  in-content screenshots). The theme applies responsive sizing and lazy-loading
+  to blog content images; very large originals will still be downscaled by the
+  browser but use more bandwidth.
+- **Format:** PNG or JPEG is fine. For very large images, consider providing
+  WebP versions where the build or CMS supports it; the theme can use
+  `<picture>` / `srcset` for fallbacks.
+
 ### Metadata and Formatting
 
 - **Markdown Posts:** Add a metadata block at the beginning of your `index.md`

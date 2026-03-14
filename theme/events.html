@@ -14,7 +14,7 @@
       <div class="row {{ colors[loop.index % 2] }}">
         <div class="col-4 text-center">
           <a href="{{ event.url }}">
-            <img src="{{ event.thumbnail }}" />
+            <img src="{{ event.thumbnail }}" alt="{{ event.name }}" loading="lazy" decoding="async" />
           </a>
         </div>
         <div class="col-8">
@@ -47,7 +47,7 @@
       <div class="row {{ colors[loop.index % 2] }}">
         <div class="col-4 text-center">
           <a href="{{ event.url }}">
-            <img src="{{ event.thumbnail }}" />
+            <img src="{{ event.thumbnail }}" alt="{{ event.name }}" loading="lazy" decoding="async" />
           </a>
         </div>
         <div class="col-8">

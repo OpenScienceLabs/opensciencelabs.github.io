@@ -116,7 +116,7 @@
       {% for partner in page.meta["partners"] %}
       <li class="logo-item">
         <a href="{{ partner.url }}" target="_blank" rel="noopener">
-          <img src="{{ partner.logo }}" alt="{{ partner.name }}">
+          <img src="{{ partner.logo }}" alt="{{ partner.name }}" loading="lazy" decoding="async">
           <span class="logo-caption">{{ partner.name }}</span>
         </a>
       </li>
