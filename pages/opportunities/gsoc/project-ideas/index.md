@@ -59,6 +59,22 @@ touch with them directly if you have any inquiries._
 - **Communication channel**: [Discord](https://arxlang.org/discord)
 - **Project Ideas**: [link](https://github.com/arxlang/irx/wiki/Project-Ideas)
 
+### Data Umbrella - Event Board
+
+- **Description**: This project improves a community event discovery platform by
+  expanding both the frontend and backend workflows. The frontend, built in
+  React.js, will provide richer search, filtering, and map-based exploration of
+  events. The backend, implemented as a static site generation pipeline running
+  in GitHub Actions, will be extended to support structured event metadata,
+  automated updates, and community-friendly submission instructions. The result
+  will be a more usable, searchable, and maintainable platform for discovering
+  technical and community events.
+- **Project WEB Page**: <https://data-umbrella.github.io/du-event-board/>
+- **Repository**: <https://github.com/data-umbrella/du-event-board>
+- **Communication channel**: [Discord](https://discord.gg/MbRWEVAycW)
+- **Project Ideas**:
+  [link](https://github.com/data-umbrella/du-event-board/wiki/Project-Idea)
+
 ### Hiperhealth
 
 - **Description**: Hiperhealth provides a set of tools and libraries for health
