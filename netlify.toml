@@ -1,0 +1,10 @@
+[build]
+publish = "build"
+command = """
+python -m pip install --upgrade pip &&
+python -m pip install poetry &&
+poetry check &&
+poetry install &&
+poetry run python -m nltk.downloader punkt &&
+poetry run makim pages.build
+"""
