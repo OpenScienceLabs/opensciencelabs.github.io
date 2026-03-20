@@ -84,6 +84,12 @@
     document.querySelectorAll('.dropdown-menu.mega').forEach(menu => {
       menu.addEventListener('click', (e) => e.stopPropagation());
     });
+
+    /* 7) Lazy-load images in blog content (markdown-rendered imgs don't have loading attr) */
+    document.querySelectorAll('.post_body img:not([loading])').forEach(function (img) {
+      img.setAttribute('loading', 'lazy');
+      img.setAttribute('decoding', 'async');
+    });
   });
 
   // Optional public API
