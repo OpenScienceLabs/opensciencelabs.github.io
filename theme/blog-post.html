@@ -79,7 +79,7 @@
         <article>
           <a href="{{ sub_nav_item.url|url }}" class="image">
             <img src="https://picsum.photos/id/{{ loop.index }}/400/200"
-                 alt="{{ sub_nav_item.title }}" />
+                 alt="{{ sub_nav_item.title }}" loading="lazy" decoding="async" width="400" height="200" />
           </a>
           <h3>{{ sub_nav_item.title }}</h3>
           <p>{{ sub_nav_item.summary }}</p>
