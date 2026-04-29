@@ -8,7 +8,7 @@ template: single-sidebar.html
 
 # Google Summer of Code (GSoC) at Open Science Labs
 
-Open Science Labs plans to apply for GSoC 2026. Stay tuned!
+Open Science Labs is participating in GSoC 2026.
 
 ## About Google Summer of Code
 
