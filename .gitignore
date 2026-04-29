@@ -128,3 +128,9 @@ dmypy.json
 # Pyre type checker
 .pyre/
 .vscode
+
+/.quarto/
+**/*.quarto_ipynb
+
+# llm
+.codex

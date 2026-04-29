@@ -98,7 +98,7 @@ they connect with our values, not only because of GSoC. Otherwise, many
 might feel disappointed, since only a few can be selected each year.
 
 You can read more about our mission, motivation, and purpose
-[here](.\about). Below is a short summary.
+[here](../../../about). Below is a short summary.
 
 ------------------------------------------------------------------------
 

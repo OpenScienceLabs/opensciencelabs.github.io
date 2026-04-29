@@ -23,8 +23,15 @@ groups:
             echo "[EE] Quarto CLI is required but not found on PATH. Install it (e.g. conda install quarto) and retry."
             exit 1
           fi
-          find "$SEARCH_DIR" -name "*.qmd" -exec sh -c \
-            'dir=$(dirname "$0"); base=$(basename "$0" .qmd); (cd "$dir" && quarto render "$base.qmd" --to gfm)' {} \;
+          mapfile -d "" qmd_files < <(find "$SEARCH_DIR" -name "*.qmd" -print0)
+          for qmd_path in "${qmd_files[@]}"; do
+            dir=$(dirname "$qmd_path")
+            base=$(basename "$qmd_path" .qmd)
+            (
+              cd "$dir"
+              quarto render "$base.qmd" --to gfm -M template=default
+            )
+          done
 
           # 3) Ensure generated index.md have YAML from .qmd (Quarto may drop it)
           python scripts/inject-qmd-yaml-into-md.py

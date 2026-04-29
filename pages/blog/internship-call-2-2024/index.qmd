@@ -159,7 +159,7 @@ Below is the list of projects participating in the current internship cycle. Eac
 
 - **Description:** Makim (or makim) is based on make and focus on improve the way to define targets and dependencies. Instead of using the Makefile format, it uses yaml format.
 - **Categories:** DevOps, Automation
-- **Organization/Project Webpage URL:** [https://osl-incubator.github.io/makim/](https://osl-incubator.github.io/makim/)
+- **Organization/Project Webpage URL:** [https://makim.org/](https://makim.org/)
 - **Contact:** Ivan Ogasawara [ivan.ogasawara@gmail.com](mailto:ivan.ogasawara@gmail.com)
 - **Project Ideas URL:** <https://github.com/osl-incubator/makim/wiki/OSL-Internship-%E2%80%90-2024-%E2%80%90-2nd-Cycle>
 

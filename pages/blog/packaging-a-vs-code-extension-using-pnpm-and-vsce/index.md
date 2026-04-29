@@ -14,49 +14,51 @@ template: "blog-post.html"
 
 # Packaging a VS Code Extension Using pnpm and VSCE
 
-VS Code’s `vsce` tool doesn't play nicely with `pnpm` out of the box; here’s a
-proven workaround using bundling and the `--no-dependencies` flag to get things
-running smoothly.
+VS Code’s `vsce` tool doesn’t play nicely with `pnpm` out of the box;
+here’s a proven workaround using bundling and the `--no-dependencies`
+flag to get things running smoothly.
 
----
+------------------------------------------------------------------------
 
 ## Why pnpm + vsce can be problematic
 
-`vsce` relies on `npm list --production --parseable --depth=99999`, which fails
-under pnpm's symlink-based dependency management, often throwing
-`npm ERR! missing:` errors.  
+`vsce` relies on `npm list --production --parseable --depth=99999`,
+which fails under pnpm’s symlink-based dependency management, often
+throwing `npm ERR! missing:` errors.  
 ([github.com](https://github.com/microsoft/vscode-vsce/issues/421),
 [daydreamer-riri.me](https://daydreamer-riri.me/posts/compatibility-issues-between-vsce-and-pnpm/))
 
----
+------------------------------------------------------------------------
 
 ## Solution Overview
 
-1. **Bundle your extension** using a bundler such as **esbuild** or **Webpack**
-2. **Use `--no-dependencies`** when running `vsce package` and `vsce publish`
+1.  **Bundle your extension** using a bundler such as **esbuild** or
+    **Webpack**
+2.  **Use `--no-dependencies`** when running `vsce package` and
+    `vsce publish`
 
-Because all dependencies are bundled, `vsce` no longer needs to resolve them
-from `node_modules`.
+Because all dependencies are bundled, `vsce` no longer needs to resolve
+them from `node_modules`.
 
----
+------------------------------------------------------------------------
 
 ## Step-by-Step Setup
 
 ### 1. Install Tools
 
-```bash
+``` bash
 pnpm add -D @vscode/vsce esbuild
 ```
 
-@vscode/vsce` is the CLI for packaging and publishing VSCode extensions. Recent
-versions (e.g., v3.6.0) support npm (≥6) and Yarn (1.x), but don't officially
-support pnpm.
+@vscode/vsce\` is the CLI for packaging and publishing VSCode
+extensions. Recent versions (e.g., v3.6.0) support npm (≥6) and Yarn
+(1.x), but don’t officially support pnpm.
 
-### 2\. Configure `package.json`
+### 2. Configure `package.json`
 
 Scripts Add build and packaging commands: jsonc Copy code
 
-```json
+``` json
 {
   "scripts": {
     "vscode:prepublish": "pnpm run bundle",
@@ -67,20 +69,22 @@ Scripts Add build and packaging commands: jsonc Copy code
 }
 ```
 
-- `vscode:prepublish`: runs before packaging; bundles source using esbuild
-- `bundle`: compiles `extension.ts` into `out/main.js` and excludes the `vscode`
-  module
-- `package` / `publish`: calls VSCE via pnpm, skipping dependency resolution
+- `vscode:prepublish`: runs before packaging; bundles source using
+  esbuild
+- `bundle`: compiles `extension.ts` into `out/main.js` and excludes the
+  `vscode` module
+- `package` / `publish`: calls VSCE via pnpm, skipping dependency
+  resolution
 
-### 3\. Why It Works
+### 3. Why It Works
 
-By bundling dependencies manually, `vsce` doesn’t need to resolve them during
-packaging or publishing. The `--no-dependencies` option avoids pnpm’s symlink
-issues entirely.
+By bundling dependencies manually, `vsce` doesn’t need to resolve them
+during packaging or publishing. The `--no-dependencies` option avoids
+pnpm’s symlink issues entirely.
 
 ## Sample `package.json` Snippet
 
-```json
+``` json
 {
   "devDependencies": {
     "@vscode/vsce": "^3.6.0",
@@ -97,7 +101,7 @@ issues entirely.
 
 ### **Wrap-Up**
 
-Using **pnpm** with VS Code extensions involves a few extra steps because `vsce`
-doesn’t support pnpm’s dependency structure directly. The ideal workflow: _
-**Bundle your extension first**, then _ **Use `--no-dependencies`** to package
-and publish safely.
+Using **pnpm** with VS Code extensions involves a few extra steps
+because `vsce` doesn’t support pnpm’s dependency structure directly. The
+ideal workflow: * **Bundle your extension first**, then * **Use
+`--no-dependencies`** to package and publish safely.

@@ -248,7 +248,7 @@ graph = graph_to_ascii(dot_graph)
 print(graph)
 ```
 
-![non-funky_ascii_tree.png](0d8393a6-fb00-4364-8f2f-319295075948.png)
+![non-funky_ascii_tree.png](index_files/0d8393a6-fb00-4364-8f2f-319295075948.png)
 
 
 ```python
@@ -258,7 +258,7 @@ module
 
 
     
-![png](output_11_0.png)
+![png](index_files/index_11_0.png)
     
 
 
@@ -279,7 +279,7 @@ basic_op
 
 
     
-![png](output_13_0.png)
+![png](index_files/index_13_0.png)
     
 
 
@@ -298,7 +298,7 @@ a
 
 
     
-![png](output_14_0.png)
+![png](index_files/index_14_0.png)
     
 
 
@@ -324,7 +324,7 @@ viz.visualize(a.get_struct(), shape="diamond")
 
 
     
-![png](output_16_0.png)
+![png](index_files/index_16_0.png)
     
 
 
@@ -336,7 +336,7 @@ viz.visualize(a.get_struct(), shape="circle")
 
 
     
-![png](output_17_0.png)
+![png](index_files/index_17_0.png)
     
 
 
@@ -348,7 +348,7 @@ viz.visualize(a.get_struct(), shape="ellipse")
 
 
     
-![png](output_18_0.png)
+![png](index_files/index_18_0.png)
     
 
 

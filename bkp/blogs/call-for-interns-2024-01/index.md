@@ -209,8 +209,7 @@ requirements.
   way to define targets and dependencies. Instead of using the Makefile format,
   it uses yaml format.
 - **Categories:** DevOps, Automation
-- **Organization/Project Webpage URL:**
-  [https://osl-incubator.github.io/makim/](https://osl-incubator.github.io/makim/)
+- **Organization/Project Webpage URL:** [https://makim.org/](https://makim.org/)
 - **Contact:** Ivan Ogasawara
   [ivan.ogasawara@gmail.com](mailto:ivan.ogasawara@gmail.com)
 - **Project Ideas URL:**

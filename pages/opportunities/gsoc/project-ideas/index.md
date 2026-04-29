@@ -44,8 +44,7 @@ touch with them directly if you have any inquiries._
   learning environment that goes beyond traditional online education.
 - **Project WEB Page**: <https://www.alphaonelabs.com/>
 - **Repository**: <https://github.com/alphaonelabs/education-website>
-- **Communication channel**:
-  [Slack](https://join.slack.com/t/alphaonelabs/shared_invite/zt-7dvtocfr-1dYWOL0XZwEEPUeWXxrB1A)
+- **Communication channel**: TBA
 - **Project Ideas**:
   [link](https://github.com/alphaonelabs/alphaonelabs-education-website/wiki/GSOC-2026-Ideas)
 

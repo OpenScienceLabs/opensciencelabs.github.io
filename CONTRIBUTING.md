@@ -107,12 +107,13 @@ $ git commit -m "chore: sync rendered blog index.md from qmd"
 $ git push
 ```
 
-On Windows, use WSL or a Linux environment so `makim pages.pre-build` (Quarto) runs correctly.
+On Windows, use WSL or a Linux environment so `makim pages.pre-build` (Quarto)
+runs correctly.
 
 ### Commit messages
 
-Keep commit messages professional and descriptive. Do not add tool or editor tags
-(e.g. "Made-with: Cursor") to commit messages.
+Keep commit messages professional and descriptive. Do not add tool or editor
+tags (e.g. "Made-with: Cursor") to commit messages.
 
 To fix existing commits that contain such a line (e.g. before pushing a PR):
 

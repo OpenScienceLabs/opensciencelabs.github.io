@@ -103,7 +103,7 @@ projects:
     type: affiliated
     maintainer_name: Ivan Ogasawara
     maintainer_email: ivan.ogasawara@gmail.com
-    url: https://osl-incubator.github.io/makim/
+    url: https://makim.org/
     communication_channel:
       provider: discord
       url: https://opensciencelabs.org/discord
