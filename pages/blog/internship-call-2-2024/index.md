@@ -228,7 +228,7 @@ understanding the scope and requirements of the projects.
   in a configuration file. So the command line would be very simple.
 - **Categories:** DevOps, Container Management
 - **Organization/Project Webpage URL:**
-  [https://osl-incubator.github.io/sugar/e](https://osl-incubator.github.io/sugar/)
+  [https://sugar-org.github.io/sugar/e](https://sugar-org.github.io/sugar/)
 - **Contact:** Ivan Ogasawara <ivan.ogasawara@gmail.com>
 - **Project Ideas URL:**
   <https://github.com/osl-incubator/sugar/wiki/OSL-Internship-%E2%80%90-2024-%E2%80%90-2nd-Cycle>

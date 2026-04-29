@@ -90,7 +90,7 @@ touch with them directly if you have any inquiries._
 - **Description**: Sugar organizes your stack of containers, gathering some
   useful scripts and keeping this information centralized in a configuration
   file with a friendly command line interface.
-- **Project WEB Page**: <https://osl-incubator.github.io/sugar/>
+- **Project WEB Page**: <https://sugar-org.github.io/sugar/>
 - **Repository**: <https://github.com/osl-incubator/sugar>
 - **Communication channel**: [Discord](https://opensciencelabs.org/discord)
 - **Project Ideas**:

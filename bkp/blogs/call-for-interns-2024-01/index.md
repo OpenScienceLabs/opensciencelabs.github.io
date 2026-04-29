@@ -272,7 +272,7 @@ requirements.
   configuration file. So the command line would be very simple.
 - **Categories:** DevOps, Container Management
 - **Organization/Project Webpage URL:**
-  [https://osl-incubator.github.io/sugar/e](https://osl-incubator.github.io/sugar/)
+  [https://sugar-org.github.io/sugar/e](https://sugar-org.github.io/sugar/)
 - **Contact:** Ivan Ogasawara
   [ivan.ogasawara@gmail.com](mailto:ivan.ogasawara@gmail.com)
 - **Project Ideas URL:**
