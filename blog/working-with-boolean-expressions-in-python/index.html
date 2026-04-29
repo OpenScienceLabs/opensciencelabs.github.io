@@ -16,9 +16,9 @@ a Python library, for handling Boolean expressions.
 We'll apply it to medical symptom data as an illustrative example.
 ">
     <meta name="keywords" content="open science,data science,latam">
-    <meta name="last-modified" content="2026-03-20">
-    <meta name="DC.date.modified" content="2026-03-20">
-    <meta property="og:updated_time" content="2026-03-20T00:00:00Z">
+    <meta name="last-modified" content="2026-04-29">
+    <meta name="DC.date.modified" content="2026-04-29">
+    <meta property="og:updated_time" content="2026-04-29T00:00:00Z">
 
     <meta property="og:locale" content="es">
     <meta property="og:locale:alternate" content="pt">
@@ -42,7 +42,7 @@ We'll apply it to medical symptom data as an illustrative example.
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Working with Boolean Expressions in Python",
-        "dateModified": "2026-03-20T00:00:00Z",
+        "dateModified": "2026-04-29T00:00:00Z",
         "url": "https://opensciencelabs.org/blog/working-with-boolean-expressions-in-python/"
       }
     </script>
@@ -1820,15 +1820,26 @@ We'll apply it to medical symptom data as an illustrative example.
   <!-- Article body -->
   <div class="post_body">
     <h1 id="working-with-boolean-expressions-in-python">Working with Boolean Expressions in Python<a class="headerlink" href="#working-with-boolean-expressions-in-python" title="Permanent link"> #</a></h1>
-<p>Boolean logic is a crucial component in many programming tasks, especially in searching and querying data. In this tutorial, we'll explore how to use <code>boolean.py</code>, a Python library, for handling Boolean expressions. We'll apply it to medical symptom data as an illustrative example.</p>
+<p>Boolean logic is a crucial component in many programming tasks,
+especially in searching and querying data. In this tutorial, we’ll
+explore how to use <code>boolean.py</code>, a Python library, for handling Boolean
+expressions. We’ll apply it to medical symptom data as an illustrative
+example.</p>
 <h2 id="introduction-to-booleanpy">Introduction to <code>boolean.py</code><a class="headerlink" href="#introduction-to-booleanpy" title="Permanent link"> #</a></h2>
-<p><code>boolean.py</code> is a Python library for creating, manipulating, and evaluating Boolean expressions. It's particularly useful in scenarios where you need to parse and evaluate expressions that represent conditions or filters, such as searching for specific symptoms in a medical database.</p>
+<p><code>boolean.py</code> is a Python library for creating, manipulating, and
+evaluating Boolean expressions. It’s particularly useful in scenarios
+where you need to parse and evaluate expressions that represent
+conditions or filters, such as searching for specific symptoms in a
+medical database.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link"> #</a></h2>
-<p>First and foremost, you need to have <code>boolean.py</code> installed in your Python environment. You can easily install it using pip. Run the following command:</p>
+<p>First and foremost, you need to have <code>boolean.py</code> installed in your
+Python environment. You can easily install it using pip. Run the
+following command:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">q</span> <span class="n">boolean</span><span class="o">.</span><span class="n">py</span>
 </span></code></pre></div>
 <h2 id="basic-usage">Basic Usage<a class="headerlink" href="#basic-usage" title="Permanent link"> #</a></h2>
-<p>We begin with basic Boolean operations, which are the foundation of working with this library.</p>
+<p>We begin with basic Boolean operations, which are the foundation of
+working with this library.</p>
 <h3 id="creating-boolean-variables">Creating Boolean Variables<a class="headerlink" href="#creating-boolean-variables" title="Permanent link"> #</a></h3>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">boolean</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
@@ -1843,19 +1854,12 @@ We'll apply it to medical symptom data as an illustrative example.
 </span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
 </span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="n">fever</span><span class="p">,</span> <span class="n">cough</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-(Symbol('fever'), Symbol('cough'))
-</span></code>
-</pre>
-</div>
-
-<p>In this code, we import <code>BooleanAlgebra</code> from <code>boolean.py</code> and create an instance of it. We then define Boolean variables (symbols) for common symptoms. These symbols act as the basic units for our Boolean expressions.</p>
+<div class="language-text highlight"><pre><span></span><code>(Symbol(&#39;fever&#39;), Symbol(&#39;cough&#39;))
+</code></pre></div>
+<p>In this code, we import <code>BooleanAlgebra</code> from <code>boolean.py</code> and create an
+instance of it. We then define Boolean variables (symbols) for common
+symptoms. These symbols act as the basic units for our Boolean
+expressions.</p>
 <h3 id="basic-boolean-operations">Basic Boolean Operations<a class="headerlink" href="#basic-boolean-operations" title="Permanent link"> #</a></h3>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># AND operation</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">symptoms_and</span> <span class="o">=</span> <span class="n">fever</span> <span class="o">&amp;</span> <span class="n">cough</span>
@@ -1869,24 +1873,17 @@ We'll apply it to medical symptom data as an illustrative example.
 </span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">no_fever</span> <span class="o">=</span> <span class="o">~</span><span class="n">fever</span>
 </span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">no_fever</span><span class="p">)</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-fever&cough
+<div class="language-text highlight"><pre><span></span><code>fever&amp;cough
 fever|cough
 ~fever
-
-</span></code>
-</pre>
-</div>
-
-<p>Here, we demonstrate basic Boolean operations: AND, OR, and NOT. These operations are essential in constructing more complex Boolean expressions. For example, <code>symptoms_and</code> represents a scenario where a patient has both fever and cough.</p>
+</code></pre></div>
+<p>Here, we demonstrate basic Boolean operations: AND, OR, and NOT. These
+operations are essential in constructing more complex Boolean
+expressions. For example, <code>symptoms_and</code> represents a scenario where a
+patient has both fever and cough.</p>
 <h2 id="advanced-expressions">Advanced Expressions<a class="headerlink" href="#advanced-expressions" title="Permanent link"> #</a></h2>
-<p>Now, let's create more complex expressions that could simulate queries for medical symptoms.</p>
+<p>Now, let’s create more complex expressions that could simulate queries
+for medical symptoms.</p>
 <h3 id="complex-expressions">Complex Expressions<a class="headerlink" href="#complex-expressions" title="Permanent link"> #</a></h3>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">headache</span> <span class="o">=</span> <span class="n">algebra</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;headache&#39;</span><span class="p">)</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">fatigue</span> <span class="o">=</span> <span class="n">algebra</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;fatigue&#39;</span><span class="p">)</span>
@@ -1895,22 +1892,14 @@ fever|cough
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">complex_symptoms</span> <span class="o">=</span> <span class="p">(</span><span class="n">fever</span> <span class="o">|</span> <span class="n">cough</span><span class="p">)</span> <span class="o">&amp;</span> <span class="o">~</span><span class="n">headache</span> <span class="o">&amp;</span> <span class="n">fatigue</span>
 </span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">complex_symptoms</span><span class="p">)</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-((fever|cough)&~headache)&fatigue
-
-</span></code>
-</pre>
-</div>
-
-<p>This complex expression can represent a more specific medical query. For instance, it could be used to find patients who have either fever or cough, do not have a headache, but are experiencing fatigue.</p>
+<div class="language-text highlight"><pre><span></span><code>((fever|cough)&amp;~headache)&amp;fatigue
+</code></pre></div>
+<p>This complex expression can represent a more specific medical query. For
+instance, it could be used to find patients who have either fever or
+cough, do not have a headache, but are experiencing fatigue.</p>
 <h3 id="evaluating-expressions">Evaluating Expressions<a class="headerlink" href="#evaluating-expressions" title="Permanent link"> #</a></h3>
-<p>We can evaluate these expressions with specific values to simulate checking a patient's symptoms against our criteria.</p>
+<p>We can evaluate these expressions with specific values to simulate
+checking a patient’s symptoms against our criteria.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Define truthy and falsy symbols</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">true</span> <span class="o">=</span> <span class="n">algebra</span><span class="o">.</span><span class="n">TRUE</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">false</span> <span class="o">=</span> <span class="n">algebra</span><span class="o">.</span><span class="n">FALSE</span>
@@ -1930,22 +1919,17 @@ fever|cough
 </span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>
 </span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Does the patient match the criteria?&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="s2">&quot;=&quot;</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">simplify</span><span class="p">()</span> <span class="o">==</span> <span class="n">true</span><span class="p">)</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Does the patient match the criteria? (((1)|(0))&(~(0)))&(1) = True
-
-</span></code>
-</pre>
-</div>
-
-<p>In this example, we demonstrate how to evaluate a Boolean expression against a set of patient symptoms. We use <code>.subs()</code> to replace each symbol in our expression with the corresponding value (symptom presence) from <code>patient_symptoms</code>. The <code>.simplify()</code> method then evaluates this substituted expression to a Boolean value, indicating whether the patient's symptoms match our query criteria.</p>
+<div class="language-text highlight"><pre><span></span><code>Does the patient match the criteria? (((1)|(0))&amp;(~(0)))&amp;(1) = True
+</code></pre></div>
+<p>In this example, we demonstrate how to evaluate a Boolean expression
+against a set of patient symptoms. We use <code>.subs()</code> to replace each
+symbol in our expression with the corresponding value (symptom presence)
+from <code>patient_symptoms</code>. The <code>.simplify()</code> method then evaluates this
+substituted expression to a Boolean value, indicating whether the
+patient’s symptoms match our query criteria.</p>
 <h2 id="parsing-expressions-from-strings">Parsing Expressions from Strings<a class="headerlink" href="#parsing-expressions-from-strings" title="Permanent link"> #</a></h2>
-<p>Lastly, we explore parsing Boolean expressions from strings, a powerful feature for dynamic expression construction.</p>
+<p>Lastly, we explore parsing Boolean expressions from strings, a powerful
+feature for dynamic expression construction.</p>
 <h3 id="parsing-example">Parsing Example<a class="headerlink" href="#parsing-example" title="Permanent link"> #</a></h3>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">expression_string</span> <span class="o">=</span> <span class="s2">&quot;(fever | cough) &amp; ~headache &amp; fatigue&quot;</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
@@ -1959,21 +1943,13 @@ Does the patient match the criteria? (((1)|(0))&(~(0)))&(1) = True
 </span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="n">result</span> <span class="o">=</span> <span class="n">parsed_expression</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">patient_symptoms</span><span class="p">)</span>
 </span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Does the patient match the criteria? </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">simplify</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">true</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-parsed expression: (fever|cough)&~headache&fatigue
+<div class="language-text highlight"><pre><span></span><code>parsed expression: (fever|cough)&amp;~headache&amp;fatigue
 Does the patient match the criteria? True
-
-</span></code>
-</pre>
-</div>
-
-<p>Parsing expressions from strings is extremely useful when you need to construct Boolean expressions dynamically, such as from user inputs or configuration files. In this example, we parse a string representing a Boolean expression and then evaluate it as before.</p>
+</code></pre></div>
+<p>Parsing expressions from strings is extremely useful when you need to
+construct Boolean expressions dynamically, such as from user inputs or
+configuration files. In this example, we parse a string representing a
+Boolean expression and then evaluate it as before.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">expression_string</span> <span class="o">=</span> <span class="s1">&#39;(fever | &quot;blood cough&quot;) &amp; ~headache &amp; fatigue&#39;</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1"># Parse the expression from string</span>
@@ -1982,20 +1958,10 @@ Does the patient match the criteria? True
 </span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="k">except</span> <span class="n">boolean</span><span class="o">.</span><span class="n">ParseError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
 </span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[EE]&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-[EE] Unknown token for token: """ at position: 9
-
-</span></code>
-</pre>
-</div>
-
-<p>The string parser doesn't work with complex strings directly, but creating a manual symbol for the disease works fine.</p>
+<div class="language-text highlight"><pre><span></span><code>[EE] Unknown token for token: &quot;&quot;&quot; at position: 9
+</code></pre></div>
+<p>The string parser doesn’t work with complex strings directly, but
+creating a manual symbol for the disease works fine.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">blood_cough</span> <span class="o">=</span> <span class="n">boolean</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s2">&quot;blood cough&quot;</span><span class="p">)</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">chest_infection</span> <span class="o">=</span> <span class="n">blood_cough</span> <span class="o">&amp;</span> <span class="n">fever</span>
@@ -2012,26 +1978,20 @@ Does the patient match the criteria? True
 </span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="n">result</span> <span class="o">=</span> <span class="n">chest_infection</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">chest_infection_patient_symptoms</span><span class="p">)</span>
 </span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Does the patient match the criteria? </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">simplify</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">true</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-================================================================================
+<div class="language-text highlight"><pre><span></span><code>================================================================================
 patient without fever
 Does the patient match the criteria? False
 ================================================================================
 patient with all symptoms
 Does the patient match the criteria? True
-
-</span></code>
-</pre>
-</div>
-
+</code></pre></div>
 <h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link"> #</a></h2>
-<p>Throughout this tutorial, we have explored how to use <code>boolean.py</code> for handling and evaluating Boolean expressions in Python. By starting from basic operations and moving to parsing expressions from strings, we've covered a range of functionalities provided by this library. While we focused on a medical context, the principles and methods are broadly applicable across different domains.</p>
+<p>Throughout this tutorial, we have explored how to use <code>boolean.py</code> for
+handling and evaluating Boolean expressions in Python. By starting from
+basic operations and moving to parsing expressions from strings, we’ve
+covered a range of functionalities provided by this library. While we
+focused on a medical context, the principles and methods are broadly
+applicable across different domains.</p>
   </div>
 </div>
 
@@ -2061,7 +2021,7 @@ Does the patient match the criteria? True
           <div class="mt-4">
             <small class="badge-updated">
               
-                Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2026-03-20</span>
+                Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2026-04-29</span>
               
               
             </small>

@@ -14,9 +14,9 @@
 covering how to avoid dependency resolution issues.
 ">
     <meta name="keywords" content="open science,data science,latam">
-    <meta name="last-modified" content="2026-03-20">
-    <meta name="DC.date.modified" content="2026-03-20">
-    <meta property="og:updated_time" content="2026-03-20T00:00:00Z">
+    <meta name="last-modified" content="2026-04-29">
+    <meta name="DC.date.modified" content="2026-04-29">
+    <meta property="og:updated_time" content="2026-04-29T00:00:00Z">
 
     <meta property="og:locale" content="es">
     <meta property="og:locale:alternate" content="pt">
@@ -38,7 +38,7 @@ covering how to avoid dependency resolution issues.
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Packaging a VS Code Extension Using pnpm and VSCE",
-        "dateModified": "2026-03-20T00:00:00Z",
+        "dateModified": "2026-04-29T00:00:00Z",
         "url": "https://opensciencelabs.org/blog/packaging-a-vs-code-extension-using-pnpm-and-vsce/"
       }
     </script>
@@ -1816,32 +1816,34 @@ covering how to avoid dependency resolution issues.
   <!-- Article body -->
   <div class="post_body">
     <h1 id="packaging-a-vs-code-extension-using-pnpm-and-vsce">Packaging a VS Code Extension Using pnpm and VSCE<a class="headerlink" href="#packaging-a-vs-code-extension-using-pnpm-and-vsce" title="Permanent link"> #</a></h1>
-<p>VS Code’s <code>vsce</code> tool doesn't play nicely with <code>pnpm</code> out of the box; here’s a
-proven workaround using bundling and the <code>--no-dependencies</code> flag to get things
-running smoothly.</p>
+<p>VS Code’s <code>vsce</code> tool doesn’t play nicely with <code>pnpm</code> out of the box;
+here’s a proven workaround using bundling and the <code>--no-dependencies</code>
+flag to get things running smoothly.</p>
 <hr />
 <h2 id="why-pnpm-vsce-can-be-problematic">Why pnpm + vsce can be problematic<a class="headerlink" href="#why-pnpm-vsce-can-be-problematic" title="Permanent link"> #</a></h2>
-<p><code>vsce</code> relies on <code>npm list --production --parseable --depth=99999</code>, which fails
-under pnpm's symlink-based dependency management, often throwing
-<code>npm ERR! missing:</code> errors.<br />
+<p><code>vsce</code> relies on <code>npm list --production --parseable --depth=99999</code>,
+which fails under pnpm’s symlink-based dependency management, often
+throwing <code>npm ERR! missing:</code> errors.<br />
 (<a href="https://github.com/microsoft/vscode-vsce/issues/421">github.com</a>,
 <a href="https://daydreamer-riri.me/posts/compatibility-issues-between-vsce-and-pnpm/">daydreamer-riri.me</a>)</p>
 <hr />
 <h2 id="solution-overview">Solution Overview<a class="headerlink" href="#solution-overview" title="Permanent link"> #</a></h2>
 <ol>
-<li><strong>Bundle your extension</strong> using a bundler such as <strong>esbuild</strong> or <strong>Webpack</strong></li>
-<li><strong>Use <code>--no-dependencies</code></strong> when running <code>vsce package</code> and <code>vsce publish</code></li>
+<li><strong>Bundle your extension</strong> using a bundler such as <strong>esbuild</strong> or
+    <strong>Webpack</strong></li>
+<li><strong>Use <code>--no-dependencies</code></strong> when running <code>vsce package</code> and
+    <code>vsce publish</code></li>
 </ol>
-<p>Because all dependencies are bundled, <code>vsce</code> no longer needs to resolve them
-from <code>node_modules</code>.</p>
+<p>Because all dependencies are bundled, <code>vsce</code> no longer needs to resolve
+them from <code>node_modules</code>.</p>
 <hr />
 <h2 id="step-by-step-setup">Step-by-Step Setup<a class="headerlink" href="#step-by-step-setup" title="Permanent link"> #</a></h2>
 <h3 id="1-install-tools">1. Install Tools<a class="headerlink" href="#1-install-tools" title="Permanent link"> #</a></h3>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pnpm<span class="w"> </span>add<span class="w"> </span>-D<span class="w"> </span>@vscode/vsce<span class="w"> </span>esbuild
 </span></code></pre></div>
-<p>@vscode/vsce` is the CLI for packaging and publishing VSCode extensions. Recent
-versions (e.g., v3.6.0) support npm (≥6) and Yarn (1.x), but don't officially
-support pnpm.</p>
+<p>@vscode/vsce` is the CLI for packaging and publishing VSCode
+extensions. Recent versions (e.g., v3.6.0) support npm (≥6) and Yarn
+(1.x), but don’t officially support pnpm.</p>
 <h3 id="2-configure-packagejson">2. Configure <code>package.json</code><a class="headerlink" href="#2-configure-packagejson" title="Permanent link"> #</a></h3>
 <p>Scripts Add build and packaging commands: jsonc Copy code</p>
 <div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
@@ -1854,15 +1856,17 @@ support pnpm.</p>
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span>
 </span></code></pre></div>
 <ul>
-<li><code>vscode:prepublish</code>: runs before packaging; bundles source using esbuild</li>
-<li><code>bundle</code>: compiles <code>extension.ts</code> into <code>out/main.js</code> and excludes the <code>vscode</code>
-  module</li>
-<li><code>package</code> / <code>publish</code>: calls VSCE via pnpm, skipping dependency resolution</li>
+<li><code>vscode:prepublish</code>: runs before packaging; bundles source using
+  esbuild</li>
+<li><code>bundle</code>: compiles <code>extension.ts</code> into <code>out/main.js</code> and excludes the
+  <code>vscode</code> module</li>
+<li><code>package</code> / <code>publish</code>: calls VSCE via pnpm, skipping dependency
+  resolution</li>
 </ul>
 <h3 id="3-why-it-works">3. Why It Works<a class="headerlink" href="#3-why-it-works" title="Permanent link"> #</a></h3>
-<p>By bundling dependencies manually, <code>vsce</code> doesn’t need to resolve them during
-packaging or publishing. The <code>--no-dependencies</code> option avoids pnpm’s symlink
-issues entirely.</p>
+<p>By bundling dependencies manually, <code>vsce</code> doesn’t need to resolve them
+during packaging or publishing. The <code>--no-dependencies</code> option avoids
+pnpm’s symlink issues entirely.</p>
 <h2 id="sample-packagejson-snippet">Sample <code>package.json</code> Snippet<a class="headerlink" href="#sample-packagejson-snippet" title="Permanent link"> #</a></h2>
 <div class="language-json highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">&quot;devDependencies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -1878,10 +1882,10 @@ issues entirely.</p>
 </span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="wrap-up"><strong>Wrap-Up</strong><a class="headerlink" href="#wrap-up" title="Permanent link"> #</a></h3>
-<p>Using <strong>pnpm</strong> with VS Code extensions involves a few extra steps because <code>vsce</code>
-doesn’t support pnpm’s dependency structure directly. The ideal workflow: _
-<strong>Bundle your extension first</strong>, then _ <strong>Use <code>--no-dependencies</code></strong> to package
-and publish safely.</p>
+<p>Using <strong>pnpm</strong> with VS Code extensions involves a few extra steps
+because <code>vsce</code> doesn’t support pnpm’s dependency structure directly. The
+ideal workflow: <strong><em>Bundle your extension first</em><em>, then</em> </strong>Use
+<code>--no-dependencies</code>** to package and publish safely.</p>
   </div>
 </div>
 
@@ -1911,7 +1915,7 @@ and publish safely.</p>
           <div class="mt-4">
             <small class="badge-updated">
               
-                Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2026-03-20</span>
+                Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2026-04-29</span>
               
               
             </small>

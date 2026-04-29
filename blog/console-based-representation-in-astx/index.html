@@ -13,9 +13,9 @@
     <meta name="description" content="Recently, console-based AST representation was included in the ASTx framework. Such feature can enhance the debugging and analysis capabilities of ASTx, particularly in environments such as a pdb session. In this tutorial, we'll explore this new feature as well as the ASTx Graphviz visualization.
 ">
     <meta name="keywords" content="open science,data science,latam">
-    <meta name="last-modified" content="2026-03-20">
-    <meta name="DC.date.modified" content="2026-03-20">
-    <meta property="og:updated_time" content="2026-03-20T00:00:00Z">
+    <meta name="last-modified" content="2026-04-29">
+    <meta name="DC.date.modified" content="2026-04-29">
+    <meta property="og:updated_time" content="2026-04-29T00:00:00Z">
 
     <meta property="og:locale" content="es">
     <meta property="og:locale:alternate" content="pt">
@@ -36,7 +36,7 @@
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Console-based representation in ASTx",
-        "dateModified": "2026-03-20T00:00:00Z",
+        "dateModified": "2026-04-29T00:00:00Z",
         "url": "https://opensciencelabs.org/blog/console-based-representation-in-astx/"
       }
     </script>
@@ -1814,14 +1814,21 @@
   <!-- Article body -->
   <div class="post_body">
     <h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link"> #</a></h1>
-<p>The ASTx library is an agnostic framework for constructing and representing Abstract Syntax Trees (ASTs). Its primary objective is to provide a versatile and language-independent structure for ASTs, with the flexibility to be utilized across various programming languages and parsing tools. ASTx doesn't aim to be a lexer or a parser, although it could be used by any programming language or parser written in Python in order to provide a high level representation of the AST.</p>
-<p>Many kinds of nodes (classes) are currently supported. Below is a list with just some examples:</p>
+<p>The ASTx library is an agnostic framework for constructing and
+representing Abstract Syntax Trees (ASTs). Its primary objective is to
+provide a versatile and language-independent structure for ASTs, with
+the flexibility to be utilized across various programming languages and
+parsing tools. ASTx doesn’t aim to be a lexer or a parser, although it
+could be used by any programming language or parser written in Python in
+order to provide a high level representation of the AST.</p>
+<p>Many kinds of nodes (classes) are currently supported. Below is a list
+with just some examples:</p>
 <h5 id="statements">Statements:<a class="headerlink" href="#statements" title="Permanent link"> #</a></h5>
 <ul>
 <li>Function</li>
 <li>Function Prototype</li>
 <li>FunctionReturn</li>
-<li>ForRangeLoop </li>
+<li>ForRangeLoop</li>
 <li>VarDecl</li>
 </ul>
 <h5 id="operators">Operators:<a class="headerlink" href="#operators" title="Permanent link"> #</a></h5>
@@ -1832,28 +1839,39 @@
 <h5 id="data-types">Data types:<a class="headerlink" href="#data-types" title="Permanent link"> #</a></h5>
 <ul>
 <li>Boolean</li>
-<li>Literal </li>
-<li>Variable </li>
+<li>Literal</li>
+<li>Variable</li>
 </ul>
-<p>The ASTx project is still under development, so new classes may be added to the ones above at any time.</p>
-<p>Below are installation instructions and an example, so you can have an overview of how you can leverage the ASTx library for your needs.</p>
+<p>The ASTx project is still under development, so new classes may be added
+to the ones above at any time.</p>
+<p>Below are installation instructions and an example, so you can have an
+overview of how you can leverage the ASTx library for your needs.</p>
 <h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link"> #</a></h1>
-<p>The first step is to install ASTx. You can do it simply by running the command below in your terminal:\
-<code>$ pip install astx</code>\
-If you need more information on installation, you can get it in the <a href="https://github.com/arxlang/astx/blob/main/docs/installation.md">ASTx installation page</a>.
-After that, you can just open a Jupyter Notebook instance and start writing your first AST.</p>
+<p>The first step is to install ASTx. You can do it simply by running the
+command below in your terminal:<br />
+<code>$ pip install astx</code><br />
+If you need more information on installation, you can get it in the
+<a href="https://github.com/arxlang/astx/blob/main/docs/installation.md">ASTx installation
+page</a>.
+After that, you can just open a Jupyter Notebook instance and start
+writing your first AST.</p>
 <h1 id="example-an-ast-of-a-series-of-mathematical-operations">Example: an AST of a series of mathematical operations<a class="headerlink" href="#example-an-ast-of-a-series-of-mathematical-operations" title="Permanent link"> #</a></h1>
-<p>Here we will present a quick example of an AST of the expression \
-<code>basic_op = lit_1 + b - a * c / a + (b - a / a)</code>, in which \
-$~~~~$ <code>lit_1</code> is a defined integer, and \
-$~~~~$ <code>a</code>, <code>b</code>, and <code>c</code> are variables.\
-The first thing to do is, in your Jupyter Notebook instance, import <code>display</code>, which will allow you to have a basic visualization of the AST, and the astx library itself. </p>
+<p>Here we will present a quick example of an AST of the expression<br />
+<code>basic_op = lit_1 + b - a * c / a + (b - a / a)</code>, in which<br />
+$~~~~$ <code>lit_1</code> is a defined integer, and<br />
+$~~~~$ <code>a</code>, <code>b</code>, and <code>c</code> are variables.<br />
+The first thing to do is, in your Jupyter Notebook instance, import
+<code>display</code>, which will allow you to have a basic visualization of the
+AST, and the astx library itself.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># import display for AST visualization</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">import</span> <span class="nn">astx</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kn">from</span> <span class="nn">astx.viz</span> <span class="kn">import</span> <span class="n">graph_to_ascii</span><span class="p">,</span> <span class="n">traverse_ast_ascii</span>
 </span></code></pre></div>
-<p>Then we create an instance of the Module class, and this instance will be the first node of the tree, or the root node. After that, we declare the variables and literal that will be part of the basic operation that we will parse into an AST.</p>
+<p>Then we create an instance of the Module class, and this instance will
+be the first node of the tree, or the root node. After that, we declare
+the variables and literal that will be part of the basic operation that
+we will parse into an AST.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Create module</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">module</span> <span class="o">=</span> <span class="n">astx</span><span class="o">.</span><span class="n">Module</span><span class="p">()</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
@@ -1872,8 +1890,12 @@ The first thing to do is, in your Jupyter Notebook instance, import <code>displa
 </span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="c1"># State the expression</span>
 </span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="n">basic_op</span> <span class="o">=</span> <span class="n">lit_1</span> <span class="o">+</span> <span class="n">b</span> <span class="o">-</span> <span class="n">a</span> <span class="o">*</span> <span class="n">c</span> <span class="o">/</span> <span class="n">a</span> <span class="o">+</span> <span class="p">(</span><span class="n">b</span> <span class="o">-</span> <span class="n">a</span> <span class="o">/</span> <span class="n">a</span><span class="p">)</span>
 </span></code></pre></div>
-<p>After the basic expression is stated, we create an instance of the Function class. As mentioned in the API documentation, each instance of the Function class must have a prototype and a body, so we'll create those first.</p>
-<p>The body is made of a block that is created and the variables, as well as the basic operation, are appended to it afterwards.</p>
+<p>After the basic expression is stated, we create an instance of the
+Function class. As mentioned in the API documentation, each instance of
+the Function class must have a prototype and a body, so we’ll create
+those first.</p>
+<p>The body is made of a block that is created and the variables, as well
+as the basic operation, are appended to it afterwards.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Create FunctionPrototype</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">main_proto</span> <span class="o">=</span> <span class="n">astx</span><span class="o">.</span><span class="n">FunctionPrototype</span><span class="p">(</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;main&quot;</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="n">astx</span><span class="o">.</span><span class="n">Arguments</span><span class="p">(),</span> <span class="n">return_type</span><span class="o">=</span><span class="n">astx</span><span class="o">.</span><span class="n">Int32</span>
@@ -1892,137 +1914,128 @@ The first thing to do is, in your Jupyter Notebook instance, import <code>displa
 </span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="c1"># Append function to module</span>
 </span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="n">module</span><span class="o">.</span><span class="n">block</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">main_fn</span><span class="p">)</span>
 </span></code></pre></div>
-<p>After this, the module is complete. We can get its AST structure as a dictionary, as well as a PNG representation.</p>
+<p>After this, the module is complete. We can get its AST structure as a
+dictionary, as well as a PNG representation.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Create dictionary representation</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">module</span><span class="o">.</span><span class="n">get_struct</span><span class="p">()</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-{'MODULE[main]': {'content': [{'FUNCTION[main]': {'content': {'args': {'Arguments(0)': {'content': [],
-'metadata': {'loc': {line: -1, col: -1},
-'comment': '',
-'ref': '',
-'kind': <ASTKind.GenericKind: -100>}}},
-'body': {'BLOCK': {'content': [{'VariableDeclaration[a, Int32]': {'content': {'Literal[Int32]: 1': {'content': 1,
-'metadata': {'loc': {line: -1, col: -1},
-'comment': '',
-'ref': 'c4848732a3c542f1b3818bc799dc0b26',
-'kind': <ASTKind.GenericKind: -100>}}},
-'metadata': {'loc': {line: -1, col: -1},
-'comment': '',
-'ref': '',
-'kind': <ASTKind.VarDeclKind: -203>}}},
-{'VariableDeclaration[b, Int32]': {'content': {'Literal[Int32]: 2': {'content': 2,
-'metadata': {'loc': {line: -1, col: -1},
-'comment': '',
-'ref': 'b63f0bf700194bb7abbdf99d8cc20336',
-'kind': <ASTKind.GenericKind: -100>}}},
-'metadata': {'loc': {line: -1, col: -1},
-'comment': '',
-'ref': '',
-'kind': <ASTKind.VarDeclKind: -203>}}},
-{'VariableDeclaration[c, Int32]': {'content': {'Literal[Int32]: 4': {'content': 4,
-'metadata': {'loc': {line: -1, col: -1},
-'comment': '',
-'ref': '0c0686b5f12a45bd9ff1a20da82702a0',
-'kind': <ASTKind.GenericKind: -100>}}},
-'metadata': {'loc': {line: -1, col: -1},
-'comment': '',
-'ref': '',
-'kind': <ASTKind.VarDeclKind: -203>}}},
-{'RETURN': {'content': {'BINARY[+]': {'content': {'lhs': {'BINARY[-]': {'content': {'lhs': {'BINARY[+]': {'content': {'lhs': {'Literal[Int32]: 1': {'content': 1,
-'metadata': {'loc': {line: -1, col: -1},
-'comment': '',
-'ref': '8d5d86d52b98484a8e5947ae4e6556f1',
-'kind': <ASTKind.GenericKind: -100>}}},
-'rhs': {'Variable[b]': {'content': 'b',
-'metadata': {'loc': {line: -1, col: -1},
-'comment': '',
-'ref': '',
-'kind': <ASTKind.GenericKind: -100>}}}},
-'metadata': {'loc': {line: -1, col: -1},
-'comment': '',
-'ref': '',
-'kind': <ASTKind.BinaryOpKind: -301>}}},
-'rhs': {'BINARY[/]': {'content': {'lhs': {'BINARY[*]': {'content': {'lhs': {'Variable[a]': {'content': 'a',
-'metadata': {'loc': {line: -1, col: -1},
-'comment': '',
-'ref': '',
-'kind': <ASTKind.GenericKind: -100>}}},
-'rhs': {'Variable[c]': {'content': 'c',
-'metadata': {'loc': {line: -1, col: -1},
-'comment': '',
-'ref': '',
-'kind': <ASTKind.GenericKind: -100>}}}},
-'metadata': {'loc': {line: -1, col: -1},
-'comment': '',
-'ref': '',
-'kind': <ASTKind.BinaryOpKind: -301>}}},
-'rhs': {'Variable[a]': {'content': 'a',
-'metadata': {'loc': {line: -1, col: -1},
-'comment': '',
-'ref': '',
-'kind': <ASTKind.GenericKind: -100>}}}},
-'metadata': {'loc': {line: -1, col: -1},
-'comment': '',
-'ref': '',
-'kind': <ASTKind.BinaryOpKind: -301>}}}},
-'metadata': {'loc': {line: -1, col: -1},
-'comment': '',
-'ref': '',
-'kind': <ASTKind.BinaryOpKind: -301>}}},
-'rhs': {'BINARY[-]': {'content': {'lhs': {'Variable[b]': {'content': 'b',
-'metadata': {'loc': {line: -1, col: -1},
-'comment': '',
-'ref': '',
-'kind': <ASTKind.GenericKind: -100>}}},
-'rhs': {'BINARY[/]': {'content': {'lhs': {'Variable[a]': {'content': 'a',
-'metadata': {'loc': {line: -1, col: -1},
-'comment': '',
-'ref': '',
-'kind': <ASTKind.GenericKind: -100>}}},
-'rhs': {'Variable[a]': {'content': 'a',
-'metadata': {'loc': {line: -1, col: -1},
-'comment': '',
-'ref': '',
-'kind': <ASTKind.GenericKind: -100>}}}},
-'metadata': {'loc': {line: -1, col: -1},
-'comment': '',
-'ref': '',
-'kind': <ASTKind.BinaryOpKind: -301>}}}},
-'metadata': {'loc': {line: -1, col: -1},
-'comment': '',
-'ref': '',
-'kind': <ASTKind.BinaryOpKind: -301>}}}},
-'metadata': {'loc': {line: -1, col: -1},
-'comment': '',
-'ref': '',
-'kind': <ASTKind.BinaryOpKind: -301>}}},
-'metadata': {'loc': {line: -1, col: -1},
-'comment': '',
-'ref': '',
-'kind': <ASTKind.ReturnKind: -403>}}}],
-'metadata': {'loc': {line: -1, col: -1},
-'comment': '',
-'ref': '',
-'kind': <ASTKind.GenericKind: -100>}}}},
-'metadata': {'loc': {line: -1, col: -1},
-'comment': '',
-'ref': '',
-'kind': <ASTKind.FunctionKind: -401>}}}],
-'metadata': {'loc': {line: -1, col: -1},
-'comment': '',
-'ref': '',
-'kind': <ASTKind.ModuleKind: -101>}}}
-</span></code>
-</pre>
-</div>
-
+<div class="language-text highlight"><pre><span></span><code>{&#39;MODULE[main]&#39;: {&#39;content&#39;: [{&#39;FUNCTION[main]&#39;: {&#39;content&#39;: {&#39;args&#39;: {&#39;Arguments(0)&#39;: {&#39;content&#39;: [],
+        &#39;metadata&#39;: {&#39;loc&#39;: {line: -1, col: -1},
+         &#39;comment&#39;: &#39;&#39;,
+         &#39;ref&#39;: &#39;&#39;,
+         &#39;kind&#39;: &lt;ASTKind.GenericKind: -100&gt;}}},
+      &#39;body&#39;: {&#39;BLOCK&#39;: {&#39;content&#39;: [{&#39;VariableDeclaration[a, Int32]&#39;: {&#39;content&#39;: {&#39;Literal[Int32]: 1&#39;: {&#39;content&#39;: 1,
+             &#39;metadata&#39;: {&#39;loc&#39;: {line: -1, col: -1},
+              &#39;comment&#39;: &#39;&#39;,
+              &#39;ref&#39;: &#39;c4848732a3c542f1b3818bc799dc0b26&#39;,
+              &#39;kind&#39;: &lt;ASTKind.GenericKind: -100&gt;}}},
+           &#39;metadata&#39;: {&#39;loc&#39;: {line: -1, col: -1},
+            &#39;comment&#39;: &#39;&#39;,
+            &#39;ref&#39;: &#39;&#39;,
+            &#39;kind&#39;: &lt;ASTKind.VarDeclKind: -203&gt;}}},
+         {&#39;VariableDeclaration[b, Int32]&#39;: {&#39;content&#39;: {&#39;Literal[Int32]: 2&#39;: {&#39;content&#39;: 2,
+             &#39;metadata&#39;: {&#39;loc&#39;: {line: -1, col: -1},
+              &#39;comment&#39;: &#39;&#39;,
+              &#39;ref&#39;: &#39;b63f0bf700194bb7abbdf99d8cc20336&#39;,
+              &#39;kind&#39;: &lt;ASTKind.GenericKind: -100&gt;}}},
+           &#39;metadata&#39;: {&#39;loc&#39;: {line: -1, col: -1},
+            &#39;comment&#39;: &#39;&#39;,
+            &#39;ref&#39;: &#39;&#39;,
+            &#39;kind&#39;: &lt;ASTKind.VarDeclKind: -203&gt;}}},
+         {&#39;VariableDeclaration[c, Int32]&#39;: {&#39;content&#39;: {&#39;Literal[Int32]: 4&#39;: {&#39;content&#39;: 4,
+             &#39;metadata&#39;: {&#39;loc&#39;: {line: -1, col: -1},
+              &#39;comment&#39;: &#39;&#39;,
+              &#39;ref&#39;: &#39;0c0686b5f12a45bd9ff1a20da82702a0&#39;,
+              &#39;kind&#39;: &lt;ASTKind.GenericKind: -100&gt;}}},
+           &#39;metadata&#39;: {&#39;loc&#39;: {line: -1, col: -1},
+            &#39;comment&#39;: &#39;&#39;,
+            &#39;ref&#39;: &#39;&#39;,
+            &#39;kind&#39;: &lt;ASTKind.VarDeclKind: -203&gt;}}},
+         {&#39;RETURN&#39;: {&#39;content&#39;: {&#39;BINARY[+]&#39;: {&#39;content&#39;: {&#39;lhs&#39;: {&#39;BINARY[-]&#39;: {&#39;content&#39;: {&#39;lhs&#39;: {&#39;BINARY[+]&#39;: {&#39;content&#39;: {&#39;lhs&#39;: {&#39;Literal[Int32]: 1&#39;: {&#39;content&#39;: 1,
+                      &#39;metadata&#39;: {&#39;loc&#39;: {line: -1, col: -1},
+                       &#39;comment&#39;: &#39;&#39;,
+                       &#39;ref&#39;: &#39;8d5d86d52b98484a8e5947ae4e6556f1&#39;,
+                       &#39;kind&#39;: &lt;ASTKind.GenericKind: -100&gt;}}},
+                    &#39;rhs&#39;: {&#39;Variable[b]&#39;: {&#39;content&#39;: &#39;b&#39;,
+                      &#39;metadata&#39;: {&#39;loc&#39;: {line: -1, col: -1},
+                       &#39;comment&#39;: &#39;&#39;,
+                       &#39;ref&#39;: &#39;&#39;,
+                       &#39;kind&#39;: &lt;ASTKind.GenericKind: -100&gt;}}}},
+                   &#39;metadata&#39;: {&#39;loc&#39;: {line: -1, col: -1},
+                    &#39;comment&#39;: &#39;&#39;,
+                    &#39;ref&#39;: &#39;&#39;,
+                    &#39;kind&#39;: &lt;ASTKind.BinaryOpKind: -301&gt;}}},
+                 &#39;rhs&#39;: {&#39;BINARY[/]&#39;: {&#39;content&#39;: {&#39;lhs&#39;: {&#39;BINARY[*]&#39;: {&#39;content&#39;: {&#39;lhs&#39;: {&#39;Variable[a]&#39;: {&#39;content&#39;: &#39;a&#39;,
+                         &#39;metadata&#39;: {&#39;loc&#39;: {line: -1, col: -1},
+                          &#39;comment&#39;: &#39;&#39;,
+                          &#39;ref&#39;: &#39;&#39;,
+                          &#39;kind&#39;: &lt;ASTKind.GenericKind: -100&gt;}}},
+                       &#39;rhs&#39;: {&#39;Variable[c]&#39;: {&#39;content&#39;: &#39;c&#39;,
+                         &#39;metadata&#39;: {&#39;loc&#39;: {line: -1, col: -1},
+                          &#39;comment&#39;: &#39;&#39;,
+                          &#39;ref&#39;: &#39;&#39;,
+                          &#39;kind&#39;: &lt;ASTKind.GenericKind: -100&gt;}}}},
+                      &#39;metadata&#39;: {&#39;loc&#39;: {line: -1, col: -1},
+                       &#39;comment&#39;: &#39;&#39;,
+                       &#39;ref&#39;: &#39;&#39;,
+                       &#39;kind&#39;: &lt;ASTKind.BinaryOpKind: -301&gt;}}},
+                    &#39;rhs&#39;: {&#39;Variable[a]&#39;: {&#39;content&#39;: &#39;a&#39;,
+                      &#39;metadata&#39;: {&#39;loc&#39;: {line: -1, col: -1},
+                       &#39;comment&#39;: &#39;&#39;,
+                       &#39;ref&#39;: &#39;&#39;,
+                       &#39;kind&#39;: &lt;ASTKind.GenericKind: -100&gt;}}}},
+                   &#39;metadata&#39;: {&#39;loc&#39;: {line: -1, col: -1},
+                    &#39;comment&#39;: &#39;&#39;,
+                    &#39;ref&#39;: &#39;&#39;,
+                    &#39;kind&#39;: &lt;ASTKind.BinaryOpKind: -301&gt;}}}},
+                &#39;metadata&#39;: {&#39;loc&#39;: {line: -1, col: -1},
+                 &#39;comment&#39;: &#39;&#39;,
+                 &#39;ref&#39;: &#39;&#39;,
+                 &#39;kind&#39;: &lt;ASTKind.BinaryOpKind: -301&gt;}}},
+              &#39;rhs&#39;: {&#39;BINARY[-]&#39;: {&#39;content&#39;: {&#39;lhs&#39;: {&#39;Variable[b]&#39;: {&#39;content&#39;: &#39;b&#39;,
+                   &#39;metadata&#39;: {&#39;loc&#39;: {line: -1, col: -1},
+                    &#39;comment&#39;: &#39;&#39;,
+                    &#39;ref&#39;: &#39;&#39;,
+                    &#39;kind&#39;: &lt;ASTKind.GenericKind: -100&gt;}}},
+                 &#39;rhs&#39;: {&#39;BINARY[/]&#39;: {&#39;content&#39;: {&#39;lhs&#39;: {&#39;Variable[a]&#39;: {&#39;content&#39;: &#39;a&#39;,
+                      &#39;metadata&#39;: {&#39;loc&#39;: {line: -1, col: -1},
+                       &#39;comment&#39;: &#39;&#39;,
+                       &#39;ref&#39;: &#39;&#39;,
+                       &#39;kind&#39;: &lt;ASTKind.GenericKind: -100&gt;}}},
+                    &#39;rhs&#39;: {&#39;Variable[a]&#39;: {&#39;content&#39;: &#39;a&#39;,
+                      &#39;metadata&#39;: {&#39;loc&#39;: {line: -1, col: -1},
+                       &#39;comment&#39;: &#39;&#39;,
+                       &#39;ref&#39;: &#39;&#39;,
+                       &#39;kind&#39;: &lt;ASTKind.GenericKind: -100&gt;}}}},
+                   &#39;metadata&#39;: {&#39;loc&#39;: {line: -1, col: -1},
+                    &#39;comment&#39;: &#39;&#39;,
+                    &#39;ref&#39;: &#39;&#39;,
+                    &#39;kind&#39;: &lt;ASTKind.BinaryOpKind: -301&gt;}}}},
+                &#39;metadata&#39;: {&#39;loc&#39;: {line: -1, col: -1},
+                 &#39;comment&#39;: &#39;&#39;,
+                 &#39;ref&#39;: &#39;&#39;,
+                 &#39;kind&#39;: &lt;ASTKind.BinaryOpKind: -301&gt;}}}},
+             &#39;metadata&#39;: {&#39;loc&#39;: {line: -1, col: -1},
+              &#39;comment&#39;: &#39;&#39;,
+              &#39;ref&#39;: &#39;&#39;,
+              &#39;kind&#39;: &lt;ASTKind.BinaryOpKind: -301&gt;}}},
+           &#39;metadata&#39;: {&#39;loc&#39;: {line: -1, col: -1},
+            &#39;comment&#39;: &#39;&#39;,
+            &#39;ref&#39;: &#39;&#39;,
+            &#39;kind&#39;: &lt;ASTKind.ReturnKind: -403&gt;}}}],
+        &#39;metadata&#39;: {&#39;loc&#39;: {line: -1, col: -1},
+         &#39;comment&#39;: &#39;&#39;,
+         &#39;ref&#39;: &#39;&#39;,
+         &#39;kind&#39;: &lt;ASTKind.GenericKind: -100&gt;}}}},
+     &#39;metadata&#39;: {&#39;loc&#39;: {line: -1, col: -1},
+      &#39;comment&#39;: &#39;&#39;,
+      &#39;ref&#39;: &#39;&#39;,
+      &#39;kind&#39;: &lt;ASTKind.FunctionKind: -401&gt;}}}],
+  &#39;metadata&#39;: {&#39;loc&#39;: {line: -1, col: -1},
+   &#39;comment&#39;: &#39;&#39;,
+   &#39;ref&#39;: &#39;&#39;,
+   &#39;kind&#39;: &lt;ASTKind.ModuleKind: -101&gt;}}}
+</code></pre></div>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Create ascii representation</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">dot_graph</span> <span class="o">=</span> <span class="n">traverse_ast_ascii</span><span class="p">(</span><span class="n">module</span><span class="o">.</span><span class="n">get_struct</span><span class="p">(</span><span class="n">simplified</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">graph</span> <span class="o">=</span> <span class="n">graph_to_ascii</span><span class="p">(</span><span class="n">dot_graph</span><span class="p">)</span> 
@@ -2033,53 +2046,20 @@ The first thing to do is, in your Jupyter Notebook instance, import <code>displa
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">module</span>
 </span></code></pre></div>
 <p><img alt="png" src="index_files/index_11_0.png" /></p>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-
-</span></code>
-</pre>
-</div>
-
-<p>We can also get the PNG representation of parts of the AST, such as <code>basic_op</code> and the variable <code>a</code>:</p>
+<p>We can also get the PNG representation of parts of the AST, such as
+<code>basic_op</code> and the variable <code>a</code>:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Create PNG representation</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">basic_op</span>
 </span></code></pre></div>
 <p><img alt="png" src="index_files/index_13_0.png" /></p>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-
-</span></code>
-</pre>
-</div>
-
 <div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Create PNG representation</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">a</span>
 </span></code></pre></div>
 <p><img alt="png" src="index_files/index_14_0.png" /></p>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-
-</span></code>
-</pre>
-</div>
-
 <h2 id="custom-shapes">Custom shapes<a class="headerlink" href="#custom-shapes" title="Permanent link"> #</a></h2>
-<p>It is also possible to use custom shapes for the output using the function <code>viz.visualize</code>. The Default shape is <code>box</code>, but  <code>diamond</code>, <code>ellipse</code>, and <code>circle</code> are also avaiable options. </p>
+<p>It is also possible to use custom shapes for the output using the
+function <code>viz.visualize</code>. The Default shape is <code>box</code>, but <code>diamond</code>,
+<code>ellipse</code>, and <code>circle</code> are also avaiable options.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Import visualization module</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kn">from</span> <span class="nn">astx</span> <span class="kn">import</span> <span class="n">viz</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
@@ -2096,7 +2076,13 @@ The first thing to do is, in your Jupyter Notebook instance, import <code>displa
 </span></code></pre></div>
 <p><img alt="png" src="index_files/index_18_0.png" /></p>
 <h1 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link"> #</a></h1>
-<p>This guide provides clear instructions and a simple example for you to start using the ASTx library. But this is just the beginning of your journey. Make sure to check out the other tutorials available, such as the one for <a href="https://github.com/arxlang/astx/blob/main/docs/tutorials/variables.ipynb">variables</a> and the one for <a href="https://github.com/arxlang/astx/blob/main/docs/tutorials/functions.ipynb">functions</a>.</p>
+<p>This guide provides clear instructions and a simple example for you to
+start using the ASTx library. But this is just the beginning of your
+journey. Make sure to check out the other tutorials available, such as
+the one for
+<a href="https://github.com/arxlang/astx/blob/main/docs/tutorials/variables.ipynb">variables</a>
+and the one for
+<a href="https://github.com/arxlang/astx/blob/main/docs/tutorials/functions.ipynb">functions</a>.</p>
   </div>
 </div>
 
@@ -2126,7 +2112,7 @@ The first thing to do is, in your Jupyter Notebook instance, import <code>displa
           <div class="mt-4">
             <small class="badge-updated">
               
-                Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2026-03-20</span>
+                Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2026-04-29</span>
               
               
             </small>

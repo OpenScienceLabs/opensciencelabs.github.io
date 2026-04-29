@@ -94,7 +94,7 @@
       "name": "ArtBox",
       "description": "ArtBox processes multimedia files, including speech-to-text, text-to-speech, and other media workflows.",
       "webpageUrl": {
-        "url": "https://mediatoolbox-org.github.io/artbox/"
+        "url": "https://mediatoolbox-org.github.io/artbox"
       },
       "repositoryUrl": {
         "url": "https://github.com/mediatoolbox-org/artbox"

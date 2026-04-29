@@ -14,9 +14,9 @@
 contribution to Open-science labs as a part of Google Summer of Code 2023.
 ">
     <meta name="keywords" content="open science,data science,latam">
-    <meta name="last-modified" content="2026-03-20">
-    <meta name="DC.date.modified" content="2026-03-20">
-    <meta property="og:updated_time" content="2026-03-20T00:00:00Z">
+    <meta name="last-modified" content="2026-04-29">
+    <meta name="DC.date.modified" content="2026-04-29">
+    <meta property="og:updated_time" content="2026-04-29T00:00:00Z">
 
     <meta property="og:locale" content="es">
     <meta property="og:locale:alternate" content="pt">
@@ -38,7 +38,7 @@ contribution to Open-science labs as a part of Google Summer of Code 2023.
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Google Summer of Code- Week 4th & 7th Midterm Evaluation",
-        "dateModified": "2026-03-20T00:00:00Z",
+        "dateModified": "2026-04-29T00:00:00Z",
         "url": "https://opensciencelabs.org/blog/google-summer-of-code-week-4th-and-7th-midterm-evaluation/"
       }
     </script>
@@ -1756,59 +1756,65 @@ contribution to Open-science labs as a part of Google Summer of Code 2023.
               <div class="col-12 col-xl-10 mx-auto">
                 
                   <h2 id="google-summer-of-code-week-4th-7th-midterm-evaluation">Google Summer of Code- Week 4th &amp; 7th Midterm Evaluation<a class="headerlink" href="#google-summer-of-code-week-4th-7th-midterm-evaluation" title="Permanent link"> #</a></h2>
-<p>In this article, I will share the progress for Week 4th week to 7th week for my
-contribution to Open-science labs as a part of Google Summer of Code 2023.</p>
+<p>In this article, I will share the progress for Week 4th week to 7th week
+for my contribution to Open-science labs as a part of Google Summer of
+Code 2023.</p>
 <p><img src="GSoC-Vertical.png" width="400"></p>
-<p>As my Google Summer of Code journey continued, I found myself faced with an
-exciting yet daunting task: implementing a whole new build-system as an option
-for templates in the esteemed Open-Science Lab. This endeavor demanded
-meticulous planning, unwavering dedication, and the exploration of various
-build-systems, including Maturin, Hatchling, Scikit-build, and <code>pybuild11</code>.</p>
-<p>In this period, I started working on to add support for <code>Maturin</code> build-system.</p>
-<h3 id="maturin">Maturin<a class="headerlink" href="#maturin" title="Permanent link"> #</a></h3>
-<p><a href=""><strong>Maturin</strong></a> was the first build-system I explored. Its unique approach of
-building Python bindings for Rust libraries intrigued me, and I wondered if it
-could provide a novel solution to the lab's needs. The seamless blending of
-Python and Rust offered the potential for unparalleled performance and memory
-efficiency in research projects. However, I faced a steep learning curve to
-master the intricacies of Rust and its integration with Python. Overcoming these
-challenges was a significant achievement, and I managed to create a functional
-prototype that demonstrated Maturin's potential to revolutionize the
-Open-Science Lab's workflow. My contribution to this issue is
-<a href="https://github.com/osl-incubator/scicookie/pull/152">here</a></p>
-<p>After merging this pull request, I started to add support for <code>Hatchling</code>
+<p>As my Google Summer of Code journey continued, I found myself faced with
+an exciting yet daunting task: implementing a whole new build-system as
+an option for templates in the esteemed Open-Science Lab. This endeavor
+demanded meticulous planning, unwavering dedication, and the exploration
+of various build-systems, including Maturin, Hatchling, Scikit-build,
+and <code>pybuild11</code>.</p>
+<p>In this period, I started working on to add support for <code>Maturin</code>
 build-system.</p>
+<h3 id="maturin">Maturin<a class="headerlink" href="#maturin" title="Permanent link"> #</a></h3>
+<p><a href=""><strong>Maturin</strong></a> was the first build-system I explored. Its unique
+approach of building Python bindings for Rust libraries intrigued me,
+and I wondered if it could provide a novel solution to the lab’s needs.
+The seamless blending of Python and Rust offered the potential for
+unparalleled performance and memory efficiency in research projects.
+However, I faced a steep learning curve to master the intricacies of
+Rust and its integration with Python. Overcoming these challenges was a
+significant achievement, and I managed to create a functional prototype
+that demonstrated Maturin’s potential to revolutionize the Open-Science
+Lab’s workflow. My contribution to this issue is
+<a href="https://github.com/osl-incubator/scicookie/pull/152">here</a></p>
+<p>After merging this pull request, I started to add support for
+<code>Hatchling</code> build-system.</p>
 <h3 id="hatchling">Hatchling<a class="headerlink" href="#hatchling" title="Permanent link"> #</a></h3>
-<p><a href=""><strong>Hatchling</strong></a> known for its user-friendly nature, was my next target. It
-promised to simplify the build and deployment processes, which could be
-particularly beneficial for newcomers to the lab and projects with
-straightforward requirements. Integrating Hatchling into the lab's ecosystem
-required thorough documentation and integration tests to ensure its smooth
-adoption. Overcoming initial hurdles, I was elated to see the positive response
-from the lab's community as they began adopting Hatchling for their projects. My
-contribution to this issue is
-<a href="https://github.com/osl-incubator/scicookie/pull/144">here</a></p>
+<p><a href=""><strong>Hatchling</strong></a> known for its user-friendly nature, was my next
+target. It promised to simplify the build and deployment processes,
+which could be particularly beneficial for newcomers to the lab and
+projects with straightforward requirements. Integrating Hatchling into
+the lab’s ecosystem required thorough documentation and integration
+tests to ensure its smooth adoption. Overcoming initial hurdles, I was
+elated to see the positive response from the lab’s community as they
+began adopting Hatchling for their projects. My contribution to this
+issue is <a href="https://github.com/osl-incubator/scicookie/pull/144">here</a></p>
 <p>After completetion of this issue, I jumped to a task to add support for
 <code>Scikit-Build-Core</code>.</p>
 <h3 id="scikit-build-core">Scikit-build-core<a class="headerlink" href="#scikit-build-core" title="Permanent link"> #</a></h3>
-<p><a href=""><strong>Scikit-build-core</strong></a> a cross-platform build-system, offered a robust option
-for integrating CPython extensions. While challenging to implement, I recognized
-its potential to support projects with complex native code dependencies. My
-experience with Scikit-build exposed me to advanced build and packaging
-concepts, and I was thrilled to see it complementing the existing build-systems
-in the lab, catering to a broader range of projects. My contribution to this
-issue is <a href="https://github.com/osl-incubator/scicookie/pull/161">here</a></p>
+<p><a href=""><strong>Scikit-build-core</strong></a> a cross-platform build-system, offered a
+robust option for integrating CPython extensions. While challenging to
+implement, I recognized its potential to support projects with complex
+native code dependencies. My experience with Scikit-build exposed me to
+advanced build and packaging concepts, and I was thrilled to see it
+complementing the existing build-systems in the lab, catering to a
+broader range of projects. My contribution to this issue is
+<a href="https://github.com/osl-incubator/scicookie/pull/161">here</a></p>
 <h3 id="conclusions">Conclusions<a class="headerlink" href="#conclusions" title="Permanent link"> #</a></h3>
 <p>In conclusion, my Google Summer of Code experience with implementing new
-build-systems for the Open-Science Lab was a transformative journey. Overcoming
-hurdles with Maturin, embracing user-friendliness with Hatchling, exploring the
-potential of Scikit-build.I realized the importance of innovation and
-adaptability in the world of open-source development. This experience has not
-only enriched my technical skills but also instilled in me a passion for
-contributing to projects that drive positive change in the world of scientific
-research. As I look to the future, I am excited to continue this journey,
-collaborating with the open-source community to create solutions that empower
-researchers and advance the boundaries of knowledge.</p>
+build-systems for the Open-Science Lab was a transformative journey.
+Overcoming hurdles with Maturin, embracing user-friendliness with
+Hatchling, exploring the potential of Scikit-build.I realized the
+importance of innovation and adaptability in the world of open-source
+development. This experience has not only enriched my technical skills
+but also instilled in me a passion for contributing to projects that
+drive positive change in the world of scientific research. As I look to
+the future, I am excited to continue this journey, collaborating with
+the open-source community to create solutions that empower researchers
+and advance the boundaries of knowledge.</p>
 <p>You can read my previous blog <a href="https://medium.com/@ayeankit">here</a></p>
 <p>If want to connect with me on LinkedIn
 <a href="https://www.linkedin.com/in/ayeankit/">here</a>. Github
@@ -1822,7 +1828,7 @@ researchers and advance the boundaries of knowledge.</p>
           <div class="mt-4">
             <small class="badge-updated">
               
-                Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2026-03-20</span>
+                Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2026-04-29</span>
               
               
             </small>

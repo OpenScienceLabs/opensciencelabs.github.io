@@ -18,9 +18,9 @@ modern development environments.
 environment.
 ">
     <meta name="keywords" content="open science,data science,latam">
-    <meta name="last-modified" content="2026-03-20">
-    <meta name="DC.date.modified" content="2026-03-20">
-    <meta property="og:updated_time" content="2026-03-20T00:00:00Z">
+    <meta name="last-modified" content="2026-04-29">
+    <meta name="DC.date.modified" content="2026-04-29">
+    <meta property="og:updated_time" content="2026-04-29T00:00:00Z">
 
     <meta property="og:locale" content="es">
     <meta property="og:locale:alternate" content="pt">
@@ -46,7 +46,7 @@ environment.
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Streamlining Project Automation with Makim",
-        "dateModified": "2026-03-20T00:00:00Z",
+        "dateModified": "2026-04-29T00:00:00Z",
         "url": "https://opensciencelabs.org/blog/streamlining-project-automation-with-makim/"
       }
     </script>
@@ -1824,10 +1824,24 @@ environment.
   <!-- Article body -->
   <div class="post_body">
     <h1 id="streamlining-project-automation-with-makim">Streamlining Project Automation with Makim<a class="headerlink" href="#streamlining-project-automation-with-makim" title="Permanent link"> #</a></h1>
-<p>In software development, where efficiency, consistency, and reliability are paramount, automation tools play a crucial role. Makim, an innovative open-source tool, steps into the spotlight to improve automation workflows. It simplifies script execution, environment management, and task dependencies, positioning itself as a great asset in modern development environments.</p>
+<p>In software development, where efficiency, consistency, and reliability
+are paramount, automation tools play a crucial role. Makim, an
+innovative open-source tool, steps into the spotlight to improve
+automation workflows. It simplifies script execution, environment
+management, and task dependencies, positioning itself as a great asset
+in modern development environments.</p>
 <h2 id="introducing-makim">Introducing Makim<a class="headerlink" href="#introducing-makim" title="Permanent link"> #</a></h2>
-<p><code>Makim</code> elevates project automation by offering a structured, yet flexible approach to manage routine tasks, complex task dependencies, and environment configurations. Its design is centered around the <code>.makim.yaml</code> configuration file, allowing developers to orchestrate their workflows with precision and ease. Unlike traditional script execution tools, Makim's Python-based architecture and support for multiple programming languages and shells enhance its versatility and applicability across diverse projects.</p>
-<p>Especially suited for DevOps Engineers and Software Developers, Makim eliminates redundancy in automation tasks. Its core functionality extends beyond simple script execution, encompassing:</p>
+<p><code>Makim</code> elevates project automation by offering a structured, yet
+flexible approach to manage routine tasks, complex task dependencies,
+and environment configurations. Its design is centered around the
+<code>.makim.yaml</code> configuration file, allowing developers to orchestrate
+their workflows with precision and ease. Unlike traditional script
+execution tools, Makim’s Python-based architecture and support for
+multiple programming languages and shells enhance its versatility and
+applicability across diverse projects.</p>
+<p>Especially suited for DevOps Engineers and Software Developers, Makim
+eliminates redundancy in automation tasks. Its core functionality
+extends beyond simple script execution, encompassing:</p>
 <ul>
 <li>Argument definition for scripts</li>
 <li>Organization of tasks into groups</li>
@@ -1835,94 +1849,83 @@ environment.
 <li>Utilization of environment variables and custom variables</li>
 <li>Dynamic content generation with Jinja2 templates</li>
 <li>Specification of working directories for tasks</li>
-<li>Execution flexibility through support for multiple interpreters or shells</li>
+<li>Execution flexibility through support for multiple interpreters or
+  shells</li>
 </ul>
-<p>Despite its broad capabilities, Makim currently lacks support for Windows but plans to extend its compatibility in future versions.</p>
+<p>Despite its broad capabilities, Makim currently lacks support for
+Windows but plans to extend its compatibility in future versions.</p>
 <h2 id="getting-started-with-makim">Getting Started with Makim<a class="headerlink" href="#getting-started-with-makim" title="Permanent link"> #</a></h2>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link"> #</a></h3>
-<p>Makim can be installed via <code>pip</code> or <code>conda</code>, catering to different setup preferences:</p>
+<p>Makim can be installed via <code>pip</code> or <code>conda</code>, catering to different setup
+preferences:</p>
 <ul>
 <li>To install <code>Makim</code> using <code>pip</code>, run:</li>
 </ul>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">q</span> <span class="s2">&quot;makim==1.14.0&quot;</span>
 </span></code></pre></div>
 <ul>
-<li>
-<p>For those who prefer <code>conda</code>, execute:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>conda install &quot;makim=1.14.0&quot;
-</span></code></pre></div>
+<li>For those who prefer <code>conda</code>, execute:<div class="language-text highlight"><pre><span></span><code>conda install &quot;makim=1.14.0&quot;
+</code></pre></div>
 </li>
 </ul>
-<p>Given Makim's active development, pinning to a specific version is recommended to ensure consistency.</p>
-<p>For this tutorial, we will disable the output color feature provided by typer, the command-line interface engine used by <strong>Makim</strong>.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">os</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;NO_COLOR&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;1&quot;</span>
+<p>Given Makim’s active development, pinning to a specific version is
+recommended to ensure consistency.</p>
+<p>For this tutorial, we will disable the output color feature provided by
+typer, the command-line interface engine used by <strong>Makim</strong>.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">os</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;NO_COLOR&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;1&quot;</span>
 </span></code></pre></div>
 <h3 id="configuring-makimyaml">Configuring <code>.makim.yaml</code><a class="headerlink" href="#configuring-makimyaml" title="Permanent link"> #</a></h3>
-<p>The <code>.makim.yaml</code> file is the foundation of your Makim configuration. Here's how to start:</p>
+<p>The <code>.makim.yaml</code> file is the foundation of your Makim configuration.
+Here’s how to start:</p>
 <ol>
 <li>
-<p><strong>Create the <code>.makim.yaml</code> File</strong>: Place this file at the root of your project directory.</p>
+<p><strong>Create the <code>.makim.yaml</code> File</strong>: Place this file at the root of
+    your project directory.</p>
 </li>
 <li>
-<p><strong>Define Your Automation Tasks</strong>: Configure your tasks, specifying actions, arguments, and dependencies. For example:</p>
+<p><strong>Define Your Automation Tasks</strong>: Configure your tasks, specifying
+    actions, arguments, and dependencies. For example:</p>
 </li>
 </ol>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="o">%%</span><span class="n">writefile</span> <span class="o">.</span><span class="n">makim</span><span class="o">.</span><span class="n">yaml</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">version</span><span class="p">:</span> <span class="mf">1.0.0</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">groups</span><span class="p">:</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  <span class="n">clean</span><span class="p">:</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">env</span><span class="o">-</span><span class="n">file</span><span class="p">:</span> <span class="o">.</span><span class="n">env</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="n">targets</span><span class="p">:</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>      <span class="n">tmp</span><span class="p">:</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        <span class="n">help</span><span class="p">:</span> <span class="n">Use</span> <span class="n">this</span> <span class="n">target</span> <span class="n">to</span> <span class="n">clean</span> <span class="n">up</span> <span class="n">temporary</span> <span class="n">files</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>        <span class="n">run</span><span class="p">:</span> <span class="o">|</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>          <span class="n">echo</span> <span class="s2">&quot;Cleaning up...&quot;</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>  <span class="n">tests</span><span class="p">:</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    <span class="n">targets</span><span class="p">:</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>     <span class="n">unit</span><span class="p">:</span>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>       <span class="n">help</span><span class="p">:</span> <span class="n">Build</span> <span class="n">the</span> <span class="n">program</span>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>       <span class="n">args</span><span class="p">:</span>
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>         <span class="n">clean</span><span class="p">:</span>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>           <span class="nb">type</span><span class="p">:</span> <span class="nb">bool</span>
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>           <span class="n">action</span><span class="p">:</span> <span class="n">store_true</span>
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>           <span class="n">help</span><span class="p">:</span> <span class="k">if</span> <span class="ow">not</span> <span class="nb">set</span><span class="p">,</span> <span class="n">the</span> <span class="n">clean</span> <span class="n">dependency</span> <span class="n">will</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">triggered</span><span class="o">.</span>
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>       <span class="n">dependencies</span><span class="p">:</span>
-</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>         <span class="o">-</span> <span class="n">target</span><span class="p">:</span> <span class="n">clean</span><span class="o">.</span><span class="n">tmp</span>
-</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>           <span class="k">if</span><span class="p">:</span> <span class="err">$</span><span class="p">{{</span> <span class="n">args</span><span class="o">.</span><span class="n">clean</span> <span class="o">==</span> <span class="n">true</span> <span class="p">}}</span>
-</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>       <span class="n">run</span><span class="p">:</span> <span class="o">|</span>
-</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>         <span class="n">echo</span> <span class="s2">&quot;Runnint unit tests...&quot;</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">%%</span><span class="n">writefile</span> <span class="o">.</span><span class="n">makim</span><span class="o">.</span><span class="n">yaml</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">version</span><span class="p">:</span> <span class="mf">1.0.0</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">groups</span><span class="p">:</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  <span class="n">clean</span><span class="p">:</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">env</span><span class="o">-</span><span class="n">file</span><span class="p">:</span> <span class="o">.</span><span class="n">env</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="n">targets</span><span class="p">:</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>      <span class="n">tmp</span><span class="p">:</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        <span class="n">help</span><span class="p">:</span> <span class="n">Use</span> <span class="n">this</span> <span class="n">target</span> <span class="n">to</span> <span class="n">clean</span> <span class="n">up</span> <span class="n">temporary</span> <span class="n">files</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>        <span class="n">run</span><span class="p">:</span> <span class="o">|</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>          <span class="n">echo</span> <span class="s2">&quot;Cleaning up...&quot;</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>  <span class="n">tests</span><span class="p">:</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    <span class="n">targets</span><span class="p">:</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>     <span class="n">unit</span><span class="p">:</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>       <span class="n">help</span><span class="p">:</span> <span class="n">Build</span> <span class="n">the</span> <span class="n">program</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>       <span class="n">args</span><span class="p">:</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>         <span class="n">clean</span><span class="p">:</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>           <span class="nb">type</span><span class="p">:</span> <span class="nb">bool</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>           <span class="n">action</span><span class="p">:</span> <span class="n">store_true</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>           <span class="n">help</span><span class="p">:</span> <span class="k">if</span> <span class="ow">not</span> <span class="nb">set</span><span class="p">,</span> <span class="n">the</span> <span class="n">clean</span> <span class="n">dependency</span> <span class="n">will</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">triggered</span><span class="o">.</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>       <span class="n">dependencies</span><span class="p">:</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>         <span class="o">-</span> <span class="n">target</span><span class="p">:</span> <span class="n">clean</span><span class="o">.</span><span class="n">tmp</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>           <span class="k">if</span><span class="p">:</span> <span class="err">$</span><span class="p">{{</span> <span class="n">args</span><span class="o">.</span><span class="n">clean</span> <span class="o">==</span> <span class="n">true</span> <span class="p">}}</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>       <span class="n">run</span><span class="p">:</span> <span class="o">|</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>         <span class="n">echo</span> <span class="s2">&quot;Runnint unit tests...&quot;</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Overwriting .makim.yaml
-
-</span></code>
-</pre>
-</div>
-
-<p>This setup demonstrates Makim's ability to manage tasks with conditional logic and dependencies.</p>
-<h3 id="exploring-makims-cli">Exploring Makim's CLI<a class="headerlink" href="#exploring-makims-cli" title="Permanent link"> #</a></h3>
-<p>Makim's CLI provides insights into available commands, arguments, and configurations through the auto-generated help menu:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="err">!</span><span class="n">makim</span> <span class="o">--</span><span class="n">help</span>
+<div class="language-text highlight"><pre><span></span><code>Overwriting .makim.yaml
+</code></pre></div>
+<p>This setup demonstrates Makim’s ability to manage tasks with conditional
+logic and dependencies.</p>
+<h3 id="exploring-makims-cli">Exploring Makim’s CLI<a class="headerlink" href="#exploring-makims-cli" title="Permanent link"> #</a></h3>
+<p>Makim’s CLI provides insights into available commands, arguments, and
+configurations through the auto-generated help menu:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="err">!</span><span class="n">makim</span> <span class="o">--</span><span class="n">help</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
+<div class="language-text highlight"><pre><span></span><code> Usage: makim [OPTIONS] COMMAND [ARGS]...
 
- Usage: makim [OPTIONS] COMMAND [ARGS]...                                       
-
-Makim is a tool that helps you to organize and simplify your helper commands.
+ Makim is a tool that helps you to organize and simplify your helper commands.
 
 ╭─ Options ────────────────────────────────────────────────────────────────────╮
 │ --version             -v            Show the version and exit                │
@@ -1941,183 +1944,124 @@ Makim is a tool that helps you to organize and simplify your helper commands.
 │ tests.unit       Build the program                                           │
 ╰──────────────────────────────────────────────────────────────────────────────╯
 
-If you have any problem, open an issue at:
-https://github.com/osl-incubator/makim
-
-
-
-</span></code>
-</pre>
-</div>
-
-<p>This feature facilitates easy access to Makim's functionalities, enhancing usability and understanding of the tool.</p>
+ If you have any problem, open an issue at:                                     
+ https://github.com/osl-incubator/makim
+</code></pre></div>
+<p>This feature facilitates easy access to Makim’s functionalities,
+enhancing usability and understanding of the tool.</p>
 <h3 id="executing-your-first-commands">Executing Your First Commands<a class="headerlink" href="#executing-your-first-commands" title="Permanent link"> #</a></h3>
 <p>With your <code>.makim.yaml</code> file set up, you can begin to use <code>makim</code>:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="err">!</span><span class="n">makim</span> <span class="n">clean</span><span class="o">.</span><span class="n">tmp</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="err">!</span><span class="n">makim</span> <span class="n">clean</span><span class="o">.</span><span class="n">tmp</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Makim file: .makim.yaml
+<div class="language-text highlight"><pre><span></span><code>Makim file: .makim.yaml
 Cleaning up...
-
-</span></code>
-</pre>
-</div>
-
-<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="err">!</span><span class="n">makim</span> <span class="n">tests</span><span class="o">.</span><span class="n">unit</span>
+</code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="err">!</span><span class="n">makim</span> <span class="n">tests</span><span class="o">.</span><span class="n">unit</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Makim file: .makim.yaml
+<div class="language-text highlight"><pre><span></span><code>Makim file: .makim.yaml
 Runnint unit tests...
-
-</span></code>
-</pre>
-</div>
-
-<p>In the case you type your command wrong, <strong>Makim</strong> will suggest you some alternative:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="err">!</span><span class="n">makim</span> <span class="n">tests</span><span class="o">.</span><span class="n">unittest</span>
+</code></pre></div>
+<p>In the case you type your command wrong, <strong>Makim</strong> will suggest you some
+alternative:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="err">!</span><span class="n">makim</span> <span class="n">tests</span><span class="o">.</span><span class="n">unittest</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Usage: makim [OPTIONS] COMMAND [ARGS]...
-Try 'makim --help' for help.
+<div class="language-text highlight"><pre><span></span><code>Usage: makim [OPTIONS] COMMAND [ARGS]...
+Try &#39;makim --help&#39; for help.
 ╭─ Error ──────────────────────────────────────────────────────────────────────╮
-│ No such command 'tests.unittest'.                                            │
+│ No such command &#39;tests.unittest&#39;.                                            │
 ╰──────────────────────────────────────────────────────────────────────────────╯
-Command tests.unittest not found. Did you mean tests.unit'?
-
-</span></code>
-</pre>
-</div>
-
-<p><strong>Makim</strong> CLI is empowered by <strong>Typer</strong>, and it allows us to have auto-completion for Makim groups and targets! If you want to install, you can run the following command:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="err">!</span><span class="n">makim</span> <span class="o">--</span><span class="n">install</span><span class="o">-</span><span class="n">completion</span> 
+Command tests.unittest not found. Did you mean tests.unit&#39;?
+</code></pre></div>
+<p><strong>Makim</strong> CLI is empowered by <strong>Typer</strong>, and it allows us to have
+auto-completion for Makim groups and targets! If you want to install,
+you can run the following command:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="err">!</span><span class="n">makim</span> <span class="o">--</span><span class="n">install</span><span class="o">-</span><span class="n">completion</span> 
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-bash completion installed in /home/xmn/.bash_completions/makim.sh
+<div class="language-text highlight"><pre><span></span><code>bash completion installed in /home/xmn/.bash_completions/makim.sh
 Completion will take effect once you restart the terminal
-
-</span></code>
-</pre>
-</div>
-
-<p>After this command you will need to restart the terminal in order to use this auto-completion feature.</p>
+</code></pre></div>
+<p>After this command you will need to restart the terminal in order to use
+this auto-completion feature.</p>
 <h2 id="advanced-features-and-examples">Advanced Features and Examples<a class="headerlink" href="#advanced-features-and-examples" title="Permanent link"> #</a></h2>
-<p>Makim's adaptability is showcased through various features and practical examples:</p>
+<p>Makim’s adaptability is showcased through various features and practical
+examples:</p>
 <ul>
-<li><strong>Conditional Dependencies and Arguments</strong>: Define complex task dependencies with conditional execution based on passed arguments.</li>
-<li><strong>Dynamic Configuration with Jinja2</strong>: Leverage Jinja2 templates for advanced scripting and dynamic content generation.</li>
-<li><strong>Environment and Custom Variable Management</strong>: Organize and utilize variables effectively across different scopes of your project.</li>
-<li><strong>Specifying Working Directories</strong>: Control the execution context of your tasks by setting working directories.</li>
+<li><strong>Conditional Dependencies and Arguments</strong>: Define complex task
+  dependencies with conditional execution based on passed arguments.</li>
+<li><strong>Dynamic Configuration with Jinja2</strong>: Leverage Jinja2 templates for
+  advanced scripting and dynamic content generation.</li>
+<li><strong>Environment and Custom Variable Management</strong>: Organize and utilize
+  variables effectively across different scopes of your project.</li>
+<li><strong>Specifying Working Directories</strong>: Control the execution context of
+  your tasks by setting working directories.</li>
 </ul>
-<p>These examples underscore Makim's capability to accommodate intricate automation scenarios, streamlining development workflows.</p>
+<p>These examples underscore Makim’s capability to accommodate intricate
+automation scenarios, streamlining development workflows.</p>
 <h2 id="exploring-makim-through-examples">Exploring Makim Through Examples<a class="headerlink" href="#exploring-makim-through-examples" title="Permanent link"> #</a></h2>
 <h3 id="utilizing-various-interpreters">Utilizing Various Interpreters<a class="headerlink" href="#utilizing-various-interpreters" title="Permanent link"> #</a></h3>
-<p>Makim extends its functionality beyond conventional script execution by supporting various interpreters and shell languages, facilitating a versatile development environment. While <strong>xonsh</strong> is the default interpreter - blending the capabilities of Bash and Python for an enriched command-line experience - Makim's architecture allows for seamless integration with other environments. For developers seeking to leverage this feature, a foundational understanding of <strong>xonsh</strong> can be beneficial. Comprehensive details and usage guidelines are available in the <a href="https://xon.sh/">official xonsh documentation</a>.</p>
-<p>This section demonstrates executing straightforward commands across multiple interpreters, showcasing Makim's adaptability to diverse programming contexts.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="o">%%</span><span class="n">writefile</span> <span class="o">.</span><span class="n">env</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">MSG_PREFIX</span><span class="o">=</span><span class="s2">&quot;Running Makim: Hello, World,&quot;</span>
+<p>Makim extends its functionality beyond conventional script execution by
+supporting various interpreters and shell languages, facilitating a
+versatile development environment. While <strong>xonsh</strong> is the default
+interpreter - blending the capabilities of Bash and Python for an
+enriched command-line experience - Makim’s architecture allows for
+seamless integration with other environments. For developers seeking to
+leverage this feature, a foundational understanding of <strong>xonsh</strong> can be
+beneficial. Comprehensive details and usage guidelines are available in
+the <a href="https://xon.sh/">official xonsh documentation</a>.</p>
+<p>This section demonstrates executing straightforward commands across
+multiple interpreters, showcasing Makim’s adaptability to diverse
+programming contexts.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="o">%%</span><span class="n">writefile</span> <span class="o">.</span><span class="n">env</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">MSG_PREFIX</span><span class="o">=</span><span class="s2">&quot;Running Makim: Hello, World,&quot;</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Overwriting .env
-
-</span></code>
-</pre>
-</div>
-
-<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="o">%%</span><span class="n">writefile</span> <span class="o">.</span><span class="n">makim</span><span class="o">.</span><span class="n">yaml</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">version</span><span class="p">:</span> <span class="mf">1.0</span>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="n">env</span><span class="o">-</span><span class="n">file</span><span class="p">:</span> <span class="o">.</span><span class="n">env</span>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="n">groups</span><span class="p">:</span>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>  <span class="n">tests</span><span class="p">:</span>
-</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    <span class="n">targets</span><span class="p">:</span>
-</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>      <span class="n">node</span><span class="p">:</span>
-</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>        <span class="n">help</span><span class="p">:</span> <span class="n">Test</span> <span class="n">using</span> <span class="n">nodejs</span>
-</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>        <span class="n">shell</span><span class="p">:</span> <span class="n">node</span>
-</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>        <span class="n">run</span><span class="p">:</span> <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;${{ env.MSG_PREFIX }} from NodeJS!&quot;</span><span class="p">);</span>
-</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>      <span class="n">perl</span><span class="p">:</span>
-</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>        <span class="n">help</span><span class="p">:</span> <span class="n">Test</span> <span class="n">using</span> <span class="n">perl</span>
-</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>        <span class="n">shell</span><span class="p">:</span> <span class="n">perl</span>
-</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>        <span class="n">run</span><span class="p">:</span> <span class="nb">print</span> <span class="s2">&quot;${{ env.MSG_PREFIX }} from Perl!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
-</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>
-</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>      <span class="n">python</span><span class="p">:</span>
-</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>        <span class="n">help</span><span class="p">:</span> <span class="n">Test</span> <span class="n">using</span> <span class="n">php</span>
-</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>        <span class="n">shell</span><span class="p">:</span> <span class="n">python</span>
-</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>        <span class="n">run</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;${{ env.MSG_PREFIX }} from Python!&quot;</span><span class="p">)</span>
-</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>
-</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>      <span class="n">r</span><span class="p">:</span>
-</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a>        <span class="n">help</span><span class="p">:</span> <span class="n">Test</span> <span class="n">using</span> <span class="n">R</span>
-</span><span id="__span-10-23"><a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a>        <span class="n">shell</span><span class="p">:</span> <span class="n">Rscript</span>
-</span><span id="__span-10-24"><a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a>        <span class="n">run</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;${{ env.MSG_PREFIX }} from R!&quot;</span><span class="p">)</span>
-</span><span id="__span-10-25"><a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a>
-</span><span id="__span-10-26"><a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a>      <span class="n">sh</span><span class="p">:</span>
-</span><span id="__span-10-27"><a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a>        <span class="n">help</span><span class="p">:</span> <span class="n">Test</span> <span class="n">using</span> <span class="n">sh</span>
-</span><span id="__span-10-28"><a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a>        <span class="n">shell</span><span class="p">:</span> <span class="n">sh</span>
-</span><span id="__span-10-29"><a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a>        <span class="n">run</span><span class="p">:</span> <span class="n">echo</span> <span class="s2">&quot;${{ env.MSG_PREFIX }} from sh!&quot;</span>
-</span><span id="__span-10-30"><a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a>
-</span><span id="__span-10-31"><a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a>      <span class="n">run</span><span class="o">-</span><span class="nb">all</span><span class="p">:</span>
-</span><span id="__span-10-32"><a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a>        <span class="n">help</span><span class="p">:</span> <span class="n">Run</span> <span class="n">tests</span> <span class="k">for</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">other</span> <span class="n">targets</span>
-</span><span id="__span-10-33"><a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a>        <span class="n">dependencies</span><span class="p">:</span>
-</span><span id="__span-10-34"><a id="__codelineno-10-34" name="__codelineno-10-34" href="#__codelineno-10-34"></a>          <span class="o">-</span> <span class="n">target</span><span class="p">:</span> <span class="n">node</span>
-</span><span id="__span-10-35"><a id="__codelineno-10-35" name="__codelineno-10-35" href="#__codelineno-10-35"></a>          <span class="o">-</span> <span class="n">target</span><span class="p">:</span> <span class="n">perl</span>
-</span><span id="__span-10-36"><a id="__codelineno-10-36" name="__codelineno-10-36" href="#__codelineno-10-36"></a>          <span class="o">-</span> <span class="n">target</span><span class="p">:</span> <span class="n">python</span>
-</span><span id="__span-10-37"><a id="__codelineno-10-37" name="__codelineno-10-37" href="#__codelineno-10-37"></a>          <span class="o">-</span> <span class="n">target</span><span class="p">:</span> <span class="n">r</span>
-</span><span id="__span-10-38"><a id="__codelineno-10-38" name="__codelineno-10-38" href="#__codelineno-10-38"></a>          <span class="o">-</span> <span class="n">target</span><span class="p">:</span> <span class="n">sh</span>
+<div class="language-text highlight"><pre><span></span><code>Overwriting .env
+</code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="o">%%</span><span class="n">writefile</span> <span class="o">.</span><span class="n">makim</span><span class="o">.</span><span class="n">yaml</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">version</span><span class="p">:</span> <span class="mf">1.0</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">env</span><span class="o">-</span><span class="n">file</span><span class="p">:</span> <span class="o">.</span><span class="n">env</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="n">groups</span><span class="p">:</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>  <span class="n">tests</span><span class="p">:</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    <span class="n">targets</span><span class="p">:</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>      <span class="n">node</span><span class="p">:</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>        <span class="n">help</span><span class="p">:</span> <span class="n">Test</span> <span class="n">using</span> <span class="n">nodejs</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>        <span class="n">shell</span><span class="p">:</span> <span class="n">node</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>        <span class="n">run</span><span class="p">:</span> <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;${{ env.MSG_PREFIX }} from NodeJS!&quot;</span><span class="p">);</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>      <span class="n">perl</span><span class="p">:</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>        <span class="n">help</span><span class="p">:</span> <span class="n">Test</span> <span class="n">using</span> <span class="n">perl</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>        <span class="n">shell</span><span class="p">:</span> <span class="n">perl</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>        <span class="n">run</span><span class="p">:</span> <span class="nb">print</span> <span class="s2">&quot;${{ env.MSG_PREFIX }} from Perl!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>      <span class="n">python</span><span class="p">:</span>
+</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>        <span class="n">help</span><span class="p">:</span> <span class="n">Test</span> <span class="n">using</span> <span class="n">php</span>
+</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>        <span class="n">shell</span><span class="p">:</span> <span class="n">python</span>
+</span><span id="__span-9-19"><a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>        <span class="n">run</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;${{ env.MSG_PREFIX }} from Python!&quot;</span><span class="p">)</span>
+</span><span id="__span-9-20"><a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>
+</span><span id="__span-9-21"><a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>      <span class="n">r</span><span class="p">:</span>
+</span><span id="__span-9-22"><a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>        <span class="n">help</span><span class="p">:</span> <span class="n">Test</span> <span class="n">using</span> <span class="n">R</span>
+</span><span id="__span-9-23"><a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a>        <span class="n">shell</span><span class="p">:</span> <span class="n">Rscript</span>
+</span><span id="__span-9-24"><a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a>        <span class="n">run</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;${{ env.MSG_PREFIX }} from R!&quot;</span><span class="p">)</span>
+</span><span id="__span-9-25"><a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a>
+</span><span id="__span-9-26"><a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a>      <span class="n">sh</span><span class="p">:</span>
+</span><span id="__span-9-27"><a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a>        <span class="n">help</span><span class="p">:</span> <span class="n">Test</span> <span class="n">using</span> <span class="n">sh</span>
+</span><span id="__span-9-28"><a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a>        <span class="n">shell</span><span class="p">:</span> <span class="n">sh</span>
+</span><span id="__span-9-29"><a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a>        <span class="n">run</span><span class="p">:</span> <span class="n">echo</span> <span class="s2">&quot;${{ env.MSG_PREFIX }} from sh!&quot;</span>
+</span><span id="__span-9-30"><a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a>
+</span><span id="__span-9-31"><a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a>      <span class="n">run</span><span class="o">-</span><span class="nb">all</span><span class="p">:</span>
+</span><span id="__span-9-32"><a id="__codelineno-9-32" name="__codelineno-9-32" href="#__codelineno-9-32"></a>        <span class="n">help</span><span class="p">:</span> <span class="n">Run</span> <span class="n">tests</span> <span class="k">for</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">other</span> <span class="n">targets</span>
+</span><span id="__span-9-33"><a id="__codelineno-9-33" name="__codelineno-9-33" href="#__codelineno-9-33"></a>        <span class="n">dependencies</span><span class="p">:</span>
+</span><span id="__span-9-34"><a id="__codelineno-9-34" name="__codelineno-9-34" href="#__codelineno-9-34"></a>          <span class="o">-</span> <span class="n">target</span><span class="p">:</span> <span class="n">node</span>
+</span><span id="__span-9-35"><a id="__codelineno-9-35" name="__codelineno-9-35" href="#__codelineno-9-35"></a>          <span class="o">-</span> <span class="n">target</span><span class="p">:</span> <span class="n">perl</span>
+</span><span id="__span-9-36"><a id="__codelineno-9-36" name="__codelineno-9-36" href="#__codelineno-9-36"></a>          <span class="o">-</span> <span class="n">target</span><span class="p">:</span> <span class="n">python</span>
+</span><span id="__span-9-37"><a id="__codelineno-9-37" name="__codelineno-9-37" href="#__codelineno-9-37"></a>          <span class="o">-</span> <span class="n">target</span><span class="p">:</span> <span class="n">r</span>
+</span><span id="__span-9-38"><a id="__codelineno-9-38" name="__codelineno-9-38" href="#__codelineno-9-38"></a>          <span class="o">-</span> <span class="n">target</span><span class="p">:</span> <span class="n">sh</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Overwriting .makim.yaml
-
-</span></code>
-</pre>
-</div>
-
-<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="err">!</span><span class="n">makim</span> <span class="o">--</span><span class="n">help</span>
+<div class="language-text highlight"><pre><span></span><code>Overwriting .makim.yaml
+</code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="err">!</span><span class="n">makim</span> <span class="o">--</span><span class="n">help</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
+<div class="language-text highlight"><pre><span></span><code> Usage: makim [OPTIONS] COMMAND [ARGS]...
 
- Usage: makim [OPTIONS] COMMAND [ARGS]...                                       
-
-Makim is a tool that helps you to organize and simplify your helper commands.
+ Makim is a tool that helps you to organize and simplify your helper commands.
 
 ╭─ Options ────────────────────────────────────────────────────────────────────╮
 │ --version             -v            Show the version and exit                │
@@ -2140,395 +2084,277 @@ Makim is a tool that helps you to organize and simplify your helper commands.
 │ tests.sh               Test using sh                                         │
 ╰──────────────────────────────────────────────────────────────────────────────╯
 
-If you have any problem, open an issue at:
-https://github.com/osl-incubator/makim
-
-
-
-</span></code>
-</pre>
-</div>
-
-<p>Prior to executing these targets, it is necessary to install the required dependencies:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="err">!</span><span class="n">mamba</span> <span class="n">install</span> <span class="o">-</span><span class="n">q</span> <span class="o">-</span><span class="n">y</span> <span class="n">perl</span> <span class="n">nodejs</span> <span class="n">r</span><span class="o">-</span><span class="n">base</span> <span class="n">sh</span> 
+ If you have any problem, open an issue at:                                     
+ https://github.com/osl-incubator/makim
+</code></pre></div>
+<p>Prior to executing these targets, it is necessary to install the
+required dependencies:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="err">!</span><span class="n">mamba</span> <span class="n">install</span> <span class="o">-</span><span class="n">q</span> <span class="o">-</span><span class="n">y</span> <span class="n">perl</span> <span class="n">nodejs</span> <span class="n">r</span><span class="o">-</span><span class="n">base</span> <span class="n">sh</span> 
 </span></code></pre></div>
-<p>Proceed to execute all defined targets by invoking the run-all target, which encapsulates all other targets as its dependencies for a sequential execution process:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="err">!</span><span class="n">makim</span> <span class="n">tests</span><span class="o">.</span><span class="n">run</span><span class="o">-</span><span class="nb">all</span>
+<p>Proceed to execute all defined targets by invoking the run-all target,
+which encapsulates all other targets as its dependencies for a
+sequential execution process:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="err">!</span><span class="n">makim</span> <span class="n">tests</span><span class="o">.</span><span class="n">run</span><span class="o">-</span><span class="nb">all</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Makim file: .makim.yaml
+<div class="language-text highlight"><pre><span></span><code>Makim file: .makim.yaml
 Running Makim: Hello, World, from NodeJS!
-(node:1634785) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(node:1634785) Warning: The &#39;NO_COLOR&#39; env is ignored due to the &#39;FORCE_COLOR&#39; env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
 Running Makim: Hello, World, from Perl!
 Running Makim: Hello, World, from Python!
-[1] "Running Makim: Hello, World, from R!"
+[1] &quot;Running Makim: Hello, World, from R!&quot;
 Running Makim: Hello, World, from sh!
-
-</span></code>
-</pre>
-</div>
-
-<p>In scenarios where your chosen interpreter supports debugging - such as Python or Xonsh through the use of <code>breakpoint()</code> - you can introduce a breakpoint within your code. This enables the debugging of your <strong>Makim</strong> target, allowing for an interactive examination of the execution flow and variable states.</p>
+</code></pre></div>
+<p>In scenarios where your chosen interpreter supports debugging - such as
+Python or Xonsh through the use of <code>breakpoint()</code> - you can introduce a
+breakpoint within your code. This enables the debugging of your
+<strong>Makim</strong> target, allowing for an interactive examination of the
+execution flow and variable states.</p>
 <h3 id="using-variables-vars">Using Variables (vars)<a class="headerlink" href="#using-variables-vars" title="Permanent link"> #</a></h3>
-<p><strong>Makim</strong> facilitates the definition of variables within the <code>.makim.yaml</code> configuration, supporting all the <strong>YAML</strong> data types, including strings, lists, and dictionaries. This feature enhances script configurability and reusability across different tasks and environments.</p>
-<p>Consider reviewing the provided example to understand how to effectively leverage variables in your <strong>Makim</strong> configurations:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="o">%%</span><span class="n">writefile</span> <span class="o">.</span><span class="n">makim</span><span class="o">.</span><span class="n">yaml</span>
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">version</span><span class="p">:</span> <span class="mf">1.0</span>
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
-</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="nb">vars</span><span class="p">:</span>
-</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>  <span class="n">project</span><span class="o">-</span><span class="n">name</span><span class="p">:</span> <span class="s2">&quot;my-project&quot;</span>
-</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>  <span class="n">dependencies</span><span class="p">:</span>
-</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>    <span class="s2">&quot;dep1&quot;</span><span class="p">:</span> <span class="s2">&quot;v1&quot;</span>
-</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>    <span class="s2">&quot;dep2&quot;</span><span class="p">:</span> <span class="s2">&quot;v1.1&quot;</span>
-</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>    <span class="s2">&quot;dep3&quot;</span><span class="p">:</span> <span class="s2">&quot;v2.3&quot;</span>
-</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>  <span class="n">authorized</span><span class="o">-</span><span class="n">users</span><span class="p">:</span>
-</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>    <span class="o">-</span> <span class="n">admin1</span>
-</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>    <span class="o">-</span> <span class="n">admin2</span>
-</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>    <span class="o">-</span> <span class="n">admin3</span>
-</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>
-</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="n">groups</span><span class="p">:</span>
-</span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>  <span class="n">staging</span><span class="p">:</span>
-</span><span id="__span-14-17"><a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>    <span class="nb">vars</span><span class="p">:</span>
-</span><span id="__span-14-18"><a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>      <span class="n">env</span><span class="o">-</span><span class="n">name</span><span class="p">:</span> <span class="s2">&quot;staging&quot;</span>
-</span><span id="__span-14-19"><a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>      <span class="n">staging</span><span class="o">-</span><span class="n">dependencies</span><span class="p">:</span>
-</span><span id="__span-14-20"><a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>        <span class="s2">&quot;dep4&quot;</span><span class="p">:</span> <span class="s2">&quot;v4.3&quot;</span>
-</span><span id="__span-14-21"><a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>        <span class="s2">&quot;dep5&quot;</span><span class="p">:</span> <span class="s2">&quot;v1.1.1&quot;</span>
-</span><span id="__span-14-22"><a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a>      <span class="n">staging</span><span class="o">-</span><span class="n">authorized</span><span class="o">-</span><span class="n">users</span><span class="p">:</span>
-</span><span id="__span-14-23"><a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a>        <span class="o">-</span> <span class="n">staging1</span>
-</span><span id="__span-14-24"><a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a>        <span class="o">-</span> <span class="n">staging2</span>
-</span><span id="__span-14-25"><a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a>        <span class="o">-</span> <span class="n">staging3</span>
-</span><span id="__span-14-26"><a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a>    <span class="n">targets</span><span class="p">:</span>
-</span><span id="__span-14-27"><a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a>      <span class="n">create</span><span class="o">-</span><span class="n">users</span><span class="p">:</span>
-</span><span id="__span-14-28"><a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a>        <span class="n">help</span><span class="p">:</span> <span class="n">Create</span> <span class="n">users</span> <span class="k">for</span> <span class="n">staging</span><span class="p">,</span> <span class="n">this</span> <span class="n">example</span> <span class="n">uses</span> <span class="n">jinja2</span> <span class="k">for</span> <span class="n">loop</span><span class="o">.</span>
-</span><span id="__span-14-29"><a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a>        <span class="c1"># each target can also specify their `vars`, but it will not be used in this example</span>
-</span><span id="__span-14-30"><a id="__codelineno-14-30" name="__codelineno-14-30" href="#__codelineno-14-30"></a>        <span class="n">run</span><span class="p">:</span> <span class="o">|</span>
-</span><span id="__span-14-31"><a id="__codelineno-14-31" name="__codelineno-14-31" href="#__codelineno-14-31"></a>          <span class="k">def</span> <span class="nf">create_user</span><span class="p">(</span><span class="n">username</span><span class="p">):</span>
-</span><span id="__span-14-32"><a id="__codelineno-14-32" name="__codelineno-14-32" href="#__codelineno-14-32"></a>              <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&gt;&gt;&gt; creating user: </span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s2"> ... DONE!&quot;</span><span class="p">)</span>
-</span><span id="__span-14-33"><a id="__codelineno-14-33" name="__codelineno-14-33" href="#__codelineno-14-33"></a>
-</span><span id="__span-14-34"><a id="__codelineno-14-34" name="__codelineno-14-34" href="#__codelineno-14-34"></a>          <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;create admin users:&quot;</span><span class="p">)</span>
-</span><span id="__span-14-35"><a id="__codelineno-14-35" name="__codelineno-14-35" href="#__codelineno-14-35"></a>          <span class="p">{</span><span class="o">%</span> <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="nb">vars</span><span class="o">.</span><span class="n">authorized_users</span> <span class="o">%</span><span class="p">}</span>
-</span><span id="__span-14-36"><a id="__codelineno-14-36" name="__codelineno-14-36" href="#__codelineno-14-36"></a>          <span class="n">create_user</span><span class="p">(</span><span class="s2">&quot;${{ user }}&quot;</span><span class="p">)</span>
-</span><span id="__span-14-37"><a id="__codelineno-14-37" name="__codelineno-14-37" href="#__codelineno-14-37"></a>          <span class="p">{</span><span class="o">%</span> <span class="n">endfor</span> <span class="o">%</span><span class="p">}</span>
-</span><span id="__span-14-38"><a id="__codelineno-14-38" name="__codelineno-14-38" href="#__codelineno-14-38"></a>
-</span><span id="__span-14-39"><a id="__codelineno-14-39" name="__codelineno-14-39" href="#__codelineno-14-39"></a>          <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">create staging users:&quot;</span><span class="p">)</span>
-</span><span id="__span-14-40"><a id="__codelineno-14-40" name="__codelineno-14-40" href="#__codelineno-14-40"></a>          <span class="p">{</span><span class="o">%</span> <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="nb">vars</span><span class="o">.</span><span class="n">staging_authorized_users</span> <span class="o">%</span><span class="p">}</span>
-</span><span id="__span-14-41"><a id="__codelineno-14-41" name="__codelineno-14-41" href="#__codelineno-14-41"></a>          <span class="n">create_user</span><span class="p">(</span><span class="s2">&quot;${{ user }}&quot;</span><span class="p">)</span>
-</span><span id="__span-14-42"><a id="__codelineno-14-42" name="__codelineno-14-42" href="#__codelineno-14-42"></a>          <span class="p">{</span><span class="o">%</span> <span class="n">endfor</span> <span class="o">%</span><span class="p">}</span>
-</span><span id="__span-14-43"><a id="__codelineno-14-43" name="__codelineno-14-43" href="#__codelineno-14-43"></a>
-</span><span id="__span-14-44"><a id="__codelineno-14-44" name="__codelineno-14-44" href="#__codelineno-14-44"></a>      <span class="n">install</span><span class="p">:</span>
-</span><span id="__span-14-45"><a id="__codelineno-14-45" name="__codelineno-14-45" href="#__codelineno-14-45"></a>        <span class="n">help</span><span class="p">:</span> <span class="n">install</span> <span class="n">deps</span> <span class="k">for</span> <span class="n">staging</span> <span class="n">using</span> <span class="n">native</span> <span class="n">xonsh</span> <span class="err">`</span><span class="k">for</span><span class="err">`</span> <span class="n">loop</span> <span class="p">(</span><span class="n">it</span> <span class="n">could</span> <span class="n">work</span> <span class="k">with</span> <span class="n">Python</span> <span class="k">as</span> <span class="n">well</span><span class="p">)</span>
-</span><span id="__span-14-46"><a id="__codelineno-14-46" name="__codelineno-14-46" href="#__codelineno-14-46"></a>        <span class="c1"># each target can also specify their `vars`, but it will not be used in this example</span>
-</span><span id="__span-14-47"><a id="__codelineno-14-47" name="__codelineno-14-47" href="#__codelineno-14-47"></a>        <span class="n">run</span><span class="p">:</span> <span class="o">|</span>
-</span><span id="__span-14-48"><a id="__codelineno-14-48" name="__codelineno-14-48" href="#__codelineno-14-48"></a>          <span class="k">def</span> <span class="nf">install</span><span class="p">(</span><span class="n">package</span><span class="p">,</span> <span class="n">version</span><span class="p">):</span>
-</span><span id="__span-14-49"><a id="__codelineno-14-49" name="__codelineno-14-49" href="#__codelineno-14-49"></a>              <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&gt;&gt;&gt; installing: </span><span class="si">{</span><span class="n">package</span><span class="si">}</span><span class="s2">@</span><span class="si">{</span><span class="n">version</span><span class="si">}</span><span class="s2"> ... DONE!&quot;</span><span class="p">)</span>
-</span><span id="__span-14-50"><a id="__codelineno-14-50" name="__codelineno-14-50" href="#__codelineno-14-50"></a>
-</span><span id="__span-14-51"><a id="__codelineno-14-51" name="__codelineno-14-51" href="#__codelineno-14-51"></a>          <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;install global dependencies:&quot;</span><span class="p">)</span>
-</span><span id="__span-14-52"><a id="__codelineno-14-52" name="__codelineno-14-52" href="#__codelineno-14-52"></a>          <span class="k">for</span> <span class="n">package</span><span class="p">,</span> <span class="n">version</span> <span class="ow">in</span> <span class="err">$</span><span class="p">{{</span> <span class="nb">vars</span><span class="o">.</span><span class="n">dependencies</span> <span class="o">|</span> <span class="n">safe</span> <span class="p">}}</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-</span><span id="__span-14-53"><a id="__codelineno-14-53" name="__codelineno-14-53" href="#__codelineno-14-53"></a>              <span class="n">install</span><span class="p">(</span><span class="n">package</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span>
-</span><span id="__span-14-54"><a id="__codelineno-14-54" name="__codelineno-14-54" href="#__codelineno-14-54"></a>
-</span><span id="__span-14-55"><a id="__codelineno-14-55" name="__codelineno-14-55" href="#__codelineno-14-55"></a>          <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">install staging dependencies:&quot;</span><span class="p">)</span>
-</span><span id="__span-14-56"><a id="__codelineno-14-56" name="__codelineno-14-56" href="#__codelineno-14-56"></a>          <span class="k">for</span> <span class="n">package</span><span class="p">,</span> <span class="n">version</span> <span class="ow">in</span> <span class="err">$</span><span class="p">{{</span> <span class="nb">vars</span><span class="o">.</span><span class="n">staging_dependencies</span> <span class="o">|</span> <span class="n">safe</span> <span class="p">}}</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-</span><span id="__span-14-57"><a id="__codelineno-14-57" name="__codelineno-14-57" href="#__codelineno-14-57"></a>              <span class="n">install</span><span class="p">(</span><span class="n">package</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span>
+<p><strong>Makim</strong> facilitates the definition of variables within the
+<code>.makim.yaml</code> configuration, supporting all the <strong>YAML</strong> data types,
+including strings, lists, and dictionaries. This feature enhances script
+configurability and reusability across different tasks and environments.</p>
+<p>Consider reviewing the provided example to understand how to effectively
+leverage variables in your <strong>Makim</strong> configurations:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="o">%%</span><span class="n">writefile</span> <span class="o">.</span><span class="n">makim</span><span class="o">.</span><span class="n">yaml</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">version</span><span class="p">:</span> <span class="mf">1.0</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="nb">vars</span><span class="p">:</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>  <span class="n">project</span><span class="o">-</span><span class="n">name</span><span class="p">:</span> <span class="s2">&quot;my-project&quot;</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>  <span class="n">dependencies</span><span class="p">:</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>    <span class="s2">&quot;dep1&quot;</span><span class="p">:</span> <span class="s2">&quot;v1&quot;</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>    <span class="s2">&quot;dep2&quot;</span><span class="p">:</span> <span class="s2">&quot;v1.1&quot;</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>    <span class="s2">&quot;dep3&quot;</span><span class="p">:</span> <span class="s2">&quot;v2.3&quot;</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>  <span class="n">authorized</span><span class="o">-</span><span class="n">users</span><span class="p">:</span>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>    <span class="o">-</span> <span class="n">admin1</span>
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>    <span class="o">-</span> <span class="n">admin2</span>
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>    <span class="o">-</span> <span class="n">admin3</span>
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>
+</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="n">groups</span><span class="p">:</span>
+</span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>  <span class="n">staging</span><span class="p">:</span>
+</span><span id="__span-13-17"><a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>    <span class="nb">vars</span><span class="p">:</span>
+</span><span id="__span-13-18"><a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>      <span class="n">env</span><span class="o">-</span><span class="n">name</span><span class="p">:</span> <span class="s2">&quot;staging&quot;</span>
+</span><span id="__span-13-19"><a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a>      <span class="n">staging</span><span class="o">-</span><span class="n">dependencies</span><span class="p">:</span>
+</span><span id="__span-13-20"><a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a>        <span class="s2">&quot;dep4&quot;</span><span class="p">:</span> <span class="s2">&quot;v4.3&quot;</span>
+</span><span id="__span-13-21"><a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a>        <span class="s2">&quot;dep5&quot;</span><span class="p">:</span> <span class="s2">&quot;v1.1.1&quot;</span>
+</span><span id="__span-13-22"><a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a>      <span class="n">staging</span><span class="o">-</span><span class="n">authorized</span><span class="o">-</span><span class="n">users</span><span class="p">:</span>
+</span><span id="__span-13-23"><a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a>        <span class="o">-</span> <span class="n">staging1</span>
+</span><span id="__span-13-24"><a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a>        <span class="o">-</span> <span class="n">staging2</span>
+</span><span id="__span-13-25"><a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a>        <span class="o">-</span> <span class="n">staging3</span>
+</span><span id="__span-13-26"><a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a>    <span class="n">targets</span><span class="p">:</span>
+</span><span id="__span-13-27"><a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a>      <span class="n">create</span><span class="o">-</span><span class="n">users</span><span class="p">:</span>
+</span><span id="__span-13-28"><a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a>        <span class="n">help</span><span class="p">:</span> <span class="n">Create</span> <span class="n">users</span> <span class="k">for</span> <span class="n">staging</span><span class="p">,</span> <span class="n">this</span> <span class="n">example</span> <span class="n">uses</span> <span class="n">jinja2</span> <span class="k">for</span> <span class="n">loop</span><span class="o">.</span>
+</span><span id="__span-13-29"><a id="__codelineno-13-29" name="__codelineno-13-29" href="#__codelineno-13-29"></a>        <span class="c1"># each target can also specify their `vars`, but it will not be used in this example</span>
+</span><span id="__span-13-30"><a id="__codelineno-13-30" name="__codelineno-13-30" href="#__codelineno-13-30"></a>        <span class="n">run</span><span class="p">:</span> <span class="o">|</span>
+</span><span id="__span-13-31"><a id="__codelineno-13-31" name="__codelineno-13-31" href="#__codelineno-13-31"></a>          <span class="k">def</span> <span class="nf">create_user</span><span class="p">(</span><span class="n">username</span><span class="p">):</span>
+</span><span id="__span-13-32"><a id="__codelineno-13-32" name="__codelineno-13-32" href="#__codelineno-13-32"></a>              <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&gt;&gt;&gt; creating user: </span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s2"> ... DONE!&quot;</span><span class="p">)</span>
+</span><span id="__span-13-33"><a id="__codelineno-13-33" name="__codelineno-13-33" href="#__codelineno-13-33"></a>
+</span><span id="__span-13-34"><a id="__codelineno-13-34" name="__codelineno-13-34" href="#__codelineno-13-34"></a>          <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;create admin users:&quot;</span><span class="p">)</span>
+</span><span id="__span-13-35"><a id="__codelineno-13-35" name="__codelineno-13-35" href="#__codelineno-13-35"></a>          <span class="p">{</span><span class="o">%</span> <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="nb">vars</span><span class="o">.</span><span class="n">authorized_users</span> <span class="o">%</span><span class="p">}</span>
+</span><span id="__span-13-36"><a id="__codelineno-13-36" name="__codelineno-13-36" href="#__codelineno-13-36"></a>          <span class="n">create_user</span><span class="p">(</span><span class="s2">&quot;${{ user }}&quot;</span><span class="p">)</span>
+</span><span id="__span-13-37"><a id="__codelineno-13-37" name="__codelineno-13-37" href="#__codelineno-13-37"></a>          <span class="p">{</span><span class="o">%</span> <span class="n">endfor</span> <span class="o">%</span><span class="p">}</span>
+</span><span id="__span-13-38"><a id="__codelineno-13-38" name="__codelineno-13-38" href="#__codelineno-13-38"></a>
+</span><span id="__span-13-39"><a id="__codelineno-13-39" name="__codelineno-13-39" href="#__codelineno-13-39"></a>          <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">create staging users:&quot;</span><span class="p">)</span>
+</span><span id="__span-13-40"><a id="__codelineno-13-40" name="__codelineno-13-40" href="#__codelineno-13-40"></a>          <span class="p">{</span><span class="o">%</span> <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="nb">vars</span><span class="o">.</span><span class="n">staging_authorized_users</span> <span class="o">%</span><span class="p">}</span>
+</span><span id="__span-13-41"><a id="__codelineno-13-41" name="__codelineno-13-41" href="#__codelineno-13-41"></a>          <span class="n">create_user</span><span class="p">(</span><span class="s2">&quot;${{ user }}&quot;</span><span class="p">)</span>
+</span><span id="__span-13-42"><a id="__codelineno-13-42" name="__codelineno-13-42" href="#__codelineno-13-42"></a>          <span class="p">{</span><span class="o">%</span> <span class="n">endfor</span> <span class="o">%</span><span class="p">}</span>
+</span><span id="__span-13-43"><a id="__codelineno-13-43" name="__codelineno-13-43" href="#__codelineno-13-43"></a>
+</span><span id="__span-13-44"><a id="__codelineno-13-44" name="__codelineno-13-44" href="#__codelineno-13-44"></a>      <span class="n">install</span><span class="p">:</span>
+</span><span id="__span-13-45"><a id="__codelineno-13-45" name="__codelineno-13-45" href="#__codelineno-13-45"></a>        <span class="n">help</span><span class="p">:</span> <span class="n">install</span> <span class="n">deps</span> <span class="k">for</span> <span class="n">staging</span> <span class="n">using</span> <span class="n">native</span> <span class="n">xonsh</span> <span class="err">`</span><span class="k">for</span><span class="err">`</span> <span class="n">loop</span> <span class="p">(</span><span class="n">it</span> <span class="n">could</span> <span class="n">work</span> <span class="k">with</span> <span class="n">Python</span> <span class="k">as</span> <span class="n">well</span><span class="p">)</span>
+</span><span id="__span-13-46"><a id="__codelineno-13-46" name="__codelineno-13-46" href="#__codelineno-13-46"></a>        <span class="c1"># each target can also specify their `vars`, but it will not be used in this example</span>
+</span><span id="__span-13-47"><a id="__codelineno-13-47" name="__codelineno-13-47" href="#__codelineno-13-47"></a>        <span class="n">run</span><span class="p">:</span> <span class="o">|</span>
+</span><span id="__span-13-48"><a id="__codelineno-13-48" name="__codelineno-13-48" href="#__codelineno-13-48"></a>          <span class="k">def</span> <span class="nf">install</span><span class="p">(</span><span class="n">package</span><span class="p">,</span> <span class="n">version</span><span class="p">):</span>
+</span><span id="__span-13-49"><a id="__codelineno-13-49" name="__codelineno-13-49" href="#__codelineno-13-49"></a>              <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&gt;&gt;&gt; installing: </span><span class="si">{</span><span class="n">package</span><span class="si">}</span><span class="s2">@</span><span class="si">{</span><span class="n">version</span><span class="si">}</span><span class="s2"> ... DONE!&quot;</span><span class="p">)</span>
+</span><span id="__span-13-50"><a id="__codelineno-13-50" name="__codelineno-13-50" href="#__codelineno-13-50"></a>
+</span><span id="__span-13-51"><a id="__codelineno-13-51" name="__codelineno-13-51" href="#__codelineno-13-51"></a>          <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;install global dependencies:&quot;</span><span class="p">)</span>
+</span><span id="__span-13-52"><a id="__codelineno-13-52" name="__codelineno-13-52" href="#__codelineno-13-52"></a>          <span class="k">for</span> <span class="n">package</span><span class="p">,</span> <span class="n">version</span> <span class="ow">in</span> <span class="err">$</span><span class="p">{{</span> <span class="nb">vars</span><span class="o">.</span><span class="n">dependencies</span> <span class="o">|</span> <span class="n">safe</span> <span class="p">}}</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span><span id="__span-13-53"><a id="__codelineno-13-53" name="__codelineno-13-53" href="#__codelineno-13-53"></a>              <span class="n">install</span><span class="p">(</span><span class="n">package</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span>
+</span><span id="__span-13-54"><a id="__codelineno-13-54" name="__codelineno-13-54" href="#__codelineno-13-54"></a>
+</span><span id="__span-13-55"><a id="__codelineno-13-55" name="__codelineno-13-55" href="#__codelineno-13-55"></a>          <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">install staging dependencies:&quot;</span><span class="p">)</span>
+</span><span id="__span-13-56"><a id="__codelineno-13-56" name="__codelineno-13-56" href="#__codelineno-13-56"></a>          <span class="k">for</span> <span class="n">package</span><span class="p">,</span> <span class="n">version</span> <span class="ow">in</span> <span class="err">$</span><span class="p">{{</span> <span class="nb">vars</span><span class="o">.</span><span class="n">staging_dependencies</span> <span class="o">|</span> <span class="n">safe</span> <span class="p">}}</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span><span id="__span-13-57"><a id="__codelineno-13-57" name="__codelineno-13-57" href="#__codelineno-13-57"></a>              <span class="n">install</span><span class="p">(</span><span class="n">package</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Overwriting .makim.yaml
-
-</span></code>
-</pre>
-</div>
-
-<p>Now, let's proceed to create users within the staging environment:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="err">!</span><span class="n">makim</span> <span class="n">staging</span><span class="o">.</span><span class="n">create</span><span class="o">-</span><span class="n">users</span>
+<div class="language-text highlight"><pre><span></span><code>Overwriting .makim.yaml
+</code></pre></div>
+<p>Now, let’s proceed to create users within the staging environment:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="err">!</span><span class="n">makim</span> <span class="n">staging</span><span class="o">.</span><span class="n">create</span><span class="o">-</span><span class="n">users</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Makim file: .makim.yaml
+<div class="language-text highlight"><pre><span></span><code>Makim file: .makim.yaml
 create admin users:
->>> creating user: admin1 ... DONE!
->>> creating user: admin2 ... DONE!
->>> creating user: admin3 ... DONE!
+&gt;&gt;&gt; creating user: admin1 ... DONE!
+&gt;&gt;&gt; creating user: admin2 ... DONE!
+&gt;&gt;&gt; creating user: admin3 ... DONE!
 
 create staging users:
->>> creating user: staging1 ... DONE!
->>> creating user: staging2 ... DONE!
->>> creating user: staging3 ... DONE!
-
-</span></code>
-</pre>
-</div>
-
-<p>Last but not least, let's run the install target:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="err">!</span><span class="n">makim</span> <span class="n">staging</span><span class="o">.</span><span class="n">install</span>
+&gt;&gt;&gt; creating user: staging1 ... DONE!
+&gt;&gt;&gt; creating user: staging2 ... DONE!
+&gt;&gt;&gt; creating user: staging3 ... DONE!
+</code></pre></div>
+<p>Last but not least, let’s run the install target:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="err">!</span><span class="n">makim</span> <span class="n">staging</span><span class="o">.</span><span class="n">install</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Makim file: .makim.yaml
+<div class="language-text highlight"><pre><span></span><code>Makim file: .makim.yaml
 install global dependencies:
->>> installing: dep1@v1 ... DONE!
->>> installing: dep2@v1.1 ... DONE!
->>> installing: dep3@v2.3 ... DONE!
+&gt;&gt;&gt; installing: dep1@v1 ... DONE!
+&gt;&gt;&gt; installing: dep2@v1.1 ... DONE!
+&gt;&gt;&gt; installing: dep3@v2.3 ... DONE!
 
 install staging dependencies:
->>> installing: dep4@v4.3 ... DONE!
->>> installing: dep5@v1.1.1 ... DONE!
-
-</span></code>
-</pre>
-</div>
-
+&gt;&gt;&gt; installing: dep4@v4.3 ... DONE!
+&gt;&gt;&gt; installing: dep5@v1.1.1 ... DONE!
+</code></pre></div>
 <h3 id="defining-arguments">Defining Arguments<a class="headerlink" href="#defining-arguments" title="Permanent link"> #</a></h3>
-<p><strong>Makim</strong> enhances script flexibility by allowing the use of arguments. It enables not only the definition of arguments for tasks but also the passing of arguments to dependencies and the specification of conditions for those dependencies.</p>
+<p><strong>Makim</strong> enhances script flexibility by allowing the use of arguments.
+It enables not only the definition of arguments for tasks but also the
+passing of arguments to dependencies and the specification of conditions
+for those dependencies.</p>
 <p>Explore this functionality through this example:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="o">%%</span><span class="n">writefile</span> <span class="o">.</span><span class="n">makim</span><span class="o">.</span><span class="n">yaml</span>
-</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="n">version</span><span class="p">:</span> <span class="mf">1.0.0</span>
-</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="n">groups</span><span class="p">:</span>
-</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>  <span class="nb">print</span><span class="p">:</span>
-</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>    <span class="n">env</span><span class="o">-</span><span class="n">file</span><span class="p">:</span> <span class="o">.</span><span class="n">env</span>
-</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>    <span class="n">targets</span><span class="p">:</span>
-</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>      <span class="n">name</span><span class="p">:</span>
-</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>        <span class="n">help</span><span class="p">:</span> <span class="n">Print</span> <span class="n">given</span> <span class="n">name</span>
-</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>        <span class="n">args</span><span class="p">:</span>
-</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>          <span class="n">name</span><span class="p">:</span>
-</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>            <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span>
-</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>            <span class="n">required</span><span class="p">:</span> <span class="n">true</span>
-</span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>        <span class="n">run</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;${{ args.name }}&quot;</span><span class="p">)</span>
-</span><span id="__span-17-14"><a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>      <span class="nb">list</span><span class="p">:</span>
-</span><span id="__span-17-15"><a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>        <span class="n">help</span><span class="p">:</span> <span class="n">Build</span> <span class="n">the</span> <span class="n">program</span>
-</span><span id="__span-17-16"><a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a>        <span class="n">args</span><span class="p">:</span>
-</span><span id="__span-17-17"><a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a>          <span class="n">i</span><span class="o">-</span><span class="n">am</span><span class="o">-</span><span class="n">sure</span><span class="p">:</span>
-</span><span id="__span-17-18"><a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a>            <span class="nb">type</span><span class="p">:</span> <span class="nb">bool</span>
-</span><span id="__span-17-19"><a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a>        <span class="n">dependencies</span><span class="p">:</span>
-</span><span id="__span-17-20"><a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a>          <span class="o">-</span> <span class="n">target</span><span class="p">:</span> <span class="nb">print</span><span class="o">.</span><span class="n">name</span>
-</span><span id="__span-17-21"><a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a>            <span class="k">if</span><span class="p">:</span> <span class="err">$</span><span class="p">{{</span> <span class="n">args</span><span class="o">.</span><span class="n">i_am_sure</span> <span class="o">==</span> <span class="n">true</span> <span class="p">}}</span>
-</span><span id="__span-17-22"><a id="__codelineno-17-22" name="__codelineno-17-22" href="#__codelineno-17-22"></a>            <span class="n">args</span><span class="p">:</span>
-</span><span id="__span-17-23"><a id="__codelineno-17-23" name="__codelineno-17-23" href="#__codelineno-17-23"></a>              <span class="n">name</span><span class="p">:</span> <span class="n">Mary</span>
-</span><span id="__span-17-24"><a id="__codelineno-17-24" name="__codelineno-17-24" href="#__codelineno-17-24"></a>          <span class="o">-</span> <span class="n">target</span><span class="p">:</span> <span class="nb">print</span><span class="o">.</span><span class="n">name</span>
-</span><span id="__span-17-25"><a id="__codelineno-17-25" name="__codelineno-17-25" href="#__codelineno-17-25"></a>            <span class="k">if</span><span class="p">:</span> <span class="err">$</span><span class="p">{{</span> <span class="n">args</span><span class="o">.</span><span class="n">i_am_sure</span> <span class="o">==</span> <span class="n">true</span> <span class="p">}}</span>
-</span><span id="__span-17-26"><a id="__codelineno-17-26" name="__codelineno-17-26" href="#__codelineno-17-26"></a>            <span class="n">args</span><span class="p">:</span>
-</span><span id="__span-17-27"><a id="__codelineno-17-27" name="__codelineno-17-27" href="#__codelineno-17-27"></a>              <span class="n">name</span><span class="p">:</span> <span class="n">John</span>
-</span><span id="__span-17-28"><a id="__codelineno-17-28" name="__codelineno-17-28" href="#__codelineno-17-28"></a>          <span class="o">-</span> <span class="n">target</span><span class="p">:</span> <span class="nb">print</span><span class="o">.</span><span class="n">name</span>
-</span><span id="__span-17-29"><a id="__codelineno-17-29" name="__codelineno-17-29" href="#__codelineno-17-29"></a>            <span class="k">if</span><span class="p">:</span> <span class="err">$</span><span class="p">{{</span> <span class="n">args</span><span class="o">.</span><span class="n">i_am_sure</span> <span class="o">==</span> <span class="n">true</span> <span class="p">}}</span>
-</span><span id="__span-17-30"><a id="__codelineno-17-30" name="__codelineno-17-30" href="#__codelineno-17-30"></a>            <span class="n">args</span><span class="p">:</span>
-</span><span id="__span-17-31"><a id="__codelineno-17-31" name="__codelineno-17-31" href="#__codelineno-17-31"></a>              <span class="n">name</span><span class="p">:</span> <span class="n">Ellen</span>
-</span><span id="__span-17-32"><a id="__codelineno-17-32" name="__codelineno-17-32" href="#__codelineno-17-32"></a>          <span class="o">-</span> <span class="n">target</span><span class="p">:</span> <span class="nb">print</span><span class="o">.</span><span class="n">name</span>
-</span><span id="__span-17-33"><a id="__codelineno-17-33" name="__codelineno-17-33" href="#__codelineno-17-33"></a>            <span class="k">if</span><span class="p">:</span> <span class="err">$</span><span class="p">{{</span> <span class="n">args</span><span class="o">.</span><span class="n">i_am_sure</span> <span class="o">==</span> <span class="n">true</span> <span class="p">}}</span>
-</span><span id="__span-17-34"><a id="__codelineno-17-34" name="__codelineno-17-34" href="#__codelineno-17-34"></a>            <span class="n">args</span><span class="p">:</span>
-</span><span id="__span-17-35"><a id="__codelineno-17-35" name="__codelineno-17-35" href="#__codelineno-17-35"></a>              <span class="n">name</span><span class="p">:</span> <span class="n">Marc</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="o">%%</span><span class="n">writefile</span> <span class="o">.</span><span class="n">makim</span><span class="o">.</span><span class="n">yaml</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="n">version</span><span class="p">:</span> <span class="mf">1.0.0</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="n">groups</span><span class="p">:</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>  <span class="nb">print</span><span class="p">:</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>    <span class="n">env</span><span class="o">-</span><span class="n">file</span><span class="p">:</span> <span class="o">.</span><span class="n">env</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>    <span class="n">targets</span><span class="p">:</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>      <span class="n">name</span><span class="p">:</span>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>        <span class="n">help</span><span class="p">:</span> <span class="n">Print</span> <span class="n">given</span> <span class="n">name</span>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>        <span class="n">args</span><span class="p">:</span>
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>          <span class="n">name</span><span class="p">:</span>
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>            <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span>
+</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>            <span class="n">required</span><span class="p">:</span> <span class="n">true</span>
+</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>        <span class="n">run</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;${{ args.name }}&quot;</span><span class="p">)</span>
+</span><span id="__span-16-14"><a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a>      <span class="nb">list</span><span class="p">:</span>
+</span><span id="__span-16-15"><a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a>        <span class="n">help</span><span class="p">:</span> <span class="n">Build</span> <span class="n">the</span> <span class="n">program</span>
+</span><span id="__span-16-16"><a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a>        <span class="n">args</span><span class="p">:</span>
+</span><span id="__span-16-17"><a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a>          <span class="n">i</span><span class="o">-</span><span class="n">am</span><span class="o">-</span><span class="n">sure</span><span class="p">:</span>
+</span><span id="__span-16-18"><a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a>            <span class="nb">type</span><span class="p">:</span> <span class="nb">bool</span>
+</span><span id="__span-16-19"><a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a>        <span class="n">dependencies</span><span class="p">:</span>
+</span><span id="__span-16-20"><a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a>          <span class="o">-</span> <span class="n">target</span><span class="p">:</span> <span class="nb">print</span><span class="o">.</span><span class="n">name</span>
+</span><span id="__span-16-21"><a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a>            <span class="k">if</span><span class="p">:</span> <span class="err">$</span><span class="p">{{</span> <span class="n">args</span><span class="o">.</span><span class="n">i_am_sure</span> <span class="o">==</span> <span class="n">true</span> <span class="p">}}</span>
+</span><span id="__span-16-22"><a id="__codelineno-16-22" name="__codelineno-16-22" href="#__codelineno-16-22"></a>            <span class="n">args</span><span class="p">:</span>
+</span><span id="__span-16-23"><a id="__codelineno-16-23" name="__codelineno-16-23" href="#__codelineno-16-23"></a>              <span class="n">name</span><span class="p">:</span> <span class="n">Mary</span>
+</span><span id="__span-16-24"><a id="__codelineno-16-24" name="__codelineno-16-24" href="#__codelineno-16-24"></a>          <span class="o">-</span> <span class="n">target</span><span class="p">:</span> <span class="nb">print</span><span class="o">.</span><span class="n">name</span>
+</span><span id="__span-16-25"><a id="__codelineno-16-25" name="__codelineno-16-25" href="#__codelineno-16-25"></a>            <span class="k">if</span><span class="p">:</span> <span class="err">$</span><span class="p">{{</span> <span class="n">args</span><span class="o">.</span><span class="n">i_am_sure</span> <span class="o">==</span> <span class="n">true</span> <span class="p">}}</span>
+</span><span id="__span-16-26"><a id="__codelineno-16-26" name="__codelineno-16-26" href="#__codelineno-16-26"></a>            <span class="n">args</span><span class="p">:</span>
+</span><span id="__span-16-27"><a id="__codelineno-16-27" name="__codelineno-16-27" href="#__codelineno-16-27"></a>              <span class="n">name</span><span class="p">:</span> <span class="n">John</span>
+</span><span id="__span-16-28"><a id="__codelineno-16-28" name="__codelineno-16-28" href="#__codelineno-16-28"></a>          <span class="o">-</span> <span class="n">target</span><span class="p">:</span> <span class="nb">print</span><span class="o">.</span><span class="n">name</span>
+</span><span id="__span-16-29"><a id="__codelineno-16-29" name="__codelineno-16-29" href="#__codelineno-16-29"></a>            <span class="k">if</span><span class="p">:</span> <span class="err">$</span><span class="p">{{</span> <span class="n">args</span><span class="o">.</span><span class="n">i_am_sure</span> <span class="o">==</span> <span class="n">true</span> <span class="p">}}</span>
+</span><span id="__span-16-30"><a id="__codelineno-16-30" name="__codelineno-16-30" href="#__codelineno-16-30"></a>            <span class="n">args</span><span class="p">:</span>
+</span><span id="__span-16-31"><a id="__codelineno-16-31" name="__codelineno-16-31" href="#__codelineno-16-31"></a>              <span class="n">name</span><span class="p">:</span> <span class="n">Ellen</span>
+</span><span id="__span-16-32"><a id="__codelineno-16-32" name="__codelineno-16-32" href="#__codelineno-16-32"></a>          <span class="o">-</span> <span class="n">target</span><span class="p">:</span> <span class="nb">print</span><span class="o">.</span><span class="n">name</span>
+</span><span id="__span-16-33"><a id="__codelineno-16-33" name="__codelineno-16-33" href="#__codelineno-16-33"></a>            <span class="k">if</span><span class="p">:</span> <span class="err">$</span><span class="p">{{</span> <span class="n">args</span><span class="o">.</span><span class="n">i_am_sure</span> <span class="o">==</span> <span class="n">true</span> <span class="p">}}</span>
+</span><span id="__span-16-34"><a id="__codelineno-16-34" name="__codelineno-16-34" href="#__codelineno-16-34"></a>            <span class="n">args</span><span class="p">:</span>
+</span><span id="__span-16-35"><a id="__codelineno-16-35" name="__codelineno-16-35" href="#__codelineno-16-35"></a>              <span class="n">name</span><span class="p">:</span> <span class="n">Marc</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Overwriting .makim.yaml
-
-</span></code>
-</pre>
-</div>
-
-<div class="language-python highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="err">!</span><span class="n">makim</span> <span class="nb">print</span><span class="o">.</span><span class="n">list</span>
+<div class="language-text highlight"><pre><span></span><code>Overwriting .makim.yaml
+</code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="err">!</span><span class="n">makim</span> <span class="nb">print</span><span class="o">.</span><span class="n">list</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Makim file: .makim.yaml
-
-</span></code>
-</pre>
-</div>
-
-<div class="language-python highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="err">!</span><span class="n">makim</span> <span class="nb">print</span><span class="o">.</span><span class="n">list</span> <span class="o">--</span><span class="n">i</span><span class="o">-</span><span class="n">am</span><span class="o">-</span><span class="n">sure</span>
+<div class="language-text highlight"><pre><span></span><code>Makim file: .makim.yaml
+</code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="err">!</span><span class="n">makim</span> <span class="nb">print</span><span class="o">.</span><span class="n">list</span> <span class="o">--</span><span class="n">i</span><span class="o">-</span><span class="n">am</span><span class="o">-</span><span class="n">sure</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Makim file: .makim.yaml
+<div class="language-text highlight"><pre><span></span><code>Makim file: .makim.yaml
 Mary
 John
 Ellen
 Marc
-
-</span></code>
-</pre>
-</div>
-
+</code></pre></div>
 <h3 id="utilizing-environment-variables">Utilizing Environment Variables<a class="headerlink" href="#utilizing-environment-variables" title="Permanent link"> #</a></h3>
-<p>The previous sections demonstrated the use of environment variables. Here, we'll delve into their application in more detail.</p>
-<p><strong>Makim</strong> permits the incorporation of environment variables from <code>.env</code> files or directly within the <code>.makim.yaml</code> file, applicable at global, group, and target levels.</p>
+<p>The previous sections demonstrated the use of environment variables.
+Here, we’ll delve into their application in more detail.</p>
+<p><strong>Makim</strong> permits the incorporation of environment variables from <code>.env</code>
+files or directly within the <code>.makim.yaml</code> file, applicable at global,
+group, and target levels.</p>
 <p>Examine an example to understand the implementation:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="o">%%</span><span class="n">writefile</span> <span class="o">.</span><span class="n">env</span>
-</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="n">ENV</span><span class="o">=</span><span class="n">dev</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="o">%%</span><span class="n">writefile</span> <span class="o">.</span><span class="n">env</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="n">ENV</span><span class="o">=</span><span class="n">dev</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Overwriting .env
-
-</span></code>
-</pre>
-</div>
-
-<div class="language-python highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="o">%%</span><span class="n">writefile</span> <span class="o">.</span><span class="n">makim</span><span class="o">.</span><span class="n">yaml</span>
-</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="n">version</span><span class="p">:</span> <span class="mf">1.0</span>
-</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="n">env</span><span class="o">-</span><span class="n">file</span><span class="p">:</span> <span class="o">.</span><span class="n">env</span>
-</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="n">env</span><span class="p">:</span>
-</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>  <span class="n">GLOBAL_VAR</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span>
-</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="n">groups</span><span class="p">:</span>
-</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>  <span class="k">global</span><span class="o">-</span><span class="n">scope</span><span class="p">:</span>
-</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>    <span class="n">env</span><span class="p">:</span>
-</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>      <span class="n">GROUP_VAR</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span>
-</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>    <span class="n">targets</span><span class="p">:</span>
-</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>      <span class="n">test</span><span class="o">-</span><span class="n">var</span><span class="o">-</span><span class="n">env</span><span class="o">-</span><span class="n">file</span><span class="p">:</span>
-</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>        <span class="n">help</span><span class="p">:</span> <span class="n">Test</span> <span class="n">env</span> <span class="n">variable</span> <span class="n">defined</span> <span class="ow">in</span> <span class="n">the</span> <span class="k">global</span> <span class="n">scope</span> <span class="kn">from</span> <span class="nn">env</span><span class="o">-</span><span class="n">file</span>
-</span><span id="__span-21-13"><a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>        <span class="n">run</span><span class="p">:</span> <span class="o">|</span>
-</span><span id="__span-21-14"><a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>          <span class="kn">import</span> <span class="nn">os</span>
-</span><span id="__span-21-15"><a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>          <span class="k">assert</span> <span class="nb">str</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;ENV&quot;</span><span class="p">))</span> <span class="o">==</span> <span class="s2">&quot;dev&quot;</span>
-</span><span id="__span-21-16"><a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a>
-</span><span id="__span-21-17"><a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a>      <span class="n">test</span><span class="o">-</span><span class="n">var</span><span class="o">-</span><span class="n">env</span><span class="p">:</span>
-</span><span id="__span-21-18"><a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a>        <span class="n">help</span><span class="p">:</span> <span class="n">Test</span> <span class="n">env</span> <span class="n">variable</span> <span class="n">defined</span> <span class="ow">in</span> <span class="n">the</span> <span class="k">global</span> <span class="n">scope</span> <span class="ow">in</span> <span class="err">`</span><span class="n">env</span><span class="err">`</span> <span class="n">section</span>
-</span><span id="__span-21-19"><a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a>        <span class="n">env</span><span class="p">:</span>
-</span><span id="__span-21-20"><a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a>          <span class="n">TARGET_VAR</span><span class="p">:</span> <span class="s2">&quot;3&quot;</span>
-</span><span id="__span-21-21"><a id="__codelineno-21-21" name="__codelineno-21-21" href="#__codelineno-21-21"></a>        <span class="n">run</span><span class="p">:</span> <span class="o">|</span>
-</span><span id="__span-21-22"><a id="__codelineno-21-22" name="__codelineno-21-22" href="#__codelineno-21-22"></a>          <span class="kn">import</span> <span class="nn">os</span>
-</span><span id="__span-21-23"><a id="__codelineno-21-23" name="__codelineno-21-23" href="#__codelineno-21-23"></a>          <span class="c1"># you can get an environment variable directly with xonsh/python</span>
-</span><span id="__span-21-24"><a id="__codelineno-21-24" name="__codelineno-21-24" href="#__codelineno-21-24"></a>          <span class="k">assert</span> <span class="nb">str</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;GLOBAL_VAR&quot;</span><span class="p">))</span> <span class="o">==</span> <span class="s2">&quot;1&quot;</span>
-</span><span id="__span-21-25"><a id="__codelineno-21-25" name="__codelineno-21-25" href="#__codelineno-21-25"></a>          <span class="c1"># or you can get an environment variable using jinja2 tag</span>
-</span><span id="__span-21-26"><a id="__codelineno-21-26" name="__codelineno-21-26" href="#__codelineno-21-26"></a>          <span class="k">assert</span> <span class="s2">&quot;${{ env.GROUP_VAR }}&quot;</span> <span class="o">==</span> <span class="s2">&quot;2&quot;</span>
-</span><span id="__span-21-27"><a id="__codelineno-21-27" name="__codelineno-21-27" href="#__codelineno-21-27"></a>          <span class="k">assert</span> <span class="s2">&quot;${{ env.get(&quot;</span><span class="n">TARGET_VAR</span><span class="s2">&quot;) }}&quot;</span> <span class="o">==</span> <span class="s2">&quot;3&quot;</span>
-</span><span id="__span-21-28"><a id="__codelineno-21-28" name="__codelineno-21-28" href="#__codelineno-21-28"></a>          <span class="k">assert</span> <span class="s2">&quot;${{ env.get(&quot;</span><span class="n">UNKNOWN_TARGET_VAR</span><span class="s2">&quot;, &quot;</span><span class="mi">4</span><span class="s2">&quot;) }}&quot;</span> <span class="o">==</span> <span class="s2">&quot;4&quot;</span>
+<div class="language-text highlight"><pre><span></span><code>Overwriting .env
+</code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="o">%%</span><span class="n">writefile</span> <span class="o">.</span><span class="n">makim</span><span class="o">.</span><span class="n">yaml</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="n">version</span><span class="p">:</span> <span class="mf">1.0</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="n">env</span><span class="o">-</span><span class="n">file</span><span class="p">:</span> <span class="o">.</span><span class="n">env</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="n">env</span><span class="p">:</span>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>  <span class="n">GLOBAL_VAR</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span>
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="n">groups</span><span class="p">:</span>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>  <span class="k">global</span><span class="o">-</span><span class="n">scope</span><span class="p">:</span>
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>    <span class="n">env</span><span class="p">:</span>
+</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>      <span class="n">GROUP_VAR</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span>
+</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>    <span class="n">targets</span><span class="p">:</span>
+</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>      <span class="n">test</span><span class="o">-</span><span class="n">var</span><span class="o">-</span><span class="n">env</span><span class="o">-</span><span class="n">file</span><span class="p">:</span>
+</span><span id="__span-20-12"><a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a>        <span class="n">help</span><span class="p">:</span> <span class="n">Test</span> <span class="n">env</span> <span class="n">variable</span> <span class="n">defined</span> <span class="ow">in</span> <span class="n">the</span> <span class="k">global</span> <span class="n">scope</span> <span class="kn">from</span> <span class="nn">env</span><span class="o">-</span><span class="n">file</span>
+</span><span id="__span-20-13"><a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a>        <span class="n">run</span><span class="p">:</span> <span class="o">|</span>
+</span><span id="__span-20-14"><a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a>          <span class="kn">import</span> <span class="nn">os</span>
+</span><span id="__span-20-15"><a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a>          <span class="k">assert</span> <span class="nb">str</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;ENV&quot;</span><span class="p">))</span> <span class="o">==</span> <span class="s2">&quot;dev&quot;</span>
+</span><span id="__span-20-16"><a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a>
+</span><span id="__span-20-17"><a id="__codelineno-20-17" name="__codelineno-20-17" href="#__codelineno-20-17"></a>      <span class="n">test</span><span class="o">-</span><span class="n">var</span><span class="o">-</span><span class="n">env</span><span class="p">:</span>
+</span><span id="__span-20-18"><a id="__codelineno-20-18" name="__codelineno-20-18" href="#__codelineno-20-18"></a>        <span class="n">help</span><span class="p">:</span> <span class="n">Test</span> <span class="n">env</span> <span class="n">variable</span> <span class="n">defined</span> <span class="ow">in</span> <span class="n">the</span> <span class="k">global</span> <span class="n">scope</span> <span class="ow">in</span> <span class="err">`</span><span class="n">env</span><span class="err">`</span> <span class="n">section</span>
+</span><span id="__span-20-19"><a id="__codelineno-20-19" name="__codelineno-20-19" href="#__codelineno-20-19"></a>        <span class="n">env</span><span class="p">:</span>
+</span><span id="__span-20-20"><a id="__codelineno-20-20" name="__codelineno-20-20" href="#__codelineno-20-20"></a>          <span class="n">TARGET_VAR</span><span class="p">:</span> <span class="s2">&quot;3&quot;</span>
+</span><span id="__span-20-21"><a id="__codelineno-20-21" name="__codelineno-20-21" href="#__codelineno-20-21"></a>        <span class="n">run</span><span class="p">:</span> <span class="o">|</span>
+</span><span id="__span-20-22"><a id="__codelineno-20-22" name="__codelineno-20-22" href="#__codelineno-20-22"></a>          <span class="kn">import</span> <span class="nn">os</span>
+</span><span id="__span-20-23"><a id="__codelineno-20-23" name="__codelineno-20-23" href="#__codelineno-20-23"></a>          <span class="c1"># you can get an environment variable directly with xonsh/python</span>
+</span><span id="__span-20-24"><a id="__codelineno-20-24" name="__codelineno-20-24" href="#__codelineno-20-24"></a>          <span class="k">assert</span> <span class="nb">str</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;GLOBAL_VAR&quot;</span><span class="p">))</span> <span class="o">==</span> <span class="s2">&quot;1&quot;</span>
+</span><span id="__span-20-25"><a id="__codelineno-20-25" name="__codelineno-20-25" href="#__codelineno-20-25"></a>          <span class="c1"># or you can get an environment variable using jinja2 tag</span>
+</span><span id="__span-20-26"><a id="__codelineno-20-26" name="__codelineno-20-26" href="#__codelineno-20-26"></a>          <span class="k">assert</span> <span class="s2">&quot;${{ env.GROUP_VAR }}&quot;</span> <span class="o">==</span> <span class="s2">&quot;2&quot;</span>
+</span><span id="__span-20-27"><a id="__codelineno-20-27" name="__codelineno-20-27" href="#__codelineno-20-27"></a>          <span class="k">assert</span> <span class="s2">&quot;${{ env.get(&quot;</span><span class="n">TARGET_VAR</span><span class="s2">&quot;) }}&quot;</span> <span class="o">==</span> <span class="s2">&quot;3&quot;</span>
+</span><span id="__span-20-28"><a id="__codelineno-20-28" name="__codelineno-20-28" href="#__codelineno-20-28"></a>          <span class="k">assert</span> <span class="s2">&quot;${{ env.get(&quot;</span><span class="n">UNKNOWN_TARGET_VAR</span><span class="s2">&quot;, &quot;</span><span class="mi">4</span><span class="s2">&quot;) }}&quot;</span> <span class="o">==</span> <span class="s2">&quot;4&quot;</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Overwriting .makim.yaml
-
-</span></code>
-</pre>
-</div>
-
-<div class="language-python highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="err">!</span><span class="n">makim</span> <span class="k">global</span><span class="o">-</span><span class="n">scope</span><span class="o">.</span><span class="n">test</span><span class="o">-</span><span class="n">var</span><span class="o">-</span><span class="n">env</span><span class="o">-</span><span class="n">file</span>
+<div class="language-text highlight"><pre><span></span><code>Overwriting .makim.yaml
+</code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="err">!</span><span class="n">makim</span> <span class="k">global</span><span class="o">-</span><span class="n">scope</span><span class="o">.</span><span class="n">test</span><span class="o">-</span><span class="n">var</span><span class="o">-</span><span class="n">env</span><span class="o">-</span><span class="n">file</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Makim file: .makim.yaml
-
-</span></code>
-</pre>
-</div>
-
-<div class="language-python highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="err">!</span><span class="n">makim</span> <span class="k">global</span><span class="o">-</span><span class="n">scope</span><span class="o">.</span><span class="n">test</span><span class="o">-</span><span class="n">var</span><span class="o">-</span><span class="n">env</span>
+<div class="language-text highlight"><pre><span></span><code>Makim file: .makim.yaml
+</code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="err">!</span><span class="n">makim</span> <span class="k">global</span><span class="o">-</span><span class="n">scope</span><span class="o">.</span><span class="n">test</span><span class="o">-</span><span class="n">var</span><span class="o">-</span><span class="n">env</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Makim file: .makim.yaml
-
-</span></code>
-</pre>
-</div>
-
+<div class="language-text highlight"><pre><span></span><code>Makim file: .makim.yaml
+</code></pre></div>
 <h3 id="specifying-the-working-directory">Specifying the Working Directory<a class="headerlink" href="#specifying-the-working-directory" title="Permanent link"> #</a></h3>
-<p>Makim provides the capability to set a specific working directory for tasks at any scope: global, group, or target.</p>
+<p>Makim provides the capability to set a specific working directory for
+tasks at any scope: global, group, or target.</p>
 <p>Review a straightforward example to learn how to apply this feature:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="o">%%</span><span class="n">writefile</span> <span class="o">.</span><span class="n">makim</span><span class="o">.</span><span class="n">yaml</span>
-</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="n">version</span><span class="p">:</span> <span class="mf">1.0</span>
-</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="n">working</span><span class="o">-</span><span class="n">directory</span><span class="p">:</span> <span class="s2">&quot;/tmp&quot;</span>
-</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>
-</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="n">groups</span><span class="p">:</span>
-</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>  <span class="n">check</span><span class="o">-</span><span class="n">wd</span><span class="p">:</span>
-</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>    <span class="n">targets</span><span class="p">:</span>
-</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>      <span class="ow">is</span><span class="o">-</span><span class="n">tmp</span><span class="p">:</span>
-</span><span id="__span-24-9"><a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a>        <span class="n">help</span><span class="p">:</span> <span class="n">Test</span> <span class="k">if</span> <span class="n">working</span> <span class="n">directory</span> <span class="ow">is</span> <span class="err">`</span><span class="n">tmp</span><span class="err">`</span>
-</span><span id="__span-24-10"><a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a>        <span class="n">run</span><span class="p">:</span> <span class="o">|</span>
-</span><span id="__span-24-11"><a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a>          <span class="kn">import</span> <span class="nn">os</span>
-</span><span id="__span-24-12"><a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a>          <span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
-</span><span id="__span-24-13"><a id="__codelineno-24-13" name="__codelineno-24-13" href="#__codelineno-24-13"></a>          <span class="k">assert</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;/tmp&quot;</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="o">%%</span><span class="n">writefile</span> <span class="o">.</span><span class="n">makim</span><span class="o">.</span><span class="n">yaml</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="n">version</span><span class="p">:</span> <span class="mf">1.0</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="n">working</span><span class="o">-</span><span class="n">directory</span><span class="p">:</span> <span class="s2">&quot;/tmp&quot;</span>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="n">groups</span><span class="p">:</span>
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>  <span class="n">check</span><span class="o">-</span><span class="n">wd</span><span class="p">:</span>
+</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>    <span class="n">targets</span><span class="p">:</span>
+</span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>      <span class="ow">is</span><span class="o">-</span><span class="n">tmp</span><span class="p">:</span>
+</span><span id="__span-23-9"><a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>        <span class="n">help</span><span class="p">:</span> <span class="n">Test</span> <span class="k">if</span> <span class="n">working</span> <span class="n">directory</span> <span class="ow">is</span> <span class="err">`</span><span class="n">tmp</span><span class="err">`</span>
+</span><span id="__span-23-10"><a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a>        <span class="n">run</span><span class="p">:</span> <span class="o">|</span>
+</span><span id="__span-23-11"><a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a>          <span class="kn">import</span> <span class="nn">os</span>
+</span><span id="__span-23-12"><a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a>          <span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
+</span><span id="__span-23-13"><a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a>          <span class="k">assert</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;/tmp&quot;</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Overwriting .makim.yaml
-
-</span></code>
-</pre>
-</div>
-
-<div class="language-python highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="err">!</span><span class="n">makim</span> <span class="n">check</span><span class="o">-</span><span class="n">wd</span><span class="o">.</span><span class="ow">is</span><span class="o">-</span><span class="n">tmp</span>
+<div class="language-text highlight"><pre><span></span><code>Overwriting .makim.yaml
+</code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="err">!</span><span class="n">makim</span> <span class="n">check</span><span class="o">-</span><span class="n">wd</span><span class="o">.</span><span class="ow">is</span><span class="o">-</span><span class="n">tmp</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Makim file: .makim.yaml
+<div class="language-text highlight"><pre><span></span><code>Makim file: .makim.yaml
 /tmp
-
-</span></code>
-</pre>
-</div>
-
-<p>This tutorial concludes with a showcase of Makim's key features. While this overview covers the essentials, diving deeper into <strong>Makim</strong> will reveal more advanced and intriguing ways to leverage its capabilities.</p>
+</code></pre></div>
+<p>This tutorial concludes with a showcase of Makim’s key features. While
+this overview covers the essentials, diving deeper into <strong>Makim</strong> will
+reveal more advanced and intriguing ways to leverage its capabilities.</p>
 <h2 id="contributing-to-makim">Contributing to Makim<a class="headerlink" href="#contributing-to-makim" title="Permanent link"> #</a></h2>
-<p>Makim's growth is propelled by its community. Contributions, whether through code, documentation, or feedback, are welcome. Explore the <a href="https://github.com/osl-incubator/makim">GitHub repository</a> and consider contributing to foster Makim's development.</p>
+<p>Makim’s growth is propelled by its community. Contributions, whether
+through code, documentation, or feedback, are welcome. Explore the
+<a href="https://github.com/osl-incubator/makim">GitHub repository</a> and consider
+contributing to foster Makim’s development.</p>
 <h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link"> #</a></h2>
-<p>Makim stands out as a transformative tool in project automation, bridging the gap between simplicity and complexity. Its comprehensive feature set, coupled with the flexibility of its configuration, makes Makim a quintessential tool for developers and DevOps engineers alike. As you incorporate Makim into your projects, its impact on enhancing productivity and consistency will become evident, marking it as an indispensable part of your development toolkit.</p>
-<p>Dive deeper into Makim's functionalities by visiting the <a href="https://github.com/osl-incubator/makim">official documentation</a>. Try it and let us know your thoughts about it!</p>
+<p>Makim stands out as a transformative tool in project automation,
+bridging the gap between simplicity and complexity. Its comprehensive
+feature set, coupled with the flexibility of its configuration, makes
+Makim a quintessential tool for developers and DevOps engineers alike.
+As you incorporate Makim into your projects, its impact on enhancing
+productivity and consistency will become evident, marking it as an
+indispensable part of your development toolkit.</p>
+<p>Dive deeper into Makim’s functionalities by visiting the <a href="https://github.com/osl-incubator/makim">official
+documentation</a>. Try it and let
+us know your thoughts about it!</p>
   </div>
 </div>
 
@@ -2558,7 +2384,7 @@ Makim file: .makim.yaml
           <div class="mt-4">
             <small class="badge-updated">
               
-                Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2026-03-20</span>
+                Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2026-04-29</span>
               
               
             </small>

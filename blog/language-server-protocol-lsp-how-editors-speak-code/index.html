@@ -14,9 +14,9 @@
 enabling real-time autocompletion, hover info, diagnostics, and more.
 ">
     <meta name="keywords" content="open science,data science,latam">
-    <meta name="last-modified" content="2026-03-20">
-    <meta name="DC.date.modified" content="2026-03-20">
-    <meta property="og:updated_time" content="2026-03-20T00:00:00Z">
+    <meta name="last-modified" content="2026-04-29">
+    <meta name="DC.date.modified" content="2026-04-29">
+    <meta property="og:updated_time" content="2026-04-29T00:00:00Z">
 
     <meta property="og:locale" content="es">
     <meta property="og:locale:alternate" content="pt">
@@ -38,7 +38,7 @@ enabling real-time autocompletion, hover info, diagnostics, and more.
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Language Server Protocol (LSP): How Editors Speak Code",
-        "dateModified": "2026-03-20T00:00:00Z",
+        "dateModified": "2026-04-29T00:00:00Z",
         "url": "https://opensciencelabs.org/blog/language-server-protocol-lsp-how-editors-speak-code/"
       }
     </script>
@@ -1816,23 +1816,24 @@ enabling real-time autocompletion, hover info, diagnostics, and more.
   <!-- Article body -->
   <div class="post_body">
     <h1 id="language-server-protocol-lsp-how-editors-speak-code">Language Server Protocol (LSP): How Editors Speak Code<a class="headerlink" href="#language-server-protocol-lsp-how-editors-speak-code" title="Permanent link"> #</a></h1>
-<p>When you open a code file in VS Code and get real-time suggestions, hover
-tooltips, or error squiggles, have you ever wondered <strong>how</strong> your editor
-understands the language you’re writing in?</p>
-<p>This magic isn’t hardcoded per-language into the editor. Instead, it’s often
-powered by something called the <strong>Language Server Protocol (LSP)</strong>.</p>
-<p>Let’s dive into what LSP is, why it exists, and how it powers modern development
-environments.</p>
+<p>When you open a code file in VS Code and get real-time suggestions,
+hover tooltips, or error squiggles, have you ever wondered <strong>how</strong> your
+editor understands the language you’re writing in?</p>
+<p>This magic isn’t hardcoded per-language into the editor. Instead, it’s
+often powered by something called the <strong>Language Server Protocol
+(LSP)</strong>.</p>
+<p>Let’s dive into what LSP is, why it exists, and how it powers modern
+development environments.</p>
 <h2 id="what-is-the-language-server-protocol">What is the Language Server Protocol?<a class="headerlink" href="#what-is-the-language-server-protocol" title="Permanent link"> #</a></h2>
-<p>The <strong>Language Server Protocol (LSP)</strong> is a standardized way for development
-tools (like VS Code, Vim, or Emacs) to communicate with language-specific
-services (called language servers).</p>
-<p>Instead of writing new editor plugins for every language and every editor, <strong>LSP
-decouples the logic</strong>:</p>
+<p>The <strong>Language Server Protocol (LSP)</strong> is a standardized way for
+development tools (like VS Code, Vim, or Emacs) to communicate with
+language-specific services (called language servers).</p>
+<p>Instead of writing new editor plugins for every language and every
+editor, <strong>LSP decouples the logic</strong>:</p>
 <ul>
 <li>The <strong>editor (client)</strong> handles the UI and editor behavior.</li>
-<li>The <strong>language server</strong> handles parsing, validation, completions, and other
-  language-specific logic.</li>
+<li>The <strong>language server</strong> handles parsing, validation, completions, and
+  other language-specific logic.</li>
 </ul>
 <p>They talk to each other via a common JSON-RPC protocol over standard
 input/output, TCP, or WebSockets.</p>
@@ -1844,9 +1845,10 @@ input/output, TCP, or WebSockets.</p>
 </ul>
 <p>This was inefficient and hard to maintain.</p>
 <p><strong>Microsoft introduced LSP in 2016</strong>, alongside VS Code, to fix this
-fragmentation. Now, language authors can focus on building a single LSP server,
-and editors can plug into it easily.</p>
-<p><img alt="LSP Languages and Editors" src="https://code.visualstudio.com/assets/api/language-extensions/language-server-extension-guide/lsp-languages-editors.png" /></p>
+fragmentation. Now, language authors can focus on building a single LSP
+server, and editors can plug into it easily.</p>
+<p><img alt="LSP Languages and
+Editors" src="https://code.visualstudio.com/assets/api/language-extensions/language-server-extension-guide/lsp-languages-editors.png" /></p>
 <h2 id="core-features-of-lsp">Core Features of LSP<a class="headerlink" href="#core-features-of-lsp" title="Permanent link"> #</a></h2>
 <p>Here are some features LSP enables out-of-the-box:</p>
 <ul>
@@ -1861,24 +1863,25 @@ and editors can plug into it easily.</p>
 </ul>
 <p>These features work <strong>consistently across any editor</strong> that supports!</p>
 <h2 id="how-does-it-work">How Does It Work?<a class="headerlink" href="#how-does-it-work" title="Permanent link"> #</a></h2>
-<p>Here's a simplified lifecycle of how an editor (client) talks to a language
-server:</p>
+<p>Here’s a simplified lifecycle of how an editor (client) talks to a
+language server:</p>
 <ol>
-<li><strong>Editor launches the language server.</strong></li>
-<li><strong>Sends an <code>initialize</code> request</strong> to begin communication.</li>
+<li>
+<p><strong>Editor launches the language server.</strong></p>
+</li>
+<li>
+<p><strong>Sends an <code>initialize</code> request</strong> to begin communication.</p>
+</li>
 <li>
 <p>As you edit:</p>
-<ul>
-<li>Sends <code>textDocument/didOpen</code>, <code>didChange</code>, or <code>didSave</code>.</li>
-<li>Receives back diagnostics or suggestions.</li>
-</ul>
+<p>- Sends <code>textDocument/didOpen</code>, <code>didChange</code>, or <code>didSave</code>.
+  - Receives back diagnostics or suggestions.</p>
 </li>
 <li>
 <p>On hover, completion, or definition jumps:</p>
-<ul>
-<li>Sends <code>textDocument/hover</code>, <code>completion</code>, or <code>definition</code> requests.</li>
-<li>Displays server responses in the UI.</li>
-</ul>
+<p>- Sends <code>textDocument/hover</code>, <code>completion</code>, or <code>definition</code>
+    requests.
+  - Displays server responses in the UI.</p>
 </li>
 </ol>
 <p>All of this happens over a well-defined set of JSON-RPC messages.</p>
@@ -1891,10 +1894,11 @@ server:</p>
 </ul>
 <h2 id="final-thoughts">Final Thoughts<a class="headerlink" href="#final-thoughts" title="Permanent link"> #</a></h2>
 <p>The Language Server Protocol has quietly become the <strong>backbone of modern
-developer tooling</strong>. Whether you’re building an IDE, a DSL, or a configuration
-tool, LSP lets you ship a polished editing experience with far less effort.</p>
-<p>If you're working on your own language, plugin, or platform, building an LSP
-server is one of the smartest investments you can make.</p>
+developer tooling</strong>. Whether you’re building an IDE, a DSL, or a
+configuration tool, LSP lets you ship a polished editing experience with
+far less effort.</p>
+<p>If you’re working on your own language, plugin, or platform, building an
+LSP server is one of the smartest investments you can make.</p>
   </div>
 </div>
 
@@ -1924,7 +1928,7 @@ server is one of the smartest investments you can make.</p>
           <div class="mt-4">
             <small class="badge-updated">
               
-                Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2026-03-20</span>
+                Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2026-04-29</span>
               
               
             </small>

@@ -16,9 +16,9 @@ Built on top of the well-known Click library, Typer leverages Python 3.6+ featur
 like type hints, to define CLI commands in a straightforward and intuitive way.
 ">
     <meta name="keywords" content="open science,data science,latam">
-    <meta name="last-modified" content="2026-03-20">
-    <meta name="DC.date.modified" content="2026-03-20">
-    <meta property="og:updated_time" content="2026-03-20T00:00:00Z">
+    <meta name="last-modified" content="2026-04-29">
+    <meta name="DC.date.modified" content="2026-04-29">
+    <meta property="og:updated_time" content="2026-04-29T00:00:00Z">
 
     <meta property="og:locale" content="es">
     <meta property="og:locale:alternate" content="pt">
@@ -42,7 +42,7 @@ like type hints, to define CLI commands in a straightforward and intuitive way.
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Typer: A Python Library for Building CLI Applications",
-        "dateModified": "2026-03-20T00:00:00Z",
+        "dateModified": "2026-04-29T00:00:00Z",
         "url": "https://opensciencelabs.org/blog/typer-a-python-library-for-building-cli-applications/"
       }
     </script>
@@ -1821,27 +1821,38 @@ like type hints, to define CLI commands in a straightforward and intuitive way.
   <div class="post_body">
     <h1 id="typer-a-python-library-for-building-cli-applications">Typer: A Python Library for Building CLI Applications<a class="headerlink" href="#typer-a-python-library-for-building-cli-applications" title="Permanent link"> #</a></h1>
 <h2 id="what-is-typer">What is Typer?<a class="headerlink" href="#what-is-typer" title="Permanent link"> #</a></h2>
-<p>Typer is an exciting library for Python developers, designed to make the creation of command-line interface (CLI) applications not just easier, but also more enjoyable. Built on top of the well-known Click library, Typer leverages Python 3.6+ features, like type hints, to define CLI commands in a straightforward and intuitive way.</p>
+<p>Typer is an exciting library for Python developers, designed to make the
+creation of command-line interface (CLI) applications not just easier,
+but also more enjoyable. Built on top of the well-known Click library,
+Typer leverages Python 3.6+ features, like type hints, to define CLI
+commands in a straightforward and intuitive way.</p>
 <h2 id="why-choose-typer">Why Choose Typer?<a class="headerlink" href="#why-choose-typer" title="Permanent link"> #</a></h2>
 <ul>
-<li><strong>Simplicity</strong>: With Typer, you can create powerful CLI applications using minimal code.</li>
-<li><strong>Type Hints</strong>: Leverages Python's type hints for parameter declaration, reducing errors and improving code clarity.</li>
-<li><strong>Automatic Help</strong>: Generates help text and error messages based on your code.</li>
-<li><strong>Subcommands</strong>: Supports nested commands, allowing complex CLI applications.</li>
+<li><strong>Simplicity</strong>: With Typer, you can create powerful CLI applications
+  using minimal code.</li>
+<li><strong>Type Hints</strong>: Leverages Python’s type hints for parameter
+  declaration, reducing errors and improving code clarity.</li>
+<li><strong>Automatic Help</strong>: Generates help text and error messages based on
+  your code.</li>
+<li><strong>Subcommands</strong>: Supports nested commands, allowing complex CLI
+  applications.</li>
 </ul>
 <h2 id="getting-started-with-typer">Getting Started with Typer<a class="headerlink" href="#getting-started-with-typer" title="Permanent link"> #</a></h2>
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link"> #</a></h3>
-<p>To begin using Typer, you first need to install it. You can easily do this using pip:</p>
+<p>To begin using Typer, you first need to install it. You can easily do
+this using pip:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">typer</span> <span class="o">-</span><span class="n">q</span>
 </span></code></pre></div>
 <h3 id="creating-your-first-typer-application">Creating Your First Typer Application<a class="headerlink" href="#creating-your-first-typer-application" title="Permanent link"> #</a></h3>
-<p>Let's start with a simple example. We'll create an application that greets a user.</p>
+<p>Let’s start with a simple example. We’ll create an application that
+greets a user.</p>
 <p>First, import Typer and create an instance of it:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">typer</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">app</span> <span class="o">=</span> <span class="n">typer</span><span class="o">.</span><span class="n">Typer</span><span class="p">()</span>
 </span></code></pre></div>
-<p>Now, define a function that will act as your command. Use type hints for function arguments:</p>
+<p>Now, define a function that will act as your command. Use type hints for
+function arguments:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nd">@app</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">typer</span><span class="o">.</span><span class="n">Option</span><span class="p">(</span>
@@ -1853,7 +1864,8 @@ like type hints, to define CLI commands in a straightforward and intuitive way.
 </span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Greets the user by name.&quot;&quot;&quot;</span>
 </span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="n">typer</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
 </span></code></pre></div>
-<p>To run this application, use the following code block at the end of your script:</p>
+<p>To run this application, use the following code block at the end of your
+script:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="n">app</span><span class="p">()</span>
 </span></code></pre></div>
@@ -1879,65 +1891,44 @@ like type hints, to define CLI commands in a straightforward and intuitive way.
 </span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
 </span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>    <span class="n">app</span><span class="p">()</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Overwriting greet.py
-
-</span></code>
-</pre>
-</div>
-
+<div class="language-text highlight"><pre><span></span><code>Overwriting greet.py
+</code></pre></div>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="err">!</span><span class="n">python</span> <span class="n">greet</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">name</span> <span class="n">Alice</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Hello Alice!
-
-</span></code>
-</pre>
-</div>
-
+<div class="language-text highlight"><pre><span></span><code>Hello Alice!
+</code></pre></div>
 <h3 id="help-documentation">Help Documentation<a class="headerlink" href="#help-documentation" title="Permanent link"> #</a></h3>
-<p>Typer automatically generates help documentation for your application. Try running:</p>
+<p>Typer automatically generates help documentation for your application.
+Try running:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="err">!</span><span class="n">python</span> <span class="n">greet</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">help</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Usage: greet.py [OPTIONS]
+<div class="language-text highlight"><pre><span></span><code>Usage: greet.py [OPTIONS]
 
-Greets the user by name.
+  Greets the user by name.
 
 Options:
---name TEXT                     The name of the person to greet.  [required]
---install-completion [bash|zsh|fish|powershell|pwsh]
-Install completion for the specified shell.
---show-completion [bash|zsh|fish|powershell|pwsh]
-Show completion for the specified shell, to
-copy it or customize the installation.
---help                          Show this message and exit.
-
-</span></code>
-</pre>
-</div>
-
-<p>You'll get a detailed description of how to use the command, including available options.</p>
+  --name TEXT                     The name of the person to greet.  [required]
+  --install-completion [bash|zsh|fish|powershell|pwsh]
+                                  Install completion for the specified shell.
+  --show-completion [bash|zsh|fish|powershell|pwsh]
+                                  Show completion for the specified shell, to
+                                  copy it or customize the installation.
+  --help                          Show this message and exit.
+</code></pre></div>
+<p>You’ll get a detailed description of how to use the command, including
+available options.</p>
 <h2 id="working-with-subcommands">Working with Subcommands<a class="headerlink" href="#working-with-subcommands" title="Permanent link"> #</a></h2>
-<p>Typer supports subcommands, allowing you to build more complex applications. In the following example, the script is structured around a main Typer application (app) and two sub-applications (app_user and app_product). This hierarchical structure is a hallmark of Typer, allowing for the organization of commands into distinct categories – in this case, user-related and product-related operations. Such an approach not only enhances the readability and maintainability of the code but also provides a more intuitive interface for the end users. They can easily navigate through the different functionalities of the application, whether it's creating or updating users, or handling product information.</p>
+<p>Typer supports subcommands, allowing you to build more complex
+applications. In the following example, the script is structured around
+a main Typer application (app) and two sub-applications (app_user and
+app_product). This hierarchical structure is a hallmark of Typer,
+allowing for the organization of commands into distinct categories – in
+this case, user-related and product-related operations. Such an approach
+not only enhances the readability and maintainability of the code but
+also provides a more intuitive interface for the end users. They can
+easily navigate through the different functionalities of the
+application, whether it’s creating or updating users, or handling
+product information.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="o">%%</span><span class="n">writefile</span> <span class="n">ecommerce</span><span class="o">.</span><span class="n">py</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kn">import</span> <span class="nn">typer</span>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
@@ -1998,118 +1989,81 @@ copy it or customize the installation.
 </span><span id="__span-7-58"><a id="__codelineno-7-58" name="__codelineno-7-58" href="#__codelineno-7-58"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
 </span><span id="__span-7-59"><a id="__codelineno-7-59" name="__codelineno-7-59" href="#__codelineno-7-59"></a>    <span class="n">app</span><span class="p">()</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Overwriting ecommerce.py
-
-</span></code>
-</pre>
-</div>
-
-<p>A key feature demonstrated in the script is the use of the callback function with the invoke_without_command=True parameter. This setup enables the execution of specific code (like displaying the version or help text) before any subcommands are processed. It's a powerful tool for handling pre-command logic or global options that apply to the entire CLI application.</p>
-<p>Moreover, the script showcases the simplicity and elegance of defining commands in Typer. Each operation, such as creating or updating users and products, is defined as a function, with parameters automatically translated into command-line options or arguments. This approach not only makes the code more readable but also leverages Python's type hints to ensure that the command-line arguments are correctly interpreted, providing a seamless and error-free user experience.</p>
-<p>In the following lines, there are some examples of the CLI call with different parameters.</p>
+<div class="language-text highlight"><pre><span></span><code>Overwriting ecommerce.py
+</code></pre></div>
+<p>A key feature demonstrated in the script is the use of the callback
+function with the invoke_without_command=True parameter. This setup
+enables the execution of specific code (like displaying the version or
+help text) before any subcommands are processed. It’s a powerful tool
+for handling pre-command logic or global options that apply to the
+entire CLI application.</p>
+<p>Moreover, the script showcases the simplicity and elegance of defining
+commands in Typer. Each operation, such as creating or updating users
+and products, is defined as a function, with parameters automatically
+translated into command-line options or arguments. This approach not
+only makes the code more readable but also leverages Python’s type hints
+to ensure that the command-line arguments are correctly interpreted,
+providing a seamless and error-free user experience.</p>
+<p>In the following lines, there are some examples of the CLI call with
+different parameters.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="err">!</span><span class="n">python</span> <span class="n">ecommerce</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">help</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Usage: ecommerce.py [OPTIONS] COMMAND [ARGS]...
+<div class="language-text highlight"><pre><span></span><code>Usage: ecommerce.py [OPTIONS] COMMAND [ARGS]...
 
-Operations for e-commerce.
+  Operations for e-commerce.
 
 Options:
--v, --version                   Show the version and exit.
---install-completion [bash|zsh|fish|powershell|pwsh]
-Install completion for the specified shell.
---show-completion [bash|zsh|fish|powershell|pwsh]
-Show completion for the specified shell, to
-copy it or customize the installation.
---help                          Show this message and exit.
+  -v, --version                   Show the version and exit.
+  --install-completion [bash|zsh|fish|powershell|pwsh]
+                                  Install completion for the specified shell.
+  --show-completion [bash|zsh|fish|powershell|pwsh]
+                                  Show completion for the specified shell, to
+                                  copy it or customize the installation.
+  --help                          Show this message and exit.
 
 Commands:
-product  Operations for product model.
-user     Operations for user model.
-
-</span></code>
-</pre>
-</div>
-
+  product  Operations for product model.
+  user     Operations for user model.
+</code></pre></div>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="err">!</span><span class="n">python</span> <span class="n">ecommerce</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">version</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Version: 0.1.0
-
-</span></code>
-</pre>
-</div>
-
+<div class="language-text highlight"><pre><span></span><code>Version: 0.1.0
+</code></pre></div>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="err">!</span><span class="n">python</span> <span class="n">ecommerce</span><span class="o">.</span><span class="n">py</span> <span class="n">user</span> <span class="o">--</span><span class="n">help</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Usage: ecommerce.py user [OPTIONS] COMMAND [ARGS]...
+<div class="language-text highlight"><pre><span></span><code>Usage: ecommerce.py user [OPTIONS] COMMAND [ARGS]...
 
-Operations for user model.
+  Operations for user model.
 
 Options:
---help  Show this message and exit.
+  --help  Show this message and exit.
 
 Commands:
-create  Create a new user with the given name.
-update  Update user data with the given name.
-
-</span></code>
-</pre>
-</div>
-
+  create  Create a new user with the given name.
+  update  Update user data with the given name.
+</code></pre></div>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="err">!</span><span class="n">python</span> <span class="n">ecommerce</span><span class="o">.</span><span class="n">py</span> <span class="n">user</span> <span class="n">create</span> <span class="o">--</span><span class="n">help</span>
 </span></code></pre></div>
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Usage: ecommerce.py user create [OPTIONS] NAME
+<div class="language-text highlight"><pre><span></span><code>Usage: ecommerce.py user create [OPTIONS] NAME
 
-Create a new user with the given name.
+  Create a new user with the given name.
 
 Arguments:
-NAME  Name of the user to create.  [required]
+  NAME  Name of the user to create.  [required]
 
 Options:
---help  Show this message and exit.
-
-</span></code>
-</pre>
-</div>
-
+  --help  Show this message and exit.
+</code></pre></div>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="err">!</span><span class="n">python</span> <span class="n">ecommerce</span><span class="o">.</span><span class="n">py</span> <span class="n">product</span> <span class="o">--</span><span class="n">help</span>
 </span></code></pre></div>
 <h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link"> #</a></h2>
-<p>Typer is a powerful yet straightforward tool for building CLI applications in Python. By leveraging Python's type hints, it offers an intuitive way to define commands and parameters, automatically handles help documentation, and supports complex command structures with subcommands. Whether you're a beginner or an experienced Python developer, Typer can significantly enhance your productivity in CLI development.</p>
+<p>Typer is a powerful yet straightforward tool for building CLI
+applications in Python. By leveraging Python’s type hints, it offers an
+intuitive way to define commands and parameters, automatically handles
+help documentation, and supports complex command structures with
+subcommands. Whether you’re a beginner or an experienced Python
+developer, Typer can significantly enhance your productivity in CLI
+development.</p>
 <p>Happy coding with Typer! 🐍✨</p>
   </div>
 </div>
@@ -2140,7 +2094,7 @@ Options:
           <div class="mt-4">
             <small class="badge-updated">
               
-                Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2026-03-20</span>
+                Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2026-04-29</span>
               
               
             </small>
