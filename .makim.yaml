@@ -5,19 +5,39 @@ groups:
         help: pre-build step
         backend: bash
         run: |
+          set -e
           mkdir -p build
-          # Directory to search for .ipynb files
+          # Directory to search for blog sources
           export SEARCH_DIR="pages/blog"
 
-          # Find all .ipynb files, excluding .ipynb_checkpoints,
-          # and convert them to Markdown named 'index.md'
+          # 1) Convert legacy .ipynb posts to Markdown (for now)
+          #    This keeps existing notebook-based posts working while we
+          #    migrate everything to Quarto.
           find "$SEARCH_DIR" -path "*/.ipynb_checkpoints/*" -prune -o -name \
             "*.ipynb" -exec sh -c \
             'jupyter nbconvert --to markdown --template=theme/custom-markdown.tpl --output-dir "$(dirname "$0")" --output "index" "$0"' {} \;
 
-          # remove console colors from md files
-          find "$SEARCH_DIR" -name \
-            "index.md" -exec sh -c \
+          # 2) Convert .qmd blog posts to Markdown using Quarto
+          #    Run quarto render from inside each blog folder (Quarto rejects --output path).
+          if ! command -v quarto >/dev/null 2>&1; then
+            echo "[EE] Quarto CLI is required but not found on PATH. Install it (e.g. conda install quarto) and retry."
+            exit 1
+          fi
+          mapfile -d "" qmd_files < <(find "$SEARCH_DIR" -name "*.qmd" -print0)
+          for qmd_path in "${qmd_files[@]}"; do
+            dir=$(dirname "$qmd_path")
+            base=$(basename "$qmd_path" .qmd)
+            (
+              cd "$dir"
+              quarto render "$base.qmd" --to gfm -M template=default
+            )
+          done
+
+          # 3) Ensure generated index.md have YAML from .qmd (Quarto may drop it)
+          python scripts/inject-qmd-yaml-into-md.py
+
+          # 4) Remove console colors from generated md files
+          find "$SEARCH_DIR" -name "index.md" -exec sh -c \
             'cat "$(dirname "$0")/index.md" | python scripts/clean-output.py > "$(dirname "$0")/temp_index.md" && mv "$(dirname "$0")/temp_index.md" "$(dirname "$0")/index.md"' {} \;
 
       build:

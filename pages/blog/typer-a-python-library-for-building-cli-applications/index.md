@@ -13,47 +13,56 @@ description: |
 thumbnail: "/header.svg"
 template: "blog-post.html"
 ---
+
 # Typer: A Python Library for Building CLI Applications
 
 ## What is Typer?
 
-Typer is an exciting library for Python developers, designed to make the creation of command-line interface (CLI) applications not just easier, but also more enjoyable. Built on top of the well-known Click library, Typer leverages Python 3.6+ features, like type hints, to define CLI commands in a straightforward and intuitive way.
+Typer is an exciting library for Python developers, designed to make the
+creation of command-line interface (CLI) applications not just easier,
+but also more enjoyable. Built on top of the well-known Click library,
+Typer leverages Python 3.6+ features, like type hints, to define CLI
+commands in a straightforward and intuitive way.
 
 ## Why Choose Typer?
 
-- **Simplicity**: With Typer, you can create powerful CLI applications using minimal code.
-- **Type Hints**: Leverages Python's type hints for parameter declaration, reducing errors and improving code clarity.
-- **Automatic Help**: Generates help text and error messages based on your code.
-- **Subcommands**: Supports nested commands, allowing complex CLI applications.
+- **Simplicity**: With Typer, you can create powerful CLI applications
+  using minimal code.
+- **Type Hints**: Leverages Python’s type hints for parameter
+  declaration, reducing errors and improving code clarity.
+- **Automatic Help**: Generates help text and error messages based on
+  your code.
+- **Subcommands**: Supports nested commands, allowing complex CLI
+  applications.
 
 ## Getting Started with Typer
 
 ### Installation
 
-To begin using Typer, you first need to install it. You can easily do this using pip:
+To begin using Typer, you first need to install it. You can easily do
+this using pip:
 
-
-```python
+``` python
 !pip install typer -q
 ```
 
 ### Creating Your First Typer Application
 
-Let's start with a simple example. We'll create an application that greets a user.
+Let’s start with a simple example. We’ll create an application that
+greets a user.
 
 First, import Typer and create an instance of it:
 
-
-```python
+``` python
 import typer
 
 app = typer.Typer()
 ```
 
-Now, define a function that will act as your command. Use type hints for function arguments:
+Now, define a function that will act as your command. Use type hints for
+function arguments:
 
-
-```python
+``` python
 @app.command()
 def greet(
     name: str = typer.Option(
@@ -66,9 +75,10 @@ def greet(
     typer.echo(f"Hello {name}!")
 ```
 
-To run this application, use the following code block at the end of your script:
+To run this application, use the following code block at the end of your
+script:
 
-```python
+``` python
 if __name__ == "__main__":
     app()
 ```
@@ -77,8 +87,7 @@ if __name__ == "__main__":
 
 Save the script as `greet.py` and run it from the command line:
 
-
-```python
+``` python
 %%writefile greet.py
 
 import typer
@@ -100,78 +109,54 @@ if __name__ == "__main__":
     app()
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Overwriting greet.py
+    Overwriting greet.py
 
-</span></code>
-</pre>
-</div>
-
-
-```python
+``` python
 !python greet.py --name Alice
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Hello Alice!
-
-</span></code>
-</pre>
-</div>
+    Hello Alice!
 
 ### Help Documentation
 
-Typer automatically generates help documentation for your application. Try running:
+Typer automatically generates help documentation for your application.
+Try running:
 
-
-```python
+``` python
 !python greet.py --help
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Usage: greet.py [OPTIONS]
+    Usage: greet.py [OPTIONS]
 
-Greets the user by name.
+      Greets the user by name.
 
-Options:
---name TEXT                     The name of the person to greet.  [required]
---install-completion [bash|zsh|fish|powershell|pwsh]
-Install completion for the specified shell.
---show-completion [bash|zsh|fish|powershell|pwsh]
-Show completion for the specified shell, to
-copy it or customize the installation.
---help                          Show this message and exit.
+    Options:
+      --name TEXT                     The name of the person to greet.  [required]
+      --install-completion [bash|zsh|fish|powershell|pwsh]
+                                      Install completion for the specified shell.
+      --show-completion [bash|zsh|fish|powershell|pwsh]
+                                      Show completion for the specified shell, to
+                                      copy it or customize the installation.
+      --help                          Show this message and exit.
 
-</span></code>
-</pre>
-</div>
-
-You'll get a detailed description of how to use the command, including available options.
+You’ll get a detailed description of how to use the command, including
+available options.
 
 ## Working with Subcommands
 
-Typer supports subcommands, allowing you to build more complex applications. In the following example, the script is structured around a main Typer application (app) and two sub-applications (app_user and app_product). This hierarchical structure is a hallmark of Typer, allowing for the organization of commands into distinct categories – in this case, user-related and product-related operations. Such an approach not only enhances the readability and maintainability of the code but also provides a more intuitive interface for the end users. They can easily navigate through the different functionalities of the application, whether it's creating or updating users, or handling product information.
+Typer supports subcommands, allowing you to build more complex
+applications. In the following example, the script is structured around
+a main Typer application (app) and two sub-applications (app_user and
+app_product). This hierarchical structure is a hallmark of Typer,
+allowing for the organization of commands into distinct categories – in
+this case, user-related and product-related operations. Such an approach
+not only enhances the readability and maintainability of the code but
+also provides a more intuitive interface for the end users. They can
+easily navigate through the different functionalities of the
+application, whether it’s creating or updating users, or handling
+product information.
 
-
-```python
+``` python
 %%writefile ecommerce.py
 import typer
 
@@ -233,136 +218,94 @@ if __name__ == "__main__":
     app()
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Overwriting ecommerce.py
+    Overwriting ecommerce.py
 
-</span></code>
-</pre>
-</div>
+A key feature demonstrated in the script is the use of the callback
+function with the invoke_without_command=True parameter. This setup
+enables the execution of specific code (like displaying the version or
+help text) before any subcommands are processed. It’s a powerful tool
+for handling pre-command logic or global options that apply to the
+entire CLI application.
 
-A key feature demonstrated in the script is the use of the callback function with the invoke_without_command=True parameter. This setup enables the execution of specific code (like displaying the version or help text) before any subcommands are processed. It's a powerful tool for handling pre-command logic or global options that apply to the entire CLI application.
+Moreover, the script showcases the simplicity and elegance of defining
+commands in Typer. Each operation, such as creating or updating users
+and products, is defined as a function, with parameters automatically
+translated into command-line options or arguments. This approach not
+only makes the code more readable but also leverages Python’s type hints
+to ensure that the command-line arguments are correctly interpreted,
+providing a seamless and error-free user experience.
 
-Moreover, the script showcases the simplicity and elegance of defining commands in Typer. Each operation, such as creating or updating users and products, is defined as a function, with parameters automatically translated into command-line options or arguments. This approach not only makes the code more readable but also leverages Python's type hints to ensure that the command-line arguments are correctly interpreted, providing a seamless and error-free user experience.
+In the following lines, there are some examples of the CLI call with
+different parameters.
 
-In the following lines, there are some examples of the CLI call with different parameters.
-
-
-```python
+``` python
 !python ecommerce.py --help
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Usage: ecommerce.py [OPTIONS] COMMAND [ARGS]...
+    Usage: ecommerce.py [OPTIONS] COMMAND [ARGS]...
 
-Operations for e-commerce.
+      Operations for e-commerce.
 
-Options:
--v, --version                   Show the version and exit.
---install-completion [bash|zsh|fish|powershell|pwsh]
-Install completion for the specified shell.
---show-completion [bash|zsh|fish|powershell|pwsh]
-Show completion for the specified shell, to
-copy it or customize the installation.
---help                          Show this message and exit.
+    Options:
+      -v, --version                   Show the version and exit.
+      --install-completion [bash|zsh|fish|powershell|pwsh]
+                                      Install completion for the specified shell.
+      --show-completion [bash|zsh|fish|powershell|pwsh]
+                                      Show completion for the specified shell, to
+                                      copy it or customize the installation.
+      --help                          Show this message and exit.
 
-Commands:
-product  Operations for product model.
-user     Operations for user model.
+    Commands:
+      product  Operations for product model.
+      user     Operations for user model.
 
-</span></code>
-</pre>
-</div>
-
-
-```python
+``` python
 !python ecommerce.py --version
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Version: 0.1.0
+    Version: 0.1.0
 
-</span></code>
-</pre>
-</div>
-
-
-```python
+``` python
 !python ecommerce.py user --help
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Usage: ecommerce.py user [OPTIONS] COMMAND [ARGS]...
+    Usage: ecommerce.py user [OPTIONS] COMMAND [ARGS]...
 
-Operations for user model.
+      Operations for user model.
 
-Options:
---help  Show this message and exit.
+    Options:
+      --help  Show this message and exit.
 
-Commands:
-create  Create a new user with the given name.
-update  Update user data with the given name.
+    Commands:
+      create  Create a new user with the given name.
+      update  Update user data with the given name.
 
-</span></code>
-</pre>
-</div>
-
-
-```python
+``` python
 !python ecommerce.py user create --help
 ```
 
-<div class="language-text highlight">
-<h3 class="code-label">
-  OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i>
-  <i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output">
-  <code><span>
-Usage: ecommerce.py user create [OPTIONS] NAME
+    Usage: ecommerce.py user create [OPTIONS] NAME
 
-Create a new user with the given name.
+      Create a new user with the given name.
 
-Arguments:
-NAME  Name of the user to create.  [required]
+    Arguments:
+      NAME  Name of the user to create.  [required]
 
-Options:
---help  Show this message and exit.
+    Options:
+      --help  Show this message and exit.
 
-</span></code>
-</pre>
-</div>
-
-
-```python
+``` python
 !python ecommerce.py product --help
 ```
 
 ## Conclusion
 
-Typer is a powerful yet straightforward tool for building CLI applications in Python. By leveraging Python's type hints, it offers an intuitive way to define commands and parameters, automatically handles help documentation, and supports complex command structures with subcommands. Whether you're a beginner or an experienced Python developer, Typer can significantly enhance your productivity in CLI development.
+Typer is a powerful yet straightforward tool for building CLI
+applications in Python. By leveraging Python’s type hints, it offers an
+intuitive way to define commands and parameters, automatically handles
+help documentation, and supports complex command structures with
+subcommands. Whether you’re a beginner or an experienced Python
+developer, Typer can significantly enhance your productivity in CLI
+development.
 
 Happy coding with Typer! 🐍✨

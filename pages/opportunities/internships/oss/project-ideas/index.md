@@ -46,7 +46,7 @@ touch with them directly if you have any inquiries._
 - **Description**: Makim is based on **make** and focus on improving the way to
   define targets and dependencies. Instead of using the Makefile format, it uses
   yaml format.
-- **Project WEB Page**: <https://osl-incubator.github.io/makim/>
+- **Project WEB Page**: <https://makim.org/>
 - **Repository**: <https://github.com/osl-incubator/makim>
 - **Communication channel**: [Discord](https://opensciencelabs.org/discord)
 - **Project Ideas**:
