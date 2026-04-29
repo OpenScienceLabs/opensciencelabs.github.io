@@ -10,8 +10,6 @@ template: single-sidebar.html
 
 > - **Note 1:** This is the list of projects we intend to propose for **GSoC
 >   2026** (subject to change).
-> - **Note 2:** The **GSoC 2026 Mentoring Organization** application has not
->   opened yet. **Stay tuned!**
 
 Welcome to the Open Science Labs (OSL) project ideas page for Google Summer of
 Code 2026. As an umbrella organization, OSL hosts links to the ideas pages of
