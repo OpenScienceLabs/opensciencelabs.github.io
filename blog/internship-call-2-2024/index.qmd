@@ -184,7 +184,7 @@ Below is the list of projects participating in the current internship cycle. Eac
 
 - **Description:** Sugar aims to organize your stack of containers, gathering some useful scripts and keeping this information centralized in a configuration file. So the command line would be very simple.
 - **Categories:** DevOps, Container Management
-- **Organization/Project Webpage URL:** [https://osl-incubator.github.io/sugar/e](https://osl-incubator.github.io/sugar/)
+- **Organization/Project Webpage URL:** [https://sugar-org.github.io/sugar/e](https://sugar-org.github.io/sugar/)
 - **Contact:** Ivan Ogasawara [ivan.ogasawara@gmail.com](mailto:ivan.ogasawara@gmail.com)
 - **Project Ideas URL:** <https://github.com/osl-incubator/sugar/wiki/OSL-Internship-%E2%80%90-2024-%E2%80%90-2nd-Cycle>
 
