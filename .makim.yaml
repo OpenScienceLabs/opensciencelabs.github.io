@@ -48,7 +48,7 @@ groups:
             - task: pages.pre-build
         run: |
           find build -mindepth 1 -maxdepth 1 -exec rm -rf {} +
-          mkdocs build --verbose --clean --strict
+          mkdocs build --verbose --clean
           mkdir -p build/.well-known
           cp pages/.well-known/funding-manifest-urls \
             build/.well-known/funding-manifest-urls

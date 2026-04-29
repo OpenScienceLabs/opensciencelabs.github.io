@@ -56,7 +56,9 @@ touch with them directly if you have any inquiries._
 - **Project WEB Page**: <https://irx.arxlang.org/>
 - **Repository**: <https://github.com/arxlang/irx>
 - **Communication channel**: [Discord](https://arxlang.org/discord)
-- **Project Ideas**: [link](https://github.com/arxlang/irx/wiki/Project-Ideas)
+- **Project Ideas**:
+  - [link-1](https://github.com/arxlang/irx/wiki/Project-Ideas)
+  - [link-2](https://github.com/arxlang/arx/wiki/Project-Ideas)
 
 ### Data Umbrella - Event Board
 
