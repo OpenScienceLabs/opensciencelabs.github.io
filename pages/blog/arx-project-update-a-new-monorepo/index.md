@@ -36,7 +36,7 @@ The main repository now brings together the three core packages of the compiler 
 * `packages/irx` — IRx, the intermediate representation, semantic/lowering layer, backend, and runtime integration
 * `packages/arx` — Arx, the language frontend and user-facing compiler tooling
 
-The repository now describes these as lockstep-released ecosystem packages, with one shared release workflow across `astx`, `pyirx`, and `arxlang`. ([GitHub][1])
+They are lockstep-released ecosystem packages, with one shared release workflow across `astx`, `pyirx`, and `arxlang`.
 
 That matters because language features usually do not live in only one place. A new syntax feature in Arx may need AST support in ASTx, semantic or lowering support in IRx, and user-facing compiler behavior in Arx. Keeping these packages together makes it easier to evolve the compiler pipeline coherently.
 
@@ -48,7 +48,7 @@ Arx has a Python-like feel, with indentation-based blocks and familiar control-f
 
 The goal is not to copy any single language. The goal is to combine readable syntax, explicit types, native compilation, and data-oriented abstractions.
 
-Arx uses LLVM for native code generation and aims to provide native list, tensor, and dataframe abstractions backed internally by IRx runtime support. The public documentation also describes Arrow-backed numeric tensors with compiler-known shapes and Arrow-backed named-column dataframes as key features. ([GitHub][1])
+Arx uses LLVM for native code generation and provides support for tensors, dataframes, and series backed by Arrow C++ data containers.
 
 That combination is the core of the project’s identity: Arx is not only trying to be a general-purpose compiler experiment. It is moving toward a language where data containers, Arrow interoperability, and native execution are part of the foundation.
 
@@ -91,7 +91,7 @@ This is still early, but it establishes a foundation for object-oriented pattern
 
 ### Lists, tensors, dataframes, and Arrow-backed containers
 
-Arx exposes `list[...]` and `tensor[...]` as distinct public collection forms. The README documents fixed-shape tensors such as `tensor[i32, 2, 2]`, runtime-shaped tensor parameters such as `tensor[i32, ...]`, and current tensor element types including fixed-width numeric types such as `i8`, `i16`, `i32`, `i64`, `f32`, and `f64`. ([GitHub][1])
+Arx exposes `list[...]` and `tensor[...]` as distinct public collection forms. It supports fixed-shape tensors such as `tensor[i32, 2, 2]`, runtime-shaped tensor parameters such as `tensor[i32, ...]`, and fixed-width numeric tensor element types such as `i8`, `i16`, `i32`, `i64`, `f32`, and `f64`.
 
 ```arx
 fn pick(grid: tensor[i32, 2, 2]) -> i32:
@@ -116,11 +116,11 @@ fn sum_values() -> i32:
   return total
 ```
 
-The project also has builtin support for `range(...)`, and for-in loops can iterate over list-valued expressions such as ranges, list literals, and list variables. ([GitHub][1])
+The project also has builtin support for `range(...)`, and for-in loops can iterate over list-valued expressions such as ranges, list literals, and list variables.
 
 ### Builtins and standard library direction
 
-Arx now ships a bundled pure-Arx standard library under the reserved `stdlib` namespace. Compiler-provided builtins are kept separate from the public standard library, and builtin functions such as `range(...)` are available automatically. ([GitHub][1])
+Arx now ships a bundled pure-Arx standard library under the reserved `stdlib` namespace. Compiler-provided builtins are kept separate from the public standard library, and builtin functions such as `range(...)` are available automatically.
 
 ```arx
 import math from stdlib
@@ -129,11 +129,11 @@ fn main() -> i32:
   return math.square(4)
 ```
 
-This separation is important. Builtins are compiler-provided, while `stdlib` is where regular Arx library code can grow.
+This separation is important. Builtins are compiler-provided, while `stdlib` should be imported.
 
 ### Testing support
 
-Arx also has an `arx test` subcommand. The runner searches for test files, discovers zero-argument `test_*` functions returning `none`, and executes each test in its own compiled subprocess. ([GitHub][1])
+Arx also has an `arx test` subcommand. The runner searches for test files, discovers zero-argument `test_*` functions returning `none`, and executes each test in its own compiled subprocess.
 
 ```bash
 arx test
@@ -147,11 +147,9 @@ For a young language, this is a very practical feature. It makes it easier to wr
 
 A lot of the data-oriented foundation lives in IRx.
 
-IRx lowers ASTx nodes to LLVM IR using `llvmlite`, provides a visitor-based code generation pipeline, and can produce runnable executables through `clang`. Its documentation describes support for arithmetic, variables, functions, returns, structured control flow, fatal assertions, and system-level expressions. ([IRx][2])
+IRx lowers ASTx nodes to LLVM IR using `llvmlite`, provides a visitor-based code generation pipeline, and can produce runnable executables through `clang`. Its supports arithmetic, variables, functions, returns, structured control flow, fatal assertions, and system-level expressions.
 
-IRx also has runtime feature support for native integrations. The docs describe a builtin array runtime backed by Arrow for low-level array and interoperability work, Arrow C Data import/export boundaries, and Arrow C++ source support for native runtime builds. ([IRx][2])
-
-Alongside that one-dimensional array substrate, IRx exposes an initial internal `Tensor` layer for homogeneous N-dimensional values, backed by Arrow C++ `arrow::Tensor`. The current tensor support is focused on fixed-width numeric element types and readonly Arrow C++ backed storage. ([IRx][2])
+Alongside an one-dimensional array substrate, IRx exposes an initial internal `Tensor` layer for homogeneous N-dimensional values, backed by Arrow C++ `arrow::Tensor`. The current tensor support is focused on fixed-width numeric element types and readonly Arrow C++ backed storage.
 
 This is still early, but it is also one of the strongest signals about where Arx is going: a language where data containers and Arrow-backed runtime support are part of the compiler architecture, not an afterthought.
 
@@ -159,7 +157,7 @@ This is still early, but it is also one of the strongest signals about where Arx
 
 Another important piece of the ecosystem is `arxpm`.
 
-`arxpm` is the Arx project manager and workspace tool. It owns `.arxproject.toml` rendering, project layout inference and validation, default target selection, Python environment provisioning via `uv`, and user-facing workflow commands. ([GitHub][3])
+`arxpm` is the Arx project manager and workspace tool. It owns `.arxproject.toml` rendering, project layout inference and validation, default target selection, Python environment provisioning via `uv`, and user-facing workflow commands.
 
 Current commands include:
 
@@ -184,7 +182,7 @@ This is a big deal for usability. A language does not become comfortable only be
 
 There is also an early VS Code extension: `vscode-arx`.
 
-For now, it is intentionally simple. It is a highlight-only extension with TextMate syntax highlighting for Arx files and basic language configuration, including line comments, brackets, auto-closing pairs, and surrounding pairs. The README explicitly says it has no language server, commands, or runtime extension code yet. ([GitHub][4])
+For now, it is intentionally simple. It is a highlight-only extension with TextMate syntax highlighting for Arx files and basic language configuration, including line comments, brackets, auto-closing pairs, and surrounding pairs. The README explicitly says it has no language server, commands, or runtime extension code yet.
 
 That is a good first step. Syntax highlighting already makes writing and reading Arx code more pleasant, and keeping the extension small makes it easier to keep in sync while the language is still evolving.
 
@@ -192,7 +190,7 @@ That is a good first step. Syntax highlighting already makes writing and reading
 
 Another project in the ecosystem is Douki.
 
-Douki is a developer tool for structured YAML docstrings in Python. It keeps docstrings synchronized with function signatures and validates them against a schema, without adding a runtime dependency to the package using it. ([GitHub][5])
+Douki is a developer tool for structured YAML docstrings. It keeps docstrings synchronized with function signatures and validates them against a schema, without adding a runtime dependency to the package using it. For now, douki just supports Python, but soon it will supports arx source files as well.
 
 It supports workflows such as:
 
@@ -207,15 +205,15 @@ This fits naturally with the Arx ecosystem because documentation discipline matt
 
 The Arx ecosystem also has an early Jupyter kernel: `arxlang-jupyter-kernel`.
 
-This first version is a wrapper-style Jupyter kernel. Each cell is compiled with the Arx CLI, executed as a native binary, and then stdout/stderr are returned to Jupyter. ([GitHub][6])
+This first version is a wrapper-style Jupyter kernel. Each cell is compiled with the Arx CLI, executed as a native binary, and then stdout/stderr are returned to Jupyter.
 
 This is very early, but it is an exciting direction. If Arx grows toward scientific computing, dataframes, tensors, Arrow integration, and machine learning workflows, notebooks are a natural environment for experimentation, teaching, demos, and data exploration.
 
 ## Why this matters for data science users
 
-Arx is not trying to replace Python tomorrow. Python has a massive ecosystem, and tools like NumPy, pandas, PyArrow, Polars, scikit-learn, Jupyter, and PyTorch are already deeply established.
+Arx is not trying to replace Python. Python has a massive ecosystem, and tools like NumPy, pandas, PyArrow, Polars, scikit-learn, Jupyter, and PyTorch are already deeply established.
 
-But Arx can explore a different point in the design space.
+Instead, Arx explores a different point in the design space: a language with native Arrow-backed data containers, compiler-aware data operations, and future Python bindings so Arx libraries can be used from existing Python workflows.
 
 What would it look like to have a language where Arrow data types are first-class? What would it look like to have tensors, tables, and dataframes represented directly in the language and compiler pipeline? What would it look like to combine readable syntax, native compilation, and Arrow-backed runtime structures from the beginning?
 
@@ -241,7 +239,7 @@ Some ideas for the future include:
 
 * Python bindings to use Arx libraries from Python
 * Arx bindings to use Python libraries from Arx
-* a scientific computing library for Arx, possibly `sciarx`
+* a scientific computing library for Arx (`sciarx`)
 * a machine learning library for Arx
 * expanded support for Apache Arrow data types
 * expanded support for Arrow compute functions
@@ -266,9 +264,10 @@ Arx is not production-ready yet, and that is okay. This is the stage where the f
 
 And honestly, that is one of the most fun stages of a language project.
 
-[1]: https://github.com/arxlang/arx "GitHub - arxlang/arx · GitHub"
-[2]: https://irx.arxlang.org/?utm_source=chatgpt.com "IRx"
-[3]: https://github.com/arxlang/arxpm "GitHub - arxlang/arxpm · GitHub"
-[4]: https://github.com/arxlang/vscode-arx/ "GitHub - arxlang/vscode-arx · GitHub"
-[5]: https://github.com/arxlang/douki "GitHub - arxlang/douki · GitHub"
-[6]: https://github.com/arxlang/arxlang-jupyter-kernel "GitHub - arxlang/arxlang-jupyter-kernel · GitHub"
+For more information, checkout the official repositories:
+
+* https://github.com/arxlang/arx
+* https://github.com/arxlang/arxpm
+* https://github.com/arxlang/vscode-arx
+* https://github.com/arxlang/douki
+* https://github.com/arxlang/arxlang-jupyter-kernel
