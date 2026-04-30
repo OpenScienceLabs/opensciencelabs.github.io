@@ -12,9 +12,9 @@
 
     <meta name="description" content="Arx is evolving into a broader language ecosystem for data-oriented computing. Recent updates include the new monorepo for ASTx, IRx, and Arx, early tooling like ArxPM, VS Code syntax highlighting, Douki docstring support, and an  experimental Jupyter kernel. The language itself is also growing with features  such as typed functions, classes, templates, collections, dataframes, and  compiler/runtime improvements.">
     <meta name="keywords" content="open science,data science,latam">
-    <meta name="last-modified" content="2026-04-29">
-    <meta name="DC.date.modified" content="2026-04-29">
-    <meta property="og:updated_time" content="2026-04-29T00:00:00Z">
+    <meta name="last-modified" content="2026-04-30">
+    <meta name="DC.date.modified" content="2026-04-30">
+    <meta property="og:updated_time" content="2026-04-30T00:00:00Z">
 
     <meta property="og:locale" content="es">
     <meta property="og:locale:alternate" content="pt">
@@ -34,7 +34,7 @@
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Arx Project Update: A New Monorepo, Better Tooling, and the First Steps Toward a Bigger Ecosystem",
-        "dateModified": "2026-04-29T00:00:00Z",
+        "dateModified": "2026-04-30T00:00:00Z",
         "url": "https://opensciencelabs.org/blog/arx-project-update-a-new-monorepo/"
       }
     </script>
@@ -1811,117 +1811,166 @@
 
   <!-- Article body -->
   <div class="post_body">
-    <p>The Arx project has been moving fast lately, and it feels like a good moment to share where things are today.</p>
-<p>Arx is still an early-stage programming language and compiler project, but the direction is becoming much clearer: a language focused on data-oriented computing, native collection abstractions, and a compiler pipeline that can grow into something practical for scientific, analytical, and systems-oriented work. The project currently aims to provide native list, tensor, and dataframe abstractions, backed internally by IRx runtime support, while using LLVM for native code generation. (<a href="https://arxlang.org/" title="ArxLang">ArxLang</a>)</p>
-<p>A lot has changed recently, not only in the language itself, but also around the ecosystem: project management, editor support, documentation tooling, and early notebook integration.</p>
+    <h1 id="arx-project-update-a-new-monorepo-arrow-backed-data-containers-and-a-growing-ecosystem">Arx Project Update: A New Monorepo, Arrow-Backed Data Containers, and a Growing Ecosystem<a class="headerlink" href="#arx-project-update-a-new-monorepo-arrow-backed-data-containers-and-a-growing-ecosystem" title="Permanent link"> #</a></h1>
+<p>The Arx project has been moving fast lately, and this feels like a good moment to share where things are today.</p>
+<p>Arx is still an early-stage programming language and compiler project, but the direction is becoming much clearer: a language focused on data-oriented computing, native collection abstractions, and a compiler pipeline designed to work naturally with modern data systems.</p>
+<p>One of the most important parts of this direction is Apache Arrow. Arrow data types are already first-class citizens inside Arx. Today, that support covers a small but important fraction of Arrow-backed containers, especially <code>Tensor</code> and <code>Table</code>. The plan is to expand this foundation with more Arrow data types and Arrow compute functions over time.</p>
+<p>This makes Arx especially interesting for people working with data science, analytics, numerical computing, dataframe workflows, columnar memory, and high-performance data processing. If you are already familiar with Apache Arrow, PyArrow, pandas, Polars, NumPy, or scientific Python workflows, Arx is exploring a space that should feel very relevant.</p>
 <h2 id="the-arx-monorepo">The Arx monorepo<a class="headerlink" href="#the-arx-monorepo" title="Permanent link"> #</a></h2>
-<p>One of the biggest changes is that Arx is now organized as a monorepo.</p>
+<p>One of the biggest recent changes is that Arx is now organized as a monorepo.</p>
 <p>The main repository now brings together the three core packages of the compiler stack:</p>
 <ul>
 <li><code>packages/astx</code> — ASTx, the abstract syntax tree foundation</li>
 <li><code>packages/irx</code> — IRx, the intermediate representation, semantic/lowering layer, backend, and runtime integration</li>
 <li><code>packages/arx</code> — Arx, the language frontend and user-facing compiler tooling</li>
 </ul>
-<p>This is a big step for the project. Previously, these pieces evolved more independently. Now, they can move together in a more coordinated way. The repository uses a lockstep release workflow, where ASTx, IRx, and Arx share one version and are built/published together. (<a href="https://github.com/arxlang/arx" title="GitHub - arxlang/arx · GitHub">GitHub</a>)</p>
-<p>That matters because language features often touch more than one layer. For example, a new syntax feature in Arx may require AST support in ASTx, semantic or lowering support in IRx, and user-facing behavior in the Arx compiler. Keeping these packages close together makes it easier to evolve the compiler pipeline without scattering related changes across multiple repositories.</p>
-<p>In practice, this should make development simpler, reviews more coherent, and cross-package refactors easier to manage.</p>
+<p>They are lockstep-released ecosystem packages, with one shared release workflow across <code>astx</code>, <code>pyirx</code>, and <code>arxlang</code>.</p>
+<p>That matters because language features usually do not live in only one place. A new syntax feature in Arx may need AST support in ASTx, semantic or lowering support in IRx, and user-facing compiler behavior in Arx. Keeping these packages together makes it easier to evolve the compiler pipeline coherently.</p>
+<p>In practice, this should make development simpler, reviews more focused, and cross-package refactors easier to manage.</p>
+<h2 id="a-language-for-data-oriented-computing">A language for data-oriented computing<a class="headerlink" href="#a-language-for-data-oriented-computing" title="Permanent link"> #</a></h2>
+<p>Arx has a Python-like feel, with indentation-based blocks and familiar control-flow syntax, while also taking inspiration from languages such as C++, Rust, Java, Go, and JavaScript.</p>
+<p>The goal is not to copy any single language. The goal is to combine readable syntax, explicit types, native compilation, and data-oriented abstractions.</p>
+<p>Arx uses LLVM for native code generation and provides support for tensors, dataframes, and series backed by Arrow C++ data containers.</p>
+<p>That combination is the core of the project’s identity: Arx is not only trying to be a general-purpose compiler experiment. It is moving toward a language where data containers, Arrow interoperability, and native execution are part of the foundation.</p>
 <h2 id="what-arx-supports-today">What Arx supports today<a class="headerlink" href="#what-arx-supports-today" title="Permanent link"> #</a></h2>
 <p>Arx is still a prototype, but it already has several important language pieces in place.</p>
-<p>The language has a Python-like feel, with indentation-based blocks and familiar control-flow syntax, while also taking inspiration from C++ and YAML. The current documentation describes Arx as a language focused on data-oriented computing, with planned static typing and native abstractions for lists, tensors, and dataframes. (<a href="https://arxlang.org/" title="ArxLang">ArxLang</a>)</p>
-<p>Some of the current highlights include:</p>
 <h3 id="functions-and-typed-signatures">Functions and typed signatures<a class="headerlink" href="#functions-and-typed-signatures" title="Permanent link"> #</a></h3>
-<p>Arx functions are defined with <code>fn</code>, typed parameters, and an explicit return type. Function return types are required, including <code>-&gt; none</code> for functions that do not return a value. (<a href="https://arxlang.org/library/functions.html" title="functions – ArxLang">ArxLang</a>)</p>
+<p>Arx functions are defined with <code>fn</code>, typed parameters, and explicit return types.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>fn add(x: i32, y: i32) -&gt; i32:
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  return x + y
 </span></code></pre></div>
-<p>Arx also supports function calls, default parameter values, extern prototypes, and template functions with bounded type parameters. (<a href="https://arxlang.org/library/functions.html" title="functions – ArxLang">ArxLang</a>)</p>
+<p>The language also supports function calls, default parameter values, extern prototypes, and template-style functions with bounded type parameters.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>@&lt;T: i32 | f64&gt;
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>fn add(x: T, y: T) -&gt; T:
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  return x + y
 </span></code></pre></div>
-<p>This is especially exciting because it points toward a language that can express generic behavior while still keeping types explicit and compiler-friendly.</p>
+<p>This is an important step toward writing reusable code while still keeping the compiler pipeline explicit and type-aware.</p>
 <h3 id="classes">Classes<a class="headerlink" href="#classes" title="Permanent link"> #</a></h3>
-<p>Class support has also landed. Arx class declarations support fields, methods, annotations, visibility modifiers, static fields/methods, abstract declarations, and default construction. (<a href="https://arxlang.org/library/classes.html" title="classes – ArxLang">ArxLang</a>)</p>
+<p>Class support has also been added. Arx supports class declarations with fields and methods, giving the language a clearer path for organizing larger programs.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>class Counter:
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  value: int32 = 0
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  value: i32 = 0
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  fn get(self) -&gt; int32:
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  fn get(self) -&gt; i32:
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    return self.value
 </span></code></pre></div>
-<p>There is still a lot to grow here, but the current model already establishes the basic structure for object-oriented patterns in Arx.</p>
-<h3 id="lists-tensors-and-dataframes">Lists, tensors, and dataframes<a class="headerlink" href="#lists-tensors-and-dataframes" title="Permanent link"> #</a></h3>
-<p>Arx now exposes <code>list[...]</code> and <code>tensor[...]</code> as distinct collection forms, including fixed-shape tensors such as <code>tensor[i32, 2, 2]</code> and runtime-shaped tensor parameters such as <code>tensor[i32, ...]</code>. (<a href="https://github.com/arxlang/arx" title="GitHub - arxlang/arx · GitHub">GitHub</a>)</p>
-<p>The docs also describe dataframe and series annotations, including static-schema dataframe forms such as:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>dataframe[id: i32, score: f64]
+<p>This is still early, but it establishes a foundation for object-oriented patterns inside Arx.</p>
+<h3 id="lists-tensors-dataframes-and-arrow-backed-containers">Lists, tensors, dataframes, and Arrow-backed containers<a class="headerlink" href="#lists-tensors-dataframes-and-arrow-backed-containers" title="Permanent link"> #</a></h3>
+<p>Arx exposes <code>list[...]</code> and <code>tensor[...]</code> as distinct public collection forms. It supports fixed-shape tensors such as <code>tensor[i32, 2, 2]</code>, runtime-shaped tensor parameters such as <code>tensor[i32, ...]</code>, and fixed-width numeric tensor element types such as <code>i8</code>, <code>i16</code>, <code>i32</code>, <code>i64</code>, <code>f32</code>, and <code>f64</code>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>fn pick(grid: tensor[i32, 2, 2]) -&gt; i32:
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  return grid[1, 0]
 </span></code></pre></div>
-<p>and typed series such as:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>series[f64]
-</span></code></pre></div>
-<p>These APIs are still evolving, but they show the direction clearly: Arx wants data structures to be first-class language concepts, not only library-level conventions. (<a href="https://arxlang.org/library/datatypes.html" title="datatypes – ArxLang">ArxLang</a>)</p>
+<p>The important detail is that Arx is not treating these containers as simple syntax sugar. Some of them are backed by Apache Arrow C++ data types. Today, this support is still limited to a small fraction of Arrow’s world, especially <code>Tensor</code> and <code>Table</code>, but the direction is already clear: Arrow data types are first-class citizens in Arx, and support will expand to more Arrow data types and functions.</p>
+<p>For people coming from data science or data infrastructure, this is one of the most exciting parts of the project. Arx has the opportunity to make Arrow-native data structures feel natural at the language level, instead of only being accessed through external libraries.</p>
 <h3 id="control-flow">Control flow<a class="headerlink" href="#control-flow" title="Permanent link"> #</a></h3>
-<p>Arx currently supports <code>if</code>/<code>else</code>, <code>while</code>, and two forms of <code>for</code> loops: a for-in style and a count-style loop. (<a href="https://arxlang.org/library/control-flow.html" title="control-flow – ArxLang">ArxLang</a>)</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>fn sum_values() -&gt; i32:
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>  var total: i32 = 0
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>  for value in [1, 2, 3]:
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    total = total + value
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>  return total
+<p>Arx supports familiar control flow such as <code>if</code>/<code>else</code>, <code>while</code>, and <code>for</code> loops.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>fn sum_values() -&gt; i32:
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  var total: i32 = 0
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>  for value in [1, 2, 3]:
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    total = total + value
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>  return total
 </span></code></pre></div>
-<p>The for-in loop can iterate over list-valued expressions, including list literals, list variables, and the builtin <code>range(start, stop[, step])</code>. (<a href="https://arxlang.org/library/control-flow.html" title="control-flow – ArxLang">ArxLang</a>)</p>
+<p>The project also has builtin support for <code>range(...)</code>, and for-in loops can iterate over list-valued expressions such as ranges, list literals, and list variables.</p>
 <h3 id="builtins-and-standard-library-direction">Builtins and standard library direction<a class="headerlink" href="#builtins-and-standard-library-direction" title="Permanent link"> #</a></h3>
-<p>Arx now has a bundled pure-Arx standard library under the reserved <code>stdlib</code> namespace. The compiler also has internal builtin modules, separate from user-facing stdlib imports. The first builtin module is <code>generators</code>, currently exposing a <code>range(start, stop[, step]) -&gt; list[i32]</code> MVP. (<a href="https://github.com/arxlang/arx" title="GitHub - arxlang/arx · GitHub">GitHub</a>)</p>
-<p>That separation is important: builtins are compiler-provided, while <code>stdlib</code> is where regular Arx library code can grow.</p>
-<h3 id="cli-and-compiler-outputs">CLI and compiler outputs<a class="headerlink" href="#cli-and-compiler-outputs" title="Permanent link"> #</a></h3>
-<p>Arx supports multiple output modes, including inspecting tokens, AST, LLVM IR, and compiling to object/native outputs. The README also documents explicit executable link modes such as <code>auto</code>, <code>pie</code>, and <code>no-pie</code>, which helps in environments where the linker defaults can cause PIE-related issues. (<a href="https://arxlang.org/" title="ArxLang">ArxLang</a>)</p>
-<h2 id="recent-compiler-progress">Recent compiler progress<a class="headerlink" href="#recent-compiler-progress" title="Permanent link"> #</a></h2>
-<p>The changelog shows a lot of activity in April 2026. Recent releases added or improved class support, imports, settings, testing, template call parsing, parser organization, lexer layout, and alignment of the Arx surface syntax with IRx array-first naming. (<a href="https://arxlang.org/changelog/" title="Changelog - ArxLang">ArxLang</a>)</p>
-<p>That may sound like internal compiler plumbing, but it is exactly the kind of work a young language needs. Better parsing, clearer syntax rules, stronger tests, and tighter AST/IR alignment make it easier to add future language features without constantly fighting the foundations.</p>
-<h2 id="arxpm-project-management-for-arx">arxpm: project management for Arx<a class="headerlink" href="#arxpm-project-management-for-arx" title="Permanent link"> #</a></h2>
-<p>Another important piece is <code>arxpm</code>, the Arx project manager and workspace tool.</p>
-<p>The goal of <code>arxpm</code> is to make Arx projects easier to create, build, run, package, publish, and validate. It owns project layout inference, <code>.arxproject.toml</code> rendering, manifest validation, default target selection, environment provisioning, and user-facing workflow commands. It also uses <code>uv</code> for Python environment/package installation workflows. (<a href="https://github.com/arxlang/arxpm" title="GitHub - arxlang/arxpm · GitHub">GitHub</a>)</p>
-<p>Current commands include:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>arxpm<span class="w"> </span>init
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>arxpm<span class="w"> </span>config
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>arxpm<span class="w"> </span>install
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>arxpm<span class="w"> </span>add
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>arxpm<span class="w"> </span>build
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>arxpm<span class="w"> </span>compile
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>arxpm<span class="w"> </span>run
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>arxpm<span class="w"> </span>pack
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>arxpm<span class="w"> </span>publish
-</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>arxpm<span class="w"> </span>healthcheck
+<p>Arx now ships a bundled pure-Arx standard library under the reserved <code>stdlib</code> namespace. Compiler-provided builtins are kept separate from the public standard library, and builtin functions such as <code>range(...)</code> are available automatically.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>import math from stdlib
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>fn main() -&gt; i32:
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>  return math.square(4)
 </span></code></pre></div>
-<p>This is a big deal for usability. A language does not become comfortable only because the compiler works. It also needs a good project workflow. <code>arxpm</code> is the beginning of that story: a place where package management, builds, local dependencies, project configuration, and publishing can become consistent.</p>
+<p>This separation is important. Builtins are compiler-provided, while <code>stdlib</code> should be imported.</p>
+<h3 id="testing-support">Testing support<a class="headerlink" href="#testing-support" title="Permanent link"> #</a></h3>
+<p>Arx also has an <code>arx test</code> subcommand. The runner searches for test files, discovers zero-argument <code>test_*</code> functions returning <code>none</code>, and executes each test in its own compiled subprocess.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>arx<span class="w"> </span><span class="nb">test</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>arx<span class="w"> </span><span class="nb">test</span><span class="w"> </span>-k<span class="w"> </span>square
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>arx<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--list
+</span></code></pre></div>
+<p>For a young language, this is a very practical feature. It makes it easier to write examples, regression tests, compiler tests, and library tests using the language itself.</p>
+<h2 id="irx-and-arrow-runtime-support">IRx and Arrow runtime support<a class="headerlink" href="#irx-and-arrow-runtime-support" title="Permanent link"> #</a></h2>
+<p>A lot of the data-oriented foundation lives in IRx.</p>
+<p>IRx lowers ASTx nodes to LLVM IR using <code>llvmlite</code>, provides a visitor-based code generation pipeline, and can produce runnable executables through <code>clang</code>. Its supports arithmetic, variables, functions, returns, structured control flow, fatal assertions, and system-level expressions.</p>
+<p>Alongside an one-dimensional array substrate, IRx exposes an initial internal <code>Tensor</code> layer for homogeneous N-dimensional values, backed by Arrow C++ <code>arrow::Tensor</code>. The current tensor support is focused on fixed-width numeric element types and readonly Arrow C++ backed storage.</p>
+<p>This is still early, but it is also one of the strongest signals about where Arx is going: a language where data containers and Arrow-backed runtime support are part of the compiler architecture, not an afterthought.</p>
+<h2 id="arxpm-project-management-for-arx">arxpm: project management for Arx<a class="headerlink" href="#arxpm-project-management-for-arx" title="Permanent link"> #</a></h2>
+<p>Another important piece of the ecosystem is <code>arxpm</code>.</p>
+<p><code>arxpm</code> is the Arx project manager and workspace tool. It owns <code>.arxproject.toml</code> rendering, project layout inference and validation, default target selection, Python environment provisioning via <code>uv</code>, and user-facing workflow commands.</p>
+<p>Current commands include:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>arxpm<span class="w"> </span>init
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>arxpm<span class="w"> </span>config
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>arxpm<span class="w"> </span>install
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>arxpm<span class="w"> </span>add
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>arxpm<span class="w"> </span>build
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>arxpm<span class="w"> </span>compile
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>arxpm<span class="w"> </span>run
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>arxpm<span class="w"> </span>pack
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>arxpm<span class="w"> </span>publish
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>arxpm<span class="w"> </span>healthcheck
+</span></code></pre></div>
+<p>This is a big deal for usability. A language does not become comfortable only because the compiler works. It also needs a good project workflow.</p>
+<p><code>arxpm</code> is the beginning of that story: a place where package management, builds, local dependencies, project configuration, and publishing can become consistent.</p>
 <h2 id="vscode-arx-early-editor-support">vscode-arx: early editor support<a class="headerlink" href="#vscode-arx-early-editor-support" title="Permanent link"> #</a></h2>
 <p>There is also an early VS Code extension: <code>vscode-arx</code>.</p>
-<p>For now, it is intentionally simple. It is a highlight-only extension with TextMate syntax highlighting for Arx files and basic language configuration, including line comments, brackets, auto-closing pairs, and surrounding pairs. It does not include a language server, commands, or runtime extension code yet. (<a href="https://github.com/arxlang/vscode-arx/" title="GitHub - arxlang/vscode-arx · GitHub">GitHub</a>)</p>
-<p>That is a good first step. Syntax highlighting already makes writing and reading <code>.x</code> files more pleasant, and keeping the extension small makes it easier to keep in sync with the language while the syntax is still changing.</p>
+<p>For now, it is intentionally simple. It is a highlight-only extension with TextMate syntax highlighting for Arx files and basic language configuration, including line comments, brackets, auto-closing pairs, and surrounding pairs. The README explicitly says it has no language server, commands, or runtime extension code yet.</p>
+<p>That is a good first step. Syntax highlighting already makes writing and reading Arx code more pleasant, and keeping the extension small makes it easier to keep in sync while the language is still evolving.</p>
 <h2 id="douki-structured-docstrings-with-yaml">Douki: structured docstrings with YAML<a class="headerlink" href="#douki-structured-docstrings-with-yaml" title="Permanent link"> #</a></h2>
-<p>Another project in the ecosystem is Douki, a docstring formatter and checker based on structured YAML docstrings.</p>
-<p>Douki keeps docstrings synchronized with function signatures and validates them against a schema, without requiring a runtime dependency in the package using it. It supports commands such as <code>douki check</code> and <code>douki sync</code>, and it can also migrate existing NumPy-style docstrings. (<a href="https://github.com/arxlang/douki" title="GitHub - arxlang/douki · GitHub">GitHub</a>)</p>
-<p>This fits naturally with Arx because Arx itself already uses YAML-like docstring blocks in examples and documentation. Having a dedicated tool for structured documentation helps keep APIs readable, consistent, and easier to validate automatically.</p>
+<p>Another project in the ecosystem is Douki.</p>
+<p>Douki is a developer tool for structured YAML docstrings. It keeps docstrings synchronized with function signatures and validates them against a schema, without adding a runtime dependency to the package using it. For now, douki just supports Python, but soon it will supports arx source files as well.</p>
+<p>It supports workflows such as:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>douki<span class="w"> </span>check<span class="w"> </span>src/
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>douki<span class="w"> </span>sync<span class="w"> </span>src/
+</span></code></pre></div>
+<p>This fits naturally with the Arx ecosystem because documentation discipline matters a lot in fast-moving compiler and language projects. Having a dedicated tool for structured documentation helps keep APIs readable, consistent, and easier to validate automatically.</p>
 <h2 id="arxlang-jupyter-kernel-first-notebook-experiments">arxlang-jupyter-kernel: first notebook experiments<a class="headerlink" href="#arxlang-jupyter-kernel-first-notebook-experiments" title="Permanent link"> #</a></h2>
 <p>The Arx ecosystem also has an early Jupyter kernel: <code>arxlang-jupyter-kernel</code>.</p>
-<p>This first version works as a wrapper-style kernel. Each cell is compiled with the Arx CLI, executed as a native binary, and then stdout/stderr are returned to Jupyter. It keeps a session prelude with previously successful cells, so new cells compile as the previous successful source plus the current cell. (<a href="https://github.com/arxlang/arxlang-jupyter-kernel" title="GitHub - arxlang/arxlang-jupyter-kernel · GitHub">GitHub</a>)</p>
-<p>This is very early, but it is an exciting direction. If Arx grows toward scientific computing, dataframes, tensors, Arrow integration, and ML workflows, then notebooks are a natural environment for experimentation, teaching, and demos.</p>
+<p>This first version is a wrapper-style Jupyter kernel. Each cell is compiled with the Arx CLI, executed as a native binary, and then stdout/stderr are returned to Jupyter.</p>
+<p>This is very early, but it is an exciting direction. If Arx grows toward scientific computing, dataframes, tensors, Arrow integration, and machine learning workflows, notebooks are a natural environment for experimentation, teaching, demos, and data exploration.</p>
+<h2 id="why-this-matters-for-data-science-users">Why this matters for data science users<a class="headerlink" href="#why-this-matters-for-data-science-users" title="Permanent link"> #</a></h2>
+<p>Arx is not trying to replace Python. Python has a massive ecosystem, and tools like NumPy, pandas, PyArrow, Polars, scikit-learn, Jupyter, and PyTorch are already deeply established.</p>
+<p>Instead, Arx explores a different point in the design space: a language with native Arrow-backed data containers, compiler-aware data operations, and future Python bindings so Arx libraries can be used from existing Python workflows.</p>
+<p>What would it look like to have a language where Arrow data types are first-class? What would it look like to have tensors, tables, and dataframes represented directly in the language and compiler pipeline? What would it look like to combine readable syntax, native compilation, and Arrow-backed runtime structures from the beginning?</p>
+<p>That is the interesting space Arx is moving into.</p>
+<p>For data science and data infrastructure people, this means Arx may become a place to experiment with ideas around:</p>
+<ul>
+<li>Arrow-native data containers</li>
+<li>dataframe and table abstractions</li>
+<li>tensor-oriented computation</li>
+<li>scientific computing workflows</li>
+<li>native execution</li>
+<li>Python interoperability</li>
+<li>compiler-aware data operations</li>
+</ul>
+<p>The project is still young, but the foundation is becoming much more concrete.</p>
 <h2 id="where-arx-could-go-next">Where Arx could go next<a class="headerlink" href="#where-arx-could-go-next" title="Permanent link"> #</a></h2>
-<p>The current work gives Arx a stronger base. The next steps can now be more ambitious.</p>
+<p>The current work gives Arx a stronger base. The next steps can now be more ambitious, especially around data science, Apache Arrow, and interoperability with the broader Python ecosystem.</p>
 <p>Some ideas for the future include:</p>
 <ul>
 <li>Python bindings to use Arx libraries from Python</li>
 <li>Arx bindings to use Python libraries from Arx</li>
-<li>a scientific computing library for Arx, possibly <code>sciarx</code></li>
+<li>a scientific computing library for Arx (<code>sciarx</code>)</li>
 <li>a machine learning library for Arx</li>
-<li>deeper Apache Arrow integration, with more Arrow functions and tools available natively</li>
+<li>expanded support for Apache Arrow data types</li>
+<li>expanded support for Arrow compute functions</li>
+<li>more native support for Arrow-backed containers, including tensors, tables, arrays, schemas, and related tools</li>
 <li>more builtin functionality for files, networking protocols, system interaction, and common runtime tasks</li>
 </ul>
-<p>The Python interoperability story is especially interesting. Python already has a massive scientific and ML ecosystem. If Arx can interoperate well with Python, it could become easier to experiment with Arx without needing to rebuild the whole world from scratch.</p>
-<p>At the same time, native Arx libraries for scientific computing and ML would help define what makes the language unique. The long-term vision is not only “a compiler that works,” but a language ecosystem that feels useful for real data-oriented projects.</p>
+<p>The Python interoperability story is especially important. Python already has a huge scientific and machine learning ecosystem. If Arx can interoperate well with Python while also providing native Arrow-backed data structures, it could become easier to experiment with Arx inside existing data workflows.</p>
+<p>At the same time, native Arx libraries for scientific computing and machine learning would help define what makes the language unique. The long-term vision is not only “a compiler that works,” but a language ecosystem where data containers, Arrow memory, native execution, and high-level syntax work together naturally.</p>
 <h2 id="final-thoughts">Final thoughts<a class="headerlink" href="#final-thoughts" title="Permanent link"> #</a></h2>
-<p>Arx is still young, and many things are intentionally experimental. But the recent updates show a project that is becoming more organized and more ambitious.</p>
-<p>The monorepo brings the compiler stack closer together. ArxPM starts to shape the developer workflow. VS Code support makes the language easier to write. Douki improves documentation discipline. The Jupyter kernel opens the door to interactive exploration. And inside the language itself, features like classes, typed functions, templates, lists, tensors, dataframes, imports, control flow, and builtins are gradually turning Arx into something much more concrete.</p>
-<p>There is still a long road ahead, but the direction is exciting: a friendly, typed, data-oriented language with native compilation, Arrow-inspired abstractions, and an ecosystem designed to grow around real workflows.</p>
-<p>Arx is not production-ready yet — and that is okay. This is the stage where the foundations are being shaped, the ideas are being tested, and the ecosystem is starting to take form.</p>
+<p>Arx is still young, and many things are intentionally experimental. But the recent updates show a project that is becoming more organized, more ambitious, and more relevant for people working with data science and data infrastructure.</p>
+<p>The monorepo brings the compiler stack closer together. ArxPM starts to shape the developer workflow. VS Code support makes the language easier to write. Douki improves documentation discipline. The Jupyter kernel opens the door to interactive exploration.</p>
+<p>And inside the language itself, features like typed functions, classes, templates, lists, tensors, tables, dataframes, imports, control flow, builtins, tests, and Arrow-backed containers are gradually turning Arx into something much more concrete.</p>
+<p>There is still a long road ahead, but the direction is exciting: a friendly, typed, data-oriented language with native compilation, Apache Arrow as a core foundation, and an ecosystem designed to grow around real scientific and analytical workflows.</p>
+<p>Arx is not production-ready yet, and that is okay. This is the stage where the foundations are being shaped, the ideas are being tested, and the ecosystem is starting to take form.</p>
 <p>And honestly, that is one of the most fun stages of a language project.</p>
+<p>For more information, checkout the official repositories:</p>
+<ul>
+<li>https://github.com/arxlang/arx</li>
+<li>https://github.com/arxlang/arxpm</li>
+<li>https://github.com/arxlang/vscode-arx</li>
+<li>https://github.com/arxlang/douki</li>
+<li>https://github.com/arxlang/arxlang-jupyter-kernel</li>
+</ul>
   </div>
 </div>
 
@@ -1951,7 +2000,7 @@
           <div class="mt-4">
             <small class="badge-updated">
               
-                Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2026-04-29</span>
+                Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2026-04-30</span>
               
               
             </small>
