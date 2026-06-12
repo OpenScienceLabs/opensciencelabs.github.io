@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 
     
-    <title>Incubation · Open Science Labs</title>
+    <title>ArxLang VS Code Extension: A Closer Look · Open Science Labs</title>
 
-    <meta name="description" content="Incubator Program">
+    <meta name="description" content="A closer look at the ArxLang VS Code extension, its features, and how it is built.">
     <meta name="keywords" content="open science,data science,latam">
     <meta name="last-modified" content="2026-06-12">
     <meta name="DC.date.modified" content="2026-06-12">
@@ -19,13 +19,13 @@
     <meta property="og:locale" content="es">
     <meta property="og:locale:alternate" content="pt">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://opensciencelabs.org/projects/incubation/">
-    <meta property="og:title" content="Incubation">
-    <meta property="og:description" content="Incubator Program">
+    <meta property="og:url" content="https://opensciencelabs.org/blog/arxlang-vs-code-extension-a-closer-look/">
+    <meta property="og:title" content="ArxLang VS Code Extension: A Closer Look">
+    <meta property="og:description" content="A closer look at the ArxLang VS Code extension, its features, and how it is built.">
     <meta property="og:image" content="/images/thumbnail.png">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Incubation">
+    <meta name="twitter:title" content="ArxLang VS Code Extension: A Closer Look">
     <meta name="twitter:image" content="/images/thumbnail.png">
     <meta name="twitter:creator" content="">
 
@@ -33,9 +33,9 @@
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Incubation",
+        "name": "ArxLang VS Code Extension: A Closer Look",
         "dateModified": "2026-06-12T00:00:00Z",
-        "url": "https://opensciencelabs.org/projects/incubation/"
+        "url": "https://opensciencelabs.org/blog/arxlang-vs-code-extension-a-closer-look/"
       }
     </script>
 
@@ -51,7 +51,7 @@
     </script>
 
 
-    <link rel="canonical" href="https://opensciencelabs.org/projects/incubation/">
+    <link rel="canonical" href="https://opensciencelabs.org/blog/arxlang-vs-code-extension-a-closer-look/">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
@@ -150,7 +150,7 @@
                   <!-- Top-level single page -->
                   <li class="nav-item ">
                     <a class="nav-link "
-                      href="../../blog/"
+                      href="../"
                       aria-current="false">
                       Blog
                     </a>
@@ -165,8 +165,8 @@
                   
 
                   <!-- Top-level section with children => MEGA DROPDOWN + Bootstrap accordion -->
-                  <li class="nav-item dropdown nav_active">
-                    <a class="nav-link dropdown-toggle active"
+                  <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle "
                       href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
                       aria-expanded="false">
                       Projects
@@ -195,19 +195,7 @@
                               
                               <div class="px-1">
                                 <a class="dropdown-item "
-                                  href="../">Overview</a>
-                              </div>
-                            
-
-                          
-                        
-                          
-
-                            
-                              
-                              <div class="px-1">
-                                <a class="dropdown-item active"
-                                  href="./">Incubation</a>
+                                  href="../../projects/">Overview</a>
                               </div>
                             
 
@@ -219,7 +207,7 @@
                               
                               <div class="px-1">
                                 <a class="dropdown-item "
-                                  href="../affiliation/">Affiliation</a>
+                                  href="../../projects/incubation/">Incubation</a>
                               </div>
                             
 
@@ -231,7 +219,19 @@
                               
                               <div class="px-1">
                                 <a class="dropdown-item "
-                                  href="../list/">All Projects</a>
+                                  href="../../projects/affiliation/">Affiliation</a>
+                              </div>
+                            
+
+                          
+                        
+                          
+
+                            
+                              
+                              <div class="px-1">
+                                <a class="dropdown-item "
+                                  href="../../projects/list/">All Projects</a>
                               </div>
                             
 
@@ -1060,7 +1060,7 @@
                 <div class="accordion-item bg-transparent border-0">
                   <h2 class="accordion-header" id="h-top-1">
                     <a class="nav-link px-0 py-2 "
-                      href="../../blog/">Blog</a>
+                      href="../">Blog</a>
                   </h2>
                 </div>
 
@@ -1098,17 +1098,7 @@
                           
                             
                             <a class="nav-link py-1 "
-                              href="../">Overview</a>
-                          
-
-                        
-                      
-                        
-
-                          
-                            
-                            <a class="nav-link py-1 active"
-                              href="./">Incubation</a>
+                              href="../../projects/">Overview</a>
                           
 
                         
@@ -1118,7 +1108,7 @@
                           
                             
                             <a class="nav-link py-1 "
-                              href="../affiliation/">Affiliation</a>
+                              href="../../projects/incubation/">Incubation</a>
                           
 
                         
@@ -1128,7 +1118,17 @@
                           
                             
                             <a class="nav-link py-1 "
-                              href="../list/">All Projects</a>
+                              href="../../projects/affiliation/">Affiliation</a>
+                          
+
+                        
+                      
+                        
+
+                          
+                            
+                            <a class="nav-link py-1 "
+                              href="../../projects/list/">All Projects</a>
                           
 
                         
@@ -1751,127 +1751,158 @@
             <div class="row">
               <div class="col-12 col-xl-10 mx-auto">
                 
-                  <h1 id="open-science-labs-osl-incubator-program">Open Science Labs (OSL) Incubator Program<a class="headerlink" href="#open-science-labs-osl-incubator-program" title="Permanent link"> #</a></h1>
-<p>Open Science Labs is committed to fostering the growth and development of
-innovative scientific projects and/or software for support tasks like DevOps,
-Automation, etc. Our Incubator Program is designed to provide structure and
-support at various stages of development, helping projects grow from a mere idea
-to a fully-fledged, sustainable project. The program is divided into three
-distinct phases:</p>
-<h3 id="1-proof-of-concept-poc">1. Proof of Concept (PoC)<a class="headerlink" href="#1-proof-of-concept-poc" title="Permanent link"> #</a></h3>
-<p><strong>Description:</strong> The PoC phase is the first step, aimed at experimenting with
-new ideas and technologies to determine their feasibility and potential.
-Projects in this phase can be found at
-<a href="https://github.com/osl-pocs">OSL PoC GitHub Repository</a>.</p>
-<p><strong>Criteria:</strong></p>
+
+<div class="blog-article">
+  <h1 class="post-title">
+    <a href="https://opensciencelabs.org/blog/arxlang-vs-code-extension-a-closer-look/" title="ArxLang VS Code Extension: A Closer Look" target="_self">
+      ArxLang VS Code Extension: A Closer Look
+    </a>
+  </h1>
+
+  <!-- Meta row -->
+  <div class="post_meta">
+    <span class="meta_item">
+      <svg class="icon" aria-hidden="true"><use xlink:href="#author"/></svg>
+      <span class="author_name">
+        Yogendra Sankhla
+      </span>
+    </span>
+
+    
+    <span class="meta_item">
+      <svg class="icon" aria-hidden="true"><use xlink:href="#calendar"/></svg>
+      <time class="post_date">Jun 9, 2026</time>
+    </span>
+    
+
+    <!-- Share -->
+    <div class="post_share">
+      <span class="share_label">Share it:</span>
+      <a href="https://twitter.com/intent/tweet?text=ArxLang VS Code Extension: A Closer Look&url=https://opensciencelabs.org/blog/arxlang-vs-code-extension-a-closer-look/&tw_p=tweetbutton"
+         class="twitter" title="Share on X / Twitter" target="_blank" rel="nofollow">
+        <svg class="icon" aria-hidden="true"><use xlink:href="#twitter"/></svg>
+      </a>
+      <a href="https://www.facebook.com/sharer.php?u=https://opensciencelabs.org/blog/arxlang-vs-code-extension-a-closer-look/&t=ArxLang VS Code Extension: A Closer Look"
+         class="facebook" title="Share on Facebook" target="_blank" rel="nofollow">
+        <svg class="icon" aria-hidden="true"><use xlink:href="#facebook"/></svg>
+      </a>
+      <a href="#linkedinshare" id="linkedinshare" class="linkedin" title="Share on LinkedIn" rel="nofollow">
+        <svg class="icon" aria-hidden="true"><use xlink:href="#linkedin"/></svg>
+      </a>
+      <a href="https://opensciencelabs.org/blog/arxlang-vs-code-extension-a-closer-look/" title="Copy link" class="link link_yank">
+        <svg class="icon" aria-hidden="true"><use xlink:href="#copy"/></svg>
+      </a>
+    </div>
+
+    
+  </div>
+
+  <!-- Hero image -->
+  <div class="excerpt_thumbnail my-3">
+    <figure class="mb-3">
+      <picture>
+        <img loading="lazy" decoding="async"
+             class="image_figure image_thumbnail image_internal image_unprocessed"
+             src="/blog/arxlang-vs-code-extension-a-closer-look/header.png"
+             alt="ArxLang VS Code Extension: A Closer Look">
+      </picture>
+    </figure>
+  </div>
+
+  <!-- Article body -->
+  <div class="post_body">
+    <p>I’ve been keeping an eye on the Arx language for a while now. It’s still
+early days for the language, but when I got to know about the new
+version of the VS Code extension, I figured I’d actually sit down and
+try it properly. So here’s my honest take.</p>
+<h2 id="what-is-arx">What is Arx?<a class="headerlink" href="#what-is-arx" title="Permanent link"> #</a></h2>
+<p>Arx is a statically typed language with Python-like indentation, two
+spaces, strictly enforced. Tabs will throw an error. It has a more
+explicit type system than Python and comes with built-in support for
+dataframe, series, and tensor types, making it well-suited for
+data-heavy workloads. The language is currently in draft stage, but the
+syntax is already coherent and well-structured.</p>
+<p>Without the extension, opening <code>.x</code> or <code>.arx</code> files in VS Code gives you
+a plain text experience – means no highlighting, no structure, no
+language recognition.</p>
+<h2 id="installing-the-extension">Installing the Extension<a class="headerlink" href="#installing-the-extension" title="Permanent link"> #</a></h2>
+<p>The extension registers both <code>.x</code> and <code>.arx</code> file extensions. Once
+installed, the language shows up as ArxLang in the VS Code status bar,
+and syntax highlighting activates immediately.</p>
+<p>Standard keywords: <code>fn</code>, <code>class</code>, <code>return</code>, <code>if</code>, <code>while</code>, etc., are
+highlighted as expected. The extension also correctly handles
+Arx-specific constructs like <code>@[public, static, constant]</code> for access
+modifiers and <code>&lt;T: i32 | f64&gt;</code> for template parameter blocks, which are
+fairly unusual compared to most languages.</p>
+<h2 id="docstring-highlighting">Docstring Highlighting<a class="headerlink" href="#docstring-highlighting" title="Permanent link"> #</a></h2>
+<p>Arx uses triple-backtick docstrings with a YAML-like format called
+Douki:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>class BaseCounter:
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  &quot;&quot;&quot;
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  ```douki
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  title: BaseCounter
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  summary: Stores one inherited seed value for derived counters.
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  ```
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  &quot;&quot;&quot;
+</span></code></pre></div>
+<p>Keys are rendered in a muted dark gray, values in a lighter gray-blue.
+The result is readable without competing visually with the surrounding
+code.</p>
+<h2 id="how-its-built">How It’s Built<a class="headerlink" href="#how-its-built" title="Permanent link"> #</a></h2>
+<p>Rather than hand-writing a TextMate grammar JSON file, which tends to
+become large, fragile, and hard to maintain, the extension uses a single
+source-of-truth manifest at <code>syntax/arx.syntax.json</code>. This file defines
+the entire Arx lexical grammar: keywords, operators, builtin types, and
+structural forms. A build script compiles the actual TextMate grammar
+from this manifest automatically, and CI checks that the two are always
+in sync.</p>
+<p>This approach makes the extension easier to maintain as the language
+evolves. Updating the grammar is a matter of editing one file and
+regenerating, rather than manually patching a complex grammar file.</p>
+<h2 id="type-and-operator-coverage">Type and Operator Coverage<a class="headerlink" href="#type-and-operator-coverage" title="Permanent link"> #</a></h2>
+<p>The extension covers a broad range of Arx’s type system:</p>
 <ul>
-<li>Preliminary design and concept.</li>
-<li>A clear vision of the problem the project aims to solve.</li>
-<li>Must be licensed under a license approved by Open Source Initiative (OSI).</li>
+<li>Integer varieties: <code>i8</code> through <code>i64</code> (including <code>int8</code>–<code>int64</code> and
+  equivalent expanded aliases for boolean, string, and float categories)</li>
+<li>Float types: <code>f16</code> to <code>f64</code></li>
+<li>Primitive types: <code>bool</code>, <code>str</code>, <code>char</code>, <code>datetime</code>, <code>timestamp</code>,
+  <code>date</code>, <code>time</code></li>
+<li>Data types: <code>dataframe</code>, <code>series</code>, <code>tensor</code>, <code>list</code></li>
 </ul>
-<p><strong>Application Process:</strong></p>
-<ul>
-<li>Submit a proposal through
-  <a href="https://github.com/osl-pocs/tickets/issues">OSL PoC GitHub Issues</a>, including
-  the concept, objectives, and a high-level design.</li>
-<li>Undergo a review process by the OSL selection committee.</li>
-</ul>
-<h3 id="2-incubation">2. Incubation<a class="headerlink" href="#2-incubation" title="Permanent link"> #</a></h3>
-<p><strong>Description:</strong> This phase focuses on nurturing the project, providing
-resources, mentorship, and facilitating access to grants and partners. Projects
-in this stage can be found at
-<a href="https://github.com/osl-incubator">OSL Incubator GitHub Repository</a>.</p>
-<p><strong>Criteria:</strong></p>
-<ul>
-<li>Successful completion of the PoC phase.</li>
-<li>Clearly defined milestones and development plan.</li>
-<li>Strong community engagement and collaboration.</li>
-<li>Adherence to OSL’s guidelines, including licensing under an OSI-approved
-  license.</li>
-</ul>
-<p><strong>Ascending Process:</strong></p>
-<ul>
-<li>Complete the PoC phase with positive evaluations.</li>
-<li>Submit an application for the Incubation phase at
-  <a href="https://github.com/osl-incubator/tickets/issues">OSL Incubator GitHub Issues</a>,
-  including a detailed project plan.</li>
-<li>Obtain approval from OSL mentors and stakeholders.</li>
-</ul>
-<p><strong>Support for Raising Funds:</strong></p>
-<ul>
-<li>OSL will assist in identifying suitable grants and partner organizations.</li>
-<li>Facilitate collaborations to support the project's financial needs.</li>
-</ul>
-<h3 id="3-graduated">3. Graduated<a class="headerlink" href="#3-graduated" title="Permanent link"> #</a></h3>
-<p><strong>Description:</strong> The Graduated phase is the final step, indicating that the
-project has matured and is ready for widespread adoption and sustainable growth.
-Graduated projects are available at
-<a href="https://github.com/osl-projects">OSL Graduated GitHub Repository</a>.</p>
-<p><strong>Criteria:</strong></p>
-<ul>
-<li>Successful completion of the Incubation phase.</li>
-<li>Demonstrated stability, sustainability, and active community engagement.</li>
-<li>Ongoing adherence to OSL guidelines, including OSI-approved licensing.</li>
-</ul>
-<p><strong>Ascending Process:</strong></p>
-<ul>
-<li>Successfully meet all the milestones during the Incubation phase.</li>
-<li>Submit a graduation application at
-  <a href="https://github.com/osl-projects/tickets/issues">OSL Graduated GitHub Issues</a>,
-  detailing achievements and future plans.</li>
-<li>Undergo a final review and approval by OSL’s governing board.</li>
-</ul>
-<h4 id="peer-review-of-scientific-python-projects-via-pyopensci">Peer review of scientific Python Projects via pyOpenSci<a class="headerlink" href="#peer-review-of-scientific-python-projects-via-pyopensci" title="Permanent link"> #</a></h4>
-<p>For all scientific Python projects under the Open Science Labs Incubator
-program, the evaluation process will be conducted via
-<a href="https://www.pyopensci.org/">pyOpenSci</a>, a community-led organization that
-offers peer reviews of Python software to enhance its quality, usability, and
-long-term maintainability. These peer reviews are pivotal in advancing the
-open-source tools that underpin open science initiatives.</p>
-<h4 id="benefits-of-using-pyopensci-for-evaluation">Benefits of Using pyOpenSci for Evaluation<a class="headerlink" href="#benefits-of-using-pyopensci-for-evaluation" title="Permanent link"> #</a></h4>
-<ol>
-<li>
-<p><strong>High-Quality Review</strong>: pyOpenSci's review process focuses on ensuring that
-   your Python package meets high standards in terms of code quality,
-   documentation, and usability.</p>
-</li>
-<li>
-<p><strong>JOSS Acceptance</strong>: The Journal of Open Source Software (JOSS) accepts a
-   pyOpenSci review as their own. As such your project, if it is in scope for
-   JOSS, can reap the benefits of both pyOpenSci and JOSS through a single peer
-   review process.</p>
-</li>
-<li>
-<p><strong>Community-Led</strong>: Gain insights and recommendations from experts in the open
-   science and Python communities.</p>
-</li>
-</ol>
-<h5 id="guidelines-and-review-process">Guidelines and Review Process<a class="headerlink" href="#guidelines-and-review-process" title="Permanent link"> #</a></h5>
-<ul>
-<li><strong>Project Guidelines</strong>: All projects should follow pyOpenSci's packaging
-  guidelines which can be accessed
-  <a href="https://www.pyopensci.org/python-package-guide/">here</a>.</li>
-</ul>
-<ul>
-<li><strong>Peer Review Process</strong>: The detailed guide for pyOpenSci's peer review
-  process can be found
-  <a href="https://www.pyopensci.org/about-peer-review/index.html">here</a>. We highly
-  recommend going through this guide to understand what to expect during the
-  review.</li>
-</ul>
-<p>The pyOpenSci review process offers a valuable opportunity to enhance the
-quality, usability, and maintainability of your software. Additionally, your
-tool will gain increased visibility and community support once it is accepted
-into the pyOpenSci ecosystem.</p>
-<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link"> #</a></h2>
-<p>The OSL Incubator Program is a robust pathway for innovative scientific projects
-and projects for support tasks to grow and succeed. We invite all creators,
-researchers, and enthusiasts to explore our program and become part of this
-thriving ecosystem. Detailed information on applying for each phase, as well as
-guidelines, can be found on our official website.</p>
-<p>For any further inquiries, please contact our dedicated Incubator Program team
-at OSL. Together, we can shape the future of open science.</p>
-                
+<p>Both symbolic operators (<code>&amp;&amp;</code>, <code>||</code>, <code>-&gt;</code>, <code>!=</code>) and word operators
+(<code>and</code>, <code>or</code>) are supported.</p>
+<h2 id="current-limitations">Current Limitations<a class="headerlink" href="#current-limitations" title="Permanent link"> #</a></h2>
+<p>The extension is highlighting-only. There is no language server, meaning
+no hover documentation, go-to-definition, or autocomplete. Given that
+Arx is still in active development, this is a reasonable scope for now.
+An LSP would likely follow once the language stabilises.</p>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link"> #</a></h2>
+<p>The ArxLang extension provides solid syntax highlighting for a language
+still in its early stages. The architecture built around a single
+maintainable manifest means it should keep pace with the language as it
+evolves. For anyone working with Arx code in VS Code, it’s a
+straightforward install that meaningfully improves readability.</p>
+  </div>
+</div>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
               </div>
             </div>
           </section>

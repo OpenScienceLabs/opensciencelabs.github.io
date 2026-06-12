@@ -1,0 +1,66 @@
+---
+title: "ArxLang VS Code Extension: A Closer Look"
+slug: "arxlang-vs-code-extension-a-closer-look"
+date: 2026-06-09
+authors: ["Yogendra Sankhla"]
+tags: ["ArxLang", "VS Code", "Extension"]
+categories: ["Tools"]
+description: "A closer look at the ArxLang VS Code extension, its features, and how it is built."
+thumbnail: "/header.png"
+template: "blog-post.html"
+---
+
+I've been keeping an eye on the Arx language for a while now. It's still early days for the language, but when I got to know about the new version of the VS Code extension, I figured I'd actually sit down and try it properly. So here's my honest take.
+
+## What is Arx?
+
+Arx is a statically typed language with Python-like indentation, two spaces, strictly enforced. Tabs will throw an error. It has a more explicit type system than Python and comes with built-in support for dataframe, series, and tensor types, making it well-suited for data-heavy workloads. The language is currently in draft stage, but the syntax is already coherent and well-structured.
+
+Without the extension, opening `.x` or `.arx` files in VS Code gives you a plain text experience – means no highlighting, no structure, no language recognition.
+
+## Installing the Extension
+
+The extension registers both `.x` and `.arx` file extensions. Once installed, the language shows up as ArxLang in the VS Code status bar, and syntax highlighting activates immediately.
+
+Standard keywords: `fn`, `class`, `return`, `if`, `while`, etc., are highlighted as expected. The extension also correctly handles Arx-specific constructs like `@[public, static, constant]` for access modifiers and `<T: i32 | f64>` for template parameter blocks, which are fairly unusual compared to most languages.
+
+## Docstring Highlighting
+
+Arx uses triple-backtick docstrings with a YAML-like format called Douki:
+
+````arx
+class BaseCounter:
+  """
+  ```douki
+  title: BaseCounter
+  summary: Stores one inherited seed value for derived counters.
+  ```
+  """
+````
+
+Keys are rendered in a muted dark gray, values in a lighter gray-blue. The result is readable without competing visually with the surrounding code.
+
+## How It's Built
+
+Rather than hand-writing a TextMate grammar JSON file, which tends to become large, fragile, and hard to maintain, the extension uses a single source-of-truth manifest at `syntax/arx.syntax.json`. This file defines the entire Arx lexical grammar: keywords, operators, builtin types, and structural forms. A build script compiles the actual TextMate grammar from this manifest automatically, and CI checks that the two are always in sync.
+
+This approach makes the extension easier to maintain as the language evolves. Updating the grammar is a matter of editing one file and regenerating, rather than manually patching a complex grammar file.
+
+## Type and Operator Coverage
+
+The extension covers a broad range of Arx's type system:
+
+* Integer varieties: `i8` through `i64` (including `int8`–`int64` and equivalent expanded aliases for boolean, string, and float categories)
+* Float types: `f16` to `f64`
+* Primitive types: `bool`, `str`, `char`, `datetime`, `timestamp`, `date`, `time`
+* Data types: `dataframe`, `series`, `tensor`, `list`
+
+Both symbolic operators (`&&`, `||`, `->`, `!=`) and word operators (`and`, `or`) are supported.
+
+## Current Limitations
+
+The extension is highlighting-only. There is no language server, meaning no hover documentation, go-to-definition, or autocomplete. Given that Arx is still in active development, this is a reasonable scope for now. An LSP would likely follow once the language stabilises.
+
+## Summary
+
+The ArxLang extension provides solid syntax highlighting for a language still in its early stages. The architecture built around a single maintainable manifest means it should keep pace with the language as it evolves. For anyone working with Arx code in VS Code, it's a straightforward install that meaningfully improves readability.
