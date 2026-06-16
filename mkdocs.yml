@@ -1,6 +1,10 @@
 site_name: Open Science Labs
 site_url: https://opensciencelabs.org
 
+# Repository / edit links (used to build "Edit this page on GitHub" URLs)
+repo_url: https://github.com/OpenScienceLabs/opensciencelabs.github.io
+edit_uri: edit/main/
+
 docs_dir: pages
 site_dir: build
 

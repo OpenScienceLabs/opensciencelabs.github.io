@@ -42,3 +42,14 @@ blockquote{
   display: grid; place-items: center;
 }
 .to_top .icon { width: 24px; height: 24px; }
+
+/* "Edit this page on GitHub" helper */
+.edit-on-github {
+  margin-top: 1.25rem;
+}
+.edit-on-github .edit-link {
+  text-decoration: none;
+}
+.edit-on-github .edit-link:hover {
+  text-decoration: underline;
+}

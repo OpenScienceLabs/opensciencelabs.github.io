@@ -373,6 +373,16 @@
                 {% block content_inner %}
                   {{ page.content }}
                 {% endblock content_inner %}
+
+                {# Inline "Edit this page on GitHub" helper. Uses MkDocs page.edit_url. #}
+                {% if page.edit_url %}
+                <div class="mt-4 edit-on-github">
+                  <a href="{{ page.edit_url }}" target="_blank" rel="noopener"
+                     class="edit-link small text-secondary">
+                    Found an issue? <span class="edit-link-text">Edit this page on GitHub ↗</span>
+                  </a>
+                </div>
+                {% endif %}
               </div>
             </div>
           </section>
