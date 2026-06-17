@@ -1,55 +1,87 @@
 {% extends "base.html" %}
-{% set colors=["", "bg-light"] %}
-{% set text_colors=["", "text-secondary"] %}
 
 {% block content %}
-<section>
-  <div class="row pt-2">
-    <div class="col-md-12 mx-auto">
-      {% block content_inner %}
-      {{ page.content }}
-      {% endblock content_inner %}
-    </div>
-  </div>
+{% set projects = page.meta.get("projects", []) %}
+{% set page_title = page.meta.get("title", page.title) %}
+{% set page_description = page.meta.get("description", "Explore the open-source projects growing with Open Science Labs.") %}
 
-  <div class="row">
-    <div class="col-md-12 pt-3">
-
-      {% for project in page.meta["projects"] %}
-
-      <div class="row {{ colors[loop.index % 2] }}">
-        <div class="col">
-          <h2>
-            <a href="{{ project.url }}" target="_blank">
-              {% if project.type == "incubated"  %}
-              <img
-                alt="Static Badge"
-                src="https://img.shields.io/badge/project-incubated-333333?style=for-the-badge&label=project&labelColor=FFAA00&color=888888"
-                loading="lazy" decoding="async"
-              />
-              {% elif project.type == "affiliated" %}
-              <img
-                alt="Static Badge"
-                src="https://img.shields.io/badge/project-affiliated-333333?style=for-the-badge&label=project&labelColor=0E91C3&color=888888"
-                loading="lazy" decoding="async"
-              />
-              {% endif %}
-              {{ project.name }}
-            </a>
-          </h2>
-          <p class="{{ text_colors[loop.index % 2] }}">
-            <strong>Maintainer</strong>: {{ project.maintainer_name }}
-            &lt;<a href="mailto:{{ project.maintainer_email }}">{{ project.maintainer_email }}</a>&gt;<br/>
-            {% if project.communication_channel %}
-            <strong>Communication Channel</strong>:
-            <a href="{{ project.communication_channel.url }}">{{ project.communication_channel.provider.title() }}</a>
-            {% endif %}
-          </p>
-          <p class="{{ text_colors[loop.index % 2] }}">{{ project.description }}</p>
-        </div>
+<section class="osl-page osl-page--directory">
+  <div class="osl-page-shell">
+    <header class="osl-page-hero">
+      <div class="osl-page-hero__content">
+        <p class="osl-page-kicker">Project directory</p>
+        <h1>{{ page_title }}</h1>
+        {% if page_description and page_description != page_title %}
+          <p class="osl-page-description">{{ page_description }}</p>
+        {% endif %}
       </div>
-      {% endfor %}
-    </div>
+    </header>
+
+    <article class="osl-markdown">
+      {{ page.content }}
+    </article>
+
+    <section class="project-directory" aria-label="Affiliated and incubated projects">
+      <div class="directory-heading">
+        <p class="directory-eyebrow">{{ projects|length }} projects</p>
+        <h2>Projects under the OSL umbrella</h2>
+      </div>
+
+      <div class="project-grid">
+        {% for project in projects %}
+        <article class="project-card project-card--{{ project.type|default('project') }}">
+          <div class="project-card__top">
+            <span class="project-badge project-badge--{{ project.type|default('project') }}">
+              {{ project.type|default("project")|title }}
+            </span>
+            <h3>
+              <a href="{{ project.url }}" target="_blank" rel="noopener">
+                {{ project.name }}
+              </a>
+            </h3>
+          </div>
+
+          <p class="project-card__description">{{ project.description }}</p>
+
+          <dl class="project-meta">
+            {% if project.maintainer_name %}
+            <div>
+              <dt>Maintainer</dt>
+              <dd>
+                {% if project.maintainer_email %}
+                  <a href="mailto:{{ project.maintainer_email }}">{{ project.maintainer_name }}</a>
+                {% else %}
+                  {{ project.maintainer_name }}
+                {% endif %}
+              </dd>
+            </div>
+            {% endif %}
+
+            {% if project.communication_channel %}
+            <div>
+              <dt>Community</dt>
+              <dd>
+                {% if project.communication_channel.url and project.communication_channel.url != "TBA" %}
+                  <a href="{{ project.communication_channel.url }}" target="_blank" rel="noopener">
+                    {{ project.communication_channel.provider|default("channel")|title }}
+                  </a>
+                {% else %}
+                  {{ project.communication_channel.provider|default("Channel")|title }}
+                {% endif %}
+              </dd>
+            </div>
+            {% endif %}
+          </dl>
+
+          <div class="project-card__footer">
+            <a class="osl-inline-button osl-inline-button--subtle" href="{{ project.url }}" target="_blank" rel="noopener">
+              Visit project
+            </a>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
   </div>
 </section>
 {% endblock content %}

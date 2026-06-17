@@ -19,21 +19,29 @@
   --hero-overlay: linear-gradient(to bottom right, rgba(0,0,0,.60), rgba(0,0,0,.45));
 }
 .home-hero .eyebrow{
+  color: rgba(255,255,255,.9);
   letter-spacing: .08em;
   text-transform: uppercase;
   opacity: .85;
+  text-shadow: 0 2px 14px rgba(0,0,0,.45);
 }
 .home-hero h1{
+  color: #fff;
   text-wrap: balance;
+  text-shadow: 0 3px 22px rgba(0,0,0,.55);
 }
 .home-hero .lead{
+  color: rgba(255,255,255,.94);
   max-width: 52ch;
   opacity: .9;
+  text-shadow: 0 2px 16px rgba(0,0,0,.48);
 }
 .hero-bullets{
   list-style: none; padding: 0; margin: 0;
   display: flex; flex-wrap: wrap; gap: .75rem 1.25rem;
+  color: rgba(255,255,255,.94);
   opacity: .95;
+  text-shadow: 0 2px 14px rgba(0,0,0,.42);
 }
 .hero-bullets .dot{
   display: inline-block; width: .5rem; height: .5rem; border-radius: 50%;

@@ -1,1 +1,27 @@
 {% extends "base.html" %}
+
+{% block content %}
+{% set page_title = page.meta.get("title", page.title) %}
+{% set page_description = page.meta.get("description") %}
+{% set section_label = page.meta.get("section_label", "Open Science Labs") %}
+
+<section class="osl-page">
+  <div class="osl-page-shell">
+    <header class="osl-page-hero">
+      <div class="osl-page-hero__content">
+        <p class="osl-page-kicker">{{ section_label }}</p>
+        <h1>{{ page_title or config.site_name }}</h1>
+        {% if page_description and page_description != page_title %}
+          <p class="osl-page-description">{{ page_description }}</p>
+        {% endif %}
+      </div>
+    </header>
+
+    <article class="osl-markdown">
+      {% block content_inner %}
+        {{ page.content }}
+      {% endblock content_inner %}
+    </article>
+  </div>
+</section>
+{% endblock content %}

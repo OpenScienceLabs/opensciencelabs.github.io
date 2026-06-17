@@ -6,7 +6,7 @@ description: >
   pathways.
 date: "2026-06-17"
 authors: ["OSL Team"]
-template: main.html
+template: single-sidebar.html
 ---
 
 # Sponsorship

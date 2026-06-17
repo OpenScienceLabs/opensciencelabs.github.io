@@ -2,9 +2,9 @@
 
 :root{
   --pc-text: var(--fg, #e8eaf0);
-  --pc-bg: rgba(16,18,27,.6);
-  --pc-border: rgba(255,255,255,.12);
-  --pc-hover: rgba(255,255,255,.06);
+  --pc-bg: var(--surface, rgba(16,18,27,.6));
+  --pc-border: var(--border, rgba(255,255,255,.12));
+  --pc-hover: var(--surface-muted, rgba(255,255,255,.06));
 }
 [data-bs-theme="light"]{
   --pc-text: #111827;
@@ -16,10 +16,10 @@
 .partners-grid .partner-card{
   background: var(--pc-bg);
   border: 1px solid var(--pc-border);
-  border-radius: 1rem;
+  border-radius: 1.35rem;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+  box-shadow: var(--shadow-card, 0 10px 24px rgba(0,0,0,.08));
   transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease;
   position: relative;
 }
@@ -74,7 +74,7 @@
   display: flex; align-items: center; justify-content: center;
   border-bottom: 1px dashed var(--pc-border);
   background: color-mix(in oklab, var(--pc-bg) 92%, transparent);
-  border-top-left-radius: 1rem; border-top-right-radius: 1rem;
+  border-top-left-radius: 1.35rem; border-top-right-radius: 1.35rem;
 }
 
 /* Logos: clamp both height and width so tall/wide marks don’t dominate */
@@ -82,6 +82,9 @@
   display: block;
   object-fit: contain;
   width: auto;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
   max-width: 80%;                /* prevent super-wide brands from touching edges */
   max-height: clamp(44px, 8vw, 78px); /* scale responsively but never huge */
   transform: scale(var(--logo-scale, 1));  /* per-partner fine-tune (see below) */
