@@ -62,7 +62,7 @@ code.
 ## How It’s Built
 
 Rather than hand-writing a TextMate grammar JSON file, which tends to
-become large, fragile, and hard to maintain the extension uses a single
+become large, fragile, and hard to maintain, the extension uses a single
 source-of-truth manifest at `syntax/arx.syntax.json`. This file defines
 the entire Arx lexical grammar: keywords, operators, builtin types, and
 structural forms. A build script compiles the actual TextMate grammar
