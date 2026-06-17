@@ -105,8 +105,7 @@ touch with them directly if you have any inquiries._
   faster evidence synthesis and meta-analysis.
 - **Project WEB Page**: <https://docs.extralit.ai/>
 - **Repository**: <https://github.com/extralit/extralit>
-- **Communication channel**:
-  [Slack](https://join.slack.com/t/extralit/shared_invite/zt-3gw1ah8bl-AiVNrkIVYOL4yVGOxN8WFw)
+- **Communication channel**: TBA
 - **Project Ideas**:
   [link](https://github.com/extralit/extralit/wiki/GSoC-Project-Ideas-2025) (postponed for 2026)
 -->

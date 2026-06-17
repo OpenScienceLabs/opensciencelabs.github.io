@@ -81,7 +81,7 @@ projects:
     url: https://github.com/extralit/extralit
     communication_channel:
       provider: slack
-      url: https://join.slack.com/t/extralit/shared_invite/zt-32blg3602-0m0XewPBXF7776BQ3m7ZlA
+      url: TBA
     description: |
       Extralit is an open-source platform for researchers to
       extract structured data from scientific literature. It

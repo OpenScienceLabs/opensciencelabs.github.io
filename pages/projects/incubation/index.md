@@ -53,9 +53,6 @@ in this stage can be found at
 **Ascending Process:**
 
 - Complete the PoC phase with positive evaluations.
-- Submit an application for the Incubation phase at
-  [OSL Incubator GitHub Issues](https://github.com/osl-incubator/tickets/issues),
-  including a detailed project plan.
 - Obtain approval from OSL mentors and stakeholders.
 
 **Support for Raising Funds:**
