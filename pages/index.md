@@ -1,8 +1,7 @@
 ---
 title: Open Science Labs
 authors:
-  - Ivan Ogasawara
-  - Ever Vino
+  - OSL Team
 date: 2023-10-30
 template: home.html
 partners:

@@ -161,10 +161,13 @@
 .blog-article--feature{
   width: min(1120px, 100%);
   margin: 0 auto;
+  --blog-accent: var(--brand-strong, #087fa8);
+  --blog-accent-rgb: 8, 127, 168;
 }
 
 .blog-hero{
   overflow: hidden;
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(280px, .95fr);
   gap: clamp(1.1rem, 3vw, 2rem);
@@ -175,8 +178,26 @@
   border-radius: clamp(1.35rem, 4vw, 2.2rem);
   background:
     radial-gradient(circle at 14% 10%, rgba(255,170,0,.18), transparent 18rem),
+    radial-gradient(circle at 92% 20%, rgba(var(--blog-accent-rgb), .18), transparent 22rem),
     linear-gradient(135deg, var(--surface), var(--surface-muted));
   box-shadow: var(--shadow-soft);
+}
+
+.blog-hero::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 16% 22%, rgba(var(--blog-accent-rgb), .28) 0 2px, transparent 2.8px),
+    radial-gradient(circle at 28% 70%, rgba(255,170,0,.28) 0 1.8px, transparent 2.6px),
+    radial-gradient(circle at 78% 18%, rgba(var(--blog-accent-rgb), .20) 0 2px, transparent 2.8px);
+  opacity: .7;
+}
+
+.blog-hero > *{
+  position: relative;
+  z-index: 1;
 }
 
 .blog-hero__content{
@@ -191,7 +212,7 @@
   align-items: center;
   gap: .5rem;
   margin: 0 0 .8rem;
-  color: var(--brand-strong);
+  color: var(--blog-accent);
   font-size: .78rem;
   font-weight: 800;
   letter-spacing: .12em;
@@ -203,8 +224,8 @@
   width: .55rem;
   height: .55rem;
   border-radius: 999px;
-  background: var(--accent);
-  box-shadow: 0 0 0 6px rgba(255,170,0,.16);
+  background: var(--blog-accent);
+  box-shadow: 0 0 0 6px rgba(var(--blog-accent-rgb), .16);
 }
 
 .blog-hero h1{
@@ -381,4 +402,38 @@
   .blog-share-panel span{
     writing-mode: initial;
   }
+}
+
+/* Editorial redesign: sharper blog and index presentation */
+.blog-hero{
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background:
+    linear-gradient(90deg, var(--blog-accent) 0 .5rem, transparent .5rem),
+    linear-gradient(112deg, rgba(var(--blog-accent-rgb), .12) 0 34%, transparent 34.2%),
+    var(--surface-solid);
+}
+
+.blog-hero__media{
+  border-radius: 0;
+}
+
+.blog-share-panel{
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.excerpt{
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.excerpt:hover{
+  box-shadow: none;
+}
+
+.post_tag,
+.excerpt_more.button{
+  border-radius: 0;
 }

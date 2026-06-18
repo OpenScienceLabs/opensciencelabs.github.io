@@ -26,7 +26,7 @@
 .partners-grid .partner-card:hover{
   transform: translateY(-2px);
   box-shadow: 0 16px 36px rgba(0,0,0,.16);
-  border-color: color-mix(in oklab, var(--pc-border) 60%, var(--brand, #3b82f6));
+  border-color: color-mix(in oklab, var(--pc-border) 60%, var(--osl-accent, var(--brand, #3b82f6)));
 }
 
 .partners-grid .partner-body{
@@ -62,7 +62,7 @@
 }
 .partners-grid .icon-btn:hover{
   background: var(--pc-hover);
-  border-color: color-mix(in oklab, var(--_bd) 60%, var(--brand, #3b82f6));
+  border-color: color-mix(in oklab, var(--_bd) 60%, var(--osl-accent, var(--brand, #3b82f6)));
 }
 .partners-grid .icon-btn:active{ transform: translateY(1px); }
 
@@ -113,3 +113,22 @@
 
 .partner-card .stretched-link::after { z-index: 1; }           /* overlay */
 .partner-card .icon-btn { position: relative; z-index: 2; }    /* icons above */
+
+/* Editorial redesign: less rounded, more structured partner tiles */
+.partners-grid .partner-card{
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.partners-grid .partner-card:hover{
+  box-shadow: none;
+}
+
+.partners-grid .logo-wrap{
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.partners-grid .icon-btn{
+  border-radius: 0;
+}

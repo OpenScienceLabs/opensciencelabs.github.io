@@ -8,8 +8,12 @@
 {% set groups = page.meta.get("teams", []) %}
 {% set page_title = page.meta.get("title", page.title) %}
 {% set page_description = page.meta.get("description", "Meet the people helping Open Science Labs grow as a caring, practical, open community.") %}
+{% set section_slug = page.url.split("/")[0] %}
+{% if not section_slug %}{% set section_slug = "about" %}{% endif %}
+{% set page_theme = page.meta.get("page_theme", "people") %}
+{% set hero_words = page.meta.get("hero_words", ["Mentor", "Review", "Care"]) %}
 
-<section class="osl-page osl-page--team">
+<section class="osl-page osl-page--team osl-page--section-{{ section_slug }} osl-page--theme-{{ page_theme }}">
   <div class="osl-page-shell">
     <header class="osl-page-hero">
       <div class="osl-page-hero__content">
@@ -18,6 +22,15 @@
         {% if page_description and page_description != page_title %}
           <p class="osl-page-description">{{ page_description }}</p>
         {% endif %}
+      </div>
+      <div class="osl-hero-system" aria-hidden="true">
+        <span class="osl-hero-system__ring"></span>
+        <span class="osl-hero-system__node osl-hero-system__node--one"></span>
+        <span class="osl-hero-system__node osl-hero-system__node--two"></span>
+        <span class="osl-hero-system__node osl-hero-system__node--three"></span>
+        <span class="osl-hero-system__label osl-hero-system__label--one">{{ hero_words[0] }}</span>
+        <span class="osl-hero-system__label osl-hero-system__label--two">{{ hero_words[1] }}</span>
+        <span class="osl-hero-system__label osl-hero-system__label--three">{{ hero_words[2] }}</span>
       </div>
     </header>
 

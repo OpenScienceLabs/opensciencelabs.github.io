@@ -7,6 +7,9 @@ description: >
 date: "2026-06-17"
 authors: ["OSL Team"]
 template: single-sidebar.html
+section_label: "Support OSL"
+page_theme: sponsorship
+hero_words: ["Sponsor", "Sustain", "Scale"]
 ---
 
 # Sponsorship

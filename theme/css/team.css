@@ -17,6 +17,7 @@
 
 .team-card{
   overflow: hidden;
+  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -25,6 +26,16 @@
   background: var(--surface);
   box-shadow: var(--shadow-card);
   transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+
+.team-card::before{
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: .28rem;
+  background: linear-gradient(90deg, var(--osl-accent, var(--brand-strong)), var(--osl-accent-2, var(--brand-2)));
+  opacity: .86;
+  z-index: 1;
 }
 
 .team-card:hover{
@@ -40,7 +51,7 @@
   place-items: center;
   aspect-ratio: 4 / 3;
   background:
-    radial-gradient(circle at 20% 0%, color-mix(in oklab, var(--brand-strong) 24%, transparent), transparent 16rem),
+    radial-gradient(circle at 20% 0%, color-mix(in oklab, var(--osl-accent, var(--brand-strong)) 24%, transparent), transparent 16rem),
     var(--surface-muted);
 }
 
@@ -60,7 +71,7 @@
   border: 1px solid var(--border);
   border-radius: 999px;
   background: var(--surface-solid);
-  color: var(--brand-strong);
+  color: var(--osl-accent, var(--brand-strong));
   font-size: 3rem;
   font-weight: 800;
 }
@@ -100,11 +111,11 @@
   border: 1px solid var(--border);
   border-radius: 999px;
   background: var(--surface-muted);
-  color: var(--brand-strong);
+  color: var(--osl-accent, var(--brand-strong));
 }
 
 .team-card__social:hover{
-  background: var(--brand-strong);
+  background: var(--osl-accent, var(--brand-strong));
   color: #fff;
 }
 
@@ -126,4 +137,30 @@
   font-weight: 800;
   letter-spacing: .08em;
   text-transform: uppercase;
+}
+
+/* Editorial redesign: sharper institutional team cards */
+.team-card{
+  border-radius: 0;
+  background: var(--surface-solid);
+  box-shadow: none;
+}
+
+.team-card::before{
+  inset: 0 auto 0 0;
+  width: .36rem;
+  height: auto;
+}
+
+.team-card:hover{
+  box-shadow: none;
+}
+
+.team-card__media{
+  aspect-ratio: 1 / 1;
+}
+
+.team-card__avatar,
+.team-card__social{
+  border-radius: 0;
 }
