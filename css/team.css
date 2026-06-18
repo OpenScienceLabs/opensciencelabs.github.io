@@ -1,56 +1,166 @@
-/* ===== Team page (scoped) ===== */
-.team-grid .card{
-  border-radius: 1rem;
-  border: 1px solid var(--card-border, rgba(255,255,255,.12));
-  background: var(--card-bg, rgba(20,24,33,.6));
+/* ===== Team directory ===== */
+.team-directory{
+  display: grid;
+  gap: clamp(1.6rem, 4vw, 3rem);
+}
+
+.team-group{
+  display: grid;
+  gap: 1rem;
+}
+
+.team-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 1rem;
+}
+
+.team-card{
   overflow: hidden;
-}
-[data-bs-theme="light"] .team-grid .card{
-  background: #fff;
-  border-color: rgba(0,0,0,.08);
-}
-
-.team-grid .card-img-top{
-  display:block;
-  width:100%;
-  aspect-ratio: 4 / 3;       /* keeps consistent header area */
-  object-fit: cover;         /* crops tall/wide headshots neatly */
-}
-
-.team-grid .card-title{
-  font-size: 1.15rem;
-  margin-bottom: .25rem;
-}
-
-/* Social icon row */
-.team-grid .social{
+  position: relative;
   display: flex;
-  align-items: center;
-  gap: .5rem;
+  flex-direction: column;
+  min-height: 100%;
+  border: 1px solid var(--border);
+  border-radius: 1.35rem;
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
 }
 
-/* Tight, consistent SVG icon sizing + inherit theme color */
-.team-grid .social .icon{
-  width: 22px;               /* <- right here: fix HUGE icon */
-  height: 22px;
-  display: inline-block;
-  vertical-align: middle;
-  fill: currentColor;        /* ensure symbols use text color */
-}
-.team-grid .social a{
-  color: var(--fg, #e6e9f0);
-  opacity: .85;
-  text-decoration: none;
-}
-[data-bs-theme="light"] .team-grid .social a{
-  color: #1f2937;
-}
-.team-grid .social a:hover{
-  color: var(--brand, #3b82f6);
-  opacity: 1;
+.team-card::before{
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: .28rem;
+  background: linear-gradient(90deg, var(--osl-accent, var(--brand-strong)), var(--osl-accent-2, var(--brand-2)));
+  opacity: .86;
+  z-index: 1;
 }
 
-/* Sponsor iframe wrapper spacing */
-.team-grid .sponsor{
-  margin-top: .5rem;
+.team-card:hover{
+  transform: translateY(-2px);
+  border-color: color-mix(in oklab, var(--brand-strong) 38%, var(--border));
+  box-shadow: 0 22px 52px rgba(15,23,42,.12);
+}
+
+.team-card__media{
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 3;
+  background:
+    radial-gradient(circle at 20% 0%, color-mix(in oklab, var(--osl-accent, var(--brand-strong)) 24%, transparent), transparent 16rem),
+    var(--surface-muted);
+}
+
+.team-card__media img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  object-fit: cover;
+}
+
+.team-card__avatar{
+  display: grid;
+  place-items: center;
+  width: 7rem;
+  height: 7rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface-solid);
+  color: var(--osl-accent, var(--brand-strong));
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.team-card__body{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1.1rem;
+}
+
+.team-card__header{
+  display: flex;
+  gap: .75rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.team-card h3{
+  margin: 0;
+  font-size: 1.18rem;
+  letter-spacing: -.02em;
+}
+
+.team-card p{
+  margin: .65rem 0 0;
+  color: color-mix(in oklab, var(--fg) 84%, var(--muted));
+  font-size: .96rem;
+}
+
+.team-card__social{
+  display: inline-grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: 2.15rem;
+  height: 2.15rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface-muted);
+  color: var(--osl-accent, var(--brand-strong));
+}
+
+.team-card__social:hover{
+  background: var(--osl-accent, var(--brand-strong));
+  color: #fff;
+}
+
+.team-card__social .icon{
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.team-card__sponsor{
+  display: grid;
+  gap: .35rem;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.team-card__sponsor span{
+  color: var(--muted);
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+/* Editorial redesign: sharper institutional team cards */
+.team-card{
+  border-radius: 0;
+  background: var(--surface-solid);
+  box-shadow: none;
+}
+
+.team-card::before{
+  inset: 0 auto 0 0;
+  width: .36rem;
+  height: auto;
+}
+
+.team-card:hover{
+  box-shadow: none;
+}
+
+.team-card__media{
+  aspect-ratio: 1 / 1;
+}
+
+.team-card__avatar,
+.team-card__social{
+  border-radius: 0;
 }
