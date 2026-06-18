@@ -1,39 +1,61 @@
-{% extends "main.html" %}
+{% extends "base.html" %}
 
-{% block content_inner %}
+{% block content %}
+{% set title = page.meta.get("title", page.title) %}
+{% set slug = page.meta.get("slug") %}
+{% set thumbnail = page.meta.get("thumbnail") %}
 
-<div class="blog-article">
-  <h1 class="post-title">
-    <a href="{{ page.canonical_url or url }}" title="{{ page.meta['title'] }}" target="_self">
-      {{ page.meta["title"] }}
-    </a>
-  </h1>
+<article class="blog-article blog-article--feature">
+  <header class="blog-hero">
+    <div class="blog-hero__content">
+      <p class="blog-hero__kicker">Open Science Labs Blog</p>
+      <h1>{{ title }}</h1>
 
-  <!-- Meta row -->
-  <div class="post_meta">
-    <span class="meta_item">
-      <svg class="icon" aria-hidden="true"><use xlink:href="#author"/></svg>
-      <span class="author_name">
-        {{ ", ".join(page.meta["authors"]) if "authors" in page.meta else "" }}
-      </span>
-    </span>
+      <div class="post_meta">
+        {% if "authors" in page.meta %}
+        <span class="meta_item">
+          <svg class="icon" aria-hidden="true"><use xlink:href="#author"/></svg>
+          <span class="author_name">{{ ", ".join(page.meta["authors"]) }}</span>
+        </span>
+        {% endif %}
 
-    {% if "date" in page.meta %}
-    <span class="meta_item">
-      <svg class="icon" aria-hidden="true"><use xlink:href="#calendar"/></svg>
-      <time class="post_date">{{ page.meta["date"].strftime('%b %-d, %Y') }}</time>
-    </span>
+        {% if "date" in page.meta %}
+        <span class="meta_item">
+          <svg class="icon" aria-hidden="true"><use xlink:href="#calendar"/></svg>
+          <time class="post_date" datetime="{{ page.meta["date"].strftime('%Y-%m-%d') }}">
+            {{ page.meta["date"].strftime('%b %-d, %Y') }}
+          </time>
+        </span>
+        {% endif %}
+      </div>
+
+      {% if show_tags and "tags" in page.meta %}
+        <div class="post_tags">
+          {% for tag in page.meta["tags"] %}
+            <a href="#{{ tag }}" title="{{ tag }}" class="post_tag button button_translucent">{{ tag }}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+
+    {% if slug and thumbnail %}
+    <figure class="blog-hero__media">
+      <img loading="lazy" decoding="async"
+           src="/blog/{{ slug }}{{ thumbnail }}"
+           alt="{{ title }}">
+    </figure>
     {% endif %}
+  </header>
 
-    <!-- Share -->
-    <div class="post_share">
-      <span class="share_label">Share it:</span>
-      <a href="https://twitter.com/intent/tweet?text={{ page.meta['title'] }}&url={{ page.canonical_url or url }}&tw_p=tweetbutton"
-         class="twitter" title="Share on X / Twitter" target="_blank" rel="nofollow">
+  <div class="blog-article__shell">
+    <aside class="blog-share-panel" aria-label="Share this post">
+      <span>Share</span>
+      <a href="https://twitter.com/intent/tweet?text={{ title }}&url={{ page.canonical_url or url }}&tw_p=tweetbutton"
+         class="twitter" title="Share on X / Twitter" target="_blank" rel="nofollow noopener">
         <svg class="icon" aria-hidden="true"><use xlink:href="#twitter"/></svg>
       </a>
-      <a href="https://www.facebook.com/sharer.php?u={{ page.canonical_url or url }}&t={{ page.meta['title'] }}"
-         class="facebook" title="Share on Facebook" target="_blank" rel="nofollow">
+      <a href="https://www.facebook.com/sharer.php?u={{ page.canonical_url or url }}&t={{ title }}"
+         class="facebook" title="Share on Facebook" target="_blank" rel="nofollow noopener">
         <svg class="icon" aria-hidden="true"><use xlink:href="#facebook"/></svg>
       </a>
       <a href="#linkedinshare" id="linkedinshare" class="linkedin" title="Share on LinkedIn" rel="nofollow">
@@ -42,54 +64,11 @@
       <a href="{{ page.canonical_url or url }}" title="Copy link" class="link link_yank">
         <svg class="icon" aria-hidden="true"><use xlink:href="#copy"/></svg>
       </a>
+    </aside>
+
+    <div class="post_body osl-markdown">
+      {{ page.content }}
     </div>
-
-    {% if show_tags and "tags" in page.meta %}
-      <div class="post_tags">
-        {% for tag in page.meta["tags"] %}
-          <a href="#{{ tag }}" title="{{ tag }}" class="post_tag button button_translucent">{{ tag }}</a>
-        {% endfor %}
-      </div>
-    {% endif %}
   </div>
-
-  <!-- Hero image -->
-  <div class="excerpt_thumbnail my-3">
-    <figure class="mb-3">
-      <picture>
-        <img loading="lazy" decoding="async"
-             class="image_figure image_thumbnail image_internal image_unprocessed"
-             src="/blog/{{ page.meta['slug'] }}{{ page.meta['thumbnail'] }}"
-             alt="{{ page.meta['title'] }}">
-      </picture>
-    </figure>
-  </div>
-
-  <!-- Article body -->
-  <div class="post_body">
-    {{ page.content }}
-  </div>
-</div>
-
-{# Related: show other blog pages #}
-{% for nav_item in nav %}
-  {% if nav_item.title == "Blog" and nav_item.children %}
-    <div class="posts mt-5">
-      {% for sub_nav_item in nav_item.children if sub_nav_item.title != "main" %}
-        <article>
-          <a href="{{ sub_nav_item.url|url }}" class="image">
-            <img src="https://picsum.photos/id/{{ loop.index }}/400/200"
-                 alt="{{ sub_nav_item.title }}" loading="lazy" decoding="async" width="400" height="200" />
-          </a>
-          <h3>{{ sub_nav_item.title }}</h3>
-          <p>{{ sub_nav_item.summary }}</p>
-          <ul class="actions">
-            <li><a href="{{ sub_nav_item.url|url }}" class="button">Read</a></li>
-          </ul>
-        </article>
-      {% endfor %}
-    </div>
-  {% endif %}
-{% endfor %}
-
-{% endblock content_inner %}
+</article>
+{% endblock content %}

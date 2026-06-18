@@ -7,6 +7,12 @@
 {% block content_inner %}
 {{ page.content }}
 
+<section class="partners-directory" aria-label="Partner organizations">
+  <div class="directory-heading directory-heading--inside">
+    <p class="directory-eyebrow">{{ page.meta["partners"]|length }} partners</p>
+    <h2>Organizations collaborating with OSL</h2>
+  </div>
+
 <div class="partners-grid row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 mt-2">
 
   {% for partner in page.meta["partners"] %}
@@ -55,4 +61,5 @@
   {% endfor %}
 
 </div>
+</section>
 {% endblock content_inner %}

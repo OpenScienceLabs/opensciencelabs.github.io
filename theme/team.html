@@ -5,49 +5,77 @@
 {% endblock header_extra %}
 
 {% block content %}
-<section class="team-grid py-2">
-  <div class="row">
-    <div class="col-md-12 mx-auto">
-      {% block content_inner %}
+{% set groups = page.meta.get("teams", []) %}
+{% set page_title = page.meta.get("title", page.title) %}
+{% set page_description = page.meta.get("description", "Meet the people helping Open Science Labs grow as a caring, practical, open community.") %}
+{% set section_slug = page.url.split("/")[0] %}
+{% if not section_slug %}{% set section_slug = "about" %}{% endif %}
+{% set page_theme = page.meta.get("page_theme", "people") %}
+{% set hero_words = page.meta.get("hero_words", ["Mentor", "Review", "Care"]) %}
+
+<section class="osl-page osl-page--team osl-page--section-{{ section_slug }} osl-page--theme-{{ page_theme }}">
+  <div class="osl-page-shell">
+    <header class="osl-page-hero">
+      <div class="osl-page-hero__content">
+        <p class="osl-page-kicker">People behind OSL</p>
+        <h1>{{ page_title }}</h1>
+        {% if page_description and page_description != page_title %}
+          <p class="osl-page-description">{{ page_description }}</p>
+        {% endif %}
+      </div>
+      <div class="osl-hero-system" aria-hidden="true">
+        <span class="osl-hero-system__ring"></span>
+        <span class="osl-hero-system__node osl-hero-system__node--one"></span>
+        <span class="osl-hero-system__node osl-hero-system__node--two"></span>
+        <span class="osl-hero-system__node osl-hero-system__node--three"></span>
+        <span class="osl-hero-system__label osl-hero-system__label--one">{{ hero_words[0] }}</span>
+        <span class="osl-hero-system__label osl-hero-system__label--two">{{ hero_words[1] }}</span>
+        <span class="osl-hero-system__label osl-hero-system__label--three">{{ hero_words[2] }}</span>
+      </div>
+    </header>
+
+    {% if page.content|trim %}
+    <article class="osl-markdown">
       {{ page.content }}
-      {% endblock content_inner %}
-    </div>
-  </div>
+    </article>
+    {% endif %}
 
-  {% for group in page.meta["teams"] %}
-  <div class="row pt-3">
-    <div class="col-md-12 mx-auto">
-      <h2 class="mb-3">{{ group.name }}</h2>
+    <section class="team-directory" aria-label="Open Science Labs team">
+      {% for group in groups %}
+      <div class="team-group">
+        <div class="directory-heading">
+          <p class="directory-eyebrow">{{ group.members|length }} members</p>
+          <h2>{{ group.name }}</h2>
+        </div>
 
-      <!-- Responsive grid with gutter spacing -->
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
-        {% for member in group.members %}
-        <div class="col">
-          <div class="card h-100">
-            {% if member.image_url %}
-              <img src="{{ member.image_url }}" class="card-img-top" alt="{{ member.name }}" loading="lazy" decoding="async" width="400" height="400">
-            {% endif %}
+        <div class="team-grid">
+          {% for member in group.members %}
+          <article class="team-card">
+            <div class="team-card__media">
+              {% if member.image_url %}
+                <img src="{{ member.image_url }}" alt="{{ member.name }}" loading="lazy" decoding="async" width="400" height="400">
+              {% else %}
+                <div class="team-card__avatar" aria-hidden="true">{{ member.name[:1] }}</div>
+              {% endif %}
+            </div>
 
-            <div class="card-body d-flex flex-column">
-              <div class="d-flex justify-content-between align-items-start">
-                <h3 class="card-title mb-2">{{ member.name }}</h3>
-
+            <div class="team-card__body">
+              <div class="team-card__header">
+                <h3>{{ member.name }}</h3>
                 {% if member.github_url %}
-                <div class="social">
-                  <a class="git_ico" href="{{ member.github_url }}" target="_blank" aria-label="{{ member.name }} on GitHub" rel="noopener">
-                    <svg class="icon"><use xlink:href="#github"/></svg>
-                  </a>
-                </div>
+                <a class="team-card__social" href="{{ member.github_url }}" target="_blank" rel="noopener" aria-label="{{ member.name }} on GitHub">
+                  <svg class="icon"><use xlink:href="#github"/></svg>
+                </a>
                 {% endif %}
               </div>
 
               {% if member.bio %}
-                <p class="card-text mb-2">{{ member.bio }}</p>
+                <p>{{ member.bio }}</p>
               {% endif %}
 
               {% if "github_sponsor" in member %}
-                <div class="sponsor mt-auto">
-                  <small class="text-secondary d-block mb-1">Support this work:</small>
+                <div class="team-card__sponsor">
+                  <span>Support this work</span>
                   <iframe
                     src="{{ member.github_sponsor }}"
                     title="Sponsor {{ member.name }}"
@@ -58,13 +86,12 @@
                 </div>
               {% endif %}
             </div>
-          </div>
+          </article>
+          {% endfor %}
         </div>
-        {% endfor %}
       </div>
-
-    </div>
+      {% endfor %}
+    </section>
   </div>
-  {% endfor %}
 </section>
 {% endblock content %}

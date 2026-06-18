@@ -1,144 +1,146 @@
 {% extends "base.html" %}
 
-{% set hero_image   = page.meta.hero_image   or "/images/home/header.jpg" %}
-{% set hero_title   = page.meta.hero_title   or "Open collaboration for research, education & social good." %}
-{% set hero_blurb   = page.meta.hero_blurb   or "Open Science Labs helps people learn, build, and contribute to impactful open-source projects — mentored by a welcoming community." %}
-{% set cta_primary  = page.meta.cta_primary  or {"label":"Explore Projects", "href":"/projects/"} %}
-{% set cta_secondary= page.meta.cta_secondary or {"label":"Get Involved", "href":"/opportunities/"} %}
+{% set hero_image    = page.meta.hero_image    or "/images/home/header.jpg" %}
+{% set hero_title    = page.meta.hero_title    or "Open collaboration for research, education & social good." %}
+{% set hero_blurb    = page.meta.hero_blurb    or "Open Science Labs helps people learn, build, and contribute to impactful open-source projects — mentored by a welcoming community." %}
+{% set cta_primary   = page.meta.cta_primary   or {"label":"Explore Projects", "href":"/projects/"} %}
+{% set cta_secondary = page.meta.cta_secondary or {"label":"Get Involved", "href":"/opportunities/"} %}
 
 {% block header_extra %}
-  <!-- Home-only CSS -->
   <link rel="stylesheet" href="/css/home.css">
 {% endblock header_extra %}
 
 {% block content %}
+<div class="home-editorial">
+  <section class="home-hero" style="--hero-image: url('{{ hero_image }}')" aria-labelledby="home-title">
+    <div class="home-hero__copy">
+      <p class="home-kicker">Open Science Labs</p>
+      <h1 id="home-title">{{ hero_title }}</h1>
+      <p class="home-hero__lead">{{ hero_blurb }}</p>
 
-<!-- ===================== HERO ===================== -->
-<section class="home-hero" style="--hero-image: url('{{ hero_image }}')">
-  <div class="container-xxl">
-    <div class="row align-items-center min-vh-50 py-5">
-      <div class="col-12 col-lg-7">
-        <p class="eyebrow mb-2">Welcome to</p>
-        <h1 class="display-4 fw-bold mb-3">{{ hero_title }}</h1>
-        <p class="lead mb-4">{{ hero_blurb }}</p>
-
-        <div class="d-flex gap-3 flex-wrap">
-          <a class="btn btn-primary btn-lg shadow-sm" href="{{ cta_primary.href }}">{{ cta_primary.label }}</a>
-          <a class="btn btn-outline-light btn-lg shadow-sm" href="{{ cta_secondary.href }}">{{ cta_secondary.label }}</a>
-        </div>
-
-        <ul class="hero-bullets mt-4">
-          <li><span class="dot"></span> Mentored OSS contributions</li>
-          <li><span class="dot"></span> Programs & study groups</li>
-          <li><span class="dot"></span> A supportive global community</li>
-        </ul>
+      <div class="home-actions" aria-label="Primary actions">
+        <a class="home-button home-button--primary" href="{{ cta_primary.href }}">{{ cta_primary.label }}</a>
+        <a class="home-button home-button--secondary" href="{{ cta_secondary.href }}">{{ cta_secondary.label }}</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===================== MISSION / GOALS ===================== -->
-<section class="py-5">
-  <div class="container-xxl">
-    <div class="row g-4">
-      <div class="col-12 col-lg-6">
-        <div class="home-card h-100">
-          <h2 class="h4 fw-semibold mb-2">Our Mission</h2>
-          <p class="mb-0">
-            At Open Science Labs (OSL), we are dedicated to advancing the scientific
-            research through collaboration, innovation, and education. Our mission
-            is to create a more inclusive, transparent, and accessible scientific community.
-          </p>
-        </div>
-      </div>
-      <div class="col-12 col-lg-6">
-        <div class="home-card h-100">
-          <h2 class="h4 fw-semibold mb-2">Our Goals</h2>
-          <p class="mb-0">
-            To empower researchers, educators, and students by providing resources,
-            tools, and a collaborative platform for sharing knowledge and advancing
-            open science initiatives.
-          </p>
-        </div>
+  <section class="home-facts" aria-label="Open Science Labs highlights">
+    <div class="home-fact">
+      <strong>1,300+</strong>
+      <span>community members</span>
+    </div>
+    <div class="home-fact">
+      <strong>2018</strong>
+      <span>active since — internships, incubation, learning content</span>
+    </div>
+    <div class="home-fact">
+      <strong>15</strong>
+      <span>GSoC-linked projects</span>
+    </div>
+    <div class="home-fact">
+      <strong>4 yrs</strong>
+      <span>participating in Google Summer of Code</span>
+    </div>
+    <div class="home-fact">
+      <strong>15+</strong>
+      <span>Affiliated projects</span>
+    </div>
+  </section>
+
+  <section class="home-statement home-feature-row">
+    <div class="home-feature-row__content">
+      <p class="home-kicker">Why OSL exists</p>
+      <h2>A practical commons where people and open projects grow together.</h2>
+      <p>
+        We connect newcomers, mentors, maintainers, researchers, and partner
+        organizations so learning turns into visible work, open collaboration,
+        and long-term impact.
+      </p>
+    </div>
+    <div class="home-feature-row__image" style="--section-image: url('/images/home/Formula-pana.png')" aria-hidden="true"></div>
+  </section>
+
+  <section class="home-focus" aria-labelledby="home-focus-title">
+    <div class="home-section-heading home-feature-row home-feature-row--image-left">
+      <div class="home-feature-row__image" style="--section-image: url('/images/home/Development-bro.png')" aria-hidden="true"></div>
+      <div class="home-feature-row__content">
+        <p class="home-kicker">What we do</p>
+        <h2 id="home-focus-title">Programs designed around real contribution.</h2>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- ===================== INITIATIVES ===================== -->
-<section class="py-5">
-  <div class="container-xxl">
-    <h2 class="section-title">Our Main Initiatives</h2>
-    <p class="text-secondary mb-4">
-      Discover our programs spanning open-source projects, internships, and learning tracks.
-    </p>
+    <div class="home-focus-list">
+      <a class="home-focus-item" href="/projects/">
+        <span class="home-focus-item__number">01</span>
+        <span class="home-focus-item__body">
+          <strong>Projects</strong>
+          <span>Incubation, affiliation, visibility, and pathways for open-source work.</span>
+        </span>
+      </a>
 
-    <div class="row g-4">
-      <div class="col-12 col-md-6 col-xl-4">
-        <a class="home-tile" href="/projects/">
-          <div class="tile-body">
-            <h3 class="h5 mb-1">Projects</h3>
-            <p class="mb-0">Incubation, affiliation and a curated list of OSS projects.</p>
-          </div>
-        </a>
-      </div>
+      <a class="home-focus-item" href="/opportunities/">
+        <span class="home-focus-item__number">02</span>
+        <span class="home-focus-item__body">
+          <strong>Opportunities</strong>
+          <span>Internships, Google Summer of Code, contributor guides, and structured onboarding.</span>
+        </span>
+      </a>
 
-      <div class="col-12 col-md-6 col-xl-4">
-        <a class="home-tile" href="/opportunities/">
-          <div class="tile-body">
-            <h3 class="h5 mb-1">Opportunities</h3>
-            <p class="mb-0">Internships (OSS, research seed, GSoC) and contributor guides.</p>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-12 col-md-6 col-xl-4">
-        <a class="home-tile" href="/learning/">
-          <div class="tile-body">
-            <h3 class="h5 mb-1">Learning</h3>
-            <p class="mb-0">Events, study groups and resources for continuous growth.</p>
-          </div>
-        </a>
-      </div>
+      <a class="home-focus-item" href="/learning/">
+        <span class="home-focus-item__number">03</span>
+        <span class="home-focus-item__body">
+          <strong>Learning</strong>
+          <span>Study groups, events, workshops, and peer support for continuous growth.</span>
+        </span>
+      </a>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===================== PARTNERS ===================== -->
-<section class="py-5">
-  <div class="container-xxl">
-    <h2 class="section-title">Our Partners</h2>
-    <p class="text-secondary mb-4">
-      We collaborate with organizations across research, education and social good.
-    </p>
+  <section class="home-split">
+    <div class="home-split__image" style="--split-image: url('/images/home/International cooperation-bro.png')" aria-hidden="true"></div>
+    <div class="home-split__content">
+      <p class="home-kicker">Our approach</p>
+      <h2>Mentorship, belonging, and public work.</h2>
+      <p>
+        OSL is not just a list of projects. It is a place where people can ask
+        questions, receive review, practice collaboration, and build a public
+        record of meaningful contributions.
+      </p>
+      <a class="home-link" href="/about/">Learn more about OSL</a>
+    </div>
+  </section>
 
-    <ul class="logo-grid">
+  <section class="home-partners" aria-labelledby="home-partners-title">
+    <div class="home-section-heading home-feature-row">
+      <div class="home-feature-row__content">
+        <p class="home-kicker">Partners</p>
+        <h2 id="home-partners-title">Collaborating across research, education, and open source.</h2>
+      </div>
+      <div class="home-feature-row__image" style="--section-image: url('/images/home/Company-pana.png')" aria-hidden="true"></div>
+    </div>
+
+    <ul class="home-logo-grid">
       {% for partner in page.meta["partners"] %}
-      <li class="logo-item">
+      <li>
         <a href="{{ partner.url }}" target="_blank" rel="noopener">
           <img src="{{ partner.logo }}" alt="{{ partner.name }}" loading="lazy" decoding="async">
-          <span class="logo-caption">{{ partner.name }}</span>
+          <span>{{ partner.name }}</span>
         </a>
       </li>
       {% endfor %}
     </ul>
-  </div>
-</section>
+  </section>
 
-<!-- ===================== FINAL CTA ===================== -->
-<section class="py-5">
-  <div class="container-xxl">
-    <div class="cta-banner">
-      <div>
-        <h3 class="h4 mb-1">Ready to join the community?</h3>
-        <p class="mb-0 text-secondary">Contribute to projects, mentor newcomers, or start a study group.</p>
-      </div>
-      <div class="d-flex gap-3">
-        <a class="btn btn-primary" href="/opportunities/">Get Involved</a>
-        <a class="btn btn-outline-light" href="/about/">Learn More</a>
-      </div>
+  <section class="home-cta">
+    <div>
+      <p class="home-kicker">Join the community</p>
+      <h2>Bring your curiosity. Leave with real experience.</h2>
     </div>
-  </div>
-</section>
-
+    <div class="home-actions">
+      <a class="home-button home-button--primary" href="/opportunities/">Get involved</a>
+      <a class="home-button home-button--secondary" href="/discord/">Join Discord</a>
+    </div>
+  </section>
+</div>
 {% endblock content %}

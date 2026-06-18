@@ -1,54 +1,84 @@
 {% extends "base.html" %}
 
 {% block content %}
+{% set page_title = page.meta.get("title", page.title) %}
+{% set page_description = page.meta.get("description") %}
+{% set section_label = page.meta.get("section_label", "Open Science Labs") %}
+{% set section_slug = page.url.split("/")[0] %}
+{% if not section_slug %}{% set section_slug = "general" %}{% endif %}
+{% set page_theme = page.meta.get("page_theme", section_slug) %}
+{% set hero_words = page.meta.get("hero_words", ["Learn", "Build", "Share"]) %}
 
-<section>
-  <div class="row pt-2">
-    {% block side_menu %}
+{% set sidebar = namespace(title="", items=[]) %}
+{% for nav_item in nav %}
+  {% if nav_item.children and nav_item.active %}
+    {% set sidebar.title = nav_item.title %}
+    {% set sidebar.items = nav_item.children %}
+  {% endif %}
+{% endfor %}
 
-    {# prepare the nav3 content inside the side block -#}
-    {% set nav3_selected = [] -%}
-    {% for nav1 in nav -%}
-      {% for nav2 in (nav1.children or []) -%}
-        {% if nav2.active %}
-          {% for nav3 in (nav2.children or []) -%}
-            {% if nav3.title != "index" -%}
-            {{ nav3_selected.append(nav3) or "" -}}
+<section class="osl-page osl-page--sidebar osl-page--section-{{ section_slug }} osl-page--theme-{{ page_theme }}">
+  <div class="osl-page-shell">
+    <header class="osl-page-hero">
+      <div class="osl-page-hero__content">
+        <p class="osl-page-kicker">{{ section_label }}</p>
+        <h1>{{ page_title or config.site_name }}</h1>
+        {% if page_description and page_description != page_title %}
+          <p class="osl-page-description">{{ page_description }}</p>
+        {% endif %}
+      </div>
+      <div class="osl-hero-system" aria-hidden="true">
+        <span class="osl-hero-system__ring"></span>
+        <span class="osl-hero-system__node osl-hero-system__node--one"></span>
+        <span class="osl-hero-system__node osl-hero-system__node--two"></span>
+        <span class="osl-hero-system__node osl-hero-system__node--three"></span>
+        <span class="osl-hero-system__label osl-hero-system__label--one">{{ hero_words[0] }}</span>
+        <span class="osl-hero-system__label osl-hero-system__label--two">{{ hero_words[1] }}</span>
+        <span class="osl-hero-system__label osl-hero-system__label--three">{{ hero_words[2] }}</span>
+      </div>
+    </header>
+
+    <div class="osl-page-layout">
+      {% if sidebar.items %}
+      <aside class="osl-side-nav" aria-label="{{ sidebar.title }} navigation">
+        <p class="osl-side-nav__title">{{ sidebar.title }}</p>
+        <nav>
+          {% set rendered = namespace(urls=[]) %}
+          {% for item in sidebar.items %}
+            {% if item.children %}
+              <div class="osl-side-nav__group">
+                <span class="osl-side-nav__group-title">{{ item.title }}</span>
+                {% for child in item.children %}
+                  {% if child.url not in rendered.urls %}
+                  {% set _ = rendered.urls.append(child.url) %}
+                  <a href="{{ child.url|url }}"
+                     class="{% if child.active or child.url == page.url %}active{% endif %}"
+                     {% if child.active or child.url == page.url %}aria-current="page"{% endif %}>
+                    {{ child.title }}
+                  </a>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            {% else %}
+              {% if item.url not in rendered.urls %}
+              {% set _ = rendered.urls.append(item.url) %}
+              <a href="{{ item.url|url }}"
+                 class="{% if item.active or item.url == page.url %}active{% endif %}"
+                 {% if item.active or item.url == page.url %}aria-current="page"{% endif %}>
+                {{ item.title }}
+              </a>
+              {% endif %}
             {% endif %}
-          {% endfor -%}
-        {% endif -%}
-      {% endfor -%}
-    {% endfor %}
-
-    <div class="col">
-      <!-- List group for sidebar menu -->
-      <div class="list-group pt-4">
-        {% for nav3_item in nav3_selected %}
-        <a
-          href="/{{ nav3_item.url }}"
-          class="list-group-item list-group-item-action{% if nav3_item.active %} active{% endif %}"
-          {%- if nav3_item.active %} aria-current="true"{% endif -%}
-        >
-          {{ nav3_item.title }}
-        </a>
-        {% endfor %}
-      </div>
-
-      {% if menu_3rd_level_selected %}
-      <div>
-        {% for menu_item_3rd_level in menu_3rd_level_selected %}
-        <p>
-          <a href="{{ menu_item_3rd_level.url }}">{{ menu_item_3rd_level.title }}</a>
-        </p>
-        {% endfor %}
-      </div>
+          {% endfor %}
+        </nav>
+      </aside>
       {% endif %}
-    </div>
-    {% endblock side_menu %}
-    <div class="col-md-9 mx-auto">
-      {% block content_inner %}
-        {{ page.content }}
-      {% endblock content_inner %}
+
+      <article class="osl-markdown">
+        {% block content_inner %}
+          {{ page.content }}
+        {% endblock content_inner %}
+      </article>
     </div>
   </div>
 </section>

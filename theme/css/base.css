@@ -1,10 +1,38 @@
 /* Reset & base layout */
+@font-face{
+  font-family: "Metropolis";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Metropolis-Regular.woff2") format("woff2"),
+       url("../fonts/Metropolis-Regular.woff") format("woff");
+  font-display: swap;
+}
+@font-face{
+  font-family: "Metropolis";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/Metropolis-SemiBold.woff2") format("woff2"),
+       url("../fonts/Metropolis-SemiBold.woff") format("woff");
+  font-display: swap;
+}
+@font-face{
+  font-family: "Metropolis";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/Metropolis-ExtraBold.woff2") format("woff2"),
+       url("../fonts/Metropolis-ExtraBold.woff") format("woff");
+  font-display: swap;
+}
+
 * { box-sizing: border-box; -webkit-appearance: none; }
 html, body { min-height: 100%; }
 html { scroll-padding-top: 4.5rem; }
 body{
   background: var(--bg);
   color: var(--fg);
+  font-family: "Metropolis", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   position: relative;
@@ -24,10 +52,21 @@ body::before{
 /* Typography */
 a{ color: var(--brand); text-decoration: none; }
 a:hover{ color: var(--brand-2); }
-h1,h2,h3,h4,h5,h6{ font-weight: 300; line-height: 1.35; margin: 15px 0 5px; }
-h1{ font-size: 175%; font-weight: 400; }
-h2{ font-size: 150%; } h3{ font-size: 130%; } h4{ font-size: 120%; } h5{ font-size: 110%; } h6{ font-size: 100%; }
-p{ padding: .8rem 0 0 0; }
+h1,h2,h3,h4,h5,h6{
+  color: var(--heading);
+  font-weight: 800;
+  letter-spacing: -.025em;
+  line-height: 1.15;
+  margin: 1.6rem 0 .75rem;
+}
+h1{ font-size: clamp(2.15rem, 5vw, 4.2rem); }
+h2{ font-size: clamp(1.55rem, 3vw, 2.35rem); }
+h3{ font-size: clamp(1.22rem, 2vw, 1.55rem); }
+h4{ font-size: 1.15rem; }
+h5{ font-size: 1.05rem; }
+h6{ font-size: 1rem; text-transform: uppercase; letter-spacing: .06em; }
+p{ margin: 0 0 1rem; padding: 0; }
+strong{ font-weight: 800; color: color-mix(in oklab, var(--fg) 88%, var(--heading)); }
 
 /* Media */
 img, svg{ max-width: 100%; height: auto; vertical-align: middle; }
