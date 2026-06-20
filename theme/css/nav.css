@@ -184,9 +184,8 @@
   color: var(--nav-link); /* inherits your theme */
 }
 
-/* Size + feel of the field */
 .navbar .searchbar .form-control {
-  min-width: 20rem;           /* adjust as you like */
+  min-width: 24rem;           /* increased minimum width */
   box-shadow: none !important;
   color: var(--nav-link);
 }
@@ -213,7 +212,31 @@
 .navbar .searchbar {
   flex-wrap: nowrap;
   align-items: center;
-  width: clamp(12rem, 22vw, 18rem); /* doesn’t push nav items */
+  width: clamp(16rem, 28vw, 24rem); /* increased width */
+}
+
+/* Place the icon visually inside the input field */
+.navbar .searchbar { position: relative; }
+.navbar .searchbar .input-group-text {
+  position: absolute;
+  left: .6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+  padding: 0;
+  width: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  color: var(--nav-link);
+}
+.navbar .searchbar .form-control {
+  padding-left: calc(1.2rem + .9rem); /* allow space for icon */
+}
+@media (max-width: 1200px){
+  .navbar .searchbar .form-control { padding-left: calc(1.2rem + .6rem); }
 }
 
 /* Icon inside the input group (independent of your global .icon rules) */

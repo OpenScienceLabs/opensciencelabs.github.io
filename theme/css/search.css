@@ -6,6 +6,11 @@
   top: calc(100% + .25rem);
   z-index: 1050;
 
+  min-width: 260px;
+  width: max(100%, min(38rem, 100vw));
+  max-width: min(100vw, 38rem);
+  box-sizing: border-box;
+  
   background: var(--dd-bg, rgba(16,18,27,.98));
   border: 1px solid var(--dd-border, rgba(255,255,255,.12));
   backdrop-filter: blur(10px);
@@ -16,6 +21,14 @@
   display: none;
   max-height: min(60vh, 520px);
   overflow: auto;
+}
+
+@media (max-width: 1200px) {
+  .search-popover { left: auto; right: 0; width: min(100vw, 30rem); }
+}
+
+@media (max-width: 768px) {
+  .search-popover { width: min(100vw, 24rem); }
 }
 .search-popover.open{ display: block; }
 
