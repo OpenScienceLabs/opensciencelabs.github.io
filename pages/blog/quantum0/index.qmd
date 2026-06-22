@@ -1,14 +1,14 @@
 ---
-title: "Introduction to the quantum theory and computing"
+title: Introduction to the quantum theory and computing
 slug: introduction-to-quantum-theory
 date: 2026-06-05
-authors: ["Sri-Kaleeswarar-S"]
+authors: [Sri-Kaleeswarar-S]
 tags: [quantum-mechanics,quantum,srikaleeswarar]
 categories: [quantum-theory]
 description: |
  Quantum mechanics introduction.
-thumbnail: "/header.jpg"
-template: "blog-post.html"
+thumbnail: /header.jpg
+template: blog-post.html
 ---
 
 Introduction to the quantum theory and computing
