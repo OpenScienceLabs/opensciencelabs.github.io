@@ -48,7 +48,7 @@ that can help others learn, collaborate, and contribute. These initiatives can
 include events, educational materials, courses, mentoring, office hours, and
 other community-led opportunities.
 
-Visit the [Community Partners](/partnership/community) page to discover current
+Visit the [Community Partners](/partnership/community/) page to discover current
 opportunities or suggest an initiative for OSL to publicize.
 
 ## How to Apply

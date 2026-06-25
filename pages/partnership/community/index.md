@@ -47,7 +47,7 @@ community collaboration, education, and project development.
 We especially welcome initiatives that support open collaboration, continuous
 learning, inclusivity, accessibility, ethical responsibility, community
 empowerment, sustainability, and constructive communication. You can learn more
-about these principles in the [Open Science Labs Formula](/about/formula).
+about these principles in the [Open Science Labs Formula](/about/formula/).
 
 ## What we look for
 
@@ -74,16 +74,16 @@ contact us at [`team@opensciencelabs.org`](mailto:team@opensciencelabs.org).
 
 ## How to suggest an initiative
 
-If you have an initiative to share, join our
-[Discord community](https://opensciencelabs.org/discord) and post it in the
-`community-initiatives` channel with a short description, organizer name, target
-audience, relevant links, and any important dates or participation details.
+If you have an initiative to share, join our [Discord community](/discord/) and
+post it in the `community-initiatives` channel with a short description,
+organizer name, target audience, relevant links, and any important dates or
+participation details.
 
 ## Code of Conduct
 
 All Community Partner initiatives shared through Open Science Labs should follow
-our [Code of Conduct](/about/coc). We expect organizers and participants to help
-keep these spaces welcoming, respectful, inclusive, and safe for everyone.
+our [Code of Conduct](/about/coc/). We expect organizers and participants to
+help keep these spaces welcoming, respectful, inclusive, and safe for everyone.
 
 If you experience or notice any issue related to a Community Partner initiative,
 please contact us at

@@ -37,7 +37,7 @@ Stay tuned for updates on the Resources page, which we will launch soon.
 
 Community members also share courses, mentoring opportunities, events,
 educational materials, and other initiatives through our
-[Community Partners](/partnership/community) page.
+[Community Partners](/partnership/community/) page.
 
 Whether you're looking to deepen your knowledge, share your expertise, or find
 new ways to engage with the community, the Learning section of Open Science Labs
