@@ -9,20 +9,8 @@ authors: ["OSL Team"]
 Welcome to the Learning section of Open Science Labs, where we are committed to
 fostering an environment of continuous education and community engagement. This
 section of our website is dedicated to providing resources, organizing study
-groups, and hosting events that enhance learning opportunities in the fields of
-open science and technology.
-
-## Events
-
-Our **Events** page is your gateway to both past and upcoming events organized
-by Open Science Labs. From workshops to seminars and webinars, you can find
-information on a variety of gatherings that aim to educate and inspire. Whether
-you're looking to attend your first open-source workshop or a seasoned
-professional eager to engage with new ideas, our events cater to all levels of
-expertise.
-
-Check out our [Events](/learning/events) page for more details on how you can
-participate.
+groups, and connecting people with community-led learning opportunities in the
+fields of open science and technology.
 
 ## Study Groups
 
@@ -44,6 +32,12 @@ This new section will support your learning needs by providing trusted,
 high-quality educational materials.
 
 Stay tuned for updates on the Resources page, which we will launch soon.
+
+## Community-led opportunities
+
+Community members also share courses, mentoring opportunities, events,
+educational materials, and other initiatives through our
+[Community Partners](/partnership/community) page.
 
 Whether you're looking to deepen your knowledge, share your expertise, or find
 new ways to engage with the community, the Learning section of Open Science Labs

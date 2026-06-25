@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% set community = page.meta.get("community", {}) %}
+{% set featured = community.get("featured", []) %}
+{% set initiatives = community.get("initiatives", []) %}
+{% set page_title = page.meta.get("title", page.title) %}
+{% set page_description = page.meta.get("description", "Community-led initiatives, resources, courses, mentoring, and events shared by OSL community members.") %}
+{% set section_label = page.meta.get("section_label", "Partnership") %}
+{% set section_slug = page.url.split("/")[0] %}
+{% if not section_slug %}{% set section_slug = "partnership" %}{% endif %}
+{% set page_theme = page.meta.get("page_theme", "partnership") %}
+{% set hero_words = page.meta.get("hero_words", ["Connect", "Amplify", "Collaborate"]) %}
+
+<section class="osl-page osl-page--community osl-page--section-{{ section_slug }} osl-page--theme-{{ page_theme }}">
+  <div class="osl-page-shell">
+    <header class="osl-page-hero">
+      <div class="osl-page-hero__content">
+        <p class="osl-page-kicker">{{ section_label }}</p>
+        <h1>{{ page_title }}</h1>
+        {% if page_description and page_description != page_title %}
+          <p class="osl-page-description">{{ page_description }}</p>
+        {% endif %}
+      </div>
+      <div class="osl-hero-system" aria-hidden="true">
+        <span class="osl-hero-system__ring"></span>
+        <span class="osl-hero-system__node osl-hero-system__node--one"></span>
+        <span class="osl-hero-system__node osl-hero-system__node--two"></span>
+        <span class="osl-hero-system__node osl-hero-system__node--three"></span>
+        <span class="osl-hero-system__label osl-hero-system__label--one">{{ hero_words[0] }}</span>
+        <span class="osl-hero-system__label osl-hero-system__label--two">{{ hero_words[1] }}</span>
+        <span class="osl-hero-system__label osl-hero-system__label--three">{{ hero_words[2] }}</span>
+      </div>
+    </header>
+
+    <article class="osl-markdown">
+      {{ page.content }}
+    </article>
+
+    <section class="event-section initiative-section" aria-labelledby="featured-community-initiatives">
+      <div class="directory-heading">
+        <p class="directory-eyebrow">Start here</p>
+        <h2 id="featured-community-initiatives">Featured Community Partner Opportunity</h2>
+      </div>
+
+      {% if featured %}
+      <div class="event-grid initiative-grid">
+        {% for initiative in featured %}
+        <article class="event-card initiative-card initiative-card--featured">
+          <div class="event-card__media initiative-card__media">
+            {% if initiative.url %}
+            <a href="{{ initiative.url }}" target="_blank" rel="noopener">
+              <img src="{{ initiative.thumbnail }}" alt="{{ initiative.name }}" loading="lazy" decoding="async" />
+            </a>
+            {% else %}
+              <img src="{{ initiative.thumbnail }}" alt="{{ initiative.name }}" loading="lazy" decoding="async" />
+            {% endif %}
+          </div>
+          <div class="event-card__body initiative-card__body">
+            <p class="event-card__date initiative-card__category">
+              {{ initiative.category }}{% if initiative.status %} · {{ initiative.status }}{% endif %}
+            </p>
+            <h3>{{ initiative.name }}</h3>
+            {% if initiative.partner %}
+              <p class="initiative-card__partner">By {{ initiative.partner }}</p>
+            {% endif %}
+            <p>{{ initiative.description }}</p>
+            <dl class="initiative-meta">
+              {% if initiative.format %}
+              <div>
+                <dt>Format</dt>
+                <dd>{{ initiative.format }}</dd>
+              </div>
+              {% endif %}
+              {% if initiative.audience %}
+              <div>
+                <dt>Audience</dt>
+                <dd>{{ initiative.audience }}</dd>
+              </div>
+              {% endif %}
+            </dl>
+            {% if initiative.url %}
+              <a href="{{ initiative.url }}" class="osl-inline-button" target="_blank" rel="noopener">
+                {{ initiative.action or "Learn more" }}
+              </a>
+            {% endif %}
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+      {% else %}
+      <div class="empty-state">
+        <h3>TBA</h3>
+      </div>
+      {% endif %}
+    </section>
+
+    <section class="event-section initiative-section" aria-labelledby="community-initiatives">
+      <div class="directory-heading">
+        <p class="directory-eyebrow">Community initiatives</p>
+        <h2 id="community-initiatives">Community Partner Initiatives</h2>
+      </div>
+
+      {% if initiatives %}
+      <div class="event-grid initiative-grid">
+        {% for initiative in initiatives %}
+        <article class="event-card initiative-card">
+          <div class="event-card__media initiative-card__media">
+            {% if initiative.url %}
+            <a href="{{ initiative.url }}" target="_blank" rel="noopener">
+              <img src="{{ initiative.thumbnail }}" alt="{{ initiative.name }}" loading="lazy" decoding="async" />
+            </a>
+            {% else %}
+              <img src="{{ initiative.thumbnail }}" alt="{{ initiative.name }}" loading="lazy" decoding="async" />
+            {% endif %}
+          </div>
+          <div class="event-card__body initiative-card__body">
+            <p class="event-card__date initiative-card__category">
+              {{ initiative.category }}{% if initiative.status %} · {{ initiative.status }}{% endif %}
+            </p>
+            <h3>{{ initiative.name }}</h3>
+            {% if initiative.partner %}
+              <p class="initiative-card__partner">By {{ initiative.partner }}</p>
+            {% endif %}
+            <p>{{ initiative.description }}</p>
+            <dl class="initiative-meta">
+              {% if initiative.format %}
+              <div>
+                <dt>Format</dt>
+                <dd>{{ initiative.format }}</dd>
+              </div>
+              {% endif %}
+              {% if initiative.audience %}
+              <div>
+                <dt>Audience</dt>
+                <dd>{{ initiative.audience }}</dd>
+              </div>
+              {% endif %}
+            </dl>
+            {% if initiative.url %}
+              <a href="{{ initiative.url }}" class="osl-inline-button osl-inline-button--subtle" target="_blank" rel="noopener">
+                {{ initiative.action or "Learn more" }}
+              </a>
+            {% endif %}
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+      {% else %}
+      <div class="empty-state">
+        <h3>TBA</h3>
+      </div>
+      {% endif %}
+    </section>
+  </div>
+</section>
+{% endblock content %}
