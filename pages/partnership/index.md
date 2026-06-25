@@ -41,6 +41,16 @@ Partners can contribute in various ways:
 - **Resource Provision**: Offer tools, datasets, or platforms that can aid in
   the development of open-source projects.
 
+## Community Partners
+
+Community Partners are people from our community who are leading initiatives
+that can help others learn, collaborate, and contribute. These initiatives can
+include events, educational materials, courses, mentoring, office hours, and
+other community-led opportunities.
+
+Visit the [Community Partners](/partnership/community/) page to discover current
+opportunities or suggest an initiative for OSL to publicize.
+
 ## How to Apply
 
 If your organization is interested in partnering with Open Science Labs, please
