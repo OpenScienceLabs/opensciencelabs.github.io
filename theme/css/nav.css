@@ -185,7 +185,8 @@
 }
 
 .navbar .searchbar .form-control {
-  min-width: 24rem;           /* increased minimum width */
+  min-width: 0;           /* increased minimum width */
+  width: 100%;
   box-shadow: none !important;
   color: var(--nav-link);
 }
@@ -193,7 +194,7 @@
 
 /* Tweak for narrower viewports where this form is still visible */
 @media (max-width: 1200px){
-  .navbar .searchbar .form-control { min-width: 14rem; }
+  .navbar .searchbar .form-control { min-width: 0; width: 100%; }
 }
 
 /* Prevent navbar wrapping that shoves items to a new row */
@@ -212,7 +213,7 @@
 .navbar .searchbar {
   flex-wrap: nowrap;
   align-items: center;
-  width: clamp(16rem, 28vw, 24rem); /* increased width */
+  width: clamp(10rem, 20vw, 18rem); /* increased width */
 }
 
 /* Place the icon visually inside the input field */

@@ -32,7 +32,7 @@
             <span class="meta_item date">
               <svg class="icon" aria-hidden="true"><use xlink:href="#calendar"/></svg>
               <time class="post_date" datetime="{{ page.meta["date"].strftime('%Y-%m-%d') }}">
-                {{ page.meta["date"].strftime('%b %#d, %Y') }}
+                {{ page.meta["date"].strftime('%b') }} {{ page.meta["date"].day }}, {{ page.meta["date"].strftime('%Y') }}
               </time>
             </span>
           {% endif %}
