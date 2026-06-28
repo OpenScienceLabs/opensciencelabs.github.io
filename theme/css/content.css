@@ -1020,10 +1020,15 @@ html[data-mode="dim"] .osl-page-hero{
   border-radius: 0;
 }
 
+.osl-side-nav__group a{
+  margin-left: .35rem;
+  padding-left: 1rem;
+}
+
 .osl-side-nav a:hover,
 .osl-side-nav a.active{
   background: transparent;
-  box-shadow: inset 3px 0 0 var(--osl-accent);
+  box-shadow: inset 0 -2px 0 var(--osl-accent);
 }
 
 .project-card,
@@ -1070,5 +1075,166 @@ html[data-mode="dim"] .osl-page-hero{
 
   .osl-markdown{
     padding: 1.25rem 0;
+  }
+}
+
+/* Responsive section navigation
+   Desktop keeps the sticky left sidebar; mobile uses an inline disclosure menu
+   so long section menus do not consume half of the viewport. */
+.osl-mobile-section-nav{
+  display: none;
+}
+
+.osl-mobile-section-nav summary{
+  list-style: none;
+}
+
+.osl-mobile-section-nav summary::-webkit-details-marker{
+  display: none;
+}
+
+@media (max-width: 900px){
+  .osl-page-layout{
+    grid-template-columns: 1fr;
+    gap: clamp(1rem, 4vw, 1.6rem);
+  }
+
+  .osl-hero-system,
+  .osl-side-nav{
+    display: none;
+  }
+
+  .osl-mobile-section-nav{
+    display: block;
+    overflow: hidden;
+    border: 1px solid var(--border-strong);
+    border-left: .35rem solid var(--osl-accent);
+    background: var(--surface-solid);
+  }
+
+  .osl-mobile-section-nav__summary{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .95rem 1rem;
+    color: var(--heading);
+  }
+
+  .osl-mobile-section-nav__summary:focus-visible,
+  .osl-mobile-section-nav__group-summary:focus-visible{
+    outline: 3px solid color-mix(in oklab, var(--osl-accent) 45%, transparent);
+    outline-offset: -3px;
+  }
+
+  .osl-mobile-section-nav__summary::after{
+    content: "";
+    flex: 0 0 auto;
+    width: .7rem;
+    height: .7rem;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: translateY(-.15rem) rotate(45deg);
+    transition: transform .18s ease;
+  }
+
+  .osl-mobile-section-nav[open] > .osl-mobile-section-nav__summary::after{
+    transform: translateY(.15rem) rotate(225deg);
+  }
+
+  .osl-mobile-section-nav__summary-text{
+    display: grid;
+    gap: .18rem;
+    min-width: 0;
+  }
+
+  .osl-mobile-section-nav__eyebrow{
+    color: var(--osl-accent);
+    font-size: .76rem;
+    font-weight: 850;
+    letter-spacing: .1em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .osl-mobile-section-nav__current{
+    overflow: hidden;
+    color: color-mix(in oklab, var(--fg) 78%, var(--muted));
+    font-size: .94rem;
+    font-weight: 750;
+    line-height: 1.3;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .osl-mobile-section-nav__panel{
+    display: grid;
+    gap: .15rem;
+    padding: .35rem .75rem .85rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .osl-mobile-section-nav__group{
+    border-top: 1px solid var(--border);
+  }
+
+  .osl-mobile-section-nav__group:first-child{
+    border-top: 0;
+  }
+
+  .osl-mobile-section-nav__group-summary{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .85rem;
+    padding: .82rem .25rem;
+    color: var(--heading);
+    font-size: .95rem;
+    font-weight: 850;
+  }
+
+  .osl-mobile-section-nav__group-summary::after{
+    content: "";
+    flex: 0 0 auto;
+    width: .55rem;
+    height: .55rem;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    opacity: .7;
+    transform: translateY(-.12rem) rotate(45deg);
+    transition: transform .18s ease;
+  }
+
+  .osl-mobile-section-nav__group[open] > .osl-mobile-section-nav__group-summary{
+    color: var(--osl-accent);
+  }
+
+  .osl-mobile-section-nav__group[open] > .osl-mobile-section-nav__group-summary::after{
+    transform: translateY(.12rem) rotate(225deg);
+  }
+
+  .osl-mobile-section-nav__group-links{
+    display: grid;
+    gap: .12rem;
+    padding: 0 0 .7rem .8rem;
+  }
+
+  .osl-mobile-section-nav a{
+    display: block;
+    padding: .62rem .75rem;
+    color: color-mix(in oklab, var(--fg) 82%, var(--muted));
+    font-size: .93rem;
+    font-weight: 720;
+    line-height: 1.3;
+    text-decoration: none;
+  }
+
+  .osl-mobile-section-nav a:hover,
+  .osl-mobile-section-nav a.active{
+    background: color-mix(in oklab, var(--osl-accent) 10%, transparent);
+    box-shadow: inset 0 -2px 0 var(--osl-accent);
+    color: var(--osl-accent);
   }
 }
