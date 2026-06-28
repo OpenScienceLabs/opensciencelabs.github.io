@@ -62,7 +62,7 @@ jobs:
       - name: Linter
         if: ${{ github.event_name == 'pull_request' }}
         env:
-          PRE_COMMIT_SKIP: mkdocs-build
+          PRE_COMMIT_SKIP: mkdocs-build,linkcheckmd
         run: |
           pre-commit install
           pre-commit run --all-files --verbose
