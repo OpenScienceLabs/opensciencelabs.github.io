@@ -27,6 +27,20 @@
 * { box-sizing: border-box; -webkit-appearance: none; }
 html, body { min-height: 100%; }
 html { scroll-padding-top: 4.5rem; }
+
+/* Prevent tiny horizontal overflow from full-bleed sections that use viewport
+   units; 100vw includes the scrollbar in some browsers. */
+html,
+body {
+  overflow-x: clip;
+}
+
+@supports not (overflow: clip){
+  html,
+  body {
+    overflow-x: hidden;
+  }
+}
 body{
   background: var(--bg);
   color: var(--fg);

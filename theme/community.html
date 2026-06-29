@@ -1,16 +1,260 @@
 {% extends "base.html" %}
 
+{% macro meta_entry(label, value) -%}
+  {% if value %}
+  <div>
+    <dt>{{ label }}</dt>
+    <dd>{{ value }}</dd>
+  </div>
+  {% endif %}
+{%- endmacro %}
+
+{% macro tag_list(tags) -%}
+  {% if tags %}
+  <ul class="community-tags" aria-label="Topics">
+    {% for tag in tags %}
+    <li>{{ tag }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+{%- endmacro %}
+
+{% macro card_media(item, fallback) -%}
+  <div class="community-card__media">
+    {% if item.thumbnail %}
+      {% if item.url %}
+      <a href="{{ item.url }}" target="_blank" rel="noopener" aria-label="Open {{ item.name }}">
+        <img src="{{ item.thumbnail }}" alt="{{ item.name }}" loading="lazy" decoding="async" />
+      </a>
+      {% else %}
+        <img src="{{ item.thumbnail }}" alt="{{ item.name }}" loading="lazy" decoding="async" />
+      {% endif %}
+    {% else %}
+      <div class="community-card__placeholder" aria-hidden="true">
+        <span>{{ fallback }}</span>
+      </div>
+    {% endif %}
+  </div>
+{%- endmacro %}
+
+{% macro primary_cta(item, subtle=False) -%}
+  {% if item.url %}
+  <a href="{{ item.url }}" class="osl-inline-button{% if subtle %} osl-inline-button--subtle{% endif %}" target="_blank" rel="noopener">
+    {{ item.action or "Learn more" }}
+  </a>
+  {% endif %}
+{%- endmacro %}
+
+{% macro location_meta(location) -%}
+  {% if location %}
+  <div>
+    <dt>Location</dt>
+    <dd>
+      {% if location.name %}{{ location.name }}{% endif %}{% if location.city %}{% if location.name %}, {% endif %}{{ location.city }}{% endif %}{% if location.country %}{% if location.name or location.city %}, {% endif %}{{ location.country }}{% endif %}
+      {% if location.map_url %}
+      <a class="community-map-link" href="{{ location.map_url }}" target="_blank" rel="noopener">Open map</a>
+      {% endif %}
+    </dd>
+  </div>
+  {% endif %}
+{%- endmacro %}
+
+{% macro render_feature(item) -%}
+<article class="community-card community-card--feature">
+  {{ card_media(item, item.category or item.type or "Community") }}
+  <div class="community-card__body">
+    <p class="community-card__eyebrow">
+      {{ item.category or item.type or "Community opportunity" }}{% if item.status %}<span>·</span>{{ item.status }}{% endif %}
+    </p>
+    <h3>{{ item.name }}</h3>
+    {% if item.partner %}
+    <p class="community-card__partner">By {{ item.partner }}</p>
+    {% endif %}
+    {% if item.description %}
+    <p class="community-card__description">{{ item.description }}</p>
+    {% endif %}
+    <dl class="community-meta community-meta--feature">
+      {{ meta_entry("Format", item.format) }}
+      {{ meta_entry("Schedule", item.schedule or item.recurrence) }}
+      {{ meta_entry("Date", item.date_label or item.date_start) }}
+      {{ meta_entry("Duration", item.duration) }}
+      {{ meta_entry("Level", item.level) }}
+      {{ meta_entry("Audience", item.audience) }}
+    </dl>
+    {{ tag_list(item.topics) }}
+    <div class="community-card__actions">
+      {{ primary_cta(item) }}
+    </div>
+  </div>
+</article>
+{%- endmacro %}
+
+{% macro render_event(event, state="upcoming") -%}
+<article class="community-card community-event-card{% if state == 'past' %} community-card--muted{% endif %}">
+  <div class="community-event-card__date">
+    {% if event.recurrence %}
+      <span>Schedule</span>
+      <strong>{{ event.recurrence }}</strong>
+    {% else %}
+      <span>{% if state == 'past' %}Past event{% else %}Event date{% endif %}</span>
+      <time{% if event.date_start %} datetime="{{ event.date_start }}"{% endif %}>{{ event.date_label or event.date_start or "Date TBA" }}</time>
+      {% if event.date_end and event.date_end != event.date_start %}
+      <small>until {{ event.date_end }}</small>
+      {% endif %}
+    {% endif %}
+  </div>
+  <div class="community-event-card__body">
+    <p class="community-card__eyebrow">
+      {{ event.category or "Event" }}{% if event.status %}<span>·</span>{{ event.status }}{% endif %}
+    </p>
+    <h3>{{ event.name }}</h3>
+    {% if event.partner %}
+    <p class="community-card__partner">By {{ event.partner }}</p>
+    {% endif %}
+    {% if event.description %}
+    <p class="community-card__description">{{ event.description }}</p>
+    {% endif %}
+    <dl class="community-meta community-meta--inline">
+      {{ meta_entry("Format", event.format) }}
+      {{ meta_entry("Time", event.time) }}
+      {{ meta_entry("Timezone", event.timezone) }}
+      {{ meta_entry("Audience", event.audience) }}
+      {{ location_meta(event.location) }}
+    </dl>
+    {{ tag_list(event.topics) }}
+    <div class="community-card__actions">
+      {{ primary_cta(event, state == 'past') }}
+      {% set details_url = event.details_url or event.more_details_url %}
+      {% if details_url %}
+      <a href="{{ details_url }}" class="osl-inline-button osl-inline-button--subtle" target="_blank" rel="noopener">More details</a>
+      {% endif %}
+      {% if event.recording_url %}
+      <a href="{{ event.recording_url }}" class="osl-inline-button osl-inline-button--subtle" target="_blank" rel="noopener">Watch recording</a>
+      {% endif %}
+      {% if event.notes_url %}
+      <a href="{{ event.notes_url }}" class="osl-inline-button osl-inline-button--subtle" target="_blank" rel="noopener">Read notes</a>
+      {% endif %}
+    </div>
+  </div>
+</article>
+{%- endmacro %}
+
+{% macro render_course(course) -%}
+<article class="community-card community-card--course">
+  {{ card_media(course, "Course") }}
+  <div class="community-card__body">
+    <p class="community-card__eyebrow">
+      {{ course.category or "Course" }}{% if course.status %}<span>·</span>{{ course.status }}{% endif %}
+    </p>
+    <h3>{{ course.name }}</h3>
+    {% if course.partner %}
+    <p class="community-card__partner">By {{ course.partner }}</p>
+    {% endif %}
+    {% if course.description %}
+    <p class="community-card__description">{{ course.description }}</p>
+    {% endif %}
+    <dl class="community-meta">
+      {{ meta_entry("Level", course.level) }}
+      {{ meta_entry("Mode", course.mode or course.format) }}
+      {{ meta_entry("Duration", course.duration) }}
+      {{ meta_entry("Workload", course.workload) }}
+      {{ meta_entry("Language", course.language) }}
+      {{ meta_entry("Prerequisites", course.prerequisites) }}
+    </dl>
+    {{ tag_list(course.topics) }}
+    <div class="community-card__actions">
+      {{ primary_cta(course) }}
+      {% if course.syllabus_url %}
+      <a href="{{ course.syllabus_url }}" class="osl-inline-button osl-inline-button--subtle" target="_blank" rel="noopener">View syllabus</a>
+      {% endif %}
+    </div>
+  </div>
+</article>
+{%- endmacro %}
+
+{% macro render_resource(resource) -%}
+<article class="community-resource-card">
+  <div class="community-resource-card__top">
+    <p class="community-card__eyebrow">
+      {{ resource.type or "Resource" }}{% if resource.status %}<span>·</span>{{ resource.status }}{% endif %}
+    </p>
+    <h3>{{ resource.name }}</h3>
+  </div>
+  {% if resource.partner %}
+  <p class="community-card__partner">By {{ resource.partner }}</p>
+  {% endif %}
+  {% if resource.description %}
+  <p class="community-card__description">{{ resource.description }}</p>
+  {% endif %}
+  <dl class="community-meta community-meta--inline">
+    {{ meta_entry("Language", resource.language) }}
+    {{ meta_entry("License", resource.license) }}
+    {{ meta_entry("Updated", resource.updated) }}
+    {{ meta_entry("Maintainer", resource.maintainer) }}
+  </dl>
+  {{ tag_list(resource.topics) }}
+  <div class="community-card__actions">
+    {{ primary_cta(resource, True) }}
+    {% if resource.repository_url %}
+    <a href="{{ resource.repository_url }}" class="osl-inline-button osl-inline-button--subtle" target="_blank" rel="noopener">View repository</a>
+    {% endif %}
+  </div>
+</article>
+{%- endmacro %}
+
+{% macro render_mentoring(item) -%}
+<article class="community-card community-card--mentoring">
+  {{ card_media(item, "Mentoring") }}
+  <div class="community-card__body">
+    <p class="community-card__eyebrow">
+      {{ item.category or "Mentoring" }}{% if item.status %}<span>·</span>{{ item.status }}{% endif %}
+    </p>
+    <h3>{{ item.name }}</h3>
+    {% if item.partner %}
+    <p class="community-card__partner">By {{ item.partner }}</p>
+    {% endif %}
+    {% if item.description %}
+    <p class="community-card__description">{{ item.description }}</p>
+    {% endif %}
+    <dl class="community-meta">
+      {{ meta_entry("Format", item.format) }}
+      {{ meta_entry("Schedule", item.schedule or item.recurrence) }}
+      {{ meta_entry("Timezone", item.timezone) }}
+      {{ meta_entry("Audience", item.audience) }}
+      {{ meta_entry("Capacity", item.capacity) }}
+    </dl>
+    {{ tag_list(item.topics) }}
+    <div class="community-card__actions">
+      {{ primary_cta(item) }}
+      {% if item.booking_url %}
+      <a href="{{ item.booking_url }}" class="osl-inline-button osl-inline-button--subtle" target="_blank" rel="noopener">Book a slot</a>
+      {% endif %}
+    </div>
+  </div>
+</article>
+{%- endmacro %}
+
 {% block content %}
 {% set community = page.meta.get("community", {}) %}
-{% set featured = community.get("featured", []) %}
-{% set initiatives = community.get("initiatives", []) %}
+{% set featured = community.get("featured", []) or [] %}
+{% set events = community.get("events", {}) or {} %}
+{% set upcoming_events = events.get("upcoming", []) or [] %}
+{% set recurring_events = events.get("recurring", []) or [] %}
+{% set past_events = events.get("past", events.get("past_events", [])) or [] %}
+{% set courses = community.get("courses", []) or [] %}
+{% set resources = community.get("resources", []) or [] %}
+{% set mentoring = community.get("mentoring", []) or [] %}
+{% set submission = community.get("submission", {}) or {} %}
+{% set event_count = upcoming_events|length + recurring_events|length + past_events|length %}
 {% set page_title = page.meta.get("title", page.title) %}
-{% set page_description = page.meta.get("description", "Community-led initiatives, resources, courses, mentoring, and events shared by OSL community members.") %}
+{% set page_description = page.meta.get("description", "Community-led events, resources, courses, mentoring, and other opportunities shared by OSL community members.") %}
 {% set section_label = page.meta.get("section_label", "Partnership") %}
 {% set section_slug = page.url.split("/")[0] %}
 {% if not section_slug %}{% set section_slug = "partnership" %}{% endif %}
 {% set page_theme = page.meta.get("page_theme", "partnership") %}
-{% set hero_words = page.meta.get("hero_words", ["Connect", "Amplify", "Collaborate"]) %}
+{% set hero_words = page.meta.get("hero_words", ["Discover", "Participate", "Contribute"]) %}
+{% set submission_channel = submission.get("channel", "community-initiatives") %}
+{% set submission_url = submission.get("discord_url", "/discord/") %}
 
 <section class="osl-page osl-page--community osl-page--section-{{ section_slug }} osl-page--theme-{{ page_theme }}">
   <div class="osl-page-shell">
@@ -33,124 +277,174 @@
       </div>
     </header>
 
-    <article class="osl-markdown">
+    <article class="osl-markdown community-intro">
       {{ page.content }}
     </article>
 
-    <section class="event-section initiative-section" aria-labelledby="featured-community-initiatives">
+    <nav class="community-switchboard" aria-label="Community partner opportunity types">
+      <a href="#community-events">
+        <span class="community-switchboard__label">Events &amp; gatherings</span>
+        <span class="community-switchboard__count">{{ event_count or "TBA" }}</span>
+      </a>
+      <a href="#community-courses">
+        <span class="community-switchboard__label">Courses</span>
+        <span class="community-switchboard__count">{{ courses|length or "TBA" }}</span>
+      </a>
+      <a href="#community-resources">
+        <span class="community-switchboard__label">Resources</span>
+        <span class="community-switchboard__count">{{ resources|length or "TBA" }}</span>
+      </a>
+      <a href="#community-mentoring">
+        <span class="community-switchboard__label">Mentoring</span>
+        <span class="community-switchboard__count">{{ mentoring|length or "TBA" }}</span>
+      </a>
+      <a href="#suggest-community-initiative" class="community-switchboard__submit">
+        <span class="community-switchboard__label">Suggest an initiative</span>
+        <span class="community-switchboard__count">→</span>
+      </a>
+    </nav>
+
+    {% if featured %}
+    <section class="community-section community-section--featured" aria-labelledby="featured-community-opportunities">
       <div class="directory-heading">
         <p class="directory-eyebrow">Start here</p>
-        <h2 id="featured-community-initiatives">Featured Community Partner Opportunity</h2>
+        <h2 id="featured-community-opportunities">Featured opportunities</h2>
       </div>
 
-      {% if featured %}
-      <div class="event-grid initiative-grid">
-        {% for initiative in featured %}
-        <article class="event-card initiative-card initiative-card--featured">
-          <div class="event-card__media initiative-card__media">
-            {% if initiative.url %}
-            <a href="{{ initiative.url }}" target="_blank" rel="noopener">
-              <img src="{{ initiative.thumbnail }}" alt="{{ initiative.name }}" loading="lazy" decoding="async" />
-            </a>
-            {% else %}
-              <img src="{{ initiative.thumbnail }}" alt="{{ initiative.name }}" loading="lazy" decoding="async" />
-            {% endif %}
-          </div>
-          <div class="event-card__body initiative-card__body">
-            <p class="event-card__date initiative-card__category">
-              {{ initiative.category }}{% if initiative.status %} · {{ initiative.status }}{% endif %}
-            </p>
-            <h3>{{ initiative.name }}</h3>
-            {% if initiative.partner %}
-              <p class="initiative-card__partner">By {{ initiative.partner }}</p>
-            {% endif %}
-            <p>{{ initiative.description }}</p>
-            <dl class="initiative-meta">
-              {% if initiative.format %}
-              <div>
-                <dt>Format</dt>
-                <dd>{{ initiative.format }}</dd>
-              </div>
-              {% endif %}
-              {% if initiative.audience %}
-              <div>
-                <dt>Audience</dt>
-                <dd>{{ initiative.audience }}</dd>
-              </div>
-              {% endif %}
-            </dl>
-            {% if initiative.url %}
-              <a href="{{ initiative.url }}" class="osl-inline-button" target="_blank" rel="noopener">
-                {{ initiative.action or "Learn more" }}
-              </a>
-            {% endif %}
-          </div>
-        </article>
+      <div class="community-feature-grid">
+        {% for item in featured %}
+          {{ render_feature(item) }}
         {% endfor %}
       </div>
+    </section>
+    {% endif %}
+
+    <section class="community-section" id="community-events" aria-labelledby="community-events-title">
+      <div class="directory-heading">
+        <p class="directory-eyebrow">Meet, practice, and exchange</p>
+        <h2 id="community-events-title">Events &amp; gatherings</h2>
+      </div>
+
+      {% if upcoming_events or recurring_events or past_events %}
+        {% if upcoming_events or recurring_events %}
+        <div class="community-subsection">
+          <h3>Current events</h3>
+          <div class="community-event-list">
+            {% for event in upcoming_events %}
+              {{ render_event(event, "upcoming") }}
+            {% endfor %}
+            {% for event in recurring_events %}
+              {{ render_event(event, "recurring") }}
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
+        {% if past_events %}
+        <div class="community-subsection community-subsection--archive">
+          <h3>Past events</h3>
+          <div class="community-event-list community-event-list--archive">
+            {% for event in past_events %}
+              {{ render_event(event, "past") }}
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
       {% else %}
-      <div class="empty-state">
-        <h3>TBA</h3>
+      <div class="empty-state community-empty-state">
+        <h3>No community events listed yet</h3>
+        <p>Upcoming, recurring, hybrid, and in-person events will appear here when community organizers share them.</p>
       </div>
       {% endif %}
     </section>
 
-    <section class="event-section initiative-section" aria-labelledby="community-initiatives">
+    <section class="community-section" id="community-courses" aria-labelledby="community-courses-title">
       <div class="directory-heading">
-        <p class="directory-eyebrow">Community initiatives</p>
-        <h2 id="community-initiatives">Community Partner Initiatives</h2>
+        <p class="directory-eyebrow">Learn with structure</p>
+        <h2 id="community-courses-title">Courses &amp; learning paths</h2>
       </div>
 
-      {% if initiatives %}
-      <div class="event-grid initiative-grid">
-        {% for initiative in initiatives %}
-        <article class="event-card initiative-card">
-          <div class="event-card__media initiative-card__media">
-            {% if initiative.url %}
-            <a href="{{ initiative.url }}" target="_blank" rel="noopener">
-              <img src="{{ initiative.thumbnail }}" alt="{{ initiative.name }}" loading="lazy" decoding="async" />
-            </a>
-            {% else %}
-              <img src="{{ initiative.thumbnail }}" alt="{{ initiative.name }}" loading="lazy" decoding="async" />
-            {% endif %}
-          </div>
-          <div class="event-card__body initiative-card__body">
-            <p class="event-card__date initiative-card__category">
-              {{ initiative.category }}{% if initiative.status %} · {{ initiative.status }}{% endif %}
-            </p>
-            <h3>{{ initiative.name }}</h3>
-            {% if initiative.partner %}
-              <p class="initiative-card__partner">By {{ initiative.partner }}</p>
-            {% endif %}
-            <p>{{ initiative.description }}</p>
-            <dl class="initiative-meta">
-              {% if initiative.format %}
-              <div>
-                <dt>Format</dt>
-                <dd>{{ initiative.format }}</dd>
-              </div>
-              {% endif %}
-              {% if initiative.audience %}
-              <div>
-                <dt>Audience</dt>
-                <dd>{{ initiative.audience }}</dd>
-              </div>
-              {% endif %}
-            </dl>
-            {% if initiative.url %}
-              <a href="{{ initiative.url }}" class="osl-inline-button osl-inline-button--subtle" target="_blank" rel="noopener">
-                {{ initiative.action or "Learn more" }}
-              </a>
-            {% endif %}
-          </div>
-        </article>
+      {% if courses %}
+      <div class="community-card-grid">
+        {% for course in courses %}
+          {{ render_course(course) }}
         {% endfor %}
       </div>
       {% else %}
-      <div class="empty-state">
-        <h3>TBA</h3>
+      <div class="empty-state community-empty-state">
+        <h3>No courses listed yet</h3>
+        <p>Cohort-based courses, self-paced modules, bootcamps, and reading paths from community partners will appear here.</p>
       </div>
       {% endif %}
+    </section>
+
+    <section class="community-section" id="community-resources" aria-labelledby="community-resources-title">
+      <div class="directory-heading">
+        <p class="directory-eyebrow">Use and reuse</p>
+        <h2 id="community-resources-title">Resources &amp; toolkits</h2>
+      </div>
+
+      {% if resources %}
+      <div class="community-resource-grid">
+        {% for resource in resources %}
+          {{ render_resource(resource) }}
+        {% endfor %}
+      </div>
+      {% else %}
+      <div class="empty-state community-empty-state">
+        <h3>No resources listed yet</h3>
+        <p>Guides, datasets, templates, notebooks, videos, curricula, and repositories will be listed without location or map fields.</p>
+      </div>
+      {% endif %}
+    </section>
+
+    <section class="community-section" id="community-mentoring" aria-labelledby="community-mentoring-title">
+      <div class="directory-heading">
+        <p class="directory-eyebrow">Get support</p>
+        <h2 id="community-mentoring-title">Mentoring, office hours &amp; project clinics</h2>
+      </div>
+
+      {% if mentoring %}
+      <div class="community-card-grid">
+        {% for item in mentoring %}
+          {{ render_mentoring(item) }}
+        {% endfor %}
+      </div>
+      {% else %}
+      <div class="empty-state community-empty-state">
+        <h3>No mentoring spaces listed yet</h3>
+        <p>Recurring office hours, project clinics, contribution support, and mentoring opportunities will appear here.</p>
+      </div>
+      {% endif %}
+    </section>
+
+    <section class="community-guidance" id="suggest-community-initiative" aria-labelledby="suggest-community-initiative-title">
+      <div class="directory-heading">
+        <p class="directory-eyebrow">Share responsibly</p>
+        <h2 id="suggest-community-initiative-title">Suggest a community opportunity</h2>
+      </div>
+
+      <div class="community-guidance-grid">
+        <article class="community-guidance-card community-guidance-card--primary">
+          <h3>Have something useful for the community?</h3>
+          <p>Post it in the <code>{{ submission_channel }}</code> channel with the organizer name, audience, format, participation link, dates or recurrence, and any accessibility notes.</p>
+          <a href="{{ submission_url }}" class="osl-inline-button">Join Discord</a>
+        </article>
+        <article class="community-guidance-card">
+          <h3>What we look for</h3>
+          <ul>
+            <li>Clear value for open science, open source, education, mentoring, or community building.</li>
+            <li>Transparent ownership, schedule, expected commitment, and participation details.</li>
+            <li>A welcoming approach aligned with the OSL Code of Conduct.</li>
+          </ul>
+        </article>
+        <article class="community-guidance-card">
+          <h3>Independent initiatives &amp; Code of Conduct</h3>
+          <p>Community Partner opportunities are independently organized by their maintainers. OSL helps amplify aligned initiatives, but organizers remain responsible for content, activities, registration, schedules, materials, decisions, and outcomes.</p>
+          <p>All opportunities shared through OSL should follow our <a href="/about/coc/">Code of Conduct</a>. Organizers and participants are expected to keep these spaces welcoming, respectful, inclusive, and safe.</p>
+          <p>Questions about a listed opportunity should go to its organizers. For questions about this page, initiative representation, or alignment with OSL values, use the <code>{{ submission_channel }}</code> channel on Discord.</p>
+        </article>
+      </div>
     </section>
   </div>
 </section>
