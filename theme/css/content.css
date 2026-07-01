@@ -124,6 +124,7 @@ blockquote{
 }
 
 .osl-page--directory .osl-page-shell,
+.osl-page--community .osl-page-shell,
 .osl-page--events .osl-page-shell,
 .osl-page--team .osl-page-shell{
   width: min(1120px, 100%);
@@ -757,6 +758,40 @@ html[data-mode="dim"] .project-badge--incubated{
   margin-top: auto;
 }
 
+.initiative-card__partner{
+  margin: -.25rem 0 .7rem;
+  color: var(--muted);
+  font-size: .9rem;
+  font-weight: 700;
+}
+
+.initiative-meta{
+  display: grid;
+  gap: .65rem;
+  margin: .85rem 0 1rem;
+}
+
+.initiative-meta div{
+  display: grid;
+  gap: .15rem;
+  padding-top: .65rem;
+  border-top: 1px solid var(--border);
+}
+
+.initiative-meta dt{
+  color: var(--muted);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.initiative-meta dd{
+  margin: 0;
+  color: var(--fg);
+  font-weight: 650;
+}
+
 .empty-state{
   padding: clamp(1.25rem, 3vw, 2rem);
   background:
@@ -813,6 +848,7 @@ html[data-mode="dim"] .project-badge--incubated{
 
 .osl-page-shell,
 .osl-page--directory .osl-page-shell,
+.osl-page--community .osl-page-shell,
 .osl-page--events .osl-page-shell,
 .osl-page--team .osl-page-shell{
   width: min(1180px, 100%);
