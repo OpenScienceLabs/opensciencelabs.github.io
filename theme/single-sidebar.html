@@ -17,6 +17,80 @@
   {% endif %}
 {% endfor %}
 
+{% macro render_desktop_side_nav(items, current_url) %}
+  <nav>
+    {% set rendered = namespace(urls=[]) %}
+    {% for item in items %}
+      {% if item.children %}
+        <div class="osl-side-nav__group">
+          <span class="osl-side-nav__group-title">{{ item.title }}</span>
+          {% for child in item.children %}
+            {% if child.url not in rendered.urls %}
+            {% set _ = rendered.urls.append(child.url) %}
+            <a href="{{ child.url|url }}"
+               class="{% if child.active or child.url == current_url %}active{% endif %}"
+               {% if child.active or child.url == current_url %}aria-current="page"{% endif %}>
+              {{ child.title }}
+            </a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% else %}
+        {% if item.url not in rendered.urls %}
+        {% set _ = rendered.urls.append(item.url) %}
+        <a href="{{ item.url|url }}"
+           class="{% if item.active or item.url == current_url %}active{% endif %}"
+           {% if item.active or item.url == current_url %}aria-current="page"{% endif %}>
+          {{ item.title }}
+        </a>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </nav>
+{% endmacro %}
+
+{% macro render_mobile_side_nav(items, current_url, label) %}
+  <nav class="osl-mobile-section-nav__panel" aria-label="{{ label }} mobile navigation">
+    {% set rendered = namespace(urls=[]) %}
+    {% for item in items %}
+      {% if item.children %}
+        {% set group = namespace(active=item.active) %}
+        {% for child in item.children %}
+          {% if child.active or child.url == current_url %}
+            {% set group.active = true %}
+          {% endif %}
+        {% endfor %}
+        <details class="osl-mobile-section-nav__group" {% if group.active %}open{% endif %}>
+          <summary class="osl-mobile-section-nav__group-summary">
+            {{ item.title }}
+          </summary>
+          <div class="osl-mobile-section-nav__group-links">
+            {% for child in item.children %}
+              {% if child.url not in rendered.urls %}
+              {% set _ = rendered.urls.append(child.url) %}
+              <a href="{{ child.url|url }}"
+                 class="{% if child.active or child.url == current_url %}active{% endif %}"
+                 {% if child.active or child.url == current_url %}aria-current="page"{% endif %}>
+                {{ child.title }}
+              </a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </details>
+      {% else %}
+        {% if item.url not in rendered.urls %}
+        {% set _ = rendered.urls.append(item.url) %}
+        <a href="{{ item.url|url }}"
+           class="osl-mobile-section-nav__link{% if item.active or item.url == current_url %} active{% endif %}"
+           {% if item.active or item.url == current_url %}aria-current="page"{% endif %}>
+          {{ item.title }}
+        </a>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </nav>
+{% endmacro %}
+
 <section class="osl-page osl-page--sidebar osl-page--section-{{ section_slug }} osl-page--theme-{{ page_theme }}">
   <div class="osl-page-shell">
     <header class="osl-page-hero">
@@ -40,37 +114,19 @@
 
     <div class="osl-page-layout">
       {% if sidebar.items %}
+      <details class="osl-mobile-section-nav">
+        <summary class="osl-mobile-section-nav__summary">
+          <span class="osl-mobile-section-nav__summary-text">
+            <span class="osl-mobile-section-nav__eyebrow">{{ sidebar.title }} menu</span>
+            <span class="osl-mobile-section-nav__current">Current: {{ page_title }}</span>
+          </span>
+        </summary>
+        {{ render_mobile_side_nav(sidebar.items, page.url, sidebar.title) }}
+      </details>
+
       <aside class="osl-side-nav" aria-label="{{ sidebar.title }} navigation">
         <p class="osl-side-nav__title">{{ sidebar.title }}</p>
-        <nav>
-          {% set rendered = namespace(urls=[]) %}
-          {% for item in sidebar.items %}
-            {% if item.children %}
-              <div class="osl-side-nav__group">
-                <span class="osl-side-nav__group-title">{{ item.title }}</span>
-                {% for child in item.children %}
-                  {% if child.url not in rendered.urls %}
-                  {% set _ = rendered.urls.append(child.url) %}
-                  <a href="{{ child.url|url }}"
-                     class="{% if child.active or child.url == page.url %}active{% endif %}"
-                     {% if child.active or child.url == page.url %}aria-current="page"{% endif %}>
-                    {{ child.title }}
-                  </a>
-                  {% endif %}
-                {% endfor %}
-              </div>
-            {% else %}
-              {% if item.url not in rendered.urls %}
-              {% set _ = rendered.urls.append(item.url) %}
-              <a href="{{ item.url|url }}"
-                 class="{% if item.active or item.url == page.url %}active{% endif %}"
-                 {% if item.active or item.url == page.url %}aria-current="page"{% endif %}>
-                {{ item.title }}
-              </a>
-              {% endif %}
-            {% endif %}
-          {% endfor %}
-        </nav>
+        {{ render_desktop_side_nav(sidebar.items, page.url) }}
       </aside>
       {% endif %}
 
