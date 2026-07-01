@@ -91,7 +91,7 @@
       img.setAttribute('decoding', 'async');
     });
   });
-  
+
   /*8) Back to top button visibility */
   const toTopBtn = document.querySelector(".to_top");
 
