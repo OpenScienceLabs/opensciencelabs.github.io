@@ -12,9 +12,9 @@
 
     <meta name="description" content="Incubator Program">
     <meta name="keywords" content="open science,data science,latam">
-    <meta name="last-modified" content="2026-06-29">
-    <meta name="DC.date.modified" content="2026-06-29">
-    <meta property="og:updated_time" content="2026-06-29T00:00:00Z">
+    <meta name="last-modified" content="2026-07-07">
+    <meta name="DC.date.modified" content="2026-07-07">
+    <meta property="og:updated_time" content="2026-07-07T00:00:00Z">
 
     <meta property="og:locale" content="es">
     <meta property="og:locale:alternate" content="pt">
@@ -34,7 +34,7 @@
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Incubation",
-        "dateModified": "2026-06-29T00:00:00Z",
+        "dateModified": "2026-07-07T00:00:00Z",
         "url": "https://opensciencelabs.org/projects/incubation/"
       }
     </script>
@@ -1802,123 +1802,550 @@
 
     <article class="osl-markdown">
       
-        <h1 id="open-science-labs-osl-incubator-program">Open Science Labs (OSL) Incubator Program<a class="headerlink" href="#open-science-labs-osl-incubator-program" title="Permanent link"> #</a></h1>
-<p>Open Science Labs is committed to fostering the growth and development of
-innovative scientific projects and/or software for support tasks like DevOps,
-Automation, etc. Our Incubator Program is designed to provide structure and
-support at various stages of development, helping projects grow from a mere idea
-to a fully-fledged, sustainable project. The program is divided into three
-distinct phases:</p>
+        <h1 id="open-science-labs-incubator-program">Open Science Labs Incubator Program<a class="headerlink" href="#open-science-labs-incubator-program" title="Permanent link"> #</a></h1>
+<p>The Open Science Labs (OSL) Incubator Program is a structured pathway for
+open-source projects that need active support to become sustainable. It is for
+projects that are early-stage, restarting, transitioning into open source, or
+ready to improve their maintenance, documentation, governance, contributor
+onboarding, and release practices.</p>
+<p>Incubation is deeper than affiliation. Affiliation connects an independent
+project with the OSL ecosystem. Incubation creates a shared growth plan between
+project maintainers and OSL.</p>
+<blockquote>
+<p><strong>Incubation is a growth pathway from idea to sustainable project.</strong></p>
+</blockquote>
+<h2 id="what-incubation-is-for">What Incubation Is For<a class="headerlink" href="#what-incubation-is-for" title="Permanent link"> #</a></h2>
+<p>The Incubator Program helps projects:</p>
+<ul>
+<li>turn promising ideas into usable open-source projects;</li>
+<li>define a public roadmap, milestones, and contribution path;</li>
+<li>improve documentation, testing, packaging, releases, and maintainability;</li>
+<li>onboard contributors through clear issues, mentoring, and review practices;</li>
+<li>prepare ideas for internships, Google Summer of Code, grants, sponsorships, or
+  other opportunities when available;</li>
+<li>build a maintainer model that can continue beyond the original author;</li>
+<li>graduate into an independent and sustainable project.</li>
+</ul>
+<p>Incubated projects may be scientific software, research infrastructure,
+educational tools, public-interest technology, or support tools for open-source
+work such as automation, DevOps, documentation, data workflows, and community
+infrastructure.</p>
+<h2 id="what-osl-may-provide">What OSL May Provide<a class="headerlink" href="#what-osl-may-provide" title="Permanent link"> #</a></h2>
+<p>Depending on project needs and OSL capacity, incubated projects may receive:</p>
+<ul>
+<li>project-structure and roadmap guidance;</li>
+<li>mentorship for maintainers and contributors;</li>
+<li>support defining newcomer-friendly issues and internship ideas;</li>
+<li>visibility through OSL channels, events, blog posts, demos, or community
+  updates;</li>
+<li>guidance on documentation, packaging, testing, releases, governance, and
+  contributor workflows;</li>
+<li>help identifying grants, sponsors, fiscal-hosting paths, reviewers, or partner
+  organizations;</li>
+<li>periodic maintenance and health checks.</li>
+</ul>
+<p>Incubation does not guarantee funding, contributors, interns, mentors, external
+program acceptance, publication, adoption, or long-term OSL maintenance.</p>
+<h2 id="google-summer-of-code-and-limited-programs">Google Summer of Code and Limited Programs<a class="headerlink" href="#google-summer-of-code-and-limited-programs" title="Permanent link"> #</a></h2>
+<p>Incubated projects may prepare ideas for Google Summer of Code (GSoC),
+internships, grants, or similar programs when OSL is participating and when the
+project has enough mentor capacity.</p>
+<p>Participation is not guaranteed. OSL will do its best to participate in GSoC and
+similar opportunities when possible, but these programs depend on external
+selection, OSL capacity, mentor availability, project readiness, and a limited
+number of contributor slots. Even when OSL participates, not every incubated
+project idea can be selected or funded.</p>
+<p>Projects that want to participate in GSoC or internships should provide clear
+project ideas, scoped tasks, public issues, active mentors, communication
+channels, and enough review capacity to support contributors responsibly.</p>
+<h2 id="acknowledging-osl-incubation">Acknowledging OSL Incubation<a class="headerlink" href="#acknowledging-osl-incubation" title="Permanent link"> #</a></h2>
+<p>Incubated projects should acknowledge their relationship with OSL in their
+<code>README.md</code> and, when applicable, in their public documentation.</p>
+<p>Suggested wording:</p>
+<blockquote>
+<p>This project is incubated by Open Science Labs (OSL). Incubation means that
+OSL supports the project through mentorship, structure, community connection,
+and sustainability guidance, while day-to-day maintenance, roadmap decisions,
+and releases remain the responsibility of the project maintainers.</p>
+</blockquote>
+<p>Projects should update this acknowledgement if their status changes, such as
+moving from PoC to incubation, graduating, leaving the OSL organization, or
+being removed from OSL public listings.</p>
+<h2 id="incubation-fit-checklist">Incubation Fit Checklist<a class="headerlink" href="#incubation-fit-checklist" title="Permanent link"> #</a></h2>
+<p>Use this checklist before applying. A project does not need to be perfect, but
+it should be ready for public collaboration and active maintainer engagement.</p>
+<h3 id="required-for-incubation">Required for Incubation<a class="headerlink" href="#required-for-incubation" title="Permanent link"> #</a></h3>
+<ul>
+<li>[ ] The project has a clear purpose and public-interest, open-science,
+      research, education, or open-technology alignment.</li>
+<li>[ ] The project uses an <strong>OSI-approved open-source license</strong>.</li>
+<li>[ ] The repository includes a public <code>LICENSE</code> file.</li>
+<li>[ ] The project includes a <code>CODE_OF_CONDUCT.md</code> or equivalent public Code of
+      Conduct with a reporting path.</li>
+<li>[ ] The project has at least one active and reachable maintainer.</li>
+<li>[ ] The project has a public repository or a public proposal repository.</li>
+<li>[ ] The project has a public issue tracker, project board, or documented way
+      to discuss work.</li>
+<li>[ ] The project has at least one public communication channel or documented
+      contact path for users and contributors.</li>
+<li>[ ] The maintainer is willing to communicate with OSL mentors or reviewers
+      during incubation.</li>
+<li>[ ] The project can be maintained in public and can welcome contributors in a
+      respectful environment.</li>
+<li>[ ] If accepted, the project will acknowledge its OSL incubation status in its
+      <code>README.md</code> and, when applicable, public documentation.</li>
+</ul>
+<h3 id="strongly-recommended-before-acceptance">Strongly Recommended Before Acceptance<a class="headerlink" href="#strongly-recommended-before-acceptance" title="Permanent link"> #</a></h3>
+<ul>
+<li>[ ] The repository has a <code>README</code> explaining the project, users, and current
+      status.</li>
+<li>[ ] The project has a <code>CONTRIBUTING.md</code> or contributor instructions.</li>
+<li>[ ] The project has an initial roadmap or milestones for the next 3 to 6
+      months.</li>
+<li>[ ] There are starter issues or planned tasks for contributors.</li>
+<li>[ ] The project has basic user or developer documentation.</li>
+<li>[ ] The project has tests, validation examples, or a plan to add them.</li>
+<li>[ ] The project has an architecture, design, or technical overview when
+      relevant.</li>
+<li>[ ] The project has a release, versioning, or publication plan when relevant.</li>
+<li>[ ] The project has a <code>SECURITY.md</code> or vulnerability reporting path when
+      relevant.</li>
+<li>[ ] The project has a documented maintainer list, roles, or decision-making
+      process.</li>
+<li>[ ] The project has early user, adopter, contributor, citation, deployment, or
+      pilot evidence when available.</li>
+<li>[ ] The maintainers can explain what kind of help they need from OSL.</li>
+</ul>
+<h3 id="scientific-software-review-expectations">Scientific Software Review Expectations<a class="headerlink" href="#scientific-software-review-expectations" title="Permanent link"> #</a></h3>
+<p>For scientific software, OSL may require an external or community review path as
+part of graduation:</p>
+<ul>
+<li>[ ] Scientific Python projects that are in pyOpenSci scope should follow
+      pyOpenSci guidelines during incubation and must be accepted by pyOpenSci
+      before graduating.</li>
+<li>[ ] Scientific R projects that are in rOpenSci scope should follow rOpenSci
+      guidelines during incubation and must be accepted by rOpenSci before
+      graduating.</li>
+<li>[ ] Scientific projects outside pyOpenSci or rOpenSci scope should define an
+      equivalent review path with OSL during incubation.</li>
+</ul>
+<h2 id="how-to-apply">How to Apply<a class="headerlink" href="#how-to-apply" title="Permanent link"> #</a></h2>
+<p>Applications for incubation should be submitted through the OSL Incubator
+project applications repository:</p>
+<p><a href="https://github.com/osl-incubator/project-applications">https://github.com/osl-incubator/project-applications</a></p>
+<p>An application should include links to evidence, not only written statements.
+Useful evidence includes:</p>
+<ul>
+<li>project name and short description;</li>
+<li>repository, documentation, or proposal link;</li>
+<li>maintainer names and contact information;</li>
+<li>license and Code of Conduct links;</li>
+<li>current project stage and maintenance status;</li>
+<li>problem statement and intended users;</li>
+<li>roadmap or milestones for the next 3 to 6 months;</li>
+<li>contributor and mentoring needs;</li>
+<li>expected OSL support;</li>
+<li>links to contribution instructions, starter issues, release notes, security
+  policy, governance, or architecture documentation when available;</li>
+<li>evidence of users, adopters, citations, deployments, pilots, or community
+  interest when available;</li>
+<li>whether the project is scientific Python, scientific R, or another scientific
+  software project that may need external review before graduation.</li>
+</ul>
+<p>OSL reviews applications for mission alignment, openness, maintainer readiness,
+community safety, feasibility, and available mentor capacity.</p>
+<h2 id="how-osl-reviews-projects">How OSL Reviews Projects<a class="headerlink" href="#how-osl-reviews-projects" title="Permanent link"> #</a></h2>
+<p>OSL uses a lightweight due-diligence process inspired by mature open-source
+foundation practices. The review should be transparent, evidence-based, and
+proportional to the project's stage.</p>
+<p>For incubation applications and stage changes, OSL may review:</p>
+<ul>
+<li><strong>Application completeness</strong>: required links and project information are
+  present.</li>
+<li><strong>Maintainer readiness</strong>: maintainers are reachable and have enough capacity
+  to support contributors.</li>
+<li><strong>Governance and continuity</strong>: roles, decision-making, ownership, and
+  maintainer succession are clear enough for the project stage.</li>
+<li><strong>Contributor readiness</strong>: issues, contribution instructions, communication
+  channels, and review expectations are discoverable.</li>
+<li><strong>Technical readiness</strong>: the problem, design, roadmap, release process, and
+  quality practices are appropriate for the project stage.</li>
+<li><strong>Security and safety</strong>: the project has a way to report sensitive issues and
+  maintainers can respond to community or safety concerns.</li>
+<li><strong>Adoption or usefulness evidence</strong>: the project can show intended users,
+  early users, pilots, citations, deployments, or community interest when
+  appropriate.</li>
+<li><strong>Scientific review path</strong>: scientific projects have a pyOpenSci, rOpenSci, or
+  equivalent review plan when relevant.</li>
+</ul>
+<p>Detailed issue templates, labels, bot configuration, and operational review
+checklists should live in the
+<a href="https://github.com/osl-incubator/project-applications">project applications repository</a>,
+not on this overview page.</p>
+<h2 id="incubation-lifecycle">Incubation Lifecycle<a class="headerlink" href="#incubation-lifecycle" title="Permanent link"> #</a></h2>
+<p>The Incubator Program has three main stages and one non-active lifecycle
+outcome.</p>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Purpose</th>
+<th>Main question</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Proof of Concept (PoC)</strong></td>
+<td>Explore whether the idea is feasible, useful, and aligned with OSL.</td>
+<td>Should this become a real open-source project?</td>
+</tr>
+<tr>
+<td><strong>Incubation</strong></td>
+<td>Build the project with structure, mentorship, contributors, and public development practices.</td>
+<td>Can this project become sustainable?</td>
+</tr>
+<tr>
+<td><strong>Graduated</strong></td>
+<td>Recognize that the project can operate with less direct OSL support.</td>
+<td>Is this project ready to stand on its own?</td>
+</tr>
+<tr>
+<td><strong>Inactive / Archived</strong></td>
+<td>Mark a project that is no longer maintained, no longer recommended, or no longer supported by OSL.</td>
+<td>Should OSL stop listing or supporting this project until it is revived?</td>
+</tr>
+</tbody>
+</table>
 <h3 id="1-proof-of-concept-poc">1. Proof of Concept (PoC)<a class="headerlink" href="#1-proof-of-concept-poc" title="Permanent link"> #</a></h3>
-<p><strong>Description:</strong> The PoC phase is the first step, aimed at experimenting with
-new ideas and technologies to determine their feasibility and potential.
-Projects in this phase can be found at
-<a href="https://github.com/osl-pocs">OSL PoC GitHub Repository</a>.</p>
-<p><strong>Criteria:</strong></p>
+<p>The PoC stage is for ideas, prototypes, or early repositories that need
+validation before becoming full incubated projects.</p>
+<p>PoC projects should have:</p>
 <ul>
-<li>Preliminary design and concept.</li>
-<li>A clear vision of the problem the project aims to solve.</li>
-<li>Must be licensed under a license approved by Open Source Initiative (OSI).</li>
+<li>a clear problem statement;</li>
+<li>an early design, prototype, or proposal;</li>
+<li>an OSI-approved license;</li>
+<li>a Code of Conduct;</li>
+<li>at least one named maintainer or project author;</li>
+<li>a public repository or proposal space;</li>
+<li>initial issues, questions, or planned tasks;</li>
+<li>a lightweight roadmap for the next 1 to 3 months.</li>
 </ul>
-<p><strong>Application Process:</strong></p>
-<ul>
-<li>Submit a proposal through
-  <a href="https://github.com/osl-pocs/tickets/issues">OSL PoC GitHub Issues</a>, including
-  the concept, objectives, and a high-level design.</li>
-<li>Undergo a review process by the OSL selection committee.</li>
-</ul>
+<p>PoC projects are expected to show active exploration. They do not need mature
+releases, but maintainers must be responsive.</p>
+<p>A PoC project may move into Incubation when it demonstrates feasibility,
+alignment with OSL, maintainer commitment, and a realistic development plan.</p>
 <h3 id="2-incubation">2. Incubation<a class="headerlink" href="#2-incubation" title="Permanent link"> #</a></h3>
-<p><strong>Description:</strong> This phase focuses on nurturing the project, providing
-resources, mentorship, and facilitating access to grants and partners. Projects
-in this stage can be found at
-<a href="https://github.com/osl-incubator">OSL Incubator GitHub Repository</a>.</p>
-<p><strong>Criteria:</strong></p>
+<p>The Incubation stage is for projects that are ready for structured development
+and contributor support.</p>
+<p>Incubating projects should have:</p>
 <ul>
-<li>Successful completion of the PoC phase.</li>
-<li>Clearly defined milestones and development plan.</li>
-<li>Strong community engagement and collaboration.</li>
-<li>Adherence to OSL’s guidelines, including licensing under an OSI-approved
-  license.</li>
+<li>active maintainer participation;</li>
+<li>public roadmap and milestones;</li>
+<li>contribution instructions;</li>
+<li>public issues or project tasks;</li>
+<li>regular communication with OSL mentors or reviewers;</li>
+<li>progress toward documentation, tests, packaging, releases, governance, and
+  sustainability;</li>
+<li>enough mentor capacity before accepting interns or major contributor programs.</li>
 </ul>
-<p><strong>Ascending Process:</strong></p>
-<ul>
-<li>Complete the PoC phase with positive evaluations.</li>
-<li>Obtain approval from OSL mentors and stakeholders.</li>
-</ul>
-<p><strong>Support for Raising Funds:</strong></p>
-<ul>
-<li>OSL will assist in identifying suitable grants and partner organizations.</li>
-<li>Facilitate collaborations to support the project's financial needs.</li>
-</ul>
+<p>Incubating projects are normally expected to be <strong>Active</strong>. If maintainers need
+to pause, they should communicate the pause and publish a maintenance plan.</p>
 <h3 id="3-graduated">3. Graduated<a class="headerlink" href="#3-graduated" title="Permanent link"> #</a></h3>
-<p><strong>Description:</strong> The Graduated phase is the final step, indicating that the
-project has matured and is ready for widespread adoption and sustainable growth.
-Graduated projects are available at
-<a href="https://github.com/osl-projects">OSL Graduated GitHub Repository</a>.</p>
-<p><strong>Criteria:</strong></p>
+<p>Graduation means that the project has reached a sustainable state and no longer
+needs active incubation support.</p>
+<p>Graduated projects may stay under an OSL-controlled GitHub organization or move
+outside OSL to an independent organization, maintainer-owned organization, lab,
+foundation, company, or community home.</p>
+<p>A graduated project may still be listed by OSL, but its maintainers remain
+responsible for governance, maintenance, releases, licensing, Code of Conduct,
+and community safety.</p>
+<h2 id="graduation-criteria">Graduation Criteria<a class="headerlink" href="#graduation-criteria" title="Permanent link"> #</a></h2>
+<p>A project may request graduation when it has met its incubation milestones and
+can show that it is responsibly maintained.</p>
+<p>General graduation expectations:</p>
 <ul>
-<li>Successful completion of the Incubation phase.</li>
-<li>Demonstrated stability, sustainability, and active community engagement.</li>
-<li>Ongoing adherence to OSL guidelines, including OSI-approved licensing.</li>
+<li>successful completion of incubation milestones;</li>
+<li>active or stable maintenance;</li>
+<li>clear maintainer team or governance model;</li>
+<li>a maintainer team appropriate to the size and risk of the project;</li>
+<li>at least two maintainers preferred, or a documented continuity plan when the
+  project has only one maintainer;</li>
+<li>public documentation and contribution process;</li>
+<li>documented decision-making, ownership, and maintainer onboarding/offboarding
+  practices appropriate to the project stage;</li>
+<li>release, deployment, publication, citation, user, or adoption evidence
+  appropriate to the project scope;</li>
+<li>documented release or versioning process when relevant;</li>
+<li>security or vulnerability reporting process when relevant;</li>
+<li>ongoing OSI-approved licensing;</li>
+<li>ongoing Code of Conduct;</li>
+<li>sustainable communication and issue-review practices;</li>
+<li>clear plan for where the repository will live after graduation.</li>
 </ul>
-<p><strong>Ascending Process:</strong></p>
+<p>Additional scientific software expectations:</p>
 <ul>
-<li>Successfully meet all the milestones during the Incubation phase.</li>
-<li>Submit a graduation application at
-  <a href="https://github.com/osl-projects/tickets/issues">OSL Graduated GitHub Issues</a>,
-  detailing achievements and future plans.</li>
-<li>Undergo a final review and approval by OSL’s governing board.</li>
+<li>scientific Python projects in pyOpenSci scope must be accepted through the
+  pyOpenSci review process before graduation;</li>
+<li>scientific R projects in rOpenSci scope must be accepted through the rOpenSci
+  review process before graduation;</li>
+<li>scientific projects outside those scopes must complete an equivalent review
+  path agreed with OSL during incubation.</li>
 </ul>
-<h4 id="peer-review-of-scientific-python-projects-via-pyopensci">Peer review of scientific Python Projects via pyOpenSci<a class="headerlink" href="#peer-review-of-scientific-python-projects-via-pyopensci" title="Permanent link"> #</a></h4>
-<p>For all scientific Python projects under the Open Science Labs Incubator
-program, the evaluation process will be conducted via
-<a href="https://www.pyopensci.org/">pyOpenSci</a>, a community-led organization that
-offers peer reviews of Python software to enhance its quality, usability, and
-long-term maintainability. These peer reviews are pivotal in advancing the
-open-source tools that underpin open science initiatives.</p>
-<h4 id="benefits-of-using-pyopensci-for-evaluation">Benefits of Using pyOpenSci for Evaluation<a class="headerlink" href="#benefits-of-using-pyopensci-for-evaluation" title="Permanent link"> #</a></h4>
+<p>A graduation request should include links to evidence for:</p>
+<ul>
+<li>completed milestones;</li>
+<li>current maintainer list and maintainer roles;</li>
+<li>current maintenance status;</li>
+<li>governance or decision-making process;</li>
+<li>future roadmap or maintenance plan;</li>
+<li>documentation, contribution instructions, and release process;</li>
+<li>security or vulnerability reporting process when relevant;</li>
+<li>user, adoption, deployment, citation, or publication evidence when available;</li>
+<li>desired repository location after graduation;</li>
+<li>pyOpenSci acceptance link for in-scope scientific Python projects;</li>
+<li>rOpenSci acceptance link for in-scope scientific R projects;</li>
+<li>explanation of the equivalent review path for scientific projects outside
+  pyOpenSci or rOpenSci scope.</li>
+</ul>
+<h2 id="graduation-review-workflow">Graduation Review Workflow<a class="headerlink" href="#graduation-review-workflow" title="Permanent link"> #</a></h2>
+<p>Graduation should be public and evidence-based. OSL may use the following
+high-level workflow:</p>
 <ol>
-<li>
-<p><strong>High-Quality Review</strong>: pyOpenSci's review process focuses on ensuring that
-   your Python package meets high standards in terms of code quality,
-   documentation, and usability.</p>
-</li>
-<li>
-<p><strong>JOSS Acceptance</strong>: The Journal of Open Source Software (JOSS) accepts a
-   pyOpenSci review as their own. As such your project, if it is in scope for
-   JOSS, can reap the benefits of both pyOpenSci and JOSS through a single peer
-   review process.</p>
-</li>
-<li>
-<p><strong>Community-Led</strong>: Gain insights and recommendations from experts in the open
-   science and Python communities.</p>
-</li>
+<li><strong>Graduation request</strong>: maintainers open a request in the project
+   applications repository with links to evidence.</li>
+<li><strong>Completeness check</strong>: OSL checks that required information is present and
+   asks for missing evidence if needed.</li>
+<li><strong>Readiness review</strong>: OSL reviewers evaluate maintenance, governance,
+   contributor readiness, documentation, security, adoption or usefulness, and
+   any scientific review requirement.</li>
+<li><strong>Public comment period</strong>: OSL may leave the request open for community
+   feedback, usually for about two weeks.</li>
+<li><strong>Decision and transition</strong>: OSL approves graduation, asks for additional
+   work, pauses the request, or declines it with documented reasons.</li>
+<li><strong>Website and repository update</strong>: OSL updates project listings, repository
+   location, status, and maintenance metadata.</li>
 </ol>
-<h5 id="guidelines-and-review-process">Guidelines and Review Process<a class="headerlink" href="#guidelines-and-review-process" title="Permanent link"> #</a></h5>
+<p>OSL maintainers, mentors, or governance representatives review graduation
+requests before approving the transition.</p>
+<h2 id="scientific-python-projects-and-pyopensci">Scientific Python Projects and pyOpenSci<a class="headerlink" href="#scientific-python-projects-and-pyopensci" title="Permanent link"> #</a></h2>
+<p>Scientific Python projects under the OSL Incubator Program should follow
+<a href="https://www.pyopensci.org/">pyOpenSci</a> guidelines during incubation. pyOpenSci
+provides community-led guidance and review criteria for Python packages used in
+scientific and open-science contexts.</p>
+<p>Maintainers should use these resources while preparing the project:</p>
 <ul>
-<li><strong>Project Guidelines</strong>: All projects should follow pyOpenSci's packaging
-  guidelines which can be accessed
-  <a href="https://www.pyopensci.org/python-package-guide/">here</a>.</li>
+<li><a href="https://www.pyopensci.org/python-package-guide/">pyOpenSci Python Package Guide</a></li>
+<li><a href="https://www.pyopensci.org/about-peer-review/index.html">pyOpenSci Peer Review Process</a></li>
+<li><a href="https://www.pyopensci.org/python-package-guide/package-structure-code/python-package-structure.html">pyOpenSci Packaging Guide</a></li>
+<li><a href="https://www.pyopensci.org/python-package-guide/documentation/index.html">pyOpenSci Documentation Guide</a></li>
+<li><a href="https://www.pyopensci.org/python-package-guide/tests/index.html">pyOpenSci Testing Guide</a></li>
 </ul>
+<p>For scientific Python projects that are in pyOpenSci scope, graduation from the
+OSL Incubator Program depends on acceptance through the pyOpenSci review
+process. Maintainers should prepare the package, submit it for review, respond
+to reviewer feedback, and provide the acceptance link as part of the OSL
+graduation request.</p>
+<h2 id="scientific-r-projects-and-ropensci">Scientific R Projects and rOpenSci<a class="headerlink" href="#scientific-r-projects-and-ropensci" title="Permanent link"> #</a></h2>
+<p>Scientific R projects under the OSL Incubator Program should follow
+<a href="https://ropensci.org/">rOpenSci</a> guidelines during incubation. rOpenSci
+provides community-led guidance and peer review for scientific R packages,
+including packages related to scientific data lifecycles and statistical
+software.</p>
+<p>Maintainers should use these resources while preparing the project:</p>
 <ul>
-<li><strong>Peer Review Process</strong>: The detailed guide for pyOpenSci's peer review
-  process can be found
-  <a href="https://www.pyopensci.org/about-peer-review/index.html">here</a>. We highly
-  recommend going through this guide to understand what to expect during the
-  review.</li>
+<li><a href="https://ropensci.org/software-review/">rOpenSci Software Peer Review</a></li>
+<li><a href="https://devguide.ropensci.org/">rOpenSci Packages: Development, Maintenance, and Peer Review</a></li>
+<li><a href="https://devguide.ropensci.org/pkg_building.html">rOpenSci Packaging Guide</a></li>
+<li><a href="https://devguide.ropensci.org/softwarereview_policies.html">rOpenSci Software Peer Review Policies</a></li>
+<li><a href="https://devguide.ropensci.org/softwarereview_author.html">rOpenSci Guide for Authors</a></li>
+<li><a href="https://stats-devguide.ropensci.org/">rOpenSci Statistical Software Peer Review</a></li>
+<li><a href="https://devguide.ropensci.org/maintenance_cheatsheet.html">rOpenSci Package Maintenance Cheatsheet</a></li>
 </ul>
-<p>The pyOpenSci review process offers a valuable opportunity to enhance the
-quality, usability, and maintainability of your software. Additionally, your
-tool will gain increased visibility and community support once it is accepted
-into the pyOpenSci ecosystem.</p>
-<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link"> #</a></h2>
-<p>The OSL Incubator Program is a robust pathway for innovative scientific projects
-and projects for support tasks to grow and succeed. We invite all creators,
-researchers, and enthusiasts to explore our program and become part of this
-thriving ecosystem. Detailed information on applying for each phase, as well as
-guidelines, can be found on our official website.</p>
-<p>For any further inquiries, please contact our dedicated Incubator Program team
-at OSL. Together, we can shape the future of open science.</p>
+<p>For scientific R projects that are in rOpenSci scope, graduation from the OSL
+Incubator Program depends on acceptance through the rOpenSci review process.
+Maintainers should prepare the package, submit it for review, respond to
+reviewer and editor feedback, and provide the acceptance link as part of the OSL
+graduation request.</p>
+<h2 id="equivalent-review-for-out-of-scope-scientific-projects">Equivalent Review for Out-of-Scope Scientific Projects<a class="headerlink" href="#equivalent-review-for-out-of-scope-scientific-projects" title="Permanent link"> #</a></h2>
+<p>Some scientific projects may not fit pyOpenSci or rOpenSci scope. In those
+cases, OSL may define an equivalent graduation criterion during incubation, such
+as review by another appropriate community, publication venue, domain experts,
+standards group, or an OSL-appointed review group.</p>
+<p>The equivalent review path should be documented before graduation so maintainers
+know what evidence is required.</p>
+<h2 id="maintenance-levels">Maintenance Levels<a class="headerlink" href="#maintenance-levels" title="Permanent link"> #</a></h2>
+<p>Incubation requires active stewardship because OSL may direct contributors,
+interns, mentors, and public attention to the project.</p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Meaning</th>
+<th>Incubation interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Active</strong></td>
+<td>Regular commits, reviews, releases, issue responses, roadmap progress, or contributor support.</td>
+<td>Expected for PoC and Incubation.</td>
+</tr>
+<tr>
+<td><strong>Maintained / Stable</strong></td>
+<td>Lower activity, but maintainers are reachable and respond to important issues.</td>
+<td>Acceptable for Graduated projects and temporarily acceptable for Incubation with a documented maintenance plan.</td>
+</tr>
+<tr>
+<td><strong>At Risk</strong></td>
+<td>Missing required files, stale milestones, unanswered pings, broken links, or repeated failed health checks.</td>
+<td>Requires maintainer response and OSL review.</td>
+</tr>
+<tr>
+<td><strong>Inactive</strong></td>
+<td>Appears abandoned, unreachable, closed-source, unsafe, or misaligned.</td>
+<td>May lead to paused incubation, removal from public lists, or archival review.</td>
+</tr>
+<tr>
+<td><strong>Archived</strong></td>
+<td>No longer supported or recommended by OSL as an active incubated or graduated project.</td>
+<td>May be restored only after maintainers resolve requirements and request reactivation.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="automated-incubation-checks">Automated Incubation Checks<a class="headerlink" href="#automated-incubation-checks" title="Permanent link"> #</a></h2>
+<p>OSL may use bots to monitor project health, keep public listings accurate, and
+flag problems early. Bots support human review; they do not replace maintainer
+judgment.</p>
+<p>Bots may check:</p>
+<ul>
+<li>whether the repository is public and reachable;</li>
+<li>whether the project has an OSI-approved <code>LICENSE</code>;</li>
+<li>whether the project has a <code>CODE_OF_CONDUCT.md</code>;</li>
+<li>whether the repository has been archived;</li>
+<li>whether maintainer information is available;</li>
+<li>whether project website and documentation links are reachable;</li>
+<li>recent commits, releases, merged pull requests, and issue activity;</li>
+<li>stale pull requests or unanswered issues;</li>
+<li>progress against milestones or roadmap items;</li>
+<li>whether contributor-friendly issues exist when the project is seeking
+  contributors;</li>
+<li>whether OSL website metadata matches the actual project status.</li>
+</ul>
+<p>Suggested check frequency:</p>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th align="right">Suggested frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PoC</td>
+<td align="right">Monthly</td>
+</tr>
+<tr>
+<td>Incubation</td>
+<td align="right">Monthly</td>
+</tr>
+<tr>
+<td>Graduated</td>
+<td align="right">Quarterly</td>
+</tr>
+<tr>
+<td>At Risk</td>
+<td align="right">Every 2 weeks until resolved</td>
+</tr>
+</tbody>
+</table>
+<h2 id="at-risk-pause-removal-and-archive-workflow">At-Risk, Pause, Removal, and Archive Workflow<a class="headerlink" href="#at-risk-pause-removal-and-archive-workflow" title="Permanent link"> #</a></h2>
+<p>When a project appears inactive or out of compliance, OSL may use the following
+workflow:</p>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Day 0</td>
+<td>Bot detects a concern, such as missing license, missing Code of Conduct, no maintainer response, broken links, stale milestones, archived repository, or long inactivity.</td>
+</tr>
+<tr>
+<td>Day 1</td>
+<td>Bot opens a maintenance review issue or website pull request and pings maintainers and, when applicable, OSL mentors.</td>
+</tr>
+<tr>
+<td>Day 30</td>
+<td>If unresolved, the project may be marked <strong>At Risk</strong> and incubation activity may be paused.</td>
+</tr>
+<tr>
+<td>Day 60</td>
+<td>If still unresolved, OSL may stop sending contributors to the project and open a pull request to remove or hide the project from public OSL lists.</td>
+</tr>
+<tr>
+<td>Day 90</td>
+<td>For repositories hosted under an OSL-controlled organization, OSL may consider archival after human review. External repositories are not archived by OSL, but may be removed from OSL lists.</td>
+</tr>
+</tbody>
+</table>
+<p>Maintainers can resolve an at-risk status by:</p>
+<ul>
+<li>responding to the maintenance review;</li>
+<li>restoring missing license or Code of Conduct files;</li>
+<li>updating broken links and project metadata;</li>
+<li>closing, triaging, or responding to stale community requests;</li>
+<li>documenting a stable-maintenance status;</li>
+<li>transferring or adding maintainers;</li>
+<li>publishing a new roadmap or maintenance plan;</li>
+<li>asking OSL to pause incubation while maintainership is reorganized.</li>
+</ul>
+<h2 id="graduated-projects-outside-osl">Graduated Projects Outside OSL<a class="headerlink" href="#graduated-projects-outside-osl" title="Permanent link"> #</a></h2>
+<p>After graduation, a project may move outside an OSL GitHub organization. This is
+acceptable and often healthy: graduation means the project can operate with less
+direct OSL support.</p>
+<p>When a graduated project moves outside OSL:</p>
+<ul>
+<li>the project may still be listed as a graduated OSL project;</li>
+<li>the external maintainers remain responsible for maintenance, governance,
+  licensing, releases, Code of Conduct, and community safety;</li>
+<li>OSL bots may continue checking public signals such as repository reachability,
+  license, Code of Conduct, archived status, and maintenance activity;</li>
+<li>if the external project becomes inactive or no longer meets the baseline
+  requirements, the bot may open a pull request to remove it from OSL lists and
+  ping maintainers in that pull request;</li>
+<li>OSL does not archive repositories outside OSL-controlled organizations.</li>
+</ul>
+<p>A removed graduated project can be restored to the OSL list if maintainers
+respond, restore the baseline requirements, and show that the project is active
+or responsibly maintained as stable.</p>
+<h2 id="responsibilities-and-limits">Responsibilities and Limits<a class="headerlink" href="#responsibilities-and-limits" title="Permanent link"> #</a></h2>
+<p>Project maintainers are responsible for:</p>
+<ul>
+<li>maintaining the repository and community spaces;</li>
+<li>reviewing contributor work;</li>
+<li>communicating project status;</li>
+<li>upholding the Code of Conduct;</li>
+<li>keeping license and governance information accurate;</li>
+<li>keeping the OSL incubation acknowledgement accurate in the project's
+  <code>README.md</code> and public documentation;</li>
+<li>telling OSL when the project needs to pause, transfer maintainership, or
+  change direction.</li>
+</ul>
+<p>OSL may pause or end incubation if a project loses maintainers, repeatedly fails
+baseline requirements, becomes unsafe for contributors, moves closed-source, or
+no longer aligns with OSL's mission.</p>
+<p>OSL does not guarantee:</p>
+<ul>
+<li>funding, grants, sponsorship, or paid contributors;</li>
+<li>acceptance into Google Summer of Code or any external program;</li>
+<li>a Google Summer of Code contributor slot, even when OSL participates;</li>
+<li>publication, adoption, external review acceptance, or long-term success;</li>
+<li>indefinite OSL maintenance;</li>
+<li>that every incubated project will graduate.</li>
+</ul>
       
     </article>
   </div>
@@ -1928,7 +2355,7 @@ at OSL. Together, we can shape the future of open science.</p>
           <div class="mt-4">
             <small class="badge-updated">
               
-                Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2026-06-29</span>
+                Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2026-07-07</span>
               
               
             </small>
