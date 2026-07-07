@@ -213,3 +213,11 @@ driving forward our shared goals. These collaborations not only strengthen our
 community but also contribute significantly to the broader field of open source
 and scientific research. Below, you'll find information about affiliated and
 incubated projects.
+
+Projects listed here are expected to remain open source, follow an OSI-approved
+license, include a Code of Conduct, and have reachable maintainers. OSL may
+periodically review project health using automated checks and human follow-up.
+Projects that become inactive, archived, unreachable, closed-source, or no
+longer aligned with OSL requirements may be marked at risk or removed from this
+list. If a project is removed because of inactivity, maintainers may ask to
+restore it after the baseline requirements and maintenance status are resolved.
