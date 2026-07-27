@@ -1539,15 +1539,23 @@ html[data-mode="dim"] .osl-page-hero{
   margin: .1rem 0 1rem;
   padding: 0;
   list-style: none;
+  align-items: flex-start;
 }
 
 .community-tags li{
-  padding: .28rem .5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding: .35rem .6rem;
   border: 1px solid color-mix(in oklab, var(--osl-accent) 25%, var(--border));
   background: color-mix(in oklab, var(--osl-accent) 8%, transparent);
   color: color-mix(in oklab, var(--fg) 86%, var(--osl-accent));
   font-size: .78rem;
   font-weight: 780;
+  border-radius: .4rem;
+  text-transform: capitalize;
+  white-space: nowrap;
 }
 
 .community-event-card{
