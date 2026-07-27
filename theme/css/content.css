@@ -37,11 +37,11 @@ blockquote{
 .anchor-link:hover { opacity: 1; }
 
 /* ensure the back-to-top is perfectly round */
-.to_top {
+/* .to_top {
   width: 48px; height: 48px; border-radius: 50%;
   display: grid; place-items: center;
 }
-.to_top .icon { width: 24px; height: 24px; }
+.to_top .icon { width: 24px; height: 24px; } */
 
 /* ───────── Polished non-home page system ───────── */
 .osl-page{
