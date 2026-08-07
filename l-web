@@ -1,0 +1,21 @@
+[1mdiff --git a/.github/workflows/main.yaml b/.github/workflows/main.yaml[m
+[1mindex b03dc56b..733f0abb 100644[m
+[1m--- a/.github/workflows/main.yaml[m
+[1m+++ b/.github/workflows/main.yaml[m
+[36m@@ -1,6 +1,7 @@[m
+ name: main[m
+ [m
+ on:[m
+[32m+[m[32m  workflow_dispatch:[m
+   push:[m
+     branches: [main][m
+   pull_request:[m
+[36m@@ -75,7 +76,7 @@[m [mjobs:[m
+       # Push the book's HTML to github-pages[m
+       - name: GitHub Pages action[m
+         uses: peaceiris/actions-gh-pages@v3.5.9[m
+[31m-        if: ${{ github.event_name == 'push' }}[m
+[32m+[m[32m        if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}[m
+         with:[m
+           github_token: ${{ secrets.GITHUB_TOKEN }}[m
+           publish_dir: ./build[m

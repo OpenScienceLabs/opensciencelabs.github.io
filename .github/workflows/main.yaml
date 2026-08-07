@@ -1,6 +1,7 @@
 name: main
 
 on:
+  workflow_dispatch:
   push:
     branches: [main]
   pull_request:
@@ -75,7 +76,7 @@ jobs:
       # Push the book's HTML to github-pages
       - name: GitHub Pages action
         uses: peaceiris/actions-gh-pages@v3.5.9
-        if: ${{ github.event_name == 'push' }}
+        if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
