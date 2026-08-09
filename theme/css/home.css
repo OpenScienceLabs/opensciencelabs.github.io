@@ -425,13 +425,13 @@
 }
 
 /* Back-to-top only: keep functional, not part of page layout language. */
-.to_top{
+/* .to_top{
   width: 48px;
   height: 48px;
   display: grid;
   place-items: center;
 }
-.to_top .icon{ width: 22px; height: 22px; }
+.to_top .icon{ width: 22px; height: 22px; } */
 
 html[data-mode="dim"] .home-editorial,
 [data-bs-theme="dark"] .home-editorial{

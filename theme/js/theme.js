@@ -92,6 +92,19 @@
     });
   });
 
+  /*8) Back to top button visibility */
+  const toTopBtn = document.querySelector(".to_top");
+
+  if(toTopBtn){
+    window.addEventListener("scroll", function(){
+      if(window.scrollY > 150){
+        toTopBtn.classList.add("visible");
+      }else{
+        toTopBtn.classList.remove("visible");
+      }
+    })
+  };
+
   // Optional public API
   window.OSLTheme = {
     getMode: () => docEl.getAttribute('data-mode'),
