@@ -1,0 +1,87 @@
+{% extends "main.html" %}
+
+{% block header_extra %}
+<link rel="stylesheet" href="/css/ambassadors.css">
+{% endblock header_extra %}
+
+{% block content_inner %}
+{% set application_url = page.meta.get("application_url", "") %}
+
+<section class="ambassador-dashboard" aria-labelledby="ambassador-dashboard-title">
+  <div class="ambassador-dashboard__intro">
+    <p class="ambassador-eyebrow">At a glance</p>
+    <h2 id="ambassador-dashboard-title">A network built around people</h2>
+    <p>
+      Ambassadors listen first, connect communities with the wider OSL network,
+      and help turn shared needs into opportunities to learn and collaborate.
+    </p>
+
+    <div class="ambassador-actions">
+      {% if application_url %}
+        <a class="osl-inline-button" href="{{ application_url }}" target="_blank" rel="noopener">
+          Apply on GitHub
+        </a>
+      {% else %}
+        <span class="osl-inline-button ambassador-button--disabled" aria-disabled="true">
+          Application link coming soon
+        </span>
+      {% endif %}
+      <a class="osl-inline-button osl-inline-button--subtle" href="#who-can-apply">
+        Check eligibility
+      </a>
+    </div>
+  </div>
+
+  <dl class="ambassador-facts">
+    <div>
+      <dt>Active term</dt>
+      <dd><strong>12</strong> months</dd>
+    </div>
+    <div>
+      <dt>Meaningful activity</dt>
+      <dd><strong>2</strong> every 6 months</dd>
+    </div>
+    <div>
+      <dt>Community check-in</dt>
+      <dd>About every <strong>3</strong> months</dd>
+    </div>
+  </dl>
+</section>
+
+<nav class="ambassador-jump-nav" aria-label="Ambassadors Program sections">
+  <span>Explore the program</span>
+  <a href="#why-the-ambassadors-program-exists">Purpose</a>
+  <a href="#what-can-an-osl-ambassador-do">The role</a>
+  <a href="#who-can-apply">Eligibility</a>
+  <a href="#how-to-apply">How to apply</a>
+  <a href="#ambassador-term">Active service</a>
+  <a href="#representing-open-science-labs">Responsibility</a>
+  <a href="#what-does-osl-provide-to-ambassadors">Support</a>
+</nav>
+
+{{ page.content }}
+
+<section class="ambassador-application" aria-labelledby="ambassador-application-title">
+  <div>
+    <p class="ambassador-eyebrow">Your next step</p>
+    <h2 id="ambassador-application-title">Create opportunities with us</h2>
+    <p>
+      Already contributing to OSL and ready to help people and communities grow?
+      Review the eligibility criteria and tell us about the impact you want to
+      create.
+    </p>
+  </div>
+  <div class="ambassador-application__action">
+    {% if application_url %}
+      <a class="osl-inline-button" href="{{ application_url }}" target="_blank" rel="noopener">
+        Apply to become an OSL Ambassador
+      </a>
+    {% else %}
+      <span class="osl-inline-button ambassador-button--disabled" aria-disabled="true">
+        Application link coming soon
+      </span>
+      <small>The GitHub application link will be added here.</small>
+    {% endif %}
+  </div>
+</section>
+{% endblock content_inner %}
