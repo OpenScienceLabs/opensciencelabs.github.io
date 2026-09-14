@@ -51,6 +51,18 @@ other community-led opportunities.
 Visit the [Community Partners](/partnership/community/) page to discover current
 opportunities or suggest an initiative for OSL to publicize.
 
+## Ambassadors Program
+
+The OSL Ambassadors Program is a global network of active contributors who build
+relationships, listen to community needs, connect people with useful
+opportunities, and help open science create positive social impact.
+
+Ambassadors work with universities, research groups, students, open-source
+communities, companies, nonprofits, funders, and other aligned communities. The
+program is built on a simple idea: we grow while helping others grow.
+
+[Explore the Ambassadors Program](/partnership/ambassadors/)
+
 ## How to Apply
 
 If your organization is interested in partnering with Open Science Labs, please

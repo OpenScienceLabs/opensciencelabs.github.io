@@ -70,6 +70,7 @@ nav:
           - "Template: Candidates Project Proposal": "opportunities/gsoc/templates/contributor-proposal.md"
   - Partnership:
       - Overview: "partnership/index.md"
+      - Ambassadors Program: "partnership/ambassadors/index.md"
       - Partners: "partnership/partners/index.md"
       - Community Partners: "partnership/community/index.md"
       - Open Proposals:
