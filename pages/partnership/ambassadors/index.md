@@ -16,1045 +16,251 @@ application_url: ""
 **Build connections. Create opportunities. Help people grow.**
 
 The Open Science Labs Ambassadors Program is a global network of active OSL
-contributors who help connect Open Science Labs with universities, research
-groups, students, open-source communities, companies, nonprofit organizations,
-funders, and other communities around the world.
+contributors who connect our community with universities, research groups,
+students, open-source communities, companies, nonprofits, funders, and other
+mission-aligned organizations.
 
-But becoming an OSL Ambassador is about much more than promoting Open Science
-Labs.
-
-It is about **people**.
-
-It is about listening to communities, understanding their needs, creating
-opportunities, sharing knowledge, building relationships, and helping people
-grow.
-
-We want to build a worldwide network of people who believe that science,
-technology, open source, education, mentorship, and collaboration can be
-powerful tools for positive social impact.
+Ambassadors are not simply promoters. They are **listeners, community builders,
+connectors, and opportunity creators** who help people learn, collaborate, and
+develop their potential through science, technology, education, mentorship, and
+open source.
 
 ## Why the Ambassadors Program exists
 
-Open Science Labs was not created only for its founders, maintainers, or current
-contributors.
-
-We are building OSL for everyone.
-
-We want OSL to be a place where people from different countries, backgrounds,
-disciplines, and stages of their careers can find opportunities to learn,
-contribute, collaborate, develop themselves, and make a difference.
-
-We believe that communities become stronger when people help each other grow.
-
-A contribution to an open-source project can become someone's first professional
-experience.
-
-A mentor can help a student discover a career they did not know was possible.
-
-A research project can give someone the opportunity to develop new scientific
-and technical skills.
-
-A workshop can introduce an entire community to knowledge and tools they
-previously could not access.
-
-A conversation with a professor can lead to research software being released as
-open source.
-
-An introduction between two people can lead to a collaboration, a job, a
-research project, a friendship, or an opportunity that changes someone's life.
-
-This human impact is an essential part of the Open Science Labs mission.
-
-The Ambassadors Program exists to help us expand that impact.
-
-## Grow together
-
-Our philosophy is simple:
-
-**We want to grow while helping others grow.**
-
-An OSL Ambassador should therefore not begin a conversation by asking:
-
-> What can this university, organization, or person do for OSL?
-
-Instead, we want Ambassadors to ask:
-
-**What do they need?**
-
-**What challenges are they facing?**
-
-**How could OSL help?**
-
-**What could we create together?**
-
-**How could this collaboration help other people?**
-
-**And how could everyone involved grow through the relationship?**
-
-Perhaps a professor has research software that has never been published and
-would like help turning it into a sustainable open-source project.
-
-Perhaps a laboratory needs developers or scientists for a research project.
-
-Perhaps students are looking for meaningful projects where they can gain
-experience.
-
-Perhaps a university would like to organize an activity around open science but
-does not know where to begin.
-
-Perhaps a company is interested in supporting scientific open source.
-
-Perhaps a nonprofit has a problem that members of the OSL community could help
-solve.
-
-Perhaps an institution could support OSL through a grant, contract, sponsorship,
-infrastructure, expertise, introductions, or another form of collaboration.
-
-Sometimes OSL will be able to help.
-
-Sometimes the people we meet will be able to help us.
-
-And often, the most interesting opportunities will be ones that neither side
-imagined before starting the conversation.
-
-## More than representatives
-
-An OSL Ambassador is not simply someone who shares OSL posts or distributes
-promotional materials.
-
-Ambassadors are **community builders, connectors, listeners, and opportunity
-creators**.
-
-They help build bridges between people, projects, institutions, and communities.
-
-An Ambassador might:
-
-- speak with a professor about opening a scientific software project;
-- introduce students to OSL projects where they can gain experience;
-- organize a workshop or lecture with a university;
-- connect a research group with developers or scientists in the OSL network;
-- identify a potential partner for an OSL initiative;
-- find an organization interested in supporting open science;
-- mentor students or new contributors;
-- represent OSL at an event;
-- help create a new local open-science community;
-- discover a grant or funding opportunity;
-- introduce two people who should know each other;
-- listen to the needs of a community and bring those needs back to OSL.
-
-There is no single way to be an effective Ambassador.
-
-Different communities have different needs, and we want Ambassadors to have the
-freedom to explore them.
-
-## Social impact is part of our mission
-
-Open Science Labs believes that science and technology should create
-opportunities for people.
-
-We want to help make knowledge, experience, collaboration, and professional
-development more accessible.
-
-This means looking beyond projects and asking what happens to the people around
-those projects.
-
-Can a student develop skills that help them begin their career?
-
-Can an early-career researcher gain experience working in an international
-community?
-
-Can someone from a community with fewer opportunities access mentorship and
-meaningful projects?
-
-Can a researcher receive the support needed to turn an idea into something
-useful to others?
-
-Can someone who has learned something through OSL later become a mentor for
-another person?
-
-Can a project create opportunities for dozens—or hundreds—of people beyond its
-original contributors?
-
-These questions matter to us.
-
-Our goal is not only to build software, organize events, or grow an
-organization.
-
-Our goal is to help build an ecosystem in which **people help other people
-develop their potential**.
-
-## A network with a purpose
-
-Imagine an OSL Ambassador at a university in Brazil learning that a professor
-needs help developing open research software.
-
-An Ambassador in India might know contributors with exactly the necessary
-expertise.
-
-Someone in Canada might know an organization interested in supporting that kind
-of work.
-
-Another OSL contributor might be able to mentor students who want to
-participate.
-
-Someone else could organize a workshop so that knowledge created by the project
-reaches even more people.
-
-No individual needs to solve every problem.
-
-The strength comes from the network.
-
-Each Ambassador contributes their relationships, experience, knowledge, culture,
-and perspective.
-
-Over time, we hope the Ambassadors Program becomes much more than a collection
-of representatives.
-
-We want to create a **global network of people helping other people create
-knowledge, develop themselves, find opportunities, and make a positive
-difference in their communities.**
+OSL is for people from different countries, disciplines, backgrounds, and career
+stages. We want more people to find meaningful ways to learn, contribute, build
+experience, and create positive social impact.
+
+Our approach is simple: **we grow while helping others grow**. Ambassadors start
+by asking what a community needs, what challenges it faces, and what OSL and
+that community could create together—not only what the community can do for OSL.
+
+That approach can turn:
+
+- a research tool into a sustainable open-source project;
+- a student contribution into valuable professional experience;
+- a workshop into access to new knowledge and skills;
+- an introduction into a project, partnership, mentorship, or job opportunity;
+- a local need into an international collaboration.
+
+No Ambassador needs to solve every problem. The strength of the program comes
+from a network that shares relationships, knowledge, experience, and
+opportunities across regions and disciplines.
 
 ## What can an OSL Ambassador do?
 
-Ambassador activities may include:
+Ambassadors choose activities that fit their community and experience. They may:
 
-### Build relationships
+- build relationships with universities, laboratories, researchers, student
+  groups, open-source communities, nonprofits, companies, foundations, funders,
+  public organizations, conferences, and other aligned groups;
+- listen to researchers, students, developers, and communities, then bring their
+  needs and ideas back to OSL;
+- connect people with OSL projects, contributors, mentors, learning activities,
+  research collaborations, or professional opportunities when available;
+- help researchers explore how software, datasets, educational resources, or
+  other work could become open and community-supported;
+- organize workshops, lectures, hackathons, project clinics, mentoring sessions,
+  contributor onboarding, or open-science discussions;
+- introduce potential collaborators and help shape proposals involving research,
+  education, software, consulting, outreach, or community building;
+- identify grants, sponsorships, infrastructure, expertise, event support, or
+  other resources that may help open-science work;
+- represent OSL at relevant events and help form local open-science communities;
+- create reusable guides, presentations, translations, tutorials, case studies,
+  workshop materials, or community reports;
+- help other Ambassadors develop initiatives and make useful connections.
 
-Connect OSL with:
-
-- universities;
-- research laboratories;
-- professors and researchers;
-- student organizations;
-- scientific communities;
-- open-source communities;
-- nonprofits;
-- companies;
-- foundations;
-- government organizations;
-- funders;
-- conferences and events;
-- other communities aligned with our mission.
-
-### Understand community needs
-
-Talk with people before proposing solutions.
-
-Learn about the challenges faced by researchers, students, developers,
-institutions, and communities.
-
-Bring those challenges back to OSL so that our wider network can help explore
-possible solutions.
-
-### Create opportunities for students and contributors
-
-Help people discover:
-
-- OSL projects;
-- mentorship opportunities;
-- scientific projects;
-- technical challenges;
-- open-source contributions;
-- workshops;
-- community activities;
-- collaborations;
-- internships or employment opportunities when available;
-- other ways to learn through meaningful participation.
-
-### Help research become open
-
-Identify scientific software, tools, datasets, educational resources, or
-research projects that could benefit from open-source development or broader
-community participation.
-
-Ambassadors can help researchers understand how OSL may support this transition.
-
-### Organize activities
-
-Work with local communities and institutions to organize:
-
-- workshops;
-- lectures;
-- hackathons;
-- project clinics;
-- mentoring sessions;
-- community meetings;
-- open-science discussions;
-- contributor onboarding sessions;
-- training activities;
-- collaborative research activities.
-
-### Find collaborations
-
-Explore opportunities where OSL and another organization can work together.
-
-This might involve research, education, software development, community
-building, consulting, outreach, events, mentoring, or other activities.
-
-### Identify support and funding
-
-Help discover organizations interested in supporting open science and
-open-source scientific projects.
-
-This may include:
-
-- grants;
-- sponsorships;
-- donations;
-- institutional partnerships;
-- consulting contracts;
-- project contracts;
-- infrastructure;
-- cloud or computing resources;
-- travel support;
-- event support;
-- other forms of assistance.
-
-Ambassadors may identify and introduce these opportunities, but they cannot make
-financial or contractual commitments on behalf of OSL without authorization.
-
-### Share knowledge
-
-Create resources that can benefit the entire network.
-
-For example:
-
-- presentations;
-- guides;
-- workshop materials;
-- documentation;
-- case studies;
-- translations;
-- tutorials;
-- community reports;
-- lessons learned from local activities.
-
-### Help other Ambassadors
-
-Our goal is not to create isolated representatives.
-
-Ambassadors should help one another.
-
-A contact discovered by one Ambassador may become an opportunity for someone on
-another continent.
-
-A successful university workshop can become a template for other Ambassadors.
-
-A partnership model developed in one community may inspire collaborations
-elsewhere.
-
-## Who are we looking for?
-
-We are not looking for people with the biggest professional networks.
-
-We are not looking only for senior researchers.
-
-We are not looking only for developers.
-
-And we are not choosing Ambassadors based on prestigious titles, institutions,
-or social-media audiences.
-
-We are looking for people who believe in the purpose behind Open Science Labs.
-
-People who understand the importance of helping others grow.
-
-People who share opportunities rather than keeping them to themselves.
-
-People who enjoy connecting people.
-
-People who are willing to listen before proposing solutions.
-
-People who care about students, researchers, developers, scientists, and
-communities having opportunities to develop their potential.
-
-People who understand that collaboration should create value for everyone
-involved.
-
-And people who believe that their own growth and the growth of others do not
-need to compete.
-
-At Open Science Labs, **we grow together**.
+Meaningful Ambassador work creates a relationship, opportunity, resource, or
+outcome. Simply reposting OSL content on social media does not normally count as
+an Ambassador activity by itself.
 
 ## Who can apply?
 
-The Ambassadors Program is intended for people who are already part of the Open
-Science Labs community.
+The program is intended for people who already have an established relationship
+with OSL. Applicants should:
 
-Applicants should:
+1. be an active contributor to at least one OSL project, program, working group,
+   community initiative, or other recognized activity;
+2. normally have at least **three months of involvement with OSL** and have made
+   meaningful contributions;
+3. understand OSL's mission, projects, values, and community culture;
+4. care about helping other people and communities grow, rather than using the
+   role only for self-promotion;
+5. be willing to listen, build relationships, share opportunities, and
+   collaborate openly with contributors and other Ambassadors;
+6. communicate activities, opportunities, and challenges back to OSL;
+7. follow the OSL Code of Conduct and Ambassador guidelines; and
+8. be at least 18 years old.
 
-1. Be an active contributor to at least one OSL project, program, working group,
-   community initiative, or other recognized activity.
+Contributions are not limited to software. Research, documentation, project
+management, mentoring, review, translation, design, communications, teaching,
+events, outreach, writing, partnerships, fundraising support, and community
+infrastructure can all demonstrate meaningful participation. When work is not
+publicly visible, an OSL lead, maintainer, mentor, or initiative coordinator may
+confirm it.
 
-2. Normally have at least **three months of involvement with OSL** before
-   applying.
+Eligibility is considered through three principles:
 
-3. Have made meaningful contributions to OSL.
+- **Contribution:** the applicant knows OSL through meaningful participation.
+- **Trust:** OSL can reasonably expect the applicant to represent the community
+  responsibly.
+- **Purpose:** the applicant shares our commitment to opportunity, learning,
+  social impact, and mutual growth.
 
-4. Understand OSL's mission, projects, values, and community culture.
-
-5. Demonstrate alignment with OSL's commitment to social impact and helping
-   other people grow.
-
-6. Be interested in building relationships and creating opportunities for other
-   people—not only promoting themselves or their own work.
-
-7. Be willing to collaborate openly with other OSL contributors and Ambassadors.
-
-8. Be willing to communicate their activities, opportunities, and challenges
-   back to OSL.
-
-9. Follow the Open Science Labs Code of Conduct and Ambassador guidelines.
-
-10. Be at least 18 years old.
-
-Meeting the eligibility requirements does not automatically guarantee
-acceptance.
-
-Because Ambassadors publicly represent Open Science Labs, the role requires an
-additional level of trust and responsibility.
-
-## What does “active contributor” mean?
-
-Contribution to OSL can take many forms.
-
-You do **not** need to be a software developer to become an Ambassador.
-
-Meaningful participation may include:
-
-- software development;
-- scientific research;
-- documentation;
-- project management;
-- mentoring;
-- reviewing contributions;
-- translations;
-- design;
-- communications;
-- community organization;
-- event organization;
-- teaching;
-- outreach;
-- writing;
-- partnerships;
-- fundraising support;
-- maintaining community infrastructure;
-- coordinating an OSL initiative;
-- other recognized contributions to the community.
-
-Not every contribution happens publicly on GitHub.
-
-When contributions cannot easily be demonstrated with public links, an OSL
-project lead, mentor, maintainer, or initiative coordinator may confirm the
-applicant's participation.
-
-## Contribution + Trust + Purpose
-
-We think of Ambassador eligibility around three principles.
-
-### Contribution
-
-The person should already have an established relationship with Open Science
-Labs.
-
-Ambassadors should understand the community they are representing.
-
-### Trust
-
-Ambassadors may interact with professors, universities, companies, funders,
-students, researchers, and other organizations while representing OSL.
-
-We need to be confident that they will represent the community responsibly.
-
-### Purpose
-
-Ambassadors should understand **why** Open Science Labs exists.
-
-They should believe in helping other people develop themselves, expanding access
-to opportunities and knowledge, strengthening communities, and using science and
-technology to create positive social impact.
-
-An excellent technical contributor may not necessarily want to take on this
-role—and that is perfectly fine.
-
-The Ambassadors Program is for people who identify with this particular mission.
+Meeting the requirements does not guarantee acceptance because public
+representation requires additional trust and responsibility.
 
 ## How to apply
 
-Ambassador applications are submitted through GitHub using the **OSL Ambassador
-Application** issue template.
+Applications are submitted through GitHub using the **OSL Ambassador
+Application** issue template. The application link will be published on this
+page when it is available.
 
-Applicants will be asked about:
+Applicants will describe:
 
-- who they are;
-- how they currently contribute to OSL;
-- the OSL projects, programs, or initiatives they participate in;
-- examples of their contributions;
-- the communities, institutions, disciplines, or geographic regions they are
-  connected with;
-- languages they speak;
-- why they would like to become an OSL Ambassador;
-- what helping other people grow means to them;
-- examples of how they have helped others learn, develop, connect, or find
-  opportunities;
-- needs or challenges they see in their community;
-- groups or communities they believe OSL could help;
-- what positive impact they would like to create during the next year;
-- ideas they would like to explore as an Ambassador;
-- the types of Ambassador activities that interest them;
-- an OSL contributor, mentor, maintainer, or initiative lead who can confirm
-  their current participation;
-- what information they consent to having displayed publicly.
+- their current OSL involvement and examples of contributions;
+- the communities, institutions, disciplines, regions, and languages they know;
+- why they want to become an Ambassador and what helping people grow means to
+  them;
+- relevant experience helping people learn, connect, or find opportunities;
+- needs they see in their community and ideas they want to explore;
+- the impact and activities they would like to pursue during the next year;
+- an OSL contributor who can confirm their participation; and
+- which profile information they consent to make public.
 
-Applicants should **not publish private contact information belonging to
-references or external contacts in GitHub issues**.
+Do not publish private contact information belonging to references or external
+contacts in a GitHub issue. Any necessary private verification will use an
+appropriate private channel.
 
-Where additional verification is needed, it can be handled privately.
-
-## How applications are evaluated
-
-We are not evaluating who has the most impressive résumé.
-
-Applications are primarily considered according to the following areas.
-
-### Participation
-
-Does the applicant have an established and positive relationship with OSL?
-
-### Mission alignment
-
-Does the applicant understand and support OSL's mission, including its
-social-impact dimension?
-
-### Community mindset
-
-Does the applicant genuinely want to help other people and communities grow?
-
-### Initiative
-
-Can they identify realistic opportunities to create connections or positive
-impact?
-
-### Collaboration
-
-Are they willing to share information, collaborate with others, and bring
-opportunities back to the community?
-
-### Communication
-
-Can they communicate respectfully and responsibly with people inside and outside
-OSL?
-
-### Trust
-
-Can OSL reasonably trust them to represent the community?
-
-Applicants do not need previous experience as professional speakers,
-fundraisers, community managers, or partnership developers.
-
-The Ambassadors Program should also be a place where people **develop those
-abilities through experience, mentorship, and collaboration**.
+Applications are evaluated for established participation, mission alignment,
+community mindset, initiative, collaboration, respectful communication, and
+trust. Prestigious titles, large networks, or professional experience in public
+speaking, fundraising, or partnerships are not required. The program is also a
+place to develop those skills.
 
 ## Ambassador term
 
-Active Ambassador status is granted for **12 months**.
+Active Ambassador status lasts **12 months** and may be renewed. A renewable
+term shows that the person is currently participating rather than holding a
+permanent credential.
 
-Ambassadorship is renewable.
+To remain active, an Ambassador should:
 
-We intentionally use a renewable term because being an Ambassador should
-indicate **current participation**, rather than being a permanent credential
-awarded once and retained indefinitely.
-
-Each public Ambassador profile will include:
-
-**Ambassador since:** [date]
-
-**Current term:** [date – date]
-
-**Status:** Active Ambassador
-
-This makes it clear to external organizations whether someone's Ambassador
-status is currently valid.
-
-## Remaining an Active Ambassador
-
-We know Ambassadors are volunteers.
-
-People have studies, jobs, families, research, health, and many other
-responsibilities.
-
-For that reason, the program focuses on **meaningful participation rather than
-high activity quotas**.
-
-To maintain Active Ambassador status, an Ambassador should:
-
-- remain involved with at least one OSL project, program, initiative, or
-  community activity;
+- stay involved in at least one OSL project, program, initiative, or community
+  activity;
 - complete at least **two meaningful Ambassador activities during each rolling
   six-month period**;
-- submit a short activity check-in approximately once every three months;
-- remain reasonably reachable by OSL;
+- submit a brief check-in about every three months;
+- remain reasonably reachable; and
 - continue following the Code of Conduct and Ambassador guidelines.
 
-We may adjust these requirements as we learn from the first cohorts of
-Ambassadors.
-
-## What counts as an Ambassador activity?
-
-Examples include:
-
-- meeting with a professor or research group to discuss their needs;
-- establishing a new relationship with a university;
-- introducing a potential project to OSL;
-- connecting students with OSL projects;
-- organizing a workshop, lecture, meeting, or other activity;
-- giving a talk about OSL or relevant open-science topics;
-- mentoring students or contributors;
-- developing a collaboration proposal;
-- identifying a possible institutional partner;
-- identifying a meaningful funding opportunity;
-- introducing an organization to OSL;
-- helping a scientific project become open source;
-- connecting people who later begin a useful collaboration;
-- creating a reusable resource for the Ambassador community;
-- representing OSL at a relevant event;
-- helping another Ambassador develop an initiative;
-- contributing to another activity aligned with the program's goals.
-
-Simply reposting OSL content on social media would normally **not by itself**
-qualify as meaningful Ambassador activity.
-
-We care about the quality and potential impact of activities—not about
-generating activity for the sake of reporting numbers.
-
-## Ambassador check-ins
-
-Approximately once every three months, Ambassadors will submit a lightweight
-update.
-
-This is not intended to be a bureaucratic report.
-
-It helps us understand what is happening throughout the network and, more
-importantly, helps OSL support opportunities discovered by Ambassadors.
-
-A check-in can answer a few simple questions.
-
-### What did you do?
-
-Briefly describe conversations, activities, introductions, events,
-contributions, or other relevant work.
-
-### What did you learn?
-
-Did you discover a need, challenge, idea, or opportunity?
-
-### What happened next?
-
-Was there an introduction, follow-up meeting, proposal, project, event, or other
-result?
-
-### Is there any supporting information?
-
-When available, include links to:
-
-- events;
-- issues;
-- pull requests;
-- presentations;
-- articles;
-- meeting notes;
-- repositories;
-- photos;
-- other public materials.
-
-Not every valuable conversation produces a public URL, and that is completely
-acceptable.
-
-### How can OSL help?
-
-Perhaps the Ambassador needs:
-
-- someone with particular expertise;
-- an introduction;
-- presentation materials;
-- help preparing a workshop;
-- advice about a partnership;
-- project contributors;
-- funding information;
-- another Ambassador in a different region;
-- support from the wider community.
-
-Ambassador reporting should create opportunities for collaboration—not simply
-measure activity.
-
-## Sensitive opportunities
-
-Some partnership discussions, institutional conversations, personal situations,
-or early-stage opportunities should not be published publicly.
-
-Ambassadors should use appropriate private OSL communication channels whenever
-sharing information publicly could:
-
-- expose personal information;
-- breach confidentiality;
-- damage a relationship;
-- disclose an opportunity prematurely;
-- reveal institutional information that was shared in confidence.
-
-Transparency is important, but respecting people and relationships is more
-important.
-
-## Taking a break
-
-Life happens.
-
-An Ambassador who temporarily cannot participate can request **On Leave**
-status.
-
-Taking leave is not a failure and carries no penalty.
-
-During this period, the person is not considered an Active Ambassador and will
-not be presented publicly as someone currently representing OSL.
-
-When they are ready to return, their Active status can be restored after
-confirming that they still meet the relevant program requirements.
-
-## Inactive status
-
-OSL may contact an Ambassador when we have not received activity updates for an
-extended period.
-
-Normally, the first step will simply be to ask how they are doing and whether
-they would like to:
-
-- remain active;
-- request leave;
-- step down;
-- update us about activities that were not previously reported.
-
-An Ambassador may lose Active status when:
-
-- they have no qualifying Ambassador activity for six months;
-- two consecutive check-ins are missed without communication;
-- they are no longer participating in OSL;
-- they voluntarily step down;
-- OSL repeatedly cannot contact them;
-- they no longer meet program requirements;
-- serious Code of Conduct or trust concerns arise.
-
-Removing Active status is not intended as a punishment.
-
-It helps ensure that universities, partners, researchers, students, and other
-organizations can trust that people listed as Active Ambassadors are genuinely
-participating in OSL.
-
-## Renewing Ambassador status
-
-Near the end of the 12-month term, Active Ambassadors can request renewal.
-
-They will not need to complete the entire application process again.
-
-Renewal will normally involve a short review of:
-
-- continued involvement with OSL;
-- Ambassador activities during the previous year;
-- current interests;
-- lessons learned;
-- future plans;
-- continued agreement with the Code of Conduct and Ambassador guidelines.
-
-The renewal process is also an opportunity for Ambassadors to decide whether
-they would like to continue, take a break, or finish their active service.
-
-## Ambassador Alumni
-
-Someone does not stop being part of the OSL story simply because their active
-Ambassador term ends.
-
-People who served as Ambassadors in good standing may become part of the **OSL
-Ambassador Alumni** network.
-
-Former Ambassadors may be listed separately with information such as:
-
-- their name;
-- the period during which they served;
-- their region;
-- important activities or contributions;
-- links to their public profile, when they wish to remain listed.
-
-Alumni remain welcome members of the OSL community and may apply to return to
-Active Ambassador status in the future.
-
-However, Ambassador Alumni should not present themselves as currently authorized
-OSL Ambassadors.
-
-## Ambassador Emeritus
-
-We do not plan to automatically give every former Ambassador an “Emeritus”
-title.
-
-Instead, OSL may in the future use **Ambassador Emeritus** as a special honorary
-recognition for individuals who have made exceptional, sustained contributions
-to the Ambassador community or the broader OSL mission.
-
-Emeritus recognition would acknowledge past impact and would not necessarily
-mean that someone currently represents OSL.
-
-## Public Ambassador directory
-
-Active Ambassadors will be listed on the Open Science Labs website so that
-community members and external organizations can verify their current status.
-
-With each Ambassador's consent, profiles may include:
-
-- name;
-- photograph;
-- country or region;
-- languages;
-- current OSL projects or initiatives;
-- scientific or technical interests;
-- community interests;
-- institutional or professional affiliation;
-- short biography;
-- areas where they can help;
-- Ambassador activities;
-- GitHub profile;
-- LinkedIn or another professional profile;
-- preferred public contact method;
-- Ambassador start date;
-- current status;
-- current term or valid-through date.
-
-Ambassadors decide which optional personal information is published.
-
-An institutional affiliation shown on an Ambassador profile is provided for
-context.
-
-It does **not** imply that the institution officially endorses Open Science Labs
-or that the Ambassador represents that institution unless such a relationship
-has separately been established.
+A check-in is a lightweight way to share what the Ambassador did, what they
+learned, what happened next, and how OSL can help. Public links to events,
+issues, presentations, repositories, photos, or other evidence are useful when
+available, but not every valuable conversation produces a public URL.
+
+Examples of qualifying activities include meeting a research group, creating a
+new university relationship, connecting students with projects, mentoring,
+organizing an event, giving a talk, developing a collaboration proposal, helping
+research become open source, identifying a partner or funding opportunity,
+creating a reusable resource, or helping another Ambassador's initiative.
+
+### Leave, inactive status, and renewal
+
+Ambassadors are volunteers with responsibilities outside OSL. Anyone who needs a
+break can request **On Leave** status without penalty and may return after
+confirming that they still meet the program requirements.
+
+OSL will normally contact an Ambassador before changing their status. Active
+status may end after six months without a qualifying activity, two missed
+check-ins without communication, departure from OSL participation, loss of
+contact, a voluntary decision to step down, failure to meet program
+requirements, or serious conduct or trust concerns.
+
+Near the end of a term, renewal uses a short review of continued participation,
+activities, lessons, interests, future plans, and agreement with program rules.
+Former Ambassadors who served in good standing may join the **OSL Ambassador
+Alumni** network and later apply to return. OSL may reserve **Ambassador
+Emeritus** as an honorary recognition for exceptional, sustained impact; it does
+not necessarily authorize current representation.
+
+### Public directory
+
+Active Ambassadors will be listed on the OSL website so others can verify their
+status. With each person's consent, a profile may include their name, photo,
+region, languages, interests, OSL work, biography, public links and contact
+method, activities, start date, current term, and status.
+
+Ambassadors choose which optional personal information is published. An
+institutional affiliation provides context; it does not imply that the
+institution endorses OSL or that the Ambassador represents it unless a separate
+relationship establishes that authority.
 
 ## Representing Open Science Labs
 
-Ambassadors are trusted representatives of our community.
+Ambassadors may introduce people to OSL, explain our mission, share public
+information, explore possible collaborations, organize approved community
+activities, meet with organizations, and bring proposals or opportunities back
+to the community.
 
-However, Ambassadorship does not give someone authority to make legal,
-financial, contractual, employment, or institutional commitments on behalf of
-Open Science Labs.
+Ambassadorship does **not** authorize someone to make legal, financial,
+contractual, employment, or institutional commitments for OSL. Contracts,
+funding, sponsorships, grants, formal partnerships, employment, official
+endorsements, use of OSL assets, and similar commitments require approval from
+the appropriate OSL leadership. An Ambassador's role may simply be to open the
+door and connect the right people.
 
-Ambassadors are encouraged to:
+Sensitive partnership discussions, personal information, confidential material,
+and early-stage opportunities should be shared only through appropriate private
+OSL channels. Transparency matters, but protecting people, trust, and
+relationships matters more.
 
-- introduce people to OSL;
-- explain our mission;
-- present publicly available information about OSL;
-- explore possible collaborations;
-- organize approved community activities;
-- meet with researchers, organizations, and communities;
-- identify opportunities;
-- connect people with OSL contributors;
-- bring proposals and partnership ideas back to the community.
-
-Formal agreements involving areas such as:
-
-- contracts;
-- funding;
-- sponsorship;
-- grants;
-- institutional partnerships;
-- employment;
-- financial commitments;
-- official endorsements;
-- use of OSL assets;
-- representation of OSL in formal agreements
-
-must be reviewed and approved by the appropriate OSL leadership.
-
-Ambassadors do not need to negotiate these arrangements themselves.
-
-Their role can simply be to **open the door and help the right people meet each
-other**.
-
-## Code of Conduct
-
-OSL Ambassadors are expected to follow the
-[Open Science Labs Code of Conduct](/about/coc/) whenever participating in OSL
-activities or representing the community elsewhere.
-
-This includes:
-
-- online communities;
-- universities;
-- conferences;
-- workshops;
-- meetings;
-- social media;
-- professional communication;
-- events;
-- other contexts in which someone identifies themselves as an OSL Ambassador.
-
-Ambassadors should treat people with respect, protect the trust placed in them,
-and help create welcoming environments.
-
-Serious or repeated violations may result in suspension or removal from the
-program according to OSL's community governance and Code of Conduct procedures.
+Ambassadors must follow the [Open Science Labs Code of Conduct](/about/coc/) in
+OSL activities and whenever they identify themselves as OSL Ambassadors,
+including at events, institutions, meetings, online communities, and on social
+media. Serious or repeated violations may lead to suspension or removal under
+OSL's community procedures.
 
 ## What does OSL provide to Ambassadors?
 
-Ambassadors should not be expected to build these relationships alone.
+OSL aims to help Ambassadors build relationships rather than expecting them to
+work alone. As the program develops, support may include:
 
-As the program develops, Open Science Labs aims to provide:
+- onboarding about OSL's mission, projects, and opportunities;
+- a dedicated space to communicate with Ambassadors around the world;
+- reusable presentations, outreach resources, and workshop materials;
+- help planning activities, preparing talks, and evaluating opportunities;
+- introductions to relevant contributors, specialists, and Ambassadors;
+- mentorship and opportunities to develop communication and leadership skills;
+- opportunities to present ideas and lessons to the wider community;
+- recognition, an official profile, and a time-limited credential; and
+- confirmation of verified contributions when appropriate.
 
-- onboarding about OSL's mission, projects, initiatives, and community;
-- a dedicated space for Ambassadors to communicate;
-- opportunities to meet other Ambassadors around the world;
-- reusable OSL presentations and outreach materials;
-- information about OSL projects and opportunities;
-- support preparing talks and workshops;
-- support planning community activities;
-- help understanding potential partnerships;
-- introductions to relevant OSL contributors;
-- introductions between Ambassadors;
-- support evaluating opportunities;
-- opportunities to present ideas to the wider OSL community;
-- mentorship;
-- leadership experience;
-- recognition of Ambassador contributions;
-- an official Ambassador profile;
-- an official time-limited Ambassador credential;
-- references or confirmation of verified contributions when appropriate.
-
-When resources are available, OSL may also be able to support specific
-Ambassador activities.
-
-However, becoming an Ambassador does not automatically guarantee funding.
-
-## A learning opportunity
-
-We do not expect Ambassadors to arrive knowing how to do everything.
-
-Someone may join the program without experience talking to universities.
-
-Someone may never have organized a workshop.
-
-Someone may want to learn how partnerships work.
-
-Someone may be giving their first public presentation.
-
-Someone may want to develop leadership or communication skills.
-
-That is part of the program too.
-
-OSL exists to help people grow, and Ambassadors themselves should also have
-opportunities to develop.
-
-More experienced Ambassadors and community members can help others learn.
-
-Over time, someone who joined OSL looking for mentorship may become the person
-mentoring the next generation.
-
-That cycle is exactly what we want to create.
+Specific activities may receive additional support when resources are available,
+but Ambassador status does not guarantee funding.
 
 ## Volunteer participation
 
-Participation in the Open Science Labs Ambassadors Program is voluntary and does
-not constitute employment by Open Science Labs.
+The Ambassadors Program is voluntary and does not constitute employment by OSL.
+It does not guarantee employment, internships, contracts, travel or conference
+funding, grants, scholarships, sponsorship, or financial compensation.
 
-Being an Ambassador does not guarantee:
+## What success looks like
 
-- employment;
-- internships;
-- contracts;
-- travel funding;
-- conference funding;
-- grants;
-- scholarships;
-- sponsorship;
-- financial compensation.
+Success is measured by meaningful outcomes, not by the number of Ambassadors or
+social-media posts: a student finds a project, a researcher opens useful
+software, a community gains knowledge, a contributor becomes a mentor, an
+Ambassador develops leadership skills, or a new collaboration receives the
+support it needs.
 
-When relevant opportunities become available, however, we want Ambassadors and
-other community members to be able to discover and benefit from them.
-
-## What does success look like?
-
-Success is not simply having hundreds of Ambassadors.
-
-It is not measured by how many social-media posts are published.
-
-It is not measured only by how many organizations appear in a database.
-
-We want to see meaningful outcomes.
-
-A student found a project where they could develop themselves.
-
-A professor received help opening their research software.
-
-A community gained access to knowledge it did not previously have.
-
-A contributor became a mentor.
-
-An Ambassador developed leadership skills.
-
-A research group found collaborators.
-
-Two communities started working together.
-
-A project received the support it needed to continue.
-
-Someone found an opportunity because another person cared enough to connect
-them.
-
-A relationship created something valuable that did not exist before.
-
-These are the kinds of outcomes we want the Ambassadors Program to create.
-
-## We grow when people grow
-
-Our goal is not to create a network simply so that Open Science Labs becomes
-bigger.
-
-Our goal is to create a network that makes it possible for **more people to
-learn, contribute, collaborate, develop themselves, and create positive
-impact**.
-
-When those people grow, our community grows with them.
-
-When they help someone else, the network becomes stronger.
-
-And when people across countries, disciplines, institutions, and backgrounds
-begin helping each other, the possibilities become much greater than anything a
-single organization could accomplish alone.
-
-**We don't build a network so OSL can grow.**
-
-**We build a network so people can grow—and OSL grows with them.**
+**We build the network so people can grow—and OSL grows with them.**
 
 ## Become an OSL Ambassador
 
-If you are already contributing to Open Science Labs, believe in our mission,
-and would like to help create opportunities for other people and communities, we
-would love to hear from you.
+If you already contribute to OSL, share our mission, and want to create
+opportunities for other people and communities, review the eligibility criteria
+and apply when the GitHub application link becomes available.
 
-You do not need to know exactly what you will accomplish yet.
-
-Start with your community.
-
-Who could benefit from OSL?
-
-What challenges do people around you face?
-
-What knowledge could be shared?
-
-What relationships could be created?
-
-What could we build together?
-
-And whose life could be different because someone created an opportunity for
-them?
-
-Not yet eligible?
-
-Join the [Open Science Labs community](/discord/), contribute to one of our
-projects or initiatives, learn with us, and help others along the way.
-
-Your journey toward becoming an OSL Ambassador can start there.
-
-## Grow locally. Connect globally. Create opportunities. Help people grow.
+Not yet eligible? Join the [Open Science Labs community](/discord/), contribute
+to a project or initiative, learn with us, and help others along the way.
