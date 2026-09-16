@@ -33,8 +33,5 @@ $ pre-commit install
 ## Public analytics
 
 See [analytics setup and operations](docs/analytics.md) for the GA4 exporter,
-keyless Google/GitHub configuration, snapshot retention, and local fixture
-tests.
-
-See the [implementation verification record](docs/analytics-verification.md) for
-local results and outstanding live/browser checks.
+keyless Google/GitHub configuration, snapshot retention, local fixture tests,
+and live/browser acceptance checks.

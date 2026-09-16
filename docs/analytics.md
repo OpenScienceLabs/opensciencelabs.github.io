@@ -1,11 +1,24 @@
 # Public analytics: operations and setup
 
+This is the maintained setup and operations guide. The four non-secret analytics
+identifiers are already in `.github/workflows/main.yaml`; **no GA4 repository
+variables or secrets are required**. Their presence does not verify Google
+permissions or successful traffic collection.
+
+If the service account and WIF provider already exist, verify their restrictions
+in [Google setup](#one-time-google-configuration), complete the service-account
+binding and GA4 Viewer access, then follow
+[GitHub setup](#one-time-github-configuration) and
+[the first refresh checks](#first-refresh-and-acceptance-checks). Do not
+recreate working resources or generate private keys.
+
 ## Design and deployment
 
 - `/analytics/` uses the existing MkDocs custom theme and its light/dark tokens.
   The cards, CSS bar chart, and accessible table are server-rendered from the
-  same validated report as `/analytics/data.json`. No Google request or token
-  reaches the browser. JavaScript only updates the three-day stale notice.
+  same validated report as `/analytics/data.json`. No authenticated report
+  request or token reaches the browser. Analytics-page JavaScript only updates
+  the three-day stale notice; existing site tracking is separate.
 - `scripts/analytics/export.py` uses Google's Python GA4 Data API client. A
   small filtered report discovers the property's IANA timezone from response
   metadata; no Admin API or manually synchronized timezone variable is needed.
@@ -16,6 +29,10 @@
 - Every request applies an exact, case-insensitive `hostName` allowlist AND
   `platform = web`. Never put previews, localhost or unrelated domains in the
   allowlist. Hostnames are not inferred from the property, URL, or site tag.
+- This is **OSL-published data sourced from Google Analytics**, not a Google
+  certification of audience size. Consent choices and blockers can prevent
+  measurement, and recent figures may change during GA4 processing. The public
+  page explains these limitations and links to OSL's sponsorship page.
 - All windows are inclusive property-local calendar dates. Every refresh
   re-queries the entire rolling and historical windows to capture late
   processing and revisions. A timezone change or midnight crossing mid-export
@@ -31,6 +48,15 @@
   validation checks calendar boundaries and unique, chronological months.
   `status: unavailable` has null dates, timezone and metrics, not fabricated
   zeros.
+
+The public metric mapping follows the
+[GA4 API schema](https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema):
+
+| JSON summary field | GA4 metric        | Meaning within the configured Web/hostname scope                                                        |
+| ------------------ | ----------------- | ------------------------------------------------------------------------------------------------------- |
+| `pageviews`        | `screenPageViews` | Measured page views, including repeated views.                                                          |
+| `active_users`     | `activeUsers`     | GA4's distinct active-user count over the entire reporting period, never a sum of daily/monthly counts. |
+| `sessions`         | `sessions`        | Sessions that began during the reporting period.                                                        |
 
 ### Durable snapshot storage
 
@@ -80,6 +106,20 @@ Do this as an authorized Google Cloud and GA4 administrator. No private keys are
 needed, and none should be pasted into chat, committed, or saved in repository
 secrets. Identifiers below are **not** credentials.
 
+Use **Bash** in Google Cloud Shell or a local shell with `gcloud` installed and
+signed in to the intended administrator account (`gcloud auth list`). Run the
+blocks in order in the **same shell**; rerun the variable block after opening a
+new shell. The administrator needs permission to enable APIs, create/manage the
+service account and workload identity pool/provider, and edit the service
+account's IAM policy. GA4 property access management is a separate permission.
+Do not grant these administrative permissions to the exporter account.
+
+Google's
+[WIF prerequisites](https://cloud.google.com/iam/docs/workload-identity-federation-with-deployment-pipelines)
+include a billing-enabled Cloud project; confirm this with the project
+administrator. This exporter does not provision a VM, Cloud Run service, or
+BigQuery dataset.
+
 ### 1. Verify collection and find the property ID
 
 1. In Google Analytics, select OSL's **GA4 property**, then **Admin → Property
@@ -113,15 +153,36 @@ resources rather than repeating their creation commands.
 ```bash
 export PROJECT_ID='osl-general'
 export REPO='OpenScienceLabs/opensciencelabs.github.io'
-export PROJECT_NUMBER="$(gcloud projects describe "$PROJECT_ID" --format='value(projectNumber)')"
+export PROJECT_NUMBER="$(
+  gcloud projects describe "$PROJECT_ID" --format='value(projectNumber)'
+)"
 export SA="osl-analytics-exporter@${PROJECT_ID}.iam.gserviceaccount.com"
+export POOL="projects/${PROJECT_NUMBER}/locations/global"
+POOL+="/workloadIdentityPools/osl-analytics"
 
-# gh must be authenticated to GitHub; these numeric IDs prevent name-reuse risks.
-export REPO_ID="$(gh api "repos/$REPO" --jq '.id')"
-export OWNER_ID="$(gh api "repos/$REPO" --jq '.owner.id')"
+# OSL's numeric GitHub IDs prevent repository/organization name-reuse risks.
+export REPO_ID='540982912'
+export OWNER_ID='56703773'
 
+printf 'PROJECT_NUMBER=%s\nGA4_SERVICE_ACCOUNT=%s\n' "$PROJECT_NUMBER" "$SA"
+```
+
+Expect project number `11701823742` and service account
+`osl-analytics-exporter@osl-general.iam.gserviceaccount.com`. Stop if project
+lookup fails or the values differ unexpectedly. If adapting this setup for a
+different repository/owner, look up its numeric IDs rather than reusing OSL's.
+With the GitHub CLI (`gh`) installed and authenticated, verify the IDs using:
+
+```bash
+gh api "repos/$REPO" --jq '{repository_id: .id, owner_id: .owner.id}'
+```
+
+Enable the APIs, then create the account **only if it does not exist**:
+
+```bash
 gcloud services enable \
   analyticsdata.googleapis.com iam.googleapis.com \
+  cloudresourcemanager.googleapis.com \
   iamcredentials.googleapis.com sts.googleapis.com \
   --project="$PROJECT_ID"
 
@@ -130,11 +191,19 @@ gcloud iam service-accounts create osl-analytics-exporter \
   --display-name='OSL aggregate analytics exporter'
 ```
 
+Inspect an existing or newly created account with:
+
+```bash
+gcloud iam service-accounts describe "$SA" \
+  --project="$PROJECT_ID" --format='yaml(email,disabled)'
+```
+
 In the **specific GA4 property's** **Admin → Property access management**, add
-`$SA` as a user with **Viewer** access. Disable email notification for this
-service account if offered. Do not grant account-wide Analytics access, Editor,
-or Administrator. A Google Cloud project Viewer role is **not** a substitute for
-GA4 property access; the exporter needs no broad project data role.
+the email printed as `$SA` as a user with **Viewer** access (not the literal
+text `$SA`). Disable email notification for this service account if offered. Do
+not grant account-wide Analytics access, Editor, or Administrator. A Google
+Cloud project Viewer role is **not** a substitute for GA4 property access; the
+exporter needs no broad project data role.
 
 ### 3. Create repository-and-branch-restricted Workload Identity Federation
 
@@ -143,28 +212,120 @@ unrestricted provider. Keep `main` as the protected, trusted deployment/default
 branch. The condition restricts the immutable owner/repository IDs, current repo
 name, branch, workflow file, and scheduled/manual events.
 
+Create the pool **only if it does not exist**:
+
 ```bash
 gcloud iam workload-identity-pools create osl-analytics \
   --project="$PROJECT_ID" --location=global \
   --display-name='OSL analytics GitHub Actions'
+```
 
+Assemble the arguments below in Bash. Copy the code blocks, not visually wrapped
+terminal output. Never split a flag such as `--attribute-mapping`, a claim name,
+or the `refs/heads/main` string across lines. A continuation backslash must be
+the last character on its line.
+
+```bash
+: "${PROJECT_ID:?Run the variable block in step 2 first}"
+: "${REPO_ID:?Run the variable block in step 2 first}"
+: "${OWNER_ID:?Run the variable block in step 2 first}"
+: "${REPO:?Run the variable block in step 2 first}"
+
+MAPPINGS=(
+  'google.subject=assertion.sub'
+  'attribute.repository_id=assertion.repository_id'
+  'attribute.repository_owner_id=assertion.repository_owner_id'
+  'attribute.repository=assertion.repository'
+  'attribute.ref=assertion.ref'
+  'attribute.workflow_ref=assertion.workflow_ref'
+  'attribute.event_name=assertion.event_name'
+)
+ATTRIBUTE_MAPPING="$(IFS=,; echo "${MAPPINGS[*]}")"
+WORKFLOW_REF="${REPO}/.github/workflows/main.yaml@refs/heads/main"
+ATTRIBUTE_CONDITION="assertion.repository_id == '${REPO_ID}'"
+ATTRIBUTE_CONDITION+=" && assertion.repository_owner_id == '${OWNER_ID}'"
+ATTRIBUTE_CONDITION+=" && assertion.repository == '${REPO}'"
+ATTRIBUTE_CONDITION+=" && assertion.ref == 'refs/heads/main'"
+ATTRIBUTE_CONDITION+=" && assertion.workflow_ref == '${WORKFLOW_REF}'"
+ATTRIBUTE_CONDITION+=" && assertion.event_name in "
+ATTRIBUTE_CONDITION+="['schedule', 'workflow_dispatch']"
+
+PROVIDER_ARGS=(
+  --project="$PROJECT_ID"
+  --location=global
+  --workload-identity-pool=osl-analytics
+  --issuer-uri='https://token.actions.githubusercontent.com'
+  --attribute-mapping="$ATTRIBUTE_MAPPING"
+  --attribute-condition="$ATTRIBUTE_CONDITION"
+)
+```
+
+For a **new** provider, run:
+
+```bash
 gcloud iam workload-identity-pools providers create-oidc github \
+  "${PROVIDER_ARGS[@]}"
+```
+
+For an **existing** provider, inspect it first:
+
+```bash
+gcloud iam workload-identity-pools providers describe github \
   --project="$PROJECT_ID" --location=global \
   --workload-identity-pool=osl-analytics \
-  --issuer-uri='https://token.actions.githubusercontent.com' \
-  --attribute-mapping='google.subject=assertion.sub,attribute.repository_id=assertion.repository_id,attribute.repository_owner_id=assertion.repository_owner_id,attribute.repository=assertion.repository,attribute.ref=assertion.ref,attribute.workflow_ref=assertion.workflow_ref,attribute.event_name=assertion.event_name' \
-  --attribute-condition="assertion.repository_owner_id == '${OWNER_ID}' && assertion.repository_id == '${REPO_ID}' && assertion.repository == '${REPO}' && assertion.ref == 'refs/heads/main' && assertion.workflow_ref == '${REPO}/.github/workflows/main.yaml@refs/heads/main' && assertion.event_name in ['schedule', 'workflow_dispatch']"
+  --format='yaml(name,state,disabled,oidc,attributeMapping,attributeCondition)'
+```
 
-export POOL="projects/${PROJECT_NUMBER}/locations/global/workloadIdentityPools/osl-analytics"
+The provider must be active, not disabled, with the issuer, mapping and
+condition assembled above. Leave allowed audiences at the default; the auth
+action uses the provider resource name. If this dedicated provider has a broken
+mapping or condition (for example from a pasted line break), repair it with the
+same arguments rather than deleting the pool:
+
+```bash
+gcloud iam workload-identity-pools providers update-oidc github \
+  "${PROVIDER_ARGS[@]}"
+```
+
+See Google's
+[provider update reference](https://cloud.google.com/sdk/gcloud/reference/iam/workload-identity-pools/providers/update-oidc).
+Do not overwrite a shared provider without reviewing its other consumers.
+
+### 4. Bind the repository identity and verify configuration
+
+Provider creation alone does **not** authorize service-account impersonation.
+Add this binding even when reusing an existing pool/provider, then inspect it:
+
+```bash
+: "${POOL:?Run the variable block in step 2 first}"
+: "${SA:?Run the variable block in step 2 first}"
+: "${REPO_ID:?Run the variable block in step 2 first}"
+MEMBER="principalSet://iam.googleapis.com/${POOL}"
+MEMBER+="/attribute.repository_id/${REPO_ID}"
+
 gcloud iam service-accounts add-iam-policy-binding "$SA" \
   --project="$PROJECT_ID" \
   --role='roles/iam.workloadIdentityUser' \
-  --member="principalSet://iam.googleapis.com/${POOL}/attribute.repository_id/${REPO_ID}"
+  --member="$MEMBER"
+
+gcloud iam service-accounts get-iam-policy "$SA" \
+  --project="$PROJECT_ID" --format='yaml(bindings)'
+
+gcloud iam workload-identity-pools describe osl-analytics \
+  --project="$PROJECT_ID" --location=global \
+  --format='yaml(name,state,disabled)'
 
 gcloud iam workload-identity-pools providers describe github \
   --project="$PROJECT_ID" --location=global \
   --workload-identity-pool=osl-analytics --format='value(name)'
 ```
+
+Confirm the IAM policy grants `roles/iam.workloadIdentityUser` to exactly the
+repository-scoped `$MEMBER`, the pool/account are not disabled, and the provider
+condition still rejects PRs, pushes and other branches. Check for unexpected
+broader impersonation bindings with the administrator. Cloud IAM checks cannot
+confirm GA4 Viewer access; verify that separately in the property's access
+management screen.
 
 Compare the last command's full resource name with `GA4_WIF_PROVIDER` in
 `jobs.build.env` in `.github/workflows/main.yaml`. Allow several minutes for IAM
@@ -174,6 +335,9 @@ impersonation setup. The auth action requests a 15-minute access token scoped
 only to `https://www.googleapis.com/auth/analytics.readonly`. It creates **no
 credential file** and exports no global credential environment. The token is
 passed only to the exporter step; the build receives no token.
+
+This follows the auth action's
+[WIF through a service account setup](https://github.com/google-github-actions/auth#workload-identity-federation-through-a-service-account).
 
 ## One-time GitHub configuration
 
@@ -258,6 +422,35 @@ In **OpenScienceLabs/opensciencelabs.github.io**, not a fork:
    updates it. If refreshes stop, the browser shows a stale notice after three
    days even without another deployment.
 
+To download and validate the **published public aggregate report**, run from the
+repository root with the local Python dependencies installed. This is not a
+Google API call and requires no credentials:
+
+```bash
+mkdir -p .cache
+curl --fail --silent --show-error --location \
+  https://opensciencelabs.org/analytics/data.json \
+  --output .cache/analytics-published.json && \
+python - <<'PY'
+from pathlib import Path
+from scripts.analytics.report import read_snapshot
+
+report = read_snapshot(Path('.cache/analytics-published.json'))
+if report['status'] != 'available':
+    raise SystemExit('No successful report has been published yet.')
+print('Last successful refresh (UTC):', report['generated_at'])
+print('Reporting timezone:', report['timezone'])
+print('Hostname scope:', report['hostnames'])
+print('Reporting period:', report['reporting_period'])
+print('Summary:', report['summary'])
+PY
+```
+
+`read_snapshot` rejects fixtures and validates both the closed schema and
+calendar invariants. Leave the downloaded file separate from
+`.cache/analytics/data.json`, which is the build's restored snapshot. A valid
+but old report still needs its `generated_at` checked for staleness.
+
 ## Local verification (no Google authentication)
 
 In the existing `osl-web` environment:
@@ -295,42 +488,80 @@ fixture JSON even if copied to `build/`. Without the variable, normal builds use
 only the ignored restored snapshot or the unavailable state. The live exporter
 refuses to authenticate outside trusted CI.
 
-For reproducible real-browser screenshots, with the preview server running:
+For reproducible real-browser screenshots, with the preview server running in
+another terminal:
 
 ```bash
 python -m pip install playwright
 python -m playwright install chromium
-python tests/browser_analytics.py
+python tests/browser_analytics.py \
+  --output .cache/analytics-screenshots/fixture
 ```
 
 This optional smoke check uses
 [Playwright](https://playwright.dev/python/docs/emulation), checks both modes at
 1440px, 390px and 320px, rejects horizontal page overflow, checks the download
 link's keyboard focus and a JavaScript-disabled page, and writes screenshots
-under `.cache/analytics-screenshots/`. It blocks Google tracking requests, and
-accepts only localhost URLs. Run it for both the normal unavailable build and
-the explicit fixture build. Inspect the PNGs rather than assuming automated
-checks prove visual quality.
+under `.cache/analytics-screenshots/fixture/`. It blocks Google tracking
+requests in its color-mode checks, and accepts only localhost URLs. Stop the
+fixture server, serve the normal `build/` with
+`python -m http.server 8000 --directory build`, then run the smoke check again
+with `--output .cache/analytics-screenshots/normal`. When no restored snapshot
+exists, this covers the honest unavailable state. Inspect the PNGs rather than
+assuming automated checks prove visual quality. Ordinary browser previews may
+execute the base theme's tracking tag; block analytics requests locally rather
+than sending synthetic preview visits to Google.
 
 Before release, inspect desktop (1440px) and mobile (390px and 320px) in both
 shared color modes, keyboard focus, table scrolling, browser zoom, the zero-data
 chart, stale notice, and unavailable state. All figures and the table must also
 work with JavaScript disabled. The base viewport now permits user zoom.
 
+### Release evidence checklist
+
+Record the commit, workflow run URL, results and any skipped checks in the PR or
+release discussion. Keep disposable local logs and screenshots under ignored
+`.cache/`, not as a second tracked verification report. Never include tokens,
+raw API responses, or private account information in those records.
+
+- [ ] Python/JavaScript tests, lint, the full `makim pages.build`, and the
+      whole-build credential audit pass. CI must run the real Google SDK
+      compatibility test, not skip it.
+- [ ] Normal build includes `build/analytics/index.html`, `data.json` and
+      `schema.json`, with no fixture values. The explicit fixture preview is
+      clearly labeled and cannot pass the production audit.
+- [ ] Desktop/mobile, light/dark, keyboard, zoom, horizontal scrolling and
+      JavaScript-disabled views are inspected, including zero and stale states.
+- [ ] A real manual refresh authenticates, publishes, and matches GA4 with the
+      same reporting periods and filters. Check the actual GA4 collection tag;
+      the legacy UA tag alone cannot supply GA4 data.
+- [ ] A content-only deployment preserves the snapshot/timestamp; a later
+      scheduled or manual refresh updates it. The retained/unavailable state and
+      failed-run signal are checked for refresh failures.
+
+Mocked tests and a populated workflow are **not live GA4 verification**. Static
+markup tests are **not browser visual verification**. If SDK downloads, a
+browser or localhost sockets are unavailable in the testing environment, record
+those checks as skipped and run them in a capable environment before release. Do
+not replace missing evidence with fixture statistics or an assumed successful
+run.
+
 ## Troubleshooting
 
-| Symptom                                          | Checks / action                                                                                                                                                                                                                                                                                                                   |
-| ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Configuration missing / first report unavailable | Verify all four identifiers in `jobs.build.env`, the WIF service-account binding and GA4 property access; run the workflow on `main`. Do not fill the JSON with example numbers.                                                                                                                                                  |
-| OIDC denied                                      | Check numeric repository/owner IDs, exact repository case, ref, workflow path, issuer, full provider resource name, WIF service-account binding, Actions `id-token: write`, and IAM propagation. Do not weaken the branch condition to make a PR work.                                                                            |
-| `PermissionDenied` / 403                         | Enable the Data API in the Cloud project; grant the service account Viewer on the specific GA4 property; check the readonly scope and property ID. Cloud IAM Viewer alone is insufficient.                                                                                                                                        |
-| `Unauthenticated` / 401                          | Re-run to get a fresh token; do not copy tokens out of logs. Authentication should remain immediately before the export, not before dependency installation.                                                                                                                                                                      |
-| `InvalidArgument` / `ValueError`                 | Check property ID, comma-separated hostnames (no URL, wildcard, port, empty entry), the SDK version, and the report schema. The exporter also conservatively rejects GA4 thresholding/sampling/restrictions/empty reasons/truncation and timezone changes. Check these in the authenticated GA4 UI, not by logging raw responses. |
-| Timeout / quota / service unavailable            | Transient retries are bounded; keep the last report and retry later. Check Google API quotas and service health. Do not substitute zeros.                                                                                                                                                                                         |
-| Snapshot restore or validation failure           | Stop publication. Check repository access and `gh-pages:analytics/data.json`. Recover a known valid report from that branch's Git history through an authorized maintenance change. Never delete the snapshot simply to make CI green.                                                                                            |
-| Pages deployment failed                          | Check Pages source is GitHub Actions, environment permits `main`, custom domain, and `pages: write`. A successfully archived report remains recoverable; rerun publication.                                                                                                                                                       |
-| Schedule stopped / report stale                  | Check default branch, Actions enabled, inactivity auto-disable, queue delays and failed runs. Re-enable and dispatch manually. The old timestamp is intentionally retained.                                                                                                                                                       |
-| Local Quarto failure                             | Repair the local Quarto installation; `mkdocs build` can separately verify committed Markdown and the analytics page, but does not replace the full blog pre-build check.                                                                                                                                                         |
+| Symptom                                                      | Checks / action                                                                                                                                                                                                                                                                                                                   |
+| ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `unrecognized arguments: --attribute-` / Bash “No such file” | A copy/paste inserted newlines inside a flag or value. Rerun the Bash argument-assembly block in Google setup step 3, then create or update the provider as appropriate. Do not split `--attribute-mapping`, claim names or `refs/heads/main`.                                                                                    |
+| Resource already exists                                      | Inspect and reuse it. Use `providers update-oidc` only to repair the dedicated provider's reviewed configuration; still complete the service-account binding and GA4 Viewer access. Do not delete the pool to retry setup.                                                                                                        |
+| Configuration missing / first report unavailable             | Verify all four identifiers in `jobs.build.env`, the WIF service-account binding and GA4 property access; run the workflow on `main`. Do not fill the JSON with example numbers.                                                                                                                                                  |
+| OIDC denied                                                  | Check numeric repository/owner IDs, exact repository case, ref, workflow path, issuer, full provider resource name, WIF service-account binding, Actions `id-token: write`, and IAM propagation. Do not weaken the branch condition to make a PR work.                                                                            |
+| `PermissionDenied` / 403                                     | Enable the Data API in the Cloud project; grant the service account Viewer on the specific GA4 property; check the readonly scope and property ID. Cloud IAM Viewer alone is insufficient.                                                                                                                                        |
+| `Unauthenticated` / 401                                      | Re-run to get a fresh token; do not copy tokens out of logs. Authentication should remain immediately before the export, not before dependency installation.                                                                                                                                                                      |
+| `InvalidArgument` / `ValueError`                             | Check property ID, comma-separated hostnames (no URL, wildcard, port, empty entry), the SDK version, and the report schema. The exporter also conservatively rejects GA4 thresholding/sampling/restrictions/empty reasons/truncation and timezone changes. Check these in the authenticated GA4 UI, not by logging raw responses. |
+| Timeout / quota / service unavailable                        | Transient retries are bounded; keep the last report and retry later. Check Google API quotas and service health. Do not substitute zeros.                                                                                                                                                                                         |
+| Snapshot restore or validation failure                       | Stop publication. Check repository access and `gh-pages:analytics/data.json`. Recover a known valid report from that branch's Git history through an authorized maintenance change. Never delete the snapshot simply to make CI green.                                                                                            |
+| Pages deployment failed                                      | Check Pages source is GitHub Actions, environment permits `main`, custom domain, and `pages: write`. A successfully archived report remains recoverable; rerun publication.                                                                                                                                                       |
+| Schedule stopped / report stale                              | Check default branch, Actions enabled, inactivity auto-disable, queue delays and failed runs. Re-enable and dispatch manually. The old timestamp is intentionally retained.                                                                                                                                                       |
+| Local Quarto failure                                         | Repair the local Quarto installation; `mkdocs build` can separately verify committed Markdown and the analytics page, but does not replace the full blog pre-build check.                                                                                                                                                         |
 
 The exporter logs an exception **class**, never a potentially sensitive raw
 error message. Avoid `set -x`, SDK debug logging, or artifact uploads of the
@@ -338,6 +569,30 @@ repository root, `.cache`, environment variables, credentials, or raw API
 responses. Only `build/` is published, after the aggregate schema and credential
 audit pass. The audit is defense in depth, not permission to place secrets in
 content.
+
+### Local Quarto runtime lookup failures
+
+If the Conda Quarto launcher looks for a missing bundled `deno` or `pandoc`,
+repair the environment. If `quarto`, `deno` and `pandoc` are already installed
+in the active environment, this local-only override uses those executables and
+keeps caches in the workspace, without changing the site or CI configuration:
+
+```bash
+mkdir -p .cache/tmp
+QUARTO_PREFIX="$(dirname "$(dirname "$(command -v quarto)")")"
+TMPDIR="$PWD/.cache/tmp" \
+QUARTO_DENO="$(command -v deno)" \
+QUARTO_SHARE_PATH="$QUARTO_PREFIX/share/quarto" \
+QUARTO_PANDOC="$(command -v pandoc)" \
+DENO_DIR="$PWD/.cache/deno" XDG_CACHE_HOME="$PWD/.cache" \
+  makim pages.build
+python -m scripts.analytics.audit
+```
+
+The full build re-renders blog Markdown. Review `git diff` afterward and do not
+include unrelated generated blog changes in an analytics/documentation change.
+`mkdocs build --clean` can check the static site separately, but does not verify
+the Quarto pre-build step.
 
 ## Official references
 
