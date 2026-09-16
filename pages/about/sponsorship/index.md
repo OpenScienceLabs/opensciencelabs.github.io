@@ -50,6 +50,9 @@ Your sponsorship can help us:
 Sponsorship is also a meaningful way for organizations to show commitment to
 open source, education, research, social impact, and talent development.
 
+See our [public website analytics](../../analytics/index.md) for OSL-published
+audience metrics and a downloadable aggregate report.
+
 ## Community and Track Record
 
 OSL has a growing international community and a track record of mentoring

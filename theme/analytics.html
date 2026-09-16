@@ -1,0 +1,87 @@
+{% extends "main.html" %}
+
+{% block header_extra %}
+<link rel="stylesheet" href="{{ 'css/analytics.css' | url }}">
+<script src="{{ 'js/analytics.js' | url }}" defer></script>
+{% endblock header_extra %}
+
+{% block content_inner %}
+{% set report = config.extra.analytics_report %}
+<div class="analytics-report" data-analytics-report>
+  {% if report.data_kind == 'fixture' %}
+  <p class="analytics-notice"><strong>TEST FIXTURE — LOCAL PREVIEW ONLY.</strong> These are synthetic values, not OSL traffic.</p>
+  {% endif %}
+  <p class="analytics-source">OSL-published data · Sourced from Google Analytics</p>
+  {% if report.status == 'available' %}
+  <section aria-labelledby="analytics-summary-title">
+    <h2 id="analytics-summary-title">Last 30 completed days</h2>
+    <p class="analytics-period">
+      <time datetime="{{ report.reporting_period.start }}">{{ report.reporting_period.start }}</time>
+      through <time datetime="{{ report.reporting_period.end }}">{{ report.reporting_period.end }}</time>, inclusive.
+    </p>
+    <dl class="analytics-metrics">
+      <div><dt>Pageviews</dt><dd>{{ '{:,}'.format(report.summary.pageviews) }}</dd></div>
+      <div><dt>Active users</dt><dd>{{ '{:,}'.format(report.summary.active_users) }}</dd></div>
+      <div><dt>Sessions</dt><dd>{{ '{:,}'.format(report.summary.sessions) }}</dd></div>
+    </dl>
+    <dl class="analytics-details">
+      <div><dt>Reporting timezone</dt><dd>{{ report.timezone | e }}</dd></div>
+      <div><dt>Hostname scope · Web only</dt><dd>{{ report.hostnames | join(', ') | e }}</dd></div>
+      <div><dt>Last successful refresh</dt><dd><time id="analytics-refreshed" datetime="{{ report.generated_at }}">{{ report.generated_at }}</time> (UTC)</dd></div>
+    </dl>
+    <p id="analytics-stale" class="analytics-notice" role="status" {% if not config.extra.analytics_stale %}hidden{% endif %}>
+      <strong>Stale data.</strong> The last successful refresh was more than three days ago. These are the last available figures, not a current report.
+    </p>
+    <noscript><p>Freshness was checked when this page was built. Compare the last successful refresh with today's date; reports older than three days are stale.</p></noscript>
+  </section>
+  {% else %}
+  <section class="analytics-empty" aria-labelledby="analytics-empty-title">
+    <h2 id="analytics-empty-title">Analytics data is not available yet</h2>
+    <p>We have not published a successful GA4 report. Reporting dates, timezone, hostname scope, and audience figures will appear after the first refresh. Missing data does not mean zero visits.</p>
+  </section>
+  {% endif %}
+  <p class="analytics-actions">
+    <a class="osl-inline-button" href="{{ 'analytics/data.json' | url }}" download="osl-analytics.json">Download JSON report</a>
+    <a href="{{ 'about/sponsorship/' | url }}">Sponsor Open Science Labs</a>
+  </p>
+  {% if report.status == 'available' %}
+  <section aria-labelledby="analytics-history-title">
+    <h2 id="analytics-history-title">Monthly pageviews</h2>
+    <p>Up to 12 completed months. Requested range: {{ report.history_period.start }} through {{ report.history_period.end }} ({{ report.timezone | e }}).</p>
+    {% if report.monthly_history %}
+    {% set max_views = report.monthly_history | map(attribute='pageviews') | max %}
+    <figure class="analytics-chart" aria-labelledby="analytics-chart-caption">
+      <figcaption id="analytics-chart-caption">Pageviews by month · exact values and dates in the table below.</figcaption>
+      <div aria-hidden="true">
+        {% for item in report.monthly_history %}
+        <div class="analytics-chart-row">
+          <span>{{ item.month }}</span>
+          <span class="analytics-chart-track"><span class="analytics-chart-bar" style="width: {{ (100 * item.pageviews / max_views) if max_views else 0 }}%"></span></span>
+          <span>{{ '{:,}'.format(item.pageviews) }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </figure>
+    <div class="analytics-table-wrap" role="region" aria-label="Monthly pageview data" tabindex="0">
+      <table class="analytics-table">
+        <caption>Monthly pageviews. Dates are inclusive in {{ report.timezone | e }}.</caption>
+        <thead><tr><th scope="col">Month</th><th scope="col">Reporting dates</th><th scope="col">Pageviews</th></tr></thead>
+        <tbody>
+          {% for item in report.monthly_history %}
+          <tr>
+            <th scope="row"><time datetime="{{ item.month }}">{{ item.month }}</time></th>
+            <td><time datetime="{{ item.start }}">{{ item.start }}</time> – <time datetime="{{ item.end }}">{{ item.end }}</time></td>
+            <td>{{ '{:,}'.format(item.pageviews) }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% else %}
+    <p>No completed-month history is available for this scope. No monthly values have been inferred.</p>
+    {% endif %}
+  </section>
+  {% endif %}
+</div>
+{{ page.content }}
+{% endblock content_inner %}

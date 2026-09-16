@@ -4,6 +4,9 @@ site_url: https://opensciencelabs.org
 docs_dir: pages
 site_dir: build
 
+hooks:
+  - scripts/analytics/hook.py
+
 extra:
   enumerate: !!python/name:builtins.enumerate
 
@@ -92,6 +95,7 @@ nav:
       - Team: about/team/index.md
       - Fiscal Sponsor: about/fiscal-sponsor/index.md
       - Sponsorship: about/sponsorship/index.md
+      - Public Analytics: analytics/index.md
       - Guidelines:
           - Overview: about/guidelines/index.md
           - Articles: about/guidelines/articles/index.md
