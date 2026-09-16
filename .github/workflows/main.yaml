@@ -2,10 +2,21 @@ name: main
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "23 6 * * *"
   push:
     branches: [main]
   pull_request:
     branches: [main]
+
+# One lock covers checkout, snapshot restore, refresh, archive and deployment.
+# PRs never hold the production lock. Do not cancel an in-flight publication.
+concurrency:
+  group: ${{ github.event_name == 'pull_request' && format('pr-{0}', github.ref) || 'osl-production-pages' }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  contents: read
 
 jobs:
   check-branch:
@@ -28,16 +39,32 @@ jobs:
           pr_sha: ${{ github.event.pull_request.head.sha }}
 
   build:
+    if: >-
+      github.event_name == 'pull_request' ||
+      (github.repository == 'OpenScienceLabs/opensciencelabs.github.io' &&
+       github.ref == 'refs/heads/main')
     runs-on: ubuntu-latest
-    concurrency:
-      group: ci-${{ github.event_name }}-${{ github.ref }}
-      cancel-in-progress: true
+    timeout-minutes: 45
+    permissions:
+      contents: write
+      id-token: write
+    outputs:
+      refresh_failed: ${{ (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && steps.refresh.outcome != 'success' }}
+    env:
+      # Non-secret identifiers; credentials are generated only in the auth step.
+      GA4_PROPERTY_ID: "365530978"
+      GA4_HOSTNAMES: "opensciencelabs.org"
+      GA4_SERVICE_ACCOUNT: "osl-analytics-exporter@osl-general.iam.gserviceaccount.com"
+      GA4_WIF_PROVIDER: "projects/11701823742/locations/global/workloadIdentityPools/osl-analytics/providers/github"
     defaults:
       run:
         # bash -el required so conda activation persists (README: IMPORTANT)
         shell: bash -el {0}
     steps:
+      # Pending runs check out current main, not a superseded content commit.
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.sha || 'main' }}
 
       - uses: conda-incubator/setup-miniconda@v3
         with:
@@ -53,7 +80,17 @@ jobs:
         run: |
           poetry check
           poetry install
+          python -m pip install -r requirements-analytics.txt
           python -m nltk.downloader punkt
+
+      - name: Analytics tests (no Google credentials)
+        run: |
+          python -m unittest discover -s tests -v
+          node tests/analytics-js.test.cjs
+
+      - name: Restore last successful analytics snapshot
+        if: ${{ github.event_name != 'pull_request' }}
+        run: python -m scripts.analytics.restore
 
       # Render blog .qmd → .md so Build uses correct index.md (with YAML)
       - name: Pre-build blog (quarto + inject)
@@ -63,20 +100,101 @@ jobs:
       - name: Linter
         if: ${{ github.event_name == 'pull_request' }}
         env:
-          PRE_COMMIT_SKIP: mkdocs-build
+          SKIP: mkdocs-build
         run: |
           pre-commit install
           pre-commit run --all-files --verbose
+
+      # Authenticate immediately before the API calls, after slow pre-builds.
+      - name: Check refresh configuration
+        id: analytics_config
+        if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
+        run: |
+          if [[ -n "$GA4_PROPERTY_ID" && -n "$GA4_HOSTNAMES" && -n "$GA4_WIF_PROVIDER" && -n "$GA4_SERVICE_ACCOUNT" ]]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::warning::GA4 configuration missing; preserving the previous report. See docs/analytics.md."
+          fi
+
+      - name: Authenticate to Google (OIDC, no credential file)
+        id: google_auth
+        if: ${{ steps.analytics_config.outputs.ready == 'true' }}
+        continue-on-error: true
+        uses: google-github-actions/auth@v3
+        with:
+          workload_identity_provider: ${{ env.GA4_WIF_PROVIDER }}
+          service_account: ${{ env.GA4_SERVICE_ACCOUNT }}
+          token_format: access_token
+          access_token_scopes: https://www.googleapis.com/auth/analytics.readonly
+          access_token_lifetime: 900s
+          create_credentials_file: false
+          export_environment_variables: false
+
+      - name: Refresh analytics aggregates
+        id: refresh
+        if: ${{ steps.google_auth.outcome == 'success' }}
+        continue-on-error: true
+        env:
+          GA4_ACCESS_TOKEN: ${{ steps.google_auth.outputs.access_token }}
+        run: python -m scripts.analytics.export
+
+      - name: Analytics refresh summary
+        if: ${{ github.event_name != 'pull_request' }}
+        env:
+          REFRESH_OUTCOME: ${{ steps.refresh.outcome }}
+        run: |
+          echo "### Public analytics" >> "$GITHUB_STEP_SUMMARY"
+          echo "Refresh: $REFRESH_OUTCOME. Failed/skipped refreshes never change the previous report's timestamp." >> "$GITHUB_STEP_SUMMARY"
+          echo "See docs/analytics.md for configuration and troubleshooting." >> "$GITHUB_STEP_SUMMARY"
 
       - name: Build the book
         run: |
           makim pages.build
           echo "opensciencelabs.org" > build/CNAME
 
-      # Push the book's HTML to github-pages
-      - name: GitHub Pages action
-        uses: peaceiris/actions-gh-pages@v3.5.9
-        if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
+      - name: Validate endpoint and audit published files
+        run: python -m scripts.analytics.audit
+
+      # Durable storage, not a trigger for another workflow. Archive the whole
+      # validated site as before; analytics/data.json survives all content builds.
+      - name: Archive validated site and analytics snapshot
+        uses: peaceiris/actions-gh-pages@v4
+        if: ${{ github.event_name != 'pull_request' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
+          publish_branch: gh-pages
+
+      - name: Upload Pages artifact
+        if: ${{ github.event_name != 'pull_request' }}
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build
+
+  deploy:
+    needs: build
+    if: >-
+      github.repository == 'OpenScienceLabs/opensciencelabs.github.io' &&
+      github.ref == 'refs/heads/main' &&
+      (github.event_name == 'push' || github.event_name == 'schedule' ||
+       github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      # Direct deployment in this run: GITHUB_TOKEN commits do not trigger a
+      # second workflow. One-time setup: Pages source must be GitHub Actions.
+      - name: Publish to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Flag failed refresh after safely publishing retained data
+        if: ${{ needs.build.outputs.refresh_failed == 'true' }}
+        run: |
+          echo "::error::Analytics refresh did not succeed. The retained report (or first-run unavailable state) was published. See the build job and docs/analytics.md."
+          exit 1

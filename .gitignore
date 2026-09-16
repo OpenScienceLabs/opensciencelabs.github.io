@@ -135,3 +135,6 @@ dmypy.json
 # llm
 .codex
 PLAN.md
+
+# Short-lived Google Actions credentials must never be committed.
+gha-creds-*.json

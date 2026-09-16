@@ -29,3 +29,9 @@ Ensure you have installed the pre-commit config locally:
 # with your conda env active, run:
 $ pre-commit install
 ```
+
+## Public analytics
+
+See [analytics setup and operations](docs/analytics.md) for the GA4 exporter,
+keyless Google/GitHub configuration, snapshot retention, local fixture tests,
+and live/browser acceptance checks.
