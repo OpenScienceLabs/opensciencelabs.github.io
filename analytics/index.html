@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     
-    <title>Open Science Labs Facebook · Open Science Labs</title>
+    <title>Public Analytics · Open Science Labs</title>
 
-    <meta name="description" content="Open Science Labs, sharing knowledge">
+    <meta name="description" content="A transparent view of our measured website audience, for our community and potential sponsors.">
     <meta name="keywords" content="open science,data science,latam">
     <meta name="last-modified" content="2026-09-16">
     <meta name="DC.date.modified" content="2026-09-16">
@@ -19,13 +19,13 @@
     <meta property="og:locale" content="es">
     <meta property="og:locale:alternate" content="pt">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://opensciencelabs.org/facebook/">
-    <meta property="og:title" content="Open Science Labs Facebook">
-    <meta property="og:description" content="Open Science Labs, sharing knowledge">
+    <meta property="og:url" content="https://opensciencelabs.org/analytics/">
+    <meta property="og:title" content="Public Analytics">
+    <meta property="og:description" content="A transparent view of our measured website audience, for our community and potential sponsors.">
     <meta property="og:image" content="/images/thumbnail.png">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Open Science Labs Facebook">
+    <meta name="twitter:title" content="Public Analytics">
     <meta name="twitter:image" content="/images/thumbnail.png">
     <meta name="twitter:creator" content="">
 
@@ -33,9 +33,9 @@
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Open Science Labs Facebook",
+        "name": "Public Analytics",
         "dateModified": "2026-09-16T00:00:00Z",
-        "url": "https://opensciencelabs.org/facebook/"
+        "url": "https://opensciencelabs.org/analytics/"
       }
     </script>
 
@@ -51,7 +51,7 @@
     </script>
 
 
-    <link rel="canonical" href="https://opensciencelabs.org/facebook/">
+    <link rel="canonical" href="https://opensciencelabs.org/analytics/">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
@@ -91,7 +91,9 @@
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
 
     
-    
+<link rel="stylesheet" href="../css/analytics.css">
+<script src="../js/analytics.js" defer></script>
+
 
     <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
   <!-- existing symbols you already use could live here too -->
@@ -781,8 +783,8 @@
                   
 
                   <!-- Top-level section with children => MEGA DROPDOWN + Bootstrap accordion -->
-                  <li class="nav-item dropdown ">
-                    <a class="nav-link dropdown-toggle "
+                  <li class="nav-item dropdown nav_active">
+                    <a class="nav-link dropdown-toggle active"
                       href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
                       aria-expanded="false">
                       About
@@ -955,8 +957,8 @@
                             
                               
                               <div class="px-1">
-                                <a class="dropdown-item "
-                                  href="../analytics/">Public Analytics</a>
+                                <a class="dropdown-item active"
+                                  href="./">Public Analytics</a>
                               </div>
                             
 
@@ -1764,8 +1766,8 @@
 
                           
                             
-                            <a class="nav-link py-1 "
-                              href="../analytics/">Public Analytics</a>
+                            <a class="nav-link py-1 active"
+                              href="./">Public Analytics</a>
                           
 
                         
@@ -1858,14 +1860,14 @@
 
 
 
-<section class="osl-page osl-page--section-facebook osl-page--theme-facebook">
+<section class="osl-page osl-page--section-analytics osl-page--theme-about">
   <div class="osl-page-shell">
     <header class="osl-page-hero">
       <div class="osl-page-hero__content">
-        <p class="osl-page-kicker">Open Science Labs</p>
-        <h1>Open Science Labs Facebook</h1>
+        <p class="osl-page-kicker">Open Science Labs · Transparency</p>
+        <h1>Public analytics</h1>
         
-          <p class="osl-page-description">Open Science Labs, sharing knowledge</p>
+          <p class="osl-page-description">A transparent view of our measured website audience, for our community and potential sponsors.</p>
         
       </div>
       <div class="osl-hero-system" aria-hidden="true">
@@ -1873,18 +1875,76 @@
         <span class="osl-hero-system__node osl-hero-system__node--one"></span>
         <span class="osl-hero-system__node osl-hero-system__node--two"></span>
         <span class="osl-hero-system__node osl-hero-system__node--three"></span>
-        <span class="osl-hero-system__label osl-hero-system__label--one">Learn</span>
-        <span class="osl-hero-system__label osl-hero-system__label--two">Build</span>
-        <span class="osl-hero-system__label osl-hero-system__label--three">Share</span>
+        <span class="osl-hero-system__label osl-hero-system__label--one">Measure</span>
+        <span class="osl-hero-system__label osl-hero-system__label--two">Share</span>
+        <span class="osl-hero-system__label osl-hero-system__label--three">Support</span>
       </div>
     </header>
 
     <article class="osl-markdown">
       
-        <script>
-  window.location.href = "https://www.facebook.com/opensciencelabscommunity";
-</script>
-      
+
+<div class="analytics-report" data-analytics-report>
+  
+  <p class="analytics-source">OSL-published data · Sourced from Google Analytics</p>
+  
+  <section class="analytics-empty" aria-labelledby="analytics-empty-title">
+    <h2 id="analytics-empty-title">Analytics data is not available yet</h2>
+    <p>We have not published a successful GA4 report. Reporting dates, timezone, hostname scope, and audience figures will appear after the first refresh. Missing data does not mean zero visits.</p>
+  </section>
+  
+  <p class="analytics-actions">
+    <a class="osl-inline-button" href="data.json" download="osl-analytics.json">Download JSON report</a>
+    <a href="../about/sponsorship/">Sponsor Open Science Labs</a>
+  </p>
+  
+</div>
+<h2 id="how-we-measure">How we measure<a class="headerlink" href="#how-we-measure" title="Permanent link"> #</a></h2>
+<p>This is <strong>OSL-published data sourced from Google Analytics 4 (GA4)</strong> via the
+Google Analytics Data API. It is not an independent audit or a guarantee of
+sponsorship reach. Only the aggregate fields in the downloadable report are
+published; no visitor identifiers or raw API responses are included.</p>
+<ul>
+<li><strong>Pageviews</strong> (<code>screenPageViews</code>): counted website page views, including
+  repeated views of the same page. The Web platform filter excludes app screens.</li>
+<li><strong>Active users</strong> (<code>activeUsers</code>): distinct users GA4 classifies as active,
+  based on engagement and applicable first-visit or engagement signals. This is
+  queried once over the entire 30-day period, not added from daily totals. It is
+  not a count of all visitors or a census of individual people.</li>
+<li><strong>Sessions</strong> (<code>sessions</code>): sessions that began during the reporting period, as
+  measured by GA4. A user can have more than one session.</li>
+</ul>
+<p>All dates are inclusive calendar dates in the <strong>GA4 property's reporting
+timezone</strong>, shown above. The summary covers 30 completed days ending yesterday
+at the time of the last successful refresh. Monthly history covers up to 12
+completed calendar months; the current month is excluded. Only months returned
+by GA4 are shown. Missing months are not invented as zero: they may predate
+collection or have no available rows. Returned zero counts mean no measured
+traffic for that query, not necessarily no actual visits.</p>
+<p>The hostname scope above is an exact allowlist, combined with a Web-only filter.
+Other hostnames, including previews and localhost, and app traffic are excluded.
+This is website traffic, not OSL's combined audience across social media,
+community platforms, or other websites.</p>
+<h3 id="limitations-and-freshness">Limitations and freshness<a class="headerlink" href="#limitations-and-freshness" title="Permanent link"> #</a></h3>
+<p>Measured traffic can exclude visits affected by <strong>consent choices, blockers</strong>,
+disabled JavaScript, or collection errors. Identity settings, estimation, and
+cross-device behavior can affect user counts. Recent figures may change during
+GA4 processing. Every refresh re-queries both the rolling window and the full
+historical window, so earlier figures can be revised too.</p>
+<p>Refreshes are scheduled daily at <strong>06:23 UTC</strong>, but GitHub Actions scheduling
+may be delayed. If a refresh fails, we retain the previous successful report and
+its original timestamp. A report more than three days old is marked stale. If
+GA4 signals thresholding, sampling, truncation, or unavailable data, we do not
+replace the previous report with incomplete results or fabricated zeros.</p>
+<p>Metric definitions follow Google's
+<a href="https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema">GA4 Data API schema</a>.
+See also Google's
+<a href="https://support.google.com/analytics/answer/12233314">data freshness guidance</a>.
+The endpoint follows our <a href="schema.json">version 1 JSON schema</a>.</p>
+<h2 id="support-open-science">Support open science<a class="headerlink" href="#support-open-science" title="Permanent link"> #</a></h2>
+<p>Help sustain our open-source tools, mentorship, and community programs.
+<a href="../about/sponsorship/">Explore OSL sponsorship</a>.</p>
+
     </article>
   </div>
 </section>

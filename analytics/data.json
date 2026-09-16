@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "data_kind": "production",
+  "status": "unavailable",
+  "source": {
+    "publisher": "Open Science Labs",
+    "system": "Google Analytics 4",
+    "api": "Google Analytics Data API v1beta"
+  },
+  "site": "https://opensciencelabs.org",
+  "hostnames": [],
+  "timezone": null,
+  "generated_at": null,
+  "reporting_period": null,
+  "history_period": null,
+  "summary": null,
+  "monthly_history": []
+}
