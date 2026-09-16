@@ -83,10 +83,11 @@ secrets. Identifiers below are **not** credentials.
 ### 1. Verify collection and find the property ID
 
 1. In Google Analytics, select OSL's **GA4 property**, then **Admin → Property
-   details**. Copy the numeric **Property ID**, for example the numeric value
-   displayed there (not a `G-...` Measurement ID, `UA-...` ID, account ID,
-   stream ID, or Google Cloud project number). Confirm the reporting timezone
-   there.
+   details**. Confirm the numeric **Property ID** matches `365530978`, which is
+   configured in the workflow from the supplied Analytics URL. This is not a
+   `G-...` Measurement ID, `UA-...` ID, account ID, stream ID, or Google Cloud
+   project number. Confirm the reporting timezone and that this is the intended
+   property; the URL alone does not verify collection.
 2. Under **Admin → Data streams**, open the intended Web stream and verify that
    it is actually collecting the production website in this property. Review
    recent reports with the exact production hostname scope.
@@ -103,12 +104,14 @@ secrets. Identifiers below are **not** credentials.
 
 ### 2. Enable APIs and create a dedicated service account
 
-Run these commands in an administrator's own authenticated shell. Replace the
-project value and keep the chosen pool/account names, or update all references
-consistently. The Cloud project may differ from the GA4 property/account.
+Run these commands in an administrator's own authenticated shell. The workflow
+uses project `osl-general` (project number `11701823742`). If using another
+project or different pool/account names, update the workflow identifiers as
+well. The Cloud project may differ from the GA4 property/account. Reuse existing
+resources rather than repeating their creation commands.
 
 ```bash
-export PROJECT_ID='YOUR_GOOGLE_CLOUD_PROJECT_ID'
+export PROJECT_ID='osl-general'
 export REPO='OpenScienceLabs/opensciencelabs.github.io'
 export PROJECT_NUMBER="$(gcloud projects describe "$PROJECT_ID" --format='value(projectNumber)')"
 export SA="osl-analytics-exporter@${PROJECT_ID}.iam.gserviceaccount.com"
@@ -163,13 +166,14 @@ gcloud iam workload-identity-pools providers describe github \
   --workload-identity-pool=osl-analytics --format='value(name)'
 ```
 
-Use the last command's full resource name for `GA4_WIF_PROVIDER`. Allow several
-minutes for IAM propagation. No service-account key, domain-wide delegation,
-Cloud project Owner role, or broad Token Creator grant is required for this
-service-account impersonation setup. The auth action requests a 15-minute access
-token scoped only to `https://www.googleapis.com/auth/analytics.readonly`. It
-creates **no credential file** and exports no global credential environment. The
-token is passed only to the exporter step; the build receives no token.
+Compare the last command's full resource name with `GA4_WIF_PROVIDER` in
+`jobs.build.env` in `.github/workflows/main.yaml`. Allow several minutes for IAM
+propagation. No service-account key, domain-wide delegation, Cloud project Owner
+role, or broad Token Creator grant is required for this service-account
+impersonation setup. The auth action requests a 15-minute access token scoped
+only to `https://www.googleapis.com/auth/analytics.readonly`. It creates **no
+credential file** and exports no global credential environment. The token is
+passed only to the exporter step; the build receives no token.
 
 ## One-time GitHub configuration
 
@@ -179,17 +183,28 @@ In **OpenScienceLabs/opensciencelabs.github.io**, not a fork:
    it the default branch. Authentication and publication are both hard-gated to
    this repository and branch. PRs, forks and manual runs on other branches do
    not authenticate or publish. Do not use `pull_request_target` for this work.
-2. Under **Settings → Secrets and variables → Actions → Variables**, create:
+2. Verify the four **non-secret identifiers** already configured once in
+   `.github/workflows/main.yaml` under `jobs.build.env`:
 
-   | Repository variable   | Value                                                                                                                                                  |
-   | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-   | `GA4_PROPERTY_ID`     | Numeric property ID from GA4 Admin                                                                                                                     |
-   | `GA4_HOSTNAMES`       | Comma-separated production hostnames, e.g. `opensciencelabs.org`; add `www.opensciencelabs.org` only if it actually serves measured production traffic |
-   | `GA4_WIF_PROVIDER`    | `projects/PROJECT_NUMBER/locations/global/workloadIdentityPools/osl-analytics/providers/github`                                                        |
-   | `GA4_SERVICE_ACCOUNT` | `osl-analytics-exporter@PROJECT_ID.iam.gserviceaccount.com`                                                                                            |
+   ```yaml
+   GA4_PROPERTY_ID: "365530978"
+   GA4_HOSTNAMES: "opensciencelabs.org"
+   GA4_SERVICE_ACCOUNT: "osl-analytics-exporter@osl-general.iam.gserviceaccount.com"
+   GA4_WIF_PROVIDER: "projects/11701823742/locations/global/workloadIdentityPools/osl-analytics/providers/github"
+   ```
+
+   You do **not** need GitHub repository variables or secrets for these values.
+   Any existing repository variables with these names are no longer used and may
+   be removed. To change an identifier, edit the workflow through normal code
+   review and ensure the corresponding Google configuration and GA4 property
+   access match. Add `www.opensciencelabs.org` only if it actually serves
+   measured production traffic; never include previews or localhost. These
+   values remain workflow configuration, not hard-coded Python values.
 
    There is intentionally no timezone variable: GA4 supplies it. No private
-   credential secret is required. Do not use `credentials_json`.
+   credential secret is required. The access token is generated at runtime by
+   OIDC/WIF, not stored in the workflow. Do not configure `GA4_ACCESS_TOKEN`
+   manually or use `credentials_json`.
 
 3. Under **Settings → Actions → General**, allow the actions used by the
    workflow and repository `GITHUB_TOKEN` write permissions where organization
@@ -306,7 +321,7 @@ work with JavaScript disabled. The base viewport now permits user zoom.
 
 | Symptom                                          | Checks / action                                                                                                                                                                                                                                                                                                                   |
 | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Configuration missing / first report unavailable | Set all four repository variables; verify the numeric property ID; run the workflow on `main`. Do not fill the JSON with example numbers.                                                                                                                                                                                         |
+| Configuration missing / first report unavailable | Verify all four identifiers in `jobs.build.env`, the WIF service-account binding and GA4 property access; run the workflow on `main`. Do not fill the JSON with example numbers.                                                                                                                                                  |
 | OIDC denied                                      | Check numeric repository/owner IDs, exact repository case, ref, workflow path, issuer, full provider resource name, WIF service-account binding, Actions `id-token: write`, and IAM propagation. Do not weaken the branch condition to make a PR work.                                                                            |
 | `PermissionDenied` / 403                         | Enable the Data API in the Cloud project; grant the service account Viewer on the specific GA4 property; check the readonly scope and property ID. Cloud IAM Viewer alone is insufficient.                                                                                                                                        |
 | `Unauthenticated` / 401                          | Re-run to get a fresh token; do not copy tokens out of logs. Authentication should remain immediately before the export, not before dependency installation.                                                                                                                                                                      |

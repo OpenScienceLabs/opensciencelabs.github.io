@@ -50,6 +50,12 @@ jobs:
       id-token: write
     outputs:
       refresh_failed: ${{ (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && steps.refresh.outcome != 'success' }}
+    env:
+      # Non-secret identifiers; credentials are generated only in the auth step.
+      GA4_PROPERTY_ID: "365530978"
+      GA4_HOSTNAMES: "opensciencelabs.org"
+      GA4_SERVICE_ACCOUNT: "osl-analytics-exporter@osl-general.iam.gserviceaccount.com"
+      GA4_WIF_PROVIDER: "projects/11701823742/locations/global/workloadIdentityPools/osl-analytics/providers/github"
     defaults:
       run:
         # bash -el required so conda activation persists (README: IMPORTANT)
@@ -103,13 +109,8 @@ jobs:
       - name: Check refresh configuration
         id: analytics_config
         if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
-        env:
-          GA4_PROPERTY_ID: ${{ vars.GA4_PROPERTY_ID }}
-          GA4_HOSTNAMES: ${{ vars.GA4_HOSTNAMES }}
-          WIF_PROVIDER: ${{ vars.GA4_WIF_PROVIDER }}
-          SERVICE_ACCOUNT: ${{ vars.GA4_SERVICE_ACCOUNT }}
         run: |
-          if [[ -n "$GA4_PROPERTY_ID" && -n "$GA4_HOSTNAMES" && -n "$WIF_PROVIDER" && -n "$SERVICE_ACCOUNT" ]]; then
+          if [[ -n "$GA4_PROPERTY_ID" && -n "$GA4_HOSTNAMES" && -n "$GA4_WIF_PROVIDER" && -n "$GA4_SERVICE_ACCOUNT" ]]; then
             echo "ready=true" >> "$GITHUB_OUTPUT"
           else
             echo "::warning::GA4 configuration missing; preserving the previous report. See docs/analytics.md."
@@ -121,8 +122,8 @@ jobs:
         continue-on-error: true
         uses: google-github-actions/auth@v3
         with:
-          workload_identity_provider: ${{ vars.GA4_WIF_PROVIDER }}
-          service_account: ${{ vars.GA4_SERVICE_ACCOUNT }}
+          workload_identity_provider: ${{ env.GA4_WIF_PROVIDER }}
+          service_account: ${{ env.GA4_SERVICE_ACCOUNT }}
           token_format: access_token
           access_token_scopes: https://www.googleapis.com/auth/analytics.readonly
           access_token_lifetime: 900s
@@ -134,8 +135,6 @@ jobs:
         if: ${{ steps.google_auth.outcome == 'success' }}
         continue-on-error: true
         env:
-          GA4_PROPERTY_ID: ${{ vars.GA4_PROPERTY_ID }}
-          GA4_HOSTNAMES: ${{ vars.GA4_HOSTNAMES }}
           GA4_ACCESS_TOKEN: ${{ steps.google_auth.outputs.access_token }}
         run: python -m scripts.analytics.export
 

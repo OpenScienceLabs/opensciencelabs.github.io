@@ -11,6 +11,7 @@ import yaml
 from bs4 import BeautifulSoup
 from jinja2 import ChoiceLoader, DictLoader, Environment, FileSystemLoader
 
+from scripts.analytics.export import Settings
 from scripts.analytics.report import unavailable
 
 
@@ -100,6 +101,35 @@ class PresentationTests(unittest.TestCase):
 class WorkflowTests(unittest.TestCase):
     """Guard the credential-free PR path and scheduled publication wiring."""
 
+    def test_shared_analytics_configuration(self):
+        """Use workflow identifiers without repository-variable overrides."""
+        workflow_text = Path(".github/workflows/main.yaml").read_text()
+        workflow = yaml.load(
+            workflow_text,
+            Loader=yaml.BaseLoader,
+        )
+        build = workflow["jobs"]["build"]
+        settings = Settings.from_env(build["env"])
+        self.assertEqual(settings.property_id, "365530978")
+        self.assertEqual(settings.hosts, ["opensciencelabs.org"])
+        self.assertEqual(
+            build["env"]["GA4_SERVICE_ACCOUNT"],
+            "osl-analytics-exporter@osl-general.iam.gserviceaccount.com",
+        )
+        self.assertEqual(
+            build["env"]["GA4_WIF_PROVIDER"],
+            "projects/11701823742/locations/global/"
+            "workloadIdentityPools/osl-analytics/providers/github",
+        )
+        self.assertNotIn("GA4_ACCESS_TOKEN", build["env"])
+        self.assertNotIn("vars.GA4_", workflow_text)
+        self.assertNotIn("secrets.GA4_", workflow_text)
+        for step in build["steps"]:
+            with self.subTest(step=step.get("name", step.get("uses"))):
+                self.assertTrue(
+                    build["env"].keys().isdisjoint(step.get("env", {}))
+                )
+
     def test_workflow_safety_contract(self):
         """Cover scheduled and content runs with one deployment lock."""
         workflow = yaml.load(
@@ -114,6 +144,13 @@ class WorkflowTests(unittest.TestCase):
         )
         steps = workflow["jobs"]["build"]["steps"]
         auth = next(step for step in steps if step.get("id") == "google_auth")
+        self.assertEqual(
+            auth["with"]["service_account"], "${{ env.GA4_SERVICE_ACCOUNT }}"
+        )
+        self.assertEqual(
+            auth["with"]["workload_identity_provider"],
+            "${{ env.GA4_WIF_PROVIDER }}",
+        )
         self.assertEqual(auth["with"]["create_credentials_file"], "false")
         self.assertEqual(auth["with"]["export_environment_variables"], "false")
         self.assertEqual(

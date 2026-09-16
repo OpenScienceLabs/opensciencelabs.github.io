@@ -82,6 +82,7 @@ at `adb48813`. This is **not a live GA4 or deployed-site acceptance report**.
   an export; this feature intentionally does not invent a measurement ID.
 
 Follow [analytics setup and acceptance checks](analytics.md), including changing
-Pages source to **GitHub Actions**, configuring the four repository variables
-and restricted WIF service account, dispatching the first refresh, comparing GA4
-reports, and confirming a subsequent content deployment preserves the JSON.
+Pages source to **GitHub Actions**, verifying the workflow's analytics
+identifiers and restricted WIF service account, dispatching the first refresh,
+comparing GA4 reports, and confirming a subsequent content deployment preserves
+the JSON.
