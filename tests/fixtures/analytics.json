@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "data_kind": "fixture",
   "status": "available",
   "source": {
@@ -97,5 +97,215 @@
       "end": "2026-08-31",
       "pageviews": 1100
     }
-  ]
+  ],
+  "comparison": {
+    "reporting_period": {
+      "start": "2026-07-18",
+      "end": "2026-08-16"
+    },
+    "summary": {
+      "pageviews": 980,
+      "active_users": 300,
+      "sessions": 590
+    }
+  },
+  "daily_history": [
+    {
+      "date": "2026-08-17",
+      "pageviews": 30
+    },
+    {
+      "date": "2026-08-18",
+      "pageviews": 36
+    },
+    {
+      "date": "2026-08-19",
+      "pageviews": 41
+    },
+    {
+      "date": "2026-08-20",
+      "pageviews": 26
+    },
+    {
+      "date": "2026-08-21",
+      "pageviews": 38
+    },
+    {
+      "date": "2026-08-22",
+      "pageviews": 28
+    },
+    {
+      "date": "2026-08-23",
+      "pageviews": 33
+    },
+    {
+      "date": "2026-08-24",
+      "pageviews": 43
+    },
+    {
+      "date": "2026-08-25",
+      "pageviews": 45
+    },
+    {
+      "date": "2026-08-26",
+      "pageviews": 36
+    },
+    {
+      "date": "2026-08-27",
+      "pageviews": 24
+    },
+    {
+      "date": "2026-08-28",
+      "pageviews": 27
+    },
+    {
+      "date": "2026-08-29",
+      "pageviews": 31
+    },
+    {
+      "date": "2026-08-30",
+      "pageviews": 29
+    },
+    {
+      "date": "2026-08-31",
+      "pageviews": 41
+    },
+    {
+      "date": "2026-09-01",
+      "pageviews": 51
+    },
+    {
+      "date": "2026-09-02",
+      "pageviews": 42
+    },
+    {
+      "date": "2026-09-03",
+      "pageviews": 39
+    },
+    {
+      "date": "2026-09-04",
+      "pageviews": 55
+    },
+    {
+      "date": "2026-09-05",
+      "pageviews": 45
+    },
+    {
+      "date": "2026-09-06",
+      "pageviews": 48
+    },
+    {
+      "date": "2026-09-07",
+      "pageviews": 37
+    },
+    {
+      "date": "2026-09-08",
+      "pageviews": 52
+    },
+    {
+      "date": "2026-09-09",
+      "pageviews": 54
+    },
+    {
+      "date": "2026-09-10",
+      "pageviews": 32
+    },
+    {
+      "date": "2026-09-11",
+      "pageviews": 41
+    },
+    {
+      "date": "2026-09-12",
+      "pageviews": 58
+    },
+    {
+      "date": "2026-09-13",
+      "pageviews": 51
+    },
+    {
+      "date": "2026-09-14",
+      "pageviews": 46
+    },
+    {
+      "date": "2026-09-15",
+      "pageviews": 75
+    }
+  ],
+  "breakdowns": {
+    "countries": {
+      "status": "available",
+      "metric": "pageviews",
+      "minimum_active_users": 10,
+      "total": 1234,
+      "other": 174,
+      "rows": [
+        {
+          "label": "Brazil",
+          "value": 410
+        },
+        {
+          "label": "United States",
+          "value": 280
+        },
+        {
+          "label": "India",
+          "value": 175
+        },
+        {
+          "label": "Germany",
+          "value": 110
+        },
+        {
+          "label": "United Kingdom",
+          "value": 85
+        }
+      ]
+    },
+    "devices": {
+      "status": "available",
+      "metric": "pageviews",
+      "minimum_active_users": 10,
+      "total": 1234,
+      "other": 14,
+      "rows": [
+        {
+          "label": "desktop",
+          "value": 740
+        },
+        {
+          "label": "mobile",
+          "value": 420
+        },
+        {
+          "label": "tablet",
+          "value": 60
+        }
+      ]
+    },
+    "channels": {
+      "status": "available",
+      "metric": "sessions",
+      "minimum_active_users": 10,
+      "total": 678,
+      "other": 28,
+      "rows": [
+        {
+          "label": "Organic Search",
+          "value": 310
+        },
+        {
+          "label": "Direct",
+          "value": 180
+        },
+        {
+          "label": "Referral",
+          "value": 95
+        },
+        {
+          "label": "Organic Social",
+          "value": 65
+        }
+      ]
+    }
+  }
 }

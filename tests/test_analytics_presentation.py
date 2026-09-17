@@ -12,6 +12,7 @@ from bs4 import BeautifulSoup
 from jinja2 import ChoiceLoader, DictLoader, Environment, FileSystemLoader
 
 from scripts.analytics.export import Settings
+from scripts.analytics.presentation import dashboard
 from scripts.analytics.report import unavailable
 
 
@@ -24,11 +25,7 @@ class PresentationTests(unittest.TestCase):
             loader=ChoiceLoader(
                 [
                     DictLoader(
-                        {
-                            "main.html": (
-                                "{% block content_inner %}" "{% endblock %}"
-                            )
-                        }
+                        {"base.html": "{% block content %}{% endblock %}"}
                     ),
                     FileSystemLoader("theme"),
                 ]
@@ -37,7 +34,11 @@ class PresentationTests(unittest.TestCase):
         env.filters["url"] = lambda value: "/" + value
         html = env.get_template("analytics.html").render(
             config=Obj(
-                extra=Obj(analytics_report=report, analytics_stale=stale)
+                extra=Obj(
+                    analytics_report=report,
+                    analytics_stale=stale,
+                    analytics_view=dashboard(report),
+                )
             ),
             page=Obj(content=""),
         )
@@ -62,7 +63,7 @@ class PresentationTests(unittest.TestCase):
             [node.get_text() for node in page.select(".analytics-metrics dd")],
             [f"{value:,}" for value in fixture["summary"].values()],
         )
-        rows = page.select("tbody tr")
+        rows = page.select("#monthly-table tbody tr")
         self.assertEqual(len(rows), len(fixture["monthly_history"]))
         for node, item in zip(rows, fixture["monthly_history"], strict=True):
             self.assertEqual(
@@ -74,7 +75,9 @@ class PresentationTests(unittest.TestCase):
                 [item["start"], item["end"]],
             )
         self.assertIsNotNone(page.select_one("table caption"))
-        self.assertEqual(len(page.select('thead th[scope="col"]')), 3)
+        self.assertEqual(
+            len(page.select('#monthly-table thead th[scope="col"]')), 3
+        )
         self.assertEqual(
             page.select_one("#analytics-refreshed")["datetime"],
             fixture["generated_at"],
@@ -87,12 +90,9 @@ class PresentationTests(unittest.TestCase):
         for month in fixture["monthly_history"]:
             month["pageviews"] = 0
         page = self.render(fixture, stale=True)
-        self.assertTrue(
-            all(
-                bar["style"] == "width: 0%"
-                for bar in page.select(".analytics-chart-bar")
-            )
-        )
+        bars = page.select(".analytics-bar")
+        self.assertEqual(len(bars), 12)
+        self.assertTrue(all(float(bar["height"]) == 0 for bar in bars))
         notice = page.select_one("#analytics-stale")
         self.assertFalse(notice.has_attr("hidden"))
         self.assertIn("Stale data", notice.get_text())

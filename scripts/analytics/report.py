@@ -28,6 +28,8 @@ METRICS = {
 WINDOW_DAYS = 30
 STALE_DAYS = 3
 MAX_HOSTNAME_LENGTH = 253
+MIN_GROUP_USERS = 10
+MAX_GROUP_ROWS = 10
 
 
 def hostnames(value: str) -> list[str]:
@@ -72,10 +74,19 @@ def month_period(month: str) -> dict:
     }
 
 
+def previous_period(period: dict) -> dict:
+    """Use the preceding 30 calendar days, without elapsed-time arithmetic."""
+    start = date.fromisoformat(period["start"])
+    return {
+        "start": (start - timedelta(days=WINDOW_DAYS)).isoformat(),
+        "end": (start - timedelta(days=1)).isoformat(),
+    }
+
+
 def unavailable() -> dict:
     """Represent an unconfigured first deployment without invented values."""
     return {
-        "schema_version": 1,
+        "schema_version": 2,
         "data_kind": "production",
         "status": "unavailable",
         "source": dict(SOURCE),
@@ -87,6 +98,9 @@ def unavailable() -> dict:
         "history_period": None,
         "summary": None,
         "monthly_history": [],
+        "comparison": None,
+        "daily_history": [],
+        "breakdowns": None,
     }
 
 
@@ -125,6 +139,35 @@ def validate(report: dict, *, allow_fixture: bool = False) -> None:
         months.append(item["month"])
     if months != sorted(set(months)):
         raise ValueError("Monthly history must be unique and chronological")
+    if report["schema_version"] == 1:
+        # Preserve the original document and successful timestamp, not an
+        # invented v2 export. The renderer explains missing dashboard panels.
+        return
+    if report["comparison"]["reporting_period"] != previous_period(
+        expected_summary
+    ):
+        raise ValueError("Incorrect comparison period")
+    dates = [row["date"] for row in report["daily_history"]]
+    if dates != sorted(set(dates)) or any(
+        not expected_summary["start"] <= day <= expected_summary["end"]
+        for day in dates
+    ):
+        raise ValueError("Daily history must be unique and within the period")
+    for panel in report["breakdowns"].values():
+        if panel["status"] != "available":
+            continue
+        labels = [row["label"] for row in panel["rows"]]
+        if len(labels) != len(set(labels)):
+            raise ValueError("Duplicate breakdown labels")
+        if panel["rows"] != sorted(
+            panel["rows"], key=lambda row: (-row["value"], row["label"])
+        ):
+            raise ValueError("Breakdown rows must be ranked deterministically")
+        if (
+            sum(row["value"] for row in panel["rows"]) + panel["other"]
+            != (panel["total"])
+        ):
+            raise ValueError("Breakdown counts do not reconcile")
 
 
 def read_snapshot(path: Path, *, allow_fixture: bool = False) -> dict:

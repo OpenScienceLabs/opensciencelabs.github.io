@@ -9,6 +9,30 @@ from urllib.parse import urlsplit
 REQUIRED_MOBILE_WIDTH = 390
 
 
+def check_chart_controls(page, output, width, mode):
+    """Check keyboard chart selection and accessible table disclosures."""
+    switches = page.locator("[data-chart-switch]")
+    if switches.count():
+        for name in ("monthly", "daily"):
+            button = page.locator(f'[data-chart-target="{name}"]')
+            button.focus()
+            page.keyboard.press("Enter")
+            if button.get_attribute("aria-pressed") != "true":
+                raise AssertionError("Chart control not selected")
+            if not page.locator(f"#analytics-{name}").is_visible():
+                raise AssertionError("Selected chart is hidden")
+            table = page.locator(f"#analytics-{name} details")
+            table.locator("summary").focus()
+            page.keyboard.press("Enter")
+            if not table.locator("table").is_visible():
+                raise AssertionError("Data table is not operable")
+            page.screenshot(
+                path=str(output / f"table-{name}-{width}-{mode}.png"),
+                full_page=True,
+            )
+            page.keyboard.press("Enter")
+
+
 def check(url: str, output: Path) -> None:
     """Inspect responsive color modes without sending synthetic GA traffic."""
     from playwright.sync_api import sync_playwright
@@ -54,6 +78,7 @@ def check(url: str, output: Path) -> None:
                     "el => el === document.activeElement"
                 ):
                     raise AssertionError("Download link is not focusable")
+                check_chart_controls(page, output, width, mode)
                 page.screenshot(
                     path=str(output / f"analytics-{width}-{mode}.png"),
                     full_page=True,
@@ -66,6 +91,12 @@ def check(url: str, output: Path) -> None:
         page.goto(url)
         if not page.locator("[data-analytics-report]").is_visible():
             raise AssertionError("Report requires JavaScript")
+        for panel in page.locator(".analytics-trend-panel").all():
+            if not panel.is_visible():
+                raise AssertionError("A chart requires JavaScript")
+            panel.locator("summary").click()
+            if not panel.locator("table").is_visible():
+                raise AssertionError("A data table requires JavaScript")
         context.close()
         browser.close()
     print(f"Browser smoke checks passed; inspect screenshots in {output}")

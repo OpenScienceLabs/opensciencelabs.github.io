@@ -21,6 +21,7 @@ function run(age, available = true) {
       },
     },
     document: {
+      querySelector: () => null,
       getElementById: (id) =>
         !available
           ? null
@@ -59,4 +60,44 @@ test("already open and background tabs age without another deployment", () => {
 
 test("unavailable state needs no timer or refresh date", () => {
   assert.equal(run(0, false).interval, undefined);
+});
+
+test("chart switches preserve pressed state and start with available history", () => {
+  for (const defaultChart of ["daily", "monthly"]) {
+    const panels = { daily: { hidden: false }, monthly: { hidden: false } };
+    const buttons = Object.keys(panels).map((name) => ({
+      dataset: { chartTarget: name },
+      attributes: { "aria-controls": `analytics-${name}` },
+      getAttribute(key) {
+        return this.attributes[key];
+      },
+      setAttribute(key, value) {
+        this.attributes[key] = value;
+      },
+      addEventListener(event, fn) {
+        this.click = fn;
+      },
+    }));
+    const switcher = {
+      hidden: true,
+      dataset: { defaultChart },
+      querySelectorAll: () => buttons,
+    };
+    vm.runInNewContext(code, {
+      document: {
+        querySelector: () => switcher,
+        getElementById: (id) => panels[id.replace("analytics-", "")] || null,
+      },
+    });
+    assert.equal(switcher.hidden, false);
+    assert.equal(panels[defaultChart].hidden, false);
+    buttons[1].click();
+    assert.equal(panels.daily.hidden, true);
+    assert.equal(panels.monthly.hidden, false);
+    assert.equal(buttons[0].attributes["aria-pressed"], "false");
+    assert.equal(buttons[1].attributes["aria-pressed"], "true");
+    buttons[0].click();
+    assert.equal(panels.daily.hidden, false);
+    assert.equal(panels.monthly.hidden, true);
+  }
 });

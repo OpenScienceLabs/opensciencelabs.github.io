@@ -1,87 +1,148 @@
-{% extends "main.html" %}
+{% extends "base.html" %}
 
 {% block header_extra %}
 <link rel="stylesheet" href="{{ 'css/analytics.css' | url }}">
 <script src="{{ 'js/analytics.js' | url }}" defer></script>
 {% endblock header_extra %}
 
-{% block content_inner %}
-{% set report = config.extra.analytics_report %}
-<div class="analytics-report" data-analytics-report>
-  {% if report.data_kind == 'fixture' %}
-  <p class="analytics-notice"><strong>TEST FIXTURE — LOCAL PREVIEW ONLY.</strong> These are synthetic values, not OSL traffic.</p>
-  {% endif %}
-  <p class="analytics-source">OSL-published data · Sourced from Google Analytics</p>
-  {% if report.status == 'available' %}
-  <section aria-labelledby="analytics-summary-title">
-    <h2 id="analytics-summary-title">Last 30 completed days</h2>
-    <p class="analytics-period">
-      <time datetime="{{ report.reporting_period.start }}">{{ report.reporting_period.start }}</time>
-      through <time datetime="{{ report.reporting_period.end }}">{{ report.reporting_period.end }}</time>, inclusive.
-    </p>
-    <dl class="analytics-metrics">
-      <div><dt>Pageviews</dt><dd>{{ '{:,}'.format(report.summary.pageviews) }}</dd></div>
-      <div><dt>Active users</dt><dd>{{ '{:,}'.format(report.summary.active_users) }}</dd></div>
-      <div><dt>Sessions</dt><dd>{{ '{:,}'.format(report.summary.sessions) }}</dd></div>
-    </dl>
-    <dl class="analytics-details">
-      <div><dt>Reporting timezone</dt><dd>{{ report.timezone | e }}</dd></div>
-      <div><dt>Hostname scope · Web only</dt><dd>{{ report.hostnames | join(', ') | e }}</dd></div>
-      <div><dt>Last successful refresh</dt><dd><time id="analytics-refreshed" datetime="{{ report.generated_at }}">{{ report.generated_at }}</time> (UTC)</dd></div>
-    </dl>
-    <p id="analytics-stale" class="analytics-notice" role="status" {% if not config.extra.analytics_stale %}hidden{% endif %}>
-      <strong>Stale data.</strong> The last successful refresh was more than three days ago. These are the last available figures, not a current report.
-    </p>
-    <noscript><p>Freshness was checked when this page was built. Compare the last successful refresh with today's date; reports older than three days are stale.</p></noscript>
-  </section>
+{% macro trend(graph, id, title, monthly=false) %}
+<section id="analytics-{{ id }}" class="analytics-trend-panel" aria-labelledby="{{ id }}-title">
+  <div class="analytics-chart-heading"><h3 id="{{ id }}-title">{{ title }}</h3><span>Pageviews · zero-based scale</span></div>
+  <p class="analytics-footnote">Requested dates: {{ graph.period.start }} through {{ graph.period.end }}, inclusive.</p>
+  {% if graph.has_data %}
+  <figure class="analytics-chart">
+    <svg viewBox="0 0 720 240" aria-hidden="true" focusable="false">
+      {% for tick in graph.ticks %}
+      <line class="analytics-gridline" x1="100" x2="700" y1="{{ tick.y }}" y2="{{ tick.y }}"/>
+      <text class="analytics-axis" x="89" y="{{ tick.y + 4 }}" text-anchor="end">{{ tick.label }}</text>
+      {% endfor %}
+      {% if not monthly %}
+        {% for segment in graph.segments %}<polyline class="analytics-line" points="{{ segment }}"/>{% endfor %}
+      {% endif %}
+      {% for point in graph.slots %}
+        {% if point.value is not none %}
+          {% if monthly %}
+          <rect class="analytics-bar" x="{{ point.x - graph.bar_width / 2 }}" y="{{ point.y }}" width="{{ graph.bar_width }}" height="{{ point.bar_height }}" rx="3"><title>{{ point.date }}: {{ point.value }} pageviews</title></rect>
+          {% endif %}
+          <circle class="analytics-point" cx="{{ point.x }}" cy="{{ point.y }}" r="{{ 2 if monthly else 3 }}"><title>{{ point.date }}: {{ point.value }} pageviews</title></circle>
+        {% else %}
+          <text class="analytics-missing" x="{{ point.x }}" y="202" text-anchor="middle">–</text>
+        {% endif %}
+      {% endfor %}
+      <text class="analytics-axis" x="100" y="224">{{ graph.first }}</text>
+      <text class="analytics-axis" x="700" y="224" text-anchor="end">{{ graph.last }}</text>
+    </svg>
+    <figcaption>Exact values below. Gaps mean not reported, not zero.{% if monthly %} The current month is excluded.{% endif %}</figcaption>
+  </figure>
   {% else %}
-  <section class="analytics-empty" aria-labelledby="analytics-empty-title">
-    <h2 id="analytics-empty-title">Analytics data is not available yet</h2>
-    <p>We have not published a successful GA4 report. Reporting dates, timezone, hostname scope, and audience figures will appear after the first refresh. Missing data does not mean zero visits.</p>
-  </section>
+  <p class="analytics-panel-empty">{{ 'Completed-month' if monthly else 'Daily' }} history is not available in this snapshot. No values have been inferred.</p>
   {% endif %}
-  <p class="analytics-actions">
-    <a class="osl-inline-button" href="{{ 'analytics/data.json' | url }}" download="osl-analytics.json">Download JSON report</a>
-    <a href="{{ 'about/sponsorship/' | url }}">Sponsor Open Science Labs</a>
-  </p>
-  {% if report.status == 'available' %}
-  <section aria-labelledby="analytics-history-title">
-    <h2 id="analytics-history-title">Monthly pageviews</h2>
-    <p>Up to 12 completed months. Requested range: {{ report.history_period.start }} through {{ report.history_period.end }} ({{ report.timezone | e }}).</p>
-    {% if report.monthly_history %}
-    {% set max_views = report.monthly_history | map(attribute='pageviews') | max %}
-    <figure class="analytics-chart" aria-labelledby="analytics-chart-caption">
-      <figcaption id="analytics-chart-caption">Pageviews by month · exact values and dates in the table below.</figcaption>
-      <div aria-hidden="true">
-        {% for item in report.monthly_history %}
-        <div class="analytics-chart-row">
-          <span>{{ item.month }}</span>
-          <span class="analytics-chart-track"><span class="analytics-chart-bar" style="width: {{ (100 * item.pageviews / max_views) if max_views else 0 }}%"></span></span>
-          <span>{{ '{:,}'.format(item.pageviews) }}</span>
-        </div>
-        {% endfor %}
-      </div>
-    </figure>
-    <div class="analytics-table-wrap" role="region" aria-label="Monthly pageview data" tabindex="0">
-      <table class="analytics-table">
-        <caption>Monthly pageviews. Dates are inclusive in {{ report.timezone | e }}.</caption>
-        <thead><tr><th scope="col">Month</th><th scope="col">Reporting dates</th><th scope="col">Pageviews</th></tr></thead>
-        <tbody>
-          {% for item in report.monthly_history %}
-          <tr>
-            <th scope="row"><time datetime="{{ item.month }}">{{ item.month }}</time></th>
-            <td><time datetime="{{ item.start }}">{{ item.start }}</time> – <time datetime="{{ item.end }}">{{ item.end }}</time></td>
-            <td>{{ '{:,}'.format(item.pageviews) }}</td>
-          </tr>
-          {% endfor %}
-        </tbody>
+  <details class="analytics-data-table">
+    <summary>View {{ 'monthly' if monthly else 'daily' }} data table</summary>
+    <div class="analytics-table-wrap" role="region" aria-label="{{ title }} data table" tabindex="0">
+      <table class="analytics-table" id="{{ id }}-table">
+        <caption>{{ title }}. Dates use the reporting timezone shown above.</caption>
+        <thead><tr><th scope="col">{{ 'Month' if monthly else 'Date' }}</th>{% if monthly %}<th scope="col">Reporting dates</th>{% endif %}<th scope="col">Pageviews</th></tr></thead>
+        <tbody>{% for point in graph.slots %}<tr><th scope="row"><time datetime="{{ point.date }}">{{ point.date }}</time></th>{% if monthly %}<td><time datetime="{{ point.start }}">{{ point.start }}</time> – <time datetime="{{ point.end }}">{{ point.end }}</time></td>{% endif %}<td>{{ '{:,}'.format(point.value) if point.value is not none else 'Not reported' }}</td></tr>{% endfor %}</tbody>
       </table>
     </div>
-    {% else %}
-    <p>No completed-month history is available for this scope. No monthly values have been inferred.</p>
-    {% endif %}
-  </section>
+  </details>
+</section>
+{% endmacro %}
+
+{% block content %}
+{% set report = config.extra.analytics_report %}
+{% set view = config.extra.analytics_view %}
+<div class="analytics-dashboard" data-analytics-report>
+  <header class="analytics-header">
+    <div>
+      <p class="analytics-eyebrow">Open Science Labs / Transparency</p>
+      <h1>Audience &amp; reach<span aria-hidden="true">.</span></h1>
+      <p class="analytics-intro">A shared view of the people discovering open science.</p>
+      <p class="analytics-source">OSL-published data · Sourced from Google Analytics</p>
+    </div>
+    <div class="analytics-actions">
+      <a class="analytics-button" href="{{ 'analytics/data.json' | url }}" download="osl-analytics.json">Download JSON <span aria-hidden="true">↓</span></a>
+      <a class="analytics-sponsor" href="{{ 'about/sponsorship/' | url }}">Sponsor our work <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+  {% if report.data_kind == 'fixture' %}
+  <p class="analytics-notice analytics-fixture"><strong>TEST FIXTURE — LOCAL PREVIEW ONLY.</strong> Every figure below is synthetic, not OSL traffic.</p>
   {% endif %}
+  {% if report.status == 'available' %}
+  <section class="analytics-period-strip" aria-label="Reporting scope and freshness">
+    <div><span class="analytics-eyebrow">Last 30 completed days</span><p><time datetime="{{ report.reporting_period.start }}">{{ report.reporting_period.start }}</time> <span aria-hidden="true">→</span><span class="analytics-sr-only">through</span> <time datetime="{{ report.reporting_period.end }}">{{ report.reporting_period.end }}</time></p></div>
+    <dl class="analytics-metadata">
+      <div><dt>Reporting timezone</dt><dd>{{ report.timezone | e }}</dd></div>
+      <div><dt>Hostname · Web only</dt><dd>{{ report.hostnames | join(', ') | e }}</dd></div>
+      <div><dt>Last successful refresh (UTC)</dt><dd><time id="analytics-refreshed" datetime="{{ report.generated_at }}">{{ report.generated_at }}</time></dd></div>
+    </dl>
+  </section>
+  <p id="analytics-stale" class="analytics-notice" role="status" {% if not config.extra.analytics_stale %}hidden{% endif %}><strong>Stale data.</strong> The last successful refresh was more than three days ago. These are the last available figures, not a current report.</p>
+  <noscript><p class="analytics-footnote">Freshness was checked at build time. Reports older than three days are stale.</p></noscript>
+  {% for notice in view.notices %}<p class="analytics-notice">{{ notice }}</p>{% endfor %}
+
+  <section id="analytics-overview" aria-labelledby="analytics-summary-title">
+    <div class="analytics-section-heading"><h2 id="analytics-summary-title">The last 30 days, at a glance</h2><a href="#analytics-methodology">What do these numbers mean?</a></div>
+    <div class="analytics-metrics">
+      {% for metric in view.metrics %}
+      <section class="analytics-metric analytics-metric--{{ metric.key }}" aria-labelledby="metric-{{ metric.key }}">
+        <dl><dt id="metric-{{ metric.key }}">{{ metric.label }}</dt><dd>{{ '{:,}'.format(metric.value) }}</dd></dl>
+        <p class="analytics-change analytics-change--{{ metric.direction }}">{{ metric.text }}</p>
+        {% if metric.previous is not none %}<p class="analytics-previous">Previous 30 days: {{ '{:,}'.format(metric.previous) }}</p>{% endif %}
+        <p class="analytics-definition">{{ metric.definition }}</p>
+      </section>
+      {% endfor %}
+    </div>
+    {% if report.get('comparison') %}<p class="analytics-footnote">Compared with {{ report.comparison.reporting_period.start }} through {{ report.comparison.reporting_period.end }}, inclusive, in {{ report.timezone | e }}. A zero baseline has no percentage comparison.</p>{% endif %}
+  </section>
+
+  <section class="analytics-trends analytics-panel" aria-labelledby="analytics-trends-title">
+    <div class="analytics-section-heading">
+      <div><p class="analytics-eyebrow">Traffic over time</p><h2 id="analytics-trends-title">The bigger picture</h2></div>
+      <div class="analytics-chart-switch" role="group" aria-label="Choose traffic chart" hidden data-chart-switch data-default-chart="{{ 'daily' if view.daily.has_data else 'monthly' }}">
+        <button type="button" data-chart-target="daily" aria-controls="analytics-daily" aria-pressed="false">30-day trend</button>
+        <button type="button" data-chart-target="monthly" aria-controls="analytics-monthly" aria-pressed="false">12-month history</button>
+      </div>
+    </div>
+    {{ trend(view.daily, 'daily', 'Daily pageviews') }}
+    {{ trend(view.monthly, 'monthly', 'Monthly pageviews', true) }}
+  </section>
+
+  <section aria-labelledby="analytics-audience-title">
+    <div class="analytics-section-heading"><div><p class="analytics-eyebrow">Audience overview</p><h2 id="analytics-audience-title">Across borders. Across devices.</h2></div><span class="analytics-footnote">Same 30-day reporting window</span></div>
+    <div class="analytics-audience-grid">
+      {% for panel in view.panels %}
+      <section class="analytics-panel analytics-breakdown analytics-breakdown--{{ panel.key }}" aria-labelledby="{{ panel.key }}-title">
+        <p class="analytics-eyebrow">{{ panel.key }}</p><h3 id="{{ panel.key }}-title">{{ panel.title }}</h3><p class="analytics-panel-description">{{ panel.description }}</p>
+        {% if panel.status == 'available' and panel.total > 0 %}
+        <ol class="analytics-ranking" aria-label="{{ panel.description }} ranking">
+          {% for row in panel.display_rows %}
+          <li><div class="analytics-ranking-label"><span>{{ row.label | e }}</span><span>{{ row.share_label }}</span></div><div class="analytics-track" aria-hidden="true"><span style="width: {{ row.share }}%"></span></div><span class="analytics-count">{{ '{:,}'.format(row.value) }} {{ panel.metric }}</span></li>
+          {% endfor %}
+        </ol>
+        <p class="analytics-footnote">Share of {{ '{:,}'.format(panel.total) }} {{ panel.metric }} returned for this breakdown.</p>
+        <details class="analytics-data-table"><summary>View {{ panel.key }} data table</summary><div class="analytics-table-wrap" role="region" aria-label="{{ panel.key }} data" tabindex="0"><table class="analytics-table"><caption>{{ panel.description }} · {{ report.reporting_period.start }} through {{ report.reporting_period.end }}</caption><thead><tr><th scope="col">Category</th><th scope="col">{{ panel.metric | capitalize }}</th><th scope="col">Share</th></tr></thead><tbody>{% for row in panel.display_rows %}<tr><th scope="row">{{ row.label | e }}</th><td>{{ '{:,}'.format(row.value) }}</td><td>{{ row.share_label }}</td></tr>{% endfor %}</tbody></table></div></details>
+        {% elif panel.status == 'available' %}
+        <p class="analytics-panel-empty">No measured {{ panel.metric }} were returned for this breakdown. This is not a count of all actual visits.</p>
+        {% elif panel.status == 'withheld' %}
+        <p class="analytics-panel-empty">Not published: Google Analytics signaled a privacy threshold or access restriction for this breakdown. No values have been inferred.</p>
+        {% else %}
+        <p class="analytics-panel-empty">Available after the next successful dashboard refresh. This retained snapshot does not include the breakdown yet.</p>
+        {% endif %}
+      </section>
+      {% endfor %}
+    </div>
+    <p class="analytics-footnote">Up to 10 named categories per panel, each with at least 10 active users over the full period. Smaller, remaining and unclassified categories are combined as “Other / unknown”. No distinct-user counts are added across categories. Country is approximate activity location, not nationality.</p>
+  </section>
+  {% else %}
+  <section class="analytics-empty" aria-labelledby="analytics-empty-title"><span class="analytics-eyebrow">A transparent start</span><h2 id="analytics-empty-title">Analytics data is not available yet</h2><p>We have not published a successful GA4 report. Audience figures, dates and breakdowns will appear after the first refresh. Missing data does not mean zero visits.</p><p class="analytics-footnote">Scheduled daily at 06:23 UTC · Aggregate data only</p></section>
+  {% endif %}
+
+  <section id="analytics-methodology" class="analytics-methodology analytics-panel" aria-labelledby="analytics-methodology-title">
+    <div><p class="analytics-eyebrow">Behind the numbers</p><h2 id="analytics-methodology-title">Measured traffic, not the whole community.</h2><p>Consent choices and blockers can exclude visits. Recent figures may change during processing. These are website measurements, not a guarantee of sponsorship reach.</p></div>
+    <details><summary>Read our methodology &amp; limitations</summary><div class="analytics-methodology-content">{{ page.content }}</div></details>
+  </section>
+  <aside class="analytics-support"><div><h2>Help open science reach further.</h2><p>Support the tools, mentorship and community behind these numbers.</p></div><a class="analytics-button" href="{{ 'about/sponsorship/' | url }}">Explore sponsorship <span aria-hidden="true">↗</span></a></aside>
 </div>
-{{ page.content }}
-{% endblock content_inner %}
+{% endblock content %}

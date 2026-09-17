@@ -8,6 +8,7 @@ from pathlib import Path
 # MkDocs loads hooks by filename, not as modules in the project package.
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
+from scripts.analytics.presentation import dashboard
 from scripts.analytics.report import (
     SNAPSHOT,
     is_stale,
@@ -28,6 +29,7 @@ def on_config(config):
         raise ValueError("Preview input must be explicitly labeled fixture")
     config.extra["analytics_report"] = report
     config.extra["analytics_stale"] = is_stale(report)
+    config.extra["analytics_view"] = dashboard(report)
     return config
 
 
