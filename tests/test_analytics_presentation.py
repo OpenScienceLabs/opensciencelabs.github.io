@@ -102,7 +102,7 @@ class PresentationTests(unittest.TestCase):
 
 
 class WorkflowTests(unittest.TestCase):
-    """Guard the credential-free PR path and scheduled publication wiring."""
+    """Guard credential-free PRs and all trusted production refresh paths."""
 
     def test_shared_analytics_configuration(self):
         """Use workflow identifiers without repository-variable overrides."""
@@ -174,6 +174,60 @@ class WorkflowTests(unittest.TestCase):
             [step.get("uses") for step in deploy["steps"]],
         )
         self.assertEqual(deploy["needs"], "build")
+
+    def test_refresh_events_and_failure_signal_include_push(self):
+        """Merges refresh before publishing; failures publish retained data."""
+        workflow = yaml.load(
+            Path(".github/workflows/main.yaml").read_text(),
+            Loader=yaml.BaseLoader,
+        )
+        self.assertEqual(workflow["on"]["push"]["branches"], ["main"])
+        build = workflow["jobs"]["build"]
+        self.assertEqual(
+            " ".join(build["if"].split()),
+            "github.event_name == 'pull_request' || "
+            "(github.repository == "
+            "'OpenScienceLabs/opensciencelabs.github.io' && "
+            "github.ref == 'refs/heads/main')",
+        )
+        steps = build["steps"]
+        config = next(s for s in steps if s.get("id") == "analytics_config")
+        events = (
+            "github.event_name == 'push' || "
+            "github.event_name == 'schedule' || "
+            "github.event_name == 'workflow_dispatch'"
+        )
+        self.assertEqual(config["if"], "${{ " + events + " }}")
+        self.assertEqual(
+            build["outputs"]["refresh_failed"],
+            "${{ (" + events + ") && steps.refresh.outcome != 'success' }}",
+        )
+        auth = next(s for s in steps if s.get("id") == "google_auth")
+        refresh = next(s for s in steps if s.get("id") == "refresh")
+        self.assertEqual(
+            auth["if"], "${{ steps.analytics_config.outputs.ready == 'true' }}"
+        )
+        self.assertEqual(
+            refresh["if"], "${{ steps.google_auth.outcome == 'success' }}"
+        )
+        for step in (auth, refresh):
+            self.assertEqual(step["continue-on-error"], "true")
+        restore = next(
+            s for s in steps if s.get("run", "").endswith(".restore")
+        )
+        publish_build = next(
+            s for s in steps if s.get("name") == "Build the book"
+        )
+        self.assertLess(steps.index(restore), steps.index(refresh))
+        self.assertLess(steps.index(refresh), steps.index(publish_build))
+        deploy_steps = workflow["jobs"]["deploy"]["steps"]
+        self.assertEqual(deploy_steps[0]["uses"], "actions/deploy-pages@v4")
+        failure = deploy_steps[-1]
+        self.assertEqual(
+            failure["if"],
+            "${{ needs.build.outputs.refresh_failed == 'true' }}",
+        )
+        self.assertIn("exit 1", failure["run"])
 
 
 if __name__ == "__main__":

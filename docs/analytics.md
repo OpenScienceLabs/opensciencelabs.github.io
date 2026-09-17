@@ -159,12 +159,16 @@ their `status: withheld`, null `total`/`other`, and empty `rows` honestly signal
 non-publication. A successful unrestricted empty panel is instead `available`
 with zero totals.
 
-**Upgrading an existing deployment:** merge the dashboard changes, then start a
-**new** manual run on `main`. No new Google APIs, roles, secrets or workflow
-identifiers are needed. The push renders the retained report; only a successful
-scheduled/manual export fills the new panels. Re-running only a deploy job does
-not fetch new statistics. A rollback must keep a schema-v3-capable reader once
-the durable snapshot is v3; do not delete the report to bypass validation.
+**Upgrading an existing deployment:** first
+[allow push-triggered refreshes in the existing WIF provider](#existing-providers-allow-push-triggered-refreshes),
+then merge the dashboard changes. Every push to `main`, including a merged PR,
+attempts a fresh export before deployment, as do scheduled and manual runs. Only
+a successful export fills the new panels; failures retain the previous snapshot.
+No new Google APIs, roles, secrets or workflow identifiers are needed. To retry
+without a new commit, start a **new** manual run on `main`. Re-running only a
+deploy job does not fetch new statistics. A rollback must keep a
+schema-v3-capable reader once the durable snapshot is v3; do not delete the
+report to bypass validation.
 
 ### Durable snapshot storage
 
@@ -175,12 +179,14 @@ copy `.cache/analytics/data.json` is ignored and disposable.
 
 Every trusted production run acquires the **same workflow-level concurrency
 lock** before checking out current `main`, restoring the branch snapshot,
-optionally refreshing, building, archiving, and deploying. Ordinary `push`
-builds restore and reuse the snapshot without Google authentication. Schedules
-and manual runs try to refresh it. A retrieval/network error or invalid stored
-report **blocks publication** rather than risking data loss. Only a genuinely
-absent branch/file means first deployment. PRs have a separate lock, never
-restore or refresh production data, and build the honest unavailable state.
+attempting a refresh, building, archiving, and deploying. Pushes to `main`
+(including merged PRs), schedules and manual runs all authenticate and try to
+replace the snapshot with a newly validated export. A failed refresh preserves
+the restored snapshot and its original timestamp. A retrieval/network error or
+invalid stored report **blocks publication** rather than risking data loss. Only
+a genuinely absent branch/file means first deployment. PRs have a separate lock,
+never restore or refresh production data, and build the honest unavailable
+state. Local builds do not authenticate or refresh data.
 
 The archive is updated only after a successful build and credential audit. A
 report's `generated_at` always means **last successful GA4 export**, not last
@@ -200,8 +206,10 @@ deployment.
 Production runs are not canceled in progress. GitHub may replace pending runs;
 each surviving run checks out the latest `main`, and loads the current snapshot
 inside the lock, so superseded content or analytics do not overwrite newer data.
-A pending scheduled refresh replaced by a content build is retried the next day
-(or manually); the content build still preserves the existing report.
+A pending scheduled refresh replaced by a content build is covered by that
+build's own refresh attempt. This is not a guarantee that every intermediate
+commit gets a separate export; surviving production runs refresh current `main`.
+GA4 processing can return unchanged figures even on a successful new export.
 
 Refresh errors are continued only long enough to build and publish the retained
 report (or the initial unavailable state). After publication the workflow is
@@ -318,7 +326,9 @@ exporter needs no broad project data role.
 The following is a dedicated pool/provider for this export. Do not reuse an
 unrestricted provider. Keep `main` as the protected, trusted deployment/default
 branch. The condition restricts the immutable owner/repository IDs, current repo
-name, branch, workflow file, and scheduled/manual events.
+name, branch, workflow file, and push/scheduled/manual events. A push must be to
+`refs/heads/main` in this repository; PR events and other branches remain
+denied.
 
 Create the pool **only if it does not exist**:
 
@@ -356,7 +366,7 @@ ATTRIBUTE_CONDITION+=" && assertion.repository == '${REPO}'"
 ATTRIBUTE_CONDITION+=" && assertion.ref == 'refs/heads/main'"
 ATTRIBUTE_CONDITION+=" && assertion.workflow_ref == '${WORKFLOW_REF}'"
 ATTRIBUTE_CONDITION+=" && assertion.event_name in "
-ATTRIBUTE_CONDITION+="['schedule', 'workflow_dispatch']"
+ATTRIBUTE_CONDITION+="['push', 'schedule', 'workflow_dispatch']"
 
 PROVIDER_ARGS=(
   --project="$PROJECT_ID"
@@ -399,6 +409,53 @@ See Google's
 [provider update reference](https://cloud.google.com/sdk/gcloud/reference/iam/workload-identity-pools/providers/update-oidc).
 Do not overwrite a shared provider without reviewing its other consumers.
 
+#### Existing providers: allow push-triggered refreshes
+
+Earlier setup instructions allowed only `schedule` and `workflow_dispatch`.
+Updating the repository does **not** update Google Cloud's trust condition.
+Before merging the push-refresh change, run the following in **Google Cloud
+Shell** for OSL's existing dedicated provider. Inspect the current condition
+first; preserve any additional intentional restrictions rather than blindly
+replacing a customized/shared provider's policy.
+
+```bash
+gcloud iam workload-identity-pools providers describe github \
+  --project=osl-general --location=global \
+  --workload-identity-pool=osl-analytics \
+  --format='yaml(name,state,disabled,attributeCondition)'
+```
+
+For the standard OSL setup, this replaces only the attribute condition. It
+retains all six checks; allowed events become `push`, `schedule` and
+`workflow_dispatch`. The issuer, attribute mappings, service-account binding and
+GA4 Viewer access are unchanged. The numeric IDs below are OSL's existing
+non-secret identifiers:
+
+```bash
+REPO='OpenScienceLabs/opensciencelabs.github.io'
+WORKFLOW_REF="${REPO}/.github/workflows/main.yaml@refs/heads/main"
+ATTRIBUTE_CONDITION="assertion.repository_id == '540982912'"
+ATTRIBUTE_CONDITION+=" && assertion.repository_owner_id == '56703773'"
+ATTRIBUTE_CONDITION+=" && assertion.repository == '${REPO}'"
+ATTRIBUTE_CONDITION+=" && assertion.ref == 'refs/heads/main'"
+ATTRIBUTE_CONDITION+=" && assertion.workflow_ref == '${WORKFLOW_REF}'"
+ATTRIBUTE_CONDITION+=" && assertion.event_name in "
+ATTRIBUTE_CONDITION+="['push', 'schedule', 'workflow_dispatch']"
+
+gcloud iam workload-identity-pools providers update-oidc github \
+  --project=osl-general --location=global \
+  --workload-identity-pool=osl-analytics \
+  --attribute-condition="$ATTRIBUTE_CONDITION"
+```
+
+Verify with the `describe` command again: the event list must include `push` and
+every repository/owner/ref/workflow check must remain. Allow several minutes for
+propagation, then merge the PR or start a new manual workflow on `main`. If the
+change was already merged, update this condition and re-run the failed push
+workflow (or dispatch manually). Without this Google update, push authentication
+is denied: the site still deploys its retained data but the workflow reports
+refresh failure. No new GitHub variables or secrets are needed.
+
 ### 4. Bind the repository identity and verify configuration
 
 Provider creation alone does **not** authorize service-account impersonation.
@@ -430,10 +487,11 @@ gcloud iam workload-identity-pools providers describe github \
 
 Confirm the IAM policy grants `roles/iam.workloadIdentityUser` to exactly the
 repository-scoped `$MEMBER`, the pool/account are not disabled, and the provider
-condition still rejects PRs, pushes and other branches. Check for unexpected
-broader impersonation bindings with the administrator. Cloud IAM checks cannot
-confirm GA4 Viewer access; verify that separately in the property's access
-management screen.
+condition still rejects PRs, forks and other branches, while allowing pushes to
+OSL's `main` through the specified workflow. Check for unexpected broader
+impersonation bindings with the administrator. Cloud IAM checks cannot confirm
+GA4 Viewer access; verify that separately in the property's access management
+screen.
 
 Compare the last command's full resource name with `GA4_WIF_PROVIDER` in
 `jobs.build.env` in `.github/workflows/main.yaml`. Allow several minutes for IAM
@@ -500,10 +558,13 @@ In **OpenScienceLabs/opensciencelabs.github.io**, not a fork:
 
 ## First refresh and acceptance checks
 
-1. Merge the feature into `main` after configuring Pages. The ordinary push
-   publishes either the retained snapshot or “Analytics data is not available
-   yet”; it does not require Google configuration.
-2. In **Actions → main → Run workflow**, choose **main**. Or use:
+1. Configure Pages and Google access, including the WIF condition allowing
+   `push`, then merge the feature into `main`. That push attempts a fresh export
+   before building and publishing the site. If Google configuration or export
+   fails, the site still publishes the retained snapshot or “Analytics data is
+   not available yet”, then marks the run failed rather than claiming a refresh.
+2. To refresh again without a commit, in **Actions → main → Run workflow**,
+   choose **main**. Or use:
 
    ```bash
    gh workflow run main.yaml --ref main \
@@ -530,10 +591,13 @@ In **OpenScienceLabs/opensciencelabs.github.io**, not a fork:
    respective dimensions. Apply the documented grouping before comparing visible
    rankings; small named categories intentionally do not appear. This is **live
    GA4 validation**; mocked tests cannot replace it.
-6. Make an ordinary content deployment and confirm that the JSON, including
-   `generated_at`, remains identical. Confirm the next scheduled/manual success
-   updates it. If refreshes stop, the browser shows a stale notice after three
-   days even without another deployment.
+6. Merge an ordinary content PR and confirm that its push run attempts a fresh
+   export: success updates `generated_at`, even if the figures are unchanged.
+   Verify failure preservation with the offline tests (do not deliberately break
+   production credentials): a failed refresh leaves the previous snapshot and
+   timestamp unchanged. Scheduled/manual runs follow the same policy. If
+   refreshes stop, the browser shows a stale notice after three days even
+   without another deployment.
 
 To download and validate the **published public aggregate report**, run from the
 repository root with the local Python dependencies installed. This is not a
@@ -686,9 +750,10 @@ raw API responses, or private account information in those records.
 - [ ] A real manual refresh authenticates, publishes, and matches GA4 with the
       same reporting periods and filters. Check the actual GA4 collection tag;
       the legacy UA tag alone cannot supply GA4 data.
-- [ ] A content-only deployment preserves the snapshot/timestamp; a later
-      scheduled or manual refresh updates it. The retained/unavailable state and
-      failed-run signal are checked for refresh failures.
+- [ ] A merged content PR triggers a push refresh; scheduled/manual refreshes
+      also update the report on success. Failed refreshes preserve the previous
+      snapshot/timestamp. The retained/unavailable state and failed-run signal
+      are checked without weakening production credentials or trust conditions.
 
 Mocked tests and a populated workflow are **not live GA4 verification**. The
 Node DOM harness executes real explorer code against rendered fixture markup,

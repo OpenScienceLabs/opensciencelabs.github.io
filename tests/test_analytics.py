@@ -21,6 +21,15 @@ from scripts.analytics.audit import audit
 NOW = datetime(2026, 9, 16, 6, 23, tzinfo=timezone.utc)
 SETTINGS = export.Settings("123456789", ["opensciencelabs.org"])
 FIXTURE = Path(__file__).parent / "fixtures/analytics.json"
+CI_ENV = {
+    "GITHUB_ACTIONS": "true",
+    "GITHUB_REPOSITORY": export.REPOSITORY,
+    "GITHUB_REF": "refs/heads/main",
+    "GITHUB_EVENT_NAME": "push",
+    "GA4_PROPERTY_ID": SETTINGS.property_id,
+    "GA4_HOSTNAMES": ",".join(SETTINGS.hosts),
+    "GA4_ACCESS_TOKEN": "synthetic-test-token-not-a-credential",
+}
 
 
 def response(metrics, rows, dimensions=(), zone="America/New_York", **meta):
@@ -338,25 +347,74 @@ class ExportTests(unittest.TestCase):
             self.assertNotEqual(result["generated_at"], NOW.isoformat())
 
     def test_live_cli_restricted_to_ci_and_missing_configuration(self):
-        """Local execution and missing CI configuration never touch a file."""
-        trusted = dict(
-            GITHUB_ACTIONS="true",
-            GITHUB_REPOSITORY=export.REPOSITORY,
-            GITHUB_REF="refs/heads/main",
-            GITHUB_EVENT_NAME="schedule",
-        )
+        """Reject untrusted runs even with otherwise complete configuration."""
         for env in [
             {},
-            trusted,
-            {**trusted, "GITHUB_EVENT_NAME": "pull_request"},
+            {**CI_ENV, "GITHUB_ACTIONS": "false"},
+            {**CI_ENV, "GITHUB_REPOSITORY": "fork/opensciencelabs.github.io"},
+            {**CI_ENV, "GITHUB_REF": "refs/heads/feature"},
+            {**CI_ENV, "GITHUB_REF": "refs/pull/123/merge"},
+            {**CI_ENV, "GITHUB_REF": "refs/tags/main"},
+            {**CI_ENV, "GITHUB_EVENT_NAME": "pull_request"},
+            {**CI_ENV, "GITHUB_EVENT_NAME": "pull_request_target"},
+            {**CI_ENV, "GITHUB_EVENT_NAME": "workflow_run"},
+            {**CI_ENV, "GA4_PROPERTY_ID": ""},
+            {**CI_ENV, "GA4_HOSTNAMES": ""},
+            {**CI_ENV, "GA4_ACCESS_TOKEN": ""},
         ]:
             with (
                 self.subTest(env=env),
                 patch.dict("os.environ", env, clear=True),
+                patch.object(export, "GoogleClient") as client,
                 patch.object(export, "refresh") as refresh,
             ):
                 self.assertEqual(export.main(), 1)
+                client.assert_not_called()
                 refresh.assert_not_called()
+
+    def test_live_cli_refreshes_all_trusted_production_events(self):
+        """Pushes, schedules and manual dispatches all reach the export."""
+        for event in ("push", "schedule", "workflow_dispatch"):
+            with (
+                self.subTest(event=event),
+                patch.dict(
+                    "os.environ",
+                    {**CI_ENV, "GITHUB_EVENT_NAME": event},
+                    clear=True,
+                ),
+                patch.object(export, "GoogleClient") as client,
+                patch.object(export, "refresh") as refresh,
+            ):
+                self.assertEqual(export.main(), 0)
+                client.assert_called_once_with(CI_ENV["GA4_ACCESS_TOKEN"])
+                refresh.assert_called_once_with(
+                    export.SNAPSHOT, client.return_value, SETTINGS
+                )
+
+    def test_push_cli_failure_preserves_snapshot_and_timestamp(self):
+        """Failed push refreshes return failure without replacing old data."""
+        original = export.collect(FakeClient(), SETTINGS, NOW)
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "snapshot.json"
+            report.write_snapshot(path, original)
+            before = path.read_bytes()
+            with (
+                patch.dict("os.environ", CI_ENV, clear=True),
+                patch.object(export, "SNAPSHOT", path),
+                patch.object(
+                    export,
+                    "GoogleClient",
+                    return_value=FakeClient(
+                        [RuntimeError("Synthetic failure")]
+                    ),
+                ),
+            ):
+                self.assertEqual(export.main(), 1)
+            self.assertEqual(path.read_bytes(), before)
+            self.assertEqual(
+                report.read_snapshot(path)["generated_at"],
+                original["generated_at"],
+            )
 
     def test_sdk_request_compatibility_if_installed(self):
         """Check real protobuf request construction in credential-free CI."""

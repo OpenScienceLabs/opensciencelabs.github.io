@@ -49,7 +49,7 @@ jobs:
       contents: write
       id-token: write
     outputs:
-      refresh_failed: ${{ (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && steps.refresh.outcome != 'success' }}
+      refresh_failed: ${{ (github.event_name == 'push' || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && steps.refresh.outcome != 'success' }}
     env:
       # Non-secret identifiers; credentials are generated only in the auth step.
       GA4_PROPERTY_ID: "365530978"
@@ -106,10 +106,12 @@ jobs:
           pre-commit install
           pre-commit run --all-files --verbose
 
+      # Every main deployment, including a merged PR, attempts a fresh export.
+      # WIF must allow push, schedule and workflow_dispatch on this workflow.
       # Authenticate immediately before the API calls, after slow pre-builds.
       - name: Check refresh configuration
         id: analytics_config
-        if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
+        if: ${{ github.event_name == 'push' || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
         run: |
           if [[ -n "$GA4_PROPERTY_ID" && -n "$GA4_HOSTNAMES" && -n "$GA4_WIF_PROVIDER" && -n "$GA4_SERVICE_ACCOUNT" ]]; then
             echo "ready=true" >> "$GITHUB_OUTPUT"
