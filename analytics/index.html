@@ -92,6 +92,7 @@
 
     
 <link rel="stylesheet" href="../css/analytics.css">
+<script src="../js/analytics-model.js" defer></script>
 <script src="../js/analytics.js" defer></script>
 
 
@@ -1854,251 +1855,105 @@
           
 
 
-<div class="analytics-dashboard" data-analytics-report>
-  <header class="analytics-header">
-    <div>
-      <p class="analytics-eyebrow">Open Science Labs / Transparency</p>
-      <h1>Audience &amp; reach<span aria-hidden="true">.</span></h1>
-      <p class="analytics-intro">A shared view of the people discovering open science.</p>
-      <p class="analytics-source">OSL-published data · Sourced from Google Analytics</p>
-    </div>
-    <div class="analytics-actions">
-      <a class="analytics-button" href="data.json" download="osl-analytics.json">Download JSON <span aria-hidden="true">↓</span></a>
-      <a class="analytics-sponsor" href="../about/sponsorship/">Sponsor our work <span aria-hidden="true">↗</span></a>
-    </div>
+<div class="analytics-app" data-analytics-report>
+  <header class="analytics-app-header">
+    <div class="analytics-brand"><span class="analytics-brand-icon" aria-hidden="true">▥</span><div><h1>Analytics</h1><p>Open Science Labs <span aria-hidden="true">/</span> Website reports</p></div></div>
+    <div class="analytics-header-actions"><a href="data.json" download="osl-analytics.json">Download JSON <span aria-hidden="true">↓</span></a><a href="../about/sponsorship/">Sponsorship <span aria-hidden="true">↗</span></a></div>
   </header>
   
   
-  <section class="analytics-period-strip" aria-label="Reporting scope and freshness">
-    <div><span class="analytics-eyebrow">Last 30 completed days</span><p><time datetime="2026-08-17">2026-08-17</time> <span aria-hidden="true">→</span><span class="analytics-sr-only">through</span> <time datetime="2026-09-15">2026-09-15</time></p></div>
-    <dl class="analytics-metadata">
-      <div><dt>Reporting timezone</dt><dd>America/La_Paz</dd></div>
-      <div><dt>Hostname · Web only</dt><dd>opensciencelabs.org</dd></div>
-      <div><dt>Last successful refresh (UTC)</dt><dd><time id="analytics-refreshed" datetime="2026-09-16T20:13:47.264055Z">2026-09-16T20:13:47.264055Z</time></dd></div>
-    </dl>
-  </section>
-  <p id="analytics-stale" class="analytics-notice" role="status" hidden><strong>Stale data.</strong> The last successful refresh was more than three days ago. These are the last available figures, not a current report.</p>
-  <noscript><p class="analytics-footnote">Freshness was checked at build time. Reports older than three days are stale.</p></noscript>
-  <p class="analytics-notice">This retained report predates the expanded dashboard. Daily trends, comparisons and audience panels await a successful refresh.</p>
-
-  <section id="analytics-overview" aria-labelledby="analytics-summary-title">
-    <div class="analytics-section-heading"><h2 id="analytics-summary-title">The last 30 days, at a glance</h2><a href="#analytics-methodology">What do these numbers mean?</a></div>
-    <div class="analytics-metrics">
-      
-      <section class="analytics-metric analytics-metric--pageviews" aria-labelledby="metric-pageviews">
-        <dl><dt id="metric-pageviews">Pageviews</dt><dd>1,577</dd></dl>
-        <p class="analytics-change analytics-change--neutral">Comparison not available yet</p>
-        
-        <p class="analytics-definition">Measured page loads, including repeat views</p>
-      </section>
-      
-      <section class="analytics-metric analytics-metric--active_users" aria-labelledby="metric-active_users">
-        <dl><dt id="metric-active_users">Active users</dt><dd>1,151</dd></dl>
-        <p class="analytics-change analytics-change--neutral">Comparison not available yet</p>
-        
-        <p class="analytics-definition">Distinct active users over all 30 days</p>
-      </section>
-      
-      <section class="analytics-metric analytics-metric--sessions" aria-labelledby="metric-sessions">
-        <dl><dt id="metric-sessions">Sessions</dt><dd>1,234</dd></dl>
-        <p class="analytics-change analytics-change--neutral">Comparison not available yet</p>
-        
-        <p class="analytics-definition">Visits that began during this reporting period</p>
-      </section>
-      
-    </div>
-    
-  </section>
-
-  <section class="analytics-trends analytics-panel" aria-labelledby="analytics-trends-title">
-    <div class="analytics-section-heading">
-      <div><p class="analytics-eyebrow">Traffic over time</p><h2 id="analytics-trends-title">The bigger picture</h2></div>
-      <div class="analytics-chart-switch" role="group" aria-label="Choose traffic chart" hidden data-chart-switch data-default-chart="monthly">
-        <button type="button" data-chart-target="daily" aria-controls="analytics-daily" aria-pressed="false">30-day trend</button>
-        <button type="button" data-chart-target="monthly" aria-controls="analytics-monthly" aria-pressed="false">12-month history</button>
+  <div class="analytics-workspace">
+    <aside class="analytics-sidebar">
+      <p class="analytics-nav-label">REPORTS</p>
+      <nav aria-label="Analytics reports">
+        <a href="#report-overview" data-report="overview" aria-current="page"><span aria-hidden="true">▦</span> Overview</a>
+        <a href="#report-channels" data-report="channels"><span aria-hidden="true">↗</span> Acquisition</a>
+        <a href="#report-countries" data-report="countries"><span aria-hidden="true">◎</span> Countries</a>
+        <a href="#report-devices" data-report="devices"><span aria-hidden="true">▣</span> Devices</a>
+        <a href="#report-pages" data-report="pages"><span aria-hidden="true">▤</span> Pages</a>
+      </nav>
+      <div class="analytics-sidebar-note"><span class="analytics-status-dot" aria-hidden="true"></span> Scheduled daily<p>Aggregate website traffic.<br>Not realtime.</p><a href="#analytics-methodology">About this data</a></div>
+    </aside>
+    <div class="analytics-main">
+      <div class="analytics-toolbar">
+        <div><h2 id="analytics-view-title" tabindex="-1">Reports overview</h2><p class="analytics-scope">Web only · opensciencelabs.org</p></div>
+        <div class="analytics-date-controls">
+          <label data-enhance hidden>Reporting window<select id="analytics-window"><option value="7">Last 7 completed days</option><option value="30" selected>Last 30 completed days</option><option value="90">Last 90 completed days</option></select></label>
+          <p id="analytics-dates"><time datetime="2026-08-17">2026-08-17</time> – <time datetime="2026-09-15">2026-09-15</time></p>
+        </div>
       </div>
-    </div>
-    
-<section id="analytics-daily" class="analytics-trend-panel" aria-labelledby="daily-title">
-  <div class="analytics-chart-heading"><h3 id="daily-title">Daily pageviews</h3><span>Pageviews · zero-based scale</span></div>
-  <p class="analytics-footnote">Requested dates: 2026-08-17 through 2026-09-15, inclusive.</p>
-  
-  <p class="analytics-panel-empty">Daily history is not available in this snapshot. No values have been inferred.</p>
-  
-  <details class="analytics-data-table">
-    <summary>View daily data table</summary>
-    <div class="analytics-table-wrap" role="region" aria-label="Daily pageviews data table" tabindex="0">
-      <table class="analytics-table" id="daily-table">
-        <caption>Daily pageviews. Dates use the reporting timezone shown above.</caption>
-        <thead><tr><th scope="col">Date</th><th scope="col">Pageviews</th></tr></thead>
-        <tbody><tr><th scope="row"><time datetime="2026-08-17">2026-08-17</time></th><td>Not reported</td></tr><tr><th scope="row"><time datetime="2026-08-18">2026-08-18</time></th><td>Not reported</td></tr><tr><th scope="row"><time datetime="2026-08-19">2026-08-19</time></th><td>Not reported</td></tr><tr><th scope="row"><time datetime="2026-08-20">2026-08-20</time></th><td>Not reported</td></tr><tr><th scope="row"><time datetime="2026-08-21">2026-08-21</time></th><td>Not reported</td></tr><tr><th scope="row"><time datetime="2026-08-22">2026-08-22</time></th><td>Not reported</td></tr><tr><th scope="row"><time datetime="2026-08-23">2026-08-23</time></th><td>Not reported</td></tr><tr><th scope="row"><time datetime="2026-08-24">2026-08-24</time></th><td>Not reported</td></tr><tr><th scope="row"><time datetime="2026-08-25">2026-08-25</time></th><td>Not reported</td></tr><tr><th scope="row"><time datetime="2026-08-26">2026-08-26</time></th><td>Not reported</td></tr><tr><th scope="row"><time datetime="2026-08-27">2026-08-27</time></th><td>Not reported</td></tr><tr><th scope="row"><time datetime="2026-08-28">2026-08-28</time></th><td>Not reported</td></tr><tr><th scope="row"><time datetime="2026-08-29">2026-08-29</time></th><td>Not reported</td></tr><tr><th scope="row"><time datetime="2026-08-30">2026-08-30</time></th><td>Not reported</td></tr><tr><th scope="row"><time datetime="2026-08-31">2026-08-31</time></th><td>Not reported</td></tr><tr><th scope="row"><time datetime="2026-09-01">2026-09-01</time></th><td>Not reported</td></tr><tr><th scope="row"><time datetime="2026-09-02">2026-09-02</time></th><td>Not reported</td></tr><tr><th scope="row"><time datetime="2026-09-03">2026-09-03</time></th><td>Not reported</td></tr><tr><th scope="row"><time datetime="2026-09-04">2026-09-04</time></th><td>Not reported</td></tr><tr><th scope="row"><time datetime="2026-09-05">2026-09-05</time></th><td>Not reported</td></tr><tr><th scope="row"><time datetime="2026-09-06">2026-09-06</time></th><td>Not reported</td></tr><tr><th scope="row"><time datetime="2026-09-07">2026-09-07</time></th><td>Not reported</td></tr><tr><th scope="row"><time datetime="2026-09-08">2026-09-08</time></th><td>Not reported</td></tr><tr><th scope="row"><time datetime="2026-09-09">2026-09-09</time></th><td>Not reported</td></tr><tr><th scope="row"><time datetime="2026-09-10">2026-09-10</time></th><td>Not reported</td></tr><tr><th scope="row"><time datetime="2026-09-11">2026-09-11</time></th><td>Not reported</td></tr><tr><th scope="row"><time datetime="2026-09-12">2026-09-12</time></th><td>Not reported</td></tr><tr><th scope="row"><time datetime="2026-09-13">2026-09-13</time></th><td>Not reported</td></tr><tr><th scope="row"><time datetime="2026-09-14">2026-09-14</time></th><td>Not reported</td></tr><tr><th scope="row"><time datetime="2026-09-15">2026-09-15</time></th><td>Not reported</td></tr></tbody>
-      </table>
-    </div>
-  </details>
-</section>
+      <div class="analytics-freshness"><span>Timezone: <strong>America/La_Paz</strong></span><span>Last successful refresh (UTC): <time id="analytics-refreshed" datetime="2026-09-16T20:13:47.264055Z">2026-09-16T20:13:47.264055Z</time></span></div>
+      <p id="analytics-stale" class="analytics-alert" role="status" hidden><strong>Stale data.</strong> This successful snapshot is more than three days old.</p>
+      <p id="analytics-capabilities" class="analytics-alert" hidden></p>
+      <div id="analytics-notices"><p class="analytics-alert">This retained report predates the expanded dashboard. Daily trends, comparisons and audience panels await a successful refresh.</p></div>
 
-    
-<section id="analytics-monthly" class="analytics-trend-panel" aria-labelledby="monthly-title">
-  <div class="analytics-chart-heading"><h3 id="monthly-title">Monthly pageviews</h3><span>Pageviews · zero-based scale</span></div>
-  <p class="analytics-footnote">Requested dates: 2025-09-01 through 2026-08-31, inclusive.</p>
-  
-  <figure class="analytics-chart">
-    <svg viewBox="0 0 720 240" aria-hidden="true" focusable="false">
-      
-      <line class="analytics-gridline" x1="100" x2="700" y1="190.0" y2="190.0"/>
-      <text class="analytics-axis" x="89" y="194.0" text-anchor="end">0</text>
-      
-      <line class="analytics-gridline" x1="100" x2="700" y1="150.0" y2="150.0"/>
-      <text class="analytics-axis" x="89" y="154.0" text-anchor="end">2,000</text>
-      
-      <line class="analytics-gridline" x1="100" x2="700" y1="110.0" y2="110.0"/>
-      <text class="analytics-axis" x="89" y="114.0" text-anchor="end">4,000</text>
-      
-      <line class="analytics-gridline" x1="100" x2="700" y1="70.0" y2="70.0"/>
-      <text class="analytics-axis" x="89" y="74.0" text-anchor="end">6,000</text>
-      
-      <line class="analytics-gridline" x1="100" x2="700" y1="30.0" y2="30.0"/>
-      <text class="analytics-axis" x="89" y="34.0" text-anchor="end">8,000</text>
-      
-      
-      
+      <section class="analytics-metrics" aria-label="Whole-period website totals">
         
-          
-          <rect class="analytics-bar" x="111.0" y="171.6" width="28" height="18.400000000000006" rx="3"><title>2025-09: 920 pageviews</title></rect>
-          
-          <circle class="analytics-point" cx="125.0" cy="171.6" r="2"><title>2025-09: 920 pageviews</title></circle>
+        <div class="analytics-metric"><button type="button" data-metric="pageviews" aria-pressed="true" disabled><span class="analytics-metric-label">Pageviews</span><span class="analytics-metric-value">1,577</span></button><p class="analytics-change" data-change="pageviews">Comparison not available yet</p><p class="analytics-definition">Measured page loads, including repeat views</p></div>
         
-      
+        <div class="analytics-metric"><button type="button" data-metric="active_users" aria-pressed="false" disabled><span class="analytics-metric-label">Active users</span><span class="analytics-metric-value">1,151</span></button><p class="analytics-change" data-change="active_users">Comparison not available yet</p><p class="analytics-definition">Distinct active users over the full reporting period</p></div>
         
-          
-          <rect class="analytics-bar" x="161.0" y="162.18" width="28" height="27.819999999999993" rx="3"><title>2025-10: 1391 pageviews</title></rect>
-          
-          <circle class="analytics-point" cx="175.0" cy="162.18" r="2"><title>2025-10: 1391 pageviews</title></circle>
-        
-      
-        
-          
-          <rect class="analytics-bar" x="211.0" y="140.1" width="28" height="49.900000000000006" rx="3"><title>2025-11: 2495 pageviews</title></rect>
-          
-          <circle class="analytics-point" cx="225.0" cy="140.1" r="2"><title>2025-11: 2495 pageviews</title></circle>
-        
-      
-        
-          
-          <rect class="analytics-bar" x="261.0" y="133.78" width="28" height="56.22" rx="3"><title>2025-12: 2811 pageviews</title></rect>
-          
-          <circle class="analytics-point" cx="275.0" cy="133.78" r="2"><title>2025-12: 2811 pageviews</title></circle>
-        
-      
-        
-          
-          <rect class="analytics-bar" x="311.0" y="141.72" width="28" height="48.28" rx="3"><title>2026-01: 2414 pageviews</title></rect>
-          
-          <circle class="analytics-point" cx="325.0" cy="141.72" r="2"><title>2026-01: 2414 pageviews</title></circle>
-        
-      
-        
-          
-          <rect class="analytics-bar" x="361.0" y="101.56" width="28" height="88.44" rx="3"><title>2026-02: 4422 pageviews</title></rect>
-          
-          <circle class="analytics-point" cx="375.0" cy="101.56" r="2"><title>2026-02: 4422 pageviews</title></circle>
-        
-      
-        
-          
-          <rect class="analytics-bar" x="411.0" y="43.44" width="28" height="146.56" rx="3"><title>2026-03: 7328 pageviews</title></rect>
-          
-          <circle class="analytics-point" cx="425.0" cy="43.44" r="2"><title>2026-03: 7328 pageviews</title></circle>
-        
-      
-        
-          
-          <rect class="analytics-bar" x="461.0" y="164.6" width="28" height="25.400000000000006" rx="3"><title>2026-04: 1270 pageviews</title></rect>
-          
-          <circle class="analytics-point" cx="475.0" cy="164.6" r="2"><title>2026-04: 1270 pageviews</title></circle>
-        
-      
-        
-          
-          <rect class="analytics-bar" x="511.0" y="164.5" width="28" height="25.5" rx="3"><title>2026-05: 1275 pageviews</title></rect>
-          
-          <circle class="analytics-point" cx="525.0" cy="164.5" r="2"><title>2026-05: 1275 pageviews</title></circle>
-        
-      
-        
-          
-          <rect class="analytics-bar" x="561.0" y="163.92" width="28" height="26.080000000000013" rx="3"><title>2026-06: 1304 pageviews</title></rect>
-          
-          <circle class="analytics-point" cx="575.0" cy="163.92" r="2"><title>2026-06: 1304 pageviews</title></circle>
-        
-      
-        
-          
-          <rect class="analytics-bar" x="611.0" y="168.3" width="28" height="21.69999999999999" rx="3"><title>2026-07: 1085 pageviews</title></rect>
-          
-          <circle class="analytics-point" cx="625.0" cy="168.3" r="2"><title>2026-07: 1085 pageviews</title></circle>
-        
-      
-        
-          
-          <rect class="analytics-bar" x="661.0" y="163.4" width="28" height="26.599999999999994" rx="3"><title>2026-08: 1330 pageviews</title></rect>
-          
-          <circle class="analytics-point" cx="675.0" cy="163.4" r="2"><title>2026-08: 1330 pageviews</title></circle>
-        
-      
-      <text class="analytics-axis" x="100" y="224">2025-09</text>
-      <text class="analytics-axis" x="700" y="224" text-anchor="end">2026-08</text>
-    </svg>
-    <figcaption>Exact values below. Gaps mean not reported, not zero. The current month is excluded.</figcaption>
-  </figure>
-  
-  <details class="analytics-data-table">
-    <summary>View monthly data table</summary>
-    <div class="analytics-table-wrap" role="region" aria-label="Monthly pageviews data table" tabindex="0">
-      <table class="analytics-table" id="monthly-table">
-        <caption>Monthly pageviews. Dates use the reporting timezone shown above.</caption>
-        <thead><tr><th scope="col">Month</th><th scope="col">Reporting dates</th><th scope="col">Pageviews</th></tr></thead>
-        <tbody><tr><th scope="row"><time datetime="2025-09">2025-09</time></th><td><time datetime="2025-09-01">2025-09-01</time> – <time datetime="2025-09-30">2025-09-30</time></td><td>920</td></tr><tr><th scope="row"><time datetime="2025-10">2025-10</time></th><td><time datetime="2025-10-01">2025-10-01</time> – <time datetime="2025-10-31">2025-10-31</time></td><td>1,391</td></tr><tr><th scope="row"><time datetime="2025-11">2025-11</time></th><td><time datetime="2025-11-01">2025-11-01</time> – <time datetime="2025-11-30">2025-11-30</time></td><td>2,495</td></tr><tr><th scope="row"><time datetime="2025-12">2025-12</time></th><td><time datetime="2025-12-01">2025-12-01</time> – <time datetime="2025-12-31">2025-12-31</time></td><td>2,811</td></tr><tr><th scope="row"><time datetime="2026-01">2026-01</time></th><td><time datetime="2026-01-01">2026-01-01</time> – <time datetime="2026-01-31">2026-01-31</time></td><td>2,414</td></tr><tr><th scope="row"><time datetime="2026-02">2026-02</time></th><td><time datetime="2026-02-01">2026-02-01</time> – <time datetime="2026-02-28">2026-02-28</time></td><td>4,422</td></tr><tr><th scope="row"><time datetime="2026-03">2026-03</time></th><td><time datetime="2026-03-01">2026-03-01</time> – <time datetime="2026-03-31">2026-03-31</time></td><td>7,328</td></tr><tr><th scope="row"><time datetime="2026-04">2026-04</time></th><td><time datetime="2026-04-01">2026-04-01</time> – <time datetime="2026-04-30">2026-04-30</time></td><td>1,270</td></tr><tr><th scope="row"><time datetime="2026-05">2026-05</time></th><td><time datetime="2026-05-01">2026-05-01</time> – <time datetime="2026-05-31">2026-05-31</time></td><td>1,275</td></tr><tr><th scope="row"><time datetime="2026-06">2026-06</time></th><td><time datetime="2026-06-01">2026-06-01</time> – <time datetime="2026-06-30">2026-06-30</time></td><td>1,304</td></tr><tr><th scope="row"><time datetime="2026-07">2026-07</time></th><td><time datetime="2026-07-01">2026-07-01</time> – <time datetime="2026-07-31">2026-07-31</time></td><td>1,085</td></tr><tr><th scope="row"><time datetime="2026-08">2026-08</time></th><td><time datetime="2026-08-01">2026-08-01</time> – <time datetime="2026-08-31">2026-08-31</time></td><td>1,330</td></tr></tbody>
-      </table>
-    </div>
-  </details>
-</section>
-
-  </section>
-
-  <section aria-labelledby="analytics-audience-title">
-    <div class="analytics-section-heading"><div><p class="analytics-eyebrow">Audience overview</p><h2 id="analytics-audience-title">Across borders. Across devices.</h2></div><span class="analytics-footnote">Same 30-day reporting window</span></div>
-    <div class="analytics-audience-grid">
-      
-      <section class="analytics-panel analytics-breakdown analytics-breakdown--countries" aria-labelledby="countries-title">
-        <p class="analytics-eyebrow">countries</p><h3 id="countries-title">Where our audience is</h3><p class="analytics-panel-description">Country-level pageviews</p>
-        
-        <p class="analytics-panel-empty">Available after the next successful dashboard refresh. This retained snapshot does not include the breakdown yet.</p>
+        <div class="analytics-metric"><button type="button" data-metric="sessions" aria-pressed="false" disabled><span class="analytics-metric-label">Sessions</span><span class="analytics-metric-value">1,234</span></button><p class="analytics-change" data-change="sessions">Comparison not available yet</p><p class="analytics-definition">Visits that began during this reporting period</p></div>
         
       </section>
-      
-      <section class="analytics-panel analytics-breakdown analytics-breakdown--devices" aria-labelledby="devices-title">
-        <p class="analytics-eyebrow">devices</p><h3 id="devices-title">How people visit</h3><p class="analytics-panel-description">Pageviews by device category</p>
-        
-        <p class="analytics-panel-empty">Available after the next successful dashboard refresh. This retained snapshot does not include the breakdown yet.</p>
-        
-      </section>
-      
-      <section class="analytics-panel analytics-breakdown analytics-breakdown--channels" aria-labelledby="channels-title">
-        <p class="analytics-eyebrow">channels</p><h3 id="channels-title">How people find us</h3><p class="analytics-panel-description">Sessions by acquisition channel</p>
-        
-        <p class="analytics-panel-empty">Available after the next successful dashboard refresh. This retained snapshot does not include the breakdown yet.</p>
-        
-      </section>
-      
-    </div>
-    <p class="analytics-footnote">Up to 10 named categories per panel, each with at least 10 active users over the full period. Smaller, remaining and unclassified categories are combined as “Other / unknown”. No distinct-user counts are added across categories. Country is approximate activity location, not nationality.</p>
-  </section>
-  
+      <p class="analytics-comparison-dates" id="analytics-comparison-dates">Comparison not available in this snapshot.</p>
 
-  <section id="analytics-methodology" class="analytics-methodology analytics-panel" aria-labelledby="analytics-methodology-title">
-    <div><p class="analytics-eyebrow">Behind the numbers</p><h2 id="analytics-methodology-title">Measured traffic, not the whole community.</h2><p>Consent choices and blockers can exclude visits. Recent figures may change during processing. These are website measurements, not a guarantee of sponsorship reach.</p></div>
-    <details><summary>Read our methodology &amp; limitations</summary><div class="analytics-methodology-content"><h2 id="how-we-measure">How we measure<a class="headerlink" href="#how-we-measure" title="Permanent link"> #</a></h2>
+      <section id="report-overview" data-section="overview" aria-labelledby="analytics-trend-title">
+        <div class="analytics-card analytics-trend">
+          <div class="analytics-card-heading"><div><h3 id="analytics-trend-title">Pageviews over time</h3><p id="analytics-chart-subtitle">All website traffic in the selected reporting window</p></div><div class="analytics-chart-tools" data-enhance hidden><label><input type="checkbox" id="analytics-compare" checked> Previous period</label><button type="button" id="analytics-table-toggle" aria-controls="analytics-series-table" aria-expanded="false">View data table</button><button type="button" id="analytics-series-csv">CSV ↓</button></div></div>
+          <div id="analytics-chart" class="analytics-chart" role="group" aria-label="Traffic chart and date inspection">
+            <p class="analytics-empty">Daily history is not available in this snapshot. See the completed-month history below.</p>
+          </div>
+          <div class="analytics-chart-legend" data-enhance hidden><span><i class="analytics-legend-current"></i> Selected period</span><span id="analytics-previous-legend"><i class="analytics-legend-previous"></i> Previous period (aligned by day)</span></div>
+          <div class="analytics-inspect" data-enhance hidden><label for="analytics-inspect-date">Inspect a date</label><input id="analytics-inspect-date" type="range" min="0" max="29" value="29"><output id="analytics-point-detail" for="analytics-inspect-date" aria-live="polite"></output></div>
+          <div id="analytics-series-table" class="analytics-table-scroll" role="region" aria-label="Exact daily figures" tabindex="0"><table class="analytics-table"><caption>Daily pageviews · America/La_Paz. Not reported is not zero.</caption><thead><tr><th scope="col">Date</th><th scope="col">Pageviews</th></tr></thead><tbody><tr><th scope="row">2026-08-17</th><td>Not reported</td></tr><tr><th scope="row">2026-08-18</th><td>Not reported</td></tr><tr><th scope="row">2026-08-19</th><td>Not reported</td></tr><tr><th scope="row">2026-08-20</th><td>Not reported</td></tr><tr><th scope="row">2026-08-21</th><td>Not reported</td></tr><tr><th scope="row">2026-08-22</th><td>Not reported</td></tr><tr><th scope="row">2026-08-23</th><td>Not reported</td></tr><tr><th scope="row">2026-08-24</th><td>Not reported</td></tr><tr><th scope="row">2026-08-25</th><td>Not reported</td></tr><tr><th scope="row">2026-08-26</th><td>Not reported</td></tr><tr><th scope="row">2026-08-27</th><td>Not reported</td></tr><tr><th scope="row">2026-08-28</th><td>Not reported</td></tr><tr><th scope="row">2026-08-29</th><td>Not reported</td></tr><tr><th scope="row">2026-08-30</th><td>Not reported</td></tr><tr><th scope="row">2026-08-31</th><td>Not reported</td></tr><tr><th scope="row">2026-09-01</th><td>Not reported</td></tr><tr><th scope="row">2026-09-02</th><td>Not reported</td></tr><tr><th scope="row">2026-09-03</th><td>Not reported</td></tr><tr><th scope="row">2026-09-04</th><td>Not reported</td></tr><tr><th scope="row">2026-09-05</th><td>Not reported</td></tr><tr><th scope="row">2026-09-06</th><td>Not reported</td></tr><tr><th scope="row">2026-09-07</th><td>Not reported</td></tr><tr><th scope="row">2026-09-08</th><td>Not reported</td></tr><tr><th scope="row">2026-09-09</th><td>Not reported</td></tr><tr><th scope="row">2026-09-10</th><td>Not reported</td></tr><tr><th scope="row">2026-09-11</th><td>Not reported</td></tr><tr><th scope="row">2026-09-12</th><td>Not reported</td></tr><tr><th scope="row">2026-09-13</th><td>Not reported</td></tr><tr><th scope="row">2026-09-14</th><td>Not reported</td></tr><tr><th scope="row">2026-09-15</th><td>Not reported</td></tr></tbody></table></div>
+        </div>
+        <div id="analytics-overview-panels" class="analytics-overview-grid" data-enhance hidden></div>
+        <div class="analytics-card analytics-history"><div class="analytics-card-heading"><div><h3>12-month pageview history</h3><p>2025-09-01 – 2026-08-31 · completed months only, independent of the date selector</p></div></div><div class="analytics-history-bars" aria-hidden="true"><div><span class="analytics-month-value">920</span><span class="analytics-month-track"><i style="height: 11.500000000000004%"></i></span><span>2025-09</span></div><div><span class="analytics-month-value">1,391</span><span class="analytics-month-track"><i style="height: 17.387499999999996%"></i></span><span>2025-10</span></div><div><span class="analytics-month-value">2,495</span><span class="analytics-month-track"><i style="height: 31.1875%"></i></span><span>2025-11</span></div><div><span class="analytics-month-value">2,811</span><span class="analytics-month-track"><i style="height: 35.1375%"></i></span><span>2025-12</span></div><div><span class="analytics-month-value">2,414</span><span class="analytics-month-track"><i style="height: 30.175%"></i></span><span>2026-01</span></div><div><span class="analytics-month-value">4,422</span><span class="analytics-month-track"><i style="height: 55.275%"></i></span><span>2026-02</span></div><div><span class="analytics-month-value">7,328</span><span class="analytics-month-track"><i style="height: 91.60000000000001%"></i></span><span>2026-03</span></div><div><span class="analytics-month-value">1,270</span><span class="analytics-month-track"><i style="height: 15.875000000000004%"></i></span><span>2026-04</span></div><div><span class="analytics-month-value">1,275</span><span class="analytics-month-track"><i style="height: 15.937499999999998%"></i></span><span>2026-05</span></div><div><span class="analytics-month-value">1,304</span><span class="analytics-month-track"><i style="height: 16.300000000000008%"></i></span><span>2026-06</span></div><div><span class="analytics-month-value">1,085</span><span class="analytics-month-track"><i style="height: 13.562499999999995%"></i></span><span>2026-07</span></div><div><span class="analytics-month-value">1,330</span><span class="analytics-month-track"><i style="height: 16.624999999999996%"></i></span><span>2026-08</span></div></div><div class="analytics-table-scroll analytics-history-table" role="region" aria-label="Monthly history" tabindex="0"><table class="analytics-table" id="monthly-table"><caption>Exact completed-month pageviews. Missing months are not reported, not zero.</caption><thead><tr><th scope="col">Month</th><th scope="col">Reporting dates</th><th scope="col">Pageviews</th></tr></thead><tbody><tr><th scope="row">2025-09</th><td>2025-09-01 – 2025-09-30</td><td>920</td></tr><tr><th scope="row">2025-10</th><td>2025-10-01 – 2025-10-31</td><td>1,391</td></tr><tr><th scope="row">2025-11</th><td>2025-11-01 – 2025-11-30</td><td>2,495</td></tr><tr><th scope="row">2025-12</th><td>2025-12-01 – 2025-12-31</td><td>2,811</td></tr><tr><th scope="row">2026-01</th><td>2026-01-01 – 2026-01-31</td><td>2,414</td></tr><tr><th scope="row">2026-02</th><td>2026-02-01 – 2026-02-28</td><td>4,422</td></tr><tr><th scope="row">2026-03</th><td>2026-03-01 – 2026-03-31</td><td>7,328</td></tr><tr><th scope="row">2026-04</th><td>2026-04-01 – 2026-04-30</td><td>1,270</td></tr><tr><th scope="row">2026-05</th><td>2026-05-01 – 2026-05-31</td><td>1,275</td></tr><tr><th scope="row">2026-06</th><td>2026-06-01 – 2026-06-30</td><td>1,304</td></tr><tr><th scope="row">2026-07</th><td>2026-07-01 – 2026-07-31</td><td>1,085</td></tr><tr><th scope="row">2026-08</th><td>2026-08-01 – 2026-08-31</td><td>1,330</td></tr></tbody></table></div></div>
+      </section>
+
+      
+      <section id="report-countries" class="analytics-card analytics-detail" data-section="countries" aria-labelledby="countries-title">
+        <div class="analytics-card-heading"><div><h3 id="countries-title">Countries</h3><p>Country-level pageviews · selected reporting window</p></div><button type="button" data-export="countries" data-enhance hidden>Download CSV ↓</button></div>
+        <div data-ranking="countries" class="analytics-detail-ranking" aria-label="Preview of current table rows"></div>
+        <div class="analytics-table-tools" data-enhance hidden><label>Search this table<input type="search" data-search="countries" placeholder="Search countries…"></label><p>Table search does not filter the headline totals.</p></div>
+        <p data-panel-status="countries" class="analytics-panel-status" role="status">This snapshot does not include this report. Available after a successful new refresh.</p>
+        <div class="analytics-table-scroll" role="region" aria-label="countries table" tabindex="0"><table class="analytics-table" data-table="countries"><caption>Country-level pageviews. Shares include grouped categories.</caption><thead><tr><th scope="col" aria-sort="none"><button type="button" data-sort="label" data-panel="countries" disabled>Category ↕</button></th><th scope="col" aria-sort="descending"><button type="button" data-sort="value" data-panel="countries" disabled>Pageviews ↓</button></th><th scope="col">Share</th></tr></thead><tbody></tbody></table></div>
+        <p class="analytics-panel-note">Country is approximate activity location, not nationality. Up to 10 named categories with at least 10 active users each. Smaller and remaining categories are grouped. User counts are not summed across categories.</p>
+      </section>
+      
+      <section id="report-devices" class="analytics-card analytics-detail" data-section="devices" aria-labelledby="devices-title">
+        <div class="analytics-card-heading"><div><h3 id="devices-title">Devices</h3><p>Pageviews by device category · selected reporting window</p></div><button type="button" data-export="devices" data-enhance hidden>Download CSV ↓</button></div>
+        <div data-ranking="devices" class="analytics-detail-ranking" aria-label="Preview of current table rows"></div>
+        <div class="analytics-table-tools" data-enhance hidden><label>Search this table<input type="search" data-search="devices" placeholder="Search devices…"></label><p>Table search does not filter the headline totals.</p></div>
+        <p data-panel-status="devices" class="analytics-panel-status" role="status">This snapshot does not include this report. Available after a successful new refresh.</p>
+        <div class="analytics-table-scroll" role="region" aria-label="devices table" tabindex="0"><table class="analytics-table" data-table="devices"><caption>Pageviews by device category. Shares include grouped categories.</caption><thead><tr><th scope="col" aria-sort="none"><button type="button" data-sort="label" data-panel="devices" disabled>Category ↕</button></th><th scope="col" aria-sort="descending"><button type="button" data-sort="value" data-panel="devices" disabled>Pageviews ↓</button></th><th scope="col">Share</th></tr></thead><tbody></tbody></table></div>
+        <p class="analytics-panel-note">Up to 10 named categories with at least 10 active users each. Smaller and remaining categories are grouped. User counts are not summed across categories.</p>
+      </section>
+      
+      <section id="report-channels" class="analytics-card analytics-detail" data-section="channels" aria-labelledby="channels-title">
+        <div class="analytics-card-heading"><div><h3 id="channels-title">Traffic acquisition</h3><p>Sessions by acquisition channel · selected reporting window</p></div><button type="button" data-export="channels" data-enhance hidden>Download CSV ↓</button></div>
+        <div data-ranking="channels" class="analytics-detail-ranking" aria-label="Preview of current table rows"></div>
+        <div class="analytics-table-tools" data-enhance hidden><label>Search this table<input type="search" data-search="channels" placeholder="Search channels…"></label><p>Table search does not filter the headline totals.</p></div>
+        <p data-panel-status="channels" class="analytics-panel-status" role="status">This snapshot does not include this report. Available after a successful new refresh.</p>
+        <div class="analytics-table-scroll" role="region" aria-label="channels table" tabindex="0"><table class="analytics-table" data-table="channels"><caption>Sessions by acquisition channel. Shares include grouped categories.</caption><thead><tr><th scope="col" aria-sort="none"><button type="button" data-sort="label" data-panel="channels" disabled>Category ↕</button></th><th scope="col" aria-sort="descending"><button type="button" data-sort="value" data-panel="channels" disabled>Pageviews ↓</button></th><th scope="col">Share</th></tr></thead><tbody></tbody></table></div>
+        <p class="analytics-panel-note">Up to 10 named categories with at least 10 active users each. Smaller and remaining categories are grouped. User counts are not summed across categories.</p>
+      </section>
+      
+      <section id="report-pages" class="analytics-card analytics-detail" data-section="pages" aria-labelledby="pages-title">
+        <div class="analytics-card-heading"><div><h3 id="pages-title">Pages</h3><p>Pageviews on known public OSL pages · selected reporting window</p></div><button type="button" data-export="pages" data-enhance hidden>Download CSV ↓</button></div>
+        <div data-ranking="pages" class="analytics-detail-ranking" aria-label="Preview of current table rows"></div>
+        <div class="analytics-table-tools" data-enhance hidden><label>Search this table<input type="search" data-search="pages" placeholder="Search pages…"></label><p>Table search does not filter the headline totals.</p></div>
+        <p data-panel-status="pages" class="analytics-panel-status" role="status">This snapshot does not include this report. Available after a successful new refresh.</p>
+        <div class="analytics-table-scroll" role="region" aria-label="pages table" tabindex="0"><table class="analytics-table" data-table="pages"><caption>Pageviews on known public OSL pages. Shares include grouped categories.</caption><thead><tr><th scope="col" aria-sort="none"><button type="button" data-sort="label" data-panel="pages" disabled>Category ↕</button></th><th scope="col" aria-sort="descending"><button type="button" data-sort="value" data-panel="pages" disabled>Pageviews ↓</button></th><th scope="col">Share</th></tr></thead><tbody></tbody></table></div>
+        <p class="analytics-panel-note">Only known public OSL routes are included; unknown paths and query strings are never published. Up to 10 named categories with at least 10 active users each. Smaller and remaining categories are grouped. User counts are not summed across categories.</p>
+      </section>
+      
+      <noscript><p class="analytics-alert">Showing the retained 30-day report and all tables. Interactive date, chart and table controls require JavaScript. Freshness was checked at build time.</p></noscript>
+    </div>
+  </div>
+  
+  <footer class="analytics-data-footer"><p><strong>OSL-published data sourced from Google Analytics.</strong> Consent choices and blockers can exclude visits; recent figures may change during processing.</p><details id="analytics-methodology"><summary>Methodology, reporting scope &amp; limitations</summary><h2 id="how-we-measure">How we measure<a class="headerlink" href="#how-we-measure" title="Permanent link"> #</a></h2>
 <p>This is <strong>OSL-published data sourced from Google Analytics 4 (GA4)</strong> via the
 Google Analytics Data API. It is not an independent audit or a guarantee of
 sponsorship reach. Only the aggregate fields in the downloadable report are
@@ -2108,19 +1963,24 @@ published; no visitor identifiers or raw API responses are included.</p>
   repeated views of the same page. The Web platform filter excludes app screens.</li>
 <li><strong>Active users</strong> (<code>activeUsers</code>): distinct users GA4 classifies as active,
   based on engagement and applicable first-visit or engagement signals. This is
-  queried over each entire 30-day period, not added from daily totals. It is not
-  a count of all visitors or a census of individual people.</li>
+  queried over each entire selected period, not added from daily totals. It is
+  not a count of all visitors or a census of individual people.</li>
 <li><strong>Sessions</strong> (<code>sessions</code>): sessions that began during the reporting period, as
   measured by GA4. A user can have more than one session.</li>
 </ul>
 <p>All dates are inclusive calendar dates in the <strong>GA4 property's reporting
-timezone</strong>, shown above. The summary covers 30 completed days ending yesterday
-at the time of the last successful refresh. Comparisons use the immediately
-preceding 30 completed days in the same timezone, not the previous calendar
-month. Percentage changes have no meaningful baseline when the previous count is
-zero. The daily chart covers the summary period; monthly history covers up to 12
-completed calendar months, excluding the current month. These are different
-reporting windows, not directly comparable totals.</p>
+timezone</strong>, shown above. The default summary covers 30 completed days ending
+yesterday at the last successful refresh. The date selector also offers <strong>7 and
+90 completed days</strong> when the snapshot supports them. Each period's summary is
+queried independently. Comparisons use the immediately preceding period of the
+same length, not the previous calendar month. A previous zero has no meaningful
+percentage baseline.</p>
+<p>The daily chart switches between pageviews, active users and sessions. Daily
+active-user points are distinct counts for individual dates: <strong>do not sum them
+into the period total</strong>. The comparison line aligns the previous period by day
+index, using the same scale; date inspection and the table show both exact
+dates. Monthly pageviews cover up to 12 completed calendar months independently
+of the selected window. The current month is excluded.</p>
 <p>Missing dates and months are marked <strong>Not reported</strong>, with gaps in the chart;
 they are not invented as zeros and may predate collection. Explicit zero counts
 mean no measured traffic for that query, not necessarily no actual visits.</p>
@@ -2138,19 +1998,33 @@ community platforms, or other websites.</p>
 <li><strong>Channels</strong> show sessions by <code>sessionDefaultChannelGroup</code>, GA4's rule-based
   classification of how sessions started. This is session acquisition, not a
   user's first-ever acquisition channel or a campaign attribution audit.</li>
+<li><strong>Pages</strong> show pageviews by <code>pagePath</code>, restricted to canonical public routes
+  derived from this MkDocs website. Unknown paths, noncanonical aliases and
+  routes no longer in the current site are excluded. Query strings, full URLs,
+  GA-supplied page titles and visitor identifiers are never published. Page
+  totals can therefore be lower than headline pageviews.</li>
 </ul>
-<p>Each panel uses the same 30-day window and hostname scope as the headline. Up to
-ten named categories are ranked by their additive metric. A category needs at
+<p>Each panel uses the same selected window and hostname scope as the headline. Up
+to ten named categories are ranked by their additive metric. A category needs at
 least ten <code>activeUsers</code> over the full period to be named; smaller, remaining and
 unclassified categories are combined as <strong>Other / unknown</strong>. Those per-category
 user counts are used only for grouping and are never published or summed into
 headline users. Grouping reduces detail; it is not a formal anonymity guarantee.
-No city, visitor, page-path or cross-category breakdowns are published.</p>
+No city, visitor or cross-category breakdowns are published. Page statistics are
+restricted to known public routes as described above. Smaller/remaining known
+page routes are labeled <strong>Other public pages</strong>, not unknown visitor paths.</p>
 <p>Shares use each panel's returned total, including Other / unknown, not the
 headline user count. Rounded shares may not add to exactly 100%. Dimensioned and
 headline reports may differ during processing or because of reporting semantics;
 we do not adjust them to force agreement. A retained older snapshot may lack
 comparisons or audience panels; that absence is not zero traffic.</p>
+<p>Table search and sorting affect only that table, not the headline totals or
+other reports. CSV downloads contain the currently selected daily metric or
+filtered dimension table, with reporting dates and provenance. The JSON contains
+all published windows. This is a daily-updated public reporting tool, not
+realtime GA4 access or an arbitrary-date/cross-dimension query interface. Older
+snapshots keep unavailable controls disabled; no statistics are invented for
+missing periods.</p>
 <h3 id="limitations-and-freshness">Limitations and freshness<a class="headerlink" href="#limitations-and-freshness" title="Permanent link"> #</a></h3>
 <p>Measured traffic can exclude visits affected by <strong>consent choices, blockers</strong>,
 disabled JavaScript, or collection errors. Identity settings, estimation, and
@@ -2172,13 +2046,12 @@ partially fetched rankings or label a failed attempt as a successful refresh.</p
 See also Google's
 <a href="https://support.google.com/analytics/answer/12233314">data freshness guidance</a>.
 The endpoint follows our <a href="schema.json">versioned JSON schema</a>. New exports use
-version 2; older version 1 snapshots remain readable without changing their
-original refresh timestamp.</p>
+version 3; older version 1 and 2 snapshots remain readable without changing
+their original refresh timestamp.</p>
 <h2 id="support-open-science">Support open science<a class="headerlink" href="#support-open-science" title="Permanent link"> #</a></h2>
 <p>Help sustain our open-source tools, mentorship, and community programs.
-<a href="../about/sponsorship/">Explore OSL sponsorship</a>.</p></div></details>
-  </section>
-  <aside class="analytics-support"><div><h2>Help open science reach further.</h2><p>Support the tools, mentorship and community behind these numbers.</p></div><a class="analytics-button" href="../about/sponsorship/">Explore sponsorship <span aria-hidden="true">↗</span></a></aside>
+<a href="../about/sponsorship/">Explore OSL sponsorship</a>.</p></details></footer>
+  <script type="application/json" id="analytics-report-data">{"data_kind": "production", "generated_at": "2026-09-16T20:13:47.264055Z", "history_period": {"end": "2026-08-31", "start": "2025-09-01"}, "hostnames": ["opensciencelabs.org"], "monthly_history": [{"end": "2025-09-30", "month": "2025-09", "pageviews": 920, "start": "2025-09-01"}, {"end": "2025-10-31", "month": "2025-10", "pageviews": 1391, "start": "2025-10-01"}, {"end": "2025-11-30", "month": "2025-11", "pageviews": 2495, "start": "2025-11-01"}, {"end": "2025-12-31", "month": "2025-12", "pageviews": 2811, "start": "2025-12-01"}, {"end": "2026-01-31", "month": "2026-01", "pageviews": 2414, "start": "2026-01-01"}, {"end": "2026-02-28", "month": "2026-02", "pageviews": 4422, "start": "2026-02-01"}, {"end": "2026-03-31", "month": "2026-03", "pageviews": 7328, "start": "2026-03-01"}, {"end": "2026-04-30", "month": "2026-04", "pageviews": 1270, "start": "2026-04-01"}, {"end": "2026-05-31", "month": "2026-05", "pageviews": 1275, "start": "2026-05-01"}, {"end": "2026-06-30", "month": "2026-06", "pageviews": 1304, "start": "2026-06-01"}, {"end": "2026-07-31", "month": "2026-07", "pageviews": 1085, "start": "2026-07-01"}, {"end": "2026-08-31", "month": "2026-08", "pageviews": 1330, "start": "2026-08-01"}], "reporting_period": {"end": "2026-09-15", "start": "2026-08-17"}, "schema_version": 1, "site": "https://opensciencelabs.org", "source": {"api": "Google Analytics Data API v1beta", "publisher": "Open Science Labs", "system": "Google Analytics 4"}, "status": "available", "summary": {"active_users": 1151, "pageviews": 1577, "sessions": 1234}, "timezone": "America/La_Paz"}</script>
 </div>
 
 
