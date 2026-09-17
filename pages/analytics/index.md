@@ -99,14 +99,16 @@ daily and monthly histories, and all breakdowns, so earlier figures can be
 revised too. A zero report warrants checking collection and scope before
 concluding that nobody visited the site.
 
-Refreshes are scheduled daily at **06:23 UTC**, but GitHub Actions scheduling
-may be delayed. If a refresh fails, we retain the previous successful report and
-its original timestamp. A report more than three days old is marked stale. If
-GA4 explicitly signals a privacy threshold or metric access restriction for an
-audience breakdown, that panel is marked **Not published**, not zero. A
-restriction on core statistics, sampling, truncation, unavailable data, or a
-failed request instead retains the entire previous report. We never publish
-partially fetched rankings or label a failed attempt as a successful refresh.
+Refreshes are scheduled daily at **06:23 UTC**, and are also attempted when
+website changes reach `main` or a maintainer runs a manual refresh. GitHub
+Actions scheduling may be delayed. If a refresh fails, we retain the previous
+successful report and its original timestamp. A report more than three days old
+is marked stale. If GA4 explicitly signals a privacy threshold or metric access
+restriction for an audience breakdown, that panel is marked **Not published**,
+not zero. A restriction on core statistics, sampling, truncation, unavailable
+data, or a failed request instead retains the entire previous report. We never
+publish partially fetched rankings or label a failed attempt as a successful
+refresh.
 
 Metric definitions follow Google's
 [GA4 Data API schema](https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema).

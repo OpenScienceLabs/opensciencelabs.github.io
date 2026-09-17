@@ -437,7 +437,7 @@ def main() -> int:
             or os.environ.get("GITHUB_REPOSITORY") != REPOSITORY
             or os.environ.get("GITHUB_REF") != "refs/heads/main"
             or os.environ.get("GITHUB_EVENT_NAME")
-            not in {"schedule", "workflow_dispatch"}
+            not in {"push", "schedule", "workflow_dispatch"}
         ):
             raise ValueError("Live exports are restricted to trusted CI")
         settings = Settings.from_env(os.environ)
