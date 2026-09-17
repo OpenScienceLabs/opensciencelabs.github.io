@@ -75,8 +75,11 @@ class FakeClient:
                     [([], [55, 90, 25])],
                 ),
                 response(
-                    ["screenPageViews"],
-                    [(["20260914"], [70]), (["20260915"], [50])],
+                    list(report.METRICS),
+                    [
+                        (["20260914"], [70, 25, 45]),
+                        (["20260915"], [50, 20, 25]),
+                    ],
                     ["date"],
                 ),
                 response(
@@ -96,6 +99,8 @@ class FakeClient:
                 ),
             ]
         )
+        if results is None:
+            self.results.extend([None] * 18)
 
     def run_report(self, *, request):
         """Never contact any remote service."""
@@ -103,6 +108,31 @@ class FakeClient:
         result = self.results[len(self.requests) - 1]
         if isinstance(result, Exception):
             raise result
+        if result is None:
+            metrics = [item["name"] for item in request["metrics"]]
+            dimensions = [item["name"] for item in request["dimensions"]]
+            # Synthetic continuation for every additional period and page.
+            labels = {
+                "country": "Brazil",
+                "deviceCategory": "desktop",
+                "sessionDefaultChannelGroup": "Direct",
+                "pagePath": "/",
+            }
+            dims = []
+            for name in dimensions:
+                dims.append(
+                    request["date_ranges"][0]["end_date"].replace("-", "")
+                    if name == "date"
+                    else labels[name]
+                )
+            counts = {
+                "screenPageViews": 100,
+                "activeUsers": 20,
+                "sessions": 40,
+            }
+            return response(
+                metrics, [(dims, [counts[m] for m in metrics])], dimensions
+            )
         return result
 
 

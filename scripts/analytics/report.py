@@ -30,6 +30,18 @@ STALE_DAYS = 3
 MAX_HOSTNAME_LENGTH = 253
 MIN_GROUP_USERS = 10
 MAX_GROUP_ROWS = 10
+WINDOW_PRESETS = (7, 30, 90)
+
+
+def window_period(now: datetime, zone: str, days: int) -> dict:
+    """Return a supported completed-day window in the property timezone."""
+    if now.tzinfo is None or days not in WINDOW_PRESETS:
+        raise ValueError("An aware time and supported window are required")
+    today = now.astimezone(ZoneInfo(zone)).date()
+    return {
+        "start": (today - timedelta(days=days)).isoformat(),
+        "end": (today - timedelta(days=1)).isoformat(),
+    }
 
 
 def hostnames(value: str) -> list[str]:
@@ -75,10 +87,11 @@ def month_period(month: str) -> dict:
 
 
 def previous_period(period: dict) -> dict:
-    """Use the preceding 30 calendar days, without elapsed-time arithmetic."""
+    """Use an adjacent equally long period, without elapsed-time arithmetic."""
     start = date.fromisoformat(period["start"])
+    days = (date.fromisoformat(period["end"]) - start).days + 1
     return {
-        "start": (start - timedelta(days=WINDOW_DAYS)).isoformat(),
+        "start": (start - timedelta(days=days)).isoformat(),
         "end": (start - timedelta(days=1)).isoformat(),
     }
 
@@ -86,7 +99,7 @@ def previous_period(period: dict) -> dict:
 def unavailable() -> dict:
     """Represent an unconfigured first deployment without invented values."""
     return {
-        "schema_version": 2,
+        "schema_version": 3,
         "data_kind": "production",
         "status": "unavailable",
         "source": dict(SOURCE),
@@ -101,6 +114,7 @@ def unavailable() -> dict:
         "comparison": None,
         "daily_history": [],
         "breakdowns": None,
+        "windows": None,
     }
 
 
@@ -153,7 +167,14 @@ def validate(report: dict, *, allow_fixture: bool = False) -> None:
         for day in dates
     ):
         raise ValueError("Daily history must be unique and within the period")
-    for panel in report["breakdowns"].values():
+    validate_breakdowns(report["breakdowns"])
+    if "windows" in report:
+        validate_windows(report, generated)
+
+
+def validate_breakdowns(breakdowns):
+    """Reject duplicate labels, incorrect ordering and incomplete totals."""
+    for panel in breakdowns.values():
         if panel["status"] != "available":
             continue
         labels = [row["label"] for row in panel["rows"]]
@@ -168,6 +189,50 @@ def validate(report: dict, *, allow_fixture: bool = False) -> None:
             != (panel["total"])
         ):
             raise ValueError("Breakdown counts do not reconcile")
+
+
+def validate_daily(rows, period):
+    """Daily distinct users describe each date, never the period total."""
+    dates = [row["date"] for row in rows]
+    if dates != sorted(set(dates)) or any(
+        not period["start"] <= day <= period["end"] for day in dates
+    ):
+        raise ValueError("Daily rows must be unique and inside their window")
+
+
+def validate_windows(report, generated):
+    """Validate all presets and their exact compatibility projection."""
+    for days in WINDOW_PRESETS:
+        window = report["windows"][str(days)]
+        period = window_period(generated, report["timezone"], days)
+        if window["reporting_period"] != period:
+            raise ValueError("Incorrect window dates")
+        previous = window["comparison"]
+        if previous["reporting_period"] != previous_period(period):
+            raise ValueError("Incorrect previous-window dates")
+        validate_daily(window["daily_history"], period)
+        validate_daily(previous["daily_history"], previous["reporting_period"])
+        validate_breakdowns(window["breakdowns"])
+    window = report["windows"][str(WINDOW_DAYS)]
+    projection = {
+        "reporting_period": window["reporting_period"],
+        "summary": window["summary"],
+        "comparison": {
+            key: window["comparison"][key]
+            for key in ("reporting_period", "summary")
+        },
+        "daily_history": [
+            {key: row[key] for key in ("date", "pageviews")}
+            for row in window["daily_history"]
+        ],
+        "breakdowns": {
+            key: panel
+            for key, panel in window["breakdowns"].items()
+            if key != "pages"
+        },
+    }
+    if any(report[key] != value for key, value in projection.items()):
+        raise ValueError("30-day compatibility fields differ from the window")
 
 
 def read_snapshot(path: Path, *, allow_fixture: bool = False) -> dict:

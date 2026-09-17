@@ -60,7 +60,10 @@ class PresentationTests(unittest.TestCase):
         page = self.render(fixture)
         self.assertIn("TEST FIXTURE", page.get_text())
         self.assertEqual(
-            [node.get_text() for node in page.select(".analytics-metrics dd")],
+            [
+                node.get_text()
+                for node in page.select(".analytics-metric-value")
+            ],
             [f"{value:,}" for value in fixture["summary"].values()],
         )
         rows = page.select("#monthly-table tbody tr")
@@ -71,8 +74,8 @@ class PresentationTests(unittest.TestCase):
             )
             self.assertIn(f'{item["pageviews"]:,}', node.get_text())
             self.assertEqual(
-                [time["datetime"] for time in node.select("td time")],
-                [item["start"], item["end"]],
+                node.select_one("td").get_text(),
+                f'{item["start"]} \N{EN DASH} {item["end"]}',
             )
         self.assertIsNotNone(page.select_one("table caption"))
         self.assertEqual(
@@ -90,9 +93,9 @@ class PresentationTests(unittest.TestCase):
         for month in fixture["monthly_history"]:
             month["pageviews"] = 0
         page = self.render(fixture, stale=True)
-        bars = page.select(".analytics-bar")
+        bars = page.select(".analytics-month-track i")
         self.assertEqual(len(bars), 12)
-        self.assertTrue(all(float(bar["height"]) == 0 for bar in bars))
+        self.assertTrue(all(bar["style"] == "height: 0.0%" for bar in bars))
         notice = page.select_one("#analytics-stale")
         self.assertFalse(notice.has_attr("hidden"))
         self.assertIn("Stale data", notice.get_text())

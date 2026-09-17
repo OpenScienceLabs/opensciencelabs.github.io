@@ -1,0 +1,2277 @@
+{
+  "schema_version": 3,
+  "data_kind": "fixture",
+  "status": "available",
+  "source": {
+    "publisher": "Open Science Labs",
+    "system": "Google Analytics 4",
+    "api": "Google Analytics Data API v1beta"
+  },
+  "site": "https://opensciencelabs.org",
+  "hostnames": ["opensciencelabs.org"],
+  "timezone": "America/New_York",
+  "generated_at": "2026-09-16T06:23:00Z",
+  "reporting_period": {
+    "start": "2026-08-17",
+    "end": "2026-09-15"
+  },
+  "history_period": {
+    "start": "2025-09-01",
+    "end": "2026-08-31"
+  },
+  "summary": {
+    "pageviews": 1556,
+    "sessions": 903,
+    "active_users": 317
+  },
+  "monthly_history": [
+    {
+      "month": "2025-09",
+      "start": "2025-09-01",
+      "end": "2025-09-30",
+      "pageviews": 210
+    },
+    {
+      "month": "2025-10",
+      "start": "2025-10-01",
+      "end": "2025-10-31",
+      "pageviews": 280
+    },
+    {
+      "month": "2025-11",
+      "start": "2025-11-01",
+      "end": "2025-11-30",
+      "pageviews": 0
+    },
+    {
+      "month": "2025-12",
+      "start": "2025-12-01",
+      "end": "2025-12-31",
+      "pageviews": 345
+    },
+    {
+      "month": "2026-01",
+      "start": "2026-01-01",
+      "end": "2026-01-31",
+      "pageviews": 410
+    },
+    {
+      "month": "2026-02",
+      "start": "2026-02-01",
+      "end": "2026-02-28",
+      "pageviews": 490
+    },
+    {
+      "month": "2026-03",
+      "start": "2026-03-01",
+      "end": "2026-03-31",
+      "pageviews": 450
+    },
+    {
+      "month": "2026-04",
+      "start": "2026-04-01",
+      "end": "2026-04-30",
+      "pageviews": 520
+    },
+    {
+      "month": "2026-05",
+      "start": "2026-05-01",
+      "end": "2026-05-31",
+      "pageviews": 640
+    },
+    {
+      "month": "2026-06",
+      "start": "2026-06-01",
+      "end": "2026-06-30",
+      "pageviews": 810
+    },
+    {
+      "month": "2026-07",
+      "start": "2026-07-01",
+      "end": "2026-07-31",
+      "pageviews": 920
+    },
+    {
+      "month": "2026-08",
+      "start": "2026-08-01",
+      "end": "2026-08-31",
+      "pageviews": 1100
+    }
+  ],
+  "comparison": {
+    "reporting_period": {
+      "start": "2026-07-18",
+      "end": "2026-08-16"
+    },
+    "summary": {
+      "pageviews": 1230,
+      "sessions": 710,
+      "active_users": 267
+    }
+  },
+  "daily_history": [
+    {
+      "date": "2026-08-17",
+      "pageviews": 48
+    },
+    {
+      "date": "2026-08-18",
+      "pageviews": 56
+    },
+    {
+      "date": "2026-08-19",
+      "pageviews": 62
+    },
+    {
+      "date": "2026-08-20",
+      "pageviews": 62
+    },
+    {
+      "date": "2026-08-21",
+      "pageviews": 57
+    },
+    {
+      "date": "2026-08-22",
+      "pageviews": 49
+    },
+    {
+      "date": "2026-08-23",
+      "pageviews": 41
+    },
+    {
+      "date": "2026-08-24",
+      "pageviews": 36
+    },
+    {
+      "date": "2026-08-25",
+      "pageviews": 36
+    },
+    {
+      "date": "2026-08-26",
+      "pageviews": 42
+    },
+    {
+      "date": "2026-08-27",
+      "pageviews": 51
+    },
+    {
+      "date": "2026-08-28",
+      "pageviews": 59
+    },
+    {
+      "date": "2026-08-29",
+      "pageviews": 65
+    },
+    {
+      "date": "2026-08-30",
+      "pageviews": 65
+    },
+    {
+      "date": "2026-08-31",
+      "pageviews": 60
+    },
+    {
+      "date": "2026-09-01",
+      "pageviews": 52
+    },
+    {
+      "date": "2026-09-02",
+      "pageviews": 44
+    },
+    {
+      "date": "2026-09-03",
+      "pageviews": 39
+    },
+    {
+      "date": "2026-09-04",
+      "pageviews": 39
+    },
+    {
+      "date": "2026-09-05",
+      "pageviews": 45
+    },
+    {
+      "date": "2026-09-06",
+      "pageviews": 54
+    },
+    {
+      "date": "2026-09-07",
+      "pageviews": 63
+    },
+    {
+      "date": "2026-09-08",
+      "pageviews": 68
+    },
+    {
+      "date": "2026-09-09",
+      "pageviews": 68
+    },
+    {
+      "date": "2026-09-10",
+      "pageviews": 63
+    },
+    {
+      "date": "2026-09-11",
+      "pageviews": 54
+    },
+    {
+      "date": "2026-09-12",
+      "pageviews": 46
+    },
+    {
+      "date": "2026-09-13",
+      "pageviews": 42
+    },
+    {
+      "date": "2026-09-14",
+      "pageviews": 42
+    },
+    {
+      "date": "2026-09-15",
+      "pageviews": 48
+    }
+  ],
+  "breakdowns": {
+    "countries": {
+      "status": "available",
+      "metric": "pageviews",
+      "minimum_active_users": 10,
+      "total": 1556,
+      "other": 144,
+      "rows": [
+        {
+          "label": "Brazil",
+          "value": 482
+        },
+        {
+          "label": "United States",
+          "value": 357
+        },
+        {
+          "label": "India",
+          "value": 248
+        },
+        {
+          "label": "Germany",
+          "value": 155
+        },
+        {
+          "label": "United Kingdom",
+          "value": 108
+        },
+        {
+          "label": "Canada",
+          "value": 62
+        }
+      ]
+    },
+    "devices": {
+      "status": "available",
+      "metric": "pageviews",
+      "minimum_active_users": 10,
+      "total": 1556,
+      "other": 469,
+      "rows": [
+        {
+          "label": "desktop",
+          "value": 482
+        },
+        {
+          "label": "mobile",
+          "value": 357
+        },
+        {
+          "label": "tablet",
+          "value": 248
+        }
+      ]
+    },
+    "channels": {
+      "status": "available",
+      "metric": "sessions",
+      "minimum_active_users": 10,
+      "total": 903,
+      "other": 120,
+      "rows": [
+        {
+          "label": "Organic Search",
+          "value": 279
+        },
+        {
+          "label": "Direct",
+          "value": 207
+        },
+        {
+          "label": "Referral",
+          "value": 144
+        },
+        {
+          "label": "Organic Social",
+          "value": 90
+        },
+        {
+          "label": "Email",
+          "value": 63
+        }
+      ]
+    }
+  },
+  "windows": {
+    "7": {
+      "reporting_period": {
+        "start": "2026-09-09",
+        "end": "2026-09-15"
+      },
+      "summary": {
+        "pageviews": 375,
+        "sessions": 222,
+        "active_users": 81
+      },
+      "comparison": {
+        "reporting_period": {
+          "start": "2026-09-02",
+          "end": "2026-09-08"
+        },
+        "summary": {
+          "pageviews": 296,
+          "sessions": 175,
+          "active_users": 69
+        },
+        "daily_history": [
+          {
+            "date": "2026-09-02",
+            "pageviews": 38,
+            "active_users": 13,
+            "sessions": 22
+          },
+          {
+            "date": "2026-09-03",
+            "pageviews": 44,
+            "active_users": 15,
+            "sessions": 26
+          },
+          {
+            "date": "2026-09-04",
+            "pageviews": 49,
+            "active_users": 16,
+            "sessions": 29
+          },
+          {
+            "date": "2026-09-05",
+            "pageviews": 49,
+            "active_users": 16,
+            "sessions": 29
+          },
+          {
+            "date": "2026-09-06",
+            "pageviews": 45,
+            "active_users": 15,
+            "sessions": 27
+          },
+          {
+            "date": "2026-09-07",
+            "pageviews": 39,
+            "active_users": 13,
+            "sessions": 23
+          },
+          {
+            "date": "2026-09-08",
+            "pageviews": 32,
+            "active_users": 11,
+            "sessions": 19
+          }
+        ]
+      },
+      "daily_history": [
+        {
+          "date": "2026-09-09",
+          "pageviews": 48,
+          "active_users": 16,
+          "sessions": 28
+        },
+        {
+          "date": "2026-09-10",
+          "pageviews": 56,
+          "active_users": 19,
+          "sessions": 33
+        },
+        {
+          "date": "2026-09-11",
+          "pageviews": 62,
+          "active_users": 21,
+          "sessions": 37
+        },
+        {
+          "date": "2026-09-12",
+          "pageviews": 62,
+          "active_users": 21,
+          "sessions": 37
+        },
+        {
+          "date": "2026-09-13",
+          "pageviews": 57,
+          "active_users": 19,
+          "sessions": 34
+        },
+        {
+          "date": "2026-09-14",
+          "pageviews": 49,
+          "active_users": 16,
+          "sessions": 29
+        },
+        {
+          "date": "2026-09-15",
+          "pageviews": 41,
+          "active_users": 13,
+          "sessions": 24
+        }
+      ],
+      "breakdowns": {
+        "countries": {
+          "status": "available",
+          "metric": "pageviews",
+          "minimum_active_users": 10,
+          "total": 375,
+          "other": 35,
+          "rows": [
+            {
+              "label": "Brazil",
+              "value": 116
+            },
+            {
+              "label": "United States",
+              "value": 86
+            },
+            {
+              "label": "India",
+              "value": 60
+            },
+            {
+              "label": "Germany",
+              "value": 37
+            },
+            {
+              "label": "United Kingdom",
+              "value": 26
+            },
+            {
+              "label": "Canada",
+              "value": 15
+            }
+          ]
+        },
+        "devices": {
+          "status": "available",
+          "metric": "pageviews",
+          "minimum_active_users": 10,
+          "total": 375,
+          "other": 113,
+          "rows": [
+            {
+              "label": "desktop",
+              "value": 116
+            },
+            {
+              "label": "mobile",
+              "value": 86
+            },
+            {
+              "label": "tablet",
+              "value": 60
+            }
+          ]
+        },
+        "channels": {
+          "status": "available",
+          "metric": "sessions",
+          "minimum_active_users": 10,
+          "total": 222,
+          "other": 31,
+          "rows": [
+            {
+              "label": "Organic Search",
+              "value": 68
+            },
+            {
+              "label": "Direct",
+              "value": 51
+            },
+            {
+              "label": "Referral",
+              "value": 35
+            },
+            {
+              "label": "Organic Social",
+              "value": 22
+            },
+            {
+              "label": "Email",
+              "value": 15
+            }
+          ]
+        },
+        "pages": {
+          "status": "available",
+          "metric": "pageviews",
+          "minimum_active_users": 10,
+          "total": 365,
+          "other": 36,
+          "rows": [
+            {
+              "label": "/",
+              "value": 113
+            },
+            {
+              "label": "/projects/",
+              "value": 83
+            },
+            {
+              "label": "/blog/",
+              "value": 58
+            },
+            {
+              "label": "/about/",
+              "value": 36
+            },
+            {
+              "label": "/analytics/",
+              "value": 25
+            },
+            {
+              "label": "/about/sponsorship/",
+              "value": 14
+            }
+          ]
+        }
+      }
+    },
+    "30": {
+      "reporting_period": {
+        "start": "2026-08-17",
+        "end": "2026-09-15"
+      },
+      "summary": {
+        "pageviews": 1556,
+        "sessions": 903,
+        "active_users": 317
+      },
+      "comparison": {
+        "reporting_period": {
+          "start": "2026-07-18",
+          "end": "2026-08-16"
+        },
+        "summary": {
+          "pageviews": 1230,
+          "sessions": 710,
+          "active_users": 267
+        },
+        "daily_history": [
+          {
+            "date": "2026-07-18",
+            "pageviews": 38,
+            "active_users": 13,
+            "sessions": 22
+          },
+          {
+            "date": "2026-07-19",
+            "pageviews": 44,
+            "active_users": 15,
+            "sessions": 26
+          },
+          {
+            "date": "2026-07-20",
+            "pageviews": 49,
+            "active_users": 16,
+            "sessions": 29
+          },
+          {
+            "date": "2026-07-21",
+            "pageviews": 49,
+            "active_users": 16,
+            "sessions": 29
+          },
+          {
+            "date": "2026-07-22",
+            "pageviews": 45,
+            "active_users": 15,
+            "sessions": 27
+          },
+          {
+            "date": "2026-07-23",
+            "pageviews": 39,
+            "active_users": 13,
+            "sessions": 23
+          },
+          {
+            "date": "2026-07-24",
+            "pageviews": 32,
+            "active_users": 11,
+            "sessions": 19
+          },
+          {
+            "date": "2026-07-25",
+            "pageviews": 28,
+            "active_users": 9,
+            "sessions": 17
+          },
+          {
+            "date": "2026-07-26",
+            "pageviews": 29,
+            "active_users": 9,
+            "sessions": 17
+          },
+          {
+            "date": "2026-07-27",
+            "pageviews": 33,
+            "active_users": 11,
+            "sessions": 19
+          },
+          {
+            "date": "2026-07-28",
+            "pageviews": 40,
+            "active_users": 13,
+            "sessions": 23
+          },
+          {
+            "date": "2026-07-29",
+            "pageviews": 47,
+            "active_users": 15,
+            "sessions": 27
+          },
+          {
+            "date": "2026-07-30",
+            "pageviews": 51,
+            "active_users": 16,
+            "sessions": 30
+          },
+          {
+            "date": "2026-07-31",
+            "pageviews": 51,
+            "active_users": 16,
+            "sessions": 30
+          },
+          {
+            "date": "2026-08-01",
+            "pageviews": 47,
+            "active_users": 15,
+            "sessions": 27
+          },
+          {
+            "date": "2026-08-02",
+            "pageviews": 41,
+            "active_users": 13,
+            "sessions": 24
+          },
+          {
+            "date": "2026-08-03",
+            "pageviews": 34,
+            "active_users": 10,
+            "sessions": 20
+          },
+          {
+            "date": "2026-08-04",
+            "pageviews": 31,
+            "active_users": 9,
+            "sessions": 18
+          },
+          {
+            "date": "2026-08-05",
+            "pageviews": 31,
+            "active_users": 9,
+            "sessions": 18
+          },
+          {
+            "date": "2026-08-06",
+            "pageviews": 36,
+            "active_users": 11,
+            "sessions": 20
+          },
+          {
+            "date": "2026-08-07",
+            "pageviews": 43,
+            "active_users": 13,
+            "sessions": 24
+          },
+          {
+            "date": "2026-08-08",
+            "pageviews": 50,
+            "active_users": 15,
+            "sessions": 28
+          },
+          {
+            "date": "2026-08-09",
+            "pageviews": 54,
+            "active_users": 16,
+            "sessions": 31
+          },
+          {
+            "date": "2026-08-10",
+            "pageviews": 54,
+            "active_users": 16,
+            "sessions": 31
+          },
+          {
+            "date": "2026-08-11",
+            "pageviews": 50,
+            "active_users": 15,
+            "sessions": 28
+          },
+          {
+            "date": "2026-08-12",
+            "pageviews": 43,
+            "active_users": 13,
+            "sessions": 24
+          },
+          {
+            "date": "2026-08-13",
+            "pageviews": 37,
+            "active_users": 10,
+            "sessions": 21
+          },
+          {
+            "date": "2026-08-14",
+            "pageviews": 33,
+            "active_users": 9,
+            "sessions": 18
+          },
+          {
+            "date": "2026-08-15",
+            "pageviews": 33,
+            "active_users": 9,
+            "sessions": 19
+          },
+          {
+            "date": "2026-08-16",
+            "pageviews": 38,
+            "active_users": 11,
+            "sessions": 21
+          }
+        ]
+      },
+      "daily_history": [
+        {
+          "date": "2026-08-17",
+          "pageviews": 48,
+          "active_users": 16,
+          "sessions": 28
+        },
+        {
+          "date": "2026-08-18",
+          "pageviews": 56,
+          "active_users": 19,
+          "sessions": 33
+        },
+        {
+          "date": "2026-08-19",
+          "pageviews": 62,
+          "active_users": 21,
+          "sessions": 37
+        },
+        {
+          "date": "2026-08-20",
+          "pageviews": 62,
+          "active_users": 21,
+          "sessions": 37
+        },
+        {
+          "date": "2026-08-21",
+          "pageviews": 57,
+          "active_users": 19,
+          "sessions": 34
+        },
+        {
+          "date": "2026-08-22",
+          "pageviews": 49,
+          "active_users": 16,
+          "sessions": 29
+        },
+        {
+          "date": "2026-08-23",
+          "pageviews": 41,
+          "active_users": 13,
+          "sessions": 24
+        },
+        {
+          "date": "2026-08-24",
+          "pageviews": 36,
+          "active_users": 12,
+          "sessions": 21
+        },
+        {
+          "date": "2026-08-25",
+          "pageviews": 36,
+          "active_users": 12,
+          "sessions": 21
+        },
+        {
+          "date": "2026-08-26",
+          "pageviews": 42,
+          "active_users": 14,
+          "sessions": 25
+        },
+        {
+          "date": "2026-08-27",
+          "pageviews": 51,
+          "active_users": 16,
+          "sessions": 30
+        },
+        {
+          "date": "2026-08-28",
+          "pageviews": 59,
+          "active_users": 19,
+          "sessions": 35
+        },
+        {
+          "date": "2026-08-29",
+          "pageviews": 65,
+          "active_users": 21,
+          "sessions": 38
+        },
+        {
+          "date": "2026-08-30",
+          "pageviews": 65,
+          "active_users": 21,
+          "sessions": 38
+        },
+        {
+          "date": "2026-08-31",
+          "pageviews": 60,
+          "active_users": 19,
+          "sessions": 35
+        },
+        {
+          "date": "2026-09-01",
+          "pageviews": 52,
+          "active_users": 16,
+          "sessions": 30
+        },
+        {
+          "date": "2026-09-02",
+          "pageviews": 44,
+          "active_users": 13,
+          "sessions": 25
+        },
+        {
+          "date": "2026-09-03",
+          "pageviews": 39,
+          "active_users": 12,
+          "sessions": 22
+        },
+        {
+          "date": "2026-09-04",
+          "pageviews": 39,
+          "active_users": 12,
+          "sessions": 23
+        },
+        {
+          "date": "2026-09-05",
+          "pageviews": 45,
+          "active_users": 14,
+          "sessions": 26
+        },
+        {
+          "date": "2026-09-06",
+          "pageviews": 54,
+          "active_users": 16,
+          "sessions": 31
+        },
+        {
+          "date": "2026-09-07",
+          "pageviews": 63,
+          "active_users": 19,
+          "sessions": 36
+        },
+        {
+          "date": "2026-09-08",
+          "pageviews": 68,
+          "active_users": 21,
+          "sessions": 39
+        },
+        {
+          "date": "2026-09-09",
+          "pageviews": 68,
+          "active_users": 21,
+          "sessions": 39
+        },
+        {
+          "date": "2026-09-10",
+          "pageviews": 63,
+          "active_users": 19,
+          "sessions": 36
+        },
+        {
+          "date": "2026-09-11",
+          "pageviews": 54,
+          "active_users": 16,
+          "sessions": 31
+        },
+        {
+          "date": "2026-09-12",
+          "pageviews": 46,
+          "active_users": 13,
+          "sessions": 26
+        },
+        {
+          "date": "2026-09-13",
+          "pageviews": 42,
+          "active_users": 12,
+          "sessions": 23
+        },
+        {
+          "date": "2026-09-14",
+          "pageviews": 42,
+          "active_users": 12,
+          "sessions": 24
+        },
+        {
+          "date": "2026-09-15",
+          "pageviews": 48,
+          "active_users": 14,
+          "sessions": 27
+        }
+      ],
+      "breakdowns": {
+        "countries": {
+          "status": "available",
+          "metric": "pageviews",
+          "minimum_active_users": 10,
+          "total": 1556,
+          "other": 144,
+          "rows": [
+            {
+              "label": "Brazil",
+              "value": 482
+            },
+            {
+              "label": "United States",
+              "value": 357
+            },
+            {
+              "label": "India",
+              "value": 248
+            },
+            {
+              "label": "Germany",
+              "value": 155
+            },
+            {
+              "label": "United Kingdom",
+              "value": 108
+            },
+            {
+              "label": "Canada",
+              "value": 62
+            }
+          ]
+        },
+        "devices": {
+          "status": "available",
+          "metric": "pageviews",
+          "minimum_active_users": 10,
+          "total": 1556,
+          "other": 469,
+          "rows": [
+            {
+              "label": "desktop",
+              "value": 482
+            },
+            {
+              "label": "mobile",
+              "value": 357
+            },
+            {
+              "label": "tablet",
+              "value": 248
+            }
+          ]
+        },
+        "channels": {
+          "status": "available",
+          "metric": "sessions",
+          "minimum_active_users": 10,
+          "total": 903,
+          "other": 120,
+          "rows": [
+            {
+              "label": "Organic Search",
+              "value": 279
+            },
+            {
+              "label": "Direct",
+              "value": 207
+            },
+            {
+              "label": "Referral",
+              "value": 144
+            },
+            {
+              "label": "Organic Social",
+              "value": 90
+            },
+            {
+              "label": "Email",
+              "value": 63
+            }
+          ]
+        },
+        "pages": {
+          "status": "available",
+          "metric": "pageviews",
+          "minimum_active_users": 10,
+          "total": 1546,
+          "other": 142,
+          "rows": [
+            {
+              "label": "/",
+              "value": 479
+            },
+            {
+              "label": "/projects/",
+              "value": 355
+            },
+            {
+              "label": "/blog/",
+              "value": 247
+            },
+            {
+              "label": "/about/",
+              "value": 154
+            },
+            {
+              "label": "/analytics/",
+              "value": 108
+            },
+            {
+              "label": "/about/sponsorship/",
+              "value": 61
+            }
+          ]
+        }
+      }
+    },
+    "90": {
+      "reporting_period": {
+        "start": "2026-06-18",
+        "end": "2026-09-15"
+      },
+      "summary": {
+        "pageviews": 5476,
+        "sessions": 3026,
+        "active_users": 959
+      },
+      "comparison": {
+        "reporting_period": {
+          "start": "2026-03-20",
+          "end": "2026-06-17"
+        },
+        "summary": {
+          "pageviews": 4328,
+          "sessions": 2392,
+          "active_users": 800
+        },
+        "daily_history": [
+          {
+            "date": "2026-03-20",
+            "pageviews": 38,
+            "active_users": 13,
+            "sessions": 22
+          },
+          {
+            "date": "2026-03-21",
+            "pageviews": 44,
+            "active_users": 15,
+            "sessions": 26
+          },
+          {
+            "date": "2026-03-22",
+            "pageviews": 49,
+            "active_users": 16,
+            "sessions": 29
+          },
+          {
+            "date": "2026-03-23",
+            "pageviews": 49,
+            "active_users": 16,
+            "sessions": 29
+          },
+          {
+            "date": "2026-03-24",
+            "pageviews": 45,
+            "active_users": 15,
+            "sessions": 27
+          },
+          {
+            "date": "2026-03-25",
+            "pageviews": 39,
+            "active_users": 13,
+            "sessions": 23
+          },
+          {
+            "date": "2026-03-26",
+            "pageviews": 32,
+            "active_users": 11,
+            "sessions": 19
+          },
+          {
+            "date": "2026-03-27",
+            "pageviews": 28,
+            "active_users": 9,
+            "sessions": 17
+          },
+          {
+            "date": "2026-03-28",
+            "pageviews": 29,
+            "active_users": 9,
+            "sessions": 17
+          },
+          {
+            "date": "2026-03-29",
+            "pageviews": 33,
+            "active_users": 11,
+            "sessions": 19
+          },
+          {
+            "date": "2026-03-30",
+            "pageviews": 40,
+            "active_users": 13,
+            "sessions": 23
+          },
+          {
+            "date": "2026-03-31",
+            "pageviews": 47,
+            "active_users": 15,
+            "sessions": 27
+          },
+          {
+            "date": "2026-04-01",
+            "pageviews": 51,
+            "active_users": 16,
+            "sessions": 30
+          },
+          {
+            "date": "2026-04-02",
+            "pageviews": 51,
+            "active_users": 16,
+            "sessions": 30
+          },
+          {
+            "date": "2026-04-03",
+            "pageviews": 47,
+            "active_users": 15,
+            "sessions": 27
+          },
+          {
+            "date": "2026-04-04",
+            "pageviews": 41,
+            "active_users": 13,
+            "sessions": 24
+          },
+          {
+            "date": "2026-04-05",
+            "pageviews": 34,
+            "active_users": 10,
+            "sessions": 20
+          },
+          {
+            "date": "2026-04-06",
+            "pageviews": 31,
+            "active_users": 9,
+            "sessions": 18
+          },
+          {
+            "date": "2026-04-07",
+            "pageviews": 31,
+            "active_users": 9,
+            "sessions": 18
+          },
+          {
+            "date": "2026-04-08",
+            "pageviews": 36,
+            "active_users": 11,
+            "sessions": 20
+          },
+          {
+            "date": "2026-04-09",
+            "pageviews": 43,
+            "active_users": 13,
+            "sessions": 24
+          },
+          {
+            "date": "2026-04-10",
+            "pageviews": 50,
+            "active_users": 15,
+            "sessions": 28
+          },
+          {
+            "date": "2026-04-11",
+            "pageviews": 54,
+            "active_users": 16,
+            "sessions": 31
+          },
+          {
+            "date": "2026-04-12",
+            "pageviews": 54,
+            "active_users": 16,
+            "sessions": 31
+          },
+          {
+            "date": "2026-04-13",
+            "pageviews": 50,
+            "active_users": 15,
+            "sessions": 28
+          },
+          {
+            "date": "2026-04-14",
+            "pageviews": 43,
+            "active_users": 13,
+            "sessions": 24
+          },
+          {
+            "date": "2026-04-15",
+            "pageviews": 37,
+            "active_users": 10,
+            "sessions": 21
+          },
+          {
+            "date": "2026-04-16",
+            "pageviews": 33,
+            "active_users": 9,
+            "sessions": 18
+          },
+          {
+            "date": "2026-04-17",
+            "pageviews": 33,
+            "active_users": 9,
+            "sessions": 19
+          },
+          {
+            "date": "2026-04-18",
+            "pageviews": 38,
+            "active_users": 11,
+            "sessions": 21
+          },
+          {
+            "date": "2026-04-19",
+            "pageviews": 45,
+            "active_users": 13,
+            "sessions": 25
+          },
+          {
+            "date": "2026-04-20",
+            "pageviews": 52,
+            "active_users": 15,
+            "sessions": 29
+          },
+          {
+            "date": "2026-04-21",
+            "pageviews": 56,
+            "active_users": 16,
+            "sessions": 32
+          },
+          {
+            "date": "2026-04-22",
+            "pageviews": 56,
+            "active_users": 16,
+            "sessions": 32
+          },
+          {
+            "date": "2026-04-23",
+            "pageviews": 52,
+            "active_users": 15,
+            "sessions": 29
+          },
+          {
+            "date": "2026-04-24",
+            "pageviews": 45,
+            "active_users": 13,
+            "sessions": 25
+          },
+          {
+            "date": "2026-04-25",
+            "pageviews": 39,
+            "active_users": 10,
+            "sessions": 21
+          },
+          {
+            "date": "2026-04-26",
+            "pageviews": 35,
+            "active_users": 9,
+            "sessions": 19
+          },
+          {
+            "date": "2026-04-27",
+            "pageviews": 36,
+            "active_users": 9,
+            "sessions": 20
+          },
+          {
+            "date": "2026-04-28",
+            "pageviews": 41,
+            "active_users": 11,
+            "sessions": 22
+          },
+          {
+            "date": "2026-04-29",
+            "pageviews": 48,
+            "active_users": 13,
+            "sessions": 27
+          },
+          {
+            "date": "2026-04-30",
+            "pageviews": 55,
+            "active_users": 15,
+            "sessions": 30
+          },
+          {
+            "date": "2026-05-01",
+            "pageviews": 59,
+            "active_users": 16,
+            "sessions": 33
+          },
+          {
+            "date": "2026-05-02",
+            "pageviews": 58,
+            "active_users": 16,
+            "sessions": 33
+          },
+          {
+            "date": "2026-05-03",
+            "pageviews": 54,
+            "active_users": 15,
+            "sessions": 30
+          },
+          {
+            "date": "2026-05-04",
+            "pageviews": 47,
+            "active_users": 13,
+            "sessions": 26
+          },
+          {
+            "date": "2026-05-05",
+            "pageviews": 41,
+            "active_users": 10,
+            "sessions": 22
+          },
+          {
+            "date": "2026-05-06",
+            "pageviews": 38,
+            "active_users": 9,
+            "sessions": 20
+          },
+          {
+            "date": "2026-05-07",
+            "pageviews": 38,
+            "active_users": 9,
+            "sessions": 21
+          },
+          {
+            "date": "2026-05-08",
+            "pageviews": 43,
+            "active_users": 11,
+            "sessions": 24
+          },
+          {
+            "date": "2026-05-09",
+            "pageviews": 50,
+            "active_users": 13,
+            "sessions": 28
+          },
+          {
+            "date": "2026-05-10",
+            "pageviews": 57,
+            "active_users": 15,
+            "sessions": 32
+          },
+          {
+            "date": "2026-05-11",
+            "pageviews": 61,
+            "active_users": 17,
+            "sessions": 34
+          },
+          {
+            "date": "2026-05-12",
+            "pageviews": 61,
+            "active_users": 16,
+            "sessions": 33
+          },
+          {
+            "date": "2026-05-13",
+            "pageviews": 56,
+            "active_users": 15,
+            "sessions": 31
+          },
+          {
+            "date": "2026-05-14",
+            "pageviews": 50,
+            "active_users": 12,
+            "sessions": 27
+          },
+          {
+            "date": "2026-05-15",
+            "pageviews": 43,
+            "active_users": 10,
+            "sessions": 23
+          },
+          {
+            "date": "2026-05-16",
+            "pageviews": 40,
+            "active_users": 9,
+            "sessions": 21
+          },
+          {
+            "date": "2026-05-17",
+            "pageviews": 41,
+            "active_users": 9,
+            "sessions": 22
+          },
+          {
+            "date": "2026-05-18",
+            "pageviews": 46,
+            "active_users": 11,
+            "sessions": 25
+          },
+          {
+            "date": "2026-05-19",
+            "pageviews": 53,
+            "active_users": 13,
+            "sessions": 29
+          },
+          {
+            "date": "2026-05-20",
+            "pageviews": 60,
+            "active_users": 15,
+            "sessions": 33
+          },
+          {
+            "date": "2026-05-21",
+            "pageviews": 63,
+            "active_users": 17,
+            "sessions": 35
+          },
+          {
+            "date": "2026-05-22",
+            "pageviews": 63,
+            "active_users": 16,
+            "sessions": 34
+          },
+          {
+            "date": "2026-05-23",
+            "pageviews": 58,
+            "active_users": 15,
+            "sessions": 32
+          },
+          {
+            "date": "2026-05-24",
+            "pageviews": 52,
+            "active_users": 12,
+            "sessions": 28
+          },
+          {
+            "date": "2026-05-25",
+            "pageviews": 45,
+            "active_users": 10,
+            "sessions": 24
+          },
+          {
+            "date": "2026-05-26",
+            "pageviews": 42,
+            "active_users": 9,
+            "sessions": 22
+          },
+          {
+            "date": "2026-05-27",
+            "pageviews": 43,
+            "active_users": 9,
+            "sessions": 23
+          },
+          {
+            "date": "2026-05-28",
+            "pageviews": 48,
+            "active_users": 11,
+            "sessions": 26
+          },
+          {
+            "date": "2026-05-29",
+            "pageviews": 55,
+            "active_users": 13,
+            "sessions": 30
+          },
+          {
+            "date": "2026-05-30",
+            "pageviews": 62,
+            "active_users": 15,
+            "sessions": 34
+          },
+          {
+            "date": "2026-05-31",
+            "pageviews": 66,
+            "active_users": 17,
+            "sessions": 36
+          },
+          {
+            "date": "2026-06-01",
+            "pageviews": 65,
+            "active_users": 16,
+            "sessions": 35
+          },
+          {
+            "date": "2026-06-02",
+            "pageviews": 61,
+            "active_users": 15,
+            "sessions": 33
+          },
+          {
+            "date": "2026-06-03",
+            "pageviews": 54,
+            "active_users": 12,
+            "sessions": 29
+          },
+          {
+            "date": "2026-06-04",
+            "pageviews": 48,
+            "active_users": 10,
+            "sessions": 25
+          },
+          {
+            "date": "2026-06-05",
+            "pageviews": 45,
+            "active_users": 9,
+            "sessions": 23
+          },
+          {
+            "date": "2026-06-06",
+            "pageviews": 46,
+            "active_users": 9,
+            "sessions": 24
+          },
+          {
+            "date": "2026-06-07",
+            "pageviews": 51,
+            "active_users": 11,
+            "sessions": 27
+          },
+          {
+            "date": "2026-06-08",
+            "pageviews": 58,
+            "active_users": 13,
+            "sessions": 31
+          },
+          {
+            "date": "2026-06-09",
+            "pageviews": 65,
+            "active_users": 15,
+            "sessions": 35
+          },
+          {
+            "date": "2026-06-10",
+            "pageviews": 68,
+            "active_users": 17,
+            "sessions": 37
+          },
+          {
+            "date": "2026-06-11",
+            "pageviews": 67,
+            "active_users": 16,
+            "sessions": 36
+          },
+          {
+            "date": "2026-06-12",
+            "pageviews": 63,
+            "active_users": 15,
+            "sessions": 33
+          },
+          {
+            "date": "2026-06-13",
+            "pageviews": 56,
+            "active_users": 12,
+            "sessions": 29
+          },
+          {
+            "date": "2026-06-14",
+            "pageviews": 50,
+            "active_users": 10,
+            "sessions": 26
+          },
+          {
+            "date": "2026-06-15",
+            "pageviews": 47,
+            "active_users": 9,
+            "sessions": 24
+          },
+          {
+            "date": "2026-06-16",
+            "pageviews": 48,
+            "active_users": 9,
+            "sessions": 25
+          },
+          {
+            "date": "2026-06-17",
+            "pageviews": 53,
+            "active_users": 11,
+            "sessions": 28
+          }
+        ]
+      },
+      "daily_history": [
+        {
+          "date": "2026-06-18",
+          "pageviews": 48,
+          "active_users": 16,
+          "sessions": 28
+        },
+        {
+          "date": "2026-06-19",
+          "pageviews": 56,
+          "active_users": 19,
+          "sessions": 33
+        },
+        {
+          "date": "2026-06-20",
+          "pageviews": 62,
+          "active_users": 21,
+          "sessions": 37
+        },
+        {
+          "date": "2026-06-21",
+          "pageviews": 62,
+          "active_users": 21,
+          "sessions": 37
+        },
+        {
+          "date": "2026-06-22",
+          "pageviews": 57,
+          "active_users": 19,
+          "sessions": 34
+        },
+        {
+          "date": "2026-06-23",
+          "pageviews": 49,
+          "active_users": 16,
+          "sessions": 29
+        },
+        {
+          "date": "2026-06-24",
+          "pageviews": 41,
+          "active_users": 13,
+          "sessions": 24
+        },
+        {
+          "date": "2026-06-25",
+          "pageviews": 36,
+          "active_users": 12,
+          "sessions": 21
+        },
+        {
+          "date": "2026-06-26",
+          "pageviews": 36,
+          "active_users": 12,
+          "sessions": 21
+        },
+        {
+          "date": "2026-06-27",
+          "pageviews": 42,
+          "active_users": 14,
+          "sessions": 25
+        },
+        {
+          "date": "2026-06-28",
+          "pageviews": 51,
+          "active_users": 16,
+          "sessions": 30
+        },
+        {
+          "date": "2026-06-29",
+          "pageviews": 59,
+          "active_users": 19,
+          "sessions": 35
+        },
+        {
+          "date": "2026-06-30",
+          "pageviews": 65,
+          "active_users": 21,
+          "sessions": 38
+        },
+        {
+          "date": "2026-07-01",
+          "pageviews": 65,
+          "active_users": 21,
+          "sessions": 38
+        },
+        {
+          "date": "2026-07-02",
+          "pageviews": 60,
+          "active_users": 19,
+          "sessions": 35
+        },
+        {
+          "date": "2026-07-03",
+          "pageviews": 52,
+          "active_users": 16,
+          "sessions": 30
+        },
+        {
+          "date": "2026-07-04",
+          "pageviews": 44,
+          "active_users": 13,
+          "sessions": 25
+        },
+        {
+          "date": "2026-07-05",
+          "pageviews": 39,
+          "active_users": 12,
+          "sessions": 22
+        },
+        {
+          "date": "2026-07-06",
+          "pageviews": 39,
+          "active_users": 12,
+          "sessions": 23
+        },
+        {
+          "date": "2026-07-07",
+          "pageviews": 45,
+          "active_users": 14,
+          "sessions": 26
+        },
+        {
+          "date": "2026-07-08",
+          "pageviews": 54,
+          "active_users": 16,
+          "sessions": 31
+        },
+        {
+          "date": "2026-07-09",
+          "pageviews": 63,
+          "active_users": 19,
+          "sessions": 36
+        },
+        {
+          "date": "2026-07-10",
+          "pageviews": 68,
+          "active_users": 21,
+          "sessions": 39
+        },
+        {
+          "date": "2026-07-11",
+          "pageviews": 68,
+          "active_users": 21,
+          "sessions": 39
+        },
+        {
+          "date": "2026-07-12",
+          "pageviews": 63,
+          "active_users": 19,
+          "sessions": 36
+        },
+        {
+          "date": "2026-07-13",
+          "pageviews": 54,
+          "active_users": 16,
+          "sessions": 31
+        },
+        {
+          "date": "2026-07-14",
+          "pageviews": 46,
+          "active_users": 13,
+          "sessions": 26
+        },
+        {
+          "date": "2026-07-15",
+          "pageviews": 42,
+          "active_users": 12,
+          "sessions": 23
+        },
+        {
+          "date": "2026-07-16",
+          "pageviews": 42,
+          "active_users": 12,
+          "sessions": 24
+        },
+        {
+          "date": "2026-07-17",
+          "pageviews": 48,
+          "active_users": 14,
+          "sessions": 27
+        },
+        {
+          "date": "2026-07-18",
+          "pageviews": 57,
+          "active_users": 17,
+          "sessions": 32
+        },
+        {
+          "date": "2026-07-19",
+          "pageviews": 66,
+          "active_users": 19,
+          "sessions": 37
+        },
+        {
+          "date": "2026-07-20",
+          "pageviews": 71,
+          "active_users": 21,
+          "sessions": 40
+        },
+        {
+          "date": "2026-07-21",
+          "pageviews": 71,
+          "active_users": 21,
+          "sessions": 40
+        },
+        {
+          "date": "2026-07-22",
+          "pageviews": 65,
+          "active_users": 19,
+          "sessions": 37
+        },
+        {
+          "date": "2026-07-23",
+          "pageviews": 57,
+          "active_users": 16,
+          "sessions": 32
+        },
+        {
+          "date": "2026-07-24",
+          "pageviews": 49,
+          "active_users": 13,
+          "sessions": 27
+        },
+        {
+          "date": "2026-07-25",
+          "pageviews": 45,
+          "active_users": 12,
+          "sessions": 25
+        },
+        {
+          "date": "2026-07-26",
+          "pageviews": 46,
+          "active_users": 12,
+          "sessions": 25
+        },
+        {
+          "date": "2026-07-27",
+          "pageviews": 52,
+          "active_users": 14,
+          "sessions": 28
+        },
+        {
+          "date": "2026-07-28",
+          "pageviews": 60,
+          "active_users": 17,
+          "sessions": 34
+        },
+        {
+          "date": "2026-07-29",
+          "pageviews": 69,
+          "active_users": 19,
+          "sessions": 39
+        },
+        {
+          "date": "2026-07-30",
+          "pageviews": 74,
+          "active_users": 21,
+          "sessions": 41
+        },
+        {
+          "date": "2026-07-31",
+          "pageviews": 74,
+          "active_users": 21,
+          "sessions": 41
+        },
+        {
+          "date": "2026-08-01",
+          "pageviews": 68,
+          "active_users": 19,
+          "sessions": 38
+        },
+        {
+          "date": "2026-08-02",
+          "pageviews": 60,
+          "active_users": 16,
+          "sessions": 33
+        },
+        {
+          "date": "2026-08-03",
+          "pageviews": 52,
+          "active_users": 13,
+          "sessions": 28
+        },
+        {
+          "date": "2026-08-04",
+          "pageviews": 48,
+          "active_users": 12,
+          "sessions": 26
+        },
+        {
+          "date": "2026-08-05",
+          "pageviews": 49,
+          "active_users": 12,
+          "sessions": 26
+        },
+        {
+          "date": "2026-08-06",
+          "pageviews": 55,
+          "active_users": 14,
+          "sessions": 30
+        },
+        {
+          "date": "2026-08-07",
+          "pageviews": 64,
+          "active_users": 17,
+          "sessions": 35
+        },
+        {
+          "date": "2026-08-08",
+          "pageviews": 72,
+          "active_users": 19,
+          "sessions": 40
+        },
+        {
+          "date": "2026-08-09",
+          "pageviews": 77,
+          "active_users": 21,
+          "sessions": 43
+        },
+        {
+          "date": "2026-08-10",
+          "pageviews": 77,
+          "active_users": 21,
+          "sessions": 42
+        },
+        {
+          "date": "2026-08-11",
+          "pageviews": 71,
+          "active_users": 19,
+          "sessions": 39
+        },
+        {
+          "date": "2026-08-12",
+          "pageviews": 63,
+          "active_users": 16,
+          "sessions": 34
+        },
+        {
+          "date": "2026-08-13",
+          "pageviews": 55,
+          "active_users": 13,
+          "sessions": 29
+        },
+        {
+          "date": "2026-08-14",
+          "pageviews": 51,
+          "active_users": 12,
+          "sessions": 27
+        },
+        {
+          "date": "2026-08-15",
+          "pageviews": 52,
+          "active_users": 12,
+          "sessions": 28
+        },
+        {
+          "date": "2026-08-16",
+          "pageviews": 58,
+          "active_users": 14,
+          "sessions": 31
+        },
+        {
+          "date": "2026-08-17",
+          "pageviews": 67,
+          "active_users": 17,
+          "sessions": 36
+        },
+        {
+          "date": "2026-08-18",
+          "pageviews": 75,
+          "active_users": 20,
+          "sessions": 41
+        },
+        {
+          "date": "2026-08-19",
+          "pageviews": 80,
+          "active_users": 21,
+          "sessions": 44
+        },
+        {
+          "date": "2026-08-20",
+          "pageviews": 80,
+          "active_users": 21,
+          "sessions": 44
+        },
+        {
+          "date": "2026-08-21",
+          "pageviews": 74,
+          "active_users": 19,
+          "sessions": 40
+        },
+        {
+          "date": "2026-08-22",
+          "pageviews": 65,
+          "active_users": 16,
+          "sessions": 35
+        },
+        {
+          "date": "2026-08-23",
+          "pageviews": 58,
+          "active_users": 13,
+          "sessions": 31
+        },
+        {
+          "date": "2026-08-24",
+          "pageviews": 53,
+          "active_users": 12,
+          "sessions": 28
+        },
+        {
+          "date": "2026-08-25",
+          "pageviews": 55,
+          "active_users": 12,
+          "sessions": 29
+        },
+        {
+          "date": "2026-08-26",
+          "pageviews": 61,
+          "active_users": 14,
+          "sessions": 32
+        },
+        {
+          "date": "2026-08-27",
+          "pageviews": 70,
+          "active_users": 17,
+          "sessions": 38
+        },
+        {
+          "date": "2026-08-28",
+          "pageviews": 79,
+          "active_users": 20,
+          "sessions": 43
+        },
+        {
+          "date": "2026-08-29",
+          "pageviews": 83,
+          "active_users": 21,
+          "sessions": 45
+        },
+        {
+          "date": "2026-08-30",
+          "pageviews": 82,
+          "active_users": 21,
+          "sessions": 45
+        },
+        {
+          "date": "2026-08-31",
+          "pageviews": 77,
+          "active_users": 19,
+          "sessions": 41
+        },
+        {
+          "date": "2026-09-01",
+          "pageviews": 68,
+          "active_users": 16,
+          "sessions": 36
+        },
+        {
+          "date": "2026-09-02",
+          "pageviews": 60,
+          "active_users": 13,
+          "sessions": 32
+        },
+        {
+          "date": "2026-09-03",
+          "pageviews": 56,
+          "active_users": 12,
+          "sessions": 29
+        },
+        {
+          "date": "2026-09-04",
+          "pageviews": 58,
+          "active_users": 12,
+          "sessions": 30
+        },
+        {
+          "date": "2026-09-05",
+          "pageviews": 64,
+          "active_users": 14,
+          "sessions": 34
+        },
+        {
+          "date": "2026-09-06",
+          "pageviews": 73,
+          "active_users": 17,
+          "sessions": 39
+        },
+        {
+          "date": "2026-09-07",
+          "pageviews": 82,
+          "active_users": 20,
+          "sessions": 44
+        },
+        {
+          "date": "2026-09-08",
+          "pageviews": 86,
+          "active_users": 21,
+          "sessions": 46
+        },
+        {
+          "date": "2026-09-09",
+          "pageviews": 85,
+          "active_users": 21,
+          "sessions": 46
+        },
+        {
+          "date": "2026-09-10",
+          "pageviews": 79,
+          "active_users": 19,
+          "sessions": 42
+        },
+        {
+          "date": "2026-09-11",
+          "pageviews": 71,
+          "active_users": 16,
+          "sessions": 37
+        },
+        {
+          "date": "2026-09-12",
+          "pageviews": 63,
+          "active_users": 13,
+          "sessions": 33
+        },
+        {
+          "date": "2026-09-13",
+          "pageviews": 59,
+          "active_users": 12,
+          "sessions": 30
+        },
+        {
+          "date": "2026-09-14",
+          "pageviews": 61,
+          "active_users": 12,
+          "sessions": 31
+        },
+        {
+          "date": "2026-09-15",
+          "pageviews": 68,
+          "active_users": 14,
+          "sessions": 35
+        }
+      ],
+      "breakdowns": {
+        "countries": {
+          "status": "available",
+          "metric": "pageviews",
+          "minimum_active_users": 10,
+          "total": 5476,
+          "other": 495,
+          "rows": [
+            {
+              "label": "Brazil",
+              "value": 1697
+            },
+            {
+              "label": "United States",
+              "value": 1259
+            },
+            {
+              "label": "India",
+              "value": 876
+            },
+            {
+              "label": "Germany",
+              "value": 547
+            },
+            {
+              "label": "United Kingdom",
+              "value": 383
+            },
+            {
+              "label": "Canada",
+              "value": 219
+            }
+          ]
+        },
+        "devices": {
+          "status": "available",
+          "metric": "pageviews",
+          "minimum_active_users": 10,
+          "total": 5476,
+          "other": 1644,
+          "rows": [
+            {
+              "label": "desktop",
+              "value": 1697
+            },
+            {
+              "label": "mobile",
+              "value": 1259
+            },
+            {
+              "label": "tablet",
+              "value": 876
+            }
+          ]
+        },
+        "channels": {
+          "status": "available",
+          "metric": "sessions",
+          "minimum_active_users": 10,
+          "total": 3026,
+          "other": 396,
+          "rows": [
+            {
+              "label": "Organic Search",
+              "value": 938
+            },
+            {
+              "label": "Direct",
+              "value": 695
+            },
+            {
+              "label": "Referral",
+              "value": 484
+            },
+            {
+              "label": "Organic Social",
+              "value": 302
+            },
+            {
+              "label": "Email",
+              "value": 211
+            }
+          ]
+        },
+        "pages": {
+          "status": "available",
+          "metric": "pageviews",
+          "minimum_active_users": 10,
+          "total": 5466,
+          "other": 495,
+          "rows": [
+            {
+              "label": "/",
+              "value": 1694
+            },
+            {
+              "label": "/projects/",
+              "value": 1257
+            },
+            {
+              "label": "/blog/",
+              "value": 874
+            },
+            {
+              "label": "/about/",
+              "value": 546
+            },
+            {
+              "label": "/analytics/",
+              "value": 382
+            },
+            {
+              "label": "/about/sponsorship/",
+              "value": 218
+            }
+          ]
+        }
+      }
+    }
+  }
+}

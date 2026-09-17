@@ -98,7 +98,7 @@ def dashboard(report):
         (
             "active_users",
             "Active users",
-            "Distinct active users over all 30 days",
+            "Distinct active users over the full reporting period",
         ),
         (
             "sessions",
@@ -149,14 +149,25 @@ def dashboard(report):
         ("countries", "Where our audience is", "Country-level pageviews"),
         ("devices", "How people visit", "Pageviews by device category"),
         ("channels", "How people find us", "Sessions by acquisition channel"),
+        ("pages", "Top pages", "Pageviews on known public OSL pages"),
     ]:
-        panel = (report.get("breakdowns") or {}).get(key)
+        panels = (
+            report["windows"]["30"]["breakdowns"]
+            if report.get("windows")
+            else report.get("breakdowns") or {}
+        )
+        panel = panels.get(key)
         item = {"key": key, "title": title, "description": description}
         item.update(panel or {"status": "missing"})
         item["display_rows"] = []
         if panel and panel["status"] == "available":
             rows = panel["rows"] + [
-                {"label": "Other / unknown", "value": panel["other"]}
+                {
+                    "label": "Other public pages"
+                    if key == "pages"
+                    else "Other / unknown",
+                    "value": panel["other"],
+                }
             ]
             for row in rows:
                 share = (

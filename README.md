@@ -21,6 +21,18 @@ poetry install
 makim pages.preview
 ```
 
+Open `http://localhost:8000/analytics/` to explore the dashboard with clearly
+labeled synthetic data. Local preview includes this TEST FIXTURE by default; no
+Google credentials are needed. To use the saved real analytics snapshot (or show
+the unavailable state if none exists):
+
+```bash
+makim pages.preview --no-analytics-fixture
+```
+
+Fixtures do not overwrite the saved snapshot or affect `makim pages.build` or
+production deployments. Either preview mode supports `--run-pre-build`.
+
 ## Linter
 
 Ensure you have installed the pre-commit config locally:

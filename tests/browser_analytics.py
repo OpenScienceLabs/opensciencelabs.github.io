@@ -10,27 +10,74 @@ REQUIRED_MOBILE_WIDTH = 390
 
 
 def check_chart_controls(page, output, width, mode):
-    """Check keyboard chart selection and accessible table disclosures."""
-    switches = page.locator("[data-chart-switch]")
-    if switches.count():
-        for name in ("monthly", "daily"):
-            button = page.locator(f'[data-chart-target="{name}"]')
+    """Exercise genuine controls, not only the presence of a screenshot."""
+    if not page.locator("#analytics-window").count():
+        return
+    report = json.loads(page.locator("#analytics-report-data").text_content())
+    for days in ("7", "30", "90"):
+        option = page.locator(f'#analytics-window option[value="{days}"]')
+        if option.is_disabled():
+            continue
+        page.locator("#analytics-window").select_option(days)
+        if report.get("windows"):
+            window = report["windows"][days]
+            for key, value in window["summary"].items():
+                text = page.locator(
+                    f'[data-metric="{key}"] .analytics-metric-value'
+                ).inner_text()
+                if text != f"{value:,}":
+                    raise AssertionError("Selected period summary mismatch")
+        for key in ("pageviews", "active_users", "sessions"):
+            button = page.locator(f'[data-metric="{key}"]')
+            if button.is_disabled():
+                continue
             button.focus()
             page.keyboard.press("Enter")
             if button.get_attribute("aria-pressed") != "true":
-                raise AssertionError("Chart control not selected")
-            if not page.locator(f"#analytics-{name}").is_visible():
-                raise AssertionError("Selected chart is hidden")
-            table = page.locator(f"#analytics-{name} details")
-            table.locator("summary").focus()
-            page.keyboard.press("Enter")
-            if not table.locator("table").is_visible():
-                raise AssertionError("Data table is not operable")
-            page.screenshot(
-                path=str(output / f"table-{name}-{width}-{mode}.png"),
-                full_page=True,
-            )
-            page.keyboard.press("Enter")
+                raise AssertionError("Metric selection failed")
+        page.locator("#analytics-table-toggle").click()
+        if not page.locator("#analytics-series-table table").is_visible():
+            raise AssertionError("Daily table is hidden")
+        page.locator("#analytics-table-toggle").click()
+    page.locator("#analytics-window").select_option("30")
+    pageviews = page.locator('[data-metric="pageviews"]')
+    if not pageviews.is_disabled():
+        pageviews.click()
+    page.screenshot(
+        path=str(output / f"overview-{width}-{mode}.png"), full_page=True
+    )
+    check_dimension_controls(page, output, width, mode)
+
+
+def check_dimension_controls(page, output, width, mode):
+    """Inspect report navigation, table search/sort and real CSV downloads."""
+    for key in ("countries", "devices", "channels", "pages"):
+        page.locator(f'.analytics-sidebar [data-report="{key}"]').click()
+        panel = page.locator(f"#report-{key}")
+        if not panel.is_visible():
+            raise AssertionError("Selected report is hidden")
+        search = page.locator(f'[data-search="{key}"]')
+        if not search.is_disabled():
+            search.fill("no-matching-category-TEST")
+            if "No matching categories" not in panel.inner_text():
+                raise AssertionError("Table search did not update")
+            search.fill("")
+            sort = page.locator(f'[data-panel="{key}"][data-sort="label"]')
+            sort.click()
+            with page.expect_download() as pending:
+                page.locator(f'[data-export="{key}"]').click()
+            download = pending.value
+            if download.failure():
+                raise AssertionError("CSV download failed")
+            download.save_as(str(output / f"{key}-{width}-{mode}.csv"))
+        if page.evaluate(
+            "document.documentElement.scrollWidth > innerWidth + 1"
+        ):
+            raise AssertionError(f"Report overflow: {key}, {width}px")
+        page.screenshot(
+            path=str(output / f"{key}-{width}-{mode}.png"), full_page=True
+        )
+    page.locator('.analytics-sidebar [data-report="overview"]').click()
 
 
 def check(url: str, output: Path) -> None:
@@ -91,11 +138,10 @@ def check(url: str, output: Path) -> None:
         page.goto(url)
         if not page.locator("[data-analytics-report]").is_visible():
             raise AssertionError("Report requires JavaScript")
-        for panel in page.locator(".analytics-trend-panel").all():
+        for panel in page.locator("[data-section]").all():
             if not panel.is_visible():
-                raise AssertionError("A chart requires JavaScript")
-            panel.locator("summary").click()
-            if not panel.locator("table").is_visible():
+                raise AssertionError("A report requires JavaScript")
+            if not panel.locator("table").first.is_visible():
                 raise AssertionError("A data table requires JavaScript")
         context.close()
         browser.close()
