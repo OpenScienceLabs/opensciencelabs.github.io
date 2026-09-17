@@ -12,7 +12,7 @@
     "opensciencelabs.org"
   ],
   "timezone": "America/La_Paz",
-  "generated_at": "2026-09-17T11:53:02.230955Z",
+  "generated_at": "2026-09-17T13:51:53.084517Z",
   "reporting_period": {
     "start": "2026-08-18",
     "end": "2026-09-16"
@@ -2258,7 +2258,7 @@
           "rows": [
             {
               "label": "Direct",
-              "value": 1921
+              "value": 1920
             },
             {
               "label": "Organic Search",
@@ -2281,7 +2281,7 @@
               "value": 23
             }
           ],
-          "total": 2814,
+          "total": 2813,
           "other": 0
         },
         "pages": {
