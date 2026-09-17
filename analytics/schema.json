@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://opensciencelabs.org/analytics/schema.json",
-  "title": "OSL public analytics report v1",
-  "description": "Closed aggregate-only contract. Nulls mean unavailable, never zero. Dates are inclusive in the property timezone. Missing historical months are omitted, not imputed. generated_at is the last successful export in UTC.",
+  "title": "OSL public analytics report v1/v2",
+  "description": "Closed aggregate-only contract. v2 adds preceding-period totals, daily pageviews and privacy-filtered audience breakdowns. Retained v1 snapshots remain valid without invented new fields. All dates are property-local; generated_at is the last successful export in UTC.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -20,9 +20,15 @@
     "monthly_history"
   ],
   "properties": {
-    "schema_version": { "const": 1 },
-    "data_kind": { "enum": ["production", "fixture"] },
-    "status": { "enum": ["available", "unavailable"] },
+    "schema_version": {
+      "enum": [1, 2]
+    },
+    "data_kind": {
+      "enum": ["production", "fixture"]
+    },
+    "status": {
+      "enum": ["available", "unavailable"]
+    },
     "source": {
       "const": {
         "publisher": "Open Science Labs",
@@ -30,36 +36,53 @@
         "api": "Google Analytics Data API v1beta"
       }
     },
-    "site": { "const": "https://opensciencelabs.org" },
+    "site": {
+      "const": "https://opensciencelabs.org"
+    },
     "hostnames": {
       "type": "array",
       "uniqueItems": true,
-      "items": { "type": "string", "format": "hostname" }
+      "items": {
+        "type": "string",
+        "format": "hostname"
+      }
     },
-    "timezone": { "type": ["string", "null"], "minLength": 1 },
+    "timezone": {
+      "type": ["string", "null"],
+      "minLength": 1
+    },
     "generated_at": {
       "type": ["string", "null"],
       "format": "date-time",
       "pattern": "Z$"
     },
     "reporting_period": {
-      "oneOf": [{ "$ref": "#/$defs/period" }, { "type": "null" }]
+      "oneOf": [
+        {
+          "$ref": "#/$defs/period"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "history_period": {
-      "oneOf": [{ "$ref": "#/$defs/period" }, { "type": "null" }]
+      "oneOf": [
+        {
+          "$ref": "#/$defs/period"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "summary": {
       "oneOf": [
-        { "type": "null" },
         {
-          "type": "object",
-          "additionalProperties": false,
-          "required": ["pageviews", "active_users", "sessions"],
-          "properties": {
-            "pageviews": { "$ref": "#/$defs/count" },
-            "active_users": { "$ref": "#/$defs/count" },
-            "sessions": { "$ref": "#/$defs/count" }
-          }
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/summary"
         }
       ]
     },
@@ -75,49 +98,367 @@
             "type": "string",
             "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])$"
           },
-          "start": { "type": "string", "format": "date" },
-          "end": { "type": "string", "format": "date" },
-          "pageviews": { "$ref": "#/$defs/count" }
+          "start": {
+            "type": "string",
+            "format": "date"
+          },
+          "end": {
+            "type": "string",
+            "format": "date"
+          },
+          "pageviews": {
+            "$ref": "#/$defs/count"
+          }
         }
       }
+    },
+    "comparison": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["reporting_period", "summary"],
+          "properties": {
+            "reporting_period": {
+              "$ref": "#/$defs/period"
+            },
+            "summary": {
+              "$ref": "#/$defs/summary"
+            }
+          }
+        }
+      ]
+    },
+    "daily_history": {
+      "type": "array",
+      "maxItems": 30,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["date", "pageviews"],
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "pageviews": {
+            "$ref": "#/$defs/count"
+          }
+        }
+      }
+    },
+    "breakdowns": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["countries", "devices", "channels"],
+          "properties": {
+            "countries": {
+              "allOf": [
+                {
+                  "$ref": "#/$defs/breakdown"
+                },
+                {
+                  "properties": {
+                    "metric": {
+                      "const": "pageviews"
+                    }
+                  }
+                }
+              ]
+            },
+            "devices": {
+              "allOf": [
+                {
+                  "$ref": "#/$defs/breakdown"
+                },
+                {
+                  "properties": {
+                    "metric": {
+                      "const": "pageviews"
+                    }
+                  }
+                }
+              ]
+            },
+            "channels": {
+              "allOf": [
+                {
+                  "$ref": "#/$defs/breakdown"
+                },
+                {
+                  "properties": {
+                    "metric": {
+                      "const": "sessions"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
     }
   },
   "allOf": [
     {
-      "if": { "properties": { "status": { "const": "available" } } },
+      "if": {
+        "properties": {
+          "status": {
+            "const": "available"
+          }
+        }
+      },
       "then": {
         "properties": {
-          "hostnames": { "minItems": 1 },
-          "timezone": { "type": "string" },
-          "generated_at": { "type": "string" },
-          "reporting_period": { "$ref": "#/$defs/period" },
-          "history_period": { "$ref": "#/$defs/period" },
-          "summary": { "type": "object" }
+          "hostnames": {
+            "minItems": 1
+          },
+          "timezone": {
+            "type": "string"
+          },
+          "generated_at": {
+            "type": "string"
+          },
+          "reporting_period": {
+            "$ref": "#/$defs/period"
+          },
+          "history_period": {
+            "$ref": "#/$defs/period"
+          },
+          "summary": {
+            "type": "object"
+          }
         }
       },
       "else": {
         "properties": {
-          "hostnames": { "maxItems": 0 },
-          "timezone": { "type": "null" },
-          "generated_at": { "type": "null" },
-          "reporting_period": { "type": "null" },
-          "history_period": { "type": "null" },
-          "summary": { "type": "null" },
-          "monthly_history": { "maxItems": 0 }
+          "hostnames": {
+            "maxItems": 0
+          },
+          "timezone": {
+            "type": "null"
+          },
+          "generated_at": {
+            "type": "null"
+          },
+          "reporting_period": {
+            "type": "null"
+          },
+          "history_period": {
+            "type": "null"
+          },
+          "summary": {
+            "type": "null"
+          },
+          "monthly_history": {
+            "maxItems": 0
+          }
         }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "schema_version": {
+            "const": 1
+          }
+        }
+      },
+      "then": {
+        "not": {
+          "anyOf": [
+            {
+              "required": ["comparison"]
+            },
+            {
+              "required": ["daily_history"]
+            },
+            {
+              "required": ["breakdowns"]
+            }
+          ]
+        }
+      },
+      "else": {
+        "required": ["comparison", "daily_history", "breakdowns"],
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "status": {
+                  "const": "available"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "comparison": {
+                  "type": "object"
+                },
+                "breakdowns": {
+                  "type": "object"
+                }
+              }
+            },
+            "else": {
+              "properties": {
+                "comparison": {
+                  "type": "null"
+                },
+                "daily_history": {
+                  "maxItems": 0
+                },
+                "breakdowns": {
+                  "type": "null"
+                }
+              }
+            }
+          }
+        ]
       }
     }
   ],
   "$defs": {
-    "count": { "type": "integer", "minimum": 0, "maximum": 9007199254740991 },
+    "count": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
     "period": {
       "type": "object",
       "additionalProperties": false,
       "required": ["start", "end"],
       "properties": {
-        "start": { "type": "string", "format": "date" },
-        "end": { "type": "string", "format": "date" }
+        "start": {
+          "type": "string",
+          "format": "date"
+        },
+        "end": {
+          "type": "string",
+          "format": "date"
+        }
       }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["pageviews", "active_users", "sessions"],
+      "properties": {
+        "pageviews": {
+          "$ref": "#/$defs/count"
+        },
+        "active_users": {
+          "$ref": "#/$defs/count"
+        },
+        "sessions": {
+          "$ref": "#/$defs/count"
+        }
+      }
+    },
+    "breakdown": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "metric",
+        "minimum_active_users",
+        "total",
+        "other",
+        "rows"
+      ],
+      "properties": {
+        "status": {
+          "enum": ["available", "withheld"]
+        },
+        "metric": {
+          "enum": ["pageviews", "sessions"]
+        },
+        "minimum_active_users": {
+          "const": 10
+        },
+        "total": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/count"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "other": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/count"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "rows": {
+          "type": "array",
+          "maxItems": 10,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["label", "value"],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 80,
+                "pattern": "^[^\\u0000-\\u001f<>]+$"
+              },
+              "value": {
+                "$ref": "#/$defs/count"
+              }
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "withheld"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "total": {
+                "type": "null"
+              },
+              "other": {
+                "type": "null"
+              },
+              "rows": {
+                "maxItems": 0
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "total": {
+                "$ref": "#/$defs/count"
+              },
+              "other": {
+                "$ref": "#/$defs/count"
+              }
+            }
+          }
+        }
+      ]
     }
   }
 }
