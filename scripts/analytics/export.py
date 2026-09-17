@@ -15,14 +15,17 @@ from scripts.analytics.report import (
     METRICS,
     MIN_GROUP_USERS,
     SNAPSHOT,
+    WINDOW_PRESETS,
     hostnames,
     month_period,
     periods,
     previous_period,
     unavailable,
     validate,
+    window_period,
     write_snapshot,
 )
+from scripts.analytics.routes import public_routes
 
 SCOPE = "https://www.googleapis.com/auth/analytics.readonly"
 REPOSITORY = "OpenScienceLabs/opensciencelabs.github.io"
@@ -83,9 +86,9 @@ class Settings:
         return cls(property_id, hostnames(env.get("GA4_HOSTNAMES", "")))
 
 
-def dimension_filter(hosts: list[str]) -> dict:
+def dimension_filter(hosts: list[str], paths=None) -> dict:
     """AND exact allowed hostnames with Web to exclude apps and other sites."""
-    return {
+    result = {
         "and_group": {
             "expressions": [
                 {
@@ -110,9 +113,26 @@ def dimension_filter(hosts: list[str]) -> dict:
             ]
         }
     }
+    if paths is not None:
+        if not paths:
+            raise ValueError("Empty public-page scope")
+        result["and_group"]["expressions"].append(
+            {
+                "filter": {
+                    "field_name": "pagePath",
+                    "in_list_filter": {
+                        "values": paths,
+                        "case_sensitive": True,
+                    },
+                },
+            }
+        )
+    return result
 
 
-def query_page(client, settings, period, metrics, dimensions, offset):
+def query_page(
+    client, settings, period, metrics, dimensions, offset, paths=None
+):
     """Validate one bounded page; retain only counts and requested labels."""
     request = dict(
         property=f"properties/{settings.property_id}",
@@ -121,7 +141,7 @@ def query_page(client, settings, period, metrics, dimensions, offset):
         ],
         metrics=[{"name": name} for name in metrics],
         dimensions=[{"name": name} for name in dimensions],
-        dimension_filter=dimension_filter(settings.hosts),
+        dimension_filter=dimension_filter(settings.hosts, paths),
         keep_empty_rows=True,
         limit=PAGE_SIZE,
         offset=offset,
@@ -175,14 +195,14 @@ def query_page(client, settings, period, metrics, dimensions, offset):
     return metadata.time_zone, response.row_count, result
 
 
-def query(client, settings, period, metrics, dimensions=()):
+def query(client, settings, period, metrics, dimensions=(), *, paths=None):
     """Paginate with stable ordering; reject changing or duplicated rows."""
     zone, total, result = query_page(
-        client, settings, period, metrics, dimensions, 0
+        client, settings, period, metrics, dimensions, 0, paths
     )
     while len(result) < total:
         next_zone, next_total, rows = query_page(
-            client, settings, period, metrics, dimensions, len(result)
+            client, settings, period, metrics, dimensions, len(result), paths
         )
         if (next_zone, next_total) != (zone, total):
             raise ValueError("GA4 report changed during pagination")
@@ -201,7 +221,16 @@ def summary_counts(rows):
     return {public: counts[api] for api, public in METRICS.items()}
 
 
-def breakdown(client, settings, period, dimension, api_metric, public_metric):
+def breakdown(
+    client,
+    settings,
+    period,
+    dimension,
+    api_metric,
+    public_metric,
+    *,
+    paths=None,
+):
     """Publish coarse rankings, grouping small and unclassified categories."""
     panel = {
         "status": "withheld",
@@ -213,7 +242,12 @@ def breakdown(client, settings, period, dimension, api_metric, public_metric):
     }
     try:
         zone, rows = query(
-            client, settings, period, [api_metric, "activeUsers"], [dimension]
+            client,
+            settings,
+            period,
+            [api_metric, "activeUsers"],
+            [dimension],
+            paths=paths,
         )
     except RestrictedReport as error:
         # An explicit GA4 restriction is an honest unavailable panel. Network,
@@ -224,6 +258,8 @@ def breakdown(client, settings, period, dimension, api_metric, public_metric):
     visible = []
     for dims, counts in rows:
         label = dims[0]
+        if paths is not None and label not in paths:
+            raise ValueError("Unexpected page outside the public route scope")
         if counts["activeUsers"] < MIN_GROUP_USERS or label.lower() in {
             "",
             "(not set)",
@@ -231,7 +267,7 @@ def breakdown(client, settings, period, dimension, api_metric, public_metric):
             "unknown",
         }:
             continue
-        if not re.fullmatch(r"[^\x00-\x1f<>]{1,80}", label):
+        if paths is None and not re.fullmatch(r"[^\x00-\x1f<>]{1,80}", label):
             raise ValueError("Invalid aggregate label")
         visible.append({"label": label, "value": counts[api_metric]})
     visible.sort(key=lambda row: (-row["value"], row["label"]))
@@ -244,10 +280,72 @@ def breakdown(client, settings, period, dimension, api_metric, public_metric):
     return zone, panel
 
 
+def daily_counts(rows):
+    """Map returned daily metrics without filling absent dates with zeros."""
+    result = []
+    for dims, counts in rows:
+        day = dims[0]
+        if not re.fullmatch(r"[0-9]{8}", day):
+            raise ValueError("Invalid GA4 date")
+        result.append(
+            {
+                "date": f"{day[:4]}-{day[4:6]}-{day[6:]}",
+                **{public: counts[api] for api, public in METRICS.items()},
+            }
+        )
+    return sorted(result, key=lambda row: row["date"])
+
+
+def collect_window(client, settings, period, zone, paths, summary=None):
+    """Query each preset and comparison independently, including users."""
+
+    def checked_query(dates, dimensions=()):
+        returned_zone, rows = query(
+            client, settings, dates, list(METRICS), dimensions
+        )
+        if returned_zone != zone:
+            raise ValueError("Property timezone changed during export")
+        return rows
+
+    if summary is None:
+        summary = summary_counts(checked_query(period))
+    previous = previous_period(period)
+    comparison = summary_counts(checked_query(previous))
+    daily = daily_counts(checked_query(period, ["date"]))
+    panels = {}
+    for key, spec in BREAKDOWNS.items():
+        panel_zone, panels[key] = breakdown(client, settings, period, *spec)
+        if panel_zone != zone:
+            raise ValueError("Property timezone changed during export")
+    panel_zone, panels["pages"] = breakdown(
+        client,
+        settings,
+        period,
+        "pagePath",
+        "screenPageViews",
+        "pageviews",
+        paths=paths,
+    )
+    if panel_zone != zone:
+        raise ValueError("Property timezone changed during export")
+    return {
+        "reporting_period": period,
+        "summary": summary,
+        "comparison": {
+            "reporting_period": previous,
+            "summary": comparison,
+            "daily_history": daily_counts(checked_query(previous, ["date"])),
+        },
+        "daily_history": daily,
+        "breakdowns": panels,
+    }
+
+
 def collect(client, settings: Settings, now: datetime | None = None) -> dict:
     """Re-query all periods; activeUsers is one period-level distinct total."""
     # Relative dates are interpreted by GA4 in its property timezone. This
     # small probe discovers that timezone without requiring the Admin API.
+    paths = public_routes()
     zone, _ = query(
         client,
         settings,
@@ -290,36 +388,30 @@ def collect(client, settings: Settings, now: datetime | None = None) -> dict:
     # Missing months remain absent: GA4 cannot prove whether collection was
     # enabled then. Explicit returned zeros, however, are preserved.
     report["monthly_history"].sort(key=lambda item: item["month"])
-    comparison = previous_period(rolling)
-    comparison_zone, comparison_rows = query(
-        client, settings, comparison, list(METRICS)
+    window = collect_window(
+        client, settings, rolling, zone, paths, summary=report["summary"]
     )
-    report["comparison"] = {
-        "reporting_period": comparison,
-        "summary": summary_counts(comparison_rows),
-    }
-    daily_zone, daily_rows = query(
-        client, settings, rolling, ["screenPageViews"], ["date"]
-    )
-    if (comparison_zone, daily_zone) != (zone, zone):
-        raise ValueError("Property timezone changed during export; retry")
-    for dims, counts in daily_rows:
-        day = dims[0]
-        if not re.fullmatch(r"[0-9]{8}", day):
-            raise ValueError("Invalid GA4 date")
-        report["daily_history"].append(
-            {
-                "date": f"{day[:4]}-{day[4:6]}-{day[6:]}",
-                "pageviews": counts["screenPageViews"],
-            }
+    report["windows"] = {"30": window}
+    for days in WINDOW_PRESETS:
+        if str(days) == "30":
+            continue
+        report["windows"][str(days)] = collect_window(
+            client, settings, window_period(started, zone, days), zone, paths
         )
-    report["daily_history"].sort(key=lambda row: row["date"])
-    report["breakdowns"] = {}
-    for key, spec in BREAKDOWNS.items():
-        panel_zone, panel = breakdown(client, settings, rolling, *spec)
-        if panel_zone != zone:
-            raise ValueError("Property timezone changed during export; retry")
-        report["breakdowns"][key] = panel
+    # Exact 30-day compatibility projection; never a second calculation.
+    report["comparison"] = {
+        key: window["comparison"][key]
+        for key in ("reporting_period", "summary")
+    }
+    report["daily_history"] = [
+        {key: row[key] for key in ("date", "pageviews")}
+        for row in window["daily_history"]
+    ]
+    report["breakdowns"] = {
+        key: panel
+        for key, panel in window["breakdowns"].items()
+        if key != "pages"
+    }
     finished = now or datetime.now(timezone.utc)
     if periods(finished, zone) != (rolling, history):
         raise ValueError("Property midnight crossed during export; retry")

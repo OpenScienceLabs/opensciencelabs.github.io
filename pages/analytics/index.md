@@ -20,19 +20,25 @@ published; no visitor identifiers or raw API responses are included.
   repeated views of the same page. The Web platform filter excludes app screens.
 - **Active users** (`activeUsers`): distinct users GA4 classifies as active,
   based on engagement and applicable first-visit or engagement signals. This is
-  queried over each entire 30-day period, not added from daily totals. It is not
-  a count of all visitors or a census of individual people.
+  queried over each entire selected period, not added from daily totals. It is
+  not a count of all visitors or a census of individual people.
 - **Sessions** (`sessions`): sessions that began during the reporting period, as
   measured by GA4. A user can have more than one session.
 
 All dates are inclusive calendar dates in the **GA4 property's reporting
-timezone**, shown above. The summary covers 30 completed days ending yesterday
-at the time of the last successful refresh. Comparisons use the immediately
-preceding 30 completed days in the same timezone, not the previous calendar
-month. Percentage changes have no meaningful baseline when the previous count is
-zero. The daily chart covers the summary period; monthly history covers up to 12
-completed calendar months, excluding the current month. These are different
-reporting windows, not directly comparable totals.
+timezone**, shown above. The default summary covers 30 completed days ending
+yesterday at the last successful refresh. The date selector also offers **7 and
+90 completed days** when the snapshot supports them. Each period's summary is
+queried independently. Comparisons use the immediately preceding period of the
+same length, not the previous calendar month. A previous zero has no meaningful
+percentage baseline.
+
+The daily chart switches between pageviews, active users and sessions. Daily
+active-user points are distinct counts for individual dates: **do not sum them
+into the period total**. The comparison line aligns the previous period by day
+index, using the same scale; date inspection and the table show both exact
+dates. Monthly pageviews cover up to 12 completed calendar months independently
+of the selected window. The current month is excluded.
 
 Missing dates and months are marked **Not reported**, with gaps in the chart;
 they are not invented as zeros and may predate collection. Explicit zero counts
@@ -53,20 +59,35 @@ community platforms, or other websites.
 - **Channels** show sessions by `sessionDefaultChannelGroup`, GA4's rule-based
   classification of how sessions started. This is session acquisition, not a
   user's first-ever acquisition channel or a campaign attribution audit.
+- **Pages** show pageviews by `pagePath`, restricted to canonical public routes
+  derived from this MkDocs website. Unknown paths, noncanonical aliases and
+  routes no longer in the current site are excluded. Query strings, full URLs,
+  GA-supplied page titles and visitor identifiers are never published. Page
+  totals can therefore be lower than headline pageviews.
 
-Each panel uses the same 30-day window and hostname scope as the headline. Up to
-ten named categories are ranked by their additive metric. A category needs at
+Each panel uses the same selected window and hostname scope as the headline. Up
+to ten named categories are ranked by their additive metric. A category needs at
 least ten `activeUsers` over the full period to be named; smaller, remaining and
 unclassified categories are combined as **Other / unknown**. Those per-category
 user counts are used only for grouping and are never published or summed into
 headline users. Grouping reduces detail; it is not a formal anonymity guarantee.
-No city, visitor, page-path or cross-category breakdowns are published.
+No city, visitor or cross-category breakdowns are published. Page statistics are
+restricted to known public routes as described above. Smaller/remaining known
+page routes are labeled **Other public pages**, not unknown visitor paths.
 
 Shares use each panel's returned total, including Other / unknown, not the
 headline user count. Rounded shares may not add to exactly 100%. Dimensioned and
 headline reports may differ during processing or because of reporting semantics;
 we do not adjust them to force agreement. A retained older snapshot may lack
 comparisons or audience panels; that absence is not zero traffic.
+
+Table search and sorting affect only that table, not the headline totals or
+other reports. CSV downloads contain the currently selected daily metric or
+filtered dimension table, with reporting dates and provenance. The JSON contains
+all published windows. This is a daily-updated public reporting tool, not
+realtime GA4 access or an arbitrary-date/cross-dimension query interface. Older
+snapshots keep unavailable controls disabled; no statistics are invented for
+missing periods.
 
 ### Limitations and freshness
 
@@ -92,8 +113,8 @@ Metric definitions follow Google's
 See also Google's
 [data freshness guidance](https://support.google.com/analytics/answer/12233314).
 The endpoint follows our [versioned JSON schema](schema.json). New exports use
-version 2; older version 1 snapshots remain readable without changing their
-original refresh timestamp.
+version 3; older version 1 and 2 snapshots remain readable without changing
+their original refresh timestamp.
 
 ## Support open science
 

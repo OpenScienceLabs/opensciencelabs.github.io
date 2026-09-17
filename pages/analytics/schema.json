@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://opensciencelabs.org/analytics/schema.json",
-  "title": "OSL public analytics report v1/v2",
-  "description": "Closed aggregate-only contract. v2 adds preceding-period totals, daily pageviews and privacy-filtered audience breakdowns. Retained v1 snapshots remain valid without invented new fields. All dates are property-local; generated_at is the last successful export in UTC.",
+  "title": "OSL public analytics report v1/v2/v3",
+  "description": "Closed aggregate-only contract. v3 adds independently queried 7/30/90-day windows, daily metric comparisons, and allowlisted public-page rankings. Retained v1/v2 snapshots are not rewritten.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -21,7 +21,7 @@
   ],
   "properties": {
     "schema_version": {
-      "enum": [1, 2]
+      "enum": [1, 2, 3]
     },
     "data_kind": {
       "enum": ["production", "fixture"]
@@ -205,6 +205,29 @@
           }
         }
       ]
+    },
+    "windows": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["7", "30", "90"],
+          "properties": {
+            "7": {
+              "$ref": "#/$defs/window"
+            },
+            "30": {
+              "$ref": "#/$defs/window"
+            },
+            "90": {
+              "$ref": "#/$defs/window"
+            }
+          }
+        }
+      ]
     }
   },
   "allOf": [
@@ -323,6 +346,48 @@
             }
           }
         ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "schema_version": {
+            "const": 3
+          }
+        }
+      },
+      "then": {
+        "required": ["windows"],
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "status": {
+                  "const": "available"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "windows": {
+                  "type": "object"
+                }
+              }
+            },
+            "else": {
+              "properties": {
+                "windows": {
+                  "type": "null"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "else": {
+        "not": {
+          "required": ["windows"]
+        }
       }
     }
   ],
@@ -459,6 +524,216 @@
           }
         }
       ]
+    },
+    "daily_metrics": {
+      "type": "array",
+      "maxItems": 90,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["date", "pageviews", "active_users", "sessions"],
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "pageviews": {
+            "$ref": "#/$defs/count"
+          },
+          "active_users": {
+            "$ref": "#/$defs/count"
+          },
+          "sessions": {
+            "$ref": "#/$defs/count"
+          }
+        }
+      }
+    },
+    "pages_breakdown": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "metric",
+        "minimum_active_users",
+        "total",
+        "other",
+        "rows"
+      ],
+      "properties": {
+        "status": {
+          "enum": ["available", "withheld"]
+        },
+        "metric": {
+          "const": "pageviews"
+        },
+        "minimum_active_users": {
+          "const": 10
+        },
+        "total": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/count"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "other": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/count"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "rows": {
+          "type": "array",
+          "maxItems": 10,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["label", "value"],
+            "properties": {
+              "label": {
+                "type": "string",
+                "maxLength": 240,
+                "pattern": "^/(?:[A-Za-z0-9_-]+/)*(?:[A-Za-z0-9_-]+\\.html)?$"
+              },
+              "value": {
+                "$ref": "#/$defs/count"
+              }
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "withheld"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "total": {
+                "type": "null"
+              },
+              "other": {
+                "type": "null"
+              },
+              "rows": {
+                "maxItems": 0
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "total": {
+                "$ref": "#/$defs/count"
+              },
+              "other": {
+                "$ref": "#/$defs/count"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "window": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "reporting_period",
+        "summary",
+        "comparison",
+        "daily_history",
+        "breakdowns"
+      ],
+      "properties": {
+        "reporting_period": {
+          "$ref": "#/$defs/period"
+        },
+        "summary": {
+          "$ref": "#/$defs/summary"
+        },
+        "comparison": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["reporting_period", "summary", "daily_history"],
+          "properties": {
+            "reporting_period": {
+              "$ref": "#/$defs/period"
+            },
+            "summary": {
+              "$ref": "#/$defs/summary"
+            },
+            "daily_history": {
+              "$ref": "#/$defs/daily_metrics"
+            }
+          }
+        },
+        "daily_history": {
+          "$ref": "#/$defs/daily_metrics"
+        },
+        "breakdowns": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["countries", "devices", "channels", "pages"],
+          "properties": {
+            "countries": {
+              "allOf": [
+                {
+                  "$ref": "#/$defs/breakdown"
+                },
+                {
+                  "properties": {
+                    "metric": {
+                      "const": "pageviews"
+                    }
+                  }
+                }
+              ]
+            },
+            "devices": {
+              "allOf": [
+                {
+                  "$ref": "#/$defs/breakdown"
+                },
+                {
+                  "properties": {
+                    "metric": {
+                      "const": "pageviews"
+                    }
+                  }
+                }
+              ]
+            },
+            "channels": {
+              "allOf": [
+                {
+                  "$ref": "#/$defs/breakdown"
+                },
+                {
+                  "properties": {
+                    "metric": {
+                      "const": "sessions"
+                    }
+                  }
+                }
+              ]
+            },
+            "pages": {
+              "$ref": "#/$defs/pages_breakdown"
+            }
+          }
+        }
+      }
     }
   }
 }

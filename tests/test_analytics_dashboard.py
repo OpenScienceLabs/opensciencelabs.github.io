@@ -38,7 +38,7 @@ class ExpandedExportTests(unittest.TestCase):
             client.requests[3]["date_ranges"],
             [{"start_date": "2026-07-18", "end_date": "2026-08-16"}],
         )
-        for request in client.requests[4:]:
+        for request in client.requests[4:9]:
             self.assertEqual(
                 request["date_ranges"], client.requests[1]["date_ranges"]
             )
@@ -194,13 +194,13 @@ class ExpandedExportTests(unittest.TestCase):
                 export.refresh(path, client, SETTINGS, NOW)
             self.assertEqual(path.read_bytes(), LEGACY.read_bytes())
             export.refresh(path, FakeClient(), SETTINGS, NOW)
-            self.assertEqual(report.read_snapshot(path)["schema_version"], 2)
+            self.assertEqual(report.read_snapshot(path)["schema_version"], 3)
 
     def test_missing_days_and_empty_panels_not_fabricated(self):
         """Explicit zeros survive, while absent dates stay absent from JSON."""
         client = FakeClient()
         client.results[4] = response(
-            ["screenPageViews"], [(["20260915"], [0])], ["date"]
+            list(report.METRICS), [(["20260915"], [0, 0, 0])], ["date"]
         )
         client.results[5] = response(
             ["screenPageViews", "activeUsers"], [], ["country"]
@@ -235,9 +235,7 @@ class ExpandedContractTests(unittest.TestCase):
             self.assertEqual(result, original)
         page = presentation_tests.PresentationTests().render(original)
         self.assertIn("predates the expanded dashboard", page.get_text())
-        self.assertEqual(
-            len(page.select(".analytics-breakdown .analytics-panel-empty")), 3
-        )
+        self.assertEqual(len(page.select("[data-panel-status]")), 4)
 
     def test_new_nested_schema_rejects_invalid_or_private_data(self):
         """Reject invalid dates, counts, labels and private fields."""
@@ -331,23 +329,19 @@ class DashboardFormattingTests(unittest.TestCase):
             self.assertFalse(
                 page.find(id=control["aria-controls"]).has_attr("hidden")
             )
-        self.assertTrue(
-            page.select_one("[data-chart-switch]").has_attr("hidden")
-        )
+        self.assertTrue(page.select_one("[data-enhance]").has_attr("hidden"))
         for row, data in zip(
-            page.select("#daily-table tbody tr"),
+            page.select("#analytics-series-table tbody tr"),
             fixture["daily_history"],
             strict=True,
         ):
-            self.assertEqual(row.select_one("time")["datetime"], data["date"])
+            self.assertEqual(row.select_one("th").get_text(), data["date"])
             self.assertEqual(
                 row.select_one("td").get_text(), f'{data["pageviews"]:,}'
             )
         view = presentation.dashboard(fixture)
         for panel in view["panels"]:
-            table = page.select_one(
-                f'.analytics-breakdown--{panel["key"]} table'
-            )
+            table = page.select_one(f'[data-table="{panel["key"]}"]')
             for row, data in zip(
                 table.select("tbody tr"), panel["display_rows"], strict=True
             ):

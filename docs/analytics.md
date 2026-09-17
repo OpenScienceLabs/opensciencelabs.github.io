@@ -14,23 +14,23 @@ recreate working resources or generate private keys.
 
 ## Design and deployment
 
-- `/analytics/` uses the existing MkDocs custom theme and its light/dark tokens.
-  Metric/comparison cards, daily line and monthly bar charts (inline SVG),
-  audience rankings and accessible tables are server-rendered from the same
-  validated report as `/analytics/data.json`. No authenticated report request or
-  token reaches the browser. Analytics-page JavaScript only switches charts and
-  updates the three-day stale notice; existing site tracking is separate.
-  Without JavaScript, both charts and their expandable tables remain usable.
+- `/analytics/` is a compact report workspace: Overview, Acquisition, Countries,
+  Devices and Pages. It uses OSL's shared light/dark tokens, native SVG charts
+  and accessible HTML tables, with no chart-library or remote dashboard embed.
+  The 30-day fallback is server-rendered. JavaScript reads the same validated
+  public report embedded with safe JSON escaping; it makes no network requests.
+  Without JavaScript, the 30-day figures, monthly history and dimension tables
+  remain available. Existing site tracking is separate.
 - `scripts/analytics/export.py` uses Google's Python GA4 Data API client. A
   small filtered report discovers the property's IANA timezone from response
-  metadata; no Admin API or manually synchronized timezone variable is needed.
-  The next query requests `screenPageViews`, `activeUsers`, and `sessions`
-  without dimensions across the entire 30-day window ending yesterday. The third
-  query requests `screenPageViews` by `yearMonth` for the prior 12 completed
-  months. Then it queries the preceding 30 days as a separate dimensionless
-  summary, daily `screenPageViews` by `date`, and country, device and channel
-  breakdowns for the current 30-day window: eight reports plus any pagination.
-  Both headline active-user totals are whole-period queries, never sums.
+  metadata. It queries **7, 30 and 90 completed days**, each with its own
+  dimensionless summary, immediately preceding equal-length summary,
+  current/previous daily metric series, and four current-period breakdowns.
+  Monthly pageviews cover the prior 12 completed calendar months independently
+  of the selected window. This is 26 requests before pagination, not 26 browser
+  calls. Every summary's active-user count is queried independently; daily users
+  are never summed into a period total. No Admin API or timezone variable is
+  needed.
 - Every request applies an exact, case-insensitive `hostName` allowlist AND
   `platform = web`. Never put previews, localhost or unrelated domains in the
   allowlist. Hostnames are not inferred from the property, URL, or site tag.
@@ -68,23 +68,65 @@ The public metric mapping follows the
 | `active_users`     | `activeUsers`     | GA4's distinct active-user count over the entire reporting period, never a sum of daily/monthly counts. |
 | `sessions`         | `sessions`        | Sessions that began during the reporting period.                                                        |
 
+### Using the dashboard
+
+1. Choose **Last 7 / 30 / 90 completed days**. Exact dates are shown beside the
+   selector; all cards and dimension reports update together. Unsupported
+   presets on older snapshots are disabled, not approximated.
+2. Select **Pageviews**, **Active users** or **Sessions** to change the main
+   daily chart. Hover/touch the plot or use the keyboard-accessible date slider
+   to inspect exact current/previous values. Daily users count users on that
+   date only, not a portion of an additive total.
+3. Toggle **Previous period** to overlay the preceding equal-length daily series
+   on a shared scale, aligned by day index. Card comparisons always show the
+   independently queried period totals. A zero baseline has no percentage
+   comparison. Use **View data table** for exact daily figures.
+4. Open a report from the sidebar or an overview card. Search and sort the
+   visible table; the ranking preview follows it. **Search filters that table
+   only**, not the headline totals, other dimensions or the global trend. There
+   is no unsupported cross-dimension drilldown or arbitrary date picker.
+5. **CSV** exports the selected metric's current/previous daily series, or the
+   currently searched/sorted dimension table. CSV includes dates, timezone,
+   source/scope, refresh timestamp and fixture/production identity. Shares use
+   the full panel total even when searching. Cells are quoted and spreadsheet
+   formula prefixes neutralized. **Download JSON** provides the complete static
+   snapshot. Neither action contacts Google.
+
 ### Dashboard contract and grouping
 
-New successful exports use **schema version 2**. Existing version 1 snapshots
-remain valid and are rendered without inventing the missing comparisons, daily
-history or audience panels. Content builds do not upgrade or re-date them. The
-public schema validates both versions; consumers should check `schema_version`
-and `status` before reading optional panels. Version 2 adds:
+New successful exports use **schema version 3**. Version 1 and 2 snapshots
+remain readable without inventing missing features or changing their original
+refresh timestamp. `windows` is null when unavailable, otherwise a closed map
+with exactly `"7"`, `"30"` and `"90"`. Each contains:
 
-- `comparison`: the preceding 30-day `reporting_period` and `summary`. Percent
-  changes are display-only; a previous zero shows no percentage baseline.
-- `daily_history`: returned `{date, pageviews}` rows within the current window.
-- `breakdowns.countries` and `.devices`: `screenPageViews` by `country` and
-  `deviceCategory`, respectively. Country is approximate activity location, not
-  nationality or residence; devices describe traffic, not distinct people.
-- `breakdowns.channels`: `sessions` by `sessionDefaultChannelGroup`, not
-  first-user acquisition or event attribution. All panels use the same current
-  30-day dates, Web-only filter and exact hostname allowlist.
+- `reporting_period` and `summary` for that independently queried full period.
+- `comparison` with the preceding equal-length `reporting_period`, independently
+  queried `summary` and `daily_history`.
+- `daily_history`: only returned rows, containing `date`, `pageviews`,
+  `active_users` and `sessions`. Missing dates remain absent, not inferred zero.
+- `breakdowns`: countries, devices, channels and pages for that current period.
+  Countries/devices use `screenPageViews` by `country`/`deviceCategory`;
+  channels use `sessions` by `sessionDefaultChannelGroup`, not first-user
+  acquisition.
+
+For compatibility, the existing root 30-day `reporting_period`, `summary`,
+`comparison`, pageview-only `daily_history` and three audience `breakdowns`
+remain exact projections of `windows["30"]`, validated against it. Root
+`monthly_history` still contains up to 12 completed calendar months. Consumers
+must check `schema_version` and `status`; v1/v2 reports have no `windows` map.
+
+**Public-page safety:** `scripts/analytics/routes.py` derives canonical public
+routes from MkDocs' file collection and URL rules. The exporter combines those
+exact, case-sensitive routes with the Web/hostname filters in a `pagePath`
+allowlist on every page of the request. It also rejects returned paths outside
+that list. No arbitrary visitor path, query string, full URL, GA-supplied title,
+referrer or identifier is published. Only simple canonical route syntax is
+accepted; hidden files and non-document assets are excluded. Unknown paths,
+noncanonical aliases and routes no longer in the current site are excluded, so
+page totals can be lower than headline pageviews. Query parameters on visits to
+known pages are not published; GA4's `pagePath` dimension excludes them. The
+route catalog has a 500-route safety limit; review the scope rather than
+silently truncating if that limit is reached.
 
 Each breakdown includes `status`, `metric`, `minimum_active_users`, `total`,
 `other` and `rows` (`label`, `value`). The exporter uses per-category
@@ -93,8 +135,10 @@ naming a category; it does not publish those user counts. At most ten eligible
 categories are ranked by the additive metric, with deterministic tie ordering.
 Small, remaining and unclassified categories contribute only to `other`.
 Grouping reduces published detail but is **not a formal anonymity guarantee**.
-No city, path, referrer URL, user identifier, raw response or cross-dimensional
-report is published.
+No city, arbitrary path, referrer URL, user identifier, raw response or
+cross-dimensional report is published. Named page routes use the same
+whole-period active-user threshold. Their grouped row is labeled **Other public
+pages**; unknown visitor paths are excluded entirely.
 
 Shares are display-only and use each panel's own returned additive `total`,
 including `other`, not distinct users or the headline denominator. Rounded
@@ -109,9 +153,9 @@ row counts/timezones, missing pages and explicit data loss rather than
 publishing a truncated top-ten denominator. All recent windows and panels are
 queried again on every refresh. Only a valid complete export is written
 atomically; a network or permission failure in a new query retains even an old
-version 1 snapshot byte-for-byte locally, with its original refresh timestamp.
-Explicit GA4-restricted breakdowns are the documented exception: their
-`status: withheld`, null `total`/`other`, and empty `rows` honestly signal
+version 1 or 2 snapshot byte-for-byte locally, with its original refresh
+timestamp. Explicit GA4-restricted breakdowns are the documented exception:
+their `status: withheld`, null `total`/`other`, and empty `rows` honestly signal
 non-publication. A successful unrestricted empty panel is instead `available`
 with zero totals.
 
@@ -119,8 +163,8 @@ with zero totals.
 **new** manual run on `main`. No new Google APIs, roles, secrets or workflow
 identifiers are needed. The push renders the retained report; only a successful
 scheduled/manual export fills the new panels. Re-running only a deploy job does
-not fetch new statistics. A rollback must keep a schema-v2-capable reader once
-the durable snapshot is v2; do not delete the report to bypass validation.
+not fetch new statistics. A rollback must keep a schema-v3-capable reader once
+the durable snapshot is v3; do not delete the report to bypass validation.
 
 ### Durable snapshot storage
 
@@ -474,7 +518,7 @@ In **OpenScienceLabs/opensciencelabs.github.io**, not a fork:
    `https://opensciencelabs.org/analytics/data.json`. Check `status: available`,
    `data_kind: production`, exact hostnames and property timezone, the dates
    ending yesterday **in that timezone at export time**, and `generated_at`. The
-   new report should have `schema_version: 2`; cards, both charts and all
+   new report should have `schema_version: 3`; cards, both charts and all
    audience tables must match the JSON. Withheld panels must have null totals,
    not zero. A successful export with all zeros should prompt verification of
    collection/property/hostname configuration; it does not prove zero actual
@@ -528,6 +572,7 @@ In the existing `osl-web` environment:
 poetry install
 python -m pip install -r requirements-analytics.txt
 python -m unittest discover -s tests -v
+python tests/render_analytics_dom.py
 node tests/analytics-js.test.cjs
 poetry check
 ruff check scripts/analytics tests
@@ -536,26 +581,61 @@ makim pages.build
 python -m scripts.analytics.audit
 ```
 
+The DOM preparation command writes labeled fixture markup only to ignored
+`.cache/analytics-dom-fixtures.json`; it is never a publication artifact.
+`tests/fixtures/analytics.json` retains the version 2 migration fixture and
+`analytics-v1.json` the version 1 fixture. The explorer fixture is synthetic
+throughout, including its daily users and public-page counts.
+
 The Google SDK compatibility test is skipped only if the SDK is unavailable
 locally; CI installs the pinned extras and runs it. Offline tests use synthetic
 SDK-shaped responses, not recordings or credentials. The website already
 receives `jsonschema` through its locked notebook dependencies; the extras file
 also declares that dependency explicitly and pins it to the existing lock.
 
-For an **explicit fixture preview**, use a separate output directory:
+### Local dashboard preview
+
+The existing Makim preview task uses the synthetic explorer fixture by default,
+so the full dashboard works locally without Google credentials or a downloaded
+snapshot:
 
 ```bash
-ANALYTICS_PREVIEW_FIXTURE=tests/fixtures/analytics.json \
+makim pages.preview
+```
+
+Visit `http://localhost:8000/analytics/`. The prominent TEST FIXTURE banner and
+`data_kind: fixture` in `/analytics/data.json` identify the synthetic report. To
+preview the saved real snapshot at `.cache/analytics/data.json` instead:
+
+```bash
+makim pages.preview --no-analytics-fixture
+```
+
+Without a saved snapshot, this opt-out shows **Analytics data is not available
+yet**, not invented statistics. Both commands support `--run-pre-build` when
+blog sources need rendering first.
+
+The fixture environment variable is set only in the preview task's process. The
+opt-out explicitly clears it, including an inherited value. Neither mode
+overwrites the saved snapshot or fetches data from Google. `makim pages.build`
+and production deployments do **not** enable fixtures by default.
+
+For a **static fixture preview**, use a separate output directory:
+
+```bash
+ANALYTICS_PREVIEW_FIXTURE=tests/fixtures/analytics-explorer.json \
   mkdocs build --site-dir .cache/analytics-preview
 python -m http.server 8000 --directory .cache/analytics-preview
 ```
 
-Visit `http://localhost:8000/analytics/`. The prominent TEST FIXTURE banner and
-`data_kind: fixture` must be present. Never deploy this preview directory. CI
-rejects the preview environment variable, and the publication audit rejects
-fixture JSON even if copied to `build/`. Without the variable, normal builds use
-only the ignored restored snapshot or the unavailable state. The live exporter
-refuses to authenticate outside trusted CI.
+The TEST FIXTURE banner and `data_kind: fixture` must be present in this mode
+too. Never deploy this preview directory. CI rejects the preview environment
+variable, and the publication audit rejects fixture JSON even if copied to
+`build/`. Without the variable, normal builds use only the ignored restored
+snapshot or the unavailable state. The live exporter refuses to authenticate
+outside trusted CI.
+
+### Browser verification
 
 For reproducible real-browser screenshots, with the preview server running in
 another terminal:
@@ -570,12 +650,13 @@ python tests/browser_analytics.py \
 This optional smoke check uses
 [Playwright](https://playwright.dev/python/docs/emulation), checks both modes at
 1440px, 390px and 320px, rejects horizontal page overflow, checks download
-focus, keyboard chart switching, table disclosures and a JavaScript-disabled
-page, and writes screenshots under `.cache/analytics-screenshots/fixture/`. It
-blocks Google tracking requests in its color-mode checks, and accepts only
-localhost URLs. Stop the fixture server, serve the normal `build/` with
-`python -m http.server 8000 --directory build`, then run the smoke check again
-with `--output .cache/analytics-screenshots/normal`. When no restored snapshot
+focus, date/metric switching, report navigation, table search/sort, CSV
+downloads and JavaScript-disabled pages, and writes screenshots under
+`.cache/analytics-screenshots/fixture/`. It blocks Google tracking requests in
+its color-mode checks, and accepts only localhost URLs. Stop the fixture server,
+serve the normal `build/` with `python -m http.server 8000 --directory build`,
+then run the smoke check again with
+`--output .cache/analytics-screenshots/normal`. When no restored snapshot
 exists, this covers the honest unavailable state. Inspect the PNGs rather than
 assuming automated checks prove visual quality. Ordinary browser previews may
 execute the base theme's tracking tag; block analytics requests locally rather
@@ -583,8 +664,9 @@ than sending synthetic preview visits to Google.
 
 Before release, inspect desktop (1440px) and mobile (390px and 320px) in both
 shared color modes, keyboard focus, table scrolling, browser zoom, the zero-data
-chart, stale notice, and unavailable state. All figures and the table must also
-work with JavaScript disabled. The base viewport now permits user zoom.
+chart, stale notice, and unavailable state. The default 30-day report and its
+tables must also work with JavaScript disabled; other presets remain
+downloadable in the JSON. The base viewport now permits user zoom.
 
 ### Release evidence checklist
 
@@ -608,12 +690,12 @@ raw API responses, or private account information in those records.
       scheduled or manual refresh updates it. The retained/unavailable state and
       failed-run signal are checked for refresh failures.
 
-Mocked tests and a populated workflow are **not live GA4 verification**. Static
-markup tests are **not browser visual verification**. If SDK downloads, a
-browser or localhost sockets are unavailable in the testing environment, record
-those checks as skipped and run them in a capable environment before release. Do
-not replace missing evidence with fixture statistics or an assumed successful
-run.
+Mocked tests and a populated workflow are **not live GA4 verification**. The
+Node DOM harness executes real explorer code against rendered fixture markup,
+but is **not browser visual verification**. If SDK downloads, a browser or
+localhost sockets are unavailable in the testing environment, record those
+checks as skipped and run them in a capable environment before release. Do not
+replace missing evidence with fixture statistics or an assumed successful run.
 
 ## Troubleshooting
 
@@ -646,8 +728,9 @@ them to match a screenshot with unknown dates. Download the public JSON using
 the command above and compare the following in the authenticated GA4 UI:
 
 1. **Freshness and version:** read the actual `generated_at`, not the deployment
-   time. A retained report can be valid but stale. A v1 snapshot lacks the new
-   panels until a successful new export; it has not lost that data.
+   time. A retained report can be valid but stale. A v1/v2 snapshot lacks the
+   new presets and page report until a successful new export; it has not lost
+   that data.
 2. **Property and collection:** verify property `365530978`, its Web stream and
    the live Google tag. The checked-in legacy `UA-213158050-1` tag alone does
    not establish GA4 collection. Check for an existing GA4/Tag Manager
