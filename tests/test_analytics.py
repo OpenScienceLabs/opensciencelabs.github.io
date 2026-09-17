@@ -70,6 +70,30 @@ class FakeClient:
                     [(["202608"], [100]), (["202607"], [0])],
                     ["yearMonth"],
                 ),
+                response(
+                    ["sessions", "screenPageViews", "activeUsers"],
+                    [([], [55, 90, 25])],
+                ),
+                response(
+                    ["screenPageViews"],
+                    [(["20260914"], [70]), (["20260915"], [50])],
+                    ["date"],
+                ),
+                response(
+                    ["screenPageViews", "activeUsers"],
+                    [(["Brazil"], [90, 20]), (["France"], [30, 5])],
+                    ["country"],
+                ),
+                response(
+                    ["screenPageViews", "activeUsers"],
+                    [(["desktop"], [100, 20]), (["mobile"], [20, 10])],
+                    ["deviceCategory"],
+                ),
+                response(
+                    ["sessions", "activeUsers"],
+                    [(["Direct"], [40, 18]), (["Organic Search"], [30, 15])],
+                    ["sessionDefaultChannelGroup"],
+                ),
             ]
         )
 
@@ -343,7 +367,7 @@ class ContractTests(unittest.TestCase):
             lambda data: data["summary"].update(visitor_id="SYNTHETIC"),
             lambda data: data["summary"].update(pageviews=-1),
             lambda data: data["summary"].update(pageviews=True),
-            lambda data: data.update(schema_version=2),
+            lambda data: data.update(schema_version=3),
             lambda data: data.update(generated_at="not-a-date"),
             lambda data: data.update(timezone="Invalid/Zone"),
             lambda data: data["reporting_period"].update(end="2026-09-16"),

@@ -15,17 +15,22 @@ recreate working resources or generate private keys.
 ## Design and deployment
 
 - `/analytics/` uses the existing MkDocs custom theme and its light/dark tokens.
-  The cards, CSS bar chart, and accessible table are server-rendered from the
-  same validated report as `/analytics/data.json`. No authenticated report
-  request or token reaches the browser. Analytics-page JavaScript only updates
-  the three-day stale notice; existing site tracking is separate.
+  Metric/comparison cards, daily line and monthly bar charts (inline SVG),
+  audience rankings and accessible tables are server-rendered from the same
+  validated report as `/analytics/data.json`. No authenticated report request or
+  token reaches the browser. Analytics-page JavaScript only switches charts and
+  updates the three-day stale notice; existing site tracking is separate.
+  Without JavaScript, both charts and their expandable tables remain usable.
 - `scripts/analytics/export.py` uses Google's Python GA4 Data API client. A
   small filtered report discovers the property's IANA timezone from response
   metadata; no Admin API or manually synchronized timezone variable is needed.
   The next query requests `screenPageViews`, `activeUsers`, and `sessions`
   without dimensions across the entire 30-day window ending yesterday. The third
   query requests `screenPageViews` by `yearMonth` for the prior 12 completed
-  months.
+  months. Then it queries the preceding 30 days as a separate dimensionless
+  summary, daily `screenPageViews` by `date`, and country, device and channel
+  breakdowns for the current 30-day window: eight reports plus any pagination.
+  Both headline active-user totals are whole-period queries, never sums.
 - Every request applies an exact, case-insensitive `hostName` allowlist AND
   `platform = web`. Never put previews, localhost or unrelated domains in the
   allowlist. Hostnames are not inferred from the property, URL, or site tag.
@@ -37,15 +42,20 @@ recreate working resources or generate private keys.
   re-queries the entire rolling and historical windows to capture late
   processing and revisions. A timezone change or midnight crossing mid-export
   fails safely.
-- Monthly rows absent from GA4 are omitted, not imputed as zeros. Explicit zero
-  rows remain zero. A successful unrestricted empty summary means zero measured
-  events for that scope. An empty reason, restriction, sampling, thresholding,
-  truncation, malformed response, timeout, or failed request instead aborts the
-  refresh. Counts are not a census of people or all actual visits.
+- Daily/monthly rows absent from GA4 are omitted, not imputed as zeros. Charts
+  show gaps and tables say Not reported. Explicit zero rows remain zero. A
+  successful unrestricted empty summary means zero measured events for that
+  scope. An empty reason, sampling, truncation, malformed response, timeout, or
+  failed request instead aborts the refresh. Core-report thresholding or metric
+  restrictions also abort it. An explicit privacy/metric restriction on an
+  audience breakdown produces a `withheld` panel with null totals, not zeros;
+  other validated panels and headline statistics can still be published. Counts
+  are not a census of people or all actual visits.
 - `pages/analytics/schema.json` is the closed, versioned public contract.
   `additionalProperties: false` and fixed source fields prevent raw responses,
   property IDs, credentials, or visitor details leaking into the JSON. Further
-  validation checks calendar boundaries and unique, chronological months.
+  validation checks calendar boundaries, unique chronological dates/months,
+  adjacent comparison dates, ranking order and reconciled breakdown totals.
   `status: unavailable` has null dates, timezone and metrics, not fabricated
   zeros.
 
@@ -57,6 +67,60 @@ The public metric mapping follows the
 | `pageviews`        | `screenPageViews` | Measured page views, including repeated views.                                                          |
 | `active_users`     | `activeUsers`     | GA4's distinct active-user count over the entire reporting period, never a sum of daily/monthly counts. |
 | `sessions`         | `sessions`        | Sessions that began during the reporting period.                                                        |
+
+### Dashboard contract and grouping
+
+New successful exports use **schema version 2**. Existing version 1 snapshots
+remain valid and are rendered without inventing the missing comparisons, daily
+history or audience panels. Content builds do not upgrade or re-date them. The
+public schema validates both versions; consumers should check `schema_version`
+and `status` before reading optional panels. Version 2 adds:
+
+- `comparison`: the preceding 30-day `reporting_period` and `summary`. Percent
+  changes are display-only; a previous zero shows no percentage baseline.
+- `daily_history`: returned `{date, pageviews}` rows within the current window.
+- `breakdowns.countries` and `.devices`: `screenPageViews` by `country` and
+  `deviceCategory`, respectively. Country is approximate activity location, not
+  nationality or residence; devices describe traffic, not distinct people.
+- `breakdowns.channels`: `sessions` by `sessionDefaultChannelGroup`, not
+  first-user acquisition or event attribution. All panels use the same current
+  30-day dates, Web-only filter and exact hostname allowlist.
+
+Each breakdown includes `status`, `metric`, `minimum_active_users`, `total`,
+`other` and `rows` (`label`, `value`). The exporter uses per-category
+**whole-period** `activeUsers` only to require at least ten active users before
+naming a category; it does not publish those user counts. At most ten eligible
+categories are ranked by the additive metric, with deterministic tie ordering.
+Small, remaining and unclassified categories contribute only to `other`.
+Grouping reduces published detail but is **not a formal anonymity guarantee**.
+No city, path, referrer URL, user identifier, raw response or cross-dimensional
+report is published.
+
+Shares are display-only and use each panel's own returned additive `total`,
+including `other`, not distinct users or the headline denominator. Rounded
+shares may not sum to exactly 100%. A panel's `total` may differ from the
+headline during processing or because of reporting semantics; neither is
+rewritten to force agreement. The page also flags daily/headline discrepancies
+and zero pageviews as reasons to check collection and scope, not proven faults.
+
+Rankings paginate in dimension order with 100 rows per request and a safety
+limit of 1,000 rows per report. The exporter rejects duplicate rows, changing
+row counts/timezones, missing pages and explicit data loss rather than
+publishing a truncated top-ten denominator. All recent windows and panels are
+queried again on every refresh. Only a valid complete export is written
+atomically; a network or permission failure in a new query retains even an old
+version 1 snapshot byte-for-byte locally, with its original refresh timestamp.
+Explicit GA4-restricted breakdowns are the documented exception: their
+`status: withheld`, null `total`/`other`, and empty `rows` honestly signal
+non-publication. A successful unrestricted empty panel is instead `available`
+with zero totals.
+
+**Upgrading an existing deployment:** merge the dashboard changes, then start a
+**new** manual run on `main`. No new Google APIs, roles, secrets or workflow
+identifiers are needed. The push renders the retained report; only a successful
+scheduled/manual export fills the new panels. Re-running only a deploy job does
+not fetch new statistics. A rollback must keep a schema-v2-capable reader once
+the durable snapshot is v2; do not delete the report to bypass validation.
 
 ### Durable snapshot storage
 
@@ -410,13 +474,18 @@ In **OpenScienceLabs/opensciencelabs.github.io**, not a fork:
    `https://opensciencelabs.org/analytics/data.json`. Check `status: available`,
    `data_kind: production`, exact hostnames and property timezone, the dates
    ending yesterday **in that timezone at export time**, and `generated_at`. The
-   page cards/table must match the JSON. A successful export with all zeros
-   should prompt verification of collection/property/hostname configuration; it
-   does not prove zero actual visitors.
+   new report should have `schema_version: 2`; cards, both charts and all
+   audience tables must match the JSON. Withheld panels must have null totals,
+   not zero. A successful export with all zeros should prompt verification of
+   collection/property/hostname configuration; it does not prove zero actual
+   visitors.
 5. Compare the summary with GA4 using the identical completed dates, timezone,
    Web platform and hostname filters. Check `activeUsers` as one period total,
-   not a sum. Compare available monthly `screenPageViews` separately. This is
-   **live GA4 validation**; mocked tests cannot replace it.
+   not a sum. Check the comparison period separately, and compare daily/monthly
+   `screenPageViews` and country/device/channel additive totals using their
+   respective dimensions. Apply the documented grouping before comparing visible
+   rankings; small named categories intentionally do not appear. This is **live
+   GA4 validation**; mocked tests cannot replace it.
 6. Make an ordinary content deployment and confirm that the JSON, including
    `generated_at`, remains identical. Confirm the next scheduled/manual success
    updates it. If refreshes stop, the browser shows a stale notice after three
@@ -500,11 +569,11 @@ python tests/browser_analytics.py \
 
 This optional smoke check uses
 [Playwright](https://playwright.dev/python/docs/emulation), checks both modes at
-1440px, 390px and 320px, rejects horizontal page overflow, checks the download
-link's keyboard focus and a JavaScript-disabled page, and writes screenshots
-under `.cache/analytics-screenshots/fixture/`. It blocks Google tracking
-requests in its color-mode checks, and accepts only localhost URLs. Stop the
-fixture server, serve the normal `build/` with
+1440px, 390px and 320px, rejects horizontal page overflow, checks download
+focus, keyboard chart switching, table disclosures and a JavaScript-disabled
+page, and writes screenshots under `.cache/analytics-screenshots/fixture/`. It
+blocks Google tracking requests in its color-mode checks, and accepts only
+localhost URLs. Stop the fixture server, serve the normal `build/` with
 `python -m http.server 8000 --directory build`, then run the smoke check again
 with `--output .cache/analytics-screenshots/normal`. When no restored snapshot
 exists, this covers the honest unavailable state. Inspect the PNGs rather than
@@ -548,20 +617,20 @@ run.
 
 ## Troubleshooting
 
-| Symptom                                                      | Checks / action                                                                                                                                                                                                                                                                                                                   |
-| ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `unrecognized arguments: --attribute-` / Bash “No such file” | A copy/paste inserted newlines inside a flag or value. Rerun the Bash argument-assembly block in Google setup step 3, then create or update the provider as appropriate. Do not split `--attribute-mapping`, claim names or `refs/heads/main`.                                                                                    |
-| Resource already exists                                      | Inspect and reuse it. Use `providers update-oidc` only to repair the dedicated provider's reviewed configuration; still complete the service-account binding and GA4 Viewer access. Do not delete the pool to retry setup.                                                                                                        |
-| Configuration missing / first report unavailable             | Verify all four identifiers in `jobs.build.env`, the WIF service-account binding and GA4 property access; run the workflow on `main`. Do not fill the JSON with example numbers.                                                                                                                                                  |
-| OIDC denied                                                  | Check numeric repository/owner IDs, exact repository case, ref, workflow path, issuer, full provider resource name, WIF service-account binding, Actions `id-token: write`, and IAM propagation. Do not weaken the branch condition to make a PR work.                                                                            |
-| `PermissionDenied` / 403                                     | Enable the Data API in the Cloud project; grant the service account Viewer on the specific GA4 property; check the readonly scope and property ID. Cloud IAM Viewer alone is insufficient.                                                                                                                                        |
-| `Unauthenticated` / 401                                      | Re-run to get a fresh token; do not copy tokens out of logs. Authentication should remain immediately before the export, not before dependency installation.                                                                                                                                                                      |
-| `InvalidArgument` / `ValueError`                             | Check property ID, comma-separated hostnames (no URL, wildcard, port, empty entry), the SDK version, and the report schema. The exporter also conservatively rejects GA4 thresholding/sampling/restrictions/empty reasons/truncation and timezone changes. Check these in the authenticated GA4 UI, not by logging raw responses. |
-| Timeout / quota / service unavailable                        | Transient retries are bounded; keep the last report and retry later. Check Google API quotas and service health. Do not substitute zeros.                                                                                                                                                                                         |
-| Snapshot restore or validation failure                       | Stop publication. Check repository access and `gh-pages:analytics/data.json`. Recover a known valid report from that branch's Git history through an authorized maintenance change. Never delete the snapshot simply to make CI green.                                                                                            |
-| Pages deployment failed                                      | Check Pages source is GitHub Actions, environment permits `main`, custom domain, and `pages: write`. A successfully archived report remains recoverable; rerun publication.                                                                                                                                                       |
-| Schedule stopped / report stale                              | Check default branch, Actions enabled, inactivity auto-disable, queue delays and failed runs. Re-enable and dispatch manually. The old timestamp is intentionally retained.                                                                                                                                                       |
-| Local Quarto failure                                         | Repair the local Quarto installation; `mkdocs build` can separately verify committed Markdown and the analytics page, but does not replace the full blog pre-build check.                                                                                                                                                         |
+| Symptom                                                      | Checks / action                                                                                                                                                                                                                                                                                                                                      |
+| ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `unrecognized arguments: --attribute-` / Bash “No such file” | A copy/paste inserted newlines inside a flag or value. Rerun the Bash argument-assembly block in Google setup step 3, then create or update the provider as appropriate. Do not split `--attribute-mapping`, claim names or `refs/heads/main`.                                                                                                       |
+| Resource already exists                                      | Inspect and reuse it. Use `providers update-oidc` only to repair the dedicated provider's reviewed configuration; still complete the service-account binding and GA4 Viewer access. Do not delete the pool to retry setup.                                                                                                                           |
+| Configuration missing / first report unavailable             | Verify all four identifiers in `jobs.build.env`, the WIF service-account binding and GA4 property access; run the workflow on `main`. Do not fill the JSON with example numbers.                                                                                                                                                                     |
+| OIDC denied                                                  | Check numeric repository/owner IDs, exact repository case, ref, workflow path, issuer, full provider resource name, WIF service-account binding, Actions `id-token: write`, and IAM propagation. Do not weaken the branch condition to make a PR work.                                                                                               |
+| `PermissionDenied` / 403                                     | Enable the Data API in the Cloud project; grant the service account Viewer on the specific GA4 property; check the readonly scope and property ID. Cloud IAM Viewer alone is insufficient.                                                                                                                                                           |
+| `Unauthenticated` / 401                                      | Re-run to get a fresh token; do not copy tokens out of logs. Authentication should remain immediately before the export, not before dependency installation.                                                                                                                                                                                         |
+| `InvalidArgument` / `ValueError`                             | Check property ID, comma-separated hostnames (no URL, wildcard, port, empty entry), the SDK version, and the report schema. Core restrictions, sampling, empty reasons, truncation and timezone changes abort export; explicit audience restrictions produce withheld panels. Check these in the authenticated GA4 UI, not by logging raw responses. |
+| Timeout / quota / service unavailable                        | Transient retries are bounded; keep the last report and retry later. Check Google API quotas and service health. Do not substitute zeros.                                                                                                                                                                                                            |
+| Snapshot restore or validation failure                       | Stop publication. Check repository access and `gh-pages:analytics/data.json`. Recover a known valid report from that branch's Git history through an authorized maintenance change. Never delete the snapshot simply to make CI green.                                                                                                               |
+| Pages deployment failed                                      | Check Pages source is GitHub Actions, environment permits `main`, custom domain, and `pages: write`. A successfully archived report remains recoverable; rerun publication.                                                                                                                                                                          |
+| Schedule stopped / report stale                              | Check default branch, Actions enabled, inactivity auto-disable, queue delays and failed runs. Re-enable and dispatch manually. The old timestamp is intentionally retained.                                                                                                                                                                          |
+| Local Quarto failure                                         | Repair the local Quarto installation; `mkdocs build` can separately verify committed Markdown and the analytics page, but does not replace the full blog pre-build check.                                                                                                                                                                            |
 
 The exporter logs an exception **class**, never a potentially sensitive raw
 error message. Avoid `set -x`, SDK debug logging, or artifact uploads of the
@@ -569,6 +638,42 @@ repository root, `.cache`, environment variables, credentials, or raw API
 responses. Only `build/` is published, after the aggregate schema and credential
 audit pass. The audit is defense in depth, not permission to place secrets in
 content.
+
+### Figures look unexpected
+
+Do not replace surprising numbers with the previously observed 1,699 or adjust
+them to match a screenshot with unknown dates. Download the public JSON using
+the command above and compare the following in the authenticated GA4 UI:
+
+1. **Freshness and version:** read the actual `generated_at`, not the deployment
+   time. A retained report can be valid but stale. A v1 snapshot lacks the new
+   panels until a successful new export; it has not lost that data.
+2. **Property and collection:** verify property `365530978`, its Web stream and
+   the live Google tag. The checked-in legacy `UA-213158050-1` tag alone does
+   not establish GA4 collection. Check for an existing GA4/Tag Manager
+   installation before adding anything; avoid duplicate tracking. This is a
+   diagnostic lead, not proof of why a particular report looks unusual.
+3. **Dates and scope:** match the exact inclusive dates and property timezone,
+   `platform = web`, and only `opensciencelabs.org`. An unfiltered property UI
+   can include other sites; never broaden the allowlist just to raise totals.
+   The rolling window, previous window and completed months differ.
+4. **Definitions:** compare Views with `screenPageViews`, Active users (not
+   Total users) with `activeUsers`, and Sessions with `sessions`. Do not sum
+   distinct users across dates, countries or devices. Channels use session
+   default channel group, not first-user channel or source/medium.
+5. **Availability:** inspect GA4's data-quality indicators, consent/tag
+   coverage, filters and processing delays. `withheld` panels are explicitly
+   restricted, not empty. `Other / unknown` includes intentional grouping and
+   cannot be interpreted as a single country. Daily gaps do not prove zero
+   activity.
+6. **Recheck after processing:** dispatch again later to re-query all windows.
+   Do not edit snapshot values or timestamps, disable consent, weaken Google
+   restrictions or expose raw API responses to force a plausible dashboard.
+
+For review, share only the already-public aggregate JSON or a redacted GA4
+screenshot with matching dates/filters. Never share access tokens or visitor
+details. Offline fixtures and successful deployment logs cannot establish why
+the production figures differ; reconcile the actual reports separately.
 
 ### Local Quarto runtime lookup failures
 

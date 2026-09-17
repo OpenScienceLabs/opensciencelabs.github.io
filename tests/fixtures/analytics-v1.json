@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "data_kind": "fixture",
+  "status": "available",
+  "source": {
+    "publisher": "Open Science Labs",
+    "system": "Google Analytics 4",
+    "api": "Google Analytics Data API v1beta"
+  },
+  "site": "https://opensciencelabs.org",
+  "hostnames": ["opensciencelabs.org"],
+  "timezone": "America/New_York",
+  "generated_at": "2026-09-16T06:23:00Z",
+  "reporting_period": {
+    "start": "2026-08-17",
+    "end": "2026-09-15"
+  },
+  "history_period": {
+    "start": "2025-09-01",
+    "end": "2026-08-31"
+  },
+  "summary": {
+    "pageviews": 1234,
+    "active_users": 345,
+    "sessions": 678
+  },
+  "monthly_history": [
+    {
+      "month": "2025-09",
+      "start": "2025-09-01",
+      "end": "2025-09-30",
+      "pageviews": 210
+    },
+    {
+      "month": "2025-10",
+      "start": "2025-10-01",
+      "end": "2025-10-31",
+      "pageviews": 280
+    },
+    {
+      "month": "2025-11",
+      "start": "2025-11-01",
+      "end": "2025-11-30",
+      "pageviews": 0
+    },
+    {
+      "month": "2025-12",
+      "start": "2025-12-01",
+      "end": "2025-12-31",
+      "pageviews": 345
+    },
+    {
+      "month": "2026-01",
+      "start": "2026-01-01",
+      "end": "2026-01-31",
+      "pageviews": 410
+    },
+    {
+      "month": "2026-02",
+      "start": "2026-02-01",
+      "end": "2026-02-28",
+      "pageviews": 490
+    },
+    {
+      "month": "2026-03",
+      "start": "2026-03-01",
+      "end": "2026-03-31",
+      "pageviews": 450
+    },
+    {
+      "month": "2026-04",
+      "start": "2026-04-01",
+      "end": "2026-04-30",
+      "pageviews": 520
+    },
+    {
+      "month": "2026-05",
+      "start": "2026-05-01",
+      "end": "2026-05-31",
+      "pageviews": 640
+    },
+    {
+      "month": "2026-06",
+      "start": "2026-06-01",
+      "end": "2026-06-30",
+      "pageviews": 810
+    },
+    {
+      "month": "2026-07",
+      "start": "2026-07-01",
+      "end": "2026-07-31",
+      "pageviews": 920
+    },
+    {
+      "month": "2026-08",
+      "start": "2026-08-01",
+      "end": "2026-08-31",
+      "pageviews": 1100
+    }
+  ]
+}
