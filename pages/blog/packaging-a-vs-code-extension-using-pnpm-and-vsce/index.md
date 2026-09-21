@@ -103,5 +103,5 @@ pnpm’s symlink issues entirely.
 
 Using **pnpm** with VS Code extensions involves a few extra steps
 because `vsce` doesn’t support pnpm’s dependency structure directly. The
-ideal workflow: * **Bundle your extension first**, then * **Use
+ideal workflow: ***Bundle your extension first**, then* **Use
 `--no-dependencies`** to package and publish safely.
