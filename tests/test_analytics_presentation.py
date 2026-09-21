@@ -72,10 +72,10 @@ class PresentationTests(unittest.TestCase):
             self.assertEqual(
                 node.select_one('th[scope="row"]').get_text(), item["month"]
             )
-            self.assertIn(f'{item["pageviews"]:,}', node.get_text())
+            self.assertIn(f"{item['pageviews']:,}", node.get_text())
             self.assertEqual(
                 node.select_one("td").get_text(),
-                f'{item["start"]} \N{EN DASH} {item["end"]}',
+                f"{item['start']} \N{EN DASH} {item['end']}",
             )
         self.assertIsNotNone(page.select_one("table caption"))
         self.assertEqual(

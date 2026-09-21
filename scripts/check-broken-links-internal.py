@@ -104,9 +104,7 @@ if __name__ == "__main__":
     folder_path = Path(args.folder)
     HTTP_PORT = args.port
 
-    if not folder_path.exists():
-        print(f"Error: The path {folder_path} doesn't exist.")
-        sys.exit(1)
+    folder_path.mkdir(parents=True, exist_ok=True)
 
     # Start the HTTP server
     server = start_http_server(folder_path, HTTP_PORT)
