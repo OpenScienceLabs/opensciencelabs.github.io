@@ -1,14 +1,19 @@
-"""Check if ther eis any broken links."""
+"""Check if there is any broken links."""
 
 from __future__ import annotations
 
-import os
 import subprocess
+import sys
 
 # List of exception URLs
 exception_urls = [
     "https://www.linkedin.com/",
+    "https://twitter.com/",
+    "https://x.com/",
 ]
+
+# Status codes to ignore (rate limits and anti-bot responses)
+ignored_status_codes = ("429)", "999)", "403)")
 
 
 def process_log() -> None:
@@ -18,7 +23,16 @@ def process_log() -> None:
 
     try:
         subprocess.run(
-            ["python", "-m", "linkcheckmd", "-r", "-v", "-m", "get", "pages"],
+            [
+                sys.executable,
+                "-m",
+                "linkcheckmd",
+                "-r",
+                "-v",
+                "-m",
+                "get",
+                "pages",
+            ],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             text=True,
@@ -40,13 +54,13 @@ def process_log() -> None:
         if not line.startswith("("):
             continue
 
-        if line.endswith("429)"):
-            # Too Many Requests http error
+        if any(line.endswith(code) for code in ignored_status_codes):
             continue
-        # Extract the URL using regex
-        for exception_url in exception_urls:
-            if exception_url not in line:
-                flagged_errors.append(line)
+
+        if any(exc in line for exc in exception_urls):
+            continue
+
+        flagged_errors.append(line)
 
     # Print flagged errors
     if not flagged_errors:
@@ -54,10 +68,10 @@ def process_log() -> None:
         print("No errors flagged. All URLs are in the exception list.")
         return
 
-    print("Errors flagged for the following URLs:")
+    print("Errors flagged for the following URLs:", flush=True)
     for line in flagged_errors:
-        print(line)
-    os._exit(1)
+        print(line, flush=True)
+    sys.exit(1)
 
 
 # Run the script
