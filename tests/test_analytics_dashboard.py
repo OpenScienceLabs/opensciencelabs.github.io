@@ -337,7 +337,7 @@ class DashboardFormattingTests(unittest.TestCase):
         ):
             self.assertEqual(row.select_one("th").get_text(), data["date"])
             self.assertEqual(
-                row.select_one("td").get_text(), f'{data["pageviews"]:,}'
+                row.select_one("td").get_text(), f"{data['pageviews']:,}"
             )
         view = presentation.dashboard(fixture)
         for panel in view["panels"]:
@@ -350,7 +350,7 @@ class DashboardFormattingTests(unittest.TestCase):
                 )
                 self.assertEqual(
                     [node.get_text() for node in row.select("td")],
-                    [f'{data["value"]:,}', data["share_label"]],
+                    [f"{data['value']:,}", data["share_label"]],
                 )
         self.assertAlmostEqual(
             sum(row["share"] for row in view["panels"][0]["display_rows"]), 100
