@@ -5,15 +5,54 @@ from __future__ import annotations
 import subprocess
 import sys
 
-# List of exception URLs
+# List of exception URLs (known to block crawlers/bots)
 exception_urls = [
     "https://www.linkedin.com/",
     "https://twitter.com/",
     "https://x.com/",
 ]
 
-# Status codes to ignore (rate limits and anti-bot responses)
-ignored_status_codes = ("429)", "999)", "403)")
+MIN_HTTP_SUCCESS = 200
+MAX_HTTP_REDIRECT = 400
+
+# HTTP status codes for bot-blocking, rate limiting, or server issues
+ignored_status_codes = {
+    400,
+    401,
+    403,
+    405,
+    406,
+    429,
+    500,
+    502,
+    503,
+    504,
+    999,
+}
+
+
+def is_error(line: str) -> bool:
+    """Determine if a linkcheckmd log line represents a real broken link."""
+    line = line.strip()
+    if not line.startswith("("):
+        return False
+
+    if any(exc in line for exc in exception_urls):
+        return False
+
+    # Try extracting the status code from the end of the tuple
+    try:
+        code_str = line.rstrip(")").rsplit(",", 1)[-1].strip()
+        code = int(code_str)
+        # 2xx (Success) and 3xx (Redirection) are valid HTTP responses
+        if MIN_HTTP_SUCCESS <= code < MAX_HTTP_REDIRECT:
+            return False
+        if code in ignored_status_codes:
+            return False
+    except ValueError:
+        pass
+
+    return True
 
 
 def process_log() -> None:
@@ -40,8 +79,7 @@ def process_log() -> None:
         )
     except subprocess.CalledProcessError as e:
         exitcode = e.returncode
-        # for some reason they were swapped
-        log_err = e.stdout
+        log_err = (e.stdout or "") + "\n" + (e.stderr or "")
 
     if exitcode == 0:
         print("[II] All links are ok.")
@@ -49,18 +87,8 @@ def process_log() -> None:
 
     flagged_errors = []
     for line in log_err.splitlines():
-        line = line.strip()  # noqa: PLW2901
-        # Check if the line starts with '('
-        if not line.startswith("("):
-            continue
-
-        if any(line.endswith(code) for code in ignored_status_codes):
-            continue
-
-        if any(exc in line for exc in exception_urls):
-            continue
-
-        flagged_errors.append(line)
+        if is_error(line):
+            flagged_errors.append(line.strip())
 
     # Print flagged errors
     if not flagged_errors:
