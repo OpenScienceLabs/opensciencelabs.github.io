@@ -80,13 +80,24 @@ Depending on the project, the partner may discuss:
 - maintenance and support;
 - other project-specific requirements.
 
-### 4. Agree directly with the partner
+### 4. Agree on the delivery and administrative structure
 
-Unless explicitly arranged otherwise, the consulting partner is responsible for
-the professional engagement.
+In many cases, the client and consulting partner will contract and manage the
+engagement directly.
 
-The client and partner establish their own contractual, financial, legal, tax,
-confidentiality, intellectual-property, and delivery arrangements.
+For some projects, however, the engagement may benefit from fiscal,
+administrative, payment, or contracting infrastructure. When appropriate, OSL
+may explore whether one of its fiscal hosts can support the arrangement.
+
+The appropriate structure is determined case by case. Fiscal-host support is
+not automatic, and OSL cannot guarantee that a particular client, partner, or
+engagement will be eligible. Any such arrangement remains subject to the
+relevant fiscal host's scope, review, approval, fees, compliance requirements,
+and contractual terms.
+
+When no fiscal-host arrangement is used, the client and partner establish their
+own contractual, financial, legal, tax, confidentiality, intellectual-property,
+and delivery arrangements.
 
 Open Science Labs is not automatically a party to agreements between a client
 and an independent consulting partner.
@@ -98,6 +109,35 @@ maintainers, researchers, or other stakeholders involved in the project.
 
 OSL encourages approaches that strengthen open-source ecosystems, promote
 maintainability, and contribute improvements upstream whenever practical.
+
+## Optional fiscal-host support
+
+OSL has established fiscal-host relationships that support different parts of
+its mission. When an engagement would benefit from additional financial or
+legal infrastructure, OSL may be able to help explore an appropriate
+fiscal-hosted route.
+
+Depending on the project and the fiscal host, this may include support such as:
+
+- receiving and managing project funds;
+- invoicing and payment processing;
+- paying eligible contributors or service providers;
+- financial administration and compliance;
+- where permitted by the fiscal host, review and signature of formal
+  agreements.
+
+OSL currently works with **Open Source Collective** for open-source initiatives
+and with **The GRAPH Network** for certain non-open-source projects. The
+appropriate route depends on the nature of the engagement and the eligibility
+requirements of the relevant fiscal host.
+
+Fiscal-host support is an optional, case-by-case arrangement. Becoming an OSL
+consulting partner does not automatically provide access to a fiscal host, and
+clients or partners should not assume that OSL or a fiscal host will become a
+party to an engagement until the proposed structure has been reviewed and
+approved.
+
+[Learn more about OSL's fiscal hosts](/about/fiscal-sponsor/).
 
 ## Areas our partners may support
 
@@ -213,8 +253,10 @@ team.
 - [Visit SciStitch](https://scistitch.com/)
 - [Learn about the SciStitch partnership model](https://scistitch.com/partnership/)
 
-Services, availability, pricing, contractual terms, project acceptance, and
-delivery are determined directly by SciStitch.
+Services, availability, pricing, project acceptance, and delivery are normally
+determined directly by SciStitch. If a specific engagement would benefit from
+OSL's fiscal-host infrastructure, OSL and SciStitch may explore an appropriate
+fiscal arrangement, subject to the relevant host's review and approval.
 
 ## Why a partner network?
 
@@ -236,6 +278,8 @@ This can create value across the ecosystem:
 - organisations gain access to specialised expertise;
 - consulting partners find meaningful projects;
 - open-source projects receive professional engineering and maintenance;
+- where appropriate, eligible engagements may be able to use fiscal
+  infrastructure facilitated by OSL;
 - maintainers and contributors may gain new opportunities to collaborate and
   grow professionally.
 
@@ -316,8 +360,9 @@ We are particularly interested in partners that:
 - value transparent and maintainable engineering;
 - are comfortable collaborating across organisations;
 - support open science, education, research, or social-impact work;
-- can provide professional services through an appropriate independent legal
-  and financial structure.
+- can provide professional services through an appropriate legal and financial
+  structure, either independently or, where eligible and approved, with
+  fiscal-host support facilitated by OSL.
 
 Partnership does not mean that OSL guarantees projects, revenue, clients, or
 exclusive access to opportunities.
@@ -370,6 +415,8 @@ Tell us about:
 - your expected outcome;
 - your timeline;
 - your approximate budget;
+- whether you already have a contracting and payment structure or may need
+  fiscal-host support;
 - any scientific, security, privacy, or regulatory requirements.
 
 We will review the enquiry and, when possible, help identify an appropriate next
