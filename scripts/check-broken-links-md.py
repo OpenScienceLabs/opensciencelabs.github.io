@@ -1,14 +1,58 @@
-"""Check if ther eis any broken links."""
+"""Check if there is any broken links."""
 
 from __future__ import annotations
 
-import os
 import subprocess
+import sys
 
-# List of exception URLs
+# List of exception URLs (known to block crawlers/bots)
 exception_urls = [
     "https://www.linkedin.com/",
+    "https://twitter.com/",
+    "https://x.com/",
 ]
+
+MIN_HTTP_SUCCESS = 200
+MAX_HTTP_REDIRECT = 400
+
+# HTTP status codes for bot-blocking, rate limiting, or server issues
+ignored_status_codes = {
+    400,
+    401,
+    403,
+    405,
+    406,
+    429,
+    500,
+    502,
+    503,
+    504,
+    999,
+}
+
+
+def is_error(line: str) -> bool:
+    """Determine if a linkcheckmd log line represents a real broken link."""
+    line = line.strip()
+    if not line.startswith("("):
+        return False
+
+    if any(exc in line for exc in exception_urls):
+        return False
+
+    # Try extracting the status code from the end of the tuple
+    try:
+        code_str = line.rstrip(")").rsplit(",", 1)[-1].strip()
+        code = int(code_str)
+        # 2xx (Success) and 3xx (Redirection) are valid HTTP responses
+        if MIN_HTTP_SUCCESS <= code < MAX_HTTP_REDIRECT:
+            return False
+        if code in ignored_status_codes:
+            return False
+    except ValueError:
+        pass
+
+    return True
 
 
 def process_log() -> None:
@@ -18,7 +62,16 @@ def process_log() -> None:
 
     try:
         subprocess.run(
-            ["python", "-m", "linkcheckmd", "-r", "-v", "-m", "get", "pages"],
+            [
+                sys.executable,
+                "-m",
+                "linkcheckmd",
+                "-r",
+                "-v",
+                "-m",
+                "get",
+                "pages",
+            ],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             text=True,
@@ -26,8 +79,7 @@ def process_log() -> None:
         )
     except subprocess.CalledProcessError as e:
         exitcode = e.returncode
-        # for some reason they were swapped
-        log_err = e.stdout
+        log_err = (e.stdout or "") + "\n" + (e.stderr or "")
 
     if exitcode == 0:
         print("[II] All links are ok.")
@@ -35,18 +87,8 @@ def process_log() -> None:
 
     flagged_errors = []
     for line in log_err.splitlines():
-        line = line.strip()  # noqa: PLW2901
-        # Check if the line starts with '('
-        if not line.startswith("("):
-            continue
-
-        if line.endswith("429)"):
-            # Too Many Requests http error
-            continue
-        # Extract the URL using regex
-        for exception_url in exception_urls:
-            if exception_url not in line:
-                flagged_errors.append(line)
+        if is_error(line):
+            flagged_errors.append(line.strip())
 
     # Print flagged errors
     if not flagged_errors:
@@ -54,10 +96,10 @@ def process_log() -> None:
         print("No errors flagged. All URLs are in the exception list.")
         return
 
-    print("Errors flagged for the following URLs:")
+    print("Errors flagged for the following URLs:", flush=True)
     for line in flagged_errors:
-        print(line)
-    os._exit(1)
+        print(line, flush=True)
+    sys.exit(1)
 
 
 # Run the script

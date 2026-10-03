@@ -1,6 +1,8 @@
 [build]
 publish = "build"
 command = """
+curl -fsSL https://github.com/quarto-dev/quarto-cli/releases/download/v1.5.57/quarto-1.5.57-linux-amd64.tar.gz | tar -xz -C /tmp &&
+export PATH="/tmp/quarto-1.5.57/bin:$PATH" &&
 python -m pip install --upgrade pip &&
 python -m pip install poetry &&
 poetry check &&
