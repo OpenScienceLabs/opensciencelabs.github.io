@@ -30,7 +30,7 @@
     if (document.getElementById('osl-search-styles')) return;
     const css = `
       .osl-search-panel {
-        position: absolute;
+        position: fixed;
         z-index: 1055; /* above navbar/offcanvas */
         min-width: 280px;
         max-width: 560px;
@@ -275,15 +275,19 @@
   }
 
   function positionPanel(panel, inputEl) {
-    const r = inputEl.getBoundingClientRect();
-    const scrollY = window.scrollY || document.documentElement.scrollTop;
-    const scrollX = window.scrollX || document.documentElement.scrollLeft;
-    const width = Math.min(Math.max(r.width, 320), 560);
-    panel.style.left = `${r.left + scrollX}px`;
-    panel.style.top = `${r.bottom + scrollY + 6}px`;
-    panel.style.width = `${width}px`;
-  }
+  const r = inputEl.getBoundingClientRect();
 
+  const viewportWidth = document.documentElement.clientWidth;
+  const width = Math.min(Math.max(r.width, 280), 560);
+  const left = Math.min(
+    Math.max(r.left, 8),
+    viewportWidth - width - 8
+  );
+
+  panel.style.left = `${left}px`;
+  panel.style.top = `${r.bottom + 6}px`;
+  panel.style.width = `${Math.min(width, viewportWidth - 16)}px`;
+}
   function renderResults(panel, items, rawQuery) {
     panel.innerHTML = '';
     if (!items.length) {
@@ -474,8 +478,13 @@
     });
 
     // Reposition on scroll/resize
-    window.addEventListener('scroll', updatePosition, { passive: true });
-    window.addEventListener('resize', updatePosition);
+window.addEventListener('scroll', updatePosition, { passive: true });
+window.addEventListener('resize', updatePosition);
+
+const scrollContainer = inputEl.closest('.offcanvas-body');
+if (scrollContainer) {
+  scrollContainer.addEventListener('scroll', updatePosition, { passive: true });
+}
 
     inputEl.setAttribute('autocomplete', 'off');
     inputEl.addEventListener('input', onInput);
