@@ -168,6 +168,76 @@
     });
   }
 
+  // D) Copy link buttons (.link_yank)
+  document.addEventListener('click', async (e) => {
+    const btn = e.target.closest('.link_yank');
+    if (!btn) return;
+
+    e.preventDefault();
+
+    let textToCopy = btn.getAttribute('data-url') || btn.getAttribute('href') || window.location.href;
+    try {
+      textToCopy = new URL(textToCopy, window.location.origin).href;
+    } catch (_) {}
+
+    let success = false;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      try {
+        await navigator.clipboard.writeText(textToCopy);
+        success = true;
+      } catch (_) {}
+    }
+
+    if (!success) {
+      try {
+        const ta = document.createElement('textarea');
+        ta.value = textToCopy;
+        ta.style.position = 'fixed';
+        ta.style.left = '-9999px';
+        ta.style.top = '-9999px';
+        ta.setAttribute('readonly', '');
+        document.body.appendChild(ta);
+        ta.select();
+        success = document.execCommand('copy');
+        document.body.removeChild(ta);
+      } catch (_) {}
+    }
+
+    if (success) {
+      if (btn._copyTimeout) {
+        clearTimeout(btn._copyTimeout);
+      }
+
+      const originalTitle = btn.getAttribute('data-original-title') || btn.getAttribute('title') || 'Copy link';
+      if (!btn.getAttribute('data-original-title')) {
+        btn.setAttribute('data-original-title', originalTitle);
+      }
+
+      btn.setAttribute('title', 'Copied!');
+      btn.setAttribute('aria-label', 'Copied!');
+      btn.classList.add('copied');
+
+      let tooltip = btn.querySelector('.copy-tooltip');
+      if (!tooltip) {
+        tooltip = document.createElement('span');
+        tooltip.className = 'copy-tooltip';
+        tooltip.setAttribute('role', 'status');
+        btn.appendChild(tooltip);
+      }
+      tooltip.textContent = 'Copied!';
+
+      btn._copyTimeout = setTimeout(() => {
+        btn.classList.remove('copied');
+        btn.setAttribute('title', originalTitle);
+        btn.setAttribute('aria-label', originalTitle);
+        if (tooltip && tooltip.parentNode) {
+          tooltip.parentNode.removeChild(tooltip);
+        }
+        btn._copyTimeout = null;
+      }, 2000);
+    }
+  });
+
 })();
 
 
