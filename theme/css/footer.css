@@ -29,13 +29,21 @@ footer.footer{
   height:24px;
   appearance:none;
   -webkit-appearance:none;
-  background:rgba(255,255,255,.12);
-  border:1px solid rgba(255,255,255,.18);
+  background:#fff;
+  border:2px solid #000;
   border-radius:999px;
   position:relative;
   cursor:pointer;
   outline:none;
   display:inline-block;
+  box-sizing:border-box;
+  transition:border-color .22s ease, background .22s ease;
+}
+
+/* Accessible focus state */
+.color_choice:focus-visible{
+  outline:2px solid var(--brand-strong);
+  outline-offset:3px;
 }
 
 /* The “knob” */
@@ -44,32 +52,32 @@ footer.footer{
   position:absolute;
   top:2px;
   left:2px;
-  width:20px;
-  height:20px;
+  width:16px;
+  height:16px;
   border-radius:50%;
-  background:#fff;
-  box-shadow:0 2px 8px rgba(0,0,0,.25);
+  background:#000;
   transform:translateX(0);
   transition:transform .22s ease, background .22s ease;
 }
 
-/* Dark mode: move knob right */
+/* Dark mode: track and knob */
+html[data-mode="dim"] .color_choice{
+  background:transparent;
+  border-color:#fff;
+}
+
 html[data-mode="dim"] .color_choice::after{
+  background:#fff;
   transform:translateX(24px);
 }
 
-/* Optional: show a subtle sun/moon via emojis (no images needed) */
-.color_choice:before{
-  content:"☀️";
-  position:absolute;
-  left:8px;
-  top:50%;
-  transform:translateY(-50%);
-  font-size:11px;
-  opacity:.8;
-}
-html[data-mode="dim"] .color_choice:before{
-  content:"🌙";
-  left:auto;
-  right:6px;
+@media (prefers-color-scheme: dark){
+  html:not([data-mode="lit"]) .color_choice{
+    background:transparent;
+    border-color:#fff;
+  }
+  html:not([data-mode="lit"]) .color_choice::after{
+    background:#fff;
+    transform:translateX(24px);
+  }
 }
