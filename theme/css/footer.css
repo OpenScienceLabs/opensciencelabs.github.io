@@ -17,59 +17,60 @@ footer.footer{
 }
 
 /* ========== Color mode toggle (footer) ========== */
-.color_mode{
-  display:flex;
-  align-items:center;
-  min-height:28px;
+.color_mode {
+  display: flex;
+  align-items: center;
+  min-height: 28px;
 }
 
 /* The switch “track” */
-.color_choice{
-  width:48px;
-  height:24px;
-  appearance:none;
-  -webkit-appearance:none;
-  background:rgba(255,255,255,.12);
-  border:1px solid rgba(255,255,255,.18);
-  border-radius:999px;
-  position:relative;
-  cursor:pointer;
-  outline:none;
-  display:inline-block;
+.color_choice {
+  width: 48px;
+  height: 24px;
+  appearance: none;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 999px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  display: inline-block;
+  box-sizing: border-box;
+  transition:
+    border-color 0.22s ease,
+    background 0.22s ease;
+}
+
+/* Accessible focus state */
+.color_choice:focus-visible {
+  outline: 2px solid var(--brand-strong);
+  outline-offset: 3px;
 }
 
 /* The “knob” */
-.color_choice::after{
-  content:"";
-  position:absolute;
-  top:2px;
-  left:2px;
-  width:20px;
-  height:20px;
-  border-radius:50%;
-  background:#fff;
-  box-shadow:0 2px 8px rgba(0,0,0,.25);
-  transform:translateX(0);
-  transition:transform .22s ease, background .22s ease;
+.color_choice::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #000;
+  transform: translateX(0);
+  transition:
+    transform 0.22s ease,
+    background 0.22s ease;
 }
 
-/* Dark mode: move knob right */
-html[data-mode="dim"] .color_choice::after{
-  transform:translateX(24px);
+/* Dark mode: track and knob */
+html[data-mode="dim"] .color_choice {
+  background: transparent;
+  border-color: #fff;
 }
 
-/* Optional: show a subtle sun/moon via emojis (no images needed) */
-.color_choice:before{
-  content:"☀️";
-  position:absolute;
-  left:8px;
-  top:50%;
-  transform:translateY(-50%);
-  font-size:11px;
-  opacity:.8;
-}
-html[data-mode="dim"] .color_choice:before{
-  content:"🌙";
-  left:auto;
-  right:6px;
+html[data-mode="dim"] .color_choice::after {
+  background: #fff;
+  transform: translateX(24px);
 }
