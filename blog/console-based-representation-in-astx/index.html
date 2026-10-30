@@ -13,9 +13,9 @@
     <meta name="description" content="Recently, console-based AST representation was included in the ASTx framework. Such feature can enhance the debugging and analysis capabilities of ASTx, particularly in environments such as a pdb session. In this tutorial, we'll explore this new feature as well as the ASTx Graphviz visualization.
 ">
     <meta name="keywords" content="open science,data science,latam">
-    <meta name="last-modified" content="2026-10-29">
-    <meta name="DC.date.modified" content="2026-10-29">
-    <meta property="og:updated_time" content="2026-10-29T00:00:00Z">
+    <meta name="last-modified" content="2026-10-30">
+    <meta name="DC.date.modified" content="2026-10-30">
+    <meta property="og:updated_time" content="2026-10-30T00:00:00Z">
 
     <meta property="og:locale" content="es">
     <meta property="og:locale:alternate" content="pt">
@@ -36,7 +36,7 @@
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Console-based representation in ASTx",
-        "dateModified": "2026-10-29T00:00:00Z",
+        "dateModified": "2026-10-30T00:00:00Z",
         "url": "https://opensciencelabs.org/blog/console-based-representation-in-astx/"
       }
     </script>
@@ -1947,18 +1947,18 @@ to the ones above at any time.</p>
 overview of how you can leverage the ASTx library for your needs.</p>
 <h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link"> #</a></h1>
 <p>The first step is to install ASTx. You can do it simply by running the
-command below in your terminal:<br />
-<code>$ pip install astx</code><br />
+command below in your terminal:\
+<code>$ pip install astx</code>\
 If you need more information on installation, you can get it in the
 <a href="https://github.com/arxlang/astx/blob/main/docs/installation.md">ASTx installation
 page</a>.
 After that, you can just open a Jupyter Notebook instance and start
 writing your first AST.</p>
 <h1 id="example-an-ast-of-a-series-of-mathematical-operations">Example: an AST of a series of mathematical operations<a class="headerlink" href="#example-an-ast-of-a-series-of-mathematical-operations" title="Permanent link"> #</a></h1>
-<p>Here we will present a quick example of an AST of the expression<br />
-<code>basic_op = lit_1 + b - a * c / a + (b - a / a)</code>, in which<br />
-$~~~~$ <code>lit_1</code> is a defined integer, and<br />
-$~~~~$ <code>a</code>, <code>b</code>, and <code>c</code> are variables.<br />
+<p>Here we will present a quick example of an AST of the expression\
+<code>basic_op = lit_1 + b - a * c / a + (b - a / a)</code>, in which\
+$~~~~$ <code>lit_1</code> is a defined integer, and\
+$~~~~$ <code>a</code>, <code>b</code>, and <code>c</code> are variables.\
 The first thing to do is, in your Jupyter Notebook instance, import
 <code>display</code>, which will allow you to have a basic visualization of the
 AST, and the astx library itself.</p>

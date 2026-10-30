@@ -12,19 +12,19 @@
     "opensciencelabs.org"
   ],
   "timezone": "America/La_Paz",
-  "generated_at": "2026-10-29T13:21:00.073316Z",
+  "generated_at": "2026-10-30T13:12:10.524359Z",
   "reporting_period": {
-    "start": "2026-09-29",
-    "end": "2026-10-28"
+    "start": "2026-09-30",
+    "end": "2026-10-29"
   },
   "history_period": {
     "start": "2025-10-01",
     "end": "2026-09-30"
   },
   "summary": {
-    "pageviews": 2020,
-    "active_users": 1432,
-    "sessions": 1620
+    "pageviews": 2010,
+    "active_users": 1420,
+    "sessions": 1606
   },
   "monthly_history": [
     {
@@ -102,20 +102,16 @@
   ],
   "comparison": {
     "reporting_period": {
-      "start": "2026-08-30",
-      "end": "2026-09-28"
+      "start": "2026-08-31",
+      "end": "2026-09-29"
     },
     "summary": {
-      "pageviews": 1725,
-      "active_users": 1252,
-      "sessions": 1371
+      "pageviews": 1731,
+      "active_users": 1261,
+      "sessions": 1384
     }
   },
   "daily_history": [
-    {
-      "date": "2026-09-29",
-      "pageviews": 59
-    },
     {
       "date": "2026-09-30",
       "pageviews": 38
@@ -231,6 +227,10 @@
     {
       "date": "2026-10-28",
       "pageviews": 80
+    },
+    {
+      "date": "2026-10-29",
+      "pageviews": 49
     }
   ],
   "breakdowns": {
@@ -241,31 +241,31 @@
       "rows": [
         {
           "label": "India",
-          "value": 636
+          "value": 639
         },
         {
           "label": "United States",
-          "value": 405
+          "value": 410
         },
         {
           "label": "Singapore",
-          "value": 366
+          "value": 356
         },
         {
           "label": "Spain",
-          "value": 225
+          "value": 224
         },
         {
           "label": "China",
-          "value": 66
+          "value": 63
         },
         {
           "label": "Germany",
-          "value": 36
+          "value": 39
         },
         {
           "label": "Japan",
-          "value": 34
+          "value": 33
         },
         {
           "label": "South Korea",
@@ -276,8 +276,8 @@
           "value": 15
         }
       ],
-      "total": 2020,
-      "other": 204
+      "total": 2010,
+      "other": 198
     },
     "devices": {
       "status": "available",
@@ -286,14 +286,14 @@
       "rows": [
         {
           "label": "desktop",
-          "value": 1880
+          "value": 1869
         },
         {
           "label": "mobile",
-          "value": 140
+          "value": 141
         }
       ],
-      "total": 2020,
+      "total": 2010,
       "other": 0
     },
     "channels": {
@@ -303,15 +303,15 @@
       "rows": [
         {
           "label": "Direct",
-          "value": 1159
+          "value": 1142
         },
         {
           "label": "Organic Search",
-          "value": 228
+          "value": 223
         },
         {
           "label": "Referral",
-          "value": 162
+          "value": 169
         },
         {
           "label": "AI Assistant",
@@ -322,38 +322,32 @@
           "value": 28
         }
       ],
-      "total": 1619,
-      "other": 1
+      "total": 1605,
+      "other": 2
     }
   },
   "windows": {
     "30": {
       "reporting_period": {
-        "start": "2026-09-29",
-        "end": "2026-10-28"
+        "start": "2026-09-30",
+        "end": "2026-10-29"
       },
       "summary": {
-        "pageviews": 2020,
-        "active_users": 1432,
-        "sessions": 1620
+        "pageviews": 2010,
+        "active_users": 1420,
+        "sessions": 1606
       },
       "comparison": {
         "reporting_period": {
-          "start": "2026-08-30",
-          "end": "2026-09-28"
+          "start": "2026-08-31",
+          "end": "2026-09-29"
         },
         "summary": {
-          "pageviews": 1725,
-          "active_users": 1252,
-          "sessions": 1371
+          "pageviews": 1731,
+          "active_users": 1261,
+          "sessions": 1384
         },
         "daily_history": [
-          {
-            "date": "2026-08-30",
-            "pageviews": 53,
-            "active_users": 42,
-            "sessions": 45
-          },
           {
             "date": "2026-08-31",
             "pageviews": 146,
@@ -527,16 +521,16 @@
             "pageviews": 59,
             "active_users": 47,
             "sessions": 49
+          },
+          {
+            "date": "2026-09-29",
+            "pageviews": 59,
+            "active_users": 52,
+            "sessions": 56
           }
         ]
       },
       "daily_history": [
-        {
-          "date": "2026-09-29",
-          "pageviews": 59,
-          "active_users": 52,
-          "sessions": 56
-        },
         {
           "date": "2026-09-30",
           "pageviews": 38,
@@ -710,6 +704,12 @@
           "pageviews": 80,
           "active_users": 53,
           "sessions": 56
+        },
+        {
+          "date": "2026-10-29",
+          "pageviews": 49,
+          "active_users": 40,
+          "sessions": 41
         }
       ],
       "breakdowns": {
@@ -720,31 +720,31 @@
           "rows": [
             {
               "label": "India",
-              "value": 636
+              "value": 639
             },
             {
               "label": "United States",
-              "value": 405
+              "value": 410
             },
             {
               "label": "Singapore",
-              "value": 366
+              "value": 356
             },
             {
               "label": "Spain",
-              "value": 225
+              "value": 224
             },
             {
               "label": "China",
-              "value": 66
+              "value": 63
             },
             {
               "label": "Germany",
-              "value": 36
+              "value": 39
             },
             {
               "label": "Japan",
-              "value": 34
+              "value": 33
             },
             {
               "label": "South Korea",
@@ -755,8 +755,8 @@
               "value": 15
             }
           ],
-          "total": 2020,
-          "other": 204
+          "total": 2010,
+          "other": 198
         },
         "devices": {
           "status": "available",
@@ -765,14 +765,14 @@
           "rows": [
             {
               "label": "desktop",
-              "value": 1880
+              "value": 1869
             },
             {
               "label": "mobile",
-              "value": 140
+              "value": 141
             }
           ],
-          "total": 2020,
+          "total": 2010,
           "other": 0
         },
         "channels": {
@@ -782,15 +782,15 @@
           "rows": [
             {
               "label": "Direct",
-              "value": 1159
+              "value": 1142
             },
             {
               "label": "Organic Search",
-              "value": 228
+              "value": 223
             },
             {
               "label": "Referral",
-              "value": 162
+              "value": 169
             },
             {
               "label": "AI Assistant",
@@ -801,8 +801,8 @@
               "value": 28
             }
           ],
-          "total": 1619,
-          "other": 1
+          "total": 1605,
+          "other": 2
         },
         "pages": {
           "status": "available",
@@ -811,15 +811,15 @@
           "rows": [
             {
               "label": "/",
-              "value": 396
+              "value": 389
             },
             {
               "label": "/opportunities/gsoc/project-ideas/",
-              "value": 163
+              "value": 159
             },
             {
               "label": "/opportunities/gsoc/guides/contributor/",
-              "value": 120
+              "value": 121
             },
             {
               "label": "/projects/",
@@ -827,61 +827,55 @@
             },
             {
               "label": "/blog/",
-              "value": 97
+              "value": 96
             },
             {
               "label": "/projects/incubation/",
-              "value": 70
+              "value": 67
             },
             {
               "label": "/discord/",
               "value": 66
             },
             {
-              "label": "/projects/affiliation/",
-              "value": 60
+              "label": "/blog/typer-a-python-library-for-building-cli-applications/",
+              "value": 63
             },
             {
               "label": "/projects/list/",
               "value": 60
             },
             {
-              "label": "/blog/typer-a-python-library-for-building-cli-applications/",
-              "value": 56
+              "label": "/projects/affiliation/",
+              "value": 59
             }
           ],
-          "total": 2018,
-          "other": 828
+          "total": 2008,
+          "other": 826
         }
       }
     },
     "7": {
       "reporting_period": {
-        "start": "2026-10-22",
-        "end": "2026-10-28"
+        "start": "2026-10-23",
+        "end": "2026-10-29"
       },
       "summary": {
-        "pageviews": 490,
-        "active_users": 353,
-        "sessions": 396
+        "pageviews": 474,
+        "active_users": 335,
+        "sessions": 377
       },
       "comparison": {
         "reporting_period": {
-          "start": "2026-10-15",
-          "end": "2026-10-21"
+          "start": "2026-10-16",
+          "end": "2026-10-22"
         },
         "summary": {
-          "pageviews": 397,
+          "pageviews": 389,
           "active_users": 300,
-          "sessions": 328
+          "sessions": 325
         },
         "daily_history": [
-          {
-            "date": "2026-10-15",
-            "pageviews": 73,
-            "active_users": 58,
-            "sessions": 63
-          },
           {
             "date": "2026-10-16",
             "pageviews": 55,
@@ -917,16 +911,16 @@
             "pageviews": 40,
             "active_users": 36,
             "sessions": 38
+          },
+          {
+            "date": "2026-10-22",
+            "pageviews": 65,
+            "active_users": 57,
+            "sessions": 60
           }
         ]
       },
       "daily_history": [
-        {
-          "date": "2026-10-22",
-          "pageviews": 65,
-          "active_users": 57,
-          "sessions": 60
-        },
         {
           "date": "2026-10-23",
           "pageviews": 52,
@@ -962,6 +956,12 @@
           "pageviews": 80,
           "active_users": 53,
           "sessions": 56
+        },
+        {
+          "date": "2026-10-29",
+          "pageviews": 49,
+          "active_users": 40,
+          "sessions": 41
         }
       ],
       "breakdowns": {
@@ -972,23 +972,23 @@
           "rows": [
             {
               "label": "India",
-              "value": 154
+              "value": 152
             },
             {
               "label": "Spain",
-              "value": 153
+              "value": 116
             },
             {
               "label": "United States",
-              "value": 72
+              "value": 86
             },
             {
               "label": "Singapore",
-              "value": 44
+              "value": 50
             }
           ],
-          "total": 490,
-          "other": 67
+          "total": 474,
+          "other": 70
         },
         "devices": {
           "status": "available",
@@ -997,14 +997,14 @@
           "rows": [
             {
               "label": "desktop",
-              "value": 457
+              "value": 441
             },
             {
               "label": "mobile",
               "value": 33
             }
           ],
-          "total": 490,
+          "total": 474,
           "other": 0
         },
         "channels": {
@@ -1014,23 +1014,23 @@
           "rows": [
             {
               "label": "Direct",
-              "value": 276
+              "value": 252
             },
             {
               "label": "Organic Search",
-              "value": 58
+              "value": 52
             },
             {
               "label": "Referral",
-              "value": 39
+              "value": 50
             },
             {
               "label": "AI Assistant",
-              "value": 14
+              "value": 13
             }
           ],
-          "total": 395,
-          "other": 8
+          "total": 376,
+          "other": 9
         },
         "pages": {
           "status": "available",
@@ -1039,7 +1039,7 @@
           "rows": [
             {
               "label": "/",
-              "value": 83
+              "value": 71
             },
             {
               "label": "/opportunities/gsoc/project-ideas/",
@@ -1047,69 +1047,63 @@
             },
             {
               "label": "/projects/",
-              "value": 37
+              "value": 34
             },
             {
               "label": "/blog/",
-              "value": 36
+              "value": 29
             },
             {
               "label": "/projects/incubation/",
-              "value": 32
-            },
-            {
-              "label": "/projects/affiliation/",
-              "value": 31
+              "value": 28
             },
             {
               "label": "/opportunities/gsoc/guides/contributor/",
-              "value": 21
+              "value": 26
+            },
+            {
+              "label": "/projects/affiliation/",
+              "value": 26
             },
             {
               "label": "/blog/typer-a-python-library-for-building-cli-applications/",
-              "value": 17
-            },
-            {
-              "label": "/opportunities/internships/oss/",
-              "value": 14
+              "value": 22
             },
             {
               "label": "/discord/",
-              "value": 13
+              "value": 12
+            },
+            {
+              "label": "/opportunities/internships/oss/",
+              "value": 12
             }
           ],
-          "total": 490,
-          "other": 155
+          "total": 474,
+          "other": 163
         }
       }
     },
     "90": {
       "reporting_period": {
-        "start": "2026-07-31",
-        "end": "2026-10-28"
+        "start": "2026-08-01",
+        "end": "2026-10-29"
       },
       "summary": {
-        "pageviews": 4892,
-        "active_users": 3448,
-        "sessions": 3808
+        "pageviews": 4925,
+        "active_users": 3472,
+        "sessions": 3847
       },
       "comparison": {
         "reporting_period": {
-          "start": "2026-05-02",
-          "end": "2026-07-30"
+          "start": "2026-05-03",
+          "end": "2026-07-31"
         },
         "summary": {
-          "pageviews": 3559,
-          "active_users": 2055,
-          "sessions": 2473
+          "pageviews": 3521,
+          "active_users": 2043,
+          "sessions": 2460
         },
         "daily_history": [
-          {
-            "date": "2026-05-02",
-            "pageviews": 54,
-            "active_users": 29,
-            "sessions": 30
-          },
           {
             "date": "2026-05-03",
             "pageviews": 53,
@@ -1643,16 +1637,16 @@
             "pageviews": 47,
             "active_users": 26,
             "sessions": 29
+          },
+          {
+            "date": "2026-07-31",
+            "pageviews": 16,
+            "active_users": 15,
+            "sessions": 16
           }
         ]
       },
       "daily_history": [
-        {
-          "date": "2026-07-31",
-          "pageviews": 16,
-          "active_users": 15,
-          "sessions": 16
-        },
         {
           "date": "2026-08-01",
           "pageviews": 30,
@@ -2186,6 +2180,12 @@
           "pageviews": 80,
           "active_users": 53,
           "sessions": 56
+        },
+        {
+          "date": "2026-10-29",
+          "pageviews": 49,
+          "active_users": 40,
+          "sessions": 41
         }
       ],
       "breakdowns": {
@@ -2196,15 +2196,15 @@
           "rows": [
             {
               "label": "India",
-              "value": 1401
+              "value": 1411
             },
             {
               "label": "Singapore",
-              "value": 1100
+              "value": 1105
             },
             {
               "label": "United States",
-              "value": 1037
+              "value": 1054
             },
             {
               "label": "Spain",
@@ -2212,19 +2212,19 @@
             },
             {
               "label": "China",
-              "value": 187
+              "value": 186
             },
             {
               "label": "Brazil",
-              "value": 101
+              "value": 99
             },
             {
               "label": "Germany",
-              "value": 92
+              "value": 96
             },
             {
               "label": "Japan",
-              "value": 63
+              "value": 66
             },
             {
               "label": "South Korea",
@@ -2235,8 +2235,8 @@
               "value": 55
             }
           ],
-          "total": 4892,
-          "other": 559
+          "total": 4925,
+          "other": 556
         },
         "devices": {
           "status": "available",
@@ -2245,14 +2245,14 @@
           "rows": [
             {
               "label": "desktop",
-              "value": 4421
+              "value": 4456
             },
             {
               "label": "mobile",
-              "value": 470
+              "value": 468
             }
           ],
-          "total": 4892,
+          "total": 4925,
           "other": 1
         },
         "channels": {
@@ -2262,15 +2262,15 @@
           "rows": [
             {
               "label": "Direct",
-              "value": 2796
+              "value": 2808
             },
             {
               "label": "Organic Search",
-              "value": 589
+              "value": 588
             },
             {
               "label": "Referral",
-              "value": 309
+              "value": 320
             },
             {
               "label": "AI Assistant",
@@ -2278,14 +2278,14 @@
             },
             {
               "label": "Unassigned",
-              "value": 54
+              "value": 55
             },
             {
               "label": "Organic Social",
-              "value": 34
+              "value": 35
             }
           ],
-          "total": 3866,
+          "total": 3890,
           "other": 0
         },
         "pages": {
@@ -2295,27 +2295,27 @@
           "rows": [
             {
               "label": "/",
-              "value": 1082
+              "value": 1080
             },
             {
               "label": "/opportunities/gsoc/project-ideas/",
-              "value": 357
+              "value": 358
             },
             {
               "label": "/projects/",
-              "value": 209
+              "value": 211
             },
             {
               "label": "/opportunities/gsoc/guides/contributor/",
-              "value": 203
+              "value": 207
             },
             {
               "label": "/blog/typer-a-python-library-for-building-cli-applications/",
-              "value": 196
+              "value": 201
             },
             {
               "label": "/projects/list/",
-              "value": 154
+              "value": 156
             },
             {
               "label": "/blog/",
@@ -2334,8 +2334,8 @@
               "value": 114
             }
           ],
-          "total": 4877,
-          "other": 2175
+          "total": 4910,
+          "other": 2196
         }
       }
     }
