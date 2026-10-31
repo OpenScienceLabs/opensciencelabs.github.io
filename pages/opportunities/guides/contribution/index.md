@@ -1,6 +1,8 @@
 ---
 title: "Contribution Guidelines"
-description: "Contribution Guidelines"
+description:
+  "Adaptable contribution recommendations for OSL-affiliated projects and GSoC
+  sub-organizations."
 date: "2025-03-23"
 authors: ["OSL Team"]
 template: single-sidebar.html
@@ -8,17 +10,42 @@ template: single-sidebar.html
 
 # Contribution Guidelines
 
-These recommendations are general guidelines from Open Science Labs. Each
-project may have its own specific set of recommendations and rules; contributors
-should review those for each project.
+Open Science Labs (OSL) offers this guide to affiliated projects and
+sub-organizations participating in Google Summer of Code (GSoC) with us. It is a
+starting point for building a welcoming, sustainable contribution process.
+Projects can adopt it in full, use selected recommendations, or adapt it to
+their community, tools, and mentoring capacity. It can also support projects in
+other OSL contribution and internship initiatives.
+
+These recommendations are optional; they do not establish a single workflow for
+every project. Contributors should read their project's own contribution guide
+and ask maintainers which practices apply. Applicable codes of conduct and
+official program rules still apply independently of this guide.
+
+## Adapting This Guide for Your Project
+
+Maintainers and mentors may find it useful to publish a `CONTRIBUTING.md` file
+and issue or pull request templates covering:
+
+- Where to ask questions, discuss ideas, and request reviews.
+- How to set up the development environment and choose a first task.
+- Which coding, testing, documentation, and AI-use policies the project follows.
+- How reviews work, including expected response times and how inactive work is
+  handled.
+- How GSoC contributors and mentors will share progress and arrange check-ins.
+
+Link these resources from the project idea page and onboarding materials. If
+expectations change, explain the change to contributors and give them time to
+adapt. Our separate [Coding Tips](../coding-tips/index.md) page offers technical
+practices projects can select or adapt alongside this guide.
 
 ## Community Engagement
 
-- **Communication Platforms:** Each project may use its preferred communication
-  platform for discussions, such as code repository platforms (GitHub, GitLab,
-  etc.) or chat-based platforms (Discord, Slack, etc.). Contributors should
-  verify with the community and mentors which platform is recommended for
-  seeking assistance, discussing ideas, and requesting reviews.
+- **Communication Platforms:** Projects can choose the platforms that work for
+  their community, such as GitHub, GitLab, Discord, or Slack. Publish where
+  contributors can seek help, discuss ideas, and request reviews. Public
+  discussions help others learn; private channels are appropriate for sensitive
+  matters or when the project's process calls for them.
 
 - **Collaboration and Support:** Contributors are encouraged to assist others
   when possible, as everyone is here to learn and support one another.
@@ -29,42 +56,58 @@ should review those for each project.
   they should offer constructive feedback and encouragement to help others
   improve both their language and technical skills.
 
-- **Channel Usage:** If the primary discussion channel is not the code
-  repository platform, contributors should use the designated platform to draw
-  attention to pull requests or issues. Initiating a discussion there prior to
-  opening issues or pull requests is also expected.
+- **Channel Usage:** If a project coordinates in chat, contributors can share
+  links to relevant issues or pull requests there. Projects may prefer a
+  discussion before substantial work begins; make that preference clear without
+  requiring a separate chat discussion for every small contribution.
+
+- **Mentoring and Progress:** For GSoC, agree on realistic check-in times,
+  progress updates, and a way to raise blockers. Short regular meetings and
+  written next steps can help. Consider time zones, accessibility needs, and
+  mentor availability when choosing a routine.
 
 ## Contributions
 
-- **Task Coordination:** Contributors should avoid duplicating work by verifying
-  whether someone else is already addressing a task or if the task remains
-  relevant before beginning work.
+- **Task Coordination:** Before starting, check whether a task is still relevant
+  and whether someone is already working on it. Comment on the issue or use the
+  project's preferred channel to coordinate. Maintainers can offer small starter
+  tasks and examples of helpful contributions, including documentation and
+  tests.
 
-- **Managing Stale Contributions:** Project maintainers may implement mechanisms
-  to label and close stale issues and pull requests. Some contributors open pull
-  requests without following up or addressing review recommendations, which can
-  impede progress.
+- **Discussing Larger Changes:** Propose substantial features, architectural
+  changes, or broad refactoring before implementation. Agree on scope with
+  maintainers and split the work into focused pull requests where practical.
+
+- **Preparing for Review:** A useful pull request explains the problem, the
+  proposed change, and how it was checked. Link related issues, follow the
+  project's templates, and describe any remaining questions. Draft mode is
+  helpful for work in progress; mark it ready when it meets the project's review
+  expectations.
+
+- **Reviewing Together:** Treat review as a chance to learn. Contributors can
+  respond to feedback and explain tradeoffs; reviewers can distinguish required
+  changes from suggestions and explain their reasoning. Allow time for replies
+  before following up through the agreed channel.
+
+- **Managing Inactive Work:** Projects may choose to label, return to draft, or
+  close inactive issues and pull requests. Publish any timeframes, check in with
+  the contributor first, and explain how work can resume. Consider both
+  contributor circumstances and delays in mentor or maintainer feedback.
 
 - **Branch Management:** When updating a branch, contributors should follow the
   project's preferred approach, whether that involves using a **rebase** or a
   **merge commit**.
 
-- If your PR is not ready yet for review, please keep it in **draft mode**.
-
 ## Coding Tips
 
-- Ensure that `pre-commit` is applied to your branch before opening a pull
-  request. Run `pre-commit install` to enable pre-commit hooks, ensuring they
-  are applied automatically before every commit.
-- Avoid excessive nesting. Try to keep nesting levels to **four or fewer** for
-  better readability and maintainability.
-- Follow the project's specific coding guidelines. Review them regularly to
-  ensure consistency across contributions.
-- Remove any unnecessary comments. In most cases, if you need to explain what
-  your code does, it may indicate that the code is unclear or overly complex.
-  This is also often a sign of code generated by Generative AI.
-- Do not use emojis in comments. This is typically seen as a red flag and may
-  suggest improper use of AI-generated content.
-- Ensure there is an empty line at the end of each file. GitHub highlights
-  missing end-of-file newlines with a red icon. Configure your IDE to
-  automatically add this final newline.
+Technical recommendations now have their own
+[Coding Tips](../coding-tips/index.md) page. It covers readable code,
+development environments, automated checks, testing, documentation, and
+responsible use of AI tools.
+
+## Further Guidance
+
+- [GSoC Contributor Guide](../../gsoc/guides/contributor/index.md): preparing an
+  application and working with mentors.
+- [Three Years with Google Summer of Code: What I've Learned](../../../blog/three-years-with-google-summer-of-code-what-ive-learned/index.md):
+  OSL's experience with mentoring, communication, and manageable contributions.

@@ -6,6 +6,12 @@ help navigate the application process, engage with mentors, and succeed during
 the program period. The guide covers project selection, initial contributions,
 proposal development, and expectations for approved contributors.
 
+Affiliated projects and sub-organizations may adopt, partially use, or adapt
+OSL's [Contribution Guidelines](../../../guides/contribution/index.md) and
+[Coding Tips](../../../guides/coding-tips/index.md). These are recommendations;
+check your project's own guidance to understand which practices it follows.
+Official GSoC rules and applicable codes of conduct still apply.
+
 ## Candidates' Guide
 
 This section outlines the steps candidates should follow to apply effectively.
@@ -83,6 +89,11 @@ successful collaboration during the GSoC program with Open Science Labs.
   to ensure transparency and prompt feedback.
 
 ### Programming Best Practices
+
+For practical suggestions on code readability, focused pull requests, testing,
+and AI-assisted work, see OSL's
+[Coding Tips](../../../guides/coding-tips/index.md). Use them alongside the
+practices adopted by your project and agreed with your mentor.
 
 - **Adherence to Standards:** Follow the coding standards and best practices
   outlined by your mentor and project guidelines.
