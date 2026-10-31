@@ -1,69 +1,60 @@
 # Google Summer of Code (GSoC) Contributor Guide
 
-This guide is intended for both prospective and accepted candidates of the GSoC
-program with Open Science Labs. It provides detailed, objective instructions to
-help navigate the application process, engage with mentors, and succeed during
-the program period. The guide covers project selection, initial contributions,
-proposal development, and expectations for approved contributors. It also
-includes
-[suggested practices for mentors and sub-organizations](#suggested-practices-for-mentors-and-sub-organizations)
-on publishing criteria, assessing engagement, and supporting contributors.
+These are Open Science Labs' (OSL) general recommendations for projects and
+sub-organizations participating in Google Summer of Code (GSoC) under the OSL
+umbrella. Maintainers can use, adapt, or incorporate these recommendations
+partially or completely into their own project guidelines. Contributors: also
+read the guidelines of the project you are contributing to. Official GSoC rules
+and applicable codes of conduct still apply.
 
-Affiliated projects and sub-organizations may adopt, partially use, or adapt
-OSL's [Contribution Guidelines](../../../guides/contribution/index.md) and
-[Coding Tips](../../../guides/coding-tips/index.md). These are OSL's suggestions
-for practices; check your project's own guidance to understand which practices
-it follows. Official GSoC rules and applicable codes of conduct still apply.
+This guide covers applications, initial contributions, collaboration, and
+[suggested practices for mentors and sub-organizations](#suggested-practices-for-mentors-and-sub-organizations).
+See also the [Contribution Guidelines](../../../guides/contribution/index.md)
+and [Coding Tips](../../../guides/coding-tips/index.md).
 
 ## Candidates' Guide
 
-This section outlines the steps candidates should follow to apply effectively.
+Use the following steps to prepare your application.
 
 ### How to Apply
 
 #### Selecting a Sub-Organization/Project
 
-Candidates should begin by reviewing the list of available sub-organizations
-under Open Science Labs and their projects. It is important to choose a project
-that aligns with individual interests and skills.
+Review the available sub-organizations and their projects. Choose a project that
+aligns with your interests, skills, and learning goals.
 
 #### Initiating Contact with Projects and Mentors
 
-Candidates are advised to contact project mentors using the recommended
-communication platform (discord, slack, email, etc). A brief introduction,
-expression of interest, and any initial questions about the project or mentoring
-process should be included. Each project or sub-organizations should specify the
-recommended platform for all the communications with candidates.
+Introduce yourself to mentors in the designated communication channel. Explain
+your interest and ask initial questions about the project or mentoring process.
+Mentors: publish the contact channel and expected response times alongside the
+project idea.
 
 #### Making an Initial Contribution
 
-An initial contribution can demonstrate understanding of the project before any
-code or pull request. A project may ask candidates to try a small, documented
-workflow and write a short blog-style introduction or newcomer experience report
-covering:
+Before opening a pull request, try a small, documented workflow and write a
+short blog post or newcomer experience report covering:
 
 - The project's mission, main objectives, and intended users.
 - How to install or access it and complete one useful example, with reproducible
   instructions for other newcomers.
 - What works well, what was confusing, and any setup or documentation obstacles.
-- Constructive suggestions for improvement and what the candidate learned.
+- Constructive suggestions for improvement and what you learned.
 
-The project can use this as an initial selection criterion, provided it
-announces the task, expected effort, deadline, and assessment criteria in
-advance. A Markdown document or draft shared with mentors can be enough; a
-personal blog, public publication, and a pull request need not be prerequisites.
-If setup fails, documenting the steps tried and the blocker can still provide
-useful evidence.
+Mentors: use this report as an initial selection criterion and announce the
+task, expected effort, deadline, submission channel, and assessment criteria in
+advance. Accept a Markdown document or draft shared with the team without
+requiring a personal blog or a pull request. If setup fails, document the steps
+tried and the blocker so mentors can assess your approach and help resolve the
+problem.
 
-Candidates can then agree on a small follow-up contribution, such as improving
-onboarding documentation, adding a test, or fixing a bug. Follow the project's
-published sequence rather than assuming that opening many pull requests improves
-selection chances.
+Then agree on a small follow-up contribution with your mentor, such as improving
+onboarding documentation, adding a test, or fixing a bug. Focus on useful work
+and responding to feedback rather than maximizing the number of pull requests.
 
 #### Crafting a Proposal with Mentor Support
 
-Under mentor guidance, candidates should develop a detailed proposal that
-outlines:
+Develop a detailed proposal with mentor feedback that outlines:
 
 - **Milestones and Timeline:** Specific tasks and expected outcomes within the
   program period.
@@ -71,48 +62,38 @@ outlines:
 - **Language and Style:** Clear, informative, and objective language; concise
   and focused content without unnecessary filler or marketing-style phrasing.
 
-Read the project's AI-use policy before preparing the proposal or introductory
-report. It should explain whether AI assistance is allowed, for which
-activities, and what disclosure is expected. The submission should reflect the
-candidate's own understanding; candidates should be able to explain and verify
-everything they submit. Ask mentors if the policy is unclear. Writing style
-alone is not evidence of AI use.
+Follow the published AI-use policy, disclose assistance as required, and verify
+everything you submit. Write a proposal that reflects your own understanding and
+be prepared to explain your choices. Mentors: assess understanding through the
+work and discussion; writing style alone is not evidence of AI use.
 
-Also check for project-specific proposal instructions. For example, a project
-may ask for a short "Newcomer insight" section describing an onboarding obstacle
-and one suggested improvement. Include the requested material so reviewers can
-assess both your understanding and your attention to the project instructions.
+Include a short "Newcomer insight" section describing an onboarding obstacle and
+one suggested improvement. Use it to demonstrate what you learned from trying
+the project and your attention to the proposal instructions.
 
-It is essential to review the
-[contributor rules](https://summerofcode.withgoogle.com/rules) for the program
-and follow the proposal template provided
+Review the [contributor rules](https://summerofcode.withgoogle.com/rules) for
+the program and follow the proposal template provided
 [here](/opportunities/gsoc/templates/contributor-proposal).
 
 ## Review Process
 
-Projects may publish a selection checklist with minimum criteria and a separate
-scoring rubric. Read both before applying. Minimum criteria may cover the
-introductory report, required proposal sections, AI-policy compliance, agreed
-availability, and evidence of engagement. Projects should distinguish missing
-requirements that make an application ineligible for their selection process
-from preferences used to compare otherwise suitable candidates.
+Mentors: publish a selection checklist with minimum criteria and a separate
+scoring rubric. Cover the introductory report, required proposal sections,
+AI-policy compliance, agreed availability, and evidence of engagement.
+Distinguish requirements that exclude an application from preferences used to
+compare suitable candidates. Candidates: read both before applying.
 
-Engagement can include asking thoughtful questions, responding to feedback,
-sharing progress, helping others when appropriate, and following through on
-agreed tasks. Quality and reliability matter more than message counts, constant
-online presence, or the number of pull requests. A project may choose a rubric
-with **50% community engagement and 50% technical understanding and project
-planning**. This is a suggested project rubric; projects can adapt its weights
-and criteria to their context.
+Assess engagement through thoughtful questions, responses to feedback, progress
+updates, support for peers, and follow-through on agreed tasks. Prioritize
+quality and reliability over message counts or constant online presence. Give
+**50% of the assessment to community engagement and 50% to technical
+understanding and project planning**.
 
-Mentors will evaluate proposals to determine if candidates meet the fundamental
-requirements for effective contribution. Transparent feedback will be provided,
-and candidates may be guided to consider alternative projects if a better fit is
-identified. When a proposal is ready for review, candidates should send a direct
-message to the mentors via the recommended communication channel (e.g., Discord,
-Slack, or email). For all other communications, public channels are preferred.
-Candidates should remain patient as mentors manage a high volume of messages,
-issues, pull requests, and reviews.
+Provide clear feedback on proposals and discuss alternatives when another
+project is a better fit. Candidates: notify mentors in the designated channel
+when your proposal is ready for review. Keep general technical discussions
+public and allow time for replies as mentors manage messages, issues, pull
+requests, and reviews.
 
 ## Approved Contributors
 
@@ -133,27 +114,24 @@ successful collaboration during the GSoC program with Open Science Labs.
 - **Use Designated Channels:** Communicate via the project’s preferred platforms
   to ensure transparency and prompt feedback.
 
-A project may ask for a brief daily status report to the mentor on agreed
-working days. Agree on the channel and delivery window, accounting for time
-zones and planned absences. A shared thread or project log can avoid repeated
-direct messages and let other mentors help. A useful format is:
+Send a brief daily status report to your mentor on agreed working days. Agree on
+the channel and delivery window, accounting for time zones and planned absences.
+Use a shared thread or project log so other mentors can also help. Include:
 
 - **Progress:** What I worked on or learned, with links where relevant.
 - **Next:** What I plan to do next.
 - **Blockers:** What is preventing progress and what help I need.
 
-Reporting a blocker is useful even when no code was completed. Mentors should
-review updates and respond to requests for help. Daily reporting supports
-coordination; it is not a requirement to be online continuously or work every
-calendar day. During selection, any reporting exercise should be announced in
-advance and limited to a short, defined activity.
+Report blockers even when no code was completed. Mentors: review updates and
+respond to requests for help. Respect agreed working days and absences. During
+selection, announce any reporting exercise in advance and limit it to a short,
+defined activity.
 
 ### Programming Best Practices
 
 For practical suggestions on code readability, focused pull requests, testing,
 and AI-assisted work, see OSL's
-[Coding Tips](../../../guides/coding-tips/index.md). Use them alongside the
-practices adopted by your project and agreed with your mentor.
+[Coding Tips](../../../guides/coding-tips/index.md).
 
 - **Adherence to Standards:** Follow the coding standards and best practices
   outlined by your mentor and project guidelines.
@@ -163,11 +141,9 @@ practices adopted by your project and agreed with your mentor.
 
 ## Suggested Practices for Mentors and Sub-Organizations
 
-OSL suggests the following practices. Each project can follow them in full,
-select the parts that help, or adapt them to its context, and should explain its
-choices to candidates **before the selection period begins**. Confirm the
-working agreement with selected contributors during community bonding, including
-any agreed adjustments.
+Publish selection criteria and contributor expectations **before the selection
+period begins**. Confirm the working agreement with selected contributors during
+community bonding, including any agreed adjustments.
 
 ### Publish a Selection Checklist
 
@@ -191,12 +167,12 @@ does not guarantee a slot. Additional project criteria are separate from
 
 ### Check That Instructions Were Read
 
-A small, explicit, project-relevant instruction can help assess whether a
-candidate read the guidance. For example, request a "Newcomer insight" section
-with one observation from trying the project. Include it in the proposal
-instructions and checklist, and explain how omissions are handled. Prefer a
-useful task over an unrelated secret phrase or personal trivia; it gives mentors
-evidence they can discuss with the candidate.
+Include a small, explicit, project-relevant instruction to check that candidates
+read the guidance. Request a "Newcomer insight" section with one observation
+from trying the project. Include it in the proposal instructions and checklist,
+and explain how omissions are handled. Prefer a useful task over an unrelated
+secret phrase or personal trivia; it gives mentors evidence they can discuss
+with the candidate.
 
 ### Make the AI Policy Specific
 
@@ -205,16 +181,14 @@ reports, code, tests, and documentation. State whether editing, translation,
 brainstorming, or code generation is allowed; what tools or data restrictions
 apply; and how assistance should be disclosed. Describe how suspected violations
 will be reviewed and let candidates explain their work. Link the policy from the
-project idea, proposal instructions, and contribution guide. Do not assume every
-OSL-affiliated project uses the same policy.
+project idea, proposal instructions, and contribution guide.
 
 ### Give Community Engagement Explicit Weight
 
-Projects may choose to assign **50% of their internal assessment to community
-engagement**. The remaining 50% can assess technical understanding and planning
-during selection, or agreed deliverables and code quality during the program.
-Publish the rubric, evidence, and any minimum thresholds for both areas. For
-example:
+Assign **50% of the internal assessment to community engagement**. Use the
+remaining 50% to assess technical understanding and planning during selection,
+and agreed deliverables and code quality during the program. Publish the rubric,
+evidence, and any minimum thresholds for both areas. For example:
 
 | Area                                       | Weight | Evidence to consider                                                                                       |
 | ------------------------------------------ | ------ | ---------------------------------------------------------------------------------------------------------- |
@@ -226,8 +200,8 @@ example:
 Assess observable behavior rather than personality, English fluency, message
 volume, or constant availability. Give newcomers a reasonable opportunity to
 demonstrate each criterion. A strong engagement score does not remove the need
-to meet agreed technical goals. This example is not Google's evaluation formula
-and does not replace official GSoC evaluation requirements.
+to meet agreed technical goals. Use this rubric for internal assessment
+alongside the official GSoC evaluation requirements.
 
 ### Set Expectations and Address Problems Early
 
@@ -242,13 +216,13 @@ identify blockers and any gaps in mentoring support, and agree on concrete next
 steps and a review date. Distinguish persistent failure to follow through from
 an agreed absence or a technical obstacle raised promptly.
 
-It is appropriate to decline candidates who do not meet published selection
-criteria. During the program, mentors should give an honest failing evaluation
-when agreed expectations remain unmet; passing someone solely to avoid a
-difficult conversation helps neither the contributor nor the project. Coordinate
-with OSL's organization administrators, document the basis for the decision, and
-follow the current GSoC evaluation process. Concerns should be communicated
-early so the evaluation is not the first notice of a problem.
+Decline candidates who do not meet published selection criteria. During the
+program, give an honest failing evaluation when agreed expectations remain
+unmet; passing someone solely to avoid a difficult conversation helps neither
+the contributor nor the project. Coordinate with OSL's organization
+administrators, document the basis for the decision, and follow the current GSoC
+evaluation process. Communicate concerns early and provide feedback before the
+evaluation.
 
 For official mentoring guidance, see
 [Setting Expectations](https://google.github.io/gsocguides/mentor/setting-expectations),
@@ -257,10 +231,9 @@ and [Evaluations](https://google.github.io/gsocguides/mentor/evaluations).
 
 ## Proposal Resources
 
-Candidates are encouraged to consult the
-[GSoC Student Guide](https://google.github.io/gsocguides/student/) for
-comprehensive details on the application process and proposal preparation.
-Additional recommendations can be found
-[here](https://developers.google.com/open-source/gsoc/help/student-advice). For
-further guidance, refer to the suggested proposal template available
-[here](/opportunities/gsoc/templates/contributor-proposal).
+Consult the [GSoC Student Guide](https://google.github.io/gsocguides/student/)
+for comprehensive details on the application process and proposal preparation.
+Read Google's
+[advice for contributors](https://developers.google.com/open-source/gsoc/help/student-advice)
+and use the
+[proposal template](/opportunities/gsoc/templates/contributor-proposal).

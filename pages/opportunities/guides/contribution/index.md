@@ -10,23 +10,16 @@ template: single-sidebar.html
 
 # Contribution Guidelines
 
-Open Science Labs (OSL) offers this guide to affiliated projects and
-sub-organizations participating in Google Summer of Code (GSoC) with us. It is a
-starting point for building a welcoming, sustainable contribution process.
-Projects can adopt it in full, use selected recommendations, or adapt it to
-their community, tools, and mentoring capacity. It can also support projects in
-other OSL contribution and internship initiatives.
+These are Open Science Labs' (OSL) general recommendations for affiliated
+projects, including sub-organizations participating in Google Summer of Code
+(GSoC) under the OSL umbrella. Maintainers can use, adapt, or incorporate these
+recommendations partially or completely into their own project guidelines.
+Contributors: also read the guidelines of the project you are contributing to.
+Applicable codes of conduct and official program rules still apply.
 
-These are OSL's suggestions for contribution practices. Each project can choose
-which suggestions to follow or adapt. Contributors should read their project's
-own contribution guide and ask maintainers which practices apply. Applicable
-codes of conduct and official program rules still apply independently of this
-guide.
+## Prepare Contribution Resources
 
-## Adapting This Guide for Your Project
-
-Maintainers and mentors may find it useful to publish a `CONTRIBUTING.md` file
-and issue or pull request templates covering:
+Publish a `CONTRIBUTING.md` file and issue or pull request templates covering:
 
 - Where to ask questions, discuss ideas, and request reviews.
 - How to set up the development environment and choose a first task.
@@ -37,67 +30,62 @@ and issue or pull request templates covering:
 
 Link these resources from the project idea page and onboarding materials. If
 expectations change, explain the change to contributors and give them time to
-adapt. Our separate [Coding Tips](../coding-tips/index.md) page offers technical
-practices projects can select or adapt alongside this guide.
+adapt. Include the technical practices described in
+[Coding Tips](../coding-tips/index.md) in your onboarding resources.
 
 ## Community Engagement
 
-- **Communication Platforms:** Projects can choose the platforms that work for
-  their community, such as GitHub, GitLab, Discord, or Slack. Publish where
-  contributors can seek help, discuss ideas, and request reviews. Public
-  discussions help others learn; private channels are appropriate for sensitive
-  matters or when the project's process calls for them.
+- **Communication Platforms:** Choose clear channels for discussions, help, and
+  review requests, such as GitHub, GitLab, Discord, or Slack. Explain the
+  purpose of each channel. Keep technical discussions public so others can
+  learn; use private channels for sensitive matters.
 
-- **Collaboration and Support:** Contributors are encouraged to assist others
-  when possible, as everyone is here to learn and support one another.
+- **Collaboration and Support:** Help others when possible. Share what you learn
+  and support fellow contributors as they develop their skills.
 
-- **Respect and Inclusivity:** Contributors should communicate with kindness and
-  respect, particularly when interacting with beginners or colleagues for whom
-  English may not be their first language. Instead of engaging in arguments,
-  they should offer constructive feedback and encouragement to help others
-  improve both their language and technical skills.
+- **Respect and Inclusivity:** Communicate with kindness and respect,
+  particularly with beginners and colleagues for whom English is not their first
+  language. Give constructive feedback and encouragement that helps others
+  develop their language and technical skills.
 
-- **Channel Usage:** If a project coordinates in chat, contributors can share
-  links to relevant issues or pull requests there. Projects may prefer a
-  discussion before substantial work begins; make that preference clear without
-  requiring a separate chat discussion for every small contribution.
+- **Channel Usage:** Share links to issues and pull requests in the coordination
+  channel when discussion or review is needed. Discuss substantial work before
+  implementation, and record decisions in the relevant issue or pull request.
 
 - **Mentoring and Progress:** For GSoC, agree on realistic check-in times,
-  progress updates, and a way to raise blockers. Short regular meetings and
-  written next steps can help. Consider time zones, accessibility needs, and
-  mentor availability when choosing a routine.
+  progress updates, and a way to raise blockers. Hold short regular meetings and
+  record next steps. Account for time zones, accessibility needs, and mentor
+  availability when setting the routine.
 
 ## Contributions
 
 - **Task Coordination:** Before starting, check whether a task is still relevant
   and whether someone is already working on it. Comment on the issue or use the
-  project's preferred channel to coordinate. Maintainers can offer small starter
-  tasks and examples of helpful contributions, including documentation and
-  tests.
+  coordination channel. Maintainers: provide small starter tasks and examples of
+  helpful contributions, including documentation and tests.
 
 - **Discussing Larger Changes:** Propose substantial features, architectural
   changes, or broad refactoring before implementation. Agree on scope with
   maintainers and split the work into focused pull requests where practical.
 
-- **Preparing for Review:** A useful pull request explains the problem, the
-  proposed change, and how it was checked. Link related issues, follow the
-  project's templates, and describe any remaining questions. Draft mode is
-  helpful for work in progress; mark it ready when it meets the project's review
-  expectations.
+- **Preparing for Review:** Explain the problem, proposed change, and validation
+  in your pull request. Link related issues, use the pull request template, and
+  describe remaining questions. Keep unfinished work in draft and mark it ready
+  when it is prepared for review.
 
-- **Reviewing Together:** Treat review as a chance to learn. Contributors can
-  respond to feedback and explain tradeoffs; reviewers can distinguish required
-  changes from suggestions and explain their reasoning. Allow time for replies
-  before following up through the agreed channel.
+- **Reviewing Together:** Treat review as a chance to learn. Respond to feedback
+  and explain tradeoffs. As a reviewer, distinguish required changes from
+  suggestions and explain your reasoning. Allow time for replies before
+  following up through the agreed channel.
 
-- **Managing Inactive Work:** Projects may choose to label, return to draft, or
-  close inactive issues and pull requests. Publish any timeframes, check in with
-  the contributor first, and explain how work can resume. Consider both
-  contributor circumstances and delays in mentor or maintainer feedback.
+- **Managing Inactive Work:** Publish a process and timeframes for labeling,
+  returning to draft, or closing inactive issues and pull requests. Check in
+  with the contributor before taking action and explain how work can resume.
+  Account for contributor circumstances and delays in mentor or maintainer
+  feedback.
 
-- **Branch Management:** When updating a branch, contributors should follow the
-  project's preferred approach, whether that involves using a **rebase** or a
-  **merge commit**.
+- **Branch Management:** Document whether branch updates use a **rebase** or a
+  **merge commit**, and use that approach consistently.
 
 ## Coding Tips
 
@@ -108,14 +96,12 @@ responsible use of AI tools.
 
 ## GSoC Selection and Mentoring
 
-Projects participating in GSoC with OSL can use the
+Use the
 [suggested practices for mentors and sub-organizations](../../gsoc/guides/contributor/index.md#suggested-practices-for-mentors-and-sub-organizations)
 to publish selection checklists, clarify AI policies, and define engagement and
-evaluation criteria before selection begins. Options include a newcomer-focused
-project-use report before any pull request, daily updates on agreed working
-days, and an internal rubric giving community engagement 50% of the assessment.
-Each project can adopt, adjust, or omit these practices and should tell
-candidates which ones apply.
+evaluation criteria before selection begins. Start with a newcomer-focused
+project-use report before any pull request, send daily updates on agreed working
+days, and give community engagement 50% of the internal assessment.
 
 ## Further Guidance
 

@@ -10,11 +10,11 @@ template: single-sidebar.html
 
 # Coding Tips
 
-Open Science Labs (OSL) shares these recommendations with affiliated projects,
-including sub-organizations participating in GSoC with us. Projects may follow
-them completely, select the parts that help, or adapt them to their language,
-tooling, and community. Contributors should follow the practices their project
-has adopted and ask maintainers when something is unclear.
+These are Open Science Labs' (OSL) general coding recommendations for affiliated
+projects, including sub-organizations participating in GSoC under the OSL
+umbrella. Maintainers can use, adapt, or incorporate these recommendations
+partially or completely into their own project guidelines. Contributors: also
+read the guidelines of the project you are contributing to.
 
 For collaboration and mentoring suggestions, see our
 [Contribution Guidelines](../contribution/index.md). This page focuses on the
@@ -30,8 +30,7 @@ technical side of a contribution.
 - Run the relevant checks before changing code so you can distinguish existing
   failures from those introduced by your work.
 - Reuse the project's commands for testing, formatting, and documentation.
-  Projects can document or automate these commands to make onboarding easier and
-  choose the tools that fit their workflow.
+  Document and automate recurring commands to make onboarding easier.
 
 ## Keep Changes Small and Focused
 
@@ -39,9 +38,9 @@ technical side of a contribution.
   formatting, dependency updates, and new features when practical.
 - Discuss large features or refactoring with maintainers before implementation.
   Agree on smaller steps that can each be reviewed and checked.
-- If a project chooses a pull request size guideline, treat it as a review aid
-  and explain exceptions. Generated files and related tests may affect the size;
-  line count alone does not determine whether a change is manageable.
+- Use pull request size guidelines as a review aid and explain exceptions.
+  Account for generated files and related tests when assessing size; consider
+  complexity and scope alongside line count.
 - Follow the project's preferred way of updating branches, whether that is a
   merge or a rebase. Coordinate before rewriting a branch others use.
 
@@ -50,8 +49,8 @@ technical side of a contribution.
 - Use descriptive names and keep functions focused on a clear responsibility.
   Prefer straightforward code over unnecessary abstractions.
 - Reduce deep nesting where it helps readability, for example with guard clauses
-  or small helper functions. Around four levels can be a useful prompt to
-  reconsider the structure, rather than a universal limit.
+  or small helper functions. At around four levels, review the structure for
+  opportunities to simplify it.
 - Keep comments that explain intent, constraints, scientific assumptions, or
   non-obvious decisions. Remove outdated comments and those that only repeat the
   code. Clear comments and documentation are valuable even when code is
@@ -71,10 +70,9 @@ pre-commit install
 pre-commit run --all-files
 ```
 
-Use the project's installation instructions first. These commands apply to
-projects with a `pre-commit` configuration; other projects may provide different
-checks. Inspect any automatic changes and include only those relevant to your
-contribution.
+Install the development dependencies first. These commands use the repository's
+`pre-commit` configuration. Inspect automatic changes and include only those
+relevant to your contribution.
 
 Run the checks appropriate to the change, such as formatting, linting, type
 checking, or documentation builds. Review continuous integration (CI) results
@@ -98,17 +96,17 @@ in the pull request so reviewers know what remains unverified.
 
 ## Use AI Tools Responsibly
 
-Projects can decide whether AI-assisted contributions are allowed and under
-which conditions. Maintainers can publish that policy in their contribution
-guide, including any disclosure expectations.
+Maintainers: publish an AI-use policy in the contribution guide. State which
+activities allow AI assistance, which uses are prohibited, and what disclosure
+is expected.
 
-Where use is allowed, understand and verify every submitted change. Check APIs,
-dependencies, tests, and explanations rather than assuming generated output is
-correct. Remove irrelevant code and comments, respect confidentiality and
-licensing obligations, and follow the project's disclosure policy. Contributors
-remain responsible for explaining and maintaining their work. Review the
-substance of a contribution; writing style or emojis alone do not establish
-whether AI was used.
+Contributors: follow the AI-use policy and understand and verify every submitted
+change. Check APIs, dependencies, tests, and explanations rather than assuming
+generated output is correct. Remove irrelevant code and comments, respect
+confidentiality and licensing obligations, and follow the project's disclosure
+policy. Contributors remain responsible for explaining and maintaining their
+work. Review the substance of a contribution; writing style or emojis alone do
+not establish whether AI was used.
 
 ## Before Requesting Review
 
