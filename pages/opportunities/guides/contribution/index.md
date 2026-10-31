@@ -17,10 +17,11 @@ Projects can adopt it in full, use selected recommendations, or adapt it to
 their community, tools, and mentoring capacity. It can also support projects in
 other OSL contribution and internship initiatives.
 
-These recommendations are optional; they do not establish a single workflow for
-every project. Contributors should read their project's own contribution guide
-and ask maintainers which practices apply. Applicable codes of conduct and
-official program rules still apply independently of this guide.
+These are OSL's suggestions for contribution practices. Each project can choose
+which suggestions to follow or adapt. Contributors should read their project's
+own contribution guide and ask maintainers which practices apply. Applicable
+codes of conduct and official program rules still apply independently of this
+guide.
 
 ## Adapting This Guide for Your Project
 
@@ -104,6 +105,17 @@ Technical recommendations now have their own
 [Coding Tips](../coding-tips/index.md) page. It covers readable code,
 development environments, automated checks, testing, documentation, and
 responsible use of AI tools.
+
+## GSoC Selection and Mentoring
+
+Projects participating in GSoC with OSL can use the
+[suggested practices for mentors and sub-organizations](../../gsoc/guides/contributor/index.md#suggested-practices-for-mentors-and-sub-organizations)
+to publish selection checklists, clarify AI policies, and define engagement and
+evaluation criteria before selection begins. Options include a newcomer-focused
+project-use report before any pull request, daily updates on agreed working
+days, and an internal rubric giving community engagement 50% of the assessment.
+Each project can adopt, adjust, or omit these practices and should tell
+candidates which ones apply.
 
 ## Further Guidance
 

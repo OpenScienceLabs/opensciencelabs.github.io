@@ -30,8 +30,8 @@ technical side of a contribution.
 - Run the relevant checks before changing code so you can distinguish existing
   failures from those introduced by your work.
 - Reuse the project's commands for testing, formatting, and documentation.
-  Projects can document or automate these commands to make onboarding easier;
-  adopting a particular automation tool is optional.
+  Projects can document or automate these commands to make onboarding easier and
+  choose the tools that fit their workflow.
 
 ## Keep Changes Small and Focused
 
