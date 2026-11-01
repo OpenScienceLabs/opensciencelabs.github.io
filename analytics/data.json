@@ -12,7 +12,7 @@
     "opensciencelabs.org"
   ],
   "timezone": "America/La_Paz",
-  "generated_at": "2026-11-01T08:46:52.759730Z",
+  "generated_at": "2026-11-01T13:38:01.499476Z",
   "reporting_period": {
     "start": "2026-10-02",
     "end": "2026-10-31"
@@ -24,7 +24,7 @@
   "summary": {
     "pageviews": 1998,
     "active_users": 1409,
-    "sessions": 1599
+    "sessions": 1603
   },
   "monthly_history": [
     {
@@ -303,7 +303,7 @@
       "rows": [
         {
           "label": "Direct",
-          "value": 1132
+          "value": 1133
         },
         {
           "label": "Organic Search",
@@ -319,7 +319,7 @@
         },
         {
           "label": "Unassigned",
-          "value": 31
+          "value": 30
         }
       ],
       "total": 1600,
@@ -335,7 +335,7 @@
       "summary": {
         "pageviews": 1998,
         "active_users": 1409,
-        "sessions": 1599
+        "sessions": 1603
       },
       "comparison": {
         "reporting_period": {
@@ -782,7 +782,7 @@
           "rows": [
             {
               "label": "Direct",
-              "value": 1132
+              "value": 1133
             },
             {
               "label": "Organic Search",
@@ -798,7 +798,7 @@
             },
             {
               "label": "Unassigned",
-              "value": 31
+              "value": 30
             }
           ],
           "total": 1600,
@@ -1031,14 +1031,10 @@
             {
               "label": "AI Assistant",
               "value": 14
-            },
-            {
-              "label": "Unassigned",
-              "value": 10
             }
           ],
-          "total": 362,
-          "other": 1
+          "total": 361,
+          "other": 10
         },
         "pages": {
           "status": "available",
@@ -1099,7 +1095,7 @@
       "summary": {
         "pageviews": 4987,
         "active_users": 3500,
-        "sessions": 3882
+        "sessions": 3888
       },
       "comparison": {
         "reporting_period": {
@@ -2270,7 +2266,7 @@
           "rows": [
             {
               "label": "Direct",
-              "value": 2774
+              "value": 2760
             },
             {
               "label": "Organic Search",
@@ -2286,14 +2282,14 @@
             },
             {
               "label": "Unassigned",
-              "value": 58
+              "value": 57
             },
             {
               "label": "Organic Social",
               "value": 35
             }
           ],
-          "total": 3882,
+          "total": 3867,
           "other": 0
         },
         "pages": {
