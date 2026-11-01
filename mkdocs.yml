@@ -68,7 +68,11 @@ nav:
           - Overview: "opportunities/gsoc/index.md"
           - Project Ideas: "opportunities/gsoc/project-ideas/index.md"
           - "Contribution Guidelines": "opportunities/guides/contribution/index.md"
-          - "Candidates' Guide": "opportunities/gsoc/guides/contributor/index.md"
+          - "Coding Tips": "opportunities/guides/coding-tips/index.md"
+          - "Guides Overview": "opportunities/gsoc/guides/contributor/index.md"
+          - "Organization Admins Guide": "opportunities/gsoc/guides/organization-admins/index.md"
+          - "Mentors Guide": "opportunities/gsoc/guides/mentors/index.md"
+          - "Contributor Candidates Guide": "opportunities/gsoc/guides/candidates/index.md"
           - "Template: Project Idea": "opportunities/gsoc/templates/project-ideas.md"
           - "Template: Candidates Project Proposal": "opportunities/gsoc/templates/contributor-proposal.md"
   - Partnership:
