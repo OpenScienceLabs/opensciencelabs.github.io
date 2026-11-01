@@ -96,16 +96,20 @@ responsible use of AI tools.
 
 ## GSoC Selection and Mentoring
 
-Use the
-[suggested practices for mentors and sub-organizations](../../gsoc/guides/contributor/index.md#suggested-practices-for-mentors-and-sub-organizations)
-to publish selection checklists, clarify AI policies, and define engagement and
-evaluation criteria before selection begins. Start with a newcomer-focused
-project-use report before any pull request, send daily updates on agreed working
-days, and give community engagement 50% of the internal assessment.
+Read the recommendations for your role in the GSoC guide:
+
+- [Organization Admins](../../gsoc/guides/contributor/index.md#organization-admins):
+  coordinate participation, mentor capacity, selection criteria, and
+  evaluations.
+- [Mentors](../../gsoc/guides/contributor/index.md#mentors): prepare project
+  guidance, review candidates, and support contributor progress.
+- [Contributor Candidates](../../gsoc/guides/contributor/index.md#contributor-candidates):
+  contact the community, explore the software, write about your experience, and
+  prepare an application.
 
 ## Further Guidance
 
-- [GSoC Contributor Guide](../../gsoc/guides/contributor/index.md): preparing an
-  application and working with mentors.
+- [GSoC Guide](../../gsoc/guides/contributor/index.md): recommendations for
+  organization admins, mentors, and contributor candidates.
 - [Three Years with Google Summer of Code: What I've Learned](../../../blog/three-years-with-google-summer-of-code-what-ive-learned/index.md):
   OSL's experience with mentoring, communication, and manageable contributions.
