@@ -44,10 +44,10 @@ project by email to <team@opensciencelabs.org> by January 31, 2026. Check out
 our project idea template for more insights:
 </opportunities/gsoc/templates/project-ideas/>.
 
-Read the GSoC guide for
-[organization admins](guides/contributor/index.md#organization-admins) and
-[mentors](guides/contributor/index.md#mentors) to prepare participation,
-selection, and mentoring.
+Read the GSoC guides for
+[organization admins](guides/organization-admins/index.md) and
+[mentors](guides/mentors/index.md) to prepare participation, selection, and
+mentoring.
 
 Use OSL's Discord server at <https://opensciencelabs.org/discord> for
 coordination across projects. Use each project's preferred community channel for
@@ -58,9 +58,9 @@ its ideas, onboarding, and technical discussions.
 If you're a student or a newcomer eager to get involved in open source through
 GSoC, stay tuned to this page for updates on project ideas and submission
 guidelines. Check out our
-[GSoC Guide for Contributor Candidates](guides/contributor/index.md#contributor-candidates)
-for more details on how to prepare for your application and stay updated with
-our project idea pages to check which projects are applying with us to GSoC.
+[GSoC Guide for Contributor Candidates](guides/candidates/index.md) for more
+details on how to prepare for your application and stay updated with our project
+idea pages to check which projects are applying with us to GSoC.
 
 ### Reach Out for More Information
 

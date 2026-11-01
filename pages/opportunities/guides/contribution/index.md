@@ -98,18 +98,18 @@ responsible use of AI tools.
 
 Read the recommendations for your role in the GSoC guide:
 
-- [Organization Admins](../../gsoc/guides/contributor/index.md#organization-admins):
+- [Organization Admins](../../gsoc/guides/organization-admins/index.md):
   coordinate participation, mentor capacity, selection criteria, and
   evaluations.
-- [Mentors](../../gsoc/guides/contributor/index.md#mentors): prepare project
-  guidance, review candidates, and support contributor progress.
-- [Contributor Candidates](../../gsoc/guides/contributor/index.md#contributor-candidates):
-  contact the community, explore the software, write about your experience, and
-  prepare an application.
+- [Mentors](../../gsoc/guides/mentors/index.md): prepare project guidance,
+  review candidates, and support contributor progress.
+- [Contributor Candidates](../../gsoc/guides/candidates/index.md): contact the
+  community, explore the software, write about your experience, and prepare an
+  application.
 
 ## Further Guidance
 
-- [GSoC Guide](../../gsoc/guides/contributor/index.md): recommendations for
-  organization admins, mentors, and contributor candidates.
+- [GSoC Guides Overview](../../gsoc/guides/contributor/index.md):
+  recommendations for organization admins, mentors, and contributor candidates.
 - [Three Years with Google Summer of Code: What I've Learned](../../../blog/three-years-with-google-summer-of-code-what-ive-learned/index.md):
   OSL's experience with mentoring, communication, and manageable contributions.
