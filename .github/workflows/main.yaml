@@ -152,7 +152,7 @@ jobs:
 
       - name: Build the book
         run: |
-          makim pages.build
+          makim --skip-hooks pages.build
           echo "opensciencelabs.org" > build/CNAME
 
       - name: Validate endpoint and audit published files
