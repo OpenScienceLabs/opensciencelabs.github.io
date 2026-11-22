@@ -12,7 +12,7 @@
     "opensciencelabs.org"
   ],
   "timezone": "America/La_Paz",
-  "generated_at": "2026-11-22T17:53:43.765214Z",
+  "generated_at": "2026-11-22T18:03:38.627153Z",
   "reporting_period": {
     "start": "2026-10-23",
     "end": "2026-11-21"
@@ -858,8 +858,8 @@
               "value": 28
             }
           ],
-          "total": 1506,
-          "other": 604
+          "total": 1479,
+          "other": 577
         }
       }
     },
@@ -1058,8 +1058,8 @@
               "value": 10
             }
           ],
-          "total": 259,
-          "other": 151
+          "total": 257,
+          "other": 149
         }
       }
     },
@@ -2314,8 +2314,8 @@
               "value": 115
             }
           ],
-          "total": 4605,
-          "other": 1803
+          "total": 4518,
+          "other": 1716
         }
       }
     }
