@@ -42,15 +42,6 @@ teams:
 
   - name: Coordinators
     members:
-      - name: Saransh Chopra
-        bio: |
-          I am currently based at CERN, working as a Research Fellow with the Princeton
-          Research Computing Group and IRIS-HEP. I am broadly interested in Research
-          Software Engineering, Scientific Computing, DevOps, Theory of Computation,
-          and Type Theory. I am extremely passionate about Open-Source and Open-Science.
-        image_url: https://saransh-cpp.github.io/assets/img/SaranshChopra.jpeg
-        github_url: https://github.com/Saransh-cpp
-
       - name: Anavelyz Perez
         bio: |
           OSL Coordinator.
@@ -58,14 +49,6 @@ teams:
           Flutter.
         image_url: https://avatars.githubusercontent.com/u/42752529?v=4
         github_url: https://github.com/Anavelyz
-
-  - name: Associated collaborators
-    members:
-      - name: Yurely Camacho
-        bio: |
-          Statistician, data analyst. Python and R learner.
-        image_url: https://avatars.githubusercontent.com/u/49034451?v=4
-        github_url: https://github.com/YurelyCamacho
 
   - name: Steering Council Emeritus
     description: |
@@ -125,25 +108,27 @@ teams:
         github_url: https://github.com/aguspesce
 
   - name: Alumni
+    description: |
+      We are grateful to everyone who has contributed their time, knowledge,
+      and care to Open Science Labs. Our alumni have helped our projects and
+      community grow through collaboration, mentoring, and open-source work.
+      Thank you for being part of OSL's journey and for the lasting impact of
+      your contributions.
+    display: compact
     members:
+      - name: Saransh Chopra
+        github_url: https://github.com/Saransh-cpp
+
+      - name: Yurely Camacho
+        github_url: https://github.com/YurelyCamacho
+
       - name: Luã Bida Vacaro
-        bio: |
-          Software Developer and DevOps
-        image_url: https://avatars.githubusercontent.com/u/82233055?v=4
-        type: team-template
-        github_sponsor: https://github.com/sponsors/luabida/button
         github_url: https://github.com/luabida
 
       - name: Daniela Iglesias Rocabado
-        bio: |
-          Graduate in Systems Engineering with a passion for Python and Web Development.
-        image_url: https://avatars.githubusercontent.com/u/107383061?v=4
         github_url: https://github.com/DanielaIgRo
 
       - name: Mfonobong Emmanuel Uyah
-        bio: |
-          Electrical and Electronics Engineering graduate with interest in software development using Python, Django, and JavaScript. Looking to develop and participate in open-source and open-science projects.
-        image_url: https://avatars.githubusercontent.com/u/97167651?v=4
         github_url: https://github.com/investor-uyah
 ---
 
