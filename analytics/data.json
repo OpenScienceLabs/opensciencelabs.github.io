@@ -12,7 +12,7 @@
     "opensciencelabs.org"
   ],
   "timezone": "America/La_Paz",
-  "generated_at": "2026-11-22T17:39:57.224453Z",
+  "generated_at": "2026-11-22T17:50:14.651152Z",
   "reporting_period": {
     "start": "2026-10-23",
     "end": "2026-11-21"
@@ -854,12 +854,12 @@
               "value": 44
             },
             {
-              "label": "/opportunities/internships/oss/",
-              "value": 34
+              "label": "/about/team/",
+              "value": 28
             }
           ],
-          "total": 1633,
-          "other": 725
+          "total": 1521,
+          "other": 619
         }
       }
     },
@@ -1058,8 +1058,8 @@
               "value": 10
             }
           ],
-          "total": 276,
-          "other": 168
+          "total": 261,
+          "other": 153
         }
       }
     },
@@ -2306,16 +2306,16 @@
               "value": 141
             },
             {
-              "label": "/opportunities/internships/oss/",
-              "value": 118
-            },
-            {
               "label": "/opportunities/gsoc/",
               "value": 116
+            },
+            {
+              "label": "/opportunities/",
+              "value": 115
             }
           ],
-          "total": 5076,
-          "other": 2271
+          "total": 4675,
+          "other": 1873
         }
       }
     }
