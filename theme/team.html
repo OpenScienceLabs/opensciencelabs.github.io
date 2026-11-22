@@ -48,6 +48,23 @@
           <h2>{{ group.name }}</h2>
         </div>
 
+        {% if group.description %}
+        <p class="team-group__description">{{ group.description }}</p>
+        {% endif %}
+
+        {% if group.display == "compact" %}
+        <ul class="team-compact-list">
+          {% for member in group.members %}
+          <li>
+            {% if member.github_url %}
+            <a href="{{ member.github_url }}" target="_blank" rel="noopener">{{ member.name }}</a>
+            {% else %}
+            <span>{{ member.name }}</span>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        {% else %}
         <div class="team-grid">
           {% for member in group.members %}
           <article class="team-card">
@@ -89,6 +106,7 @@
           </article>
           {% endfor %}
         </div>
+        {% endif %}
       </div>
       {% endfor %}
     </section>
