@@ -74,9 +74,9 @@ touch with them directly if you have any inquiries._
 - **Project Ideas**:
   [link](https://github.com/data-umbrella/du-event-board/wiki/Project-Idea)
 
-### HyperHealth
+### HiPerHealth
 
-- **Description**: HyperHealth (High Performance Health) provides tools and libraries for
+- **Description**: HiPerHealth (High Performance Health) provides tools and libraries for
   healthcare services supported by AI. It includes screening, diagnosis, treatments,
   prescriptions, clinical records, etc.
 - **Project WEB Page**: <https://hiperhealth.github.io/hiperhealth/>
