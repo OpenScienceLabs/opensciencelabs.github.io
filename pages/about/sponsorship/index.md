@@ -189,10 +189,27 @@ in-kind sponsorship, or a different transfer process, please contact us.
 
 ## Sponsors
 
-Thank you to the organizations and individuals who support Open Science Labs.
+Thank you to the organizations and individuals who sustain OSL with funding,
+time, expertise, and maintenance.
 
-Sponsors are listed by year and sponsorship level. Sponsors may request to be
-listed anonymously.
+### Current core supporting partner
+
+<p>
+  <a class="d-inline-flex align-items-center gap-3" href="https://scistitch.com/" target="_blank" rel="noopener">
+    <img src="/images/partners/scistitch.svg" alt="" width="56" height="56" loading="lazy" decoding="async" />
+    <strong>SciStitch</strong>
+  </a>
+</p>
+
+SciStitch currently provides substantial ongoing sponsorship, technical
+maintenance, and day-to-day operational support to help keep OSL moving
+forward. This is a partnership between independent initiatives: OSL remains
+community-owned and governed by its own community. Our contributors,
+collaborators, affiliated projects, and partner institutions are essential
+to sustaining this work as well.
+
+Other sponsors may be listed by year and sponsorship level. Sponsors may
+request to be listed anonymously.
 
 <!--
 ## 2026

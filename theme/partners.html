@@ -30,6 +30,9 @@
         </div>
 
         <div class="partner-body px-4 pb-4 pt-3 d-flex flex-column flex-grow-1">
+          {% if 'role' in partner and partner.role %}
+            <p class="partner-role mb-2">{{ partner.role }}</p>
+          {% endif %}
           <h3 class="h5 partner-title mb-2">
             {% if site %}
               <a href="{{ site }}" class="stretched-link" target="_blank" rel="noopener">{{ partner.name }}</a>

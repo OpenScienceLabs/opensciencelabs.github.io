@@ -62,6 +62,19 @@ social and technological impact.
 - **Community space:** our Discord is where people meet, ask, build, review, and
   ship—together.
 
+## How OSL is sustained
+
+OSL is community-owned and community-run, with its own mission and governance.
+Its progress depends on contributors, mentors, projects, collaborators, and
+institutions who believe in open science and open technology.
+
+**[SciStitch](https://scistitch.com/)** is currently a **core supporting
+partner**, contributing substantial ongoing sponsorship, technical maintenance,
+and day-to-day operational support that help sustain OSL. OSL and SciStitch
+strengthen one another through shared expertise and opportunities to collaborate,
+while remaining independent in their decisions and direction. This partnership
+works alongside the many people and organizations that make OSL possible.
+
 ## Who OSL Is For
 
 - **Newcomers** who want a real path from learning to meaningful experience.
