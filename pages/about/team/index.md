@@ -40,13 +40,12 @@ teams:
         github_url: https://github.com/whitewolf2000ani
         github_sponsor: https://github.com/sponsors/whitewolf2000ani
 
-  - name: Coordinators
-    members:
       - name: Anavelyz Perez
         bio: |
-          OSL Coordinator.
-          Statistician and data analyst proficient in Python and R, currently exploring
-          Flutter.
+          Statistician and data analyst proficient in Python and R, currently
+          exploring Flutter. She also serves as OSL's Google Summer of Code
+          Program Manager, coordinating the activities of Open Science Labs
+          as a GSoC mentoring organization.
         image_url: https://avatars.githubusercontent.com/u/42752529?v=4
         github_url: https://github.com/Anavelyz
 
