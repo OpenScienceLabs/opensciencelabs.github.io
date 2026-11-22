@@ -171,26 +171,6 @@ initiatives:
       <div class="col">
         <div class="card m-0 p-0">
           <div class="card-body m-0">
-            <h5 class="card-title text-dark">Study Groups</h5>
-            <p class="card-text fw-lighter">
-              Join Open Science Labs study groups to engage, learn, and
-              collaborate on diverse topics around open science and
-              technologies.
-            </p>
-          </div>
-          <div class="card-footer m-0">
-            <a
-              href="/learning/study-groups"
-              class="btn btn-primary"
-            >
-              Learn More
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card m-0 p-0">
-          <div class="card-body m-0">
             <h5 class="card-title">Blog</h5>
             <p class="card-text fw-lighter">
               Our blog features contributions from our community,

@@ -38,8 +38,7 @@ Your sponsorship can help us:
 - support contributors, mentors, and maintainers;
 - prepare and run open-source mentorship programs;
 - improve documentation and onboarding for projects;
-- organize workshops, study groups, office hours, demo days, and community
-  events;
+- organize workshops, office hours, demo days, and community events;
 - support project incubation and affiliation;
 - strengthen open-source tools used in research, education, data science, and
   scientific computing;
@@ -66,8 +65,7 @@ Highlights:
 - A total of 15 projects have participated through OSL-related Google Summer of
   Code activities.
 - The OSL Discord community has approximately 1,300 members as of June 2026.
-- OSL supports internships, project affiliation, incubation, study groups, and
-  contributor pathways.
+- OSL supports open-source projects, mentorship, and contributor pathways.
 - OSL uses Open Source Collective / Open Collective as its fiscal host for
   open-source initiatives.
 
@@ -79,7 +77,7 @@ Sponsor contributions may support one or more of the following areas:
 - internships, fellowships, and contributor support;
 - open-source project maintenance;
 - documentation, tutorials, and learning materials;
-- workshops, study groups, talks, and demo days;
+- workshops, talks, and demo days;
 - community management and communication;
 - website, hosting, tooling, and infrastructure;
 - event participation and outreach;

@@ -8,20 +8,8 @@ authors: ["OSL Team"]
 
 Welcome to the Learning section of Open Science Labs, where we are committed to
 fostering an environment of continuous education and community engagement. This
-section of our website is dedicated to providing resources, organizing study
-groups, and connecting people with community-led learning opportunities in the
-fields of open science and technology.
-
-## Study Groups
-
-Study Groups at Open Science Labs offer participants a unique opportunity to
-learn collaboratively in a supportive environment. Moderated by experienced
-members of the community, these groups cover a wide range of topics, from coding
-challenges to data science research. Each study group aims to enhance
-problem-solving skills and deepen understanding of specific subjects.
-
-Learn more and join a study group by visiting our
-[Study Groups](/learning/study-groups) page.
+section of our website helps connect people with educational resources and
+community-led learning opportunities in open science and technology.
 
 ## Resources (Coming Soon)
 
