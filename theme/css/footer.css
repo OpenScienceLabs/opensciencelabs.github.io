@@ -73,3 +73,14 @@ html[data-mode="dim"] .color_choice:before{
   left:auto;
   right:6px;
 }
+
+/* Site-wide acknowledgement without suggesting an ownership relationship. */
+.footer_support{
+  padding-top: 0;
+}
+
+.footer_support a{
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}

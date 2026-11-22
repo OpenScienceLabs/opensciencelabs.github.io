@@ -132,3 +132,14 @@
 .partners-grid .icon-btn{
   border-radius: 0;
 }
+
+/* Distinguish a core supporting relationship in the partner directory. */
+.partners-grid .partner-role{
+  margin: 0;
+  color: var(--brand, #087fa8);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .09em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}

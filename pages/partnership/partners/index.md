@@ -4,6 +4,16 @@ date: 2022-01-01
 authors: ["Ivan Ogasawara"]
 template: partners.html
 partners:
+  - name: SciStitch
+    role: Core supporting partner
+    summary: |
+      An independent scientific software organization contributing substantial
+      ongoing sponsorship, technical maintenance, and operational support to
+      OSL. Our close collaboration advances shared open-science goals while
+      OSL retains its own community governance.
+    thumbnail: /images/partners/scistitch.svg
+    url: https://scistitch.com/
+
   - name: The GRAPH Network
     summary: |
       The Global Research and Analyses for Public Health (GRAPH)
