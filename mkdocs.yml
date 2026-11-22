@@ -65,9 +65,6 @@ nav:
       - Ambassadors Program: "partnership/ambassadors/index.md"
       - Partners: "partnership/partners/index.md"
       - Community Partners: "partnership/community/index.md"
-      - Open Proposals:
-          - Overview: "partnership/open-proposals/index.md"
-          - Community Training: "partnership/open-proposals/community-training/index.md"
   - Learning:
       - Overview: learning/index.md
   - Consulting: consulting/index.md
