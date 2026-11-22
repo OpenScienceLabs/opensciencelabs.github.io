@@ -4,19 +4,15 @@
   const docEl = document.documentElement;
 
   function applyMode(mode) {
-    const bs = (mode === 'dim') ? 'dark' : 'light';
+    const bs = mode === 'dim' ? 'dark' : 'light';
     docEl.setAttribute('data-mode', mode);
     docEl.setAttribute('data-bs-theme', bs);
     const logo = document.querySelector(
       '.footer_inner img[alt="Open Science Labs"]',
     );
     if (logo) {
-      logo.src =
-        mode === 'dim'
-          ? '/icons/osl-logo-white.png'
-          : '/icons/osl-logo-black.png';
+      logo.src =(mode === 'dim') ? '/icons/osl-logo-white.png' : '/icons/osl-logo-black.png';
     }
-
     try {
       localStorage.setItem(STORAGE_KEY, mode);
     } catch (e) {}
