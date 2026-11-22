@@ -20,17 +20,6 @@ projects:
       experiences to learners everywhere. Our mission is to inspire creativity,
       experimentation, and collaboration through engaging, hands-on innovation.
 
-  - name: AnamnesisAI
-    type: alliance
-    maintainer_name: Ivan Ogasawara
-    maintainer_email: ivan.ogasawara@gmail.com
-    url: https://osl-incubator.github.io/anamnesis.ai/
-    communication_channel:
-      provider: discord
-      url: https://opensciencelabs.org/discord
-    description: |
-      AnamnesisAI is a project focused on extracting anamnesis in FHIR format from text.
-
   - name: ArtBox
     type: alliance
     maintainer_name: Ivan Ogasawara
@@ -90,15 +79,6 @@ projects:
       fit-for-purpose to any scientific domain, enabling faster
       evidence synthesis and meta-analysis.
 
-  - name: fqlearn
-    type: alliance
-    maintainer_name: Ever Vino
-    maintainer_email: ever.vino00@gmail.com
-    url: https://osl-pocs.github.io/fqlearn/
-    description: |
-      This Project aims to facilitate the teaching of unit operations and
-      thermodynamics.
-
   - name: Makim
     type: alliance
     maintainer_name: Ivan Ogasawara
@@ -110,37 +90,6 @@ projects:
     description: |
       Makim (or makim) is based on make and focus on improve the way to define targets
       and dependencies. Instead of using the Makefile format, it uses yaml format.
-
-  - name: Rago
-    type: alliance
-    maintainer_name: Ivan Ogasawara
-    maintainer_email: ivan.ogasawara@gmail.com
-    url: https://osl-incubator.github.io/rago/
-    communication_channel:
-      provider: discord
-      url: https://opensciencelabs.org/discord
-    description: |
-      Rago is a lightweight framework for RAG.
-
-  - name: noWorkflow
-    type: alliance
-    maintainer_name: Joao Felipe
-    maintainer_email: joaofelipenp@gmail.com
-    url: https://gems-uff.github.io/noworkflow/
-    description: |
-      The noWorkflow project aims at allowing scientists to benefit from provenance
-      data analysis even when they don't use a workflow system. It transparently
-      collects provenance from Python scripts and notebooks and provide tools to
-      support the analysis and management of the provenance.
-
-  - name: PyDataStructs
-    type: alliance
-    maintainer_name: Gagandeep Singh
-    maintainer_email: gdp.1807@gmail.com
-    url: https://pydatastructs.readthedocs.io/en/latest/
-    description: |
-      PyDataStructs project aims to be a Python package for various data structures
-      and algorithms (including their parallel implementations).
 
   - name: PyMedX
     type: alliance
@@ -165,29 +114,17 @@ projects:
       and community contributors launch projects, contribute data and resources,
       and discuss research across disciplines.
 
-  - name: SciCookie
+  - name: HiPerHealth
     type: alliance
     maintainer_name: Ivan Ogasawara
     maintainer_email: ivan.ogasawara@gmail.com
-    url: https://osl-incubator.github.io/scicookie
-    communication_channel:
-      provider: discord
-      url: https://opensciencelabs.org/discord
-    description: |
-      SciCookie is a template developed by Open Science Labs that creates
-      projects from project templates.
-
-  - name: SDX
-    type: alliance
-    maintainer_name: Ivan Ogasawara
-    maintainer_email: ivan.ogasawara@gmail.com
-    url: https://sdx-org.github.io/sdx/
+    url: https://hiperhealth.github.io/hiperhealth/
     communication_channel:
       provider: discord
       url: https://discord.gg/Nu4MdGj9jB
     description: |
-      SDX provides a set of tools and libraries for health care
-      services empowered by AI. It includes screening, diagnosis,
+      HiPerHealth (High Performance Health) provides tools and libraries for
+      healthcare services supported by AI. It includes screening, diagnosis,
       treatments, prescriptions, clinical records, etc.
 
   - name: Sugar

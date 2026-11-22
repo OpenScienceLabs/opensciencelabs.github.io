@@ -53,36 +53,17 @@ touch with them directly if you have any inquiries._
   [link](https://github.com/osl-incubator/makim/wiki/Project-Ideas)
 - **Compensation**: Unpaid
 
-### Rago
 
-- **Description**: Rago is a lightweight framework for RAG.
-- **Project WEB Page**: <https://osl-incubator.github.io/rago/>
-- **Repository**: <https://github.com/osl-incubator/rago>
-- **Communication channel**: [Discord](https://opensciencelabs.org/discord)
-- **Project Ideas**:
-  [link](https://github.com/osl-incubator/rago/wiki/Project-Ideas)
-- **Compensation**: Unpaid
 
-### SciCookie
+### HiPerHealth
 
-- **Description**: SciCookie creates new python project's structure from an
-  opinionated project template.
-- **Project WEB Page**: <https://osl-incubator.github.io/scicookie>
-- **Repository**: <https://github.com/osl-incubator/scicookie>
-- **Communication channel**: [Discord](https://opensciencelabs.org/discord)
-- **Project Ideas**:
-  [link](https://github.com/osl-incubator/scicookie/wiki/Project-Ideas)
-- **Compensation**: Unpaid
-
-### SDX
-
-- **Description**: SDX provides a set of tools and libraries for health care
-  services empowered by AI. It includes screening, diagnosis, treatments,
+- **Description**: HiPerHealth (High Performance Health) provides tools and libraries for
+  healthcare services supported by AI. It includes screening, diagnosis, treatments,
   prescriptions, clinical records, etc.
-- **Project WEB Page**: <https://sdx-org.github.io/sdx/>
-- **Repository**: <https://github.com/sdx-org/sdx>
+- **Project WEB Page**: <https://hiperhealth.github.io/hiperhealth/>
+- **Repository**: <https://github.com/hiperhealth/hiperhealth>
 - **Communication channel**: [Discord](https://discord.gg/Nu4MdGj9jB)
-- **Project Ideas**: [link](https://github.com/sdx-org/sdx/wiki/Project-Ideas)
+- **Project Ideas**: [link](https://github.com/hiperhealth/hiperhealth/wiki/Project-Ideas)
 - **Compensation**: Unpaid
 
 ### Sugar
