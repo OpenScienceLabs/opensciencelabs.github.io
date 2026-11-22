@@ -7,7 +7,7 @@
 {% set section_slug = page.url.split("/")[0] %}
 {% if not section_slug %}{% set section_slug = "projects" %}{% endif %}
 {% set page_theme = page.meta.get("page_theme", "projects") %}
-{% set hero_words = page.meta.get("hero_words", ["Incubate", "Mentor", "Ship"]) %}
+{% set hero_words = page.meta.get("hero_words", ["Connect", "Contribute", "Grow"]) %}
 
 <section class="osl-page osl-page--directory osl-page--section-{{ section_slug }} osl-page--theme-{{ page_theme }}">
   <div class="osl-page-shell">
@@ -34,10 +34,10 @@
       {{ page.content }}
     </article>
 
-    <section class="project-directory" aria-label="Affiliated and incubated projects">
+    <section class="project-directory" aria-label="OSL Alliance projects">
       <div class="directory-heading">
         <p class="directory-eyebrow">{{ projects|length }} projects</p>
-        <h2>Projects under the OSL umbrella</h2>
+        <h2>OSL Alliance projects</h2>
       </div>
 
       <div class="project-grid">

@@ -1,12 +1,12 @@
 ---
-title: "Affiliated and Incubated Projects"
-description: "Affiliated and Incubated Projects"
+title: "OSL Alliance Projects"
+description: "Projects participating in the OSL Alliance"
 date: "2024-01-29"
 authors: ["OSL Team"]
 template: projects.html
 projects:
   - name: Alpha One Labs
-    type: affiliated
+    type: alliance
     maintainer_name: Daniel Jones
     maintainer_email: info@alphaonelabs.com
     url: https://github.com/alphaonelabs/education-website
@@ -21,7 +21,7 @@ projects:
       experimentation, and collaboration through engaging, hands-on innovation.
 
   - name: AnamnesisAI
-    type: incubated
+    type: alliance
     maintainer_name: Ivan Ogasawara
     maintainer_email: ivan.ogasawara@gmail.com
     url: https://osl-incubator.github.io/anamnesis.ai/
@@ -32,7 +32,7 @@ projects:
       AnamnesisAI is a project focused on extracting anamnesis in FHIR format from text.
 
   - name: ArtBox
-    type: incubated
+    type: alliance
     maintainer_name: Ivan Ogasawara
     maintainer_email: ivan.ogasawara@gmail.com
     url: https://mediatoolbox-org.github.io/artbox/
@@ -44,7 +44,7 @@ projects:
       functions.
 
   - name: ArxLang
-    type: affiliated
+    type: alliance
     maintainer_name: Ivan Ogasawara
     maintainer_email: ivan.ogasawara@gmail.com
     url: https://arxlang.org
@@ -61,7 +61,7 @@ projects:
       multi-architecture machine target code generation.
 
   - name: Envers
-    type: incubated
+    type: alliance
     maintainer_name: Ivan Ogasawara
     maintainer_email: ivan.ogasawara@gmail.com
     url: https://osl-incubator.github.io/envers/
@@ -75,7 +75,7 @@ projects:
       environment-specific configurations.
 
   - name: Extralit
-    type: affiliated
+    type: alliance
     maintainer_name: Jonny Tran
     maintainer_email: nhat.c.tran@gmail.com
     url: https://github.com/extralit/extralit
@@ -91,7 +91,7 @@ projects:
       evidence synthesis and meta-analysis.
 
   - name: fqlearn
-    type: incubated
+    type: alliance
     maintainer_name: Ever Vino
     maintainer_email: ever.vino00@gmail.com
     url: https://osl-pocs.github.io/fqlearn/
@@ -100,7 +100,7 @@ projects:
       thermodynamics.
 
   - name: Makim
-    type: affiliated
+    type: alliance
     maintainer_name: Ivan Ogasawara
     maintainer_email: ivan.ogasawara@gmail.com
     url: https://makim.org/
@@ -112,7 +112,7 @@ projects:
       and dependencies. Instead of using the Makefile format, it uses yaml format.
 
   - name: Rago
-    type: incubated
+    type: alliance
     maintainer_name: Ivan Ogasawara
     maintainer_email: ivan.ogasawara@gmail.com
     url: https://osl-incubator.github.io/rago/
@@ -123,7 +123,7 @@ projects:
       Rago is a lightweight framework for RAG.
 
   - name: noWorkflow
-    type: affiliated
+    type: alliance
     maintainer_name: Joao Felipe
     maintainer_email: joaofelipenp@gmail.com
     url: https://gems-uff.github.io/noworkflow/
@@ -134,7 +134,7 @@ projects:
       support the analysis and management of the provenance.
 
   - name: PyDataStructs
-    type: affiliated
+    type: alliance
     maintainer_name: Gagandeep Singh
     maintainer_email: gdp.1807@gmail.com
     url: https://pydatastructs.readthedocs.io/en/latest/
@@ -143,7 +143,7 @@ projects:
       and algorithms (including their parallel implementations).
 
   - name: PyMedX
-    type: incubated
+    type: alliance
     maintainer_name: Ever Vino
     maintainer_email: ever.vino00@gmail.com
     url: https://osl-incubator.github.io/pymedx
@@ -155,7 +155,7 @@ projects:
       This project is a fork from the archived project PyMed.
 
   - name: SciCookie
-    type: incubated
+    type: alliance
     maintainer_name: Ivan Ogasawara
     maintainer_email: ivan.ogasawara@gmail.com
     url: https://osl-incubator.github.io/scicookie
@@ -167,7 +167,7 @@ projects:
       projects from project templates.
 
   - name: SDX
-    type: affiliated
+    type: alliance
     maintainer_name: Ivan Ogasawara
     maintainer_email: ivan.ogasawara@gmail.com
     url: https://sdx-org.github.io/sdx/
@@ -180,7 +180,7 @@ projects:
       treatments, prescriptions, clinical records, etc.
 
   - name: Sugar
-    type: affiliated
+    type: alliance
     maintainer_name: Ivan Ogasawara
     maintainer_email: ivan.ogasawara@gmail.com
     url: https://sugar-org.github.io/sugar/
@@ -193,7 +193,7 @@ projects:
       line would be very simple.
 
   - name: swarm-external-secrets
-    type: affiliated
+    type: alliance
     maintainer_name: Sai Sanjay
     maintainer_email: sanjay@nullvijayawada.org
     url: https://sugar-org.github.io/swarm-external-secrets/
@@ -204,20 +204,10 @@ projects:
       A Docker Swarm secrets plugin that integrates with multiple secret management providers including HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, and OpenBao.
 ---
 
-# Affiliated and Incubated Projects
+# OSL Alliance Projects
 
-We proudly showcase a curated list of innovative and diverse projects that are
-part of the Open Science Labs family. Each of these projects embodies our
-commitment to open science and technology, and they play a pivotal role in
-driving forward our shared goals. These collaborations not only strengthen our
-community but also contribute significantly to the broader field of open source
-and scientific research. Below, you'll find information about affiliated and
-incubated projects.
+This directory brings together projects previously listed under OSL's affiliation and incubation programs. Both programs are now part of the **[OSL Alliance](/projects/alliance/)**, with their project communities, maintainers, and existing descriptions preserved.
 
-Projects listed here are expected to remain open source, follow an OSI-approved
-license, include a Code of Conduct, and have reachable maintainers. OSL may
-periodically review project health using automated checks and human follow-up.
-Projects that become inactive, archived, unreachable, closed-source, or no
-longer aligned with OSL requirements may be marked at risk or removed from this
-list. If a project is removed because of inactivity, maintainers may ask to
-restore it after the baseline requirements and maintenance status are resolved.
+Alliance membership offers community connections and program opportunities while asking maintainers to help support OSL's wider activities through the Alliance Maintainers Council. Projects retain responsibility for their own governance, releases, and maintenance. Opportunities such as GSoC and mentoring depend on specific program requirements and available capacity.
+
+To request membership for another project, visit the [OSL Alliance requests repository](https://github.com/OpenScienceLabs/alliance-requests).

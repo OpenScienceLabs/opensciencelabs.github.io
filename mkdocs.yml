@@ -45,9 +45,8 @@ nav:
   - Blog: "blog/index.md"
   - Projects:
       - Overview: "projects/index.md"
-      - Incubation: "projects/incubation/index.md"
-      - Affiliation: "projects/affiliation/index.md"
-      - All Projects: "projects/list/index.md"
+      - OSL Alliance: "projects/alliance/index.md"
+      - Alliance Projects: "projects/list/index.md"
   - Opportunities:
       - Overview: opportunities/index.md
       - OSS Internship:
