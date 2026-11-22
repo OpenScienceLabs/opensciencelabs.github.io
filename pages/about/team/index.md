@@ -24,12 +24,6 @@ teams:
         github_url: https://github.com/evervino
         github_sponsor: https://github.com/sponsors/evervino/button
 
-      - name: Luis Gago
-        bio: |
-          CEO and Owner at AyPhu.
-        image_url: https://avatars.githubusercontent.com/u/4383323?v=4
-        github_url: https://github.com/luisgagocasas
-
       - name: Yuvi Mittal
         bio: |
           Software Engineer and open-source contributor with a strong interest in compilers,
@@ -46,35 +40,28 @@ teams:
         github_url: https://github.com/whitewolf2000ani
         github_sponsor: https://github.com/sponsors/whitewolf2000ani
 
-  - name: Coordinators
-    members:
-      - name: Saransh Chopra
-        bio: |
-          I am currently based at CERN, working as a Research Fellow with the Princeton
-          Research Computing Group and IRIS-HEP. I am broadly interested in Research
-          Software Engineering, Scientific Computing, DevOps, Theory of Computation,
-          and Type Theory. I am extremely passionate about Open-Source and Open-Science.
-        image_url: https://saransh-cpp.github.io/assets/img/SaranshChopra.jpeg
-        github_url: https://github.com/Saransh-cpp
-
       - name: Anavelyz Perez
         bio: |
-          OSL Coordinator.
-          Statistician and data analyst proficient in Python and R, currently exploring
-          Flutter.
+          Statistician and data analyst proficient in Python and R, currently
+          exploring Flutter. She also serves as OSL's Google Summer of Code
+          Program Manager, coordinating the activities of Open Science Labs
+          as a GSoC mentoring organization.
         image_url: https://avatars.githubusercontent.com/u/42752529?v=4
         github_url: https://github.com/Anavelyz
 
-  - name: Associated collaborators
-    members:
-      - name: Yurely Camacho
-        bio: |
-          Statistician, data analyst. Python and R learner.
-        image_url: https://avatars.githubusercontent.com/u/49034451?v=4
-        github_url: https://github.com/YurelyCamacho
-
   - name: Steering Council Emeritus
+    description: |
+      With gratitude, we recognize the former Steering Council members whose
+      time, leadership, and contributions have helped shape Open Science Labs.
+      Their efforts remain an important part of our community's history, and
+      we thank each of them for helping OSL grow.
+    display: compact
     members:
+      - name: Luis Gago
+        bio: |
+          CEO and Owner at AyPhu.
+        github_url: https://github.com/luisgagocasas
+
       - name: Francisco Palm
         bio: |
           Computation & Data Science Senior Researcher, Python & R Developer
@@ -82,13 +69,11 @@ teams:
           strategy, use of conceptual and mathematical models for decision-making,
           geomatics and spatial analysis, all these areas focused on
           Distributed Massive Empowerment.
-        image_url: https://avatars.githubusercontent.com/u/236351?v=4
         github_url: https://github.com/map0logo
 
       - name: Ingrid Garcia
         bio: |
           Research Coordinator at 60 Decibels.
-        image_url: https://avatars.githubusercontent.com/u/47956238?v=4
         github_url: https://github.com/ibianka
 
       - name: Mariangela Petrizzo
@@ -96,14 +81,12 @@ teams:
           Political scientist by formation, mayeutic by conviction.
           Looking for a new ways for open knowledge survival in a world
           plenty of selfishness.
-        image_url: https://avatars.githubusercontent.com/u/221018?v=4
         github_url: https://github.com/petrizzo
 
       - name: Sandro Loch
         bio: |
           Web developer with experience with Python, Docker, Conda and Django;
           Also, he has contributed to open source projects.
-        image_url: https://avatars.githubusercontent.com/u/3450741?v=4%22
         github_url: https://github.com/esloch
         github_sponsor: https://github.com/sponsors/esloch/button
 
@@ -113,7 +96,6 @@ teams:
           ETL, pipelines and Datawarehouse using Python, Pandas, Airflow and GCP.
           I'm data passionate, I studied a postgraduate in Data Predict and Analytics
           using Pandas, Tensorflow and R.
-        image_url: https://avatars.githubusercontent.com/u/12076074?v=4
         github_url: https://github.com/eunrod16
 
       - name: Agustina Pesce Lopez
@@ -122,29 +104,30 @@ teams:
           geophysics and studied subduction zones through geodynamical numerical modeling.
           I'm also committed to contribute to open-source software projects to improve
           science openness and reproducibility.
-        image_url: https://avatars.githubusercontent.com/u/13738018?v=4
         github_url: https://github.com/aguspesce
 
   - name: Alumni
+    description: |
+      We are grateful to everyone who has contributed their time, knowledge,
+      and care to Open Science Labs. Our alumni have helped our projects and
+      community grow through collaboration, mentoring, and open-source work.
+      Thank you for being part of OSL's journey and for the lasting impact of
+      your contributions.
+    display: compact
     members:
+      - name: Saransh Chopra
+        github_url: https://github.com/Saransh-cpp
+
+      - name: Yurely Camacho
+        github_url: https://github.com/YurelyCamacho
+
       - name: Luã Bida Vacaro
-        bio: |
-          Software Developer and DevOps
-        image_url: https://avatars.githubusercontent.com/u/82233055?v=4
-        type: team-template
-        github_sponsor: https://github.com/sponsors/luabida/button
         github_url: https://github.com/luabida
 
       - name: Daniela Iglesias Rocabado
-        bio: |
-          Graduate in Systems Engineering with a passion for Python and Web Development.
-        image_url: https://avatars.githubusercontent.com/u/107383061?v=4
         github_url: https://github.com/DanielaIgRo
 
       - name: Mfonobong Emmanuel Uyah
-        bio: |
-          Electrical and Electronics Engineering graduate with interest in software development using Python, Django, and JavaScript. Looking to develop and participate in open-source and open-science projects.
-        image_url: https://avatars.githubusercontent.com/u/97167651?v=4
         github_url: https://github.com/investor-uyah
 ---
 
