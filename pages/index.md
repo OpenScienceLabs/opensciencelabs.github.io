@@ -110,10 +110,9 @@ initiatives:
       the advancement of scientific research and technology through a
       variety of comprehensive programs. Each initiative is designed to
       foster collaboration, innovation, and learning within our community.
-      From incubating groundbreaking projects to facilitating meaningful
-      partnerships and empowering individuals through our internship and
-      OpenHub programs, we're dedicated to creating opportunities that
-      enrich both the scientific community and the broader world. Explore
+      Through collaborative projects, partnerships, and community learning,
+      we're dedicated to creating opportunities that enrich both the
+      scientific community and the broader world. Explore
       these initiatives to see how you can engage, contribute, and grow with
       us.
     </p>
@@ -135,22 +134,6 @@ initiatives:
             >
               Join us on Discord
             </a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card m-0 p-0">
-          <div class="card-body m-0">
-            <h5 class="card-title text-dark">Internship Program</h5>
-            <p class="card-text fw-lighter">
-              Offering hands-on experience in open source projects, fostering
-              learning, and contributing to the community.
-            </p>
-          </div>
-          <div class="card-footer m-0">
-            <a href="/opportunities/internships/oss" class="btn btn-primary"
-              >Learn More</a
-            >
           </div>
         </div>
       </div>
@@ -250,9 +233,8 @@ initiatives:
       The Project Affiliation program at Open Science Labs is designed to
       foster collaboration and growth among open science and open source
       projects. By becoming an affiliated project, you gain access to a
-      wealth of resources, including participation in our Internship
-      Program, eligibility for future Grant opportunities, and enhanced
-      visibility through our social networks and events. Our goal is to
+      wealth of resources, including community collaboration, eligibility for relevant opportunities,
+      and visibility through our social networks and events. Our goal is to
       support your project's development and impact, aligning with our
       mission to promote open, transparent, and ethical advancements in
       science and technology. Discover how affiliating with OSL can elevate
