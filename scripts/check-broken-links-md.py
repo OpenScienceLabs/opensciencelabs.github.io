@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 
-import os
 import subprocess
+import sys
 
 # List of exception URLs
 exception_urls = [
@@ -18,7 +18,16 @@ def process_log() -> None:
 
     try:
         subprocess.run(
-            ["python", "-m", "linkcheckmd", "-r", "-v", "-m", "get", "pages"],
+            [
+                sys.executable,
+                "-m",
+                "linkcheckmd",
+                "-r",
+                "-v",
+                "-m",
+                "get",
+                "pages",
+            ],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             text=True,
@@ -40,24 +49,29 @@ def process_log() -> None:
         if not line.startswith("("):
             continue
 
-        if line.endswith("429)"):
-            # Too Many Requests http error
+        if line.endswith("429)") or line.endswith("403)"):
+            # Rate limit / forbidden crawler error
             continue
-        # Extract the URL using regex
-        for exception_url in exception_urls:
-            if exception_url not in line:
-                flagged_errors.append(line)
+
+        # Check if URL is in exception list
+        if any(exception_url in line for exception_url in exception_urls):
+            continue
+
+        flagged_errors.append(line)
 
     # Print flagged errors
     if not flagged_errors:
-        print("[II] All links are ok.")
-        print("No errors flagged. All URLs are in the exception list.")
+        print("[II] All links are ok.", flush=True)
+        print(
+            "No errors flagged. All URLs are in the exception list.",
+            flush=True,
+        )
         return
 
-    print("Errors flagged for the following URLs:")
+    print("Errors flagged for the following URLs:", flush=True)
     for line in flagged_errors:
-        print(line)
-    os._exit(1)
+        print(line, flush=True)
+    sys.exit(1)
 
 
 # Run the script

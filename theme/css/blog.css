@@ -175,6 +175,47 @@ a.post-thumb img,
 .post_share a:hover{ background: rgba(255,255,255,.08); }
 .post_share .share_label{ margin-right: .25rem; }
 
+/* Copy link feedback */
+.link_yank {
+  position: relative;
+  cursor: pointer;
+}
+
+.link_yank.copied {
+  color: var(--brand-strong, #087fa8) !important;
+}
+
+.link_yank .copy-tooltip {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--surface-solid, #1e293b);
+  color: var(--fg, #ffffff);
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.15));
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 0.2rem 0.45rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1000;
+  box-shadow: var(--shadow, 0 4px 12px rgba(0, 0, 0, 0.2));
+  animation: copyFadeIn 0.15s ease forwards;
+}
+
+@keyframes copyFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
 /* ── Responsive ─────────────────────────────────────────────── */
 @media (max-width: 1024px){
   .post-grid{ --card-min: 280px; }
