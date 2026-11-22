@@ -154,6 +154,17 @@ projects:
       PyMedX is a Python library that provides access to PubMed/PubMed Central.
       This project is a fork from the archived project PyMed.
 
+  - name: SciBitHub
+    type: alliance
+    maintainer_name: Mayssa Ghanmi
+    maintainer_email: mayssa.ghanmi@scibithub.tech
+    url: https://scibithub.tech
+    description: |
+      SciBitHub is an early-stage, open-source platform for citizen science
+      and collaborative research. It helps independent researchers, students,
+      and community contributors launch projects, contribute data and resources,
+      and discuss research across disciplines.
+
   - name: SciCookie
     type: alliance
     maintainer_name: Ivan Ogasawara
