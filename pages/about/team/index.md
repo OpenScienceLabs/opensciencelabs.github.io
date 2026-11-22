@@ -24,12 +24,6 @@ teams:
         github_url: https://github.com/evervino
         github_sponsor: https://github.com/sponsors/evervino/button
 
-      - name: Luis Gago
-        bio: |
-          CEO and Owner at AyPhu.
-        image_url: https://avatars.githubusercontent.com/u/4383323?v=4
-        github_url: https://github.com/luisgagocasas
-
       - name: Yuvi Mittal
         bio: |
           Software Engineer and open-source contributor with a strong interest in compilers,
@@ -74,7 +68,18 @@ teams:
         github_url: https://github.com/YurelyCamacho
 
   - name: Steering Council Emeritus
+    description: |
+      With gratitude, we recognize the former Steering Council members whose
+      time, leadership, and contributions have helped shape Open Science Labs.
+      Their efforts remain an important part of our community's history, and
+      we thank each of them for helping OSL grow.
+    display: compact
     members:
+      - name: Luis Gago
+        bio: |
+          CEO and Owner at AyPhu.
+        github_url: https://github.com/luisgagocasas
+
       - name: Francisco Palm
         bio: |
           Computation & Data Science Senior Researcher, Python & R Developer
@@ -82,13 +87,11 @@ teams:
           strategy, use of conceptual and mathematical models for decision-making,
           geomatics and spatial analysis, all these areas focused on
           Distributed Massive Empowerment.
-        image_url: https://avatars.githubusercontent.com/u/236351?v=4
         github_url: https://github.com/map0logo
 
       - name: Ingrid Garcia
         bio: |
           Research Coordinator at 60 Decibels.
-        image_url: https://avatars.githubusercontent.com/u/47956238?v=4
         github_url: https://github.com/ibianka
 
       - name: Mariangela Petrizzo
@@ -96,14 +99,12 @@ teams:
           Political scientist by formation, mayeutic by conviction.
           Looking for a new ways for open knowledge survival in a world
           plenty of selfishness.
-        image_url: https://avatars.githubusercontent.com/u/221018?v=4
         github_url: https://github.com/petrizzo
 
       - name: Sandro Loch
         bio: |
           Web developer with experience with Python, Docker, Conda and Django;
           Also, he has contributed to open source projects.
-        image_url: https://avatars.githubusercontent.com/u/3450741?v=4%22
         github_url: https://github.com/esloch
         github_sponsor: https://github.com/sponsors/esloch/button
 
@@ -113,7 +114,6 @@ teams:
           ETL, pipelines and Datawarehouse using Python, Pandas, Airflow and GCP.
           I'm data passionate, I studied a postgraduate in Data Predict and Analytics
           using Pandas, Tensorflow and R.
-        image_url: https://avatars.githubusercontent.com/u/12076074?v=4
         github_url: https://github.com/eunrod16
 
       - name: Agustina Pesce Lopez
@@ -122,7 +122,6 @@ teams:
           geophysics and studied subduction zones through geodynamical numerical modeling.
           I'm also committed to contribute to open-source software projects to improve
           science openness and reproducibility.
-        image_url: https://avatars.githubusercontent.com/u/13738018?v=4
         github_url: https://github.com/aguspesce
 
   - name: Alumni
