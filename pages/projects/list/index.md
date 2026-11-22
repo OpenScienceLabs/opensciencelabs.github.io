@@ -114,7 +114,7 @@ projects:
       and community contributors launch projects, contribute data and resources,
       and discuss research across disciplines.
 
-  - name: HyperHealth
+  - name: HiPerHealth
     type: alliance
     maintainer_name: Ivan Ogasawara
     maintainer_email: ivan.ogasawara@gmail.com
@@ -123,7 +123,7 @@ projects:
       provider: discord
       url: https://discord.gg/Nu4MdGj9jB
     description: |
-      HyperHealth (High Performance Health) provides tools and libraries for
+      HiPerHealth (High Performance Health) provides tools and libraries for
       healthcare services supported by AI. It includes screening, diagnosis,
       treatments, prescriptions, clinical records, etc.
 
