@@ -4,7 +4,7 @@
   const docEl = document.documentElement;
 
   function applyMode(mode) {
-    const bs = mode === 'dim' ? 'dark' : 'light';
+    const bs = (mode === 'dim') ? 'dark' : 'light';
     docEl.setAttribute('data-mode', mode);
     docEl.setAttribute('data-bs-theme', bs);
     const logo = document.querySelector(
