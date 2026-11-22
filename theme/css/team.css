@@ -164,3 +164,42 @@
 .team-card__social{
   border-radius: 0;
 }
+
+/* Compact recognition list for former Steering Council members. */
+.team-group__description{
+  max-width: 70ch;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.team-compact-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 215px), 1fr));
+  gap: .5rem 1.5rem;
+  padding: 0;
+  margin: .25rem 0 0;
+  list-style: none;
+}
+
+.team-compact-list li{
+  padding: .75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.team-compact-list a,
+.team-compact-list span{
+  font-weight: 650;
+}
+
+.team-compact-list a{
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.team-compact-list a:hover,
+.team-compact-list a:focus-visible{
+  color: var(--osl-accent, var(--brand-strong));
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
