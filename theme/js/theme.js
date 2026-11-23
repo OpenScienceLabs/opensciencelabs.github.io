@@ -29,8 +29,8 @@
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved === 'dim' || saved === 'lit') return saved;
     } catch (e) {}
-    return window.matchMedia &&
-      matchMedia('(prefers-color-scheme: dark)').matches
+    return (window.matchMedia &&
+      matchMedia('(prefers-color-scheme: dark)').matches)
       ? 'dim'
       : 'lit';
   }
