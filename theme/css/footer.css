@@ -97,7 +97,7 @@ html[data-mode="dim"] .color_choice {
 }
 
 html[data-mode="dim"] .color_choice::before {
-  content: "☀";
+  content: "☀️";
   left: 8px;
   color: #fde68a;
 }
