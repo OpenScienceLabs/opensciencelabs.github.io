@@ -51,7 +51,9 @@ ignore = [
   "F811",
   "PLR0911",  # Too many return statements
   "PLR0912",  # Too many branches
-  "PLR0913",
+  "PLR0913",  # Too many arguments
+  "PLR0917",  # Too many positional arguments
+  "PLC0415",  # Import outside top level
 ]
 select = [
   "E",   # pycodestyle
