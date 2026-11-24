@@ -76,13 +76,14 @@ touch with them directly if you have any inquiries._
 
 ### HiPerHealth
 
-- **Description**: HiPerHealth (High Performance Health) provides tools and libraries for
-  healthcare services supported by AI. It includes screening, diagnosis, treatments,
-  prescriptions, clinical records, etc.
+- **Description**: HiPerHealth (High Performance Health) provides tools and
+  libraries for healthcare services supported by AI. It includes screening,
+  diagnosis, treatments, prescriptions, clinical records, etc.
 - **Project WEB Page**: <https://hiperhealth.github.io/hiperhealth/>
 - **Repository**: <https://github.com/hiperhealth/hiperhealth>
 - **Communication channel**: [Discord](https://discord.gg/Nu4MdGj9jB)
-- **Project Ideas**: [link](https://github.com/hiperhealth/hiperhealth/wiki/Project-Ideas)
+- **Project Ideas**:
+  [link](https://github.com/hiperhealth/hiperhealth/wiki/Project-Ideas)
 
 ### Sugar (swarm-external-secrets)
 

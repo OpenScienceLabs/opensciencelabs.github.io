@@ -53,17 +53,16 @@ touch with them directly if you have any inquiries._
   [link](https://github.com/osl-incubator/makim/wiki/Project-Ideas)
 - **Compensation**: Unpaid
 
-
-
 ### HiPerHealth
 
-- **Description**: HiPerHealth (High Performance Health) provides tools and libraries for
-  healthcare services supported by AI. It includes screening, diagnosis, treatments,
-  prescriptions, clinical records, etc.
+- **Description**: HiPerHealth (High Performance Health) provides tools and
+  libraries for healthcare services supported by AI. It includes screening,
+  diagnosis, treatments, prescriptions, clinical records, etc.
 - **Project WEB Page**: <https://hiperhealth.github.io/hiperhealth/>
 - **Repository**: <https://github.com/hiperhealth/hiperhealth>
 - **Communication channel**: [Discord](https://discord.gg/Nu4MdGj9jB)
-- **Project Ideas**: [link](https://github.com/hiperhealth/hiperhealth/wiki/Project-Ideas)
+- **Project Ideas**:
+  [link](https://github.com/hiperhealth/hiperhealth/wiki/Project-Ideas)
 - **Compensation**: Unpaid
 
 ### Sugar
@@ -71,7 +70,7 @@ touch with them directly if you have any inquiries._
 - **Description**: Sugar organizes your stack of containers, gathering some
   useful scripts and keeping this information centralized in a configuration
   file with a friendly command line interface.
-- **Project WEB Page**: <https://sugar-org.github.io/sugar/>
+- **Project WEB Page**: <https://osl-incubator.github.io/sugar/>
 - **Repository**: <https://github.com/osl-incubator/sugar>
 - **Communication channel**: [Discord](https://opensciencelabs.org/discord)
 - **Project Ideas**:

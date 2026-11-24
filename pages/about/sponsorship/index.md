@@ -200,14 +200,14 @@ time, expertise, and maintenance.
 </p>
 
 SciStitch currently provides substantial ongoing sponsorship, technical
-maintenance, and day-to-day operational support to help keep OSL moving
-forward. This is a partnership between independent initiatives: OSL remains
+maintenance, and day-to-day operational support to help keep OSL moving forward.
+This is a partnership between independent initiatives: OSL remains
 community-owned and governed by its own community. Our contributors,
-collaborators, affiliated projects, and partner institutions are essential
-to sustaining this work as well.
+collaborators, affiliated projects, and partner institutions are essential to
+sustaining this work as well.
 
-Other sponsors may be listed by year and sponsorship level. Sponsors may
-request to be listed anonymously.
+Other sponsors may be listed by year and sponsorship level. Sponsors may request
+to be listed anonymously.
 
 <!--
 ## 2026

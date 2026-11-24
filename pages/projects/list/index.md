@@ -131,7 +131,7 @@ projects:
     type: alliance
     maintainer_name: Ivan Ogasawara
     maintainer_email: ivan.ogasawara@gmail.com
-    url: https://sugar-org.github.io/sugar/
+    url: https://osl-incubator.github.io/sugar/
     communication_channel:
       provider: discord
       url: https://opensciencelabs.org/discord
@@ -154,8 +154,16 @@ projects:
 
 # OSL Alliance Projects
 
-This directory brings together projects previously listed under OSL's affiliation and incubation programs. Both programs are now part of the **[OSL Alliance](/projects/alliance/)**, with their project communities, maintainers, and existing descriptions preserved.
+This directory brings together projects previously listed under OSL's
+affiliation and incubation programs. Both programs are now part of the
+**[OSL Alliance](/projects/alliance/)**, with their project communities,
+maintainers, and existing descriptions preserved.
 
-Alliance membership offers community connections and program opportunities while asking maintainers to help support OSL's wider activities through the Alliance Maintainers Council. Projects retain responsibility for their own governance, releases, and maintenance. Opportunities such as GSoC and mentoring depend on specific program requirements and available capacity.
+Alliance membership offers community connections and program opportunities while
+asking maintainers to help support OSL's wider activities through the Alliance
+Maintainers Council. Projects retain responsibility for their own governance,
+releases, and maintenance. Opportunities such as GSoC and mentoring depend on
+specific program requirements and available capacity.
 
-To request membership for another project, visit the [OSL Alliance requests repository](https://github.com/OpenScienceLabs/alliance-requests).
+To request membership for another project, visit the
+[OSL Alliance requests repository](https://github.com/OpenScienceLabs/alliance-requests).
