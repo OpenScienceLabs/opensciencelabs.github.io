@@ -1,15 +1,13 @@
-"""Check if there is any broken links."""
+"""Check if ther eis any broken links."""
 
 from __future__ import annotations
 
+import os
 import subprocess
-import sys
 
 # List of exception URLs
 exception_urls = [
     "https://www.linkedin.com/",
-    "https://twitter.com/",
-    "https://www.developer-tech.com/",
 ]
 
 
@@ -47,9 +45,8 @@ def process_log() -> None:
             continue
         # Extract the URL using regex
         for exception_url in exception_urls:
-            if any(exc in line for exc in exception_urls):
-                continue
-            flagged_errors.append(line)
+            if exception_url not in line:
+                flagged_errors.append(line)
 
     # Print flagged errors
     if not flagged_errors:
@@ -60,7 +57,7 @@ def process_log() -> None:
     print("Errors flagged for the following URLs:")
     for line in flagged_errors:
         print(line)
-    sys.exit(1)
+    os._exit(1)
 
 
 # Run the script
