@@ -64,7 +64,14 @@ jobs:
       # Pending runs check out current main, not a superseded content commit.
       - uses: actions/checkout@v4
         with:
+          fetch-depth: 0
           ref: ${{ github.event_name == 'pull_request' && github.sha || 'main' }}
+      - name: Debug git state
+        run: |
+          git for-each-ref
+          echo "--- branches"
+          git branch -a
+          git rev-parse --is-shallow-repository
 
       - uses: conda-incubator/setup-miniconda@v3
         with:
