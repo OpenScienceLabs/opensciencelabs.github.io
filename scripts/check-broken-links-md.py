@@ -9,6 +9,7 @@ import sys
 exception_urls = [
     "https://www.linkedin.com/",
     "https://twitter.com/",
+    "https://www.developer-tech.com/",
 ]
 
 
