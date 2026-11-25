@@ -209,6 +209,11 @@
   display: block;
 }
 
+[data-bs-theme="light"] .navbar-brand .logo-dark,
+[data-bs-theme="dark"] .navbar-brand .logo-light {
+  display: none;
+}
+
 /* Search bar: keep icon + field on one line and nice width */
 .navbar .searchbar {
   flex-wrap: nowrap;
