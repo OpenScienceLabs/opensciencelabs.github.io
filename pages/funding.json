@@ -55,7 +55,7 @@
       "name": "Sugar",
       "description": "Sugar simplifies the usage of containers and container stacks for reproducible development workflows.",
       "webpageUrl": {
-        "url": "https://osl-incubator.github.io/sugar/"
+        "url": "https://sugar-org.github.io/sugar/"
       },
       "repositoryUrl": {
         "url": "https://github.com/sugar-org/sugar"

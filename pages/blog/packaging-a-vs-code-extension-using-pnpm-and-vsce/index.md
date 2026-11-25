@@ -24,7 +24,7 @@ flag to get things running smoothly.
 
 `vsce` relies on `npm list --production --parseable --depth=99999`,
 which fails under pnpm’s symlink-based dependency management, often
-throwing `npm ERR! missing:` errors.\
+throwing `npm ERR! missing:` errors.  
 ([github.com](https://github.com/microsoft/vscode-vsce/issues/421),
 [daydreamer-riri.me](https://daydreamer-riri.me/posts/compatibility-issues-between-vsce-and-pnpm/))
 
@@ -103,5 +103,5 @@ pnpm’s symlink issues entirely.
 
 Using **pnpm** with VS Code extensions involves a few extra steps
 because `vsce` doesn’t support pnpm’s dependency structure directly. The
-ideal workflow: ***Bundle your extension first**, then* **Use
+ideal workflow: * **Bundle your extension first**, then * **Use
 `--no-dependencies`** to package and publish safely.

@@ -89,8 +89,8 @@ For some projects, however, the engagement may benefit from fiscal,
 administrative, payment, or contracting infrastructure. When appropriate, OSL
 may explore whether one of its fiscal hosts can support the arrangement.
 
-The appropriate structure is determined case by case. Fiscal-host support is not
-automatic, and OSL cannot guarantee that a particular client, partner, or
+The appropriate structure is determined case by case. Fiscal-host support is
+not automatic, and OSL cannot guarantee that a particular client, partner, or
 engagement will be eligible. Any such arrangement remains subject to the
 relevant fiscal host's scope, review, approval, fees, compliance requirements,
 and contractual terms.
@@ -113,9 +113,9 @@ maintainability, and contribute improvements upstream whenever practical.
 ## Optional fiscal-host support
 
 OSL has established fiscal-host relationships that support different parts of
-its mission. When an engagement would benefit from additional financial or legal
-infrastructure, OSL may be able to help explore an appropriate fiscal-hosted
-route.
+its mission. When an engagement would benefit from additional financial or
+legal infrastructure, OSL may be able to help explore an appropriate
+fiscal-hosted route.
 
 Depending on the project and the fiscal host, this may include support such as:
 
@@ -123,7 +123,8 @@ Depending on the project and the fiscal host, this may include support such as:
 - invoicing and payment processing;
 - paying eligible contributors or service providers;
 - financial administration and compliance;
-- where permitted by the fiscal host, review and signature of formal agreements.
+- where permitted by the fiscal host, review and signature of formal
+  agreements.
 
 OSL currently works with **Open Source Collective** for open-source initiatives
 and with **The GRAPH Network** for certain non-open-source projects. The
@@ -189,8 +190,8 @@ include areas such as:
 - archival releases;
 - sustainable research software practices.
 
-Software engineering can improve reliability, reproducibility, transparency, and
-maintainability, but does not replace scientific, clinical, regulatory, or
+Software engineering can improve reliability, reproducibility, transparency,
+and maintainability, but does not replace scientific, clinical, regulatory, or
 domain-specific validation.
 
 ### Documentation and contributor experience
@@ -228,8 +229,8 @@ Depending on the partner and available expertise, engagements may include:
 - contributor onboarding;
 - training around specific open-source technologies.
 
-These examples are not a fixed catalogue. If your need is not listed, contact us
-and tell us about it.
+These examples are not a fixed catalogue. If your need is not listed, contact
+us and tell us about it.
 
 ## Our first consulting partner
 
@@ -387,10 +388,12 @@ However:
 
 - community participation does not create an entitlement to paid consulting
   work;
-- internships and volunteer programmes are separate from commercial engagements;
+- internships and volunteer programmes are separate from commercial
+  engagements;
 - contributors should not be expected to fulfil client obligations without an
   appropriate professional arrangement;
-- each consulting partner determines how it selects and works with contributors.
+- each consulting partner determines how it selects and works with
+  contributors.
 
 We hope that, as the partner network grows, it can create more opportunities for
 people to gain experience, collaborate across organisations, and build
@@ -399,8 +402,8 @@ sustainable careers around open source and research software.
 ## Start a conversation
 
 If your organisation needs help with open-source software, research software,
-scientific workflows, technical education, or another related challenge, contact
-us.
+scientific workflows, technical education, or another related challenge,
+contact us.
 
 You can come to OSL even if you do not know which partner would be the best fit.
 
@@ -419,7 +422,8 @@ Tell us about:
 We will review the enquiry and, when possible, help identify an appropriate next
 step.
 
-Primary contact: [team@opensciencelabs.org](mailto:team@opensciencelabs.org)
+Primary contact:
+[team@opensciencelabs.org](mailto:team@opensciencelabs.org)
 
 <!-- prettier-ignore -->
 <a href="mailto:team@opensciencelabs.org?subject=Open%20Science%20Labs%20consulting%20inquiry" class="osl-inline-button">Discuss your project</a>

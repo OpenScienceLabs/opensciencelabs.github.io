@@ -52,8 +52,8 @@ overview of how you can leverage the ASTx library for your needs.
 # Installation
 
 The first step is to install ASTx. You can do it simply by running the
-command below in your terminal:\
-`$ pip install astx`\
+command below in your terminal:  
+`$ pip install astx`  
 If you need more information on installation, you can get it in the
 [ASTx installation
 page](https://github.com/arxlang/astx/blob/main/docs/installation.md).
@@ -62,10 +62,10 @@ writing your first AST.
 
 # Example: an AST of a series of mathematical operations
 
-Here we will present a quick example of an AST of the expression\
-`basic_op = lit_1 + b - a * c / a + (b - a / a)`, in which\
-$~~~~$ `lit_1` is a defined integer, and\
-$~~~~$ `a`, `b`, and `c` are variables.\
+Here we will present a quick example of an AST of the expression  
+`basic_op = lit_1 + b - a * c / a + (b - a / a)`, in which  
+$~~~~$ `lit_1` is a defined integer, and  
+$~~~~$ `a`, `b`, and `c` are variables.  
 The first thing to do is, in your Jupyter Notebook instance, import
 `display`, which will allow you to have a basic visualization of the
 AST, and the astx library itself.
