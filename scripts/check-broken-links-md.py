@@ -8,7 +8,7 @@ import sys
 # List of exception URLs
 exception_urls = [
     "https://www.linkedin.com/",
-     "https://twitter.com/",
+    "https://twitter.com/",
 ]
 
 
