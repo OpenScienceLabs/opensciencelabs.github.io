@@ -143,6 +143,15 @@ svg {
 .logo {
   height: 34px;
 }
+.navbar-brand img.logo--dark {
+  display: none;
+}
+html[data-mode="dim"] .navbar-brand img.logo--light {
+  display: none;
+}
+html[data-mode="dim"] .navbar-brand img.logo--dark {
+  display: block;
+}
 
 /* Containers */
 .container-xxl {
